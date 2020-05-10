@@ -1,38 +1,40 @@
-calc_subMinorCategory,calc_minorCategory,__KP_ID
-Access to finance,Supporting businesses to stay afloat,45
-Access to healthcare,Measures to prevent social hardship,2
-Change of production/innovation,Re-orientation of business activities,9
-Changes of working hours or work-arrangements,Protection of workers at the workplace,4
-Changes to dismissal law or employment protection legislation,Employment protection and retention,12
-Creation of platforms for businesses aimed at customer,Re-orientation of business activities,3
-Deferral of payments,Supporting businesses to stay afloat,37
-Direct subsidies (full or partial),Supporting businesses to stay afloat,47
-Enhancing employability and training,Employment protection and retention,6
-Extensions of  income support to workers not covered by any kind of protection scheme,Income protection beyond short-time work,25
-Income support for people in employment (e.g. short-time work),Employment protection and retention,36
-Income support for unemployed,Income protection beyond short-time work,14
-Increase of maximum working time,Change of work arrangements to ensure business continuity,7
-Keeping a safe home,Measures to prevent social hardship,12
-Matching / networking,Re-orientation of business activities,3
-Measures to support a gradual relaunch of work,Supporting businesses to get back-to-normal,1
-Mobilisation of a larger workforce,Support for essential services,12
-New rota schemes,Change of work arrangements to ensure business continuity,2
-Occupational health and safety,Protection of workers at the workplace,8
-Other,Change of work arrangements to ensure business continuity,1
-Other,Employment protection and retention,2
-Other,Measures to prevent social hardship,1
-Other,Supporting businesses to stay afloat,3
-Paid sick leave,Income protection beyond short-time work,16
-Preventing indebtedness,Measures to prevent social hardship,2
-Protection of vulnerable groups (beyond employment support),Measures to prevent social hardship,7
-Provision of services in kind (e.g food vouchers),Measures to prevent social hardship,4
-Remuneration and rewards for workers in essential services,Support for essential services,7
-Rescue procedures in case of insolvency or adaptation of insolvency regulation,Supporting businesses to stay afloat,3
-Smoothing frictions or reallocation of workers,Support for essential services,6
-Specific labour market information,Support for essential services,2
-Support for parents and carers (financial or in kind),Change of work arrangements to ensure business continuity,11
-"Teleworking arrangements, remote working",Protection of workers at the workplace,7
-Transfer or redeployment of workers ,Re-orientation of business activities,1
-Wage flexibility ,Employment protection and retention,2
-Well-being of workers,Protection of workers at the workplace,2
-Working time flexibility,Employment protection and retention,1
+calc_minorCategory,calc_subMinorCategory,__KP_ID
+Change of work arrangements to ensure business continuity,Increase of maximum working time,10
+Change of work arrangements to ensure business continuity,New rota schemes,3
+Change of work arrangements to ensure business continuity,Other,1
+Change of work arrangements to ensure business continuity,Support for parents and carers (financial or in kind),15
+Employment protection and retention,Changes to dismissal law or employment protection legislation,13
+Employment protection and retention,Enhancing employability and training,7
+Employment protection and retention,Income support for people in employment (e.g. short-time work),44
+Employment protection and retention,Other,2
+Employment protection and retention,Wage flexibility ,2
+Employment protection and retention,Working time flexibility,1
+Income protection beyond short-time work,Extensions of  income support to workers not covered by any kind of protection scheme,29
+Income protection beyond short-time work,Income support for unemployed,17
+Income protection beyond short-time work,Other,1
+Income protection beyond short-time work,Paid sick leave,20
+Measures to prevent social hardship,Access to healthcare,2
+Measures to prevent social hardship,Keeping a safe home,13
+Measures to prevent social hardship,Other,1
+Measures to prevent social hardship,Preventing indebtedness,3
+Measures to prevent social hardship,Protection of vulnerable groups (beyond employment support),8
+Measures to prevent social hardship,Provision of services in kind (e.g food vouchers),5
+Protection of workers at the workplace,Changes of working hours or work-arrangements,4
+Protection of workers at the workplace,Occupational health and safety,11
+Protection of workers at the workplace,"Teleworking arrangements, remote working",11
+Protection of workers at the workplace,Well-being of workers,2
+Re-orientation of business activities,Change of production/innovation,10
+Re-orientation of business activities,Creation of platforms for businesses aimed at customer,4
+Re-orientation of business activities,Matching / networking,3
+Re-orientation of business activities,Transfer or redeployment of workers ,2
+Support for essential services,Mobilisation of a larger workforce,14
+Support for essential services,Other,1
+Support for essential services,Remuneration and rewards for workers in essential services,9
+Support for essential services,Smoothing frictions or reallocation of workers,7
+Support for essential services,Specific labour market information,2
+Supporting businesses to get back-to-normal,Measures to support a gradual relaunch of work,2
+Supporting businesses to stay afloat,Access to finance,50
+Supporting businesses to stay afloat,Deferral of payments,42
+Supporting businesses to stay afloat,Direct subsidies (full or partial),56
+Supporting businesses to stay afloat,Other,3
+Supporting businesses to stay afloat,Rescue procedures in case of insolvency or adaptation of insolvency regulation,3
