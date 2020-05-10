@@ -1,30 +1,30 @@
-calc_country,calc_countryCode,__KP_ID
-Austria,AT,22
-Belgium,BE,8
-Bulgaria,BG,8
-Croatia,HR,27
-Cyprus,CY,14
-Czechia,CZ,14
-Denmark,DK,16
-Estonia,EE,9
-Finland,FI,19
-France,FR,23
-Germany,DE,21
-Greece,GR,30
-Hungary,HU,11
-Ireland,IE,10
-Italy,IT,15
-Latvia,LV,13
-Lithuania,LT,15
-Luxembourg,LU,16
-Malta,MT,8
-Netherlands,NL,10
-Norway,NO,16
-Poland,PL,2
-Portugal,PT,22
-Romania,RO,5
-Slovakia,SK,11
-Slovenia,SI,13
-Spain,ES,31
-Sweden,SE,13
-United Kingdom,GB,11
+calc_country_githubURL,calc_country,calc_countryCode,__KP_ID,Country
+https://efstatic.eu/covid-19-db-factsheets/AT.html,Austria,AT,22,":AT: <a href=""https://efstatic.eu/covid-19-db-factsheets/AT.html"">Austria</a>"
+https://efstatic.eu/covid-19-db-factsheets/BE.html,Belgium,BE,8,":BE: <a href=""https://efstatic.eu/covid-19-db-factsheets/BE.html"">Belgium</a>"
+https://efstatic.eu/covid-19-db-factsheets/BG.html,Bulgaria,BG,8,":BG: <a href=""https://efstatic.eu/covid-19-db-factsheets/BG.html"">Bulgaria</a>"
+https://efstatic.eu/covid-19-db-factsheets/CY.html,Cyprus,CY,14,":CY: <a href=""https://efstatic.eu/covid-19-db-factsheets/CY.html"">Cyprus</a>"
+https://efstatic.eu/covid-19-db-factsheets/CZ.html,Czechia,CZ,14,":CZ: <a href=""https://efstatic.eu/covid-19-db-factsheets/CZ.html"">Czechia</a>"
+https://efstatic.eu/covid-19-db-factsheets/DE.html,Germany,DE,21,":DE: <a href=""https://efstatic.eu/covid-19-db-factsheets/DE.html"">Germany</a>"
+https://efstatic.eu/covid-19-db-factsheets/DK.html,Denmark,DK,16,":DK: <a href=""https://efstatic.eu/covid-19-db-factsheets/DK.html"">Denmark</a>"
+https://efstatic.eu/covid-19-db-factsheets/EE.html,Estonia,EE,9,":EE: <a href=""https://efstatic.eu/covid-19-db-factsheets/EE.html"">Estonia</a>"
+https://efstatic.eu/covid-19-db-factsheets/ES.html,Spain,ES,31,":ES: <a href=""https://efstatic.eu/covid-19-db-factsheets/ES.html"">Spain</a>"
+https://efstatic.eu/covid-19-db-factsheets/FI.html,Finland,FI,19,":FI: <a href=""https://efstatic.eu/covid-19-db-factsheets/FI.html"">Finland</a>"
+https://efstatic.eu/covid-19-db-factsheets/FR.html,France,FR,21,":FR: <a href=""https://efstatic.eu/covid-19-db-factsheets/FR.html"">France</a>"
+https://efstatic.eu/covid-19-db-factsheets/GB.html,United Kingdom,GB,11,":GB: <a href=""https://efstatic.eu/covid-19-db-factsheets/GB.html"">United Kingdom</a>"
+https://efstatic.eu/covid-19-db-factsheets/GR.html,Greece,GR,30,":GR: <a href=""https://efstatic.eu/covid-19-db-factsheets/GR.html"">Greece</a>"
+https://efstatic.eu/covid-19-db-factsheets/HR.html,Croatia,HR,27,":HR: <a href=""https://efstatic.eu/covid-19-db-factsheets/HR.html"">Croatia</a>"
+https://efstatic.eu/covid-19-db-factsheets/HU.html,Hungary,HU,11,":HU: <a href=""https://efstatic.eu/covid-19-db-factsheets/HU.html"">Hungary</a>"
+https://efstatic.eu/covid-19-db-factsheets/IE.html,Ireland,IE,9,":IE: <a href=""https://efstatic.eu/covid-19-db-factsheets/IE.html"">Ireland</a>"
+https://efstatic.eu/covid-19-db-factsheets/IT.html,Italy,IT,15,":IT: <a href=""https://efstatic.eu/covid-19-db-factsheets/IT.html"">Italy</a>"
+https://efstatic.eu/covid-19-db-factsheets/LT.html,Lithuania,LT,15,":LT: <a href=""https://efstatic.eu/covid-19-db-factsheets/LT.html"">Lithuania</a>"
+https://efstatic.eu/covid-19-db-factsheets/LU.html,Luxembourg,LU,16,":LU: <a href=""https://efstatic.eu/covid-19-db-factsheets/LU.html"">Luxembourg</a>"
+https://efstatic.eu/covid-19-db-factsheets/LV.html,Latvia,LV,13,":LV: <a href=""https://efstatic.eu/covid-19-db-factsheets/LV.html"">Latvia</a>"
+https://efstatic.eu/covid-19-db-factsheets/MT.html,Malta,MT,8,":MT: <a href=""https://efstatic.eu/covid-19-db-factsheets/MT.html"">Malta</a>"
+https://efstatic.eu/covid-19-db-factsheets/NL.html,Netherlands,NL,10,":NL: <a href=""https://efstatic.eu/covid-19-db-factsheets/NL.html"">Netherlands</a>"
+https://efstatic.eu/covid-19-db-factsheets/NO.html,Norway,NO,16,":NO: <a href=""https://efstatic.eu/covid-19-db-factsheets/NO.html"">Norway</a>"
+https://efstatic.eu/covid-19-db-factsheets/PL.html,Poland,PL,2,":PL: <a href=""https://efstatic.eu/covid-19-db-factsheets/PL.html"">Poland</a>"
+https://efstatic.eu/covid-19-db-factsheets/PT.html,Portugal,PT,22,":PT: <a href=""https://efstatic.eu/covid-19-db-factsheets/PT.html"">Portugal</a>"
+https://efstatic.eu/covid-19-db-factsheets/RO.html,Romania,RO,3,":RO: <a href=""https://efstatic.eu/covid-19-db-factsheets/RO.html"">Romania</a>"
+https://efstatic.eu/covid-19-db-factsheets/SE.html,Sweden,SE,12,":SE: <a href=""https://efstatic.eu/covid-19-db-factsheets/SE.html"">Sweden</a>"
+https://efstatic.eu/covid-19-db-factsheets/SI.html,Slovenia,SI,13,":SI: <a href=""https://efstatic.eu/covid-19-db-factsheets/SI.html"">Slovenia</a>"
+https://efstatic.eu/covid-19-db-factsheets/SK.html,Slovakia,SK,11,":SK: <a href=""https://efstatic.eu/covid-19-db-factsheets/SK.html"">Slovakia</a>"
