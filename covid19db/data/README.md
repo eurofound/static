@@ -47,4 +47,4 @@ Multiple choice attributes are below the `portalData` object:
 
 
 ## Structure of the CSV file
-Refer to column headers.
+Refer to column headers. Multiple choice attributes are delimitated by semicolon.
