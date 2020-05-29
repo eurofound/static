@@ -96,7 +96,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "95",
         "modId": "73"
@@ -203,7 +204,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "96",
         "modId": "74"
@@ -295,7 +297,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "97",
         "modId": "68"
@@ -378,7 +381,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "98",
         "modId": "63"
@@ -468,7 +472,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "99",
         "modId": "61"
@@ -554,7 +559,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "100",
         "modId": "66"
@@ -637,7 +643,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "101",
         "modId": "61"
@@ -713,7 +720,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "102",
         "modId": "61"
@@ -794,7 +802,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "104",
         "modId": "72"
@@ -877,7 +886,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "105",
         "modId": "76"
@@ -946,7 +956,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "106",
         "modId": "66"
@@ -1046,7 +1057,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "107",
         "modId": "80"
@@ -1148,7 +1160,8 @@
                     "updates::description": "The Austrian social partners negotiated a new agreement which extends the Corona short-time work measure for another three months. Following the gradual relaunch of work, companies can now increase their working time without having to alter their short-time working request; they can also return to full activity for a short temporary period without having to exit the scheme; on call-work is expressly prohibited; a new and simplified method for calculation ensures that employees get paid for the work actually done in short-time work (in the previous version some employees faced pay disadvantages since the actual time they worked did not affect the pay determination); the requirement to retain employment numbers continues, but the agreement clarifies and simplifies rules concerning information of the trade union or the PES regional advisory board when the retention requirement after the period of short-time work ceases to apply. The new agreement was approved by the Austrian government.",
                     "modId": "2"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "112",
         "modId": "66"
@@ -1239,7 +1252,8 @@
                     "updates::description": "The programme was terminated after 5 days in operation and a new similar measure has been proposed under the name 'COVID II warranty program for companies affected by coronavirus'. In the database under: https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/.\r",
                     "modId": "2"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "136",
         "modId": "79"
@@ -1351,7 +1365,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "137",
         "modId": "77"
@@ -1767,6 +1782,24 @@
                     "updates::description": "The first round of applications for the COVID Guarantee Program was closed on 3 April 2020 at 11:59 p.m. The institutions are now in contact with the applicants and evaluating their applications. The next round will be announced according to the decision of the Ministry of Industry and Trade.",
                     "modId": "2"
                 }
+            ],
+            "regions": [
+                {
+                    "recordId": "1929",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "St\u0159edn\u00ed \u010cechy",
+                    "regions::nutsCode": "CZ02",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1931",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Jihoz\u00e1pad",
+                    "regions::nutsCode": "CZ03",
+                    "modId": "2"
+                }
             ]
         },
         "recordId": "138",
@@ -1855,7 +1888,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "139",
         "modId": "67"
@@ -1950,7 +1984,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "141",
         "modId": "62"
@@ -2072,7 +2107,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "144",
         "modId": "69"
@@ -2160,7 +2196,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "146",
         "modId": "62"
@@ -2357,7 +2394,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "147",
         "modId": "74"
@@ -2438,7 +2476,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "148",
         "modId": "64"
@@ -2524,7 +2563,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "150",
         "modId": "68"
@@ -2605,7 +2645,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "152",
         "modId": "77"
@@ -2679,7 +2720,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "155",
         "modId": "60"
@@ -2753,7 +2795,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "156",
         "modId": "61"
@@ -2827,7 +2870,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "157",
         "modId": "62"
@@ -2906,7 +2950,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "158",
         "modId": "60"
@@ -2980,7 +3025,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "159",
         "modId": "66"
@@ -3059,7 +3105,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "160",
         "modId": "60"
@@ -3133,7 +3180,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "161",
         "modId": "56"
@@ -3216,7 +3264,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "163",
         "modId": "54"
@@ -3285,7 +3334,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "165",
         "modId": "54"
@@ -3361,7 +3411,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "166",
         "modId": "55"
@@ -3475,7 +3526,25 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3328",
+                    "regions::countryCode": "SK",
+                    "regions::level": 1,
+                    "regions::name": "SLOVENSKO",
+                    "regions::nutsCode": "SK0",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "3331",
+                    "regions::countryCode": "SK",
+                    "regions::level": 2,
+                    "regions::name": "Z\u00e1padn\u00e9 Slovensko",
+                    "regions::nutsCode": "SK02",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "167",
         "modId": "66"
@@ -3566,7 +3635,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "168",
         "modId": "63"
@@ -3657,7 +3727,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "169",
         "modId": "70"
@@ -3721,7 +3792,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "170",
         "modId": "59"
@@ -3792,7 +3864,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "171",
         "modId": "72"
@@ -3863,7 +3936,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "172",
         "modId": "55"
@@ -3947,7 +4021,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "173",
         "modId": "55"
@@ -4033,7 +4108,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "174",
         "modId": "63"
@@ -4107,7 +4183,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "175",
         "modId": "45"
@@ -4181,7 +4258,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "177",
         "modId": "51"
@@ -4289,7 +4367,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "178",
         "modId": "63"
@@ -4373,7 +4452,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "179",
         "modId": "56"
@@ -4472,7 +4552,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "180",
         "modId": "57"
@@ -4561,7 +4642,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "181",
         "modId": "51"
@@ -4654,7 +4736,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "182",
         "modId": "50"
@@ -4740,7 +4823,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "183",
         "modId": "56"
@@ -4837,7 +4921,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "184",
         "modId": "52"
@@ -4911,7 +4996,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "185",
         "modId": "55"
@@ -4985,7 +5071,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "186",
         "modId": "59"
@@ -5104,7 +5191,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "187",
         "modId": "49"
@@ -5317,7 +5405,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "188",
         "modId": "58"
@@ -5381,7 +5470,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "189",
         "modId": "48"
@@ -5474,7 +5564,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "190",
         "modId": "60"
@@ -5553,7 +5644,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "191",
         "modId": "50"
@@ -5632,7 +5724,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "192",
         "modId": "46"
@@ -5753,7 +5846,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "193",
         "modId": "57"
@@ -5854,7 +5948,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "194",
         "modId": "54"
@@ -5943,7 +6038,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "195",
         "modId": "57"
@@ -6032,7 +6128,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "196",
         "modId": "52"
@@ -6111,7 +6208,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "197",
         "modId": "48"
@@ -6208,7 +6306,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "199",
         "modId": "57"
@@ -6282,7 +6381,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "200",
         "modId": "48"
@@ -6382,7 +6482,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "202",
         "modId": "49"
@@ -6474,7 +6575,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "203",
         "modId": "54"
@@ -6552,7 +6654,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "204",
         "modId": "56"
@@ -6643,7 +6746,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "205",
         "modId": "58"
@@ -6739,7 +6843,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "209",
         "modId": "54"
@@ -6845,7 +6950,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "211",
         "modId": "56"
@@ -6924,7 +7030,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "213",
         "modId": "49"
@@ -7025,7 +7132,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "214",
         "modId": "53"
@@ -7126,7 +7234,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "219",
         "modId": "45"
@@ -7210,7 +7319,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "220",
         "modId": "48"
@@ -7279,7 +7389,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "221",
         "modId": "52"
@@ -7358,7 +7469,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "224",
         "modId": "45"
@@ -7439,7 +7551,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "225",
         "modId": "56"
@@ -7569,7 +7682,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "226",
         "modId": "60"
@@ -7668,7 +7782,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "227",
         "modId": "44"
@@ -7739,7 +7854,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "228",
         "modId": "52"
@@ -7840,7 +7956,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "229",
         "modId": "43"
@@ -7951,7 +8068,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "230",
         "modId": "51"
@@ -8041,7 +8159,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "231",
         "modId": "54"
@@ -8124,7 +8243,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "232",
         "modId": "50"
@@ -8193,7 +8313,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "233",
         "modId": "53"
@@ -8272,7 +8393,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "243",
         "modId": "49"
@@ -8358,7 +8480,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "244",
         "modId": "49"
@@ -8427,7 +8550,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "245",
         "modId": "46"
@@ -8509,7 +8633,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "246",
         "modId": "49"
@@ -8588,7 +8713,25 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1929",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "St\u0159edn\u00ed \u010cechy",
+                    "regions::nutsCode": "CZ02",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1931",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Jihoz\u00e1pad",
+                    "regions::nutsCode": "CZ03",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "247",
         "modId": "50"
@@ -8689,7 +8832,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "248",
         "modId": "59"
@@ -8765,7 +8909,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "249",
         "modId": "55"
@@ -8851,7 +8996,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "250",
         "modId": "51"
@@ -8935,7 +9081,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "251",
         "modId": "49"
@@ -9090,7 +9237,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "252",
         "modId": "49"
@@ -9173,7 +9321,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "253",
         "modId": "53"
@@ -9254,7 +9403,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "254",
         "modId": "48"
@@ -9330,7 +9480,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "257",
         "modId": "44"
@@ -9451,7 +9602,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "258",
         "modId": "55"
@@ -9537,7 +9689,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "259",
         "modId": "42"
@@ -9614,7 +9767,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "260",
         "modId": "44"
@@ -9712,7 +9866,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "261",
         "modId": "45"
@@ -9786,7 +9941,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "263",
         "modId": "55"
@@ -9882,7 +10038,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "264",
         "modId": "54"
@@ -9959,7 +10116,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "265",
         "modId": "44"
@@ -10028,7 +10186,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "266",
         "modId": "41"
@@ -10121,7 +10280,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "268",
         "modId": "46"
@@ -10200,7 +10360,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "269",
         "modId": "54"
@@ -10276,7 +10437,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "270",
         "modId": "48"
@@ -10400,7 +10562,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "271",
         "modId": "60"
@@ -10481,7 +10644,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "272",
         "modId": "47"
@@ -10565,7 +10729,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "273",
         "modId": "44"
@@ -10648,7 +10813,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "275",
         "modId": "43"
@@ -10726,7 +10892,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "276",
         "modId": "56"
@@ -10824,7 +10991,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "277",
         "modId": "50"
@@ -10898,7 +11066,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "278",
         "modId": "42"
@@ -10967,7 +11136,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "279",
         "modId": "46"
@@ -11097,7 +11267,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "280",
         "modId": "56"
@@ -11174,7 +11345,25 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3220",
+                    "regions::countryCode": "PT",
+                    "regions::level": 3,
+                    "regions::name": "\u00c1rea Metropolitana do Porto",
+                    "regions::nutsCode": "PT11A",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "3237",
+                    "regions::countryCode": "PT",
+                    "regions::level": 3,
+                    "regions::name": "\u00c1rea Metropolitana de Lisboa",
+                    "regions::nutsCode": "PT170",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "281",
         "modId": "49"
@@ -11278,7 +11467,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "282",
         "modId": "52"
@@ -11371,7 +11561,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "283",
         "modId": "43"
@@ -11440,7 +11631,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "286",
         "modId": "47"
@@ -11514,7 +11706,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "288",
         "modId": "47"
@@ -11583,7 +11776,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "289",
         "modId": "45"
@@ -11652,7 +11846,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "290",
         "modId": "50"
@@ -11766,7 +11961,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "292",
         "modId": "44"
@@ -11842,7 +12038,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "293",
         "modId": "49"
@@ -11923,7 +12120,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "294",
         "modId": "46"
@@ -11999,7 +12197,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "295",
         "modId": "52"
@@ -12070,7 +12269,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "297",
         "modId": "40"
@@ -12144,7 +12344,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "298",
         "modId": "46"
@@ -12223,7 +12424,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "299",
         "modId": "44"
@@ -12297,7 +12499,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "300",
         "modId": "47"
@@ -12373,7 +12576,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "301",
         "modId": "46"
@@ -12447,7 +12651,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "302",
         "modId": "60"
@@ -12536,7 +12741,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "303",
         "modId": "46"
@@ -12626,7 +12832,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "304",
         "modId": "45"
@@ -12736,7 +12943,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "305",
         "modId": "62"
@@ -12822,7 +13030,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "308",
         "modId": "44"
@@ -12903,7 +13121,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "309",
         "modId": "44"
@@ -13014,7 +13242,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "311",
         "modId": "50"
@@ -13078,7 +13307,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "312",
         "modId": "54"
@@ -13190,7 +13420,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1857",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION WALLONNE",
+                    "regions::nutsCode": "BE3",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "313",
         "modId": "56"
@@ -13307,7 +13547,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "314",
         "modId": "54"
@@ -13383,7 +13633,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "316",
         "modId": "52"
@@ -13491,7 +13742,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "317",
         "modId": "49"
@@ -13626,7 +13878,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "318",
         "modId": "58"
@@ -13712,7 +13965,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "319",
         "modId": "49"
@@ -13791,7 +14045,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "320",
         "modId": "57"
@@ -13855,7 +14110,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "321",
         "modId": "46"
@@ -13944,7 +14200,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "323",
         "modId": "46"
@@ -14018,7 +14275,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "324",
         "modId": "43"
@@ -14087,7 +14345,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "325",
         "modId": "52"
@@ -14161,7 +14420,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "326",
         "modId": "43"
@@ -14251,7 +14511,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "327",
         "modId": "54"
@@ -14341,7 +14602,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "329",
         "modId": "46"
@@ -14445,7 +14707,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "330",
         "modId": "43"
@@ -14541,7 +14804,8 @@
                 }
             ],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "332",
         "modId": "45"
@@ -14635,7 +14899,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "333",
         "modId": "39"
@@ -14711,7 +14976,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "334",
         "modId": "45"
@@ -14790,7 +15056,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "335",
         "modId": "48"
@@ -14882,7 +15149,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "336",
         "modId": "47"
@@ -14962,7 +15230,8 @@
                 }
             ],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "337",
         "modId": "40"
@@ -15038,7 +15307,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "338",
         "modId": "43"
@@ -15131,7 +15401,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "339",
         "modId": "66"
@@ -15200,7 +15471,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "340",
         "modId": "44"
@@ -15269,7 +15541,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "341",
         "modId": "50"
@@ -15364,7 +15637,8 @@
                     "updates::description": "Art. 18 of Decree-Law no. 23 of 8 April 2020 introduces new suspensions for the payment of taxes and social contributions for enterprises operating in Italy which were significantly affected by the Covid-19 emergency in terms of turnover reductions in March and April 2020 (-33% for enterprises with turnover up to EUR 50 million and -50% for those with turnover exceeding EUR 50 million or -33% regardless of turnover for those based in the most affected provinces: Bergamo, Brescia, Cremona, Lodi and Piacenza). These suspensions also involve enterprises established after 31 March 2019, and non-commercial entities performing general interest activities. The suspensions concern the payments due in April and May 2020 and cover tax deductions, social security and welfare contributions and premiums for compulsory insurance.",
                     "modId": "3"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "342",
         "modId": "52"
@@ -15428,7 +15702,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "343",
         "modId": "55"
@@ -15520,7 +15795,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "344",
         "modId": "47"
@@ -15603,7 +15879,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "345",
         "modId": "52"
@@ -15677,7 +15954,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "346",
         "modId": "43"
@@ -15774,7 +16052,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3332",
+                    "regions::countryCode": "SK",
+                    "regions::level": 3,
+                    "regions::name": "Trnavsk\u00fd kraj",
+                    "regions::nutsCode": "SK021",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "347",
         "modId": "47"
@@ -15872,7 +16160,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "348",
         "modId": "50"
@@ -15941,7 +16230,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "349",
         "modId": "46"
@@ -16015,7 +16305,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "350",
         "modId": "42"
@@ -16119,7 +16410,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "352",
         "modId": "47"
@@ -16234,7 +16526,8 @@
                     "updates::description": "On 1st June 2020, the financial cover for partial activity (short-time work) will be changed from 70% to 60%. Even if \u2018compensation paid to the employee remains unchanged\u2019 (70% of gross salary, i.e. 84% of net salary and at least the net minimum wage), the level covered by the State and the unemployment agency will be lowered so that companies will now be reimbursed up to 60% of gross salary, capped at 4.5x minimum wage, instead of 70%. Sectors subject to special legislative or regulatory restrictions due to the health crisis will continue to benefit from 100% cover. This measure still has to be made the subject of a decree, which will be issued following adoption of a bill treating several health crisis related provisions that is currently under Parliamentary discussion.(source: Planet Labour)",
                     "modId": "1"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "353",
         "modId": "50"
@@ -16312,7 +16605,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "354",
         "modId": "46"
@@ -16393,7 +16687,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "355",
         "modId": "50"
@@ -16471,7 +16766,8 @@
                     "updates::description": "See case IT-2020-15/636 for redefinition and extension of the measure",
                     "modId": "2"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "359",
         "modId": "48"
@@ -16545,7 +16841,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "360",
         "modId": "38"
@@ -16621,7 +16918,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "361",
         "modId": "44"
@@ -16695,7 +16993,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "364",
         "modId": "48"
@@ -16785,7 +17084,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "365",
         "modId": "51"
@@ -16876,7 +17176,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "366",
         "modId": "55"
@@ -16945,7 +17246,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "368",
         "modId": "43"
@@ -17045,7 +17347,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "369",
         "modId": "46"
@@ -17109,7 +17412,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "370",
         "modId": "44"
@@ -17173,7 +17477,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "371",
         "modId": "41"
@@ -17265,7 +17570,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "372",
         "modId": "48"
@@ -17373,7 +17679,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "373",
         "modId": "49"
@@ -17469,7 +17776,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "375",
         "modId": "50"
@@ -17533,7 +17841,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "376",
         "modId": "44"
@@ -17607,7 +17916,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "377",
         "modId": "41"
@@ -17676,7 +17986,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "378",
         "modId": "42"
@@ -17740,7 +18051,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "379",
         "modId": "43"
@@ -17809,7 +18121,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "380",
         "modId": "46"
@@ -17888,7 +18201,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "381",
         "modId": "46"
@@ -17967,7 +18281,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "382",
         "modId": "48"
@@ -18038,7 +18353,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "383",
         "modId": "46"
@@ -18174,7 +18490,8 @@
                 }
             ],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "385",
         "modId": "80"
@@ -18238,7 +18555,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "386",
         "modId": "52"
@@ -18355,7 +18673,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "387",
         "modId": "49"
@@ -18448,7 +18767,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "388",
         "modId": "46"
@@ -18541,7 +18861,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "389",
         "modId": "47"
@@ -18627,7 +18948,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "390",
         "modId": "49"
@@ -18716,7 +19038,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "391",
         "modId": "43"
@@ -18809,7 +19132,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "392",
         "modId": "45"
@@ -18878,7 +19202,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "393",
         "modId": "39"
@@ -18952,7 +19277,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "394",
         "modId": "40"
@@ -19026,7 +19352,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "395",
         "modId": "41"
@@ -19105,7 +19432,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "396",
         "modId": "37"
@@ -19213,7 +19541,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "400",
         "modId": "49"
@@ -19294,7 +19623,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "402",
         "modId": "45"
@@ -19380,7 +19710,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "403",
         "modId": "42"
@@ -19469,7 +19800,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "404",
         "modId": "42"
@@ -19540,7 +19872,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "405",
         "modId": "43"
@@ -19611,7 +19944,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "407",
         "modId": "44"
@@ -19698,7 +20032,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "409",
         "modId": "47"
@@ -19772,7 +20107,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "410",
         "modId": "38"
@@ -19843,7 +20179,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "412",
         "modId": "43"
@@ -19935,7 +20272,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "413",
         "modId": "52"
@@ -20006,7 +20344,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "415",
         "modId": "40"
@@ -20087,7 +20426,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "416",
         "modId": "59"
@@ -20161,7 +20501,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "417",
         "modId": "60"
@@ -20253,7 +20594,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "419",
         "modId": "42"
@@ -20317,7 +20659,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "420",
         "modId": "47"
@@ -20386,7 +20729,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "422",
         "modId": "50"
@@ -20475,7 +20819,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "423",
         "modId": "51"
@@ -20546,7 +20891,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "424",
         "modId": "44"
@@ -20617,7 +20963,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "425",
         "modId": "42"
@@ -20706,7 +21053,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "426",
         "modId": "45"
@@ -20826,7 +21174,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "427",
         "modId": "47"
@@ -20914,7 +21263,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "428",
         "modId": "46"
@@ -20983,7 +21333,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "430",
         "modId": "54"
@@ -21059,7 +21410,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "431",
         "modId": "58"
@@ -21148,7 +21500,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "432",
         "modId": "41"
@@ -21222,7 +21575,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "433",
         "modId": "41"
@@ -21298,7 +21652,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3103",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Tirol",
+                    "regions::nutsCode": "AT33",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "435",
         "modId": "51"
@@ -21399,7 +21763,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "436",
         "modId": "47"
@@ -21475,7 +21840,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "437",
         "modId": "63"
@@ -21554,7 +21920,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "438",
         "modId": "47"
@@ -21628,7 +21995,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "439",
         "modId": "41"
@@ -21704,7 +22072,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "441",
         "modId": "52"
@@ -21778,7 +22147,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "442",
         "modId": "42"
@@ -21861,7 +22231,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3065",
+                    "regions::countryCode": "AT",
+                    "regions::level": 1,
+                    "regions::name": "OST\u00d6STERREICH",
+                    "regions::nutsCode": "AT1",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "443",
         "modId": "41"
@@ -21954,7 +22334,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "444",
         "modId": "52"
@@ -22028,7 +22409,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "445",
         "modId": "50"
@@ -22112,7 +22494,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "446",
         "modId": "39"
@@ -22191,7 +22574,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "447",
         "modId": "41"
@@ -22272,7 +22656,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "448",
         "modId": "42"
@@ -22355,7 +22740,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "449",
         "modId": "58"
@@ -22431,7 +22817,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "450",
         "modId": "42"
@@ -22515,7 +22902,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "451",
         "modId": "41"
@@ -22591,7 +22979,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "452",
         "modId": "44"
@@ -22667,7 +23056,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "453",
         "modId": "45"
@@ -22746,7 +23136,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "454",
         "modId": "45"
@@ -22822,7 +23213,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "455",
         "modId": "45"
@@ -22903,7 +23295,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "457",
         "modId": "45"
@@ -23065,7 +23458,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "458",
         "modId": "55"
@@ -23129,7 +23523,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "459",
         "modId": "47"
@@ -23203,7 +23598,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "460",
         "modId": "48"
@@ -23272,7 +23668,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "461",
         "modId": "43"
@@ -23356,7 +23753,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "462",
         "modId": "53"
@@ -23430,7 +23828,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3231",
+                    "regions::countryCode": "PT",
+                    "regions::level": 3,
+                    "regions::name": "Regi\u00e3o de Leiria",
+                    "regions::nutsCode": "PT16F",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "464",
         "modId": "45"
@@ -23504,7 +23912,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "465",
         "modId": "40"
@@ -23573,7 +23982,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "466",
         "modId": "39"
@@ -23637,7 +24047,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "467",
         "modId": "44"
@@ -23721,7 +24132,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "468",
         "modId": "45"
@@ -23785,7 +24197,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "470",
         "modId": "40"
@@ -23866,7 +24279,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "471",
         "modId": "38"
@@ -23935,7 +24349,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "472",
         "modId": "39"
@@ -24018,7 +24433,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "473",
         "modId": "46"
@@ -24082,7 +24498,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "474",
         "modId": "42"
@@ -24177,7 +24594,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "475",
         "modId": "49"
@@ -24291,7 +24709,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "476",
         "modId": "42"
@@ -24362,7 +24781,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "477",
         "modId": "42"
@@ -24426,7 +24846,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "478",
         "modId": "42"
@@ -24537,7 +24958,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "479",
         "modId": "44"
@@ -24618,7 +25040,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "480",
         "modId": "41"
@@ -24687,7 +25110,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "481",
         "modId": "46"
@@ -24775,7 +25199,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "483",
         "modId": "45"
@@ -24866,7 +25291,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "486",
         "modId": "44"
@@ -24942,7 +25368,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "487",
         "modId": "42"
@@ -25013,7 +25440,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "488",
         "modId": "37"
@@ -25082,7 +25510,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "489",
         "modId": "38"
@@ -25153,7 +25582,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "490",
         "modId": "45"
@@ -25224,7 +25654,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "491",
         "modId": "40"
@@ -25303,7 +25734,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "492",
         "modId": "38"
@@ -25367,7 +25799,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "493",
         "modId": "37"
@@ -25436,7 +25869,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "494",
         "modId": "39"
@@ -25505,7 +25939,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "495",
         "modId": "36"
@@ -25569,7 +26004,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "496",
         "modId": "38"
@@ -25633,7 +26069,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "497",
         "modId": "37"
@@ -25702,7 +26139,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "498",
         "modId": "39"
@@ -25781,7 +26219,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "500",
         "modId": "35"
@@ -25855,7 +26294,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "501",
         "modId": "34"
@@ -25924,7 +26364,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "503",
         "modId": "39"
@@ -26015,7 +26456,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "504",
         "modId": "45"
@@ -26092,7 +26534,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "508",
         "modId": "36"
@@ -26163,7 +26606,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "509",
         "modId": "39"
@@ -26248,7 +26692,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "510",
         "modId": "39"
@@ -26324,7 +26769,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "511",
         "modId": "46"
@@ -26398,7 +26844,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "512",
         "modId": "40"
@@ -26483,7 +26930,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "513",
         "modId": "43"
@@ -26552,7 +27000,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "514",
         "modId": "38"
@@ -26635,7 +27084,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "515",
         "modId": "43"
@@ -26728,7 +27178,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "516",
         "modId": "41"
@@ -26806,7 +27257,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "518",
         "modId": "45"
@@ -26900,7 +27352,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "519",
         "modId": "43"
@@ -27034,7 +27487,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "520",
         "modId": "44"
@@ -27103,7 +27557,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "521",
         "modId": "42"
@@ -27229,7 +27684,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "522",
         "modId": "43"
@@ -27315,7 +27771,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "524",
         "modId": "41"
@@ -27393,7 +27850,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "525",
         "modId": "42"
@@ -27462,7 +27920,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "527",
         "modId": "42"
@@ -27548,7 +28007,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "528",
         "modId": "43"
@@ -27612,7 +28072,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "530",
         "modId": "39"
@@ -27738,7 +28199,8 @@
                     "updates::description": "The measure has been extended; the eligibility criteria for application have been eased. As was announced on 20th of April 2020, more applicants became eligible for the support: those who work 2 hours per day only can also apply. This implies that those companies the turnover of which declined by 75% became also eligible. Those companies which are eligible can use this measure in combination with the new working time banking system.  At the same time, the companies are also eligible for a job retention loan for a 9-month wage, with a 0.1% preferential interest. The loand will last two years - the detailed provision on this will be published shortly.   \rSo far it has been unchanged that a max. of HUF75,000 wage support can be applied for per employee. \r",
                     "modId": "3"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "531",
         "modId": "45"
@@ -27817,7 +28279,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "532",
         "modId": "36"
@@ -28031,7 +28494,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "534",
         "modId": "37"
@@ -28095,7 +28559,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "536",
         "modId": "34"
@@ -28174,7 +28639,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "537",
         "modId": "41"
@@ -28245,7 +28711,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "538",
         "modId": "40"
@@ -28316,7 +28783,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "539",
         "modId": "36"
@@ -28398,7 +28866,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "540",
         "modId": "42"
@@ -28500,7 +28969,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "541",
         "modId": "40"
@@ -28571,7 +29041,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "542",
         "modId": "40"
@@ -28654,7 +29125,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "543",
         "modId": "40"
@@ -28804,7 +29276,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "544",
         "modId": "43"
@@ -28986,7 +29459,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "545",
         "modId": "54"
@@ -29082,7 +29556,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "546",
         "modId": "40"
@@ -29156,7 +29631,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "547",
         "modId": "36"
@@ -29242,7 +29718,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "550",
         "modId": "38"
@@ -29306,7 +29783,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "551",
         "modId": "43"
@@ -29375,7 +29853,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "553",
         "modId": "46"
@@ -29460,7 +29939,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "554",
         "modId": "38"
@@ -29529,7 +30009,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "555",
         "modId": "46"
@@ -29593,7 +30074,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "556",
         "modId": "42"
@@ -29657,7 +30139,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "557",
         "modId": "41"
@@ -29752,7 +30235,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "558",
         "modId": "51"
@@ -29821,7 +30305,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "559",
         "modId": "44"
@@ -29895,7 +30380,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "560",
         "modId": "40"
@@ -29974,7 +30460,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "561",
         "modId": "40"
@@ -30074,7 +30561,8 @@
                 }
             ],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "562",
         "modId": "43"
@@ -30148,7 +30636,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "565",
         "modId": "43"
@@ -30222,7 +30711,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "566",
         "modId": "45"
@@ -30301,7 +30791,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "567",
         "modId": "48"
@@ -30397,7 +30888,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "568",
         "modId": "42"
@@ -30468,7 +30960,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "570",
         "modId": "41"
@@ -30537,7 +31030,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2455",
+                    "regions::countryCode": "GR",
+                    "regions::level": 1,
+                    "regions::name": "ATTIK\u0397 (ATTIKI)",
+                    "regions::nutsCode": "EL3",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "571",
         "modId": "38"
@@ -30601,7 +31104,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "572",
         "modId": "41"
@@ -30693,7 +31197,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "573",
         "modId": "41"
@@ -30772,7 +31277,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2455",
+                    "regions::countryCode": "GR",
+                    "regions::level": 1,
+                    "regions::name": "ATTIK\u0397 (ATTIKI)",
+                    "regions::nutsCode": "EL3",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "574",
         "modId": "41"
@@ -30864,7 +31379,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "582",
         "modId": "38"
@@ -30947,7 +31463,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "585",
         "modId": "46"
@@ -31018,7 +31535,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "586",
         "modId": "41"
@@ -31113,7 +31631,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "587",
         "modId": "46"
@@ -31212,7 +31731,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "588",
         "modId": "44"
@@ -31286,7 +31806,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "589",
         "modId": "45"
@@ -31362,7 +31883,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "590",
         "modId": "40"
@@ -31438,7 +31960,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "591",
         "modId": "46"
@@ -31519,7 +32042,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "592",
         "modId": "39"
@@ -31622,7 +32146,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "593",
         "modId": "46"
@@ -31691,7 +32216,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "594",
         "modId": "48"
@@ -31787,7 +32313,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "609",
         "modId": "40"
@@ -31856,7 +32383,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "612",
         "modId": "36"
@@ -31920,7 +32448,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "613",
         "modId": "39"
@@ -31984,7 +32513,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "614",
         "modId": "41"
@@ -32070,7 +32600,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "615",
         "modId": "41"
@@ -32177,7 +32708,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "616",
         "modId": "44"
@@ -32277,7 +32809,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "617",
         "modId": "40"
@@ -32353,7 +32886,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "618",
         "modId": "41"
@@ -32445,7 +32979,8 @@
                 }
             ],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "619",
         "modId": "39"
@@ -32587,7 +33122,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "620",
         "modId": "54"
@@ -32696,7 +33232,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "621",
         "modId": "40"
@@ -32789,7 +33326,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3078",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Wien",
+                    "regions::nutsCode": "AT13",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "622",
         "modId": "47"
@@ -32877,7 +33424,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "623",
         "modId": "43"
@@ -32984,7 +33532,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "624",
         "modId": "41"
@@ -33073,7 +33622,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "625",
         "modId": "43"
@@ -33137,7 +33687,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "626",
         "modId": "33"
@@ -33208,7 +33759,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "627",
         "modId": "36"
@@ -33279,7 +33831,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "628",
         "modId": "34"
@@ -33353,7 +33906,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "630",
         "modId": "42"
@@ -33504,7 +34058,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "631",
         "modId": "45"
@@ -33597,7 +34152,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "632",
         "modId": "40"
@@ -33666,7 +34222,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "633",
         "modId": "34"
@@ -33771,7 +34328,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "634",
         "modId": "40"
@@ -33854,7 +34412,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "636",
         "modId": "38"
@@ -33930,7 +34489,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "637",
         "modId": "34"
@@ -34015,7 +34575,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "638",
         "modId": "35"
@@ -34086,7 +34647,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "639",
         "modId": "34"
@@ -34184,7 +34746,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "640",
         "modId": "34"
@@ -34272,7 +34835,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1972",
+                    "regions::countryCode": "DE",
+                    "regions::level": 1,
+                    "regions::name": "BADEN-W\u00dcRTTEMBERG",
+                    "regions::nutsCode": "DE1",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "646",
         "modId": "53"
@@ -34341,7 +34914,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3093",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Ober\u00f6sterreich",
+                    "regions::nutsCode": "AT31",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "647",
         "modId": "35"
@@ -34410,7 +34993,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "650",
         "modId": "34"
@@ -34491,7 +35075,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "651",
         "modId": "41"
@@ -34590,7 +35175,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "652",
         "modId": "36"
@@ -34689,7 +35275,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "653",
         "modId": "40"
@@ -34770,7 +35357,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "654",
         "modId": "37"
@@ -34846,7 +35434,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "657",
         "modId": "35"
@@ -34910,7 +35499,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "658",
         "modId": "35"
@@ -35021,7 +35611,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "660",
         "modId": "38"
@@ -35099,7 +35690,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "662",
         "modId": "38"
@@ -35189,7 +35781,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "663",
         "modId": "38"
@@ -35287,7 +35880,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "665",
         "modId": "35"
@@ -35447,7 +36041,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "667",
         "modId": "37"
@@ -35524,7 +36119,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2633",
+                    "regions::countryCode": "FR",
+                    "regions::level": 1,
+                    "regions::name": "BOURGOGNE-FRANCHE-COMT\u00c9",
+                    "regions::nutsCode": "FRC",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "669",
         "modId": "33"
@@ -35607,7 +36212,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "670",
         "modId": "40"
@@ -35700,7 +36306,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "671",
         "modId": "41"
@@ -35764,7 +36371,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "672",
         "modId": "36"
@@ -36035,7 +36643,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "673",
         "modId": "46"
@@ -36121,7 +36730,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "677",
         "modId": "34"
@@ -36234,7 +36844,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "681",
         "modId": "28"
@@ -36329,7 +36940,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "682",
         "modId": "32"
@@ -36423,7 +37035,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "685",
         "modId": "35"
@@ -36494,7 +37107,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "687",
         "modId": "37"
@@ -36572,7 +37186,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "689",
         "modId": "30"
@@ -36655,7 +37270,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "690",
         "modId": "33"
@@ -36726,7 +37342,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "691",
         "modId": "26"
@@ -36821,7 +37438,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "692",
         "modId": "43"
@@ -36897,7 +37515,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "693",
         "modId": "33"
@@ -36966,7 +37585,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "694",
         "modId": "35"
@@ -37061,7 +37681,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "696",
         "modId": "46"
@@ -37149,7 +37770,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "697",
         "modId": "34"
@@ -37232,7 +37854,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "698",
         "modId": "37"
@@ -37311,7 +37934,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "699",
         "modId": "28"
@@ -37411,7 +38035,17 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3085",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Steiermark",
+                    "regions::nutsCode": "AT22",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "700",
         "modId": "37"
@@ -37475,7 +38109,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "701",
         "modId": "30"
@@ -37549,7 +38184,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "702",
         "modId": "29"
@@ -37628,7 +38264,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "703",
         "modId": "31"
@@ -37712,7 +38349,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "704",
         "modId": "31"
@@ -37791,7 +38429,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "705",
         "modId": "31"
@@ -37877,7 +38516,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "706",
         "modId": "31"
@@ -37948,7 +38588,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "709",
         "modId": "26"
@@ -38026,7 +38667,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "710",
         "modId": "25"
@@ -38090,7 +38732,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "714",
         "modId": "39"
@@ -38154,7 +38797,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "715",
         "modId": "33"
@@ -38218,7 +38862,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "716",
         "modId": "29"
@@ -38317,7 +38962,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "721",
         "modId": "35"
@@ -38406,7 +39052,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "722",
         "modId": "44"
@@ -38495,7 +39142,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "724",
         "modId": "35"
@@ -38584,7 +39232,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "725",
         "modId": "29"
@@ -38673,7 +39322,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "726",
         "modId": "25"
@@ -38737,7 +39387,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "727",
         "modId": "24"
@@ -38842,7 +39493,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "728",
         "modId": "48"
@@ -38913,7 +39565,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "729",
         "modId": "25"
@@ -38996,7 +39649,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "730",
         "modId": "29"
@@ -39115,7 +39769,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "732",
         "modId": "31"
@@ -39189,7 +39844,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "733",
         "modId": "31"
@@ -39282,7 +39938,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "734",
         "modId": "27"
@@ -39368,7 +40025,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "735",
         "modId": "22"
@@ -39451,7 +40109,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "737",
         "modId": "29"
@@ -39515,7 +40174,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "738",
         "modId": "21"
@@ -39584,7 +40244,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "739",
         "modId": "30"
@@ -39658,7 +40319,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "742",
         "modId": "27"
@@ -39729,7 +40391,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "743",
         "modId": "31"
@@ -39800,7 +40463,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "744",
         "modId": "26"
@@ -39899,7 +40563,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "745",
         "modId": "31"
@@ -39973,7 +40638,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "746",
         "modId": "24"
@@ -40049,7 +40715,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "747",
         "modId": "31"
@@ -40118,7 +40785,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "748",
         "modId": "18"
@@ -40211,7 +40879,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "749",
         "modId": "25"
@@ -40280,7 +40949,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "750",
         "modId": "18"
@@ -40368,7 +41038,8 @@
                     "updates::description": "",
                     "modId": "0"
                 }
-            ]
+            ],
+            "regions": []
         },
         "recordId": "752",
         "modId": "19"
@@ -40439,7 +41110,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "754",
         "modId": "17"
@@ -40515,7 +41187,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "755",
         "modId": "25"
@@ -40593,7 +41266,25 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "757",
         "modId": "25"
@@ -40678,7 +41369,25 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "758",
         "modId": "27"
@@ -40761,7 +41470,25 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "759",
         "modId": "21"
@@ -40844,7 +41571,17 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3078",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Wien",
+                    "regions::nutsCode": "AT13",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "761",
         "modId": "19"
@@ -40929,7 +41666,25 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "762",
         "modId": "33"
@@ -41037,7 +41792,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "763",
         "modId": "19"
@@ -41130,6 +41886,16 @@
                     "updates::d_date": "05/14/2020",
                     "updates::description": "The measure was extended to include further groups of cultural institutions, such as cinemas, and the budget was increased by an additional \u20ac90 million (see source dated 14 May 2020).",
                     "modId": "6"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "2021",
+                    "regions::countryCode": "DE",
+                    "regions::level": 1,
+                    "regions::name": "BAYERN",
+                    "regions::nutsCode": "DE2",
+                    "modId": "2"
                 }
             ]
         },
@@ -41225,7 +41991,25 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3070",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Nieder\u00f6sterreich",
+                    "regions::nutsCode": "AT12",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "3078",
+                    "regions::countryCode": "AT",
+                    "regions::level": 2,
+                    "regions::name": "Wien",
+                    "regions::nutsCode": "AT13",
+                    "modId": "2"
+                }
+            ]
         },
         "recordId": "769",
         "modId": "19"
@@ -41299,7 +42083,8 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "770",
         "modId": "16"
@@ -41400,7 +42185,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "771",
         "modId": "20"
@@ -41499,7 +42285,8 @@
                     "modId": "0"
                 }
             ],
-            "updates": []
+            "updates": [],
+            "regions": []
         },
         "recordId": "775",
         "modId": "46"
