@@ -15,6 +15,7 @@ Single attributes are below the `fieldData` object:
 * `d_startDate`: Start date
 * `d_endDate`: End date
 * `calc_country`: Country
+* `territorialScope`: Territorial scope
 * `calc_minorCategory`: Category
 * `calc_subMinorCategory`: Subcategory
 * `calc_identifier`: Identifier
@@ -34,5 +35,16 @@ Single attributes are below the `fieldData` object:
 * `calc_type`: Type of measure
 * `statusOfRegulation`: Status of the regulation
 
+Multiple choice attributes are below the `portalData` object:
+* `sources`: Title, URL and date to the source of information
+* `actors`: Types of actors involved in the measure
+* `targetGroups`: Groups the measure is targeted at
+* `funding`: Types of funding required for the measure
+* `occupations`: If `isOccupation` is 'Yes', then list of ISCO-08 occupations
+* `sectors`: If `isSector` is 'Yes', then list of NACE level 2 sectors
+* `regions`: If `territorialScope` is not 'Applies nationwide', then list of NUTS regions
+* `updates`: Date and free text of updates implemented after measure came into effect
+
+
 ## Structure of the CSV file
-The
+Refer to column headers.
