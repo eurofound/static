@@ -7,6 +7,7 @@ This repository provides access to the raw dataset, which is updated in irregula
 * [PowerBI dashboard of the data](https://www.eurofound.europa.eu/data/covid-19-eu-policywatch/database)
 
 When using these data, please cite as:
+
 Eurofound (2020), COVID-19 EU PolicyWatch, http://eurofound.link/covid19eupolicywatch
 
 ## Structure of the JSON file
