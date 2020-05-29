@@ -10,7 +10,29 @@ This repository provides access to the raw dataset, which is updated in irregula
 The JSON file consists of all cases in the database. A case has both single attributes (such as title, start date or category) and multiple attributes (such as actors, target groups or sectors). 
 
 Single attributes are below the `fieldData` object:
-* `title`: The title of a case
+* `title`: The title of a case (English)
+* `title_nationalLanguage`: The title of a case (national language)
+* `d_startDate`: Start date
+* `d_endDate`: End date
+* `calc_country`: Country
+* `calc_minorCategory`: Category
+* `calc_subMinorCategory`: Subcategory
+* `calc_identifier`: Identifier
+* `dateType`: Date type (temporary / open ended)
+* `calc_creationDay`: Date when case was added to database
+* `calc_lastUpdate`:  Date when case was last updated
+* `descriptionBackgroundInfo`: Free text, background information
+* `descriptionContentOfMeasure`: Free text, content of the measure
+* `descriptionUseOfMeasure`: Free text, use of the measure
+* `descriptionViewsOfSocialPartners`: Free text, views of social partners
+* `socialPartner_form`: Form of social partner involvement
+* `socialPartner_role`: Role of social partners
+* `calc_githubURL`: Link to HTML factsheet
+* `isOccupation`: Is occupation specific?
+* `isSector`: Is sector specific?
+* `sector_privateOrPublic`: Private or public sector?
+* `calc_type`: Type of measure
+* `statusOfRegulation`: Status of the regulation
 
 ## Structure of the CSV file
 The
