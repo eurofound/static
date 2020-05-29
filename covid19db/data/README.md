@@ -4,3 +4,10 @@ Eurofound's COVID-19 EU PolicyWatch collates information on the responses of gov
 
 This repository provides access to the raw dataset, which is updated in irregular intervals.
 * [More information on the Eurofound website](https://www.eurofound.europa.eu/data/covid-19-eu-policywatch)
+* [PowerBI dashboard of the data](https://www.eurofound.europa.eu/data/covid-19-eu-policywatch/database)
+
+## Structure of the JSON file
+The
+
+## Structure of the CSV file
+The
