@@ -9,5 +9,8 @@ This repository provides access to the raw dataset, which is updated in irregula
 ## Structure of the JSON file
 The JSON file consists of all cases in the database. A case has both single attributes (such as title, start date or category) and multiple attributes (such as actors, target groups or sectors). 
 
+Single attributes are below the `fieldData` object:
+* `title`: The title of a case
+
 ## Structure of the CSV file
 The
