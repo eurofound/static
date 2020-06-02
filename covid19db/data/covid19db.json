@@ -61,6 +61,13 @@
                     "sources::url": "https://www.ots.at/presseaussendung/OTS_20200419_OTS0021/haertefall-fonds-geht-in-zweite-phase-informationen-und-services",
                     "sources::d_date": "04/20/2020",
                     "modId": "1"
+                },
+                {
+                    "recordId": "890",
+                    "sources::title": "Improvements in the hardship fund: comeback bonus and higher minimum support for the self-employed",
+                    "sources::url": "https://news.wko.at/news/oesterreich/Nachbesserungen-im-Haertefall-Fonds:-Comeback-Bonus-und-h.html",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "0"
                 }
             ],
             "actors": [
@@ -96,11 +103,18 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [],
+            "updates": [
+                {
+                    "recordId": "42",
+                    "updates::d_date": "05/27/2020",
+                    "updates::description": "An expansion of the safety net self-employed was announced on 27 May. Next to the prolongation of the period over which grants can be obtained from three to six months, a so called 'come back bonus' of \u20ac500 was introduced. This will be added automatically to already existing grants. Including this bonus the minimum amount of the grant will be raised to \u20ac1,000. Another novelty is that also pensioners in marginal employment are going to be eligible for the grant. ",
+                    "modId": "2"
+                }
+            ],
             "regions": []
         },
         "recordId": "95",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -6672,7 +6686,7 @@
             "calc_identifier": "HR-2020-12/322",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "04/30/2020",
+            "calc_lastUpdate": "06/01/2020",
             "descriptionBackgroundInfo": "The tourist  (membership) fee for Tourist board in Croatia is a fixed amount that pay those who rent apartments or rooms (usually 200 Euro annually per legal or natural entity, according to the number of beds, and it depends from one municipality to another). \r\rAccording to the new Tourist Board Membership Act, which came into force on January 1, 2020, private renters are obliged to calculate and report the membership fee of the Tourist Board until January 15. In 2020, the deadline was extended until the end of February given the short time adjustments to new regulations. Ordinance on the annual lump sum of membership fee for persons providing catering services in the household and on the family farm stipulates payment of fee to the tourist board was published on 5 February.\r",
             "descriptionContentOfMeasure": "The Law on Amendments to the Tourist Act (OG 32/20) adopted in March empowered the Minister of Tourism to prescribe, by ordinance, a deferral or exemption from payment of a tourist membership fee in special circumstances.\rThe Ordinance on the postponement of or exemption from payment of a tourist fee (OG 36/20) stipulates that persons providing catering services in the household and on the family farms are exempt from paying a half of the annual lump sum of the tourist fee in accordance with a special regulation governing the catering industry for 2020. In addition, they are also exempted from paying in full the annual lump sum of tourist tax for extra beds for 2020. \r",
             "descriptionUseOfMeasure": "The number of possible applicants is not yet known.  It is quite positive that during the delay or exemption from payment of the tourist tax, the competent inspectors shall not make charges for initiating misdemeanor proceedings or issuing misdemeanor orders, nor charge at the place of committing the offense for taxpayers. ",
@@ -6683,7 +6697,7 @@
             "isOccupation": "No",
             "isSector": "Yes",
             "sector_privateOrPublic": "Not specified",
-            "calc_type": "Recommendation",
+            "calc_type": "Legislation or other statutory regulation",
             "statusOfRegulation": "Entirely new measure "
         },
         "portalData": {
@@ -6750,7 +6764,7 @@
             "regions": []
         },
         "recordId": "205",
-        "modId": "58"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -17011,10 +17025,10 @@
             "calc_identifier": "AT-2020-16/474",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/12/2020",
-            "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see other cases in Austria on bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis.\r\rEligible are those companies that fully meet the following conditions:\r- Companies that have their management or a permanent establishment in Austria\r- Companies that have to bear fixed costs from their operating activities in Austria\r- Companies that were healthy before the Corona crisis\r- Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r- Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria",
-            "descriptionContentOfMeasure": "The following fixed costs of the company are eligible:\r- Rent of business premises\r- Insurance premiums\r- Interest expenses\r- Licence costs\r- Payments for electricity, gas and telecommunications\r- Other contractual payment obligations\r- Entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)\r- Loss of value of perishable/seasonal goods, provided that these lose at least 50% of their value during the corona measures\r\rThe fixed cost subsidy is staggered and depends on the company's loss of sales:\r- loss of 40 to 60%: 25% compensation of fixed costs\r- loss of 60 to 80%: 50% compensation of fixed costs\r- loss of 80 to 100%: 75%  compensation of fixed costs\r\rThe fixed-cost subsidy does not have to be reimbursed - provided that all the provisions of the guidelines are complied with. The subsidy is limited to a maximum of \u20ac90 million per company.",
-            "descriptionUseOfMeasure": "Measure has not yet been implemented at the time of writing (start: 15 April 2020)",
+            "calc_lastUpdate": "05/30/2020",
+            "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see other cases in Austria on bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis.\r\rEligible are those companies that fully meet the following conditions:\r*Companies that have their management or a permanent establishment in Austria\r*Companies that have to bear fixed costs from their operating activities in Austria\r*Companies that were healthy before the Corona crisis\r*Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r*Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.",
+            "descriptionContentOfMeasure": "The following fixed costs of the company are eligible:\r*Rent of business premises\r*Insurance premiums\r*Interest expenses\r*Licence costs\r*Payments for electricity, gas and telecommunications\r*Other contractual payment obligations\r*Entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)\r*Loss of value of perishable/seasonal goods, provided that these lose at least 50% of their value during the corona measures\r\rThe fixed cost subsidy is staggered and depends on the company's loss of sales:\r*loss of 40 to 60%: 25% compensation of fixed costs\r*loss of 60 to 80%: 50% compensation of fixed costs\r*loss of 80 to 100%: 75%  compensation of fixed costs\r\rThe fixed-cost subsidy does not have to be reimbursed - provided that all the provisions of the guidelines are complied with. The subsidy is limited to a maximum of \u20ac90 million per company.",
+            "descriptionUseOfMeasure": "Measure has not yet been implemented at the time of writing (start: 15 April 2020).",
             "descriptionViewsOfSocialPartners": "Employer organisation was consulted.",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Consulted",
@@ -17054,6 +17068,20 @@
                     "sources::url": "https://www.derstandard.de/story/2000117348777/regierung-stellt-milliarden-an-betriebszuschuessen-bereit",
                     "sources::d_date": "05/07/2020",
                     "modId": "1"
+                },
+                {
+                    "recordId": "888",
+                    "sources::title": "Improved Corona Aid Fund brings liquidity to companies",
+                    "sources::url": "https://news.wko.at/news/oesterreich/JW-Holzinger:-Verbesserter-Corona-Hilfs-Fonds-bringt-Liqu.html",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "889",
+                    "sources::title": "Changes to the Corona Aid Fund: Fixed cost subsidy",
+                    "sources::url": "https://www.rkp.at/coronavirus/aenderungen-corona-hilfsfonds-fixkostenzuschuss/",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
                 }
             ],
             "actors": [
@@ -17070,9 +17098,19 @@
                     "modId": "6"
                 },
                 {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "8"
+                },
+                {
                     "recordId": "59",
                     "targetGroups::name": "All companies",
                     "modId": "6"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "5"
                 }
             ],
             "funding": [
@@ -17084,11 +17122,18 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [],
+            "updates": [
+                {
+                    "recordId": "41",
+                    "updates::d_date": "05/13/2020",
+                    "updates::description": "On May 13, the new Corona Aid Fund guidelines for fixed-cost grants were published in the form of a regulation by the Austrian Ministry of Finance. Further improvements were announced on May 21, 2020. The novelties include: \r*Payment of an advance (first tranche) of up to 50%\r*Fixed-cost subsidy is granted from an amount of \u20ac500 upwards\r*Payments from the Hardship Fund are no longer counted.\r*Assertion of reasonable tax consultant, auditor and accountant costs up to \u20ac500 for applications with a grant amount below \u20ac12,000\r*Companies that were \u201ccompanies in difficulty\u201d under EU state aid law on December 31, 2019 can apply for a grant of up to \u20ac200,000 under the de minimis state aid scheme, provided that no insolvency proceedings have been opened or the conditions for this have been met\rThe observation period stated in the 1st application cannot be changed afterwards (2nd and 3rd installment). \r\rThe Austrian Chamber of Economics section 'Young economy' highlighted that the reduction of the minimum threshold of the grant from \u20ac2,000 to \u20ac500, together with the fact that it can be obtained in addition to any payments from the hardship fund, are an important improvement in supporting solo-self-employed, micro and small enterprises.",
+                    "modId": "1"
+                }
+            ],
             "regions": []
         },
         "recordId": "365",
-        "modId": "51"
+        "modId": "55"
     },
     {
         "fieldData": {
@@ -19450,13 +19495,13 @@
             "calc_identifier": "FR-2020-11/509",
             "dateType": "Open ended",
             "calc_creationDay": "04/12/2020",
-            "calc_lastUpdate": "05/10/2020",
+            "calc_lastUpdate": "06/01/2020",
             "descriptionBackgroundInfo": "An employee who is not ill and who has to look after a child under the age of 16 as a result of the closure of a school may be granted sick leave, provided that his or her job does not allow for teleworking. An employee who wishes to be placed on sick leave simply has to send a certificate to his employer. The latter, then, makes an online declaration on the Health Insurance website so that the benefits can be paid.",
             "descriptionContentOfMeasure": "According to this measure, if the job does not allow teleworking, the employer makes a declaration on the health insurance website (ameli.fr). The employee receives the sickness benefit without any seniority condition. In order to ensure equal treatment between insured persons who are ill, those who are placed in isolation and those who are forced to care for their children under 16 years of age, the waiting period for entitlement to compensation for work stoppages is abolished during the period of a state of health emergency. The measure applies to all compulsory schemes: general, agricultural and special schemes, including the civil service scheme. The insured persons concerned will therefore receive their compensation from the first day of the stoppage.\r\rThis measure has been in effect since March 11 and remains in force until the end of the closure of the schools (whose reopening date has not been set). \r\rOnly one parent at a time (or holder of parental authority) may be issued a work stoppage. It is possible to split the stoppage or to share it between the parents for the duration of the closure of the establishment. Periods of absence from work to care for children under the age of 16 do not give entitlement to paid leave.\r\rThe measure applies to employees, seamen, clerks and employees of notaries, artists-authors, self-employed persons and contract civil servants. It is also intended for the liberal professions and health professionals benefiting from the payment of exceptional flat-rate daily allowances.",
             "descriptionUseOfMeasure": "Potentially all employees of of the private sector with a child under 16 years old or a child with disabilities without age limit. No data available. ",
-            "descriptionViewsOfSocialPartners": "Social partners have reach a consensus on this measure.",
+            "descriptionViewsOfSocialPartners": "Social partners have reached a consensus on this measure.",
             "socialPartner_form": "Not applicable",
-            "socialPartner_role": "No involvement",
+            "socialPartner_role": "Agreed (outcome)",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/FR-2020-11_509.html",
             "isOccupation": "No",
             "isSector": "No",
@@ -19545,7 +19590,7 @@
             "regions": []
         },
         "recordId": "400",
-        "modId": "49"
+        "modId": "50"
     },
     {
         "fieldData": {
@@ -19973,7 +20018,7 @@
             "isOccupation": "No",
             "isSector": "Yes",
             "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Social dialogue",
+            "calc_type": "Company practice",
             "statusOfRegulation": "Entirely new measure "
         },
         "portalData": {
@@ -20036,7 +20081,7 @@
             "regions": []
         },
         "recordId": "409",
-        "modId": "47"
+        "modId": "48"
     },
     {
         "fieldData": {
@@ -31557,7 +31602,7 @@
             "descriptionBackgroundInfo": "The government, with a law within the framework of the labor market extraordinary and temporary measures aimed to address and limit the spread of coronavirus, with regard to the organization and the place of work (art 4 of the Official Government Gazette A55, March 11, 2020) with regard to the organization and the place of work, introduces the 'special purpose leave for working parents' in the private sector, for their convenience for the duration of the shutdown of school units or special schools for children with disabilities and the extraordinary measure. Also, the circulars of the Ministry of Interior no 108/oik.7874/2020 and 109/\u03bf\u03b9\u03ba.8000 provide 'Special purpose leave' for the employees in the public sector.",
             "descriptionContentOfMeasure": "The working parents of preschool children, compulsory education students (under the age of 15) and children attending special schools, are entitled to use the special purpose leave during the period 11 March 2020 to 10 April 2020 and for the duration of enforcement of the extraordinary and temporary measures aimed to address the spread of coronavirus. The employer is obliged to grant it. The leave applies to employees of the public and private sector. According to the law, the minimum duration of the leave is 4 days, of which 3 days are special purpose and 1 day of regular leave. The regular leave days are deducted from the annual leave. The leave may be used exclusively by one parent or alternatively by both. During the special purpose leave the employee\u2019s salary and social security contributions are paid regularly. 2/3 of the expense are paid by the state and one third by the employer. \r\rThe use of the special purpose leave is not allowed in case of suspension of the operations of the enterprise due to the extraordinary measures. After the decision to extend the closure of schools until 10 May, newer arrangements (decisions of the Ministry of Labour and Interior) provide for the extension of the special purpose leave for working parents until 10 May in both the public and private sectors.\r\r",
             "descriptionUseOfMeasure": "The number of employees affected by the measure is not known.",
-            "descriptionViewsOfSocialPartners": "The government has designed  this measure. There were no reactions to that. The measure was considered positiv",
+            "descriptionViewsOfSocialPartners": "The government has designed this measure. There were no reactions to that. The measure was considered positive.",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "Not applicable",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-11_691.html",
@@ -31635,7 +31680,7 @@
             "regions": []
         },
         "recordId": "587",
-        "modId": "46"
+        "modId": "47"
     },
     {
         "fieldData": {
@@ -37054,7 +37099,7 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/23/2020",
             "calc_lastUpdate": "05/05/2020",
-            "descriptionBackgroundInfo": "On 24 March 2020 the Irish Government announced new measures to provide financial support to workers affected by the COVID-19 crisis. As part of these measures, the Revenue service operates a Temporary Wage Subsidy Scheme. The scheme enables employees whose employers are affected by the pandemic to receive significant supports directly from their employer through the payroll system. The scheme is expected to last 12 weeks from 26 March 2020.\r\rThe scheme was introduced as part of the terms of the Emergency Measures in the Public Interest (Covid-19) Act 2020.\r\rOn Wednesday 15 April, the Minister for Finance announced further updates to the Temporary Wage Subsidy Scheme. ",
+            "descriptionBackgroundInfo": "On 24 March 2020 the Irish Government announced new measures to provide financial support to workers affected by the COVID-19 crisis. As part of these measures, the Revenue service operates a Temporary Wage Subsidy Scheme. The scheme enables employees whose employers are affected by the pandemic to receive significant supports directly from their employer through the payroll system. The scheme is expected to last 12 weeks from 26 March 2020.\r\rThe scheme was introduced as part of the terms of the Emergency Measures in the Public Interest (COVID-19) Act 2020.\r\rOn Wednesday 15 April, the Minister for Finance announced further updates to the Temporary Wage Subsidy Scheme. ",
             "descriptionContentOfMeasure": "The Scheme is available to employers from all sectors (excluding the public service and non-commercial semi-state sector) whose business activities are adversely impacted by the COVID-19 pandemic.\r\rIt is open to employers who retain staff on payroll; some of the staff may be temporarily not working or some may be on reduced hours and/or reduced pay. Provided the employer meets certain conditions and, subject to the levels of pay made to employees, the employer may be eligible for the scheme for some, or all of its employees.\r\rThe employer includes the subsidy as part of the employees\u2019 wages in addition to any amount that the employer would otherwise be able to pay. The subsidy element on the employee\u2019s payslip is indicated as a payment described as \u201cGovCov19 WageSub\u201d.  \r\rA subsidy of 85% is payable for employees whose net weekly income does not exceed \u20ac412. \rA subsidy of 70% is payable for those whose net weekly pay was previously no more than \u20ac500 but less than \u20ac586, with a cap of \u20ac410.\r\rTo qualify for the Scheme, employers must be experiencing significant negative economic disruption due to COVID-19, be able to demonstrate, to the satisfaction of Revenue, a minimum of a 25% decline in turnover and be unable to pay normal wages and normal outgoings fully. They must also retain their employees on the payroll.\r\rThe scheme is confined to employees who were on the employer\u2019s payroll as at 29 February 2020, and for whom a payroll submission was made to Revenue in the period from 1 February 2020 to 15 March 2020.",
             "descriptionUseOfMeasure": "47,400 employers are registered with Revenue for the scheme.\r\rAccording to the minister responsible, on 29 April 2020, 'The cumulative value of payments made to employers under the scheme is \u20ac652 million, almost 400,000 employees have now received at least one payment under the scheme'. ",
             "descriptionViewsOfSocialPartners": "Ibec, the group that represents Irish business, welcomed the COVID-19 Temporary Wage Subsidy Scheme (TWSS). Ibec CEO Danny McCoy said: \u201cThe TWSS scheme offers a strong solution for business and workforce continuity. It will continue to play a vital role in enabling the economy to bounce back at the other end of this crisis, helping vulnerable firms to stay afloat and keeping their employees engaged whilst protecting the incomes of individuals.\r\rPatricia King, General-Secretary of the Irish Congress of Trade Unions welcomed the Government\u2019s decision to establish a Temporary Wage Subsidy Scheme to maintain jobs and support workers\u2019 incomes during this unprecedented crisis, as first called for by ICTU in it's letter of 18 March to the Taoiseach when we  outlined the urgent need for a 'temporary wage subsidy scheme\u2019 that would help to keep workers in their jobs, protect them from unemployment and loss of income, and to help the economy rapidly recover when the Covid ends. \"These unprecedented times demand unprecedented measures to minimise the impact on workers, their families and the business community\",Patricia King said.",
@@ -37082,6 +37127,20 @@
                     "sources::url": "https://www.thejournal.ie/wage-subsidy-covid-19-5086879-Apr2020/",
                     "sources::d_date": "04/29/2020",
                     "modId": "0"
+                },
+                {
+                    "recordId": "885",
+                    "sources::title": "Donohoe tweaks wage subsidy scheme so mothers returning from maternity qualify",
+                    "sources::url": "https://www.irishtimes.com/business/economy/donohoe-tweaks-wage-subsidy-scheme-so-mothers-returning-from-maternity-qualify-1.4265920",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "886",
+                    "sources::title": "COVID-19 Temporary Wage Subsidy Scheme Preliminary Statistics\r(as at 21 May 2020)",
+                    "sources::url": "https://revenue.ie/en/corporate/documents/statistics/registrations/wage-subsidy-scheme-statistics-21-may-2020.pdf",
+                    "sources::d_date": "05/21/2020",
+                    "modId": "0"
                 }
             ],
             "actors": [
@@ -37107,11 +37166,30 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [],
+            "updates": [
+                {
+                    "recordId": "38",
+                    "updates::d_date": "05/29/2020",
+                    "updates::description": "Mothers returning from work had previously not been eligible to receive the COVID-19 wage subsidy support, as they had not been on the payroll of their employers on February 29th, nor they had been paid in either January or February. Following criticism from women's groups and opposition parties, the Irish government announced that the scheme would be retroactively modified, so mothers returning from maternity leave will become eligible, backdating it to 26 March. While legislation will be adapted as part of the usual Financial Bill cycle 2020, Irish Revenue will already implement the change.",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "39",
+                    "updates::d_date": "05/21/2020",
+                    "updates::description": "According to preliminary statistics from the Irish Revenue, to 21 May: \r* Over 55,500 employers registered with Revenue for the wage subsidy scheme.\r* Over 48,300 employers have already received subsidy payments.\r\u2022 Over 473,500 employees have already received at least one payment.\r\rOn 21 May, Revenue has generated further subsidy payments under the scheme worth over \u20ac33 million. The cumulative value of payments made under the Scheme is now \u20ac1,048 million. This includes \u20ac96 million in income tax paid that has been refunded over the same time.",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "40",
+                    "updates::d_date": "05/05/2020",
+                    "updates::description": "From 5 May onwards, the scheme is based on each eligible employee\u2019s average net weekly pay for January and February 2020, calculated from the payroll submissions made (to Revenue) by the employer for that period.",
+                    "modId": "1"
+                }
+            ],
             "regions": []
         },
         "recordId": "687",
-        "modId": "37"
+        "modId": "40"
     },
     {
         "fieldData": {
