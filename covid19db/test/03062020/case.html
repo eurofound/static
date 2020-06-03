@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+	<title>
+		COVID II state guarantee programme - Eurofound COVID-19 EU PolicyWatch
+	</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166078170-1"></script>
+
+	<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166078170-1');
+	</script>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" href="css/Eurofound-covid.css">
+	<link rel="stylesheet" href="css/Eurofound.css">
+	<link rel="stylesheet" href="css/Glyphicon.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+	<script src="https://kit.fontawesome.com/0425a581bb.js"></script> 
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+
+
+	
+	
+	
+	
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+	
+	
+	
+<script src="http://code.jquery.com/jquery-1.10.1.js"></script>	
+	
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#more").click(function () {
+        $("#more_p").fadeOut(100, function () {
+            $("#more_p").text(($("#more_p").text() == 'View more') ? 'View less' : 'View more').fadeIn(100);
+        })
+    })
+});
+	
+</script>	
+
+</head>
+	
+	
+
+<body>
+
+	
+<!--Header-->
+	<div class="container" style="height:120px;">	
+		<div class="row">
+			<div class="col-md-12" >
+				<table width="965" border="0" >
+					<tbody>
+					<tr>
+						<td style="width: 220px;"><a href="index.html"><img src="img/Eurofound-logo.png" width="177" height="119" alt=""/></a></td>
+						<td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+							for the Improvement of<br>
+							Living and Working Conditions</p></td>
+						<td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+							in the development of better social, employment and<br>
+							work-related policies</p></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+<!--Header End-->
+	
+	
+	
+<!--Title Bar-->
+	<div class="container-fluid" style="height:200px; background-color:#E8EBEC;">	
+		<div class="container" style="height:200px;">
+			<div class="col-md-6" style="padding:60px 0px 0px 0px;">
+				<h2 style="margin-top:0px;">COVID-19 EU PolicyWatch</h2>
+				<h3>Database of national-level responses</h3>
+			</div>
+		</div>
+	</div>
+<!--Title Bar End-->	
+	
+	
+	
+	
+<div class="container" style="margin-top: 30px;">
+	
+
+	
+
+	<div class="row">
+		
+		
+<!--Left Hand Navigation-->
+	<div class="col-md-3" style="margin-bottom: 50px;">
+			<div class="sticky-top">
+
+                <ul class="Sidenav flex-column secondary">
+					
+							<li class="haschildren Sidenav-catagory">Database</li>
+
+								<ul class="list-group">
+									<a class="scroll list-group-item haschildren arrow-after" href="#important"><li style="display:inline;">Countries</li></a>
+										<ul class="list-group">
+											<ul class="form-control2" >
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/AT.html">Austria</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/BE.html">Belgium</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/BG.html">Bulgaria</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/HR.html">Croatia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/CY.html">Cyprus</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/CZ.html">Czechia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/DK.html">Denmark</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/EE.html">Estonia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/FI.html">Finland</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/FR.html">France</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/DE.html">Germany</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/GR.html">Greece</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/HU.html">Hungary</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/IE.html">Ireland</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/IT.html">Italy</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/LV.html">Latvia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/LT.html">Lithuania</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/LU.html">Luxembourg</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/MT.html">Malta</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/NL.html">Netherlands</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/NO.html">Norway</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/PL.html">Poland</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/PT.html">Portugal</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/RO.html">Romania</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/SK.html">Slovakia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/SI.html">Slovenia</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/ES.html">Spain</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/SE.html">Sweden</a></li>
+												<li><a href="https://static.eurofound.europa.eu/covid19db/countries/GB.html">United Kingdom</a></li>
+											</ul>
+										</ul>
+									<a class="scroll list-group-item haschildren arrow-after" href="#important"><li style="display:inline;">Catagories</li></a>
+										<ul class="list-group">
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 01</li></a>
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 02</li></a>
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 03</li></a>
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 04</li></a>
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 05</li></a>
+											<a class="scroll list-group-item arrow small" href="#"><li>Catagory 06</li></a>
+										</ul>
+									
+									
+								</ul>
+					
+						
+						</ul>
+
+			</div>
+		</div>
+<!--Left Hand Navigation End-->
+
+		
+		
+<!--Right Hand Content-->
+	<div id="important" class="col-md-9" style="padding-top: 0px;">	
+	
+		<!--Title Block-->		
+			<div style="padding:30px 20px 40px 40px; background-color:#1A2F55">
+
+				<p class="text-white">
+					Factsheet for case 
+
+					<strong>
+						CZ-2020-14/255
+					</strong>
+
+					 &ndash; 
+
+					<a href="#Updates">
+						<span class="badge-success">
+							Updated 
+						</span>
+					</a>
+
+					&nbsp;&ndash;
+
+					measures in Czechia
+				</p>
+
+
+				<h1  id="setting" style="line-height:90%; margin:30px 0px;">
+					COVID II state guarantee programme
+				</h1>
+
+
+
+				<h2 style="font-style: italic; margin-top: 0; font-weight: light; font-size: 1.2rem" title="Title in national language">
+					Záruční program COVID II
+				</h2>
+
+			</div>			
+        <!--Title Block End-->		
+			
+			
+      <!--Info Panel End-->
+        <div class="jumbotron">
+
+                <table class="table">
+
+                    <tr>
+                        <td style="width:35%; border-top: 0px solid #ffffff;">
+                            Country
+                        </td>
+
+                        <td  style="border-top: 0px solid #ffffff;">
+                            <a href="https://static.eurofound.europa.eu/covid19db/countries/CZ.html">
+                                Czechia
+                            </a>
+
+                            &#44; applies regionally
+
+                            <br>
+                             &ndash; CZ02 Střední Čechy
+                            <br>
+                             &ndash; CZ03 Jihozápad
+                            <br>
+                             &ndash; CZ04 Severozápad
+                            <br>
+                             &ndash; CZ05 Severovýchod
+                            <br>
+                             &ndash; CZ06 Jihovýchod
+                            <br>
+                             &ndash; CZ07 Střední Morava
+                            <br>
+                             &ndash; CZ08 Moravskoslezsko
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Time period
+                        </td>
+
+                        <td>
+                            Temporary, 30 March 2020 – 30 June 2023
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Type <span class="glyphicon glyphicon-question-sign"  data-toggle="tooltip" data-placement="top" title="Tooltip text here" style="cursor: pointer; color:#067eb1;"></span>
+                        </td>
+
+                        <td>
+                            Legislation or other statutory regulation
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Category <span class="glyphicon glyphicon-question-sign"  data-toggle="tooltip" data-placement="top" title="Tooltip text here" style="cursor: pointer; color:#067eb1;"></span>
+                        </td>
+
+                        <td>
+                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Supporting_businesses_to_stay_afloat.html">
+                                Supporting businesses to stay afloat
+                            </a>
+
+                            <br>
+
+                            &nbsp;Access to finance
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Author
+                        </td>
+
+                        <td>
+                            Soňa Veverková, Research Institute for Labour and Social Affairs, and Eurofound
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="border-bottom: 0px solid #ffffff;">
+                            Case created
+                        </td>
+
+                        <td  style="border-bottom: 0px solid #ffffff;">
+                            03 April 2020 (updated 09 May 2020)
+                        </td>
+                    </tr>
+
+              </table>
+
+          </div>
+	<!--info Panel End-->
+
+			
+			
+        <h2>
+          Background information
+        </h2>
+
+			<p>
+			  After the termination of COVID I interest-free state loan programme, the Czech government has introduced the COVID II state guarantee programme for SME´s which are at risk of bankruptcy due to the measures in connection with the spread of COVID-19.
+			  <br><br>
+			  Loans for SME´s are provided by commercial banks while the state runned Czech-Moravian Guarantee and Development Bank (Českomoravská záruční a rozvojová banka, ČMZRB) secures the loans and offers financial aid for loan interest.
+			</p>
+
+			
+        <h2>
+          Content of measure
+        </h2>
+
+			<p>
+			  The measure runs under the Operational Programme Enterprise and Innovation for Competitiveness (Operační program Podnikání a inovace pro konkurenceschopnost, OPPIK). 
+			</p>
+			<p>
+			  The loan is aimed at SME´s with trade permission in Czech Republic (except of Prague region) who have been forced due to approved anti-COVID-19 measures to shut down or limit their businesses. Business activity of the SME has to be included at the supported economic activities list, which is, however, very wide and included accommodation, logistics, manufacturing industry etc. 
+			</p>
+			<p>
+			  ČMZRB will secure the commercial loan up to 80% with the maximum period of 3 years. SME can also apply for financial support on the loan interest up to CZK 1,000,000 (€36,298 approx.). Loan to be secured are limited to CZK 15,000,000 (€544,465). The loans are intended to cover salaries, rent, utility costs and suplier-customer invoices. 
+			</p>
+			<p>
+			  The total amount for COVID II programme is CZK 4,000,000,000 (€145,190,563).
+			</p>
+			<p>
+			  The program is financed from the EU Structural Funds within the OPPIK and is therefore not intended for the implementation of projects in the capital city of Prague. Financial support for projects implemented in Prague can be applied for in the COVID Prague guarantee program.
+			</p>
+		
+
+			
+          <h2>
+            Use of measure
+          </h2>
+
+			  <p>
+				No information at this stage.
+			  </p>
+			
+			<br>
+
+			
+			
+	<!--Accordian Start -->		
+			<div class="col-lg-12" style="margin:0px; padding:0px;">
+
+                    <ul class="Sidenav flex-column secondary">
+                    
+                            <li id="link-accordian" class="haschildren Sidenav-catagory">
+                                <div id="more"><p id="more_p" class="date">View more</p></div>
+                            </li>
+
+                                <ul class="list-group">
+                                    
+										<li style="display:inline;">
+											
+										<h4 style="margin-bottom:20px;">
+											Actors, target groups and funding
+										</h4>
+
+                                        <table class="table table-striped">
+                                            <thead style="background-color:#067EB1; color:white;">
+                                                <tr>
+                                                    <th>Actors</th>
+                                                    <th>Target groups</th>
+                                                    <th>Funding</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        National government
+                                                        <br>
+                                                        Company / Companies
+                                                        <br>
+                                                        Other social actors (e.g. NGOs)
+                                                    </td>
+
+                                                    <td>
+                                                        Employees 
+                                                        <br>
+                                                        Self-employed 
+                                                        <br>
+                                                        Sector specific set of companies
+                                                        <br>
+                                                        SMEs
+                                                    </td>
+
+                                                    <td>
+                                                        European Funds
+                                                        <br>
+                                                        National funds
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+										<h4 style="margin-bottom:20px;">
+											Social partners
+										</h4>
+
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Role of social partners
+                                                    </td>
+
+                                                    <td>
+                                                        Unknown
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        Form of social partner involvement
+                                                    </td>
+
+                                                    <td>
+                                                        No involvement
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+										<p>
+											It is to be expected that the social partners were informed of this support measure, the extent and what input they had is not known.
+										</p>
+
+
+
+										<h4>
+											Sectors and occupations
+										</h4>
+
+											<p>
+												This case is sector-specific.
+											</p>
+
+											<table class="table table-striped" style="margin-bottom:30px;">
+												<thead style="background-color:#067EB1; color:white;">
+													<tr>
+														<th>Economic area</th>
+														<th>Sector (NACE level 2)</th>
+													</tr>
+												</thead>
+
+
+
+												<tbody>
+													<tr>
+														<td>
+															I - Accommodation And Food Service Activities
+														</td>
+
+														<td>
+															I55 Accommodation
+															<br><hr>
+															I56 Food and beverage service activities
+														</td>
+													</tr>
+
+													<tr>
+														<td>
+															N - Administrative And Support Service Activities
+														</td>
+
+														<td>
+															N79 Travel agency, tour operator and other reservation service and related activities
+														</td>
+													</tr>
+
+													<tr>
+														<td>
+															R - Arts, Entertainment And Recreation
+														</td>
+														<td>
+															R90 Creative, arts and entertainment activities
+															<br><hr>
+															R92 Gambling and betting activities
+															<br><hr>
+															R93 Sports activities and amusement and recreation activities
+														</td>
+													</tr>
+
+													<tr>
+														<td>
+															S - Other Service Activities
+														</td>
+
+														<td>
+															S96 Other personal service activities
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<p>
+												This case is not occupation-specific.
+											</p>
+										</li>
+									
+                                    
+                                    
+                                </ul>
+                        </ul>
+
+                </div>
+    		
+			
+    <!-- Accordian End -->      
+			
+			
+	<!-- Updates Start-->		
+
+            <h2>
+                Updates
+            </h2>
+
+            <p>
+                The following updates to this measure have been made after it came into affect.
+            </p>
+
+            <table class="table ">
+              <tr>
+                  <td style="width:20%">
+                      22 April 2020
+                  </td>
+
+                  <td>
+                      The first round of applications for the COVID Guarantee Program was closed on 3 April 2020 at 11:59 p.m. The institutions are now in contact with the applicants and evaluating their applications. The next round will be announced according to the decision of the Ministry of Industry and Trade.
+                  </td>
+              </tr>
+
+            </table>
+
+	<!-- Updates End -->
+			
+			
+	<!-- Sources  -->			
+			
+            <h2>
+                Sources
+            </h2>
+
+            	<ul>
+                <li>
+                    03 April 2020: Záruční program COVID II
+                    <a target="_blank" href="https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/">
+                        (www.cmzrb.cz)
+                    </a>
+                </li>
+
+                <li>
+                    21 April 2020: Eligibility criteria
+                    <a target="_blank" href="https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/je-pro-me-program-covid-ii-vhodny/">
+                        (www.cmzrb.cz)
+                    </a>
+
+                </li>
+
+                <li>
+                    21 April 2020: Programming document
+                    <a target="_blank" href="https://www.cmzrb.cz/soubor/vyzva-covid-ii/">
+                        (www.cmzrb.cz)
+                    </a>
+                </li>
+            </ul>
+
+	<!-- Sources End -->
+			
+	<!-- Suggested Citation Start -->
+			
+            <h2>
+                Suggested citation
+            </h2>
+			
+				<div class="col-md-12" style="display: flex; margin:20px 0px 0px 0px; padding:0px;">
+                    <div class="alert alert-primary" role="alert" style="width:100%; cursor:pointer;">
+						<p class="glyphicon glyphicon-remove" style="float:right; padding-top:10px;"></p>
+                        
+						<p class="text-white-bold" style="padding-top:10px;">
+                        	Eurofound (2020),
+                        <em>
+                            COVID II state guarantee programme, case CZ-2020-14/255 (measures in Czechia),
+                        </em>
+                            COVID-19 EU PolicyWatch, Dublin, 
+                            <a href="http://eurofound.link/covid19eupolicywatch" target="_blank">
+                            	http://eurofound.link/covid19eupolicywatch
+                            </a>
+                        </p>
+
+                        
+					</div>
+                 </div>
+		
+		<!-- Suggested Citation End -->
+		
+		
+		
+		</div><!--Col-md-9 End (right hand info column) -->
+		
+		
+		
+	</div><!--Row End -->
+	
+
+	
+</div><!--Container End -->
+
+	
+<!--PolicyWatch-->
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="margin: 50px 0px 20px 0px;">
+					
+					<div class="card text-center" style="margin-top: 2rem">
+
+						<div class="card-header">
+							Eurofound's COVID-19 EU PolicyWatch
+						</div>
+
+						<div class="card-body">
+
+							<p class="card-text">
+								Eurofound's COVID-19 EU PolicyWatch collates information on the responses of government and social partners to the crisis, as well as gathering examples of company practices aimed at mitigating the social and economic impacts. 
+							</p>
+
+
+							<div class="container">
+								<div class="row" style="margin:30px 0px 20px 0px;">
+
+									
+									<div class="col-3">
+										<a target="_blank" href="https://www.eurofound.europa.eu/data/covid-19-eu-policywatch" class="btn btn-primary"> 
+										Overview
+										</a>
+									</div>
+
+									<div class="col-3">
+										<a target="_blank" href="https://www.eurofound.europa.eu/data/covid-19-eu-policywatch/database" class="btn btn-primary">  
+										Database
+										</a>
+									</div>
+
+									<div class="col-3">
+										<a target="_blank" href="https://www.eurofound.europa.eu/" class="btn btn-primary"> 
+										Eurofound website
+										</a>
+									</div>
+
+									<div class="col-3">
+										<a target="_blank" href="javascript:location='mailto:\u0063\u006f\u0076\u0069\u0064\u0031\u0039\u002e\u0072\u0065\u0073\u0065\u0061\u0072\u0063\u0068\u0040\u0065\u0075\u0072\u006f\u0066\u006f\u0075\u006e\u0064\u002e\u0065\u0075\u0072\u006f\u0070\u0061\u002e\u0065\u0075';void 0" class="btn btn-primary">  
+										Contact
+										</a>
+									</div>
+
+									
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>	
+					
+			<p>
+                Factsheet generated on 21 May 2020, 09:59.
+            </p>		
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+<!--PolicyWatch End-->		
+	
+	
+	
+	
+	
+<!--Disclaimer-->
+<div class="container-fluid" style="background-color:#368275;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin: 30px 0px 20px 0px;">
+				<div class="alert alert-success">
+					Disclaimer: This information has not been subject to the full Eurofound evaluation, editorial and publication process. All information is preliminary and subject to change.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Disclaimer End-->		
+ 
+
+	
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+	
+	
+</body>
+
+</html>
