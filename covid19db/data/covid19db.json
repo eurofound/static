@@ -16506,6 +16506,13 @@
                     "sources::url": "https://travail-emploi.gouv.fr/IMG/pdf/covid19-document-precisions-activite-partielle.pdf",
                     "sources::d_date": "04/10/2020",
                     "modId": "3"
+                },
+                {
+                    "recordId": "899",
+                    "sources::title": "Draft law on emergency measures",
+                    "sources::url": "",
+                    "sources::d_date": "06/02/2020",
+                    "modId": "1"
                 }
             ],
             "actors": [
@@ -16567,12 +16574,18 @@
                     "updates::d_date": "05/26/2020",
                     "updates::description": "On 1st June 2020, the financial cover for partial activity (short-time work) will be changed from 70% to 60%. Even if \u2018compensation paid to the employee remains unchanged\u2019 (70% of gross salary, i.e. 84% of net salary and at least the net minimum wage), the level covered by the State and the unemployment agency will be lowered so that companies will now be reimbursed up to 60% of gross salary, capped at 4.5x minimum wage, instead of 70%. Sectors subject to special legislative or regulatory restrictions due to the health crisis will continue to benefit from 100% cover. This measure still has to be made the subject of a decree, which will be issued following adoption of a bill treating several health crisis related provisions that is currently under Parliamentary discussion.(source: Planet Labour)",
                     "modId": "1"
+                },
+                {
+                    "recordId": "46",
+                    "updates::d_date": "",
+                    "updates::description": "France\u2019s National Assembly and Senate are close to the final adoption (by 10 June) of the emergency bill that contains new provisions for other urgent measures as well as for the United Kingdom\u2019s withdrawal from the European Union. The agreement reached between the two Chambers on 02 June, which has yet to be formally adopted, empowers the Government to further adapt the short time working scheme to take account of the needs of a gradual recovery and to create a special provision for companies permanently affected by the crisis although not likely to fail.\rNew short time working provision based on collective bargaining and \u2018quid pro quos\u2019. A new mechanism that provides long-term support for companies in return for a set of commitments, particularly in terms of maintaining employment, is thus being planned. Both the level of compensation for employees whose activity is reduced and the level of State reimbursement have yet to be established by decree, but the idea is to increase the State element if the company, that has had to make recourse short time working to persevere through the crisis, negotiates or enters into a collective sector agreement, which not only defines the terms of the short time working, but also provides for company commitment in return, and in particular in terms of maintaining employment. This mechanism, known as \u2018short time working to maintain employment\u2019, is aimed at \u2018companies faced with a lasting reduction in activity and whose survival is not compromised\u2019, under a set of certain conditions and cases that are still to be determined. The agreement and documents implementing the sector agreement with this framework will have to be approved by the labor administration.\rShort time working to be adapted from 01 June for six months to facilitate the recovery. The extraordinary short time working scheme was initially set up amid the health crisis, and has been amended several times. It may be amended once more in order to adapt it to the economic recovery and the situation of certain sectors and employees. Once adopted, the bill authorized the government to issue a new ordinance to adapt short time working rules \u2018to the specificities of the companies according to the economic impact of the health crisis, their sector of activity and the categories of employees concerned (...).'\rMonetizing leave periods. The text also allows a collective agreement to allow for employees who have suffered a reduction in their remuneration due to being placed on short time working, to voluntarily supplement their income by monetizing rest days or paid holidays, for up to a maximum of 5 days The agreed text also provides that employees under short time working conditions must also benefit from the maintenance of their collective guarantees and that, as an exception, the periods between 1 March 2020 and 31 December 2020, during which contributing workers received the short time working allowances, would be taken into account for the purposes of enabling the right to a retirement pension. \rPlanet Labor, 03 June 2020, No.11981 \u2013 www.planetlabor.com",
+                    "modId": "1"
                 }
             ],
             "regions": []
         },
         "recordId": "353",
-        "modId": "50"
+        "modId": "51"
     },
     {
         "fieldData": {
@@ -34937,7 +34950,7 @@
             "calc_creationDay": "04/20/2020",
             "calc_lastUpdate": "05/04/2020",
             "descriptionBackgroundInfo": "As a reaction to the closure of businesses and decline in revenues, the Austrian government together with the social partners have set up a nationwide hardship fund, with the aim to support small and medium sized enterprises (see AT-2020-13/212).\rAs the eligibility criteria in the first phase were rather strict, many companies did not obtain immediate support. This is an additional regional support initiative, funded by the Upper Austrian regional government. For all Upper Austrian. Small businesses that are unable to receive support from the Federal Government's Hardship Case Fund or the Corona Aid Fund due to federal criteria are supported by the state of Upper Austria with direct grants.\r\rThe Upper Austria. Hardship fund is processed within the framework of the general funding guidelines of the State of Upper Austria, the grants are granted as de minimis aid in accordance with Commission Regulation ( EU ) No. 1407/2013 of December 18, 2013.",
-            "descriptionContentOfMeasure": "Eligible are small and medium sized enterprises (SMEs in the sense of the EU definition; with less than 50 employees and an annual turnover or an annual balance sheet of less than 10 million euros), who are a member of the Upper Austrian Chamber of Commerce and have their company or branch location in Upper Austria.\r\rState support is provided in the form of non-repayable grants (de minimis grants). The funding is based on the amount of the fixed costs for a maximum of three months (period 16 March to 15 June 2020) and covers 25 percent of fixed costs, at a maximum of \u20ac25,000.\r\rFixed costs include: business rent, insurance premiums, interest expenses, operational, contractual payment obligations, license costs, payments for electricity, gas, and telecommunications.\r\rRequirements:\r- Sales decline of at least 25 percent\r- The company wasn't already in distress before the COVID-19 measures\r- Due to federal criteria, the applicant was unable to avail himself of funds from the Federal Government's Hardship Fund or Corona Aid Fund.",
+            "descriptionContentOfMeasure": "Eligible are small and medium sized enterprises (SMEs in the sense of the EU definition; with less than 50 employees and an annual turnover or an annual balance sheet of less than 10 million euros), who are a member of the Upper Austrian Chamber of Commerce and have their company or branch location in Upper Austria.\r\rState support is provided in the form of non-repayable grants (de minimis grants). The funding is based on the amount of the fixed costs for a maximum of three months (period 16 March to 15 June 2020) and covers 25% of fixed costs, at a maximum of \u20ac25,000.\r\rFixed costs include: business rent, insurance premiums, interest expenses, operational, contractual payment obligations, license costs, payments for electricity, gas, and telecommunications.\r\rRequirements: \r\r*Sales decline of at least 25%\r*The company wasn't already in distress before the COVID-19 measures\r*Due to federal criteria, the applicant was unable to avail himself of funds from the Federal Government's Hardship Fund or Corona Aid Fund. ",
             "descriptionUseOfMeasure": "Not yet known.",
             "descriptionViewsOfSocialPartners": "No information available. ",
             "socialPartner_form": "Unknown",
@@ -35000,7 +35013,7 @@
             ]
         },
         "recordId": "647",
-        "modId": "35"
+        "modId": "36"
     },
     {
         "fieldData": {
@@ -37980,7 +37993,7 @@
             "calc_creationDay": "04/25/2020",
             "calc_lastUpdate": "05/07/2020",
             "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see the cases bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis (see case AT-2020-16/474). As par of this package, also an entrepreneurs' salary can be claimed. ",
-            "descriptionContentOfMeasure": "Eligible for the subsidy of fixed costs are those companies that fully meet the following conditions:\r- Companies that have their management or a permanent establishment in Austria\r- Companies that have to bear fixed costs from their operating activities in Austria\r- Companies that were healthy before the Corona crisis\r- Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r- Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria\r\rAmong the different components of fixed costs which can be subsidized, there is included an entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)",
+            "descriptionContentOfMeasure": "Eligible for the subsidy of fixed costs are those companies that fully meet the following conditions:\r \r*Companies that have their management or a permanent establishment in Austria\r*Companies that have to bear fixed costs from their operating activities in Austria\r*Companies that were healthy before the Corona crisis\r*Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r*Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria \r\rAmong the different components of fixed costs which can be subsidized, there is included an entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)",
             "descriptionUseOfMeasure": "Not known yet. ",
             "descriptionViewsOfSocialPartners": "Employer organisation was consulted.",
             "socialPartner_form": "Direct consultation",
@@ -38044,7 +38057,7 @@
             "regions": []
         },
         "recordId": "699",
-        "modId": "28"
+        "modId": "29"
     },
     {
         "fieldData": {
@@ -38060,7 +38073,7 @@
             "calc_creationDay": "04/25/2020",
             "calc_lastUpdate": "05/06/2020",
             "descriptionBackgroundInfo": "The public health measures taken as a response to the spread of the corona virus, have forced several thousands of companies in Styria to resort to  telework. It is important to take flexible paths - from management to production and working methods to sales and communication internally and externally. The goal of this initivie is to maintain operations, secure jobs - and at the same time protect the health of customers and employees. For this reason, the regional government of Styria (Land Steiermark, with its support service provider SFG) and  the Chamber of Labour in the region of Styria (AK Steiermark) have started their  promotion campaign 'Teleworking! Offensive' retrospectively from 1 March 2020.",
-            "descriptionContentOfMeasure": "The campaign supports the set up of temporary teleworking places financially.  These are investments in information and communication technology for workplaces outside the company location. This includes some hardware and software, the initial start-up and licenses. \r\rFor the incurred expenses, a 50% from the regional state, and another 30% come from AK Steiermark can be received as non repayable grants. Alternatively, the rent or lease of equipment is supported by covering down payments or costs for a maximum of five months. \r\rCosts for the ongoing operation of internet access, telephone, electricity etc., but also office and business equipment, such as furniture etc are not covered. \r\rThe maximum eligible costs are \u20ac50,000 per company and \u20ac5,000 per teleworker (average view). The grant volume must be between \u20ac1,000 and \u20ac40,000.\rIn total funds for supporting 2,300 teleworking jobs have been set up. \r\rEligible are employers in Styria who are classified as SMEs. Excluded are one-person microenterprises, tourism and leisure businesses, nonprofit organisations, healthcare companies and people outside the SFG target group.",
+            "descriptionContentOfMeasure": "The campaign supports the set up of temporary teleworking places financially.  These are investments in information and communication technology for workplaces outside the company location. This includes some hardware and software, the initial start-up and licenses. \r\rFor the incurred expenses, a 50% from the regional state, and another 30% come from AK Steiermark can be received as non repayable grants. Alternatively, the rent or lease of equipment is supported by covering down payments or costs for a maximum of five months. \r\rCosts for the ongoing operation of internet access, telephone, electricity etc., but also office and business equipment, such as furniture etc are not covered. \r\rThe maximum eligible costs are \u20ac50,000 per company and \u20ac5,000 per teleworker (average view). The grant volume must be between \u20ac1,000 and \u20ac40,000. In total funds for supporting 2,300 teleworking jobs have been set up. \r\rEligible are employers in Styria who are classified as SMEs. Excluded are one-person microenterprises, tourism and leisure businesses, nonprofit organisations, healthcare companies and people outside the SFG target group.",
             "descriptionUseOfMeasure": "Between 1 April 2020 and 15 April 2020, 550 applications were received. On 22 April, over 1,000 applications were registered.\r\rOn 23 April, the funds were used and applications for the subsidy no longer possible. ",
             "descriptionViewsOfSocialPartners": "The Chamber of Labour (AK), an employee interest representation was involved in the design of the initiative and also funds 30% of the costs.",
             "socialPartner_form": "Other",
@@ -38154,7 +38167,7 @@
             ]
         },
         "recordId": "700",
-        "modId": "37"
+        "modId": "38"
     },
     {
         "fieldData": {
@@ -42013,7 +42026,7 @@
             "title": "Austrian armed forces 'take over' postal logistics services",
             "title_nationalLanguage": "Heer \"\u00fcbernimmt\" Postverteilzentrum",
             "d_startDate": "05/17/2020",
-            "d_endDate": "",
+            "d_endDate": "05/30/2020",
             "calc_country": "Austria",
             "calc_minorCategory": "Ensuring business continuity and support for essential services",
             "calc_subMinorCategory": "Smoothing frictions or reallocation of workers",
@@ -42022,11 +42035,11 @@
             "calc_creationDay": "05/19/2020",
             "calc_lastUpdate": "05/19/2020",
             "descriptionBackgroundInfo": "As one of the first emergency measures, the Austrian government had opened the possibility for companies in essential services to request support from the Austrian armed forces and has activated parts of the military reserve (Miliz) and the civilian service (see case AT-2020-14/463). The costs for the deployment of armed forces and civil servants are born by the company.\r\rBy mid May at least 79 employees of one major logistical center of the Austrian Post in Hagenbrunn, Lower Austria, have been tested positive for coronavirus and 30% of employees were on sick-leave. Another case of outbreak concerns a postal distribution center in Inzersdorf, Vienna. In both cases, contract tracing showed a link to the deployment of workers from a temporary work agency - some of which had been brought in shared buses to their workplace. \r\r",
-            "descriptionContentOfMeasure": "Management from the Post had therefore requested help from the armed forces. \r\rThe site was first disinfected by specialists from the Austrian armed forces team. About 280 soldiers and civilian servants will be deployed to replace the workforce for about two weeks in the sorting of the parcels and loading of truck in the Hagenbrunn center. \r\r250,000 parcels have piled up in the two logistics centers in the meantime\r\rVienna City Councilor Peter Hacker, responsible for public health, confirmed the city of Vienna will take a closer look at the subject of temporary agency work and precarious employment in Vienna. In order to ensure continuity of business, management of the Post requested support. \r",
-            "descriptionUseOfMeasure": "280 employees deployed.",
-            "descriptionViewsOfSocialPartners": "No information on social partner involvement. ",
+            "descriptionContentOfMeasure": "Management from the Post had therefore requested help from the armed forces. \r\rThe site was first disinfected by specialists from the Austrian armed forces team. About 280 soldiers and civilian servants will be deployed to replace the workforce for about two weeks in the sorting of the parcels and loading of truck in the Hagenbrunn center. \r\r250,000 parcels have piled up in the two logistics centers in the meantime.\r\rVienna City Councilor Peter Hacker, responsible for public health, confirmed the city of Vienna will take a closer look at the subject of temporary agency work and precarious employment in Vienna. In order to ensure continuity of business, management of the Post requested support. \r",
+            "descriptionUseOfMeasure": "The federal army also took stock after the two-week deployment in Hagenbrunn on Saturday: the soldiers had unloaded and loaded around 1.5 million parcels from containers since May 16 and prepared them for further delivery for the mail delivery staff. 29,000 working hours were worked. Up to 330 soldiers and civil servants from the armed forces base as well as soldiers from the NBC defense were on duty day and night and worked in three shifts. Out of a total of 29,000 hours, around 3,700 were carried out by the NBC defense force to protect logisticians.",
+            "descriptionViewsOfSocialPartners": "The company level trade union Post and Telecommunications Services Union (GPF) criticised the - in their view too extended - use of temporary agency workers and argued that the post should seek to resort to permanent workers in non-peak times. Both social partners representing temporary work agencies and their workers (WKO, representing temporary work agencies in the trade association of commercial service providers) and the union section representing the Temporary Employment Agency in the PRO-GE union, in a joint statement demanded that temporary agency work should not become the pawn in political debates. ",
             "socialPartner_form": "Not applicable",
-            "socialPartner_role": "Not applicable",
+            "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-21_859.html",
             "isOccupation": "Yes",
             "isSector": "Yes",
@@ -42048,6 +42061,20 @@
                     "sources::title": "Corona Cluster in Wien",
                     "sources::url": "https://www.vienna.at/corona-cluster-in-wien-heer-muss-im-paketzentrum-der-post-aushelfen/6620538",
                     "sources::d_date": "05/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "900",
+                    "sources::title": "Post-agency workers: Unionists angry after appeal to\rBundeswehr",
+                    "sources::url": "https://kurier.at/wirtschaft/post-leiharbeiter-gewerkschafter-nach-bundesheer-anrufung-wuetend/400848365",
+                    "sources::d_date": "05/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "901",
+                    "sources::title": "Post draws lessons from Hagenbrunn",
+                    "sources::url": "https://noe.orf.at/stories/3051063/",
+                    "sources::d_date": "05/30/2020",
                     "modId": "0"
                 }
             ],
@@ -42118,7 +42145,7 @@
             ]
         },
         "recordId": "769",
-        "modId": "19"
+        "modId": "23"
     },
     {
         "fieldData": {
