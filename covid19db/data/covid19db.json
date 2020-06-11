@@ -11,11 +11,11 @@
             "calc_identifier": "AT-2020-13/212",
             "dateType": "Temporary",
             "calc_creationDay": "03/31/2020",
-            "calc_lastUpdate": "05/11/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "As part of the \u20ac4 billion fund to mitigate the effects of the Corona crisis, which the Austrian national government and the social partners presented on 14 March 2020, they also presented two hardship funds: one for self-employed in one person companies; and the other for family-run businesses. This was complementary to other measures (see case AT-2020-12-/229), as those two target groups would not be able to profit from the short-time working schemes.\r\r",
             "descriptionContentOfMeasure": "The support is a one-off payment and does not have to be paid back. In addition, affected owners of one person companies may also obtain funds from the 'emergency fund' (Notfallfonds). The payments cannot be accumulated though. The hardship fund for self-employed is divided in two phases:\r\rPhase 1: Applications are possible until 17 April 2020. Eligible are those who can prove that they are no longer able to cover the running costs or are affected by an officially ordered ban on entry due to COVID-19 or have a drop in sales of at least 50% compared to the same month of the previous year. The amount of the funding is \u20ac500 if the net income p.a. was below \u20ac6,000 and \u20ac1,000 if it was above \u20ac6,000. The upper income threshold (above which no grant is paid) is \u20ac33,812 net in the last year for which a tax assessment is available. It essentially applies to one person enterprises (including agricultural and forestry and private accomodation rents) and freelance workers.\r\rPhase 2: Applications start on 20 April 2020. The grant depends on the income loss and lies at maximum at \u20ac2,000 per month for up to three months. No upper income threshold applies, and small companies with less than ten employees and liberal professions are eligible in addition to the group eligible in phase 1. Negotiations with NGOs are currently ongoing.\rAll applicants (regardless of whether an application has already been submitted in phase 1) will have the same maximum total amount of funding of up to \u20ac6,000. \rIn general, applications for the Hardship Fund can be submitted until 31 December 2020. ",
-            "descriptionUseOfMeasure": "Info from 1 April: Around 100,000 applications for phase 1 were counted so far. The total funds for the hardship fund were increased from \u20ac1 to 2 billion.\rInfo from 20 April: The first phase has been completed with 144,000 applications made. A total of EUR 121 mio. was paid out in the first phase. ",
-            "descriptionViewsOfSocialPartners": "Social partners were consulted and agreed on the package.",
+            "descriptionUseOfMeasure": "Info from 1 April: Around 100,000 applications for phase 1 were counted so far. The total funds for the hardship fund were increased from \u20ac1 to 2 billion.\r\rInfo from 20 April: The first phase has been completed with 144,000 applications made. A total of \u20ac121 million. was paid out in the first phase. ",
+            "descriptionViewsOfSocialPartners": "Social partners were consulted and agreed on the package. The employers organisation WKO is closely involved in the implemention, by informing and supporting their members. ",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Agreed (outcome)",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_212.html",
@@ -89,6 +89,11 @@
                     "modId": "7"
                 },
                 {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "8"
+                },
+                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "5"
@@ -114,7 +119,7 @@
             "regions": []
         },
         "recordId": "95",
-        "modId": "90"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -953,7 +958,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -999,7 +1004,7 @@
             "isOccupation": "No",
             "isSector": "Yes",
             "sector_privateOrPublic": "Not specified",
-            "calc_type": "Company practice",
+            "calc_type": "Other initiative or policy",
             "statusOfRegulation": "Entirely new measure "
         },
         "portalData": {
@@ -1075,7 +1080,7 @@
             "regions": []
         },
         "recordId": "107",
-        "modId": "93"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -1178,7 +1183,7 @@
             "regions": []
         },
         "recordId": "112",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -1804,7 +1809,7 @@
                     "regions::level": 2,
                     "regions::name": "St\u0159edn\u00ed \u010cechy",
                     "regions::nutsCode": "CZ02",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1931",
@@ -1812,7 +1817,7 @@
                     "regions::level": 2,
                     "regions::name": "Jihoz\u00e1pad",
                     "regions::nutsCode": "CZ03",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -2560,7 +2565,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -2717,7 +2722,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -3548,7 +3553,7 @@
                     "regions::level": 1,
                     "regions::name": "SLOVENSKO",
                     "regions::nutsCode": "SK0",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "3331",
@@ -3556,7 +3561,7 @@
                     "regions::level": 2,
                     "regions::name": "Z\u00e1padn\u00e9 Slovensko",
                     "regions::nutsCode": "SK02",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -4173,7 +4178,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -4387,7 +4392,7 @@
             "calc_identifier": "CY-2020-12/296",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/08/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The measure is implemented within the bundle support programme of the Republic of Cyprus of budgetary nature dealing with Covid-19 crisis and under the sub-category 'support of workers and vulnerable groups' - Degree 127 of the Quarantine Law, chapter 260. The special leave will be implemented for four weeks* excluding public holidays, at this stage, because of the suspension of the operation of private and public schools and child care facilities. The measure provides for financial allowances to the beneficiary parents.   \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
             "descriptionContentOfMeasure": "The measure covers parents in the private sector, whose nature of work does not allow teleworking or work from home or flexible working schedules and there is no other support at the household. The leave is attributed to the eligible parents with children up to 15 years of age in agreement with the employer and after the submission of the relevant application to the Ministry of Labour. For parents with disable children, the leave is granted irrespective of the age of their children. The measure covers only one of the parents within a household. It excludes parents receiving unemployment allowances or participate in the government's programme for the suspension of work, unless the other partner has been affected by the virus or is a person with a disability or is in compulsory isolation.  \r\rIt covers parents with a salary up to \u20ac2,500. The eligible parent receives as an allowance the 60% of the first \u20ac1,000 euros of his/her salary and a 40% of the other \u20ac1,000. The maximum amount of the allowance is \u20ac1000 per month. For single parents, the analogy is 70% and 50%, respectively, and the maximum amount of the allowance is \u20ac1,200.",
             "descriptionUseOfMeasure": "The budget available for this measure is \u20ac20 million and the number of potential beneficaries is 50,000 persons. ",
@@ -4443,6 +4448,11 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "11"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -4458,7 +4468,7 @@
             "regions": []
         },
         "recordId": "179",
-        "modId": "69"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -5205,11 +5215,11 @@
             "calc_identifier": "DK-2020-11/305",
             "dateType": "Open ended",
             "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/02/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "In order to avoid direct dismissals, the government has made it possible for the companies to make use of the existing jobsharing scheme in a more flexible way. Jobsharing is covered by collective agreement. The flexible measures was passed by a so-called urgent statute in the Parliament. According to the\u00a0statute,\u00a0a rule about notifying the local jobcentre a week before\u00a0jobsharing can begin is abolished because it might create unnecessary red tape for the company.",
-            "descriptionContentOfMeasure": "According to the collective agreement a company can introduce a period of 13 weeks of jobsharing in the company as a provisional measure. Normally, the company must notify the local jobcentre a week before the jobsharing can start. This rule is abolished with the aim that the company can start jobsharing the same day the notification is send.\r  \rAt the same time, it becomes possible for companies to switch between the types of jobsharing periods when a cycle of jobsharing is completed. As it is, the working hours must be reduced by at least 2 full days per day. week or with 1 week of full-time work followed by 1 week of unemployment. However, the distribution can also be arranged with 2 weeks of full-time work followed by 1 week of unemployment or with 2 weeks of full-time work followed by 2 weeks of unemployment. According to the urgent statute, the employer can switch between the periods when the one in use expires. \r\rDuring the periods of unemployment, the employees in question will receive a supplementary unemployment benefit.",
+            "descriptionContentOfMeasure": "According to the collective agreement a company can introduce a period of 13 weeks of jobsharing in the company as a provisional measure. Normally, the company must notify the local jobcentre a week before the jobsharing can start. This rule is abolished with the aim that the company can start jobsharing the same day the notification is send.\r  \rAt the same time, it becomes possible for companies to switch between the types of jobsharing periods when a cycle of jobsharing is completed. As it is, the working hours must be reduced by at least two full days per day. week or with one week of full-time work followed by one week of unemployment. However, the distribution can also be arranged with two weeks of full-time work followed by one week of unemployment or with two weeks of full-time work followed by two weeks of unemployment. According to the urgent statute, the employer can switch between the periods when the one in use expires. \r\rDuring the periods of unemployment, the employees in question will receive a supplementary unemployment benefit.",
             "descriptionUseOfMeasure": "The media has mentioned that jobsharing is increasing among the companies affected by COVID-19 related decrease in production/sales. However, the concrete statistics is not yet published, but it is a matter of  short time.  ",
-            "descriptionViewsOfSocialPartners": "The social partners have welcomed the initiative to make the existing jobsharing scheme more flexible for a (open ended) period.",
+            "descriptionViewsOfSocialPartners": "The social partners have welcomed the initiative to make the existing jobsharing scheme more flexible for an (open ended) period.",
             "socialPartner_form": "Other",
             "socialPartner_role": "Informed",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_305.html",
@@ -5405,7 +5415,7 @@
             "regions": []
         },
         "recordId": "188",
-        "modId": "71"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -6102,7 +6112,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "51",
@@ -6839,10 +6849,10 @@
             "calc_identifier": "CY-2020-11/327",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The scheme addresses businesses who have completely suspended their operation, in accordance with the Degree 101 of the Quarantine Law, Chapter 260 of the Minister of Health. It includes hypermarkets, shopping malls, cafeterias, libraries, sport centers, thematic parks, hairdressing saloons, barber shops, night clubs and pubs, etc.    \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
-            "descriptionContentOfMeasure": "The basic requirement for participation in the Scheme is that no employee has been fired since 1 March 2020. Additionally, businesses participate in the Scheme should not dismiss any employee during the period of participation, during an additional equal period of participation and plus one additional month after the end period of participation. \rFor companies employing more than nine employees, a Special Unemployment Benefit will be paid to 90% of employees, provided the terms and conditions are met.\rThe remaining 10% shall include managing shareholders, partners holding more than 20% of the shares, general managers and senior executives. For businesses employing up to nine employees, Special Unemployment Benefit may be paid to all employees of the business, irrespective of their status\rThe maximum amount that may be paid for a period of month may not exceed 1,214 euros. \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible. For the purpose of paying the Scheme, the insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison.  \r\rAdditionally, a minimum payable amount of 356 euros has been defined for beneficiaries. Also, a special plan will be implemented for employees who first started work in February and March 2020.\r\rThe Scheme  includes persons over 65 years of age who do not receive statutory pension and continue to work.  \r\rIn addition, those for whom the regular unemployment benefits from the Social Insurance Fund have been completed, may join the Scheme to receive a Special Unemployment Allowance. ",
-            "descriptionUseOfMeasure": "The budget available for the scheme is 182 million euros (covering the Scheme for the partial suspension of business Degree 130) but there is no estimation of the number of beneficiaries at this moment. ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The scheme addresses businesses who have completely suspended their operation, in accordance with the Decree 101 of the Quarantine Law, Chapter 260 of the Minister of Health. It includes hypermarkets, shopping malls, cafeterias, libraries, sport centers, thematic parks, hairdressing saloons, barber shops, night clubs and pubs, etc.    \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
+            "descriptionContentOfMeasure": "The basic requirement for participation in the Scheme is that no employee has been fired since 1 March 2020. Additionally, businesses participate in the Scheme should not dismiss any employee during the period of participation, during an additional equal period of participation and plus one additional month after the end period of participation. \r\rFor companies employing more than nine employees, a Special Unemployment Benefit will be paid to 90% of employees, provided the terms and conditions are met. The remaining 10% shall include managing shareholders, partners holding more than 20% of the shares, general managers and senior executives. For businesses employing up to nine employees, Special Unemployment Benefit may be paid to all employees of the business, irrespective of their status\r\rThe maximum amount that may be paid for a period of month may not exceed \u20ac1,214. \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible. For the purpose of paying the Scheme, the insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison.  \r\rAdditionally, a minimum payable amount of 356 euros has been defined for beneficiaries. Also, a special plan will be implemented for employees who first started work in February and March 2020.\r\rThe Scheme  includes persons over 65 years of age who do not receive statutory pension and continue to work.  \r\rIn addition, those for whom the regular unemployment benefits from the Social Insurance Fund have been completed, may join the Scheme to receive a Special Unemployment Allowance. ",
+            "descriptionUseOfMeasure": "The budget available for the scheme is 182 million euros (covering the Scheme for the partial suspension of business Decree 130) but there is no estimation of the number of beneficiaries at this moment. ",
             "descriptionViewsOfSocialPartners": "The Government has consulted the social partners - trade unions, employers\u00b4 organizations and all political parties - the provision of the scheme and the outcome emerged is on an agreed base. ",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Agreed (outcome)",
@@ -6909,9 +6919,9 @@
                     "modId": "11"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "6"
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "5"
                 },
                 {
                     "recordId": "62",
@@ -6932,7 +6942,7 @@
             "regions": []
         },
         "recordId": "211",
-        "modId": "69"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -7026,9 +7036,9 @@
             "calc_identifier": "CY-2020-12/330",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The Scheme addresses businesses who have partially suspended their operation, whose turnover declined more than 25% in March 2020 due to the Coronavirus Pandemic and are projecting a corresponding drop for April 2020, as compared to the corresponding months of the previous year. For business that were not active in the previous year, the basis of comparison will be the months proceeding March 2020. The Scheme is in accordance with Decree 131 of the Quarantine Law, Chapter 260 of the Ministry of Health.  \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
-            "descriptionContentOfMeasure": "The basic requirement for participation in the Scheme is that no employee has been fired. Business participating, in addition, should not dismiss any employee during the participating period, during an additional month equal to the period of participation and plus one additional month. \r\rBusinesses up to 50 employees may join the Scheme by declaring the 75% of their total number of employees to receive the special unemployment benefit. Similarly, businesses employing more than 50 employees may declare  60% of their total number of employees. \r\rThe maximum amount for a period of a month may not exceed 1,214 euros. \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible. The insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison.  \r\rAdditionally, a minimum payable amount of 356 euros has been defined for beneficiaries. Also, a special plan will be implemented for employees who first started work in February and March 2020.\r \rAn additional amendment to the Scheme is the inclusion of persons over 65 years of age who do not receive statutory pension and continue to work. \r  \r \r\r\r ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The Scheme addresses businesses who have partially suspended their operation, whose turnover declined more than 25% in March 2020 due to the Coronavirus Pandemic and are projecting a corresponding drop for April 2020, as compared to the corresponding months of the previous year. For business that were not active in the previous year, the basis of comparison will be the months proceeding March 2020. The Scheme is in accordance with Decree 131 of the Quarantine Law, Chapter 260 of the Ministry of Health.  \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
+            "descriptionContentOfMeasure": "The basic requirement for participation in the Scheme is that no employee has been fired. Business participating, in addition, should not dismiss any employee during the participating period, during an additional month equal to the period of participation and plus one additional month. \r\rBusinesses up to 50 employees may join the Scheme by declaring the 75% of their total number of employees to receive the special unemployment benefit. Similarly, businesses employing more than 50 employees may declare  60% of their total number of employees. \r\rThe maximum amount for a period of a month may not exceed 1,214 euros. \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible. The insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison.  \r\rAdditionally, a minimum payable amount of \u20ac356 has been defined for beneficiaries. Also, a special plan will be implemented for employees who first started work in February and March 2020.\r \rAn additional amendment to the Scheme is the inclusion of persons over 65 years of age who do not receive statutory pension and continue to work. \r  \r \r\r\r ",
             "descriptionUseOfMeasure": "Currently, there is not an estimation for the beneficiaries of the scheme. The amount corresponding to the Scheme is 182 million euros covering also the scheme for the complete suspension of business, Decree 130 of the Quarantine Law, Chapter 260. ",
             "descriptionViewsOfSocialPartners": "The government has consulted the social partners - trade unions, employers' organizations and political parties - and the outcome emerged is on an agreed base. ",
             "socialPartner_form": "Direct consultation",
@@ -7114,7 +7124,7 @@
             "regions": []
         },
         "recordId": "214",
-        "modId": "66"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -7661,7 +7671,7 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
             "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The Scheme addresses self-employed workers who have fully suspended their operations and self-employed workers who have partially suspended their operations in accordance with the Decree 127 of the Quarantine Law, Chapter 260 of the Minister of Health. It excludes self-employed workers that their financial activity has not been particularly affected by the crisis such as doctors, pharmacists, operators of medical appliances, grocers, kiosk owners, manufactures of daily products and veterinarians.  \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
+            "descriptionBackgroundInfo": "The Scheme addresses self-employed workers who have fully suspended their operations and self-employed workers who have partially suspended their operations in accordance with the Decree 127 of the Quarantine Law, Chapter 260 of the Minister of Health. It excludes self-employed workers that their financial activity has not been particularly affected by the crisis such as doctors, pharmacists, operators of medical appliances, grocers, kiosk owners, manufactures of daily products and veterinarians.  \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
             "descriptionContentOfMeasure": "The basic prerequisite for participation in the Scheme is that no employee have been fired since 1 March 2020. Additionally, participants in the scheme should not dismiss any employee during the period of participation, during an additional period equal to the period of participation and plus an extra month. \r\rThe special allowance will be equal to the 60% of the amount of the weekly total of insurable earnings, based on which the beneficiary had the obligation of paying contributions to the Social Insurance Fund for the fourth trimester of 2019. \r\rThe allowance cannot amount less than 300 euros to a period of 4 weeks with the maximum limit of 900 euros for the same period. \r\rSelf-employed who employ other workers may also submit on behalf of their employees an application for the Schemes for Complete or Partial Suspension of operations. ",
             "descriptionUseOfMeasure": "The estimation is that 40,000 self-employed workers may be benefited from the Scheme. The total budget available is 20 million euros. ",
             "descriptionViewsOfSocialPartners": "The government has consulted social partners - trade unions, employers' organizations, political parties - and the emerged measure is an outcome of an agreed base. ",
@@ -7746,7 +7756,7 @@
             "regions": []
         },
         "recordId": "227",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -7934,10 +7944,10 @@
             "calc_identifier": "CY-2020-12/346",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The scheme addresses the vulnerable working groups holding a certificate from their personal doctors or Ministry of Health according to the Decree 127 of the Quarantine Law, Chapter 260 of the Minister of Health.  \r\rThe scheme aims to protect workers having particular health issues allowing their absence from work in order to protect themselves and the deterioration of the health condition. The Ministry of Health prepared a list with the group of workers considered as vulnerable. ",
-            "descriptionContentOfMeasure": "The Scheme grants the special sick leave allowance to the vulnerable groups subjected to the virus including: a. persons who are listed as vulnerable as designated by the Ministry of Health, b. persons subjected to compulsory isolation and self-isolation, where the nature of their work does not permit teleworking, c. persons affected with the COVID 19 holding a certificate from the Ministry of Health and d. persons aged 63-65 years who do not receive a statutory pension and fall under a, b and c categories holding the corresponding certificate.\r\rThe special sick leave is calculated at 60% of the value of the insurance units for employees and self-employed workers qualified under the Social Insurance Law. The maximum amount that would be paid as a special sick leave may not exceed 1,214 euros.  \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible currently out of work or full-time work. For the purpose of paying the Special Sick Leave Benefit, the insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison taking into account the 60% for both calculations.  \r\rAdditionally, a minimum payable amount of 356 euros has been defined for beneficiaries, which amount is equal to the lowest statutory pension. \r\rAn additional amendment to the Scheme is the inclusion of persons over 65 years of age who do not receive statutory pension and continue to work.  ",
-            "descriptionUseOfMeasure": "The estimate number of beneficiaries is 20,000 and the available budget is 15 million euros. ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The scheme addresses the vulnerable working groups holding a certificate from their personal doctors or Ministry of Health according to the Decree 127 of the Quarantine Law, Chapter 260 of the Minister of Health. The scheme aims to protect workers having particular health issues allowing their absence from work in order to protect themselves and the deterioration of the health condition. The Ministry of Health prepared a list with the group of workers considered as vulnerable. ",
+            "descriptionContentOfMeasure": "The Scheme grants the special sick leave allowance to the vulnerable groups subjected to the virus including: \r*persons who are listed as vulnerable as designated by the Ministry of Health, \r*persons subjected to compulsory isolation and self-isolation, where the nature of their work does not permit teleworking, \r*persons affected with the COVID 19 holding a certificate from the Ministry of Health and d. persons aged 63-65 years who do not receive a statutory pension and fall under a, b and c categories holding the corresponding certificate.\r\rThe special sick leave is calculated at 60% of the value of the insurance units for employees and self-employed workers qualified under the Social Insurance Law. The maximum amount that would be paid as a special sick leave may not exceed \u20ac1,214.  \r\rOn the 23 April 2020, the Cabinet amended the calculation of the payable amount to the beneficiaries in order to support as many employees as possible currently out of work or full-time work. For the purpose of paying the Special Sick Leave Benefit, the insurable earnings of the year 2018 will be taken into account, but in addition, a comparison will be made based on the declared salary of January 2020. The payable amount will be the highest amount that results from this comparison taking into account the 60% for both calculations.  \r\rAdditionally, a minimum payable amount of \u20ac356 has been defined for beneficiaries, which amount is equal to the lowest statutory pension. \r\rAn additional amendment to the Scheme is the inclusion of persons over 65 years of age who do not receive statutory pension and continue to work.  ",
+            "descriptionUseOfMeasure": "The estimate number of beneficiaries is 20,000 and the available budget is \u20ac15 million. ",
             "descriptionViewsOfSocialPartners": " The government has consulted the social partners - trade unions, employers' organizations and political parties - and the outcome emerged is on an agreed base. ",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Agreed (outcome)",
@@ -7994,16 +8004,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "11"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed ",
-                    "modId": "7"
-                },
-                {
                     "recordId": "37",
                     "targetGroups::name": "Older citizens",
                     "modId": "8"
@@ -8032,7 +8032,7 @@
             "regions": []
         },
         "recordId": "230",
-        "modId": "64"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -8657,7 +8657,7 @@
                     "regions::level": 2,
                     "regions::name": "St\u0159edn\u00ed \u010cechy",
                     "regions::nutsCode": "CZ02",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1931",
@@ -8665,7 +8665,7 @@
                     "regions::level": 2,
                     "regions::name": "Jihoz\u00e1pad",
                     "regions::nutsCode": "CZ03",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -9013,6 +9013,197 @@
     },
     {
         "fieldData": {
+            "title": "Support for preservation of jobs in sectors affected by coronavirus ",
+            "title_nationalLanguage": "Potpore za o\u010duvanje radnih mjesta u sektorima pogo\u0111enima koronavirusom",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "HR-2020-12/361",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/07/2020",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "Tourism is very sensitive to safety and health because if tourists do not feel safe, they do not travel. Due to the nature of the Croatian tourism where majority of the guests are coming by private booking with personal cars during the summer season in June and August, it is possible to achieve relatively decent results if the pandemic will last one month. \r\rHowever, if the coronavirus will last for two months or more, there could be really harmful consequences for the Croatian tourism and the economy in total. It should be relatively easy to solve the economic consequences of a short duration of the disease. On the other hand, a longer duration of the pandemic situation in Croatia and in Italy, which is one of Croatian most important foreign trade partner and whose citizens traditionally present a significant part of overseas tourists in Croatia, could have seriously adverse outcomes for the Croatian economic growth. This measure is not exclusively related to tourism industry, but one can assess that this industry has been seriously negatively impacted by the crisis.  ",
+            "descriptionContentOfMeasure": "The support for preservation of jobs in sectors affected by coronavirus is implemented by the Croatian Employment Service by awarding grants as a form of co-financing of wage costs. The Croatian Employment Service (CES) awards grants to an eligible employer in the amount of HRK 3.250,00 (\u20ac434) per month for full-time worker and HRK 1.625,00 (\u20ac217) per month for part-time worker. CES also awards a proportional part of the amount of HRK 3,250.00 or HRK 1,625.00 per worker for the time they did not work according to the decision of the Civil Protection Directorate. \r\rThe support can be provided to \r\r*employers in the following activities: providing accommodation and preparation and serving of food and drinks (Sector I), transportation and storage (Sector H) and health tourism; labour-intensive activities within the manufacturing industry like textiles, clothing, footwear, leather, wood and furniture; \r*employers who have been banned from performing their business activities by decisions of the Civil Protection Headquarters (national, county, local self-government units) and cannot carry out their activities, and \r*all other employers who can prove the adverse impact of special circumstances, if their income is reduced by more than 20%. \r\rSince 26 March 2020 all beneficiaries of grants for self-employment (owners and employees), employers who have been registered at the Croatian Pension Insurance Institute by 29 February 2020 and all workers employed until 29 February 2020 have also been included. \r\rThe support cannot be granted if there has been a decrease in the number of employees in the period from 20 March 2020 until the date of submission of the Grant Application, if the percentage of dismissal is greater than: \r*40% for employers employing up to 10 workers; \r*20% for small businesses; 1\r*5%for medium-sized enterprises and \r*10% for large companies. \r\rThe aforementioned amount of the grant - HRK 3,250 or HRK 1,625 per worker - is applied for March 2020, while for April and May 2020 it will be increased per worker monthly to HRK 4,000 (\u20ac534) for full-time job or HRK 2,625 (\u20ac267) for part-time job. The state will also cover also payment of social contributions, which amounts to HRK 1,460 (\u20ac194) for a net wage of HRK 4,000. In total, the state will pay HRK 5,460 (\u20ac728) per employee. \r\r ",
+            "descriptionUseOfMeasure": "At the end of March,  around 65,000 employers with around 400,000 thousand workers were registered as users of the scheme at the CES.  At the end of April, the government has paid more than one and a half billion HRK (EURO 200 million) to preserve jobs for around 485,000 employees. Almost 84,000 employers have received support, including 145 large entrepreneurs.\rThe main criterion for assistance was a 20 percent drop in turnover. Leading recipients of the grants are big touristic company Valamar Riviera with more than 2,500 employees who have been paid more than eight million HRK (EURO 1.07 million) followed by Boxmark Leather with more than 2,000 employees, Mlinar with 1,737 employees, a car parts manufacturer from Solin AD Plastik with more than 1,500 employees. Of all beneficiaries of the grant 91,78% are micro firms with less than 10 employees, 6,99% are SME with less than 50 employees, 1.06% are medium employers with less than 250 employees, 0.03% are bigger employers with more than 250 employees.  \rAccording to the data of the Ministry of Labour and Pension System issued in May, the measures included about 550,000 employees. According to the same source, in March and April 2020 alone, the state allocated a total of around HRK 3.5 billion (\u20ac467 million) to measures to preserve jobs in the context of the coronavirus pandemic. It is estimated that the measures in May 2020 costed the state treasury about HRK two billion (\u20ac267 million). Therefore, the state has spent around HRK 5.5 billion (\u20ac734 million) in three months of implementing measures to preserve employment in the coronary crisis.\r",
+            "descriptionViewsOfSocialPartners": "Trade Unions demanded that the recipients of the aid should be publicly disclosed because they fear that abuse of the obtained funds is quite possible. These data are partly now available on https://mjera-orm.hzz.hr/korisnici-potpore/statistika-ozujak-2020/.  ",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-12_361.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislation or other statutory regulation",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "208",
+                    "sources::title": "Donesene Mjere za o\u010duvanje radnih mjesta uzrokovanih posebnim okolnostima uvjetovanih koronavirusom COVID \u2013 19",
+                    "sources::url": "https://www.hzz.hr/novosti-priopcenja/donesene-mjere-za-ocuvanje-radnih-mjesta-uzrokovane-covid19-krizom.php",
+                    "sources::d_date": "03/12/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "209",
+                    "sources::title": "Prijedlog zaklju\u010dka o drugoj skupini mjera za pomo\u0107 gospodarstvu uslijed epidemije koronavirusa",
+                    "sources::url": "https://vlada.gov.hr/sjednice/222-sjednica-vlade-republike-hrvatske-29132/29132",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "785",
+                    "sources::title": "Statistika korisnika potpore o\u010duvanje radnih mjesta - o\u017eujak 2020.",
+                    "sources::url": "https://mjera-orm.hzz.hr/korisnici-potpore/statistika-ozujak-2020/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "895",
+                    "sources::title": "Employer who pays profit by the end of 2021 will have to return the aid",
+                    "sources::url": "https://www.novilist.hr/vijesti/gospodarstvo/hzz-izmijenio-uvjete-poslodavac-koji-isplati-dobit-do-kraja-2021-morat-ce-vratiti-potpore/",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "896",
+                    "sources::title": "Potpora za o\u010duvanje radnih mjesta u djelatnostima pogo\u0111enima Koronavirusom (COVID \u2013 19) za\rlipanj 2020. godine",
+                    "sources::url": "http://mjere.hr/admin/wp-content/uploads/2020/05/Potpora-za-o\u010duvanje-radnih-mjesta-_-LIPANJ.pdf",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "897",
+                    "sources::title": "Statistika korisnika potpore o\u010duvanje radnih mjesta - o\u017eujak 2020.",
+                    "sources::url": "https://mjera-orm.hzz.hr/korisnici-potpore/statistika-ozujak-2020/",
+                    "sources::d_date": "06/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "910",
+                    "sources::title": "CES decision on Amendments to the Terms and Conditions for the Use of Funds for the Implementation of Active Employment Policy Measures in 2020",
+                    "sources::url": "https://www.hzz.hr/novosti-priopcenja/nova-mjera-lipanj-2020-izmjena-kriterija-svibanj-poslodavci-50-zaposlenih.php",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "11"
+                },
+                {
+                    "recordId": "59",
+                    "targetGroups::name": "All companies",
+                    "modId": "6"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "45",
+                    "updates::d_date": "05/29/2020",
+                    "updates::description": "At the session held on May 29, 2020. The Management Board of the Croatian Employment Service (CES) introduced the Job Preservation Support (COVID - 19) for June 2020, which continues the job preservation support for eligible sectors whose business cannot be opened for objective reasons or have a decline of at least 50 %, and caused by the COVID-19 crisis, which seeks to avoid the dismissal of workers from the activities actually affected and the sudden entry of workers into the unemployment register.\r\rThe amount of the subsidy is HRK 4,000 for the month of June per full-time worker, i.e. the proportional part per worker according to the number of part-time working hours.\r\rEmployers need to prove that in May 2020 they had a decrease in income by at least 50% compared to May 2019, based on the submission of the VAT form for May 2020 and May 2019 and that they  are registered in the Croatian Pension Insurance Institute system by 29 February 2020. If the employer operates for less than 12 months, it is necessary to prove a decrease in turnover by at least 50% in May 2020 compared to February 2020 based on the submission of the VAT form for May and February 2020.\r\rHowever, CES has changed the conditions and methods of using funds for the implementation of active employment policy measures in 2020, and the most significant change is that the employer will have to repay support if it pays a dividend or profit share by the end of 2021.\r\rThis measure should cover up to 100 thousand employees, or about 450,000 less than before. The calculations show, that it should be significantly cheaper for the state treasury, given that in June, as estimated in government circles, it would cost around HRK 400 million (\u20ac53 million).\r",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "252",
+        "modId": "80"
+    },
+    {
+        "fieldData": {
             "title": "Compensation for cancelled cultural events",
             "title_nationalLanguage": "\u00c4raj\u00e4\u00e4nud kultuuris\u00fcndmuste kulude h\u00fcvitamine",
             "d_startDate": "04/19/2020",
@@ -9267,8 +9458,8 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
             "calc_lastUpdate": "05/08/2020",
-            "descriptionBackgroundInfo": "Teleworking arrangements and/or work from home arrangements are among the measures taken by the Republic of Cyprus to prevent the spread of the Coronavirus COVID-19. The provision has been issued with the Decree 101 of the Quarantine Law, Chapter 260 of the Minister of Health. It addresses employees in the public and the broader public sector and employees in the Educational Service of Cyprus. The provision authorizes Ministers and Deputy Ministers as well as the Heads of Independent authorities/ bureaus / offices to define the needs of their departments and schedule their activities accordingly.     \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Decrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
-            "descriptionContentOfMeasure": "The services of the public and broader public sector operate for this period of time with minimum personnel and for emergency issues only. All other personnel, and where possible, works from home. Essential services of the Republic, i.e. hospitals and the arm forces, are excluded from the regulation. \rThe Minister of Education, in addition, is authorized to issue an educational programme for the period that the operation of public schools is suspended and make use of technologies to cover part of the school curricula. \r\rThe regulation also provides that public servants, not in appointed service or in teleworking, are obligated to provide services in other domains if needed.      ",
+            "descriptionBackgroundInfo": "Teleworking arrangements and/or work from home arrangements are among the measures taken by the Republic of Cyprus to prevent the spread of the Coronavirus COVID-19. The provision has been issued with the Decree 101 of the Quarantine Law, Chapter 260 of the Minister of Health. It addresses employees in the public and the broader public sector and employees in the Educational Service of Cyprus. The provision authorizes Ministers and Deputy Ministers as well as the Heads of Independent authorities/ bureaus / offices to define the needs of their departments and schedule their activities accordingly.     \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Decrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
+            "descriptionContentOfMeasure": "The services of the public and broader public sector operate for this period of time with minimum personnel and for emergency issues only. All other personnel, and where possible, works from home. Essential services of the Republic, i.e. hospitals and the arm forces, are excluded from the regulation. The Minister of Education, in addition, is authorized to issue an educational programme for the period that the operation of public schools is suspended and make use of technologies to cover part of the school curricula. The regulation also provides that public servants, not in appointed service or in teleworking, are obligated to provide services in other domains if needed.      ",
             "descriptionUseOfMeasure": "The number of employees in the public and broader public sector (excluding the numbers of workers in hospitals, police and arm forces) addressed by the Decree is around 55,000. ",
             "descriptionViewsOfSocialPartners": "The government has consulted the social partners - trade unions, employers' organizations and political parties - and the outcome emerged is on an agreed base. ",
             "socialPartner_form": "Direct consultation",
@@ -9374,7 +9565,7 @@
             "regions": []
         },
         "recordId": "258",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -9440,7 +9631,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "51",
@@ -9475,10 +9666,10 @@
             "calc_identifier": "CY-2020-12/369",
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The requisition of doctors and nurses by the Republic emerged with the increasing number of people, medical and paramedical personnel of the public and some private hospitals and medical centers infected by the coronavirus COVID 19.  The provision is found in the Decree 107 of the Quarantine Law, Chapter 260 issued on the Thursday 19 March 2020 by the Minister of Health for the protection of public health and the health care system.  \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The requisition of doctors and nurses by the Republic emerged with the increasing number of people, medical and paramedical personnel of the public and some private hospitals and medical centers infected by the coronavirus COVID-19. The provision is found in the Decree 107 of the Quarantine Law, Chapter 260 issued on the Thursday 19 March 2020 by the Minister of Health for the protection of public health and the health care system.  \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
             "descriptionContentOfMeasure": "The measure provides the requisition of all doctors and nurses, registered in the Medical Record and the Nurse Record, accordingly, during the starting day of the implementation of the Degree. According to the Decree, all doctors and nurses are under the instructions of the Minister of Health and carry out the tasks assigned to them during the implementation period. \r\rThe names of the commanded doctors and nurses will be posted on the website of the Ministry of Health and will be informed by other means as well that the Minister will decide. \r\rDoctors and nurses in the vulnerable groups, as defined by the Ministry, will carry out other duties of the Ministry of Health or will be excluded from duties according to the judgment of the Minister. ",
-            "descriptionUseOfMeasure": "Payment is irrelevant with this measure.\r\rAccording to the the Health Statistics of the Statistical Services of Cyprus (2017), the number of doctors working in private and public hospitals is 3.388 and the number of nurses in private and public hospitals is 3.387. The number of registered health professionals in their respective health associations, however, might be higher but it was impossible to communicate and confirm it with the associations probably due to restrictions of movement for the prevention of the spread of the virus. ",
+            "descriptionUseOfMeasure": "Payment is irrelevant with this measure. According to the the Health Statistics of the Statistical Services of Cyprus (2017), the number of doctors working in private and public hospitals is 3,388 and the number of nurses in private and public hospitals is 3,387. The number of registered health professionals in their respective health associations, however, might be higher but it was impossible to communicate and confirm it with the associations probably due to restrictions of movement for the prevention of the spread of the virus. ",
             "descriptionViewsOfSocialPartners": "No consultation proceeded this decision of the government ",
             "socialPartner_form": "Other",
             "socialPartner_role": "No involvement",
@@ -9508,9 +9699,14 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -9539,7 +9735,7 @@
             "regions": []
         },
         "recordId": "260",
-        "modId": "57"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -9824,7 +10020,7 @@
             "calc_identifier": "CY-2020-13/374",
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
-            "calc_lastUpdate": "05/07/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The measure is issued among a bundle of other measures for the protection of public health and the health care system with the Decree 32(1) 2003 of the Quarantine Law, Chapter 260 of the Minister of Health. Taken the increasing number of the medical and paramedical staff of public and private hospitals and medical centers infected by the COVID 19 coronovirus, the measure intents to make the best use of the graduates students in medical and nursing studies for the staffing of public hospitals in need that accommodate victims of the virus. \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
             "descriptionContentOfMeasure": "According to the Decree, the Minister of Health have the capacity to use volunteer graduates of medical schools, in their four-years or six-years of study, and graduate nursing students studying at the Cypriot Universities, if and whether the Minister considers it necessary.  \r\r* According to the Decree, the Minister of Health have the capacity to utilize volunteer graduates of the medical schools, of four-year or six-year of study, and graduate nursing students studying at the Cypriot Universities, if and whether the Minister considers it necessary. \r\r* Apologies for the duplication but no further details are available and the system doesn't allow to submit the case with less than 100 words. ",
             "descriptionUseOfMeasure": "The measure is on volunteering base and there is no payment provisions. ",
@@ -9857,9 +10053,19 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -9888,7 +10094,7 @@
             "regions": []
         },
         "recordId": "265",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -11115,7 +11321,7 @@
                     "regions::level": 3,
                     "regions::name": "\u00c1rea Metropolitana do Porto",
                     "regions::nutsCode": "PT11A",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "3237",
@@ -11123,7 +11329,7 @@
                     "regions::level": 3,
                     "regions::name": "\u00c1rea Metropolitana de Lisboa",
                     "regions::nutsCode": "PT170",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -11456,7 +11662,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -11727,7 +11933,7 @@
             "regions": []
         },
         "recordId": "292",
-        "modId": "57"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -12401,7 +12607,7 @@
             "calc_identifier": "CY-2020-14/412",
             "dateType": "Temporary",
             "calc_creationDay": "04/09/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The measure is taken in order to keep local businesses afloat due to the corona crisis and is provided in the Law 27(1) 2020 'Emergency Measures taken by the Ministry of Labour, Welfare and Social Insurances for the Confrontation of the Pandemic of Coronavirus COVID 19'.\r\rThe measure provides an extension for the payment of social insurances in order to support businesses and employers during the course of the pandemic crisis that hit the country.      \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent the measure up until 12 June 2020. Currently, the Ministry of Labour undertakes a legal and technical processing of the measure. ",
             "descriptionContentOfMeasure": "All businesses and self-employed workers that cannot afford to pay the owed payments due to the crisis to the Social Insurance Funds of March 2020, including the payments in accordance with the (1) Social Insurances Law, (2) the General Healthcare System Law, (3) the Paid Annual Leave Law, (4) the Termination of Employment Law and (5) the Social Cohesion Law are eligible to make use of the extension of the period. \r\rThe final deadline for the payment is 14 April 2020. After this date, payments fall due and the law provides for additional fees and/or burden of the due payments in accordance with the respective laws as above. ",
             "descriptionUseOfMeasure": "Currently there is no available information on the use of the measure by beneficiaries. ",
@@ -12477,7 +12683,7 @@
             "regions": []
         },
         "recordId": "303",
-        "modId": "59"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -12770,7 +12976,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -12861,7 +13067,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -13160,7 +13366,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION WALLONNE",
                     "regions::nutsCode": "BE3",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -13287,7 +13493,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                     "regions::nutsCode": "BE1",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -13433,7 +13639,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "51",
@@ -15127,9 +15333,9 @@
             "calc_identifier": "CY-2020-12/449",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "The measure is regulated through the directions for the protection of workplaces of the Medical and Public Health Services of the Minister of Health. \r\rIt is issued within a bundle of other measures for the protection of workers in the economic activities that they still operating such as offices, pharmacies, supermarkets, bakeries, fruit markets and generally with activities in the retail market. The overcrowding of supermarkets, especially, and the fear of the spread of the virus among workers and the public were among the reason that the government has taken the measure.   \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
-            "descriptionContentOfMeasure": "The directions include specific measures for the protection of workplaces, workers and the public that make use of the services of workplace and include:\r\r- necessary signs to ensure that there is a two-meter distance between citizens and workers both inside and outside the business (i.e. within shops/businesses and in the queues outside). \r- the presence of more than one person per 8 square meters of space is not allowed. \r- adequate ventilation of all workplaces\r- access to water and soap and antiseptic hand gels\r- cleaning and disinfection of all surfaces \r- covering of the mouth with tissues during sneezing and coughing\r- access to essential consumables including thermometers, single use gloves, cleaning surface liquids, masks. \r\rThe directions also include the process for confronting suspected cases in the workplace. The process include the isolation of the worker from the others, provision of masks and gloves to the suspected case worker, immediate communication with the crisis center, avoidance of work space of the affected person and disinfection of the workplace.  \r\r\r ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The measure is regulated through the directions for the protection of workplaces of the Medical and Public Health Services of the Minister of Health. \r\rIt is issued within a bundle of other measures for the protection of workers in the economic activities that they still operating such as offices, pharmacies, supermarkets, bakeries, fruit markets and generally with activities in the retail market. The overcrowding of supermarkets, especially, and the fear of the spread of the virus among workers and the public were among the reason that the government has taken the measure.   \r\rOn Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
+            "descriptionContentOfMeasure": "The directions include specific measures for the protection of workplaces, workers and the public that make use of the services of workplace and include: \r\r*necessary signs to ensure that there is a two-meter distance between citizens and workers both inside and outside the business (i.e. within shops/businesses and in the queues outside). \r*the presence of more than one person per 8 square meters of space is not allowed. \r*adequate ventilation of all workplaces\r*access to water and soap and antiseptic hand gels\r*cleaning and disinfection of all surfaces \r*covering of the mouth with tissues during sneezing and coughing\r*access to essential consumables including thermometers, single use gloves, cleaning surface liquids, masks. \r\rThe directions also include the process for confronting suspected cases in the workplace. The process include the isolation of the worker from the others, provision of masks and gloves to the suspected case worker, immediate communication with the crisis center, avoidance of work space of the affected person and disinfection of the workplace.  \r\r\r ",
             "descriptionUseOfMeasure": "No information is available currently.",
             "descriptionViewsOfSocialPartners": "The Ministry of Health and the relevant medical services issued the directions without the prior consultation with social partners. ",
             "socialPartner_form": "Unknown",
@@ -15160,14 +15366,9 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "11"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -15183,7 +15384,7 @@
             "regions": []
         },
         "recordId": "340",
-        "modId": "57"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -15428,10 +15629,10 @@
             "calc_identifier": "CY-2020-11/453",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The scheme aims to support educators working in the afternoon programmes implemented by the Ministry of Education, Culture, Sports and Youth. The scheme is found among a bundle of other measures announced by the government entitled 'Support Measures of Budgetary Nature for the Confrontation of Coronavirus\u00b4. \r\rThe employment status of these groups of educators is on a different base than the educators working in the morning primary or secondary education and are not covered by other measures announced by the government. They are assumed as self-employed service providers.  \r\r* On Wednesday 8 April, the President of the Republic announced the decision of the Cabinet to extent all the measures taken by the Degrees of the Minister of Health up until 30 April 2020. The Minister of Health undertakes, currently, a legal and technical processing of these measures.  ",
             "descriptionContentOfMeasure": "The Scheme provides for the full remuneration of approximately 5,000 persons working in the afternoon and evening programmes of the Ministry of Education, Culture, Sports and Youth including: the Music Schools, the Sport Schools, the State Institutes of Further Education, the Adult Education Centers, the Optional all-day Schools, the Afternoon and Evening Programmes of the Technical Schools and the programme 'Actions for School and Social Integration'.  \r\rIt is noted that all persons employed in the above schools and programmes are working on a contract base during the academic year only and are considered as self-employed without very restricted benefits in comparison with their colleagues in the morning schools.  ",
-            "descriptionUseOfMeasure": "The beneficiaries of the schemes is approximately 5000 persons and the budget available is 3 million euros. ",
+            "descriptionUseOfMeasure": "The beneficiaries of the schemes is approximately 5,000 persons and the budget available is \u20ac3 million. ",
             "descriptionViewsOfSocialPartners": "The government has consulted the social partners - i.e. trade unions, employers' organizations and the political parties - and the measure is an outcome of agreement among them. ",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Agreed (outcome)",
@@ -15507,7 +15708,7 @@
             "regions": []
         },
         "recordId": "344",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -15605,8 +15806,8 @@
             "calc_identifier": "CY-2020-14/455",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "The service for telecare psychological support is issued by the Deputy Ministry of Research, Innovation and Digital Policy and the Mental Health Services with the announcement 15 of the Ministry of Interior of the 30 March 2020. \r\rThe aim is to provide psychological support primarily to persons infected by the COVID 19, their relatives and any other person in need.   \r\rThe services is provided by Clinical Psychologists of the Department of Special Psychology of the Mental Health Services of Cyprus. ",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The service for telecare psychological support is issued by the Deputy Ministry of Research, Innovation and Digital Policy and the Mental Health Services with the announcement 15 of the Ministry of Interior of the 30 March 2020. The aim is to provide psychological support primarily to persons infected by the COVID-19, their relatives and any other person in need.  The services is provided by Clinical Psychologists of the Department of Special Psychology of the Mental Health Services of Cyprus. ",
             "descriptionContentOfMeasure": "The Telecare Psychological Service primarily serves the needs of the persons infected by COVID 19 having a mental medical history with the aim of the regular evaluation of the psychological well being of the patient, the prevention and the handling of relapses in time, support and guidance. \r\rAdditionally, the Services addresses the need of the relatives of the infected by the COVID 19 as well as other psychologically vulnerable groups of the general public and self-isolated persons. \r\rThe Services provides appointments through audiovisual means with the beneficiaries, 7 days a weak, 12 hours daily from 7:30 am - 7:30 pm. The initial contact is performed by phone and after the evaluation and definition of the needs on online appointment is scheduled. Two particular phone lines are available by the infected persons and two other for the relatives, the self-isolated and the general public.   ",
             "descriptionUseOfMeasure": "No information is currently available. ",
             "descriptionViewsOfSocialPartners": "The establishment of the Services was a decision of the government and no prior consultation emerged. ",
@@ -15638,19 +15839,9 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "11"
-                },
-                {
                     "recordId": "42",
                     "targetGroups::name": "The COVID-19 risk group",
                     "modId": "7"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
                 }
             ],
             "funding": [
@@ -15666,7 +15857,7 @@
             "regions": []
         },
         "recordId": "346",
-        "modId": "56"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -15768,7 +15959,7 @@
                     "regions::level": 3,
                     "regions::name": "Trnavsk\u00fd kraj",
                     "regions::nutsCode": "SK021",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -15995,7 +16186,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -16025,7 +16216,7 @@
             "calc_identifier": "AT-2020-13/461",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/02/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "Border closures pose great challenges for domestic businesses. Foreign workers or seasonal workers employed in Austria are no longer allowed to enter the country, resulting in a shortage of labour both on farms and in food processing companies (e.g. meat sector). In order to ensure and maintain the food supply, all the work that is now necessary must be carried out on time. The Chambers of Agriculture, together with the Federal Ministry of Agriculture, Regions and Tourism, the Austrian Federal Economic Chamber and the machinery ring, are endeavouring to support farmers and processing enterprises in carrying out the necessary work on schedule despite the current situation and thus to continue to ensure the supply of domestic food. ",
             "descriptionContentOfMeasure": "Farmers can register their demand for urgently needed labour via an online platform; interested workers can register likewise. They are paid according to collective agreements, but also voluntary (i.e. unpaid) work is possible. Also persons on short-time work in their regular job may apply (they are allowed to have additional earnings with no upper limit). Students of certain relevant schools or university programmes can have this work credited as internships. Placement is made according to the urgency of the work to be carried out in the companies, including seasonal work. In order to be able to find the right workers for the companies, general conditions such as the type of work, the amount of work and time frame, as well as the required duration of the work on the company etc. are checked and compared with the data of the interested helpers.",
             "descriptionUseOfMeasure": "Initially, the offer has exceeded the demand by far, but farmers are not entirely content with this initiative. Farmers have called attention to the fact that they would prefer their regular seasonal workers due to their experience (in Upper Austria, it was spoken of preferably 80% foreign seasonal workers (mostly from Romania, Albania and the Ukraine) and 20% domestic workers). They have called upon the government to allow to fly in these workers (response expected in mid-April), similar to what is planned in Germany.",
@@ -16036,7 +16227,7 @@
             "isOccupation": "Yes",
             "isSector": "Yes",
             "sector_privateOrPublic": "Not specified",
-            "calc_type": "Non-binding recommendation or other text",
+            "calc_type": "Other initiative or policy",
             "statusOfRegulation": "Entirely new measure "
         },
         "portalData": {
@@ -16116,7 +16307,7 @@
             "regions": []
         },
         "recordId": "352",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -16261,7 +16452,7 @@
             "calc_creationDay": "04/10/2020",
             "calc_lastUpdate": "05/06/2020",
             "descriptionBackgroundInfo": "In order to cope with bottlenecks due to the spread of COVID-19 - especially in the areas of nursing and social care as well as in the rescue and health services - more civilian service workers are now being mobilised. First, current civil servants are extended, and secondly, former civil servants are recruited voluntarily. (The so-called 'alternative civilian service' is an alternative form of the mandatory national military service (substitute service). The regular length of ordinary alternative civilian service is nine months, with some compensation provided.) In the pre-existing Civil Service Act (\u00a78a/Abs.6), such a case has been provided for (see sources).\r",
-            "descriptionContentOfMeasure": "The length of civilian service is extended by 3 months for all those  for who it would end by the end of March 2020 (until the end of June 2020 i.e. mandatory, by legal notice). Depending on the development of the situation and as required, those who finish their civil service in April or May 2020 may also receive an extension of up to 3 months. It is planned to transfer civilian servicemen who are currently serving or will soon be serving to positions where there is special need (e.g. if a civilian servant would have an assignment for a kindergarten, but this is closed, he will be assigned to another facility instead, e.g. a retirement home). In addition, former civil servants are recruited voluntarily for full-time positions (at least 40 hours per week, overtime can be added) from May or June 2020 for a duration of two to three months.\rWhile regular civil servants who have been mandatorily extended receive their regular remuneration (\u20ac346.70) plus supplement of  \u20ac189.90 (tax free), the newly recruited voluntary former civil servants receive in addition to this a flat-rate compensation of almost \u20ac1,300 (gross). ",
+            "descriptionContentOfMeasure": "The length of civilian service is extended by 3 months for all those  for who it would end by the end of March 2020 (until the end of June 2020 i.e. mandatory, by legal notice). Depending on the development of the situation and as required, those who finish their civil service in April or May 2020 may also receive an extension of up to 3 months. It is planned to transfer civilian servicemen who are currently serving or will soon be serving to positions where there is special need (e.g. if a civilian servant would have an assignment for a kindergarten, but this is closed, he will be assigned to another facility instead, e.g. a retirement home). In addition, former civil servants are recruited voluntarily for full-time positions (at least 40 hours per week, overtime can be added) from May or June 2020 for a duration of two to three months.\r\rWhile regular civil servants who have been mandatorily extended receive their regular remuneration (\u20ac346.70) plus supplement of  \u20ac189.90 (tax free), the newly recruited voluntary former civil servants receive in addition to this a flat-rate compensation of almost \u20ac1,300 (gross). ",
             "descriptionUseOfMeasure": "The extension of the civil service for those for who it would have ended in March applies to around 1,500 persons. On 1 April 2020, around 3,500 newly recruited voluntary former civil servants started their service.",
             "descriptionViewsOfSocialPartners": "This was a unilateral initiative by the government.",
             "socialPartner_form": "Not applicable",
@@ -16324,7 +16515,7 @@
             "regions": []
         },
         "recordId": "354",
-        "modId": "59"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -16568,11 +16759,11 @@
             "calc_identifier": "AT-2020-11/470",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "When SARS-CoV-2 started to spread in Europe, Austria introduced at first border controls, and later on entry restrictions. At first, only Italy was concerned, but border closures (with the mentioned exceptions, see content of the measure) were extended to further neighbouring countries (Switzerland, Liechtenstein, Germany, Hungary and Slovenia). \rSeasonal workers (some of which already have employment permits) who are currently not in Austria are exempt from the exceptions and can thus not work in Austria. However, as agriculture is one of the supply-critical sectors in the current COVID-19 crisis, many seasonal workers, for some of whom employment permits have already been issued, are unable to enter Austria due to travel restrictions and cannot start work as planned. ",
             "descriptionContentOfMeasure": "In order to counteract the impending labour shortage, the permitted duration of employment is extended for those third-country seasonal workers who are already employed in the country and have been granted a permit and are needed for urgent work. The current maximum duration of employment for one and the same seasonal worker is extended from nine months to twelve months.\r\rOn 11 March 2020, this regulation came first into force concerning commuters entering from Italy. It was updated on 22 March to include commuters entering from Switzerland, Liechtenstein, Germany, Hungary and Slovenia. The regulation basically states that persons entering Austria from one of these countries must carry a medical certificate (in German, English, Italian or French) on their state of health and show that the molecular biological test for SARS-CoV-2 is negative. The medical certificate must not be more than four days old at the time of entry. Persons who are unable to present such a certificate shall be refused entry. Besides commuters, some other exceptions apply (for Austrian citizens, when urgent health treatments must be undergone, and for the transport of goods)",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "This was a unilateral measure by the national government. However, social partners (organised business) has negotiated with departure countries (e.g. Czechia, Hungary) on easing their rules on commuters (e.g. not losing their commuter status when they enter AT, no quarantine when they enter their home countries).",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-11_470.html",
@@ -16631,7 +16822,7 @@
             "regions": []
         },
         "recordId": "361",
-        "modId": "57"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -16720,7 +16911,7 @@
             "calc_identifier": "AT-2020-16/474",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/30/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund ('Nothilfefonds') is available, which consists of several measures (see other cases in Austria on bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis.\r\rEligible are those companies that fully meet the following conditions:\r\r*Companies that have their management or a permanent establishment in Austria\r*Companies that have to bear fixed costs from their operating activities in Austria\r*Companies that were healthy before the Corona crisis\r*Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r*Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.",
             "descriptionContentOfMeasure": "The following fixed costs of the company are eligible:\r\r* Rent of business premises\r* Insurance premiums\r* Interest expenses\r* Licence costs\r* Payments for electricity, gas and telecommunications\r* Other contractual payment obligations\r* Entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)\r* Loss of value of perishable/seasonal goods, provided that these lose at least 50% of their value during the corona measures\r\rThe fixed cost subsidy is staggered and depends on the company's loss of sales:\r\r* loss of 40 to 60%: 25% compensation of fixed costs\r* loss of 60 to 80%: 50% compensation of fixed costs\r* loss of 80 to 100%: 75%  compensation of fixed costs\r\rThe fixed-cost subsidy does not have to be reimbursed - provided that all the provisions of the guidelines are complied with. The subsidy is limited to a maximum of \u20ac90 million per company.",
             "descriptionUseOfMeasure": "Measure has not yet been implemented at the time of writing (start: 15 April 2020).",
@@ -16798,11 +16989,6 @@
                     "modId": "8"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "6"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "5"
@@ -16828,7 +17014,7 @@
             "regions": []
         },
         "recordId": "365",
-        "modId": "70"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -16934,11 +17120,11 @@
             "calc_identifier": "AT-2020-11/477",
             "dateType": "Open ended",
             "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/12/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The social insurance for self-employed (Sozialversicherungsanstalt der Selbstst\u00e4ndigen, SVS), which covers pension, health and accident insurance, provides support for those who are directly or indirectly affected by the coronavirus through illness and quarantine or who are expecting massive business losses and therefore have payment difficulties is supported.\r\r\r\r",
             "descriptionContentOfMeasure": "Those self-employed who are financially affected by measures which have been implemented and have difficulties providing the social security contributions, should contact the insurance. All insured are offered the following options: \r\r- deferral of contributions\r- payment of contributions in installments\r- reduction of the provisional contribution base\r- total or partial leniency of interest on late payments\r\rApplications for deferral and payment by installments can be submitted informally in writing by e-mail. An online form for reducing the provisional contribution base is available.\r\r",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "The administrative board includes representatives of employer organisations.",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-11_477.html",
@@ -16990,7 +17176,7 @@
             "regions": []
         },
         "recordId": "368",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -18343,7 +18529,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "48",
@@ -19125,7 +19311,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "51",
@@ -20589,7 +20775,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -21102,7 +21288,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -21224,9 +21410,9 @@
             "calc_creationDay": "04/13/2020",
             "calc_lastUpdate": "05/12/2020",
             "descriptionBackgroundInfo": "When there is a lack of employment in times of crisis, the use of holidays or time credits is a way of coping with the situation. The employee retains his or her job and has no loss of pay. The employer does need liquidity because labour costs do not decrease in the short term. However, he can release provisions and must grant correspondingly less vacation after the crisis.\rThe variant of using compensation for time off is possible if it is agreed that overtime and overtime work is not paid in money but in free time.\r\r\r\r",
-            "descriptionContentOfMeasure": "Generally, on the use of holidays, there is an obligation to agree: The use of vacation must be agreed between employer and employee, if possible in writing and documented.\rTime off in lieu must also always be agreed between the employer and employee.\r\rExceptionally, the employer can unilaterally order leave and time off if measures according to a specific COVID-19 law (COVID-19-Ma\u00dfnahmengesetz, especially VO 96/2020) lead to restrictions on entering holdings and as a result of such measures, services cannot be provided. In this case, the employer can (but does not have to) order the consumption of leave within the following framework:\r- leave entitlement from previous years in full;\r- leave entitlements from the current leave year to a maximum of two weeks;\rIn total, a maximum of 8 weeks of leave and time off in lieu can be order unilaterally by the employer.\r\rThe Civil Code of Austria (ABGB) was changed accordingly in order to allow for this crisis measure.",
+            "descriptionContentOfMeasure": "Generally, on the use of holidays, there is an obligation to agree: The use of vacation must be agreed between employer and employee, if possible in writing and documented. Time off in lieu must also always be agreed between the employer and employee.\r\rExceptionally, the employer can unilaterally order leave and time off if measures according to a specific COVID-19 law (COVID-19-Ma\u00dfnahmengesetz, especially VO 96/2020) lead to restrictions on entering holdings and as a result of such measures, services cannot be provided. In this case, the employer can (but does not have to) order the consumption of leave within the following framework: \r\r*leave entitlement from previous years in full;\r*leave entitlements from the current leave year to a maximum of two weeks;\rIn total, a maximum of 8 weeks of leave and time off in lieu can be order unilaterally by the employer.\r\rThe Civil Code of Austria (ABGB) was changed accordingly in order to allow for this crisis measure.",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "The social partners were consulted in the COVID 19 laws.",
+            "descriptionViewsOfSocialPartners": "The social partners were consulted in the COVID-19 laws.",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_542.html",
@@ -21283,7 +21469,7 @@
             "regions": []
         },
         "recordId": "433",
-        "modId": "54"
+        "modId": "56"
     },
     {
         "fieldData": {
@@ -21297,9 +21483,9 @@
             "calc_identifier": "AT-2020-15/544",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/04/2020",
-            "descriptionBackgroundInfo": "According to a decree decree by the Ministry of Health from 31 March, from 6 April 2020 onward, surfaces and devices that are regularly touched by customers must be cleaned and disinfected on a regular basis. \rThis inspired the Tyrolean based waste disposal company DAKA to use snow cannons (snow blowers which are used for producing snow in ski resorts) for disinfecting large areas like train stations or production halls. In addition, the company uses mobile nebulizers spraying disinfectants e.g. in old people's homes.",
-            "descriptionContentOfMeasure": "The waste disposal company DAKA in Hopfgarten wants to use the snow cannon to disinfect larger areas and rooms in the future. Use in production halls, stadiums, train stations, airfields or event halls is conceivable.\rFor smaller areas and spaces, the company also works with mobile nebulizers. So far, a snow cannon has been adapted accordingly. It should already be in use next week. There are five of the mobile nebulizers, some of which are already being used, for example in old people's homes.\rOn 31 March, a decree by the Ministry of Health created the basis for this unorthodox measure, said the DAKA. According to this, from 6 April  surfaces and devices that are regularly touched by customers must be cleaned and disinfected on a regular basis. 'Of course, manual wiping is the best method', DAKA project manager Matthias Zitterbart admitted in an interview, but this is 'very expensive'.\rSwiveling snow cannons loaded with hydrogen peroxide with a throw of up to fifty meters are said to bring relief. 'It can be used to disinfect large areas within a very short time', emphasized Zitterbart. For example, dosing tanks and high-pressure pumps had to be integrated into the snow cannon.\rThe mobile nebulizers are used for smaller areas, including offices or pharmacies. 'The second smallest devices work autonomously'. said the DAKA project manager. The room was accessible again ninety minutes after the disinfection process. The smallest device is also suitable for reaching corners and niches. Car interiors can also be disinfected.",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "According to a decree decree by the Ministry of Health from 31 March, from 6 April 2020 onward, surfaces and devices that are regularly touched by customers must be cleaned and disinfected on a regular basis. \r\rThis inspired the Tyrolean based waste disposal company DAKA to use snow cannons (snow blowers which are used for producing snow in ski resorts) for disinfecting large areas like train stations or production halls. In addition, the company uses mobile nebulizers spraying disinfectants e.g. in old people's homes.",
+            "descriptionContentOfMeasure": "The waste disposal company DAKA in Hopfgarten wants to use the snow cannon to disinfect larger areas and rooms in the future. Use in production halls, stadiums, train stations, airfields or event halls is conceivable. For smaller areas and spaces, the company also works with mobile nebulizers. So far, a snow cannon has been adapted accordingly. It should already be in use next week. There are five of the mobile nebulizers, some of which are already being used, for example in old people's homes.\r\rOn 31 March, a decree by the Ministry of Health created the basis for this unorthodox measure, said the DAKA. According to this, from 6 April  surfaces and devices that are regularly touched by customers must be cleaned and disinfected on a regular basis. 'Of course, manual wiping is the best method', DAKA project manager Matthias Zitterbart admitted in an interview, but this is 'very expensive'.Swiveling snow cannons loaded with hydrogen peroxide with a throw of up to fifty meters are said to bring relief. 'It can be used to disinfect large areas within a very short time', emphasized Zitterbart. For example, dosing tanks and high-pressure pumps had to be integrated into the snow cannon.\r\rThe mobile nebulizers are used for smaller areas, including offices or pharmacies. 'The second smallest devices work autonomously'. said the DAKA project manager. The room was accessible again ninety minutes after the disinfection process. The smallest device is also suitable for reaching corners and niches. Car interiors can also be disinfected.",
             "descriptionUseOfMeasure": "The adapted snow cannon is expected to be in use from mid-April onwards.",
             "descriptionViewsOfSocialPartners": "Unilateral company initiative.",
             "socialPartner_form": "Not applicable",
@@ -21364,12 +21550,12 @@
                     "regions::level": 2,
                     "regions::name": "Tirol",
                     "regions::nutsCode": "AT33",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "435",
-        "modId": "64"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -21383,11 +21569,11 @@
             "calc_identifier": "AT-2020-12/545",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "Due to the partial closure of school and kindergartens (with emergency service for those children who cannot be otherwise cared for, i.e. whose parents cannot work in home office), a special care time of up to three weeks for working parents with children up to the age of 14 and children with disabilities (no age limit) was established. In a later step, this was extended to workers with care needs for older people and can now be taken day wise. The employer's consent is needed.\r\rThe legal basis was an amendment to the employment law act \u00a7 18b Abs. 1 Arbeitsvertragsrechts-Anpassungsgesetz (AVRAG).",
-            "descriptionContentOfMeasure": "The employer's consent to the special care time is needed. The costs for the leave are shared between the state (which pays one third) and the employer (two thirds). Eligibility ends with a monthly wage of \u20ac5,370 (upper threshold).\rThe special care period is available for all those employees whose work is not necessary for the maintenance of the business and who do not have other childcare opportunities (schools and kindergartens remain open only for children of those parents whose work is necessary for the maintenance of the business).\rThe special care time is not to be offset against regular holiday entitlements or claims for time off or 'flexitime' credits. It is regarded as a 'normal' period of employment, and therefore counts towards employees' entitlements dependent on length of service.\rThe legal base is an adaptation of the Employment Law Amendment Act (AVRAG, \u00a718b/1).\r",
+            "descriptionContentOfMeasure": "The employer's consent to the special care time is needed. The costs for the leave are shared between the state (which pays one third) and the employer (two thirds). Eligibility ends with a monthly wage of \u20ac5,370 (upper threshold).\r\rThe special care period is available for all those employees whose work is not necessary for the maintenance of the business and who do not have other childcare opportunities (schools and kindergartens remain open only for children of those parents whose work is necessary for the maintenance of the business).\r\rThe special care time is not to be offset against regular holiday entitlements or claims for time off or 'flexitime' credits. It is regarded as a 'normal' period of employment, and therefore counts towards employees' entitlements dependent on length of service. The legal base is an adaptation of the Employment Law Amendment Act (AVRAG, \u00a718b/1).\r",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "The federal government and the top level social partner organisations negotiated and agreed on a crisis management fund which incorporates several measures, including e.g. the short-time work scheme or credit guarantees for businesses.",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Agreed (outcome)",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_545.html",
@@ -21451,6 +21637,11 @@
                     "recordId": "59",
                     "targetGroups::name": "All companies",
                     "modId": "6"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -21471,7 +21662,7 @@
             "regions": []
         },
         "recordId": "436",
-        "modId": "60"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -21532,7 +21723,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -21764,7 +21955,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -21863,11 +22054,11 @@
             "calc_identifier": "AT-2020-12/552",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/08/2020",
-            "descriptionBackgroundInfo": "In order to ensure the power supply despite the corona virus, the energy provider Wien Energie uses isolation stations.\r53 employees of Wien Energie volunteered to isolate themselves at company locations.\rThey are spending several weeks there, cut off from the outside world, to prevent infection with all possibilities. All workers had been medically tested before isolation. \rThese employees are to move in when no one else can. The tasks range from system control to maintenance and minor repairs. At the same time, operations at the locations continue as normal. \r\r",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "In order to ensure the power supply despite the corona virus, the energy provider Wien Energie uses isolation stations. 53 employees of Wien Energie volunteered to isolate themselves at company locations. They are spending several weeks there, cut off from the outside world, to prevent infection with all possibilities. All workers had been medically tested before isolation. \rThese employees are to move in when no one else can. The tasks range from system control to maintenance and minor repairs. At the same time, operations at the locations continue as normal. \r\r",
             "descriptionContentOfMeasure": "To make this isolation possible, residential containers were set up at power plants and waste incineration plants. In addition, provisional power plant controls were set up or conference rooms converted into dormitories, as Wien Energie wrote in the company blog . Of course, there is also a supply of food, as they say. In addition, they offer occupational psychological support.\rShift plans were adjusted according to emergency plans in the areas critical for the supply (e.g. power plants, waste incineration plants, control centers and waiting rooms). No workers who are not required for operations are allowed on the factory premises. As far as possible, work for other employees is to be provided in the home office. Precautions have been taken for possible quarantine cases. Certain areas of the plant, such as crane systems in the waste incineration plants, could be operated in part automatically. ",
             "descriptionUseOfMeasure": "So far, 53 employees of Wien Energie have themselves isolated at company grounds.",
-            "descriptionViewsOfSocialPartners": "Company initiative",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_552.html",
@@ -21908,9 +22099,9 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "11"
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "1"
                 }
             ],
             "funding": [
@@ -21937,12 +22128,12 @@
                     "regions::level": 1,
                     "regions::name": "OST\u00d6STERREICH",
                     "regions::nutsCode": "AT1",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "443",
-        "modId": "54"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -22180,7 +22371,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -22337,7 +22528,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -22577,7 +22768,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "37",
@@ -23516,7 +23707,7 @@
                     "regions::level": 3,
                     "regions::name": "Regi\u00e3o de Leiria",
                     "regions::nutsCode": "PT16F",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -23680,7 +23871,7 @@
             "calc_identifier": "AT-2020-12/576",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "With new rules and more funds for short-time work, the Austrian government is trying to keep as many people as possible in their jobs. The Public Employment Service (AMS) head Johannes Kopf still expects 'due to the developments' that 'in the coming weeks a lot of people - hopefully for only a short time - will have to register as unemployed'.\rAMS expects an increased number of people to become unemployed during the current pandemic. In order reduce personal contacts to a minimum, applications for unemployment benefit and emergency assistance can be made without a personal interview from home. This can be done online, or via the electronic system eAMS, or, if online is not possible, via telephone and subsequent mailing of the forms.",
             "descriptionContentOfMeasure": "Minister of Labour Christine Aschbacher (conservative People's Party \u00d6VP) has issued a decree stating that people no longer have to come personally to the AMS service centers to apply for unemployment benefits. This should both relieve the AMS and help to limit the spread of the virus.\rThe preferred way to submit an application is via an eAMS account, 'then a lot of the further communication is done electronically', according to AMS head Kopf. Those who do not yet have one can get one through their 'Finanzonline' account or with their Citizen Card. Those who have neither access to 'Finanzonline' nor a citizen card can apply for an electronic AMS account by email or phone. Then, however, the processing can take a few days. If waiting is not an option, unemployed can also register as unemployed using a form on the AMS website. It is also possible to report unemployment by email. The last option is to call the AMS to have the necessary forms sent to you by post.\r\rFor those who receive unemployment benefits and the entitlement period would come to an end (thus receiving the lower emergency assistance), the 'Corona crisis period' is not calculated towards this entitlement, i.e. unemployment benefits are prolonged for the duration of the crisis.",
             "descriptionUseOfMeasure": "Currently no information available.",
@@ -23715,7 +23906,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -23731,7 +23922,7 @@
             "regions": []
         },
         "recordId": "467",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -23790,7 +23981,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "38",
@@ -23816,7 +24007,7 @@
             "regions": []
         },
         "recordId": "468",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -23830,11 +24021,11 @@
             "calc_identifier": "AT-2020-14/579",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/18/2020",
-            "descriptionBackgroundInfo": "Several alleviations for tenants of rented apartments have recently been made, for those who suffer from the pandemic with income losses, disabling them from paying the monthly rent in part or fully. Measures include the prohibition of the termination of a rental contract due to such financial problems; the temporary exclusion of the enforceability of rent arrears; reliefs with regard to the extension of fixed-term residential rental contracts; and the statutory deferment of eviction for dwellings.",
-            "descriptionContentOfMeasure": "If the tenant of a flat does not pay a rent due in the period from 1 April 2020 to 30 June 2020, or does not pay it in full, because his economic capacity has been considerably impaired as a result of the COVID 19 pandemic, the landlord can neither terminate the lease nor demand its cancellation in accordance with \u00a7 1118 of the Austrian Civil Code (ABGB) solely because of this arrears in payment. The landlord may not claim the arrears of payment in court until the end of 31 December 2020 or cover them from a deposit handed over by the tenant.\rIn addition, the landlord may not legally demand payment of rent due between 1 April and 30 June 2020 until the end of 31 December 2020, nor may he/she cover it from a security deposit provided by the tenant. This is not a legal postponement of the due date, but only a temporary suspension of the enforceability of the claim.\r\rFurthermore, a fixed-term residential rental agreement subject to the Austrian Tenancy Act (Mietrechtsgesetz) that expires after 30 March 2020 and before 1 July 2020 may, notwithstanding Section 29 MRG, be extended in writing until the end of 31 December 2020 or for a shorter period.\rLast, in order to prevent people in the current situation from becoming homeless due to eviction, it should be possible to postpone the eviction of apartments at the request of the obligated party (tenant).",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "Several alleviations for tenants of rented apartments have recently been made, for those who suffer from the pandemic with income losses, disabling them from paying the monthly rent in part or fully. Measures include \r\r*the prohibition of the termination of a rental contract due to such financial problems; \r*the temporary exclusion of the enforceability of rent arrears; \r*reliefs with regard to the extension of fixed-term residential rental contracts; \r*and the statutory deferment of eviction for dwellings.",
+            "descriptionContentOfMeasure": "If the tenant of a flat does not pay a rent due in the period from 1 April 2020 to 30 June 2020, or does not pay it in full, because his economic capacity has been considerably impaired as a result of the COVID 19 pandemic, the landlord can neither terminate the lease nor demand its cancellation in accordance with \u00a7 1118 of the Austrian Civil Code (ABGB) solely because of this arrears in payment. The landlord may not claim the arrears of payment in court until the end of 31 December 2020 or cover them from a deposit handed over by the tenant.\rIn addition, the landlord may not legally demand payment of rent due between 1 April and 30 June 2020 until the end of 31 December 2020, nor may he/she cover it from a security deposit provided by the tenant. This is not a legal postponement of the due date, but only a temporary suspension of the enforceability of the claim.\r\rFurthermore, a fixed-term residential rental agreement subject to the Austrian Tenancy Act (Mietrechtsgesetz) that expires after 30 March 2020 and before 1 July 2020 may, notwithstanding Section 29 MRG, be extended in writing until the end of 31 December 2020 or for a shorter period.\r\rFinally, in order to prevent people in the current situation from becoming homeless due to eviction, it should be possible to postpone the eviction of apartments at the request of the obligated party (tenant).",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "Generally, not the social partners' main area of work (even though the Chamber of Labour consults and represents workers in that subject matter)",
+            "descriptionViewsOfSocialPartners": "Generally, not the social partners' main area of work (even though the Chamber of Labour consults and represents workers in that subject matter).",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-14_579.html",
@@ -23881,7 +24072,7 @@
             "regions": []
         },
         "recordId": "470",
-        "modId": "55"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -23895,11 +24086,11 @@
             "calc_identifier": "AT-2020-12/580",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/18/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "In the Corona crisis, not only is the fear of a breakdown in the country's power supply increasing. Many people are even more concerned with how they should pay their next electricity bill.\r\rEnergy Minister Leonore Gewessler (Green Party) and Wolfgang Urbantschitsch (Board Member of E-Control) explained why these concerns are unfounded. Even if there are payment difficulties, there will be no shutdowns on the part of the energy suppliers.",
             "descriptionContentOfMeasure": "Until further notice, in any case until May 1st, \"no one in Austria will turn off electricity, gas or heat, \" the minister and the E-Control board assured. This applies to the population, but also to micro and small companies. Energy minister Ms Gewessler said it was a quick and unbureaucratic consensus in the industry. \"This is a good and important contribution,\" said the Green politician. However, this is not a legally fixed regulation.The energy suppliers would share the risk with the network operators, said the minister responsible for energy and the environment.According to Urbantschitsch, it is also possible to arrange a deferral of payments or an installment plan with the utilities, or at most a reduction of advance payments for companies, since there is a reduction in energy consumption for company closings.\r\rChamber of Labour AK for legal regulation\rThe major energy suppliers for electricity and gas have already announced that they will not switch off during the Corona crisis. The AK also expressly welcomes this voluntary principal. \"But all energy suppliers, including small and above all local and district heating suppliers, have to be brought on board,\" says Christa Schlager , head of the economic policy department at the AK. That seems to have succeeded with Thursday's agreement.\r\rAccording to E-Control, there were around 43,000 shutdowns in electricity and around 4,000 in gas in 2018. There are no official shutdown figures for the heating sector, but one thing is certain: In Austria around 140,000 people could not afford to keep their home sufficiently warm in 2018. This is also shown by a current study of heating types by the AK. Therefore, the AK is now calling for a legal shutdown ban for electricity, gas and heat during the duration of the Corona crisis.",
             "descriptionUseOfMeasure": "Unknown.",
-            "descriptionViewsOfSocialPartners": "It seems that the Chamber of Labour was somewhat involved, even though the extent is unknown. However, their demand seems to have been taken into the sector agreement (see source).",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Unknown",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_580.html",
@@ -23936,13 +24127,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "1",
@@ -23963,7 +24148,7 @@
             "regions": []
         },
         "recordId": "471",
-        "modId": "51"
+        "modId": "56"
     },
     {
         "fieldData": {
@@ -23977,9 +24162,9 @@
             "calc_identifier": "AT-2020-15/581",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/18/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "Austria is following the example of other countries by providing relief for borrowers who suffer loss of income as a result of COVID-19.\r\rLoan agreements with consumers and microenterprises, which were entered into prior to 15 March 2020, benefit from the moratorium. Microenterprises are defined as enterprises which employ fewer than 10 persons and whose annual turnover or annual balance sheet total does not exceed EUR 2 million (see Art 2 (3) of the Annex to European Commission Recommendation 2003/361/EC). The moratorium only covers loan agreements and not other forms of financing (e.g. payment extension of purchase price).",
-            "descriptionContentOfMeasure": "For loan agreements benefiting from the moratorium (i.e. loan agreements with consumers and with microentrepreneurs entered into prior to 15 March 2020) the following applies:\r\r1. The lender's claims for repayment of capital or payment of interest due between 1 April 2020 and 30 June 2020 shall be deferred for a period of three months from the original due date.\r\r2. This deferral is subject to the condition that the respective borrower (consumer or microentrepreneur) has suffered a loss of income due to the exceptional circumstances caused by the COVID-19 pandemic, which makes it unreasonable for the borrower to continue his/her debt service.\r\r3. It is in particular unreasonable for the borrower to continue his/her debt service, if his or her reasonable maintenance or the reasonable maintenance of his or her dependants is at risk.\rThe provisions for deferring the due date of payments under consumer loans and loans to microenterprises largely follow those of German law. This currently results in the same ambiguities with regard to the start of the deferral and the borrower's obligation to provide evidence of income losses due to COVID-19.",
+            "descriptionContentOfMeasure": "For loan agreements benefiting from the moratorium (i.e. loan agreements with consumers and with microentrepreneurs entered into prior to 15 March 2020) the following applies: \r\r*The lender's claims for repayment of capital or payment of interest due between 1 April 2020 and 30 June 2020 shall be deferred for a period of three months from the original due date.\r\r*This deferral is subject to the condition that the respective borrower (consumer or microentrepreneur) has suffered a loss of income due to the exceptional circumstances caused by the COVID-19 pandemic, which makes it unreasonable for the borrower to continue his/her debt service.\r\r*It is in particular unreasonable for the borrower to continue his/her debt service, if his or her reasonable maintenance or the reasonable maintenance of his or her dependants is at risk.\rThe provisions for deferring the due date of payments under consumer loans and loans to microenterprises largely follow those of German law. This currently results in the same ambiguities with regard to the start of the deferral and the borrower's obligation to provide evidence of income losses due to COVID-19.",
             "descriptionUseOfMeasure": "Unknown as of now (measure just started).",
             "descriptionViewsOfSocialPartners": "Not the social partners' genuine field of action.",
             "socialPartner_form": "Not applicable",
@@ -24033,7 +24218,7 @@
             "regions": []
         },
         "recordId": "472",
-        "modId": "52"
+        "modId": "55"
     },
     {
         "fieldData": {
@@ -24131,11 +24316,11 @@
             "calc_identifier": "AT-2020-12/583",
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/13/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "In order to keep visits to doctors' offices to a minimum during the COVID-19 pandemic, Austria started to use electronic prescriptions on 18 March 2020. This quick initiation was possible because the country had already prepared to start electronic prescriptions in a pilot project in two political districts in the regional province in Carinthia in April 2020. However, according to the Austrian Chamber of Doctors, this measure will be discontinued again after the crisis is over. The measure is targeted especially to those who need long-term medication.\r\rIn addition to the electronic prescription, further measures for the period of the CoV pandemic were introduced, including for instance the suspension of the authorization requirement (chief physician requirement) for many medications. Furthermore, ambulance transports are free of charge until further notice; the same applies to medical aids and aids up to a total of \u20ac1,500 as well as X-ray and cross-sectional examinations. Sickness reports to doctors are currently also possible by telephone. Doctors, psychotherapists and midwives can also invoice necessary telemedical treatments (via Skype, video conference or telephone) such as a service performed in the ordination.",
             "descriptionContentOfMeasure": "The procedure of getting an electronic recipe is that the patient calls the doctor's office. The doctor issues the prescription and saves it in the patient's (pre-existing) e-medication. The information reaches the pharmacy automatically via e-medication. There, the patients can either pick up the medicine themselves or send someone.\rIn cases where e-medication is not working or is not yet working, doctors were also given the opportunity to send prescriptions to the pharmacies by fax or email. \rThe electronic prescription is primarily intended to help older people and people with previous illnesses to avoid medical practices as best they can given the spread of coronavirus in Austria. Accordingly, the measure is mainly intended for people with long-term medication.\rHowever, in principle, it is also possible that the doctor prescribes medication for acute cases. ",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "The social insurance's administrative board consists of social partner and government representatives, so they are basically involved in all decisions. In this case, the process (i.e. the pre-existing project of implementing e-recipes) was sped up due to the pandemic. No specific funds (above the ones which were set aside for this anyway) were needed.",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Negotiated",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_583.html",
@@ -24182,7 +24367,7 @@
             "regions": []
         },
         "recordId": "474",
-        "modId": "55"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -24196,11 +24381,11 @@
             "calc_identifier": "AT-2020-12/584",
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "With state restrictions on movement to curb the coronavirus, experts fear an increase in domestic violence. To counteract this, a package of measures was first presented by the government on 19 March.  The criminal prosecution of the perpetrators would be further ensured, entry and proximity bans would be further pronounced, and directions would be implemented. This would mean that the police can give those affected by domestic violence applications for an injunction against violent partners at first contact and take the completed forms with them on inspection visits a few days later. Applications can also be submitted electronically. The removal of violent offenders would also be guaranteed in quarantine areas. On 5 April, new measures where presented and figures showing a slight decrease in the number of domestic violence cases.",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "With state restrictions on movement to curb the coronavirus, experts fear an increase in domestic violence. To counteract this, a package of measures was first presented by the government on 19 March. The criminal prosecution of the perpetrators would be further ensured, entry and proximity bans would be further pronounced, and directions would be implemented. This would mean that the police can give those affected by domestic violence applications for an injunction against violent partners at first contact and take the completed forms with them on inspection visits a few days later. Applications can also be submitted electronically. The removal of violent offenders would also be guaranteed in quarantine areas. On 5 April, new measures where presented and figures showing a slight decrease in the number of domestic violence cases.",
             "descriptionContentOfMeasure": "When presenting measures in mid-March, it was emphasised that the 24-hour helpline had been increased in terms of funding and staff and that online advice for women at risk of violence was expanded. Furthermore, information brochures on the protection against violence were being published, to be distributed in supermarkets. A professional online help and advice service (\"help chat\") has been available from 19 March 2020 every day from 3 pm to 10 pm for women and girls affected by violence, in several languages (German, English, Turkish, Farsi / Dari (Persian), Russian, Bulgarian and Arabic).\r\rOn 5 April, the interior minister presented a new campaign \u2018Safe at home\u2019 (Halt der Gewalt), which is designed to help women with violent partners. He appealed to victims of domestic violence, mostly women and children, not to remain silent. Police officers would know exactly what to do in a specific case, they were \u2018trained to decide exactly that\u2019 - and also for prevention.\r\rSince the weekend, there has been extensive information and services on the subject of violence in the family on the website of the Ministry of the Interior, and additional advertisements since Sunday. The Ministry has announced \u2018Prevention Spots\u2019 for next week. The information is available in several languages.\r",
-            "descriptionUseOfMeasure": "In the first two weeks after increasing funding and staffing for the telephone helpline, the number of calls increased by over 70 percent.",
-            "descriptionViewsOfSocialPartners": "Not the genuine field of work of social partners.",
+            "descriptionUseOfMeasure": "In the first two weeks after increasing funding and staffing for the telephone helpline, the number of calls increased by over 70%.",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_584.html",
@@ -24278,11 +24463,11 @@
             "regions": []
         },
         "recordId": "475",
-        "modId": "62"
+        "modId": "64"
     },
     {
         "fieldData": {
-            "title": "Covid \u20ac100 million special fund for 24-hour nursing care",
+            "title": "COVID \u20ac100 million special fund for 24-hour nursing care",
             "title_nationalLanguage": "Covid-100 Millionen \u20ac Sonderfonds f\u00fcr Pflege",
             "d_startDate": "03/24/2020",
             "d_endDate": "",
@@ -24293,10 +24478,10 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
             "calc_lastUpdate": "05/02/2020",
-            "descriptionBackgroundInfo": "In Austria, around 33,000 persons in need of long-term care rely on personal 24-hour care workers (most often two carers per person to be cared for, which alternate in biweekly shifts), of which the vast majority (over 98%) are from abroad (mostly from Romania and Slovakia). Due to travel bans, maintaining this care has become a major problem. But also those who are cared for by family members may encounter capacity problems, as well as those in older people's homes or care homes, when staff get sick or are in quarantine.\rThus, the government has announced to provide a specific Covid-Fund worth \u20ac100 million for the 460,000 persons in need of care, to be distributed among Austria's nine federal states (as nursing care lies within their competencies). It lies within the regional states' responsibility on how to invest this money. For example, some federal states have made exceptions to travel bans for care workers from the above mentioned countries.",
-            "descriptionContentOfMeasure": "The implementation of the special funds from the 100 million \u20ac fund for those in need of long-term care will is left to the regional states. \rThe money is to flow into the expansion of hotlines, more staff and spatial resources. According to the Minister of Health, it would not be possible for the existing care situation to be maintained everywhere. The goal would be to\u201c create resources so that nobody stays alone \u201d. The federal government will make the capacities available to the states that have been freed up by the closure of the spa and nursing homes. \rIn addition, civilian servants (Zivildiener) are used to relieve the personnel situation (see separate entry AT-2020-11/463 in this database), even if they are to be used for basic care only. At the same time, civilian servants who were currently working in federal institutions such as museums would be assigned to organisations in need of support, e.g. in the nursing area. Institutions and people who need support would have to report their need for civil servants to the respective regional office of the Red Cross.\r",
-            "descriptionUseOfMeasure": "No specific information on costs and investments are available",
-            "descriptionViewsOfSocialPartners": "not their genuine field of work",
+            "descriptionBackgroundInfo": "In Austria, around 33,000 persons in need of long-term care rely on personal 24-hour care workers (most often two carers per person to be cared for, which alternate in biweekly shifts), of which the vast majority (over 98%) are from abroad (mostly from Romania and Slovakia). Due to travel bans, maintaining this care has become a major problem. But also those who are cared for by family members may encounter capacity problems, as well as those in older people's homes or care homes, when staff get sick or are in quarantine.\r\rThus, the government has announced to provide a specific COVID-Fund worth \u20ac100 million for the 460,000 persons in need of care, to be distributed among Austria's nine federal states (as nursing care lies within their competencies). It lies within the regional states' responsibility on how to invest this money. For example, some federal states have made exceptions to travel bans for care workers from the above mentioned countries.",
+            "descriptionContentOfMeasure": "The implementation of the special funds from the 100 million \u20ac fund for those in need of long-term care will is left to the regional states. The money is to flow into the expansion of hotlines, more staff and spatial resources. According to the Minister of Health, it would not be possible for the existing care situation to be maintained everywhere. The goal would be to\u201c create resources so that nobody stays alone \u201d. The federal government will make the capacities available to the states that have been freed up by the closure of the spa and nursing homes. \r\rIn addition, civilian servants (Zivildiener) are used to relieve the personnel situation (see separate entry AT-2020-11/463 in this database), even if they are to be used for basic care only. At the same time, civilian servants who were currently working in federal institutions such as museums would be assigned to organisations in need of support, e.g. in the nursing area. Institutions and people who need support would have to report their need for civil servants to the respective regional office of the Red Cross.\r",
+            "descriptionUseOfMeasure": "No specific information on costs and investments are available.",
+            "descriptionViewsOfSocialPartners": "Not their genuine field of work.",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_585.html",
@@ -24393,7 +24578,7 @@
             "regions": []
         },
         "recordId": "476",
-        "modId": "55"
+        "modId": "56"
     },
     {
         "fieldData": {
@@ -24544,9 +24729,9 @@
             "calc_identifier": "AT-2020-13/588",
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/02/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The Austrian government did not want to halt construction work in times of the pandemic, so the social partners in the construction sector worked out, in cooperation with the labour inspectorate, instructions on how to protect workers against the Coronavirus in the construction industry. This resulted in a guide that was published on 26 March 2020. It applies to all workers working on construction sites. The set of instructions complements the general COVID-19 protective measures (i.e. distance of at least one meter to each other; wash hands thoroughly; do not touch your face; cough in the bent elbows or sneeze in a handkerchief, which is then immediately disposed of) - see cases AT-2020-12/590 and AT-2020-12/589 in this database.",
-            "descriptionContentOfMeasure": "To comply with occupational hygiene on the construction site, sanitary measures must be taken in accordance with Section 34 and Section 35 of the Construction Worker Protection Ordinance (BauV). \rAdditional measures in the areas industrial hygiene; organisational measures; work equipment; risk groups; minimization obligation during transport; dormitories; and coordination of work must also be implemented:\r\rINDUSTRIAL HYGIENE:\r- provision of disinfectants and regular disinfection of the sanitary and social facilities on the construction site in short cleaning intervals \r- when using vehicles, construction machinery or tools, disinfection must be carried out by other personnel before use;\r- if disinfection is not possible in individual cases, gloves can be used as an alternative\r\rORGANISATIONAL MEASURES:\r- staggering in terms of time or place to maintain the necessary distance when changing clothes, during breaks \r- plan work processes according to the technical possibilities so that the number of employees working at one location at the same time is as small as possible.\r\rWORK EQUIPMENT:\r-  if the protective distance of at least one meter cannot be maintained workers  must have mouth-nose protection or a full visor\r\rMINIMISATION OBLIGATION DURING TRANSPORT:\r- the number of employees must be minimised, taking into account the necessary minimum distance of one meter\r\rDORMITORIES\r- must not be occupied by more than one person",
+            "descriptionContentOfMeasure": "To comply with occupational hygiene on the construction site, sanitary measures must be taken in accordance with Section 34 and Section 35 of the Construction Worker Protection Ordinance (BauV). \rAdditional measures in the areas industrial hygiene; organisational measures; work equipment; risk groups; minimization obligation during transport; dormitories; and coordination of work must also be implemented:\r\r**Industrial hygiene** \r*provision of disinfectants and regular disinfection of the sanitary and social facilities on the construction site in short cleaning intervals \r*when using vehicles, construction machinery or tools, disinfection must be carried out by other personnel before use;\r*if disinfection is not possible in individual cases, gloves can be used as an alternative\r\r**Organisational measures**\r*staggering in terms of time or place to maintain the necessary distance when changing clothes, during breaks \r*plan work processes according to the technical possibilities so that the number of employees working at one location at the same time is as small as possible.\r\r**Work equipment**\r*if the protective distance of at least one meter cannot be maintained workers  must have mouth-nose protection or a full visor\r\r**Transport** \r*the number of employees must be minimised, taking into account the necessary minimum distance of one meter\r\r**Dormitories** \r*must not be occupied by more than one person",
             "descriptionUseOfMeasure": "The measure has to be applied on all construction sites.",
             "descriptionViewsOfSocialPartners": "The sectoral social partners in the construction industry developed this guide in cooperation with the labour inspectorate.",
             "socialPartner_form": "Direct consultation",
@@ -24555,7 +24740,7 @@
             "isOccupation": "Yes",
             "isSector": "Yes",
             "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Tripartite agreement",
+            "calc_type": "Non-binding recommendation or other text",
             "statusOfRegulation": "New aspects included into existing measure"
         },
         "portalData": {
@@ -24642,7 +24827,7 @@
             "regions": []
         },
         "recordId": "479",
-        "modId": "57"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -24656,11 +24841,11 @@
             "calc_identifier": "AT-2020-12/589",
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The Ordinance of the Federal Minister for Social Affairs, Health, Nursing and Consumer Protection in accordance with Section 2 No. 1 of the COVID-19 Measures Act (see sources), formulates the prohibition of entering public places in order to prevent the spread of Covid-19. One of the exceptions to this prohibition is when it is required for professional purposes. Specific preventive measures in such cases are to be taken.",
             "descriptionContentOfMeasure": "The prohibition to enter public places does not apply (among few other reasons) if it is required for professional purposes. In such a case, it is to be ensured that a distance of at least one meter can be maintained between people at the place of professional activity, unless the risk of infection can be minimized by taking appropriate protective measures. The mandatory wearing of a mechanical protective device that covers the mouth and nose area as a barrier against droplet infection in areas where this is not mandatory due to other legal provisions is only permitted if the employer and employee agree. It should be ensured that a professional activity should preferably take place outside the workplace, if this is possible and employers and employees agree on this.",
             "descriptionUseOfMeasure": "The protective measures are widely adhered to.",
-            "descriptionViewsOfSocialPartners": "involvement  of social partners is unknown.",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Unknown",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_589.html",
@@ -24701,11 +24886,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "11"
-                },
-                {
                     "recordId": "59",
                     "targetGroups::name": "All companies",
                     "modId": "6"
@@ -24724,7 +24904,7 @@
             "regions": []
         },
         "recordId": "480",
-        "modId": "54"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -24742,7 +24922,7 @@
             "descriptionBackgroundInfo": "The Ordinance of the Federal Minister for Social Affairs, Health, Nursing and Consumer Protection in accordance with Section 2 No. 1 of the COVID-19 Measures Act (see sources, expired on 30 April 2020), formulates the prohibition of entering public places in order to prevent the spread of COVID-19. One of the exceptions to this prohibition is when it is required for professional purposes. However, the ordinance states that it should be ensured that a professional activity should preferably take place outside the workplace, if this is possible and employers and employees agree on this.",
             "descriptionContentOfMeasure": "The ordinance states that it should be ensured that a professional activity should preferably take place outside the workplace, if this is possible and employers and employees agree on this. \rFurthermore, accident insurance coverage of home office was achieved. The retroactively applicable regulation states that accidents at work are also accidents that occur at the place of residence of the insured person (home office) in a temporal and causal connection with the employment that forms the basis of the insurance. This makes it clear that if an accident occurs in temporal or causal connection with the activity, it is covered at the respective place of residence. This applies retroactively to all accidents that have occurred in the home office since 8 March 2020. Accidents on the way to or from the home office are also covered. ",
             "descriptionUseOfMeasure": "Currently unknown.",
-            "descriptionViewsOfSocialPartners": "Ordinance by the federal government",
+            "descriptionViewsOfSocialPartners": "Ordinance by the federal government.",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_590.html",
@@ -24794,7 +24974,7 @@
             "regions": []
         },
         "recordId": "481",
-        "modId": "59"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -25391,7 +25571,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -26927,9 +27107,9 @@
             "calc_creationDay": "04/15/2020",
             "calc_lastUpdate": "05/11/2020",
             "descriptionBackgroundInfo": "Ahead of the closure of schools and kindergartens, unions in Austria demanded changes to shop opening hours. They requested that opening hours should be limited to 8:30 a.m. to 6:00 p.m. for the duration of the school closings for retail shops, as the measures would put many of the 400,000 domestic retail employees in a bind and demanded that the opening times in the shops .\r\rInitialy, the employers organisation (WK\u00d6) had rejected the union's demand for a temporary and significant reduction in working hours. 'The trade is fundamentally against any legal shortening of the opening times' said WK\u00d6 trade chairman Peter Buchm\u00fcller. The food trade in particular is an important infrastructure for maintaining the security of supply for the entire population and is 'well equipped'. \r\rDue to the recent measures by the federal government, the shopping behavior of Austrians has changed. Social partners notice that customers shop less often, but buy more. The customer frequency decreases at a later hour. \r\rTherefore, the commercial social partners have agreed to adjust the opening hours accordingly. In a joint protection package for employees and apprentices in the Austrian trade, we have agreed that the shops will be open from Monday, March 23, 2020, from 7:40 a.m. until 7:00 p.m. at the earliest.\r\rOn 23 March 2020, social partners agreed on a package of measures to protect retail employees.",
-            "descriptionContentOfMeasure": "The social partner agreement finally foresees that retail shops will be open until 7 pm.\r\rFurther protective measures include that \r- pregnant employees will be exempted from work\r- employees belonging to the COVID-19 risk group shall - if possible - be working in areas without client contact.\r- a tax free treatment of Corona related supplements or rewards; Social parnters appeal to the Federal government to consider this.\r\rInitiative of the social partners for uniform standards for the protection of employees in the workplace. To protect employees, social partners recommend that retailers implement the following measures as quickly as possible:\r\r- Plexiglass panes (\"breath protection\") and spacers at all checkouts and counters.\r- Gloves and hand disinfectants for all employees and apprentices (as soon as available again)\r- Regular disinfection of checkout workplaces, break and lounge rooms and the toilet facilities due to shorter cleaning intervals\r- Floor markings at all checkouts and counters to ensure the distance between customers and an orderly process in the store.\r- No scanning of customer cards by employees\r- Orderly access to all shops\r- When there is a particularly high number of customers at peak times, retailers should ensure that not too many customers are admitted at the same time.\r- And to provide increased information of customers.\r",
+            "descriptionContentOfMeasure": "The social partner agreement finally foresees that retail shops will be open until 7 pm.\r\rFurther protective measures include that  \r*pregnant employees will be exempted from work\r*employees belonging to the COVID-19 risk group shall - if possible - be working in areas without client contact\r*a tax free treatment of Corona related supplements or rewards; \r\rSocial partners appeal to the Federal government to consider this.\r\rInitiative of the social partners for uniform standards for the protection of employees in the workplace. To protect employees, social partners recommend that retailers implement the following measures as quickly as possible: \r\r*Plexiglass panes (\"breath protection\") and spacers at all checkouts and counters.\r*Gloves and hand disinfectants for all employees and apprentices (as soon as available again)\r*Regular disinfection of checkout workplaces, break and lounge rooms and the toilet facilities due to shorter cleaning intervals\r*Floor markings at all checkouts and counters to ensure the distance between customers and an orderly process in the store.\r*No scanning of customer cards by employees\r*Orderly access to all shops\r*When there is a particularly high number of customers at peak times, retailers should ensure that not too many customers are admitted at the same time.\r*And to provide increased information of customers.\r",
             "descriptionUseOfMeasure": "Currently unknown.",
-            "descriptionViewsOfSocialPartners": "This is an 'agreement' between the relevant social partners related to the retail sector (sections within the WKO and the OGB).\r\rThe employers organisation (Handelsverband) welcomed the innovations and recommended another protective measure: The association proposed to temporarily raise the limit for contactless payment transactions during the crisis. A temporary increase in the NFC limit without a PIN to, for example, 50 euros would significantly reduce the risk of infection both for the 110,000 employees in the food trade and for consumers. The employers regards only the restriction of the opening times as being ambivalent with regard to the tense labor market, but understands if it relieves the existing staff of the grocer.",
+            "descriptionViewsOfSocialPartners": "This is an 'agreement' between the relevant social partners related to the retail sector (sections within the WKO and the OGB).\r\rThe employers organisation (Handelsverband) welcomed the innovations and recommended another protective measure: The association proposed to temporarily raise the limit for contactless payment transactions during the crisis. A temporary increase in the NFC limit without a PIN to, for example, \u20ac50 would significantly reduce the risk of infection both for the 110,000 employees in the food trade and for consumers. The employers regards only the restriction of the opening times as being ambivalent with regard to the tense labor market, but understands if it relieves the existing staff of the grocer.",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Agreed (outcome)",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_628.html",
@@ -27006,7 +27186,7 @@
             "regions": []
         },
         "recordId": "519",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -27155,10 +27335,10 @@
             "calc_identifier": "DK-2020-10/630",
             "dateType": "Temporary",
             "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/02/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "Danish exporters under pressure from the Corona Crisis can now turn to EKF Denmark\u00b4s Export Credit Agency for assistance. The assistance will be offered by way of two specific initiatives aimed at exporters: one, geared to companies with liquidity problems; the second, designed to ensure that the companies can secure insurance for their export orders from private trade credit insurance companies. \r\rIn extension of the many interventions from Denmark's political leaders to support Danish business and industry, EKF's two initiatives primarily target businesses engaged in export and internationalisation, who otherwise risk their export orders being delayed or cancelled outright.",
             "descriptionContentOfMeasure": "EKF Denmark\u00b4s Export Credit Agency launches two initiatives to assist Danish exporters under pressure from the Corona Crisis.\r\rThe first initiative, a Liquidity Guarantee, will support the many Danish exporters affected by liquidity problems in that their earnings decrease while they still have to meet supplier and payroll costs. This product offers improved conditions during the crisis.\r\rThe second initiative, which will extend EKF's existing reinsurance scheme to OECD countries, is intended to ensure that the Coronavirus Crisis does not deter private trade credit insurance companies from underwriting Danish exporters' export orders, as was the case during the financial crisis.",
-            "descriptionUseOfMeasure": "Unknown",
+            "descriptionUseOfMeasure": "Unknown.",
             "descriptionViewsOfSocialPartners": "No involvement",
             "socialPartner_form": "No involvement",
             "socialPartner_role": "No involvement",
@@ -27205,7 +27385,7 @@
             "regions": []
         },
         "recordId": "521",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -27221,7 +27401,7 @@
             "calc_creationDay": "04/15/2020",
             "calc_lastUpdate": "05/11/2020",
             "descriptionBackgroundInfo": "'There are very specific measures for the arts and culture to cover the special features of the cultural scene. But of course artists also have access to the entire range of support. We want to prevent people from losing their jobs, their income and at all costs everyday life can no longer afford. Nobody should be left behind ' explains State Secretary for Art and Culture Ulrike Lunacek on the unprecedented situation, which is very challenging for the entire art and culture business.\r\rThe federal government's mix of measures to combat the effects of COVID-19 includes a range of support for the cultural sector. ",
-            "descriptionContentOfMeasure": "An overview of measures for artists is available on the Federal government's page:\rhttps://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html\r\rIn addition to the general support measures set by government (e.g. Corona short time work: AT-2020-12/229; or the hardship fund for selfemployed AT-2020-12/213), the page also lists specific funds which are only available for artists.\r\rThis includes, for instance:\r\r- COVID-19 fund for artists and intermediaries ('Kulturvermittler');\r- all artists who are not eligible to apply the hardship fund of the Austrian Chamber of Commerce can bring an application to the KSVF (Artist Social Insurance Fund) from 30 March 2020. \r\rThe support is intended to compensate for the loss of income caused by closings and cancellations. \r\rThe COVID 19 fund is endowed with up to \u20ac5 million and is intended to ensure rapid aid. In addition to artists, cultural mediators can now apply for this grant. The amount paid out by the KSVF corresponds to that of the hardship fund. A total of a maximum of \u20ac6,000 will be paid out - in the first phase up to \u20ac1,000 euros, in the second phase up to \u20ac2,000 euros per month for a maximum of three months.\r\rA separate service page has been set up for loss of income due to the Corona measures: KSVF service fund.\r\rIndividual funds run by copyright collecting societies (e.g. music, visual arts, film-making, etc.). Seven dedicated funds are also listed on the webpage.\r\rIn addition to the state instruments for compensating artists' loss of income, there is now also a private initiative. To help artists in the current crisis, foundations have joined together to form the \"Foundations Help Artists\" initiative and are supported by well-known people.\r\rWork grants from the City of Vienna due to COVID-19: Since the end of March, freelance artists and freelance scientists with their main residence in Vienna have been able to apply for one-time work grants of up to \u20ac3,000. In this crisis situation, there should be the opportunity to continue to pursue artistic and scientific activities (project development, reading, exhibition and lecture preparation and the like).",
+            "descriptionContentOfMeasure": "An overview of measures for artists is available on the [Federal government's page:](https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html)\r\rIn addition to the general support measures set by government (e.g. Corona short time work: AT-2020-12/229; or the hardship fund for selfemployed AT-2020-12/213), the page also lists specific funds which are only available for artists.\r\rThis includes, for instance:\r\r*COVID-19 fund for artists and intermediaries ('Kulturvermittler');\r*all artists who are not eligible to apply the hardship fund of the Austrian Chamber of Commerce can bring an application to the KSVF (Artist Social Insurance Fund) from 30 March 2020. \r\rThe support is intended to compensate for the loss of income caused by closings and cancellations. \r\rThe COVID 19 fund is endowed with up to \u20ac5 million and is intended to ensure rapid aid. In addition to artists, cultural mediators can now apply for this grant. The amount paid out by the KSVF corresponds to that of the hardship fund. A total of a maximum of \u20ac6,000 will be paid out \r\r*in the first phase up to \u20ac1,000 euros, \r*in the second phase up to \u20ac2,000 euros per month for a maximum of three months.\r\rA separate service page has been set up for loss of income due to the Corona measures: KSVF service fund.\r\rIndividual funds run by copyright collecting societies (e.g. music, visual arts, film-making, etc.). Seven dedicated funds are also listed on the webpage.\r\rIn addition to the state instruments for compensating artists' loss of income, there is now also a private initiative. To help artists in the current crisis, foundations have joined together to form the \"Foundations Help Artists\" initiative and are supported by well-known people.\r\rWork grants from the City of Vienna due to COVID-19: Since the end of March, freelance artists and freelance scientists with their main residence in Vienna have been able to apply for one-time work grants of up to \u20ac3,000. In this crisis situation, there should be the opportunity to continue to pursue artistic and scientific activities (project development, reading, exhibition and lecture preparation and the like).",
             "descriptionUseOfMeasure": "Not available yet.",
             "descriptionViewsOfSocialPartners": "Unknown.",
             "socialPartner_form": "Unknown",
@@ -27332,7 +27512,7 @@
             "regions": []
         },
         "recordId": "522",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -27433,9 +27613,9 @@
             "calc_identifier": "DK-2020-10/634",
             "dateType": "Temporary",
             "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/02/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "Increased access to unemployment benefits and sickness benefits due to COVID-19: In order to mitigate the negative consequences that the spread of COVID-19 can have on unemployed and sick pay recipients, the government and all the parties of the Folketing agree to provide easier conditions for unemployed and sick pay recipients in the coming temporary period. \r\rThe legal references are \"LOV nr 274 af 26/03/2020\" and \"LOV nr 275 af 26/03/2020\". ",
-            "descriptionContentOfMeasure": "For unemployment benefit recipients: The period from March 1 to May 31 is not included in the unemployed seniority. It will be a condition that the members be a member of the a-box during the period.\r\rFor sickness benefit recipients: Persons who have received sickness benefit for more than 22 weeks during the period from March 9 to June 9, in the nine preceding calendar months, i.e. when the reassessment date and cannot extend the payment of sickness benefit in accordance with the existing extension rules, the right to sickness benefit will be extended for three months. \r\rSuspension of G-days: Employer's payment of unemployment benefit (G-days) to employees who are covered by a division of work or returned home is suspended. ",
+            "descriptionContentOfMeasure": "For unemployment benefit recipients: The period from 1 March to 31 May is not included in the unemployed seniority. It will be a condition that the members be a member of the a-box during the period.\r\rFor sickness benefit recipients: Persons who have received sickness benefit for more than 22 weeks during the period from March 9 to June 9, in the nine preceding calendar months, i.e. when the reassessment date and cannot extend the payment of sickness benefit in accordance with the existing extension rules, the right to sickness benefit will be extended for three months. \r\rSuspension of G-days: Employer's payment of unemployment benefit (G-days) to employees who are covered by a division of work or returned home is suspended. ",
             "descriptionUseOfMeasure": "Unknown",
             "descriptionViewsOfSocialPartners": "Unknown",
             "socialPartner_form": "No involvement",
@@ -27482,7 +27662,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -27498,7 +27678,7 @@
             "regions": []
         },
         "recordId": "525",
-        "modId": "55"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -28588,7 +28768,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -29158,7 +29338,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "48",
@@ -29397,7 +29577,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -30634,7 +30814,7 @@
                     "regions::level": 1,
                     "regions::name": "ATTIK\u0397 (ATTIKI)",
                     "regions::nutsCode": "EL3",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -30881,7 +31061,7 @@
                     "regions::level": 1,
                     "regions::name": "ATTIK\u0397 (ATTIKI)",
                     "regions::nutsCode": "EL3",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -31379,7 +31559,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -31461,7 +31641,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -31538,7 +31718,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -31871,7 +32051,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "37",
@@ -31956,7 +32136,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "66",
@@ -32026,7 +32206,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -32091,7 +32271,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -32168,7 +32348,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "39",
@@ -32842,7 +33022,7 @@
             "calc_creationDay": "04/16/2020",
             "calc_lastUpdate": "05/08/2020",
             "descriptionBackgroundInfo": "In the corona crisis, the city of Vienna is committed to keeping the city's economy going. This measure is addressed at the more than 60,000 Viennese micro, small and medium-sized companies which are currently particularly dependent on support, for example when it comes to the necessary switch to a home office. Support is provided via the Vienna business agency (Wirtschaftsagentur) in collaboration with the Vienna Economic Chamber (WKW). ",
-            "descriptionContentOfMeasure": "The funding program supports Viennese companies to set up teleworking stations and to create stable communication between teleworking stations and the company location or locations. These include:\r\r- Advisory measures by third parties \r- investment measures for IT technical facilities\r- Consulting service for hardware and software equipment of the teleworking system, IT hardware and software\r\rIt is targeted at small and medium-sized companies as well as micro-enterprises from Vienna\r\rSubmission: Continually online with the online funding application; retrospectively from 1 March 2020. The applications are assessed by experts from the Vienna Business Agency. The funding rate is 75% and up to \u20ac10,000 per project.\r\r",
+            "descriptionContentOfMeasure": "The funding program supports Viennese companies to set up teleworking stations and to create stable communication between teleworking stations and the company location or locations. These include: \r\r*Advisory measures by third parties \r*investment measures for IT technical facilities\r*Consulting service for hardware and software equipment of the teleworking system, IT hardware and software\r\rIt is targeted at small and medium-sized companies as well as micro-enterprises from Vienna\r\rSubmission: Continually online with the online funding application; retrospectively from 1 March 2020. The applications are assessed by experts from the Vienna Business Agency. The funding rate is 75% and up to \u20ac10,000 per project.\r\r",
             "descriptionUseOfMeasure": "The uptake was substantial. In the first week of funding, 700 applications were received by the Vienna Business Agency. The originally envisaged funds of \u20ac2 million were reported to have been exhausted and further tripled.",
             "descriptionViewsOfSocialPartners": "The regional employers organisation Vienna Chamber of Commerce cooperated.",
             "socialPartner_form": "Other",
@@ -32924,12 +33104,12 @@
                     "regions::level": 2,
                     "regions::name": "Wien",
                     "regions::nutsCode": "AT13",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "622",
-        "modId": "60"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -33473,7 +33653,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -33589,7 +33769,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "59",
@@ -33794,7 +33974,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -34421,7 +34601,7 @@
                     "regions::level": 1,
                     "regions::name": "BADEN-W\u00dcRTTEMBERG",
                     "regions::nutsCode": "DE1",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -34500,12 +34680,12 @@
                     "regions::level": 2,
                     "regions::name": "Ober\u00f6sterreich",
                     "regions::nutsCode": "AT31",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "647",
-        "modId": "49"
+        "modId": "53"
     },
     {
         "fieldData": {
@@ -35699,7 +35879,7 @@
                     "regions::level": 1,
                     "regions::name": "BOURGOGNE-FRANCHE-COMT\u00c9",
                     "regions::nutsCode": "FRC",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -37013,7 +37193,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -37491,11 +37671,6 @@
                     "modId": "7"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "6"
-                },
-                {
                     "recordId": "62",
                     "targetGroups::name": "SMEs",
                     "modId": "5"
@@ -37519,7 +37694,7 @@
             "regions": []
         },
         "recordId": "699",
-        "modId": "42"
+        "modId": "44"
     },
     {
         "fieldData": {
@@ -37624,12 +37799,12 @@
                     "regions::level": 2,
                     "regions::name": "Steiermark",
                     "regions::nutsCode": "AT22",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "700",
-        "modId": "51"
+        "modId": "52"
     },
     {
         "fieldData": {
@@ -38986,11 +39161,11 @@
             "calc_identifier": "AT-2020-10/818",
             "dateType": "Temporary",
             "calc_creationDay": "05/06/2020",
-            "calc_lastUpdate": "05/06/2020",
+            "calc_lastUpdate": "06/10/2020",
             "descriptionBackgroundInfo": "The Austrian labour law has clear definitions of daily maximum working time, duration of extended service hours, maximum number of extended service hours, and maximum weekly working hours in individual weeks (Arbeitsruhegesetz, ARG). These partly stem from EU rules on driving times and rest periods for the transport sector, but also affect working hours of health care staff in hospitals. The law defines exceptions to avert an immediate danger to the safety of life or human health or in the event of an emergency. In this context, the Federal Ministry for Labour, Family and Youth (BMAFJ) issued decrees clarifying exceptions to these rules.",
             "descriptionContentOfMeasure": "The Federal Ministry for Labour, Family and Youth (BMAFJ) issued several decrees to clarify on occupations which qualify as 'exceptional cases' according to the law. \r\rIn a decree from 4 March 2020 it is defined that hospitals are an 'exceptional case' when they treat patients or perform tests in the context of COVID-19 and when other organisational measures (such as the purchase of additional test equipment and the inclusion of additional qualified personnel) are not possible on short notice. While rules on the daily maximum working time, duration of extended service hours, maximum number of extended service hours, and maximum weekly working hours in individual weeks will not apply in these cases, the average weekly working time can only be increased with written approval by the employee.\r\rIn a decree from 16 April 2020, and applicable as of 11 April, it was also clarified that rules on driving and rest periods stemming from (EC) No 561/2006 will be adjusted. Daily driving time has been increased to 11 hours, weekly driving time to 60 hours, and the sum of driving time in two consecutive weeks to 100 hours. These changes have been approved by the European Commission.\r",
             "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionViewsOfSocialPartners": "Social partners like the Austrian Economic Chamber (WK\u00d6) have been informed and have themselves issued information, such as https://www.wko.at/branchen/transport-verkehr/gueterbefoerderungsgewerbe/infos-zu-corona-fuer-das-gueterbefoerderungewerbe.html. ",
+            "descriptionViewsOfSocialPartners": "Social partners like the Austrian Economic Chamber (WK\u00d6) have been informed and have themselves [issued information](https://www.wko.at/branchen/transport-verkehr/gueterbefoerderungsgewerbe/infos-zu-corona-fuer-das-gueterbefoerderungewerbe.html).",
             "socialPartner_form": "No involvement",
             "socialPartner_role": "Informed",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-10_818.html",
@@ -39078,7 +39253,7 @@
             "regions": []
         },
         "recordId": "728",
-        "modId": "61"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -39753,7 +39928,7 @@
             "regions": []
         },
         "recordId": "738",
-        "modId": "35"
+        "modId": "37"
     },
     {
         "fieldData": {
@@ -40506,7 +40681,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -40667,7 +40842,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 }
             ],
             "funding": [
@@ -40831,7 +41006,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                     "regions::nutsCode": "BE1",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1829",
@@ -40839,7 +41014,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -40928,7 +41103,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                     "regions::nutsCode": "BE1",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1829",
@@ -40936,7 +41111,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -41004,7 +41179,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "51",
@@ -41029,7 +41204,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                     "regions::nutsCode": "BE1",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1829",
@@ -41037,7 +41212,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -41096,11 +41271,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "8"
-                },
-                {
                     "recordId": "60",
                     "targetGroups::name": "Sector specific set of companies",
                     "modId": "5"
@@ -41130,12 +41300,12 @@
                     "regions::level": 2,
                     "regions::name": "Wien",
                     "regions::nutsCode": "AT13",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "761",
-        "modId": "32"
+        "modId": "39"
     },
     {
         "fieldData": {
@@ -41225,7 +41395,7 @@
                     "regions::level": 1,
                     "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                     "regions::nutsCode": "BE1",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "1829",
@@ -41233,7 +41403,7 @@
                     "regions::level": 1,
                     "regions::name": "VLAAMS GEWEST",
                     "regions::nutsCode": "BE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -41446,7 +41616,7 @@
                     "regions::level": 1,
                     "regions::name": "BAYERN",
                     "regions::nutsCode": "DE2",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
@@ -41469,7 +41639,7 @@
             "descriptionBackgroundInfo": "As one of the first emergency measures, the Austrian government had opened the possibility for companies in essential services to request support from the Austrian armed forces and has activated parts of the military reserve (Miliz) and the civilian service (see case AT-2020-14/463). The costs for the deployment of armed forces and civil servants are born by the company.\r\rBy mid May at least 79 employees of one major logistical center of the Austrian Post in Hagenbrunn, Lower Austria, have been tested positive for coronavirus and 30% of employees were on sick-leave. Another case of outbreak concerns a postal distribution center in Inzersdorf, Vienna. In both cases, contract tracing showed a link to the deployment of workers from a temporary work agency - some of which had been brought in shared buses to their workplace. \r\r",
             "descriptionContentOfMeasure": "Management from the Post had therefore requested help from the armed forces. \r\rThe site was first disinfected by specialists from the Austrian armed forces team. About 280 soldiers and civilian servants will be deployed to replace the workforce for about two weeks in the sorting of the parcels and loading of truck in the Hagenbrunn center. \r\r250,000 parcels have piled up in the two logistics centers in the meantime.\r\rVienna City Councilor Peter Hacker, responsible for public health, confirmed the city of Vienna will take a closer look at the subject of temporary agency work and precarious employment in Vienna. In order to ensure continuity of business, management of the Post requested support. \r",
             "descriptionUseOfMeasure": "The federal army also took stock after the two-week deployment in Hagenbrunn on Saturday: the soldiers had unloaded and loaded around 1.5 million parcels from containers since May 16 and prepared them for further delivery for the mail delivery staff. 29,000 working hours were worked. Up to 330 soldiers and civil servants from the armed forces base as well as soldiers from the NBC defense were on duty day and night and worked in three shifts. Out of a total of 29,000 hours, around 3,700 were carried out by the NBC defense force to protect logisticians.",
-            "descriptionViewsOfSocialPartners": "The company level trade union Post and Telecommunications Services Union (GPF) criticised the - in their view too extended - use of temporary agency workers and argued that the post should seek to resort to permanent workers in non-peak times. Both social partners representing temporary work agencies and their workers (WKO, representing temporary work agencies in the trade association of commercial service providers) and the union section representing the Temporary Employment Agency in the PRO-GE union, in a joint statement demanded that temporary agency work should not become the pawn in political debates. ",
+            "descriptionViewsOfSocialPartners": "",
             "socialPartner_form": "Not applicable",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-21_859.html",
@@ -41564,7 +41734,7 @@
                     "regions::level": 2,
                     "regions::name": "Nieder\u00f6sterreich",
                     "regions::nutsCode": "AT12",
-                    "modId": "2"
+                    "modId": "5"
                 },
                 {
                     "recordId": "3078",
@@ -41572,12 +41742,12 @@
                     "regions::level": 2,
                     "regions::name": "Wien",
                     "regions::nutsCode": "AT13",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
         "recordId": "769",
-        "modId": "36"
+        "modId": "39"
     },
     {
         "fieldData": {
@@ -41715,7 +41885,7 @@
                 {
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
-                    "modId": "7"
+                    "modId": "8"
                 },
                 {
                     "recordId": "48",
@@ -41933,6 +42103,76 @@
     },
     {
         "fieldData": {
+            "title": "New minimum living income introduced",
+            "title_nationalLanguage": "Nuevo Ingreso Minimo Vital",
+            "d_startDate": "06/02/2020",
+            "d_endDate": "",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "ES-2020-23/878",
+            "dateType": "Open ended",
+            "calc_creationDay": "06/05/2020",
+            "calc_lastUpdate": "06/10/2020",
+            "descriptionBackgroundInfo": "The Decree-Law 20/2020 of 29 May establishes the Minimum Vital Income for the first time at national level in Spain. \r\rThere are other similar instruments established in most of the Autonomous Communites by the regional governments. Importantly, this new Income will be compatible with the existing regional measures. This Vital Income establishes a right to receive an economic allowance for those low-income households on a monthly basis. It is social protection measure in the context of fighting against poverty-at-risk, or even extreme poverty, and social exclusion. \r\rThis measure is one of the promises raised by the leftist government before the COVID-19 outbreak. However, the health crisis has accelerated the launch of the measure.\r\r",
+            "descriptionContentOfMeasure": "The Vital Income constitutes a guaranteed benefit targeting the most vulnerable households. \rIt has a supplementary nature compatible with other family or personal aids or even other incomes from temporary work. It consists of one monthly payment of \u20ac462 for a single person and up to \u20ac1,015 for a family with two children. \r\rAll individuals aged between 23 and 65 years are entitled to receive the allowance as well as all types of family units. The amount of the allowance is calculated on the basis of previous year's incomes and assets. The Vital Income will be managed by the Social Security, except in the Basque Country and Navarre, two regions with proper fiscal prerrogatives.\r\r",
+            "descriptionUseOfMeasure": "According to the government estimations, the Vital Income will address 850,000 low-income households, which are the unit of beneficiaries - and not the individuals as such. However, it is also estimated to reach around 2.3 million people.",
+            "descriptionViewsOfSocialPartners": "Given the importance of the Vital Income, social partners were involved in the design of the measure, particularly the trade unions",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-23_878.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislation or other statutory regulation",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "902",
+                    "sources::title": "Royal Decree-Law 20/2020 of 29 May",
+                    "sources::url": "https:/www.boe.es/eli/es/rdl/2020 05/29/2020",
+                    "sources::d_date": "06/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors) ",
+                    "modId": "7"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "788",
+        "modId": "30"
+    },
+    {
+        "fieldData": {
             "title": "COVID-19 Response Greece initiative - community of volunteers",
             "title_nationalLanguage": "\u0395\u03b8\u03b5\u03bb\u03bf\u03bd\u03c4\u03b9\u03ba\u03ae \u03b4\u03c1\u03ac\u03c3\u03b7 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03bd\u03c4\u03b9\u03bc\u03b5\u03c4\u03ce\u03c0\u03b9\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03c0\u03b1\u03bd\u03b4\u03b7\u03bc\u03af\u03b1\u03c2 COVID-19 Response Greece",
             "d_startDate": "03/24/2019",
@@ -42044,7 +42284,7 @@
                     "regions::level": 1,
                     "regions::name": "\u0392\u039f\u03a1\u0395\u0399\u0391 \u0395\u039b\u039b\u0391\u0394\u0391 (VOREIA ELLADA)",
                     "regions::nutsCode": "EL5",
-                    "modId": "2"
+                    "modId": "5"
                 }
             ]
         },
