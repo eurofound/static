@@ -1,14 +1,13 @@
-collectiveAgreementsContents::name,_join_cases_collectiveAgreementsContents::__KP_ID
-Basic working time,1
-Bonuses,2
-Employment retention,11
-Health and safety,4
-Income protection,11
-Leave arrangements,5
-Other topics,8
-"Social protection, incl. pension",1
-Solidarity,2
-Telework,1
-Training and employability,1
-Work organisation,2
-Working time flexibility,4
+,collectiveAgreementsContents::name,_join_cases_collectiveAgreementsContents::__KP_ID
+0,Basic working time,1
+1,Bonuses,2
+2,Employment retention,11
+3,Health and safety,4
+4,Income protection,11
+5,Leave arrangements,5
+7,"Social protection, incl. pension",1
+8,Solidarity,2
+9,Telework,1
+10,Training and employability,1
+11,Work organisation,2
+12,Working time flexibility,4
