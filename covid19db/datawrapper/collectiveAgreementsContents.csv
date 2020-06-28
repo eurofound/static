@@ -1,11 +1,11 @@
-name,type
-Employment retention,11
-Income protection,11
-Leave arrangements,5
-Health and safety,4
-Working time flexibility,4
-Bonuses,2
-Solidarity,2
-Work organisation,2
-Basic working time,1
-"Social protection, incl. pension",1
+index,name,type
+2,Employment retention,11
+4,Income protection,11
+5,Leave arrangements,5
+3,Health and safety,4
+12,Working time flexibility,4
+1,Bonuses,2
+8,Solidarity,2
+11,Work organisation,2
+0,Basic working time,1
+7,"Social protection, incl. pension",1

@@ -119,7 +119,7 @@
             "regions": []
         },
         "recordId": "95",
-        "modId": "111"
+        "modId": "113"
     },
     {
         "fieldData": {
@@ -227,7 +227,7 @@
             "regions": []
         },
         "recordId": "96",
-        "modId": "103"
+        "modId": "105"
     },
     {
         "fieldData": {
@@ -320,7 +320,7 @@
             "regions": []
         },
         "recordId": "97",
-        "modId": "96"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -404,7 +404,7 @@
             "regions": []
         },
         "recordId": "98",
-        "modId": "90"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -500,7 +500,7 @@
             "regions": []
         },
         "recordId": "99",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -587,7 +587,7 @@
             "regions": []
         },
         "recordId": "100",
-        "modId": "94"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -676,7 +676,7 @@
             "regions": []
         },
         "recordId": "101",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -753,7 +753,7 @@
             "regions": []
         },
         "recordId": "102",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -835,7 +835,7 @@
             "regions": []
         },
         "recordId": "104",
-        "modId": "100"
+        "modId": "102"
     },
     {
         "fieldData": {
@@ -919,7 +919,7 @@
             "regions": []
         },
         "recordId": "105",
-        "modId": "104"
+        "modId": "106"
     },
     {
         "fieldData": {
@@ -989,7 +989,7 @@
             "regions": []
         },
         "recordId": "106",
-        "modId": "98"
+        "modId": "100"
     },
     {
         "fieldData": {
@@ -1090,7 +1090,7 @@
             "regions": []
         },
         "recordId": "107",
-        "modId": "112"
+        "modId": "114"
     },
     {
         "fieldData": {
@@ -1193,94 +1193,7 @@
             "regions": []
         },
         "recordId": "112",
-        "modId": "97"
-    },
-    {
-        "fieldData": {
-            "title": "COVID I interest-free state loan",
-            "title_nationalLanguage": "Bez\u00faro\u010dn\u00e1 p\u016fj\u010dka COVID I",
-            "d_startDate": "03/15/2020",
-            "d_endDate": "03/20/2020",
-            "calc_country": "Czechia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Access to finance",
-            "calc_identifier": "CZ-2020-12/253",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/03/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "COVID I provides an interest-free state loan for SME\u00b4s which business activities are affected by COVID-19. It was prepared by the Ministry of Industry and Trade of the Czech Republic (Ministerstvo pr\u016fmyslu a obchodu \u010cesk republiky, MPO \u010cR) and the Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, \u010cMZRB).\r\rLoans will allow businesses to cover their basic operational expenses, acquisition of small tangible or intangible assets, the acquisition and financing of inventories or for other operating  expenditures. ",
-            "descriptionContentOfMeasure": "COVID I Loan programme provides support in the amount of CZK 500,000 (approx. \u20ac18,181) up to CZK 15,000,000 (approx. \u20ac545,454) with zero interest rate. Loans are granted up to 90% of eligible expenditure with maturity of 2 years, including the possibility of deferred repayment for up to 12 months. There are also no fees associated with the processing and granting of the loan or its possible early repayment.\r\rApplicants have to provide that their contractual performance have been delayed, suspended or cancelled due to measures taken to prevent the spread of coronavirus infection.\r\rThe total amount of the programme is CZK 600,000,000 (approx. \u20ac21,818,181).\r\r ",
-            "descriptionUseOfMeasure": "Information not available yet.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-12_253.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "134",
-                    "sources::title": "COVID I Bez\u00faro\u010dn\u00fd \u00fav\u011br",
-                    "sources::url": "https://www.cmzrb.cz/podnikatele/uvery/uver-covid/",
-                    "sources::d_date": "04/05/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "21",
-                    "updates::d_date": "04/22/2020",
-                    "updates::description": "The programme was terminated after 5 days in operation and a new similar measure has been proposed under the name 'COVID II warranty program for companies affected by coronavirus'. In the database under: https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/.\r",
-                    "modId": "2"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "136",
-        "modId": "111"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -1393,7 +1306,7 @@
             "regions": []
         },
         "recordId": "137",
-        "modId": "105"
+        "modId": "107"
     },
     {
         "fieldData": {
@@ -1822,7 +1735,7 @@
             ]
         },
         "recordId": "138",
-        "modId": "118"
+        "modId": "120"
     },
     {
         "fieldData": {
@@ -1911,7 +1824,7 @@
             "regions": []
         },
         "recordId": "139",
-        "modId": "102"
+        "modId": "105"
     },
     {
         "fieldData": {
@@ -2007,7 +1920,7 @@
             "regions": []
         },
         "recordId": "141",
-        "modId": "92"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -2130,7 +2043,7 @@
             "regions": []
         },
         "recordId": "144",
-        "modId": "97"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -2219,7 +2132,7 @@
             "regions": []
         },
         "recordId": "146",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -2407,7 +2320,7 @@
             "regions": []
         },
         "recordId": "147",
-        "modId": "104"
+        "modId": "109"
     },
     {
         "fieldData": {
@@ -2489,7 +2402,7 @@
             "regions": []
         },
         "recordId": "148",
-        "modId": "93"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -2576,7 +2489,7 @@
             "regions": []
         },
         "recordId": "150",
-        "modId": "97"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -2658,7 +2571,7 @@
             "regions": []
         },
         "recordId": "152",
-        "modId": "105"
+        "modId": "107"
     },
     {
         "fieldData": {
@@ -2733,7 +2646,7 @@
             "regions": []
         },
         "recordId": "155",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -2808,7 +2721,7 @@
             "regions": []
         },
         "recordId": "156",
-        "modId": "89"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -2883,7 +2796,7 @@
             "regions": []
         },
         "recordId": "157",
-        "modId": "93"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -2958,7 +2871,7 @@
             "regions": []
         },
         "recordId": "158",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -3028,7 +2941,7 @@
             "regions": []
         },
         "recordId": "159",
-        "modId": "97"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -3098,7 +3011,7 @@
             "regions": []
         },
         "recordId": "160",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -3173,7 +3086,7 @@
             "regions": []
         },
         "recordId": "161",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -3252,7 +3165,7 @@
             "regions": []
         },
         "recordId": "163",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -3322,7 +3235,7 @@
             "regions": []
         },
         "recordId": "165",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -3394,7 +3307,7 @@
             "regions": []
         },
         "recordId": "166",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -3526,7 +3439,7 @@
             ]
         },
         "recordId": "167",
-        "modId": "96"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -3618,7 +3531,7 @@
             "regions": []
         },
         "recordId": "168",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -3710,7 +3623,7 @@
             "regions": []
         },
         "recordId": "169",
-        "modId": "102"
+        "modId": "104"
     },
     {
         "fieldData": {
@@ -3785,7 +3698,7 @@
             "regions": []
         },
         "recordId": "170",
-        "modId": "92"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -3851,7 +3764,7 @@
             "regions": []
         },
         "recordId": "171",
-        "modId": "103"
+        "modId": "105"
     },
     {
         "fieldData": {
@@ -3917,7 +3830,7 @@
             "regions": []
         },
         "recordId": "172",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -4002,7 +3915,7 @@
             "regions": []
         },
         "recordId": "173",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -4089,7 +4002,7 @@
             "regions": []
         },
         "recordId": "174",
-        "modId": "92"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -4164,7 +4077,7 @@
             "regions": []
         },
         "recordId": "175",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -4254,7 +4167,7 @@
             "regions": []
         },
         "recordId": "179",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -4354,7 +4267,7 @@
             "regions": []
         },
         "recordId": "180",
-        "modId": "86"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -4444,7 +4357,7 @@
             "regions": []
         },
         "recordId": "181",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -4538,7 +4451,7 @@
             "regions": []
         },
         "recordId": "182",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -4625,7 +4538,7 @@
             "regions": []
         },
         "recordId": "183",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -4717,7 +4630,7 @@
             "regions": []
         },
         "recordId": "184",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -4792,7 +4705,7 @@
             "regions": []
         },
         "recordId": "185",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -4872,7 +4785,7 @@
             "regions": []
         },
         "recordId": "186",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -4987,7 +4900,7 @@
             "regions": []
         },
         "recordId": "187",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -5201,7 +5114,7 @@
             "regions": []
         },
         "recordId": "188",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -5266,7 +5179,7 @@
             "regions": []
         },
         "recordId": "189",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -5360,7 +5273,7 @@
             "regions": []
         },
         "recordId": "190",
-        "modId": "90"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -5440,7 +5353,7 @@
             "regions": []
         },
         "recordId": "191",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -5515,7 +5428,7 @@
             "regions": []
         },
         "recordId": "192",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -5637,7 +5550,7 @@
             "regions": []
         },
         "recordId": "193",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -5734,7 +5647,7 @@
             "regions": []
         },
         "recordId": "194",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -5824,7 +5737,7 @@
             "regions": []
         },
         "recordId": "195",
-        "modId": "86"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -5904,7 +5817,7 @@
             "regions": []
         },
         "recordId": "196",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -5984,7 +5897,7 @@
             "regions": []
         },
         "recordId": "197",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -6082,7 +5995,7 @@
             "regions": []
         },
         "recordId": "199",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -6151,7 +6064,7 @@
             "regions": []
         },
         "recordId": "200",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -6246,7 +6159,7 @@
             "regions": []
         },
         "recordId": "202",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -6344,7 +6257,7 @@
             "regions": []
         },
         "recordId": "203",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -6417,7 +6330,7 @@
             "regions": []
         },
         "recordId": "204",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -6509,7 +6422,7 @@
             "regions": []
         },
         "recordId": "205",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -6606,7 +6519,7 @@
             "regions": []
         },
         "recordId": "209",
-        "modId": "81"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -6713,7 +6626,7 @@
             "regions": []
         },
         "recordId": "211",
-        "modId": "86"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -6793,7 +6706,7 @@
             "regions": []
         },
         "recordId": "213",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -6895,7 +6808,7 @@
             "regions": []
         },
         "recordId": "214",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -6997,7 +6910,7 @@
             "regions": []
         },
         "recordId": "219",
-        "modId": "74"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -7082,7 +6995,7 @@
             "regions": []
         },
         "recordId": "220",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -7152,7 +7065,7 @@
             "regions": []
         },
         "recordId": "221",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -7232,7 +7145,7 @@
             "regions": []
         },
         "recordId": "224",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -7308,7 +7221,7 @@
             "regions": []
         },
         "recordId": "225",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -7433,7 +7346,7 @@
             "regions": []
         },
         "recordId": "226",
-        "modId": "90"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -7533,7 +7446,7 @@
             "regions": []
         },
         "recordId": "227",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -7605,7 +7518,7 @@
             "regions": []
         },
         "recordId": "228",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -7707,7 +7620,7 @@
             "regions": []
         },
         "recordId": "229",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -7809,7 +7722,7 @@
             "regions": []
         },
         "recordId": "230",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -7894,7 +7807,7 @@
             "regions": []
         },
         "recordId": "231",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -7978,7 +7891,7 @@
             "regions": []
         },
         "recordId": "232",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -8048,7 +7961,7 @@
             "regions": []
         },
         "recordId": "233",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -8128,7 +8041,7 @@
             "regions": []
         },
         "recordId": "243",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -8209,7 +8122,7 @@
             "regions": []
         },
         "recordId": "244",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -8273,7 +8186,7 @@
             "regions": []
         },
         "recordId": "245",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -8356,7 +8269,7 @@
             "regions": []
         },
         "recordId": "246",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -8453,7 +8366,7 @@
             ]
         },
         "recordId": "247",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -8555,7 +8468,7 @@
             "regions": []
         },
         "recordId": "248",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -8626,7 +8539,7 @@
             "regions": []
         },
         "recordId": "249",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -8713,7 +8626,7 @@
             "regions": []
         },
         "recordId": "250",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -8904,7 +8817,7 @@
             "regions": []
         },
         "recordId": "252",
-        "modId": "96"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -8988,7 +8901,7 @@
             "regions": []
         },
         "recordId": "253",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -9070,7 +8983,7 @@
             "regions": []
         },
         "recordId": "254",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -9147,7 +9060,7 @@
             "regions": []
         },
         "recordId": "257",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -9269,7 +9182,7 @@
             "regions": []
         },
         "recordId": "258",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -9335,7 +9248,7 @@
             "regions": []
         },
         "recordId": "259",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -9418,7 +9331,7 @@
             "regions": []
         },
         "recordId": "260",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -9517,7 +9430,7 @@
             "regions": []
         },
         "recordId": "261",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -9592,7 +9505,7 @@
             "regions": []
         },
         "recordId": "263",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -9689,7 +9602,7 @@
             "regions": []
         },
         "recordId": "264",
-        "modId": "81"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -9777,7 +9690,7 @@
             "regions": []
         },
         "recordId": "265",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -9847,7 +9760,7 @@
             "regions": []
         },
         "recordId": "266",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -9941,7 +9854,7 @@
             "regions": []
         },
         "recordId": "268",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -10021,7 +9934,7 @@
             "regions": []
         },
         "recordId": "269",
-        "modId": "86"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -10098,132 +10011,7 @@
             "regions": []
         },
         "recordId": "270",
-        "modId": "76"
-    },
-    {
-        "fieldData": {
-            "title": "Extension of temporary unemployment for white-collar workers due to force majeure",
-            "title_nationalLanguage": "Verruiming van de tijdelijke werkloosheid voor bedienden wegens overmacht",
-            "d_startDate": "03/13/2020",
-            "d_endDate": "06/30/2020",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "BE-2020-11/380",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/08/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "The measure was introduced due to the strong increase in requests for temporary unemployment (which normally can only be implemented under certain conditions). The measure alleviates pressure on the institutions that are tasked with organizing and distributing unemployment benefits, both the National Employment Office (NEO) and the trade unions (that also play an important role in paying out the unemployment benefits). The use of temporary unemployment means that the employers no longer have to pay the wages of their employees (the cost is transferred to the government through the unemployment benefit), thereby enabling them to reduce their costs and enhances their ability to better cope with the period of inactivity of the business.\r\rThe measures makes the procedure shorter and more simplified for employees in order to make sure that they receive their unemployment benefit as fast as possible.",
-            "descriptionContentOfMeasure": "From 13 March 2020, the notion of temporary unemployment due to force majeure will be flexibly applied by the NEO. All situations of temporary unemployment due to the corona virus can be considered as temporary unemployment due to force majeure, even if, for example, it is still possible to work on certain days.\r\rFor the duration of the restrictive measures (currently until 31 May 2020), the employer is no longer obliged to send notices of temporary unemployment for reasons of force majeure to the competent unemployment office of the NEO. The period may be extended until 30 June 2020 if the public health measures are extended or strengthened by the government.\r\rThe employee may use a simplified form to submit the application for benefits to the designated payment institution.\r\rFrom 01 February 2020 until 30 June 2020, the employee receives a benefit equal to 70% of his average capped salary (capped at \u20ac2,754.76 per month). \r\rThe employee who is made temporarily unemployed due to force majeure (reason \"coronavirus\") will receive a supplement of \u20ac5.63 per day on top of the unemployment benefit, from the NEO. A withholding tax on professional income of 26.75% is deducted from the benefit. \r",
-            "descriptionUseOfMeasure": "Approximately 1,2 million employees currently make use of the system of temporary unemployment out of an active population of less than 4 million.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Agreed (outcome)",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-11_380.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "248",
-                    "sources::title": "National Employment Office",
-                    "sources::url": "https://www.rva.be/nl/nieuws/tijdelijke-werkloosheid-ten-gevolge-van-het-uitbreken-van-het-coronavirus-covid-19-vereenvoudiging-van-de-procedure",
-                    "sources::d_date": "03/20/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "250",
-                    "sources::title": "Federal Office for Employment, Labour and Social Dialogue",
-                    "sources::url": "https://werk.belgie.be/nl/nieuws/tijdelijke-werkloosheid-aanvraag-tot-erkenning-als-onderneming-moeilijkheden-niet-meer",
-                    "sources::d_date": "03/23/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "251",
-                    "sources::title": "De Tijd: Coronacrisis kost Belgische economie dit jaar 45 miljard euro'",
-                    "sources::url": "https://www.tijd.be/politiek-economie/belgie/algemeen/coronacrisis-kost-belgische-economie-dit-jaar-45-miljard-euro/10219587.html",
-                    "sources::d_date": "04/08/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "257",
-                    "sources::title": "National Labour Council",
-                    "sources::url": "http://www.cnt-nar.be/CAO-ORIG/cao-147-(18.03.2020).pdf",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "783",
-                    "sources::title": "Vakbonden hekelen opnieuw misbruik tijdelijke werkloosheid bij ziekte",
-                    "sources::url": "https://www.hln.be/nieuws/binnenland/vakbonden-hekelen-opnieuw-misbruik-tijdelijke-werkloosheid-bij-ziekte~a09d134c/",
-                    "sources::d_date": "04/08/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "784",
-                    "sources::title": "Misbruik van regelingen door werkgevers moet ophouden!",
-                    "sources::url": "https://www.hetacv.be/csc-west-henegouwen/2020/03/26/misbruik-van-regelingen-door-werkgevers-moet-ophouden!",
-                    "sources::d_date": "03/26/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "3",
-                    "actors::name": "Trade unions",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "12",
-                    "actors::name": "Public support service providers",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "271",
-        "modId": "90"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -10305,7 +10093,7 @@
             "regions": []
         },
         "recordId": "272",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -10390,7 +10178,7 @@
             "regions": []
         },
         "recordId": "273",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -10474,7 +10262,7 @@
             "regions": []
         },
         "recordId": "275",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -10547,7 +10335,7 @@
             "regions": []
         },
         "recordId": "276",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -10646,7 +10434,7 @@
             "regions": []
         },
         "recordId": "277",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -10721,7 +10509,7 @@
             "regions": []
         },
         "recordId": "278",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -10791,7 +10579,7 @@
             "regions": []
         },
         "recordId": "279",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -10886,7 +10674,7 @@
             ]
         },
         "recordId": "281",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -11001,7 +10789,7 @@
             "regions": []
         },
         "recordId": "282",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -11095,7 +10883,7 @@
             "regions": []
         },
         "recordId": "283",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -11165,7 +10953,7 @@
             "regions": []
         },
         "recordId": "286",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -11240,7 +11028,7 @@
             "regions": []
         },
         "recordId": "288",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -11305,7 +11093,7 @@
             "regions": []
         },
         "recordId": "289",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -11375,7 +11163,7 @@
             "regions": []
         },
         "recordId": "290",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -11490,7 +11278,7 @@
             "regions": []
         },
         "recordId": "292",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -11567,7 +11355,7 @@
             "regions": []
         },
         "recordId": "293",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -11643,7 +11431,7 @@
             "regions": []
         },
         "recordId": "294",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -11720,7 +11508,7 @@
             "regions": []
         },
         "recordId": "295",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -11786,7 +11574,7 @@
             "regions": []
         },
         "recordId": "297",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -11855,7 +11643,7 @@
             "regions": []
         },
         "recordId": "298",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -11935,7 +11723,7 @@
             "regions": []
         },
         "recordId": "299",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -12004,7 +11792,7 @@
             "regions": []
         },
         "recordId": "300",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -12075,7 +11863,7 @@
             "regions": []
         },
         "recordId": "301",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -12150,7 +11938,7 @@
             "regions": []
         },
         "recordId": "302",
-        "modId": "89"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -12240,7 +12028,7 @@
             "regions": []
         },
         "recordId": "303",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -12331,7 +12119,7 @@
             "regions": []
         },
         "recordId": "304",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -12442,103 +12230,7 @@
             "regions": []
         },
         "recordId": "305",
-        "modId": "89"
-    },
-    {
-        "fieldData": {
-            "title": "Flemish interruption premium",
-            "title_nationalLanguage": "Vlaamse Corona hinderpremie",
-            "d_startDate": "03/18/2020",
-            "d_endDate": "",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "BE-2020-12/417",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/09/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "Companies obliged to temporarily halt their activities because of the corona measures taken by the federal government may be eligible for the corona interruption premium of the Flemish government. The premium aims to compensate for the losses due to the companies inactivity. The compensation is a combination of a fixed sum of \u20ac4,000 for the period up until the 5th of April with an additional premium \u20ac160 per day after the 5th of April.\r\r",
-            "descriptionContentOfMeasure": "The premium is directed towards companies that are forced to close due to the measures taken to reduce the spread of the Corona virus.\r\rFor the hotel and catering sector, it is sufficient that the consumption hall has to be closed in order to qualify for the corona interruption premium, even if collection and take-out services are still offered or other activities are carried out. \r\rApart from being forced to close other conditions apply:\r- The company has a legal personality under private law or a foreign company registered in Belgium with a comparable status, with at least one working partner or one full-time equivalent (FTE) registered social security employee.\r\r- In case of sole proprietorship: you are self-employed in your main profession.\r- If it is an independent activity in a secondary occupation, they are only eligible if they pay similar social security contributions as a self-employed person in main occupation.\r- If the association or non-profit organisation has at least 1 full-time equivalent (FTE) social security registered person.",
-            "descriptionUseOfMeasure": "The concrete amount of beneficiaries is unclear as the companies/organisations have to apply themselves. It is however to be expected that a large amount of companies or organisations will apply, as many have been forced to close over the past few weeks. The number will continue to grow as companies/organisations can apply until the second half of May. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-12_417.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "289",
-                    "sources::title": "Flemish Agency for Innovation and Entrepreneurship",
-                    "sources::url": "https://www.vlaio.be/nl/nieuws/corona-hinderpremie-wordt-sinds-6-april-aangevuld-met-premie-sluitingsdag",
-                    "sources::d_date": "04/07/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "290",
-                    "sources::title": "Flemish Agency for Innovation and Entrepreneurship",
-                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/corona-hinderpremie/wie-heeft-recht-op-een-corona-hinderpremie",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "7",
-                    "actors::name": "Local / regional government",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "32",
-                    "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "8",
-                    "funding::name": "Regional funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": [
-                {
-                    "recordId": "1829",
-                    "regions::countryCode": "BE",
-                    "regions::level": 1,
-                    "regions::name": "VLAAMS GEWEST",
-                    "regions::nutsCode": "BE2",
-                    "modId": "5"
-                }
-            ]
-        },
-        "recordId": "308",
-        "modId": "72"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -12629,7 +12321,7 @@
             ]
         },
         "recordId": "309",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -12741,7 +12433,7 @@
             "regions": []
         },
         "recordId": "311",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -12806,7 +12498,7 @@
             "regions": []
         },
         "recordId": "312",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -12928,7 +12620,7 @@
             ]
         },
         "recordId": "313",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -13055,7 +12747,7 @@
             ]
         },
         "recordId": "314",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -13132,7 +12824,7 @@
             "regions": []
         },
         "recordId": "316",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -13246,7 +12938,7 @@
             "regions": []
         },
         "recordId": "317",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -13382,7 +13074,7 @@
             "regions": []
         },
         "recordId": "318",
-        "modId": "88"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -13469,7 +13161,7 @@
             "regions": []
         },
         "recordId": "319",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -13554,7 +13246,7 @@
             "regions": []
         },
         "recordId": "320",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -13619,7 +13311,7 @@
             "regions": []
         },
         "recordId": "321",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -13709,7 +13401,7 @@
             "regions": []
         },
         "recordId": "323",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -13778,7 +13470,7 @@
             "regions": []
         },
         "recordId": "324",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -13848,7 +13540,7 @@
             "regions": []
         },
         "recordId": "325",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -13923,7 +13615,7 @@
             "regions": []
         },
         "recordId": "326",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -14008,7 +13700,7 @@
             "regions": []
         },
         "recordId": "327",
-        "modId": "84"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -14099,7 +13791,7 @@
             "regions": []
         },
         "recordId": "329",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -14204,7 +13896,7 @@
             "regions": []
         },
         "recordId": "330",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -14306,7 +13998,7 @@
             "regions": []
         },
         "recordId": "332",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -14401,7 +14093,7 @@
             "regions": []
         },
         "recordId": "333",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -14472,7 +14164,7 @@
             "regions": []
         },
         "recordId": "334",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -14552,7 +14244,7 @@
             "regions": []
         },
         "recordId": "335",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -14645,7 +14337,7 @@
             "regions": []
         },
         "recordId": "336",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -14731,7 +14423,7 @@
             "regions": []
         },
         "recordId": "337",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -14802,7 +14494,7 @@
             "regions": []
         },
         "recordId": "338",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -14896,7 +14588,7 @@
             "regions": []
         },
         "recordId": "339",
-        "modId": "94"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -14961,7 +14653,7 @@
             "regions": []
         },
         "recordId": "340",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -15031,7 +14723,7 @@
             "regions": []
         },
         "recordId": "341",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -15127,7 +14819,7 @@
             "regions": []
         },
         "recordId": "342",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -15192,7 +14884,7 @@
             "regions": []
         },
         "recordId": "343",
-        "modId": "83"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -15285,7 +14977,7 @@
             "regions": []
         },
         "recordId": "344",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -15369,7 +15061,7 @@
             "regions": []
         },
         "recordId": "345",
-        "modId": "82"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -15434,114 +15126,7 @@
             "regions": []
         },
         "recordId": "346",
-        "modId": "75"
-    },
-    {
-        "fieldData": {
-            "title": "Changes in the production of St. Nicolaus Distillery in Leopoldov",
-            "title_nationalLanguage": "Zmeny vo v\u00fdrobe  liehovaru St. Nicolaus v Leopoldov",
-            "d_startDate": "03/20/2020",
-            "d_endDate": "",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Reorientation of business activities",
-            "calc_subMinorCategory": "Change of production/innovation",
-            "calc_identifier": "SK-2020-12/456",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/09/2020",
-            "descriptionBackgroundInfo": "The management of the company promptly reacted to the higher demand of healthcare staff for disinfection products. The company focused on the pure alcohol production for disinfection purposes and on the production of disinfectant solution on alcohol basis. The company has also decided to supply social services facilities, mostly senior homes for free with disinfection products in order to keep strict hygienic requirements and to protect the most vulnerable group - the seniors.",
-            "descriptionContentOfMeasure": "The distillery reduced the vinegar production in order to increase the pure alcohol for disinfection purposes and disinfection solutions on alcohol basis. Immediately, the products are distributed nationwide to hospitals, healthcare facilities, pharmacies and regionally to social services facilities (senior homes). They produce 36,000 liters of pure alcohol daily.\r\rOn 27 March 2020 the company was ready to give 1,000 liters of disinfection to senior homes. They supplied senior homes mostly in towns and villages of Trnava and Nitra regions. In case of need the company is also ready to limit its alcohol beverages production in order to meet a high demand for disinfection products.",
-            "descriptionUseOfMeasure": "Estimations are not available yet.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Not applicable",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-12_456.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Company practices",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "345",
-                    "sources::title": "St. Nicolaus began with production of disinfection solution and pure alcohol",
-                    "sources::url": "https://ekonomika.pravda.sk/ludia/clanok/546163-st-nicolaus-zacal-s-vyrobou-roztokovej-dezinfekcie-a-cisteho-liehu/",
-                    "sources::d_date": "03/20/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "346",
-                    "sources::title": "St. Nicolaus helps and reacts on coronavirus",
-                    "sources::url": "http://stn-trade.sk/novinky/st-nicolaus-pomaha-reaguje-koronavirus/",
-                    "sources::d_date": "03/25/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "347",
-                    "sources::title": "We protect the most vulnerable",
-                    "sources::url": "http://stn-trade.sk/novinky/chranime-tych-najzranitelnejsich/",
-                    "sources::d_date": "03/27/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "3",
-                    "funding::name": "Employer",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "37",
-                    "sectors::code": "C10",
-                    "sectors::name": "Manufacture of food products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "38",
-                    "sectors::code": "C11",
-                    "sectors::name": "Manufacture of beverages",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "48",
-                    "sectors::code": "C21",
-                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": [
-                {
-                    "recordId": "3332",
-                    "regions::countryCode": "SK",
-                    "regions::level": 3,
-                    "regions::name": "Trnavsk\u00fd kraj",
-                    "regions::nutsCode": "SK021",
-                    "modId": "5"
-                }
-            ]
-        },
-        "recordId": "347",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -15634,152 +15219,7 @@
             "regions": []
         },
         "recordId": "348",
-        "modId": "79"
-    },
-    {
-        "fieldData": {
-            "title": "Replacement income for self-employed (bridging right)",
-            "title_nationalLanguage": "Vervangingsinkomen voor zelfstandigen (overbruggingsrecht)",
-            "d_startDate": "04/18/2020",
-            "d_endDate": "",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "BE-2020-16/458",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/21/2020",
-            "descriptionBackgroundInfo": "In certain situations self-employed can qualify for the temporary COVID-19 bridging right:\r\r* If the federal government has obliged the self-employed to interrupt the activity in whole or in part they are immediately eligible for the bridging right. There is no minimum duration of interruption required. This concerns, for example, self-employed who are obliged to close their business (such as restaurants, caf\u00e9s and non-food businesses). Restaurants providing or delivering takeaway meals are also covered.\r\r* If the government has not obliged the self-employed to interrupt their activity partially or completely, but the self-employed is forced to interrupt their activity for a period of at least 7 consecutive calendar days as a result of the COVID-19 crisis, for example for self-isolation, a lack of raw materials or for various reasons of economic or organisational nature (linked to COVID-19), then they are also eligible for the bridging right.\r\rThis includes self-employed exercising a care profession such as physiotherapists, dentists and medical specialists.",
-            "descriptionContentOfMeasure": "Certain conditions apply in order to be able to benefit from the bridging right: \r\r* The person has to be self-employed as main profession (including helpers, assisting spouses in the maxi-status and (primo-starters), or self-employed as secondary profession with provisional social security contributions that are at least equal to the minimum contributions for self-employed persons in their main profession;\r* The person has to be self-employed and pay social security contributions in Belgium;\r* The person must not receive a replacement income.\r\rThe Corona bridging right amounts to (for March, April, May and June):\r\r* \u20ac1,291,69 without family responsibilities;\r* \u20ac1,614.10 with family responsibilities.\r\rIf granted, the bridging right for March will be paid at the beginning of April and for April, at the beginning of May.",
-            "descriptionUseOfMeasure": "It is unclear how many people are eligible and will make use of the support.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-16_458.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "349",
-                    "sources::title": "1819 Brussels",
-                    "sources::url": "https://1819.brussels/nl/blog/faq-coronavirus-en-ondernemingen-antwoord-op-uw-meest-gestelde-vragen",
-                    "sources::d_date": "03/25/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "349",
-        "modId": "76"
-    },
-    {
-        "fieldData": {
-            "title": "Extension of meal/eco/gift/sport/culture cheques",
-            "title_nationalLanguage": "Uitbreiding geldigheidsduur van maaltijd/eco/geschenk/sport en culuurcheques",
-            "d_startDate": "03/18/2020",
-            "d_endDate": "12/31/2020",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Provision of services in kind (e.g. food vouchers)",
-            "calc_identifier": "BE-2020-12/459",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "Benefits like meal/culture/eco/sports and culture cheques are quite common forms of fringe benefits in Belgium.\r\rThe COVID-19 crisis makes it more difficult to pay with cheques, especially eco-cheques (which can be used to buy a wide range of eco-friendly products or services). This is the reason why the social partners are asking for an extension of the validity period of the cheques in a joint national labour council advice. The government is expected to follow this advice.",
-            "descriptionContentOfMeasure": "For meal, eco and gift vouchers, which expire in March, April, May and June 2020, it is necessary that an immediate extension of 6 months is provided from the date of expiry of such vouchers. \rFor the sports/culture vouchers: request to postpone the expiry date of the sports/culture vouchers from 30 September to 31 December 2020.\r\rThere is no limit per person to the amount of cheques that can be be extended. Following the advice of the national labour council the extension should happen automatically.\r\rFinally, the cheque publishers commit themselves to a fast and effective information campaign.",
-            "descriptionUseOfMeasure": "It is unclear how many cheques are currently in circulation that are about to expire. Given the fact that these types of benefits are very common in a wide range of sectors, the amount is probably significant.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Agreed (outcome)",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-12_459.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Non-binding recommendations or other texts",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "351",
-                    "sources::title": "Advies Nationale Arbeidsraad nummer 2.161",
-                    "sources::url": "http://www.cnt-nar.be/ADVIES/advies-2161.pdf",
-                    "sources::d_date": "04/08/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "350",
-        "modId": "71"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -15884,7 +15324,7 @@
             "regions": []
         },
         "recordId": "352",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -16013,7 +15453,7 @@
             "regions": []
         },
         "recordId": "353",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -16092,7 +15532,7 @@
             "regions": []
         },
         "recordId": "354",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -16174,7 +15614,7 @@
             "regions": []
         },
         "recordId": "355",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -16190,7 +15630,7 @@
             "calc_creationDay": "04/10/2020",
             "calc_lastUpdate": "05/04/2020",
             "descriptionBackgroundInfo": "Decree Law No. 18/2020 of 17 March 2020 introduces temporary exception with reference to the current operating rules of the Guarantee Fund for small and medium enterprises. This measure was undertaken in order to enhance the role of the Fund in supporting businesses affected by the effects of the Covid-19 pandemic (art. 49). The measure is taken by the government within a bundle of other measures to support businesses to stay afloat during the crisis.",
-            "descriptionContentOfMeasure": "Art. 49 of the Decree Law strengthens the intervention capacity of the Guarantee Fund for small and medium enterprises by introducing temporary exceptions from its current operating rules. In particular, the Decree Law provides that for a period of 9 months from its entry into force:\r- the guarantee is granted free of charge;\r- the maximum guaranteed amount per individual company is heightened to \u20ac 5 million;\r- the coverage of the guarantee is 80% (90% in case of reinsurance) on all operations\rof financing with a maximum guaranteed amount of up to \u20ac 1.5 million.\rTo finance the above measures, the Fund's allocation has increased by \u20ac1.5 billion\rEUR. \rThe eligible companies are the ones classified as small and medium enterprises according to the EU legislation, provided that they don't have, at the date of publication of the Decree Law, non-performing exposures.",
+            "descriptionContentOfMeasure": "Art. 49 of the Decree Law strengthens the intervention capacity of the Guarantee Fund for small and medium enterprises by introducing temporary exceptions from its current operating rules. In particular, the Decree Law provides that for a period of 9 months from its entry into force:\r\r* the guarantee is granted free of charge;\r* the maximum guaranteed amount per individual company is heightened to \u20ac 5 million;\r* the coverage of the guarantee is 80% (90% in case of reinsurance) on all operations\rof financing with a maximum guaranteed amount of up to \u20ac 1.5 million.\r\rTo finance the above measures, the Fund's allocation has increased by \u20ac1.5 billion\rEUR.  The eligible companies are the ones classified as small and medium enterprises according to the EU legislation, provided that they don't have, at the date of publication of the Decree Law, non-performing exposures.",
             "descriptionUseOfMeasure": "To finance the above measures, the Fund's allocation has increased by \u20ac1.5 billion\rEUR. With this additional allocation (in the case of 80% coverage of all transactions) the\rFund could favor the granting of new loans for approximately \u20ac55 billion (amount that\rit would drop if the coverage percentages increased to 90%).",
             "descriptionInvolvementOfSocialPartners": "",
             "socialPartner_form": "No involvement",
@@ -16246,14 +15686,14 @@
                 {
                     "recordId": "15",
                     "updates::d_date": "04/15/2020",
-                    "updates::description": "See case IT-2020-15/636 for redefinition and extension of the measure",
-                    "modId": "2"
+                    "updates::description": "See case [IT-2020-15/636](https://static.eurofound.europa.eu/covid19db/cases/IT-2020-15_636.html) for redefinition and extension of the measure",
+                    "modId": "3"
                 }
             ],
             "regions": []
         },
         "recordId": "359",
-        "modId": "76"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -16322,7 +15762,7 @@
             "regions": []
         },
         "recordId": "360",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -16399,7 +15839,7 @@
             "regions": []
         },
         "recordId": "361",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -16474,7 +15914,7 @@
             "regions": []
         },
         "recordId": "364",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -16591,7 +16031,7 @@
             "regions": []
         },
         "recordId": "365",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -16688,7 +16128,7 @@
             "regions": []
         },
         "recordId": "366",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -16758,7 +16198,7 @@
             "regions": []
         },
         "recordId": "368",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -16859,7 +16299,7 @@
             "regions": []
         },
         "recordId": "369",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -16918,7 +16358,7 @@
             "regions": []
         },
         "recordId": "370",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -16988,7 +16428,7 @@
             "regions": []
         },
         "recordId": "371",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -17075,7 +16515,7 @@
             "regions": []
         },
         "recordId": "372",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -17184,7 +16624,7 @@
             "regions": []
         },
         "recordId": "373",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -17275,7 +16715,7 @@
             "regions": []
         },
         "recordId": "375",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -17345,7 +16785,7 @@
             "regions": []
         },
         "recordId": "376",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -17420,7 +16860,7 @@
             "regions": []
         },
         "recordId": "377",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -17495,7 +16935,7 @@
             "regions": []
         },
         "recordId": "378",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17560,7 +17000,7 @@
             "regions": []
         },
         "recordId": "379",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -17630,7 +17070,7 @@
             "regions": []
         },
         "recordId": "380",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17710,7 +17150,7 @@
             "regions": []
         },
         "recordId": "381",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17790,7 +17230,7 @@
             "regions": []
         },
         "recordId": "382",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -17862,7 +17302,7 @@
             "regions": []
         },
         "recordId": "383",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17999,7 +17439,7 @@
             "regions": []
         },
         "recordId": "385",
-        "modId": "110"
+        "modId": "112"
     },
     {
         "fieldData": {
@@ -18058,7 +17498,7 @@
             "regions": []
         },
         "recordId": "386",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -18176,7 +17616,7 @@
             "regions": []
         },
         "recordId": "387",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -18254,7 +17694,7 @@
             "regions": []
         },
         "recordId": "388",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -18332,7 +17772,7 @@
             "regions": []
         },
         "recordId": "389",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -18414,7 +17854,7 @@
             "regions": []
         },
         "recordId": "390",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -18504,7 +17944,7 @@
             "regions": []
         },
         "recordId": "391",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -18598,7 +18038,7 @@
             "regions": []
         },
         "recordId": "392",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -18673,7 +18113,7 @@
             "regions": []
         },
         "recordId": "393",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -18742,7 +18182,7 @@
             "regions": []
         },
         "recordId": "394",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -18822,7 +18262,7 @@
             "regions": []
         },
         "recordId": "395",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -18902,7 +18342,7 @@
             "regions": []
         },
         "recordId": "396",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -19016,7 +18456,7 @@
             "regions": []
         },
         "recordId": "400",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -19098,94 +18538,7 @@
             "regions": []
         },
         "recordId": "402",
-        "modId": "73"
-    },
-    {
-        "fieldData": {
-            "title": "COVID-19 loans for variable capital for microenterprises and SMEs",
-            "title_nationalLanguage": "Odluka o usvajanju Programa \u00bbCOVID-19 zajam za obrtna sredstva\u00ab",
-            "d_startDate": "04/02/2020",
-            "d_endDate": "",
-            "calc_country": "Croatia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Access to finance",
-            "calc_identifier": "HR-2020-14/512",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/12/2020",
-            "calc_lastUpdate": "04/30/2020",
-            "descriptionBackgroundInfo": "Many small and medium business entities affected by the coronavirus pandemic face serious problems with variable capital. Therefore, the owners demand some form of aid. \r\rLoans to be granted directly to small business entities under this Program include de minimis value in accordance with Commission Regulation (EU) No 1093/2010. 1407/2013 of 18 December 2013 on the application of Articles 107 and 108 of the Treaty on the Functioning of the European Union to de minimis aid.",
-            "descriptionContentOfMeasure": "The Croatian Agency for SMEs, Innovation and Investments - HAMAG-BICRO is established by the Government of the Republic of Croatia with the purpose of promoting SME development and promoting investment and innovation. The Agency is an independent institution under the supervision of the Ministry of Entrepreneurship and Crafts. HAMAG-BICRO enables loans to micro, small and medium-sized small business entities. \r\rThe target group of financial instruments COVID-19 Loan for variable (working) capital are micro and SME, which are faced with illiquidity problems and require variable capital. The amount of loan is up to HRK 750,000 (\u20ac 100,000) with a maximum repayment period up to 5 years including a grace period of up to 12 months. Interest rate is 0.25% without processing fee. \r\rThe differences regarding the previous ESIF Micro working capital loans programs are the lower interest rates, the longer grace period and the possibility of settling accounts up to 3 months before the loan application is received. For this loan cannot apply the entities from fishery, aquaculture and agriculture, producers of tobacco and alcohol, manufacture and trade of weapons and ammunition; casinos and other sectors and activities excluded by the terms of the Program. For this type of loans and for Micro loans for rural development HRK 1.148 billion (\u20ac153,067 million) are available. ",
-            "descriptionUseOfMeasure": "Not yet known. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-14_512.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "401",
-                    "sources::title": "Odluka o usvajanju Programa \u00bbCOVID-19 zajam za obrtna sredstva\u00ab",
-                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_04_41_857.html",
-                    "sources::d_date": "04/02/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "402",
-                    "sources::title": "ESIF zajmovi za obrtna sredstva",
-                    "sources::url": "https://hamagbicro.hr/novo-esif-zajmovi-za-obrtna-sredstva/",
-                    "sources::d_date": "03/23/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "10",
-                    "actors::name": "EU (Council, EC, EP)",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "403",
-        "modId": "70"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -19280,7 +18633,7 @@
             "regions": []
         },
         "recordId": "404",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -19352,7 +18705,7 @@
             "regions": []
         },
         "recordId": "405",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -19424,7 +18777,7 @@
             "regions": []
         },
         "recordId": "407",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -19512,7 +18865,7 @@
             "regions": []
         },
         "recordId": "409",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -19587,7 +18940,7 @@
             "regions": []
         },
         "recordId": "410",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -19659,7 +19012,7 @@
             "regions": []
         },
         "recordId": "412",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -19752,7 +19105,7 @@
             "regions": []
         },
         "recordId": "413",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -19824,7 +19177,7 @@
             "regions": []
         },
         "recordId": "415",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -19906,7 +19259,7 @@
             "regions": []
         },
         "recordId": "416",
-        "modId": "91"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -19976,7 +19329,7 @@
             "regions": []
         },
         "recordId": "417",
-        "modId": "89"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -20074,7 +19427,7 @@
             "regions": []
         },
         "recordId": "419",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -20139,7 +19492,7 @@
             "regions": []
         },
         "recordId": "420",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -20214,7 +19567,7 @@
             "regions": []
         },
         "recordId": "422",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -20304,7 +19657,7 @@
             "regions": []
         },
         "recordId": "423",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -20376,7 +19729,7 @@
             "regions": []
         },
         "recordId": "424",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -20442,7 +19795,7 @@
             "regions": []
         },
         "recordId": "425",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -20532,7 +19885,7 @@
             "regions": []
         },
         "recordId": "426",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -20653,7 +20006,7 @@
             "regions": []
         },
         "recordId": "427",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -20742,7 +20095,7 @@
             "regions": []
         },
         "recordId": "428",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -20812,7 +20165,7 @@
             "regions": []
         },
         "recordId": "430",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -20889,7 +20242,7 @@
             "regions": []
         },
         "recordId": "431",
-        "modId": "85"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -20979,7 +20332,7 @@
             "regions": []
         },
         "recordId": "432",
-        "modId": "70"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -21054,7 +20407,7 @@
             "regions": []
         },
         "recordId": "433",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -21140,7 +20493,7 @@
             ]
         },
         "recordId": "435",
-        "modId": "84"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -21247,7 +20600,7 @@
             "regions": []
         },
         "recordId": "436",
-        "modId": "77"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -21324,7 +20677,7 @@
             "regions": []
         },
         "recordId": "437",
-        "modId": "90"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -21404,7 +20757,7 @@
             "regions": []
         },
         "recordId": "438",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -21479,7 +20832,7 @@
             "regions": []
         },
         "recordId": "439",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -21556,7 +20909,7 @@
             "regions": []
         },
         "recordId": "441",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -21625,7 +20978,7 @@
             "regions": []
         },
         "recordId": "442",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -21718,7 +21071,7 @@
             ]
         },
         "recordId": "443",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -21812,7 +21165,7 @@
             "regions": []
         },
         "recordId": "444",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -21887,7 +21240,7 @@
             "regions": []
         },
         "recordId": "445",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -21972,7 +21325,7 @@
             "regions": []
         },
         "recordId": "446",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -22052,7 +21405,7 @@
             "regions": []
         },
         "recordId": "447",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -22134,7 +21487,7 @@
             "regions": []
         },
         "recordId": "448",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -22212,7 +21565,7 @@
             "regions": []
         },
         "recordId": "449",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -22289,7 +21642,7 @@
             "regions": []
         },
         "recordId": "450",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -22374,7 +21727,7 @@
             "regions": []
         },
         "recordId": "451",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -22451,7 +21804,7 @@
             "regions": []
         },
         "recordId": "452",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -22522,7 +21875,7 @@
             "regions": []
         },
         "recordId": "453",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -22602,7 +21955,7 @@
             "regions": []
         },
         "recordId": "454",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -22691,7 +22044,7 @@
             "regions": []
         },
         "recordId": "455",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -22773,7 +22126,7 @@
             "regions": []
         },
         "recordId": "457",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -22936,7 +22289,7 @@
             "regions": []
         },
         "recordId": "458",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -23006,7 +22359,7 @@
             "regions": []
         },
         "recordId": "459",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -23081,7 +22434,7 @@
             "regions": []
         },
         "recordId": "460",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -23145,7 +22498,7 @@
             "regions": []
         },
         "recordId": "461",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -23230,7 +22583,7 @@
             "regions": []
         },
         "recordId": "462",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -23314,7 +22667,7 @@
             ]
         },
         "recordId": "464",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -23389,7 +22742,7 @@
             "regions": []
         },
         "recordId": "465",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -23459,7 +22812,7 @@
             "regions": []
         },
         "recordId": "466",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -23524,7 +22877,7 @@
             "regions": []
         },
         "recordId": "467",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -23609,7 +22962,7 @@
             "regions": []
         },
         "recordId": "468",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -23674,7 +23027,7 @@
             "regions": []
         },
         "recordId": "470",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -23750,7 +23103,7 @@
             "regions": []
         },
         "recordId": "471",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -23820,7 +23173,7 @@
             "regions": []
         },
         "recordId": "472",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -23904,7 +23257,7 @@
             "regions": []
         },
         "recordId": "473",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -23969,7 +23322,7 @@
             "regions": []
         },
         "recordId": "474",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -24065,7 +23418,7 @@
             "regions": []
         },
         "recordId": "475",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -24180,7 +23533,7 @@
             "regions": []
         },
         "recordId": "476",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -24252,7 +23605,7 @@
             "regions": []
         },
         "recordId": "477",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -24317,7 +23670,7 @@
             "regions": []
         },
         "recordId": "478",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -24429,7 +23782,7 @@
             "regions": []
         },
         "recordId": "479",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -24506,7 +23859,7 @@
             "regions": []
         },
         "recordId": "480",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -24576,7 +23929,7 @@
             "regions": []
         },
         "recordId": "481",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -24665,7 +24018,7 @@
             "regions": []
         },
         "recordId": "483",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -24762,7 +24115,7 @@
             "regions": []
         },
         "recordId": "486",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -24839,7 +24192,7 @@
             "regions": []
         },
         "recordId": "487",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -24911,7 +24264,7 @@
             "regions": []
         },
         "recordId": "488",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -24981,7 +24334,7 @@
             "regions": []
         },
         "recordId": "489",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -25053,7 +24406,7 @@
             "regions": []
         },
         "recordId": "490",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -25119,7 +24472,7 @@
             "regions": []
         },
         "recordId": "491",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -25199,7 +24552,7 @@
             "regions": []
         },
         "recordId": "492",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -25264,7 +24617,7 @@
             "regions": []
         },
         "recordId": "493",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -25334,7 +24687,7 @@
             "regions": []
         },
         "recordId": "494",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -25404,7 +24757,7 @@
             "regions": []
         },
         "recordId": "495",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -25474,7 +24827,7 @@
             "regions": []
         },
         "recordId": "496",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -25544,7 +24897,7 @@
             "regions": []
         },
         "recordId": "497",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -25619,7 +24972,7 @@
             "regions": []
         },
         "recordId": "498",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -25699,7 +25052,7 @@
             "regions": []
         },
         "recordId": "500",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -25779,7 +25132,7 @@
             "regions": []
         },
         "recordId": "501",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -25849,7 +25202,7 @@
             "regions": []
         },
         "recordId": "503",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -25941,7 +25294,7 @@
             "regions": []
         },
         "recordId": "504",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -26019,7 +25372,7 @@
             "regions": []
         },
         "recordId": "508",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -26085,7 +25438,7 @@
             "regions": []
         },
         "recordId": "509",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -26165,7 +25518,7 @@
             "regions": []
         },
         "recordId": "510",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -26247,7 +25600,7 @@
             "regions": []
         },
         "recordId": "511",
-        "modId": "74"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -26316,7 +25669,7 @@
             "regions": []
         },
         "recordId": "512",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -26402,7 +25755,7 @@
             "regions": []
         },
         "recordId": "513",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -26472,7 +25825,7 @@
             "regions": []
         },
         "recordId": "514",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -26556,7 +25909,7 @@
             "regions": []
         },
         "recordId": "515",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -26650,7 +26003,7 @@
             "regions": []
         },
         "recordId": "516",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -26723,7 +26076,7 @@
             "regions": []
         },
         "recordId": "518",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -26818,7 +26171,7 @@
             "regions": []
         },
         "recordId": "519",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -26953,7 +26306,7 @@
             "regions": []
         },
         "recordId": "520",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -27017,7 +26370,7 @@
             "regions": []
         },
         "recordId": "521",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -27144,7 +26497,7 @@
             "regions": []
         },
         "recordId": "522",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -27231,7 +26584,7 @@
             "regions": []
         },
         "recordId": "524",
-        "modId": "69"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -27310,7 +26663,7 @@
             "regions": []
         },
         "recordId": "525",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -27326,7 +26679,7 @@
             "calc_creationDay": "04/15/2020",
             "calc_lastUpdate": "05/03/2020",
             "descriptionBackgroundInfo": "Art. 13 of the Law Decree no. 23 of 8 April 2020 introduces a credit guarantee and other measures for SMEs hit by the Covid-19 epidemic to support their operations. The temporary rules for the credit guarantee include free provision of the guarantee and higher thresholds in terms of amount and number of employees, in respect to the regular measures. This initiative is part of the various measures designed by the government to address the economic and employment impacts of the Covid-19 epidemic.",
-            "descriptionContentOfMeasure": "The main provisions allow SMEs to obtain a credit guarantee until 31 December 2020 at more advantageous conditions than those ordinarily envisaged by the special credit guarantee fund for SMEs. In particular, the temporary measures: 1) include a free credit guarantee; 2) raise the maximum amount of the credit guarantee for each individual enterprise to EUR 5 million; 3) allow to access the credit guarantee to enterprises with up to 499 employees; 4) allow the guarantee to cover up to 90% of the credit; 5) provide that the maximum amount of the credit guarantee cannot exceed 25% of the beneficiary's 2019 turnover; the double of the beneficiary's annual wage bill in 2019; the working capital and investment expenses for the following 18 months for SMEs and 12 months for enterprises with up to 499 employees.",
+            "descriptionContentOfMeasure": "The main provisions allow SMEs to obtain a credit guarantee until 31 December 2020 at more advantageous conditions than those ordinarily envisaged by the special credit guarantee fund for SMEs. In particular, the temporary measures: \r\r1. include a free credit guarantee; \r2. raise the maximum amount of the credit guarantee for each individual enterprise to EUR 5 million; \r3. allow to access the credit guarantee to enterprises with up to 499 employees; \r4. allow the guarantee to cover up to 90% of the credit; \r5. provide that the maximum amount of the credit guarantee cannot exceed 25% of the beneficiary's 2019 turnover; the double of the beneficiary's annual wage bill in 2019; the working capital and investment expenses for the following 18 months for SMEs and 12 months for enterprises with up to 499 employees.",
             "descriptionUseOfMeasure": "No information available (15 April 2020)",
             "descriptionInvolvementOfSocialPartners": "",
             "socialPartner_form": "No involvement",
@@ -27380,7 +26733,7 @@
             "regions": []
         },
         "recordId": "527",
-        "modId": "70"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -27467,7 +26820,7 @@
             "regions": []
         },
         "recordId": "528",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -27532,7 +26885,7 @@
             "regions": []
         },
         "recordId": "530",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -27659,7 +27012,7 @@
             "regions": []
         },
         "recordId": "531",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -27739,7 +27092,7 @@
             "regions": []
         },
         "recordId": "532",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -27954,7 +27307,7 @@
             "regions": []
         },
         "recordId": "534",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -28013,7 +27366,7 @@
             "regions": []
         },
         "recordId": "536",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -28093,7 +27446,7 @@
             "regions": []
         },
         "recordId": "537",
-        "modId": "70"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -28170,7 +27523,7 @@
             "regions": []
         },
         "recordId": "538",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -28242,7 +27595,7 @@
             "regions": []
         },
         "recordId": "539",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -28335,7 +27688,7 @@
             "regions": []
         },
         "recordId": "540",
-        "modId": "70"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -28438,7 +27791,7 @@
             "regions": []
         },
         "recordId": "541",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -28504,7 +27857,7 @@
             "regions": []
         },
         "recordId": "542",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -28582,7 +27935,7 @@
             "regions": []
         },
         "recordId": "543",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -28723,7 +28076,7 @@
             "regions": []
         },
         "recordId": "544",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -28906,7 +28259,7 @@
             "regions": []
         },
         "recordId": "545",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -29003,7 +28356,7 @@
             "regions": []
         },
         "recordId": "546",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -29078,7 +28431,7 @@
             "regions": []
         },
         "recordId": "547",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -29165,7 +28518,7 @@
             "regions": []
         },
         "recordId": "550",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -29230,7 +28583,7 @@
             "regions": []
         },
         "recordId": "551",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -29300,7 +28653,7 @@
             "regions": []
         },
         "recordId": "553",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -29380,7 +28733,7 @@
             "regions": []
         },
         "recordId": "554",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -29450,7 +28803,7 @@
             "regions": []
         },
         "recordId": "555",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -29515,7 +28868,7 @@
             "regions": []
         },
         "recordId": "556",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -29574,7 +28927,7 @@
             "regions": []
         },
         "recordId": "557",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -29670,7 +29023,7 @@
             "regions": []
         },
         "recordId": "558",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -29734,7 +29087,7 @@
             "regions": []
         },
         "recordId": "559",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -29809,7 +29162,7 @@
             "regions": []
         },
         "recordId": "560",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -29894,7 +29247,7 @@
             "regions": []
         },
         "recordId": "561",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -29995,7 +29348,7 @@
             "regions": []
         },
         "recordId": "562",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -30064,7 +29417,7 @@
             "regions": []
         },
         "recordId": "565",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -30133,7 +29486,7 @@
             "regions": []
         },
         "recordId": "566",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -30202,7 +29555,7 @@
             "regions": []
         },
         "recordId": "567",
-        "modId": "76"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -30299,7 +29652,7 @@
             "regions": []
         },
         "recordId": "568",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -30371,7 +29724,7 @@
             "regions": []
         },
         "recordId": "570",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -30450,7 +29803,7 @@
             ]
         },
         "recordId": "571",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -30515,7 +29868,7 @@
             "regions": []
         },
         "recordId": "572",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -30613,7 +29966,7 @@
             "regions": []
         },
         "recordId": "573",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -30702,7 +30055,7 @@
             ]
         },
         "recordId": "574",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -30789,7 +30142,7 @@
             "regions": []
         },
         "recordId": "582",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -30873,7 +30226,7 @@
             "regions": []
         },
         "recordId": "585",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -30945,7 +30298,7 @@
             "regions": []
         },
         "recordId": "586",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -31041,7 +30394,7 @@
             "regions": []
         },
         "recordId": "587",
-        "modId": "78"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -31141,7 +30494,7 @@
             "regions": []
         },
         "recordId": "588",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -31216,7 +30569,7 @@
             "regions": []
         },
         "recordId": "589",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -31293,7 +30646,7 @@
             "regions": []
         },
         "recordId": "590",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -31370,7 +30723,7 @@
             "regions": []
         },
         "recordId": "591",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -31452,7 +30805,7 @@
             "regions": []
         },
         "recordId": "592",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -31566,7 +30919,7 @@
             "regions": []
         },
         "recordId": "593",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -31636,7 +30989,7 @@
             "regions": []
         },
         "recordId": "594",
-        "modId": "76"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -31733,7 +31086,7 @@
             "regions": []
         },
         "recordId": "609",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -31803,7 +31156,7 @@
             "regions": []
         },
         "recordId": "612",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -31868,7 +31221,7 @@
             "regions": []
         },
         "recordId": "613",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -31933,7 +31286,7 @@
             "regions": []
         },
         "recordId": "614",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -32020,7 +31373,7 @@
             "regions": []
         },
         "recordId": "615",
-        "modId": "71"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -32128,7 +31481,7 @@
             "regions": []
         },
         "recordId": "616",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -32229,7 +31582,7 @@
             "regions": []
         },
         "recordId": "617",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -32306,7 +31659,7 @@
             "regions": []
         },
         "recordId": "618",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -32399,7 +31752,7 @@
             "regions": []
         },
         "recordId": "619",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -32542,7 +31895,7 @@
             "regions": []
         },
         "recordId": "620",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -32652,7 +32005,7 @@
             "regions": []
         },
         "recordId": "621",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -32755,7 +32108,7 @@
             ]
         },
         "recordId": "622",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -32844,7 +32197,7 @@
             "regions": []
         },
         "recordId": "623",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -32957,7 +32310,7 @@
             "regions": []
         },
         "recordId": "624",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -33057,7 +32410,7 @@
             "regions": []
         },
         "recordId": "625",
-        "modId": "71"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -33116,7 +32469,7 @@
             "regions": []
         },
         "recordId": "626",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -33198,7 +32551,7 @@
             "regions": []
         },
         "recordId": "627",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -33270,7 +32623,7 @@
             "regions": []
         },
         "recordId": "628",
-        "modId": "62"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -33345,7 +32698,7 @@
             "regions": []
         },
         "recordId": "630",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -33502,7 +32855,7 @@
             "regions": []
         },
         "recordId": "631",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -33596,7 +32949,7 @@
             "regions": []
         },
         "recordId": "632",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -33666,7 +33019,7 @@
             "regions": []
         },
         "recordId": "633",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -33772,7 +33125,7 @@
             "regions": []
         },
         "recordId": "634",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -33850,7 +33203,7 @@
             "regions": []
         },
         "recordId": "636",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -33922,7 +33275,7 @@
             "regions": []
         },
         "recordId": "637",
-        "modId": "62"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -34008,7 +33361,7 @@
             "regions": []
         },
         "recordId": "638",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -34080,7 +33433,7 @@
             "regions": []
         },
         "recordId": "639",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -34168,7 +33521,7 @@
             "regions": []
         },
         "recordId": "640",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -34266,7 +33619,7 @@
             ]
         },
         "recordId": "646",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -34345,7 +33698,7 @@
             ]
         },
         "recordId": "647",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -34415,7 +33768,7 @@
             "regions": []
         },
         "recordId": "650",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -34497,7 +33850,7 @@
             "regions": []
         },
         "recordId": "651",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -34597,7 +33950,7 @@
             "regions": []
         },
         "recordId": "652",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -34697,7 +34050,7 @@
             "regions": []
         },
         "recordId": "653",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -34779,7 +34132,7 @@
             "regions": []
         },
         "recordId": "654",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -34856,7 +34209,7 @@
             "regions": []
         },
         "recordId": "657",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -34915,7 +34268,7 @@
             "regions": []
         },
         "recordId": "658",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -35027,7 +34380,7 @@
             "regions": []
         },
         "recordId": "660",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -35106,7 +34459,7 @@
             "regions": []
         },
         "recordId": "662",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -35197,7 +34550,7 @@
             "regions": []
         },
         "recordId": "663",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -35296,7 +34649,7 @@
             "regions": []
         },
         "recordId": "665",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -35457,7 +34810,7 @@
             "regions": []
         },
         "recordId": "667",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -35544,7 +34897,7 @@
             ]
         },
         "recordId": "669",
-        "modId": "62"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -35622,7 +34975,7 @@
             "regions": []
         },
         "recordId": "670",
-        "modId": "70"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -35716,7 +35069,7 @@
             "regions": []
         },
         "recordId": "671",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -35775,7 +35128,7 @@
             "regions": []
         },
         "recordId": "672",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -36047,7 +35400,7 @@
             "regions": []
         },
         "recordId": "673",
-        "modId": "75"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -36134,7 +35487,7 @@
             "regions": []
         },
         "recordId": "677",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -36248,7 +35601,7 @@
             "regions": []
         },
         "recordId": "681",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -36344,7 +35697,7 @@
             "regions": []
         },
         "recordId": "682",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -36439,7 +35792,7 @@
             "regions": []
         },
         "recordId": "685",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -36538,7 +35891,7 @@
             "regions": []
         },
         "recordId": "687",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -36617,7 +35970,7 @@
             "regions": []
         },
         "recordId": "689",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -36701,7 +36054,7 @@
             "regions": []
         },
         "recordId": "690",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -36778,7 +36131,7 @@
             "regions": []
         },
         "recordId": "691",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -36874,7 +36227,7 @@
             "regions": []
         },
         "recordId": "692",
-        "modId": "73"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -36940,7 +36293,7 @@
             "regions": []
         },
         "recordId": "693",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -37010,7 +36363,7 @@
             "regions": []
         },
         "recordId": "694",
-        "modId": "64"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -37106,7 +36459,7 @@
             "regions": []
         },
         "recordId": "696",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -37195,7 +36548,7 @@
             "regions": []
         },
         "recordId": "697",
-        "modId": "62"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -37273,7 +36626,7 @@
             "regions": []
         },
         "recordId": "698",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -37288,7 +36641,7 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/25/2020",
             "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see the cases bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis (see case AT-2020-16/474). As par of this package, also an entrepreneurs' salary can be claimed. ",
+            "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see the cases bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis (see case [AT-2020-16/474](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_474.html)). As par of this package, also an entrepreneurs' salary can be claimed. ",
             "descriptionContentOfMeasure": "Eligible for the subsidy of fixed costs are those companies that fully meet the following conditions:\r \r* Companies that have their management or a permanent establishment in Austria\r* Companies that have to bear fixed costs from their operating activities in Austria\r* Companies that were healthy before the Corona crisis\r* Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r* Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.\r\rAmong the different components of fixed costs which can be subsidized, there is included an entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)",
             "descriptionUseOfMeasure": "Not known yet. ",
             "descriptionInvolvementOfSocialPartners": "",
@@ -37348,7 +36701,7 @@
             "regions": []
         },
         "recordId": "699",
-        "modId": "58"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -37458,7 +36811,7 @@
             ]
         },
         "recordId": "700",
-        "modId": "67"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -37523,7 +36876,7 @@
             "regions": []
         },
         "recordId": "701",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -37598,7 +36951,7 @@
             "regions": []
         },
         "recordId": "702",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -37678,7 +37031,7 @@
             "regions": []
         },
         "recordId": "703",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -37763,7 +37116,7 @@
             "regions": []
         },
         "recordId": "704",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -37843,7 +37196,7 @@
             "regions": []
         },
         "recordId": "705",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -37930,7 +37283,7 @@
             "regions": []
         },
         "recordId": "706",
-        "modId": "59"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -38002,7 +37355,7 @@
             "regions": []
         },
         "recordId": "709",
-        "modId": "55"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -38081,7 +37434,7 @@
             "regions": []
         },
         "recordId": "710",
-        "modId": "55"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -38146,7 +37499,7 @@
             "regions": []
         },
         "recordId": "714",
-        "modId": "68"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -38211,7 +37564,7 @@
             "regions": []
         },
         "recordId": "715",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -38276,7 +37629,7 @@
             "regions": []
         },
         "recordId": "716",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -38376,7 +37729,7 @@
             "regions": []
         },
         "recordId": "721",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -38466,7 +37819,7 @@
             "regions": []
         },
         "recordId": "722",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -38556,7 +37909,7 @@
             "regions": []
         },
         "recordId": "724",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -38646,7 +37999,7 @@
             "regions": []
         },
         "recordId": "725",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -38736,7 +38089,7 @@
             "regions": []
         },
         "recordId": "726",
-        "modId": "54"
+        "modId": "56"
     },
     {
         "fieldData": {
@@ -38801,7 +38154,7 @@
             "regions": []
         },
         "recordId": "727",
-        "modId": "52"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -38907,7 +38260,7 @@
             "regions": []
         },
         "recordId": "728",
-        "modId": "79"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -38979,7 +38332,7 @@
             "regions": []
         },
         "recordId": "729",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -39063,7 +38416,7 @@
             "regions": []
         },
         "recordId": "730",
-        "modId": "60"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -39190,7 +38543,7 @@
             "regions": []
         },
         "recordId": "732",
-        "modId": "66"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -39260,7 +38613,7 @@
             "regions": []
         },
         "recordId": "733",
-        "modId": "65"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -39354,7 +38707,7 @@
             "regions": []
         },
         "recordId": "734",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -39441,7 +38794,7 @@
             "regions": []
         },
         "recordId": "735",
-        "modId": "52"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -39525,7 +38878,7 @@
             "regions": []
         },
         "recordId": "737",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -39584,7 +38937,7 @@
             "regions": []
         },
         "recordId": "738",
-        "modId": "52"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -39654,7 +39007,7 @@
             "regions": []
         },
         "recordId": "739",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -39723,7 +39076,7 @@
             "regions": []
         },
         "recordId": "742",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -39795,7 +39148,7 @@
             "regions": []
         },
         "recordId": "743",
-        "modId": "63"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -39861,7 +39214,7 @@
             "regions": []
         },
         "recordId": "744",
-        "modId": "58"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -39961,7 +39314,7 @@
             "regions": []
         },
         "recordId": "745",
-        "modId": "59"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -40030,7 +39383,7 @@
             "regions": []
         },
         "recordId": "746",
-        "modId": "55"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -40101,7 +39454,7 @@
             "regions": []
         },
         "recordId": "747",
-        "modId": "61"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -40176,7 +39529,7 @@
             "regions": []
         },
         "recordId": "748",
-        "modId": "48"
+        "modId": "50"
     },
     {
         "fieldData": {
@@ -40270,7 +39623,7 @@
             "regions": []
         },
         "recordId": "749",
-        "modId": "53"
+        "modId": "55"
     },
     {
         "fieldData": {
@@ -40340,7 +39693,7 @@
             "regions": []
         },
         "recordId": "750",
-        "modId": "46"
+        "modId": "48"
     },
     {
         "fieldData": {
@@ -40422,7 +39775,7 @@
             "regions": []
         },
         "recordId": "752",
-        "modId": "48"
+        "modId": "50"
     },
     {
         "fieldData": {
@@ -40494,7 +39847,7 @@
             "regions": []
         },
         "recordId": "754",
-        "modId": "45"
+        "modId": "47"
     },
     {
         "fieldData": {
@@ -40565,7 +39918,7 @@
             "regions": []
         },
         "recordId": "755",
-        "modId": "55"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -40655,7 +40008,7 @@
             ]
         },
         "recordId": "757",
-        "modId": "54"
+        "modId": "56"
     },
     {
         "fieldData": {
@@ -40752,7 +40105,7 @@
             ]
         },
         "recordId": "758",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -40858,7 +40211,7 @@
             ]
         },
         "recordId": "759",
-        "modId": "49"
+        "modId": "51"
     },
     {
         "fieldData": {
@@ -40946,110 +40299,7 @@
             ]
         },
         "recordId": "761",
-        "modId": "55"
-    },
-    {
-        "fieldData": {
-            "title": "Additional support for the service voucher sector",
-            "title_nationalLanguage": "Bijkomende steun voor de dienstencheque sector",
-            "d_startDate": "05/01/2020",
-            "d_endDate": "05/31/2020",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "BE-2020-18/852",
-            "dateType": "Temporary",
-            "calc_creationDay": "05/14/2020",
-            "calc_lastUpdate": "05/20/2020",
-            "descriptionBackgroundInfo": "Domestic personnel of private households can be employed and payed via so called service vouchers (dienstencheque), a form of payment that is partially subsidized by the government. The service voucher sector and its employees are particularly vulnerable to the consequences of the Corona crisis. The nature of their jobs makes it difficult to maintain distance from their clients (who are probably at home due to the quasi lockdown). The remuneration in the sector is fairly low in general. If employees have to make use of temporary unemployment, which is a percentage of their wage, this could lead to financial problems for the employees.",
-            "descriptionContentOfMeasure": "The Walloon government has planned to increase the hourly allowance from 1 to 31 May in certain cases. For hours without services provided: all companies can claim an aid of \u20ac18 per hour per worker not benefiting from temporary unemployment (all requests will be processed on the basis of \u20ac18 instead of \u20ac14).\r\rFor hours with services provided: only companies with a maximum of 250 workers under a service voucher contract (declared to Sodexo during the first quarter of 2020) will be able to benefit from the reimbursement amounting up to \u20ac27 instead of \u20ac23.86 .\rThis reimbursement value applies for services which took place in the month of May.\r\rBrussels has also implemented some additional support measures specifically for the service voucher sector.\r\rThe automatic granting of flat-rate aid in the form of a lump sum of \u20ac4,000 to recognised service voucher companies.\r\rOn condition that they submit an application: the possibility for service voucher companies to financially support their employees who were placed in temporary unemployment as a result of Covid-19 measures. In particular, an additional \u20ac2.50 gross per declared hour of temporary unemployment\r\rTemporary increase of the amount of the regional intervention by \u20ac2 per service voucher offered at the issuing company for reimbursement.\r\rFlanders: From 16 March to 19 April, the regional contribution will be increased by \u20ac8.64. This means \u20ac23 instead of \u20ac14.36 per voucher. This increase in payment for the service voucher companies has to make up for the additional costs they have to provide protective materials for their personnel.\r\r\r",
-            "descriptionUseOfMeasure": "For Wallonia the total amount is currently unknown, as the uptake is up the individual company and workers.\r\rIn Brussels 3 of the 4 measures are applied automatically by data is currently unavailable about the uptake. Uptake on the measure that requires application is unknown as well.\r\rIn Flanders the measure applies to all service coucher companies.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-18_852.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "863",
-                    "sources::title": "Coronavirus: Measures for service voucher companie",
-                    "sources::url": "https://emploi.wallonie.be/en/home/news/page-content-inner/actualites/coronavirus--mesures-pour-les-entreprises-titres-services.html",
-                    "sources::d_date": "04/01/2020",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "878",
-                    "sources::title": "Brussels: Support measures for the Brussels service cheque economy.",
-                    "sources::url": "http://werk-economie-emploi.brussels/nl/dienstencheques-covid-19",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "879",
-                    "sources::title": "Flanders: service sector support measures",
-                    "sources::url": "https://www.vvsg.be/kennisitem/vvsg/dienstencheques-2",
-                    "sources::d_date": "05/12/2020",
-                    "modId": "1"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "7",
-                    "actors::name": "Local / regional government",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "8",
-                    "funding::name": "Regional funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "131",
-                    "sectors::code": "T97",
-                    "sectors::name": "Activities of households as employers of domestic personnel",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": [
-                {
-                    "recordId": "1826",
-                    "regions::countryCode": "BE",
-                    "regions::level": 1,
-                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
-                    "regions::nutsCode": "BE1",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "1829",
-                    "regions::countryCode": "BE",
-                    "regions::level": 1,
-                    "regions::name": "VLAAMS GEWEST",
-                    "regions::nutsCode": "BE2",
-                    "modId": "5"
-                }
-            ]
-        },
-        "recordId": "762",
-        "modId": "61"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -41158,7 +40408,7 @@
             "regions": []
         },
         "recordId": "763",
-        "modId": "47"
+        "modId": "49"
     },
     {
         "fieldData": {
@@ -41262,7 +40512,7 @@
             ]
         },
         "recordId": "765",
-        "modId": "56"
+        "modId": "58"
     },
     {
         "fieldData": {
@@ -41388,184 +40638,7 @@
             ]
         },
         "recordId": "769",
-        "modId": "52"
-    },
-    {
-        "fieldData": {
-            "title": "Corona parental leave",
-            "title_nationalLanguage": "Conge parental Corona",
-            "d_startDate": "05/01/2020",
-            "d_endDate": "06/30/2020",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
-            "calc_identifier": "BE-2020-18/860",
-            "dateType": "Temporary",
-            "calc_creationDay": "05/19/2020",
-            "calc_lastUpdate": "05/20/2020",
-            "descriptionBackgroundInfo": "A new parental leave called the Corona parental leave has been put in place in addition to the more traditional parental leave in order to help parents take care of their children during the Corona crisis and closure of schools. The Corona parental leave can be granted for 20% or 50% of full-time working-time. This law was voted on the 2 May and is applicable retro-actively to 1 May and covers the month of May and June. The reference is the arr\u00eat\u00e9 royal n\u00b0 23 du 13.05.2020 taken under article 5, \u00a71, 5\u00b0, of the law of  27 Mars 2020 with respect to the special measures to be taken to fight the coronavirus COVID-19 (II). ",
-            "descriptionContentOfMeasure": "The Corona parental leave is oriented towards parents (biological, foster and by adoption) with children aged 12 years or younger, or parents with children with disabilities 21 years or younger. The leave can be taken for 20 or 50% of full-time working. To benefit from the 20% reduction the parent should work full-time and to benefit from the 50% reduction the parent should work at least 75% of a full-time.  If an employed parent wishes to reduce their work by 100% or 10% they should apply for the traditional parental leave,  self-employed parents however can apply for a 100 percent reduction of work via the Corona parental leave.\r\rParents that have worked for 1 month in the private sector or 1 day in the public sector are eligible for the Corona parental leave. Parents that are self-employed as main activity are also eligible, but not if they are benefiting from the Bridge benefit (see elsewhere in the database).\r\rThe flat-rate benefit is 25% higher than the benefit for the traditional parental leave, for example \u20ac149,60 for a 20% reduction  as compared to \u20ac119,68 for the traditional parental leave for employed parents.  For the self-employed a 100% reduction is compensated by \u20ac532,24 a month, or \u20ac875 if single parent.\r",
-            "descriptionUseOfMeasure": "It is not known how many benefit or will benefit from the Corona parental leave at this stage.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-18_860.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "874",
-                    "sources::title": "Corona parental leave",
-                    "sources::url": "https://www.onem.be/sites/default/files/coronavirus/FAQ_CPC_FR_20200514.pdf",
-                    "sources::d_date": "05/14/2020",
-                    "modId": "1"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "69",
-                    "targetGroups::name": "Parents in employment",
-                    "modId": "8"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "770",
-        "modId": "49"
-    },
-    {
-        "fieldData": {
-            "title": "Creating incentives for unemployed to work in horticulture and other essential services and flexibilisation of successive fixed-term contracts",
-            "title_nationalLanguage": "Behouden van arbeidscapaciteit in horticulturele en kritieke sectoren",
-            "d_startDate": "03/27/2020",
-            "d_endDate": "06/30/2020",
-            "calc_country": "Belgium",
-            "calc_minorCategory": "Ensuring business continuity and support for essential services",
-            "calc_subMinorCategory": "Smoothing frictions or reallocation of workers",
-            "calc_identifier": "BE-2020-13/861",
-            "dateType": "Temporary",
-            "calc_creationDay": "05/20/2020",
-            "calc_lastUpdate": "05/21/2020",
-            "descriptionBackgroundInfo": "In the entire country there are exceptional rules and relaxation of existing regulations to allow additional earnings in the horticultural and forest sector. That sector is in high need of additional seasonal workers,yet there is a shortage, because of the closed borders, which resulted in a reduced inflow of foreign seasonal workers).\r\rThe Special Powers Decree No 14 of 27 April 2020 provides that during the period from 1 April 2020 to 30 June 2020, employers in critical sectors may conclude successive fixed-term employment contracts.",
-            "descriptionContentOfMeasure": "Workers on temporary unemployment benefits can work in the horticultural and forest sector and maintain 75% of their benefits in combination with that wage.\r\rSeveral short, consecutive temporary contracts would normally automatically be transformed into open-ended contracts. In order to avoid this, there is a relaxation in the rules governing these contracts because of the crisis in critical sectors.\r\rEmployers in critical sectors may conclude successive fixed-term employment contracts. for a minimum period of 7 days without an employment contract of indefinite duration. Normally these successive fixed-term contracts would be changed automatically into a contract of indefinite duration.\r",
-            "descriptionUseOfMeasure": "It is unclear (and probably too soon) to estimate the extent of the measures. The list of critical sectors is however quite long, so in theory the possibility to create successive contracts applies to quite a large group.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-13_861.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "875",
-                    "sources::title": "Ministerial decree",
-                    "sources::url": "http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2020032301",
-                    "sources::d_date": "03/23/2020",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "876",
-                    "sources::title": "Federal unemployment services: overtime in critical sectors",
-                    "sources::url": "https://www.rva.be/nl/burgers/loopbaanonderbreking-tijdskrediet-en-thematische-verloven/faq/inlichtingen-verband-met-het-coronavirus/3-kan-ik-bijkomende-uren-en-overuren-presteren-door-het-coronavirus",
-                    "sources::d_date": "03/13/2020",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "877",
-                    "sources::title": "Additional measures in horticultural sector",
-                    "sources::url": "https://www.boerenbond.be/actualiteit/inzet-van-arbeid-de-overheid-komt-de-land-en-tuinbouw-te-hulp",
-                    "sources::d_date": "04/11/2020",
-                    "modId": "1"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "48",
-                    "targetGroups::name": "Seasonal workers",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "27",
-                    "sectors::code": "A1",
-                    "sectors::name": "Crop and animal production, hunting and related service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "28",
-                    "sectors::code": "A2",
-                    "sectors::name": "Forestry and logging",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "771",
-        "modId": "49"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -41665,7 +40738,7 @@
             "regions": []
         },
         "recordId": "775",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -41745,7 +40818,7 @@
             "regions": []
         },
         "recordId": "784",
-        "modId": "44"
+        "modId": "46"
     },
     {
         "fieldData": {
@@ -41815,7 +40888,7 @@
             "regions": []
         },
         "recordId": "788",
-        "modId": "45"
+        "modId": "47"
     },
     {
         "fieldData": {
@@ -41897,7 +40970,7 @@
             "regions": []
         },
         "recordId": "790",
-        "modId": "43"
+        "modId": "45"
     },
     {
         "fieldData": {
@@ -42017,6 +41090,6 @@
             ]
         },
         "recordId": "791",
-        "modId": "54"
+        "modId": "56"
     }
 ]
