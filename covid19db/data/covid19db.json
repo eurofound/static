@@ -119,7 +119,7 @@
             "regions": []
         },
         "recordId": "95",
-        "modId": "115"
+        "modId": "116"
     },
     {
         "fieldData": {
@@ -227,7 +227,7 @@
             "regions": []
         },
         "recordId": "96",
-        "modId": "107"
+        "modId": "108"
     },
     {
         "fieldData": {
@@ -320,7 +320,7 @@
             "regions": []
         },
         "recordId": "97",
-        "modId": "100"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -404,7 +404,7 @@
             "regions": []
         },
         "recordId": "98",
-        "modId": "94"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -500,7 +500,7 @@
             "regions": []
         },
         "recordId": "99",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -587,7 +587,7 @@
             "regions": []
         },
         "recordId": "100",
-        "modId": "98"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -676,7 +676,7 @@
             "regions": []
         },
         "recordId": "101",
-        "modId": "95"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -753,7 +753,7 @@
             "regions": []
         },
         "recordId": "102",
-        "modId": "95"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -835,7 +835,7 @@
             "regions": []
         },
         "recordId": "104",
-        "modId": "104"
+        "modId": "105"
     },
     {
         "fieldData": {
@@ -919,7 +919,7 @@
             "regions": []
         },
         "recordId": "105",
-        "modId": "108"
+        "modId": "109"
     },
     {
         "fieldData": {
@@ -989,7 +989,7 @@
             "regions": []
         },
         "recordId": "106",
-        "modId": "102"
+        "modId": "103"
     },
     {
         "fieldData": {
@@ -1090,7 +1090,7 @@
             "regions": []
         },
         "recordId": "107",
-        "modId": "116"
+        "modId": "117"
     },
     {
         "fieldData": {
@@ -1193,7 +1193,7 @@
             "regions": []
         },
         "recordId": "112",
-        "modId": "103"
+        "modId": "104"
     },
     {
         "fieldData": {
@@ -1306,7 +1306,7 @@
             "regions": []
         },
         "recordId": "137",
-        "modId": "109"
+        "modId": "110"
     },
     {
         "fieldData": {
@@ -1395,7 +1395,7 @@
             "regions": []
         },
         "recordId": "139",
-        "modId": "107"
+        "modId": "108"
     },
     {
         "fieldData": {
@@ -1491,7 +1491,7 @@
             "regions": []
         },
         "recordId": "141",
-        "modId": "97"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -1614,7 +1614,7 @@
             "regions": []
         },
         "recordId": "144",
-        "modId": "101"
+        "modId": "102"
     },
     {
         "fieldData": {
@@ -1703,7 +1703,7 @@
             "regions": []
         },
         "recordId": "146",
-        "modId": "95"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -1762,13 +1762,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -1891,7 +1885,7 @@
             "regions": []
         },
         "recordId": "147",
-        "modId": "111"
+        "modId": "114"
     },
     {
         "fieldData": {
@@ -1973,7 +1967,7 @@
             "regions": []
         },
         "recordId": "148",
-        "modId": "97"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -2060,7 +2054,7 @@
             "regions": []
         },
         "recordId": "150",
-        "modId": "101"
+        "modId": "102"
     },
     {
         "fieldData": {
@@ -2142,7 +2136,7 @@
             "regions": []
         },
         "recordId": "152",
-        "modId": "109"
+        "modId": "110"
     },
     {
         "fieldData": {
@@ -2217,7 +2211,7 @@
             "regions": []
         },
         "recordId": "155",
-        "modId": "92"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -2292,7 +2286,7 @@
             "regions": []
         },
         "recordId": "156",
-        "modId": "93"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -2344,11 +2338,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "72",
                     "targetGroups::name": "Disabled workers",
                     "modId": "9"
@@ -2367,7 +2356,7 @@
             "regions": []
         },
         "recordId": "157",
-        "modId": "97"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -2419,11 +2408,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "71",
                     "targetGroups::name": "The COVID-19 risk group at the workplace",
                     "modId": "8"
@@ -2442,7 +2426,7 @@
             "regions": []
         },
         "recordId": "158",
-        "modId": "95"
+        "modId": "97"
     },
     {
         "fieldData": {
@@ -2492,13 +2476,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -2512,7 +2490,7 @@
             "regions": []
         },
         "recordId": "159",
-        "modId": "101"
+        "modId": "104"
     },
     {
         "fieldData": {
@@ -2582,7 +2560,7 @@
             "regions": []
         },
         "recordId": "160",
-        "modId": "95"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -2657,7 +2635,7 @@
             "regions": []
         },
         "recordId": "161",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -2716,13 +2694,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "11",
@@ -2736,7 +2708,7 @@
             "regions": []
         },
         "recordId": "163",
-        "modId": "89"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -2781,18 +2753,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -2806,7 +2767,7 @@
             "regions": []
         },
         "recordId": "165",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -2858,13 +2819,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -2878,7 +2833,7 @@
             "regions": []
         },
         "recordId": "166",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -3010,7 +2965,7 @@
             ]
         },
         "recordId": "167",
-        "modId": "100"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -3055,23 +3010,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -3085,7 +3024,7 @@
             "regions": []
         },
         "recordId": "170",
-        "modId": "96"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -3151,7 +3090,7 @@
             "regions": []
         },
         "recordId": "171",
-        "modId": "107"
+        "modId": "108"
     },
     {
         "fieldData": {
@@ -3217,7 +3156,7 @@
             "regions": []
         },
         "recordId": "172",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -3316,7 +3255,7 @@
             "regions": []
         },
         "recordId": "178",
-        "modId": "125"
+        "modId": "126"
     },
     {
         "fieldData": {
@@ -3406,7 +3345,7 @@
             "regions": []
         },
         "recordId": "179",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -3506,7 +3445,7 @@
             "regions": []
         },
         "recordId": "180",
-        "modId": "92"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -3596,7 +3535,7 @@
             "regions": []
         },
         "recordId": "181",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -3667,11 +3606,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "69",
                     "targetGroups::name": "Parents in employment",
                     "modId": "8"
@@ -3690,7 +3624,7 @@
             "regions": []
         },
         "recordId": "182",
-        "modId": "87"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -3777,7 +3711,7 @@
             "regions": []
         },
         "recordId": "183",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -3869,7 +3803,7 @@
             "regions": []
         },
         "recordId": "184",
-        "modId": "85"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -3949,7 +3883,7 @@
             "regions": []
         },
         "recordId": "186",
-        "modId": "92"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -4064,7 +3998,7 @@
             "regions": []
         },
         "recordId": "187",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -4278,7 +4212,7 @@
             "regions": []
         },
         "recordId": "188",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -4343,7 +4277,7 @@
             "regions": []
         },
         "recordId": "189",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -4437,7 +4371,7 @@
             "regions": []
         },
         "recordId": "190",
-        "modId": "94"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -4517,7 +4451,7 @@
             "regions": []
         },
         "recordId": "191",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -4572,13 +4506,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -4592,7 +4520,7 @@
             "regions": []
         },
         "recordId": "192",
-        "modId": "80"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -4659,13 +4587,7 @@
                     "modId": "0"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "1",
@@ -4689,7 +4611,7 @@
             "regions": []
         },
         "recordId": "194",
-        "modId": "88"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -4779,7 +4701,7 @@
             "regions": []
         },
         "recordId": "195",
-        "modId": "90"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -4839,13 +4761,7 @@
                     "modId": "0"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -4859,7 +4775,7 @@
             "regions": []
         },
         "recordId": "196",
-        "modId": "89"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -4939,7 +4855,7 @@
             "regions": []
         },
         "recordId": "197",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -5037,7 +4953,7 @@
             "regions": []
         },
         "recordId": "199",
-        "modId": "92"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -5106,7 +5022,7 @@
             "regions": []
         },
         "recordId": "200",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -5201,7 +5117,7 @@
             "regions": []
         },
         "recordId": "202",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -5299,7 +5215,7 @@
             "regions": []
         },
         "recordId": "203",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -5372,7 +5288,7 @@
             "regions": []
         },
         "recordId": "204",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -5464,7 +5380,7 @@
             "regions": []
         },
         "recordId": "205",
-        "modId": "92"
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -5561,7 +5477,7 @@
             "regions": []
         },
         "recordId": "209",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -5668,7 +5584,7 @@
             "regions": []
         },
         "recordId": "211",
-        "modId": "90"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -5748,7 +5664,7 @@
             "regions": []
         },
         "recordId": "213",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -5850,7 +5766,7 @@
             "regions": []
         },
         "recordId": "214",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -5952,7 +5868,7 @@
             "regions": []
         },
         "recordId": "219",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -6037,7 +5953,7 @@
             "regions": []
         },
         "recordId": "220",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -6107,7 +6023,7 @@
             "regions": []
         },
         "recordId": "221",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -6187,7 +6103,7 @@
             "regions": []
         },
         "recordId": "224",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -6263,7 +6179,7 @@
             "regions": []
         },
         "recordId": "225",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -6388,7 +6304,7 @@
             "regions": []
         },
         "recordId": "226",
-        "modId": "94"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -6488,7 +6404,7 @@
             "regions": []
         },
         "recordId": "227",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -6560,7 +6476,7 @@
             "regions": []
         },
         "recordId": "228",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -6662,7 +6578,7 @@
             "regions": []
         },
         "recordId": "229",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -6764,7 +6680,7 @@
             "regions": []
         },
         "recordId": "230",
-        "modId": "85"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -6849,7 +6765,7 @@
             "regions": []
         },
         "recordId": "231",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -6933,7 +6849,7 @@
             "regions": []
         },
         "recordId": "232",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -7003,7 +6919,7 @@
             "regions": []
         },
         "recordId": "233",
-        "modId": "85"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -7083,7 +6999,7 @@
             "regions": []
         },
         "recordId": "243",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -7164,7 +7080,7 @@
             "regions": []
         },
         "recordId": "244",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -7228,7 +7144,7 @@
             "regions": []
         },
         "recordId": "245",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -7311,7 +7227,7 @@
             "regions": []
         },
         "recordId": "246",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -7398,7 +7314,7 @@
             "regions": []
         },
         "recordId": "250",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -7589,7 +7505,7 @@
             "regions": []
         },
         "recordId": "252",
-        "modId": "100"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -7673,7 +7589,7 @@
             "regions": []
         },
         "recordId": "253",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -7755,7 +7671,7 @@
             "regions": []
         },
         "recordId": "254",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -7832,7 +7748,7 @@
             "regions": []
         },
         "recordId": "257",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -7954,7 +7870,7 @@
             "regions": []
         },
         "recordId": "258",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -8020,7 +7936,7 @@
             "regions": []
         },
         "recordId": "259",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -8103,7 +8019,7 @@
             "regions": []
         },
         "recordId": "260",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -8202,7 +8118,7 @@
             "regions": []
         },
         "recordId": "261",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -8277,7 +8193,7 @@
             "regions": []
         },
         "recordId": "263",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -8374,7 +8290,7 @@
             "regions": []
         },
         "recordId": "264",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -8462,7 +8378,7 @@
             "regions": []
         },
         "recordId": "265",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -8532,7 +8448,7 @@
             "regions": []
         },
         "recordId": "266",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -8626,7 +8542,7 @@
             "regions": []
         },
         "recordId": "268",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -8676,23 +8592,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -8706,7 +8606,7 @@
             "regions": []
         },
         "recordId": "269",
-        "modId": "90"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -8783,7 +8683,7 @@
             "regions": []
         },
         "recordId": "270",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -8865,7 +8765,7 @@
             "regions": []
         },
         "recordId": "272",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -8950,7 +8850,7 @@
             "regions": []
         },
         "recordId": "273",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -9034,7 +8934,7 @@
             "regions": []
         },
         "recordId": "275",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -9107,7 +9007,7 @@
             "regions": []
         },
         "recordId": "276",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -9182,7 +9082,7 @@
             "regions": []
         },
         "recordId": "278",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -9252,7 +9152,7 @@
             "regions": []
         },
         "recordId": "279",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -9397,7 +9297,7 @@
             "regions": []
         },
         "recordId": "280",
-        "modId": "118"
+        "modId": "119"
     },
     {
         "fieldData": {
@@ -9492,7 +9392,7 @@
             ]
         },
         "recordId": "281",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -9607,7 +9507,7 @@
             "regions": []
         },
         "recordId": "282",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -9701,7 +9601,7 @@
             "regions": []
         },
         "recordId": "283",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -9771,7 +9671,7 @@
             "regions": []
         },
         "recordId": "286",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -9846,7 +9746,7 @@
             "regions": []
         },
         "recordId": "288",
-        "modId": "79"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -9891,13 +9791,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -9911,7 +9805,7 @@
             "regions": []
         },
         "recordId": "289",
-        "modId": "81"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -9971,48 +9865,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "64",
-                    "targetGroups::name": "Larger corporations",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -10026,7 +9879,7 @@
             "regions": []
         },
         "recordId": "292",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -10103,7 +9956,7 @@
             "regions": []
         },
         "recordId": "293",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -10179,7 +10032,7 @@
             "regions": []
         },
         "recordId": "294",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -10256,7 +10109,7 @@
             "regions": []
         },
         "recordId": "295",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -10322,7 +10175,7 @@
             "regions": []
         },
         "recordId": "297",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -10391,7 +10244,7 @@
             "regions": []
         },
         "recordId": "298",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -10471,7 +10324,7 @@
             "regions": []
         },
         "recordId": "299",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -10540,7 +10393,7 @@
             "regions": []
         },
         "recordId": "300",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -10611,7 +10464,7 @@
             "regions": []
         },
         "recordId": "301",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -10686,7 +10539,7 @@
             "regions": []
         },
         "recordId": "302",
-        "modId": "96"
+        "modId": "97"
     },
     {
         "fieldData": {
@@ -10776,7 +10629,7 @@
             "regions": []
         },
         "recordId": "303",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -10867,7 +10720,7 @@
             "regions": []
         },
         "recordId": "304",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -10978,7 +10831,7 @@
             "regions": []
         },
         "recordId": "305",
-        "modId": "95"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -11069,7 +10922,7 @@
             ]
         },
         "recordId": "309",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -11181,7 +11034,7 @@
             "regions": []
         },
         "recordId": "311",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -11246,7 +11099,7 @@
             "regions": []
         },
         "recordId": "312",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -11368,7 +11221,7 @@
             ]
         },
         "recordId": "313",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -11495,7 +11348,7 @@
             ]
         },
         "recordId": "314",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -11572,7 +11425,7 @@
             "regions": []
         },
         "recordId": "316",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -11686,7 +11539,7 @@
             "regions": []
         },
         "recordId": "317",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -11822,7 +11675,7 @@
             "regions": []
         },
         "recordId": "318",
-        "modId": "94"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -11909,7 +11762,7 @@
             "regions": []
         },
         "recordId": "319",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -11994,7 +11847,7 @@
             "regions": []
         },
         "recordId": "320",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -12059,7 +11912,7 @@
             "regions": []
         },
         "recordId": "321",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -12149,7 +12002,7 @@
             "regions": []
         },
         "recordId": "323",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -12218,7 +12071,7 @@
             "regions": []
         },
         "recordId": "324",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -12288,7 +12141,7 @@
             "regions": []
         },
         "recordId": "325",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -12363,7 +12216,7 @@
             "regions": []
         },
         "recordId": "326",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -12448,7 +12301,7 @@
             "regions": []
         },
         "recordId": "327",
-        "modId": "90"
+        "modId": "91"
     },
     {
         "fieldData": {
@@ -12539,7 +12392,7 @@
             "regions": []
         },
         "recordId": "329",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -12644,7 +12497,7 @@
             "regions": []
         },
         "recordId": "330",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -12746,7 +12599,7 @@
             "regions": []
         },
         "recordId": "332",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -12841,7 +12694,7 @@
             "regions": []
         },
         "recordId": "333",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -12912,7 +12765,7 @@
             "regions": []
         },
         "recordId": "334",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -12992,7 +12845,7 @@
             "regions": []
         },
         "recordId": "335",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -13085,7 +12938,7 @@
             "regions": []
         },
         "recordId": "336",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -13171,7 +13024,7 @@
             "regions": []
         },
         "recordId": "337",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -13242,7 +13095,7 @@
             "regions": []
         },
         "recordId": "338",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -13336,7 +13189,7 @@
             "regions": []
         },
         "recordId": "339",
-        "modId": "98"
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -13401,7 +13254,7 @@
             "regions": []
         },
         "recordId": "340",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -13471,7 +13324,7 @@
             "regions": []
         },
         "recordId": "341",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -13567,7 +13420,7 @@
             "regions": []
         },
         "recordId": "342",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -13632,7 +13485,7 @@
             "regions": []
         },
         "recordId": "343",
-        "modId": "87"
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -13725,7 +13578,7 @@
             "regions": []
         },
         "recordId": "344",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -13770,13 +13623,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "42",
-                    "targetGroups::name": "The COVID-19 risk group",
-                    "modId": "14"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -13790,7 +13637,7 @@
             "regions": []
         },
         "recordId": "346",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -13883,7 +13730,7 @@
             "regions": []
         },
         "recordId": "348",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -13988,7 +13835,7 @@
             "regions": []
         },
         "recordId": "352",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -14117,7 +13964,7 @@
             "regions": []
         },
         "recordId": "353",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -14196,7 +14043,7 @@
             "regions": []
         },
         "recordId": "354",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -14278,7 +14125,7 @@
             "regions": []
         },
         "recordId": "355",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -14357,7 +14204,7 @@
             "regions": []
         },
         "recordId": "359",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -14426,7 +14273,7 @@
             "regions": []
         },
         "recordId": "360",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -14503,7 +14350,7 @@
             "regions": []
         },
         "recordId": "361",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -14578,7 +14425,7 @@
             "regions": []
         },
         "recordId": "364",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -14695,7 +14542,7 @@
             "regions": []
         },
         "recordId": "365",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -14792,7 +14639,7 @@
             "regions": []
         },
         "recordId": "366",
-        "modId": "89"
+        "modId": "90"
     },
     {
         "fieldData": {
@@ -14862,7 +14709,7 @@
             "regions": []
         },
         "recordId": "368",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -14963,7 +14810,7 @@
             "regions": []
         },
         "recordId": "369",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -15022,7 +14869,7 @@
             "regions": []
         },
         "recordId": "370",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -15092,7 +14939,7 @@
             "regions": []
         },
         "recordId": "371",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -15179,7 +15026,7 @@
             "regions": []
         },
         "recordId": "372",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -15288,7 +15135,7 @@
             "regions": []
         },
         "recordId": "373",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -15379,7 +15226,7 @@
             "regions": []
         },
         "recordId": "375",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -15449,7 +15296,7 @@
             "regions": []
         },
         "recordId": "376",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -15524,7 +15371,7 @@
             "regions": []
         },
         "recordId": "377",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -15571,16 +15418,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "69",
                     "targetGroups::name": "Parents in employment",
                     "modId": "8"
@@ -15599,7 +15436,7 @@
             "regions": []
         },
         "recordId": "378",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -15664,7 +15501,7 @@
             "regions": []
         },
         "recordId": "379",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -15734,7 +15571,7 @@
             "regions": []
         },
         "recordId": "380",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -15814,7 +15651,7 @@
             "regions": []
         },
         "recordId": "381",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -15894,7 +15731,7 @@
             "regions": []
         },
         "recordId": "382",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -15966,7 +15803,7 @@
             "regions": []
         },
         "recordId": "383",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -16103,7 +15940,7 @@
             "regions": []
         },
         "recordId": "385",
-        "modId": "114"
+        "modId": "115"
     },
     {
         "fieldData": {
@@ -16162,7 +15999,7 @@
             "regions": []
         },
         "recordId": "386",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -16231,11 +16068,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "48",
-                    "targetGroups::name": "Seasonal workers",
-                    "modId": "14"
                 }
             ],
             "funding": [
@@ -16280,7 +16112,7 @@
             "regions": []
         },
         "recordId": "387",
-        "modId": "84"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -16358,7 +16190,7 @@
             "regions": []
         },
         "recordId": "388",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -16436,7 +16268,7 @@
             "regions": []
         },
         "recordId": "389",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -16518,7 +16350,7 @@
             "regions": []
         },
         "recordId": "390",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -16608,7 +16440,7 @@
             "regions": []
         },
         "recordId": "391",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -16702,7 +16534,7 @@
             "regions": []
         },
         "recordId": "392",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -16754,11 +16586,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -16777,7 +16604,7 @@
             "regions": []
         },
         "recordId": "393",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -16846,7 +16673,7 @@
             "regions": []
         },
         "recordId": "394",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -16926,7 +16753,7 @@
             "regions": []
         },
         "recordId": "395",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -17006,7 +16833,7 @@
             "regions": []
         },
         "recordId": "396",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -17120,7 +16947,7 @@
             "regions": []
         },
         "recordId": "400",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -17202,7 +17029,7 @@
             "regions": []
         },
         "recordId": "402",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -17297,7 +17124,7 @@
             "regions": []
         },
         "recordId": "404",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17369,7 +17196,7 @@
             "regions": []
         },
         "recordId": "405",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -17441,7 +17268,7 @@
             "regions": []
         },
         "recordId": "407",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -17529,7 +17356,7 @@
             "regions": []
         },
         "recordId": "409",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -17604,7 +17431,7 @@
             "regions": []
         },
         "recordId": "410",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -17676,7 +17503,7 @@
             "regions": []
         },
         "recordId": "412",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -17769,7 +17596,7 @@
             "regions": []
         },
         "recordId": "413",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -17841,7 +17668,7 @@
             "regions": []
         },
         "recordId": "415",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -17895,16 +17722,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "46",
-                    "targetGroups::name": "Migrants",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
-                },
-                {
                     "recordId": "75",
                     "targetGroups::name": "Migrants in employment",
                     "modId": "8"
@@ -17923,7 +17740,7 @@
             "regions": []
         },
         "recordId": "416",
-        "modId": "95"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -17968,18 +17785,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -17993,7 +17799,7 @@
             "regions": []
         },
         "recordId": "417",
-        "modId": "93"
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -18091,7 +17897,7 @@
             "regions": []
         },
         "recordId": "419",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -18156,7 +17962,7 @@
             "regions": []
         },
         "recordId": "420",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -18208,11 +18014,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -18231,7 +18032,7 @@
             "regions": []
         },
         "recordId": "422",
-        "modId": "85"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -18321,7 +18122,7 @@
             "regions": []
         },
         "recordId": "423",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -18393,7 +18194,7 @@
             "regions": []
         },
         "recordId": "424",
-        "modId": "76"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -18459,7 +18260,7 @@
             "regions": []
         },
         "recordId": "425",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -18549,7 +18350,7 @@
             "regions": []
         },
         "recordId": "426",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -18670,7 +18471,7 @@
             "regions": []
         },
         "recordId": "427",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -18759,7 +18560,7 @@
             "regions": []
         },
         "recordId": "428",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -18829,7 +18630,7 @@
             "regions": []
         },
         "recordId": "430",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -18906,7 +18707,7 @@
             "regions": []
         },
         "recordId": "431",
-        "modId": "89"
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -18996,7 +18797,7 @@
             "regions": []
         },
         "recordId": "432",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -19071,7 +18872,7 @@
             "regions": []
         },
         "recordId": "433",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -19157,7 +18958,7 @@
             ]
         },
         "recordId": "435",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -19264,7 +19065,7 @@
             "regions": []
         },
         "recordId": "436",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -19341,7 +19142,7 @@
             "regions": []
         },
         "recordId": "437",
-        "modId": "94"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -19391,18 +19192,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "32",
-                    "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -19421,7 +19211,7 @@
             "regions": []
         },
         "recordId": "438",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -19496,7 +19286,7 @@
             "regions": []
         },
         "recordId": "439",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -19573,7 +19363,7 @@
             "regions": []
         },
         "recordId": "441",
-        "modId": "83"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -19642,7 +19432,7 @@
             "regions": []
         },
         "recordId": "442",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -19735,7 +19525,7 @@
             ]
         },
         "recordId": "443",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -19829,7 +19619,7 @@
             "regions": []
         },
         "recordId": "444",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -19879,18 +19669,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -19904,7 +19683,7 @@
             "regions": []
         },
         "recordId": "445",
-        "modId": "82"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -19989,7 +19768,7 @@
             "regions": []
         },
         "recordId": "446",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -20069,7 +19848,7 @@
             "regions": []
         },
         "recordId": "447",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -20151,7 +19930,7 @@
             "regions": []
         },
         "recordId": "448",
-        "modId": "73"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -20229,7 +20008,7 @@
             "regions": []
         },
         "recordId": "449",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -20306,7 +20085,7 @@
             "regions": []
         },
         "recordId": "450",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -20391,7 +20170,7 @@
             "regions": []
         },
         "recordId": "451",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -20468,7 +20247,7 @@
             "regions": []
         },
         "recordId": "452",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -20539,7 +20318,7 @@
             "regions": []
         },
         "recordId": "453",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -20619,7 +20398,7 @@
             "regions": []
         },
         "recordId": "454",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -20708,7 +20487,7 @@
             "regions": []
         },
         "recordId": "455",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -20790,7 +20569,7 @@
             "regions": []
         },
         "recordId": "457",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -20953,7 +20732,7 @@
             "regions": []
         },
         "recordId": "458",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -21023,7 +20802,7 @@
             "regions": []
         },
         "recordId": "459",
-        "modId": "82"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -21098,7 +20877,7 @@
             "regions": []
         },
         "recordId": "460",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -21162,7 +20941,7 @@
             "regions": []
         },
         "recordId": "461",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -21247,7 +21026,7 @@
             "regions": []
         },
         "recordId": "462",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -21331,7 +21110,7 @@
             ]
         },
         "recordId": "464",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -21406,7 +21185,7 @@
             "regions": []
         },
         "recordId": "465",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -21476,7 +21255,7 @@
             "regions": []
         },
         "recordId": "466",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -21541,7 +21320,7 @@
             "regions": []
         },
         "recordId": "467",
-        "modId": "77"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -21626,7 +21405,7 @@
             "regions": []
         },
         "recordId": "468",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -21671,13 +21450,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -21691,7 +21464,7 @@
             "regions": []
         },
         "recordId": "470",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -21767,7 +21540,7 @@
             "regions": []
         },
         "recordId": "471",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -21814,11 +21587,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "12"
@@ -21837,7 +21605,7 @@
             "regions": []
         },
         "recordId": "472",
-        "modId": "74"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -21921,7 +21689,7 @@
             "regions": []
         },
         "recordId": "473",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -21966,13 +21734,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -21986,7 +21748,7 @@
             "regions": []
         },
         "recordId": "474",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -22082,7 +21844,7 @@
             "regions": []
         },
         "recordId": "475",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -22197,7 +21959,7 @@
             "regions": []
         },
         "recordId": "476",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -22269,7 +22031,7 @@
             "regions": []
         },
         "recordId": "477",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -22314,13 +22076,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -22334,7 +22090,7 @@
             "regions": []
         },
         "recordId": "478",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -22446,7 +22202,7 @@
             "regions": []
         },
         "recordId": "479",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -22503,13 +22259,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "1",
@@ -22523,7 +22273,7 @@
             "regions": []
         },
         "recordId": "480",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -22593,7 +22343,7 @@
             "regions": []
         },
         "recordId": "481",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -22682,7 +22432,7 @@
             "regions": []
         },
         "recordId": "483",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -22779,7 +22529,7 @@
             "regions": []
         },
         "recordId": "486",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -22831,18 +22581,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -22856,7 +22595,7 @@
             "regions": []
         },
         "recordId": "487",
-        "modId": "76"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -22928,7 +22667,7 @@
             "regions": []
         },
         "recordId": "488",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -22998,7 +22737,7 @@
             "regions": []
         },
         "recordId": "489",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -23070,7 +22809,7 @@
             "regions": []
         },
         "recordId": "490",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -23136,7 +22875,7 @@
             "regions": []
         },
         "recordId": "491",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -23216,7 +22955,7 @@
             "regions": []
         },
         "recordId": "492",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -23281,7 +23020,7 @@
             "regions": []
         },
         "recordId": "493",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -23351,7 +23090,7 @@
             "regions": []
         },
         "recordId": "494",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -23421,7 +23160,7 @@
             "regions": []
         },
         "recordId": "495",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -23468,11 +23207,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -23491,7 +23225,7 @@
             "regions": []
         },
         "recordId": "496",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -23538,11 +23272,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -23561,7 +23290,7 @@
             "regions": []
         },
         "recordId": "497",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -23613,11 +23342,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -23636,7 +23360,7 @@
             "regions": []
         },
         "recordId": "498",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -23716,7 +23440,7 @@
             "regions": []
         },
         "recordId": "500",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -23773,11 +23497,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -23796,7 +23515,7 @@
             "regions": []
         },
         "recordId": "501",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -23866,7 +23585,7 @@
             "regions": []
         },
         "recordId": "503",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -23918,33 +23637,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -23958,7 +23651,7 @@
             "regions": []
         },
         "recordId": "504",
-        "modId": "78"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -24036,7 +23729,7 @@
             "regions": []
         },
         "recordId": "508",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -24102,7 +23795,7 @@
             "regions": []
         },
         "recordId": "509",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -24182,7 +23875,7 @@
             "regions": []
         },
         "recordId": "510",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -24264,7 +23957,7 @@
             "regions": []
         },
         "recordId": "511",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -24333,7 +24026,7 @@
             "regions": []
         },
         "recordId": "512",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -24419,7 +24112,7 @@
             "regions": []
         },
         "recordId": "513",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -24489,7 +24182,7 @@
             "regions": []
         },
         "recordId": "514",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -24550,6 +24243,11 @@
             ],
             "targetGroups": [
                 {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
                     "recordId": "34",
                     "targetGroups::name": "Platform workers",
                     "modId": "14"
@@ -24573,7 +24271,7 @@
             "regions": []
         },
         "recordId": "515",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -24667,7 +24365,7 @@
             "regions": []
         },
         "recordId": "516",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -24740,7 +24438,7 @@
             "regions": []
         },
         "recordId": "518",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -24835,7 +24533,7 @@
             "regions": []
         },
         "recordId": "519",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -24970,7 +24668,7 @@
             "regions": []
         },
         "recordId": "520",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -25034,7 +24732,7 @@
             "regions": []
         },
         "recordId": "521",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -25161,7 +24859,7 @@
             "regions": []
         },
         "recordId": "522",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -25248,7 +24946,7 @@
             "regions": []
         },
         "recordId": "524",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -25327,7 +25025,7 @@
             "regions": []
         },
         "recordId": "525",
-        "modId": "76"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -25397,7 +25095,7 @@
             "regions": []
         },
         "recordId": "527",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -25484,7 +25182,7 @@
             "regions": []
         },
         "recordId": "528",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -25549,7 +25247,7 @@
             "regions": []
         },
         "recordId": "530",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -25676,7 +25374,7 @@
             "regions": []
         },
         "recordId": "531",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -25756,7 +25454,7 @@
             "regions": []
         },
         "recordId": "532",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -25971,7 +25669,7 @@
             "regions": []
         },
         "recordId": "534",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -26030,7 +25728,7 @@
             "regions": []
         },
         "recordId": "536",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -26110,7 +25808,7 @@
             "regions": []
         },
         "recordId": "537",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -26164,11 +25862,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -26187,7 +25880,7 @@
             "regions": []
         },
         "recordId": "538",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -26259,7 +25952,7 @@
             "regions": []
         },
         "recordId": "539",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -26352,7 +26045,7 @@
             "regions": []
         },
         "recordId": "540",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -26423,18 +26116,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "1",
@@ -26455,7 +26137,7 @@
             "regions": []
         },
         "recordId": "541",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -26521,7 +26203,7 @@
             "regions": []
         },
         "recordId": "542",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -26599,7 +26281,7 @@
             "regions": []
         },
         "recordId": "543",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -26740,7 +26422,7 @@
             "regions": []
         },
         "recordId": "544",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -26923,7 +26605,7 @@
             "regions": []
         },
         "recordId": "545",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -26990,13 +26672,8 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "48",
-                    "targetGroups::name": "Seasonal workers",
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
                     "modId": "14"
                 }
             ],
@@ -27020,7 +26697,7 @@
             "regions": []
         },
         "recordId": "546",
-        "modId": "72"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -27095,7 +26772,7 @@
             "regions": []
         },
         "recordId": "547",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -27182,7 +26859,7 @@
             "regions": []
         },
         "recordId": "550",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -27247,7 +26924,7 @@
             "regions": []
         },
         "recordId": "551",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -27317,7 +26994,7 @@
             "regions": []
         },
         "recordId": "553",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -27397,7 +27074,7 @@
             "regions": []
         },
         "recordId": "554",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -27467,7 +27144,7 @@
             "regions": []
         },
         "recordId": "555",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -27532,7 +27209,7 @@
             "regions": []
         },
         "recordId": "556",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -27591,7 +27268,7 @@
             "regions": []
         },
         "recordId": "557",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -27687,7 +27364,7 @@
             "regions": []
         },
         "recordId": "558",
-        "modId": "85"
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -27751,7 +27428,7 @@
             "regions": []
         },
         "recordId": "559",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -27826,7 +27503,7 @@
             "regions": []
         },
         "recordId": "560",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -27911,7 +27588,7 @@
             "regions": []
         },
         "recordId": "561",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -28012,7 +27689,7 @@
             "regions": []
         },
         "recordId": "562",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -28081,7 +27758,7 @@
             "regions": []
         },
         "recordId": "565",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -28150,7 +27827,7 @@
             "regions": []
         },
         "recordId": "566",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -28219,7 +27896,7 @@
             "regions": []
         },
         "recordId": "567",
-        "modId": "80"
+        "modId": "81"
     },
     {
         "fieldData": {
@@ -28264,38 +27941,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "37",
-                    "targetGroups::name": "Older citizens",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "46",
-                    "targetGroups::name": "Migrants",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "47",
-                    "targetGroups::name": "Refugees",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -28316,7 +27962,7 @@
             "regions": []
         },
         "recordId": "568",
-        "modId": "77"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -28361,13 +28007,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -28388,7 +28028,7 @@
             "regions": []
         },
         "recordId": "570",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -28433,13 +28073,7 @@
                     "modId": "0"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "6",
@@ -28467,7 +28101,7 @@
             ]
         },
         "recordId": "571",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -28532,7 +28166,7 @@
             "regions": []
         },
         "recordId": "572",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -28630,7 +28264,7 @@
             "regions": []
         },
         "recordId": "573",
-        "modId": "75"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -28719,7 +28353,7 @@
             ]
         },
         "recordId": "574",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -28806,7 +28440,7 @@
             "regions": []
         },
         "recordId": "582",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -28890,7 +28524,7 @@
             "regions": []
         },
         "recordId": "585",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -28962,7 +28596,7 @@
             "regions": []
         },
         "recordId": "586",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -29058,7 +28692,7 @@
             "regions": []
         },
         "recordId": "587",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -29158,7 +28792,7 @@
             "regions": []
         },
         "recordId": "588",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -29233,7 +28867,7 @@
             "regions": []
         },
         "recordId": "589",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -29310,7 +28944,7 @@
             "regions": []
         },
         "recordId": "590",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -29387,7 +29021,7 @@
             "regions": []
         },
         "recordId": "591",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -29469,7 +29103,7 @@
             "regions": []
         },
         "recordId": "592",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -29583,7 +29217,7 @@
             "regions": []
         },
         "recordId": "593",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -29653,7 +29287,7 @@
             "regions": []
         },
         "recordId": "594",
-        "modId": "82"
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -29750,7 +29384,7 @@
             "regions": []
         },
         "recordId": "609",
-        "modId": "71"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -29820,7 +29454,7 @@
             "regions": []
         },
         "recordId": "612",
-        "modId": "67"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -29885,7 +29519,7 @@
             "regions": []
         },
         "recordId": "613",
-        "modId": "70"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -29950,7 +29584,7 @@
             "regions": []
         },
         "recordId": "614",
-        "modId": "72"
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -30037,7 +29671,7 @@
             "regions": []
         },
         "recordId": "615",
-        "modId": "75"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -30145,7 +29779,7 @@
             "regions": []
         },
         "recordId": "616",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -30246,7 +29880,7 @@
             "regions": []
         },
         "recordId": "617",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -30323,7 +29957,7 @@
             "regions": []
         },
         "recordId": "618",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -30416,7 +30050,7 @@
             "regions": []
         },
         "recordId": "619",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -30559,7 +30193,7 @@
             "regions": []
         },
         "recordId": "620",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -30669,7 +30303,7 @@
             "regions": []
         },
         "recordId": "621",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -30772,7 +30406,7 @@
             ]
         },
         "recordId": "622",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -30861,7 +30495,7 @@
             "regions": []
         },
         "recordId": "623",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -30974,7 +30608,7 @@
             "regions": []
         },
         "recordId": "624",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -31074,7 +30708,7 @@
             "regions": []
         },
         "recordId": "625",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -31133,7 +30767,7 @@
             "regions": []
         },
         "recordId": "626",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -31215,7 +30849,7 @@
             "regions": []
         },
         "recordId": "627",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -31287,7 +30921,7 @@
             "regions": []
         },
         "recordId": "628",
-        "modId": "66"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -31362,7 +30996,7 @@
             "regions": []
         },
         "recordId": "630",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -31519,7 +31153,7 @@
             "regions": []
         },
         "recordId": "631",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -31613,7 +31247,7 @@
             "regions": []
         },
         "recordId": "632",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -31683,7 +31317,7 @@
             "regions": []
         },
         "recordId": "633",
-        "modId": "65"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -31789,7 +31423,7 @@
             "regions": []
         },
         "recordId": "634",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -31867,7 +31501,7 @@
             "regions": []
         },
         "recordId": "636",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -31939,7 +31573,7 @@
             "regions": []
         },
         "recordId": "637",
-        "modId": "66"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -32025,7 +31659,7 @@
             "regions": []
         },
         "recordId": "638",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -32097,7 +31731,7 @@
             "regions": []
         },
         "recordId": "639",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -32185,7 +31819,7 @@
             "regions": []
         },
         "recordId": "640",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -32283,7 +31917,7 @@
             ]
         },
         "recordId": "646",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -32362,7 +31996,7 @@
             ]
         },
         "recordId": "647",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -32432,7 +32066,7 @@
             "regions": []
         },
         "recordId": "650",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -32514,7 +32148,7 @@
             "regions": []
         },
         "recordId": "651",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -32614,7 +32248,7 @@
             "regions": []
         },
         "recordId": "652",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -32714,7 +32348,7 @@
             "regions": []
         },
         "recordId": "653",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -32796,7 +32430,7 @@
             "regions": []
         },
         "recordId": "654",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -32873,7 +32507,7 @@
             "regions": []
         },
         "recordId": "657",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -32932,7 +32566,7 @@
             "regions": []
         },
         "recordId": "658",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -33044,7 +32678,7 @@
             "regions": []
         },
         "recordId": "660",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -33123,7 +32757,7 @@
             "regions": []
         },
         "recordId": "662",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -33214,7 +32848,7 @@
             "regions": []
         },
         "recordId": "663",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -33313,7 +32947,7 @@
             "regions": []
         },
         "recordId": "665",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -33474,7 +33108,7 @@
             "regions": []
         },
         "recordId": "667",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -33561,7 +33195,7 @@
             ]
         },
         "recordId": "669",
-        "modId": "66"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -33639,7 +33273,7 @@
             "regions": []
         },
         "recordId": "670",
-        "modId": "74"
+        "modId": "75"
     },
     {
         "fieldData": {
@@ -33733,7 +33367,7 @@
             "regions": []
         },
         "recordId": "671",
-        "modId": "73"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -33792,7 +33426,7 @@
             "regions": []
         },
         "recordId": "672",
-        "modId": "69"
+        "modId": "70"
     },
     {
         "fieldData": {
@@ -34064,7 +33698,7 @@
             "regions": []
         },
         "recordId": "673",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -34151,7 +33785,7 @@
             "regions": []
         },
         "recordId": "677",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -34265,7 +33899,7 @@
             "regions": []
         },
         "recordId": "681",
-        "modId": "60"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -34361,7 +33995,7 @@
             "regions": []
         },
         "recordId": "682",
-        "modId": "64"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -34456,7 +34090,7 @@
             "regions": []
         },
         "recordId": "685",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -34555,7 +34189,7 @@
             "regions": []
         },
         "recordId": "687",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -34634,7 +34268,7 @@
             "regions": []
         },
         "recordId": "689",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -34718,7 +34352,7 @@
             "regions": []
         },
         "recordId": "690",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -34795,7 +34429,7 @@
             "regions": []
         },
         "recordId": "691",
-        "modId": "60"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -34891,7 +34525,7 @@
             "regions": []
         },
         "recordId": "692",
-        "modId": "77"
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -34957,7 +34591,7 @@
             "regions": []
         },
         "recordId": "693",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -35027,7 +34661,7 @@
             "regions": []
         },
         "recordId": "694",
-        "modId": "68"
+        "modId": "69"
     },
     {
         "fieldData": {
@@ -35123,7 +34757,7 @@
             "regions": []
         },
         "recordId": "696",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -35212,7 +34846,7 @@
             "regions": []
         },
         "recordId": "697",
-        "modId": "66"
+        "modId": "67"
     },
     {
         "fieldData": {
@@ -35290,7 +34924,7 @@
             "regions": []
         },
         "recordId": "698",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -35365,7 +34999,7 @@
             "regions": []
         },
         "recordId": "699",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -35475,7 +35109,7 @@
             ]
         },
         "recordId": "700",
-        "modId": "71"
+        "modId": "72"
     },
     {
         "fieldData": {
@@ -35540,7 +35174,7 @@
             "regions": []
         },
         "recordId": "701",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -35615,7 +35249,7 @@
             "regions": []
         },
         "recordId": "702",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -35695,7 +35329,7 @@
             "regions": []
         },
         "recordId": "703",
-        "modId": "64"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -35780,7 +35414,7 @@
             "regions": []
         },
         "recordId": "704",
-        "modId": "64"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -35860,7 +35494,7 @@
             "regions": []
         },
         "recordId": "705",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -35947,7 +35581,7 @@
             "regions": []
         },
         "recordId": "706",
-        "modId": "63"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -36019,7 +35653,7 @@
             "regions": []
         },
         "recordId": "709",
-        "modId": "59"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -36098,7 +35732,7 @@
             "regions": []
         },
         "recordId": "710",
-        "modId": "59"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -36163,7 +35797,7 @@
             "regions": []
         },
         "recordId": "714",
-        "modId": "72"
+        "modId": "73"
     },
     {
         "fieldData": {
@@ -36228,7 +35862,7 @@
             "regions": []
         },
         "recordId": "715",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -36293,7 +35927,7 @@
             "regions": []
         },
         "recordId": "716",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -36393,7 +36027,7 @@
             "regions": []
         },
         "recordId": "721",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -36483,7 +36117,7 @@
             "regions": []
         },
         "recordId": "722",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -36573,7 +36207,7 @@
             "regions": []
         },
         "recordId": "724",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -36663,7 +36297,7 @@
             "regions": []
         },
         "recordId": "725",
-        "modId": "61"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -36753,7 +36387,7 @@
             "regions": []
         },
         "recordId": "726",
-        "modId": "58"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -36818,7 +36452,7 @@
             "regions": []
         },
         "recordId": "727",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -36924,7 +36558,7 @@
             "regions": []
         },
         "recordId": "728",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -36996,7 +36630,7 @@
             "regions": []
         },
         "recordId": "729",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -37080,7 +36714,7 @@
             "regions": []
         },
         "recordId": "730",
-        "modId": "64"
+        "modId": "65"
     },
     {
         "fieldData": {
@@ -37207,7 +36841,7 @@
             "regions": []
         },
         "recordId": "732",
-        "modId": "70"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -37257,13 +36891,7 @@
                     "modId": "5"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "1",
@@ -37277,7 +36905,7 @@
             "regions": []
         },
         "recordId": "733",
-        "modId": "69"
+        "modId": "71"
     },
     {
         "fieldData": {
@@ -37371,7 +36999,7 @@
             "regions": []
         },
         "recordId": "734",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -37458,7 +37086,7 @@
             "regions": []
         },
         "recordId": "735",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -37542,7 +37170,7 @@
             "regions": []
         },
         "recordId": "737",
-        "modId": "61"
+        "modId": "62"
     },
     {
         "fieldData": {
@@ -37601,7 +37229,7 @@
             "regions": []
         },
         "recordId": "738",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -37671,7 +37299,7 @@
             "regions": []
         },
         "recordId": "739",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -37740,7 +37368,7 @@
             "regions": []
         },
         "recordId": "742",
-        "modId": "60"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -37812,7 +37440,7 @@
             "regions": []
         },
         "recordId": "743",
-        "modId": "67"
+        "modId": "68"
     },
     {
         "fieldData": {
@@ -37878,7 +37506,7 @@
             "regions": []
         },
         "recordId": "744",
-        "modId": "62"
+        "modId": "63"
     },
     {
         "fieldData": {
@@ -37978,7 +37606,7 @@
             "regions": []
         },
         "recordId": "745",
-        "modId": "63"
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -38047,7 +37675,7 @@
             "regions": []
         },
         "recordId": "746",
-        "modId": "59"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -38118,7 +37746,7 @@
             "regions": []
         },
         "recordId": "747",
-        "modId": "65"
+        "modId": "66"
     },
     {
         "fieldData": {
@@ -38193,7 +37821,7 @@
             "regions": []
         },
         "recordId": "748",
-        "modId": "52"
+        "modId": "53"
     },
     {
         "fieldData": {
@@ -38259,11 +37887,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
-                },
-                {
                     "recordId": "73",
                     "targetGroups::name": "Workers in care facilities",
                     "modId": "8"
@@ -38287,7 +37910,7 @@
             "regions": []
         },
         "recordId": "749",
-        "modId": "57"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -38357,7 +37980,7 @@
             "regions": []
         },
         "recordId": "750",
-        "modId": "50"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -38439,7 +38062,7 @@
             "regions": []
         },
         "recordId": "752",
-        "modId": "52"
+        "modId": "53"
     },
     {
         "fieldData": {
@@ -38511,7 +38134,7 @@
             "regions": []
         },
         "recordId": "754",
-        "modId": "49"
+        "modId": "52"
     },
     {
         "fieldData": {
@@ -38582,7 +38205,7 @@
             "regions": []
         },
         "recordId": "755",
-        "modId": "59"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -38672,7 +38295,7 @@
             ]
         },
         "recordId": "757",
-        "modId": "58"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -38769,7 +38392,7 @@
             ]
         },
         "recordId": "758",
-        "modId": "60"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -38830,19 +38453,9 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                },
-                {
                     "recordId": "40",
                     "targetGroups::name": "Parents",
                     "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -38875,7 +38488,7 @@
             ]
         },
         "recordId": "759",
-        "modId": "53"
+        "modId": "54"
     },
     {
         "fieldData": {
@@ -38963,7 +38576,7 @@
             ]
         },
         "recordId": "761",
-        "modId": "59"
+        "modId": "60"
     },
     {
         "fieldData": {
@@ -39072,7 +38685,7 @@
             "regions": []
         },
         "recordId": "763",
-        "modId": "51"
+        "modId": "52"
     },
     {
         "fieldData": {
@@ -39176,7 +38789,7 @@
             ]
         },
         "recordId": "765",
-        "modId": "60"
+        "modId": "61"
     },
     {
         "fieldData": {
@@ -39302,7 +38915,7 @@
             ]
         },
         "recordId": "769",
-        "modId": "56"
+        "modId": "57"
     },
     {
         "fieldData": {
@@ -39402,7 +39015,7 @@
             "regions": []
         },
         "recordId": "775",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -39482,7 +39095,7 @@
             "regions": []
         },
         "recordId": "784",
-        "modId": "48"
+        "modId": "49"
     },
     {
         "fieldData": {
@@ -39532,13 +39145,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -39552,7 +39159,7 @@
             "regions": []
         },
         "recordId": "788",
-        "modId": "49"
+        "modId": "50"
     },
     {
         "fieldData": {
@@ -39634,7 +39241,7 @@
             "regions": []
         },
         "recordId": "790",
-        "modId": "47"
+        "modId": "48"
     },
     {
         "fieldData": {
@@ -39754,7 +39361,7 @@
             ]
         },
         "recordId": "791",
-        "modId": "58"
+        "modId": "59"
     },
     {
         "fieldData": {
@@ -39858,6 +39465,6 @@
             "regions": []
         },
         "recordId": "793",
-        "modId": "34"
+        "modId": "35"
     }
 ]
