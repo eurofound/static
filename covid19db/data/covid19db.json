@@ -3221,38 +3221,66 @@
     },
     {
         "fieldData": {
-            "title": "Employers' dispensation to pay a compensation for sick leave",
-            "title_nationalLanguage": "Odpustenie platby n\u00e1hrady mzdy chor\u00fdm zamestnanco",
-            "d_startDate": "03/27/2020",
-            "d_endDate": "",
+            "title": "Postponement of the employers' deadline for payment of compulsory social security obligations",
+            "title_nationalLanguage": "Odlo\u017eenie term\u00ednu povinn\u00fdch platieb zamestn\u00e1vate\u013eov do poistn\u00fdch fondov",
+            "d_startDate": "04/06/2020",
+            "d_endDate": "12/31/2020",
             "calc_country": "Slovakia",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Paid sick leave",
-            "calc_identifier": "SK-2020-13/290",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments",
+            "calc_identifier": "SK-2020-15/295",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "This measure amends the Act no. 462/2003 Coll., providing the legal framework on income replacement in case of temporary incapacity for work of an employee. \rThe COVID-19 related intervention is reducing the employer's labor costs in such a way that it will not pay the Income replacement to the employee during the first 10 days of the employee's incapacity for work. The benefit will be paid by the Social Insurance Agency.",
-            "descriptionContentOfMeasure": "According to the local legal framework, in normal conditions the employee receives, during the first 10 days of incapacity to work, an income compensation directly from the employer. Only after 10 days, the employee receive a sickness benefit from the Social Insurance Agency. \rSelf-employed insured persons are, then, entitled to a sick benefit for the first three days of 25% and subsequently in the amount of 55% of the assessment base.\rOn the basis of the new COVID-19 related measure, the employer will not pay wage compensation in the case of employee's illness or if it is quarantined in reason of the epidemic, during the first 10 days of sick leave. Indeed, it will be paid by the Social Insurance Agency.\rSelf-employed as well receives full sickness benefit from the Social Insurance Agency from the first day of sick leave (i.e. not 25% during the first three days).\rThis measure is proposed in an effort to relieve the undertakings in times of crisis of costs related to temporary incapacity for work, as well as to increase the income of insured persons in cases of ordered quarantine measures and isolation.",
-            "descriptionUseOfMeasure": "As far as the costs of the Social Insurance Agency are concerned, they are estimated that 100,000 sickness benefits will be paid out in 2020. Beyond the current legal status, the sickness benefits will be paid to the persons concerned from the Social Insurance Agency for 10 calendar days. The average assessment base of the person concerned is assumed to be at the level of the average wage of 2019, i.e. \u20ac 1,092, as sickness benefits are basically based on the previous year's income. Expenditure on the basis of these assumptions is expected to be around \u20ac 19.4 million in 2020.\rThe employers concerned are expected to achieve savings on compensation for temporary incapacity for work of about \u20ac 169.4 on average per employee in quarantine measures, which is around \u20ac 16.9 million for the entire business sector (about 100,000 employees).\r\r",
-            "descriptionInvolvementOfSocialPartners": "",
+            "calc_lastUpdate": "06/29/2020",
+            "descriptionBackgroundInfo": "To minimize personal contacts, the government temporarily closed the most of retail and facilities providing services, except of those selling foodstuff, food for pets and health-care aids, veterinary corps, pharmacies, drugstores, posts, banks and insurance agencies, telecom operators, catering establishments, gasoline stations and tobacco and printed media shops. \r\rRestaurants, fast-foods and canteens can provide only take-away food, usually lunch menu. These measures had, hence, a wide impact on some employers, that were totally or partially prevented from work. \r\rAs a partial relief, in order to diminish temporarily the labour-related expenditures (compulsory payments to the social insurance) of those employers, the government adopted the measure by Section 293ew of the amended Act on social insurance.",
+            "descriptionContentOfMeasure": "The measures entailed the introduction of some amendments to the Social insurance act, postponing the deadline for compulsory payments of employers and self-employed to social security funds.\r \rAccording to this framework, any employer and self-employed paying compulsory contributions to health and pension insurance funds, and whose revenue from business decreased by at least 40%, are entitled to pay these contributions within 31 July 2020, rather than in March 2020. The government can prolong the deadline. The Government Order (Nariadenie vlady 76/2020) allows more options for the determination of the revenue decrease: comparison with March 2019, February 2020 and 2019 monthly average. ",
+            "descriptionUseOfMeasure": "It is assumed, that the measure can concern small and medium size as well as large employers. To reduce the pressure on the employers\u00b4 cash flow, it is possible to apply the schedule of due dates. \r\rAccording to the Institute of Social Policy (June 2020), about 28,000 employers and 22,000 self-employed used the postponing and releasing of the compulsory payments by 8 June 2020. The total value of this support to employers and self-employed made more than \u20ac90 million. ",
+            "descriptionInvolvementOfSocialPartners": "No information available.",
             "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_290.html",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-15_295.html",
             "isOccupation": "No",
             "isSector": "No",
             "sector_privateOrPublic": "Not specified",
             "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
+            "statusOfRegulation": "Entirely new measure "
         },
         "portalData": {
             "sources": [
                 {
-                    "recordId": "142",
-                    "sources::title": "63 ACT of 25 March 2020 amending Act no. 461/2003 Coll. on social insurance,",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/63/",
+                    "recordId": "223",
+                    "sources::title": "Z\u00e1kon \u010d. 68/2020 z 3. apr\u00edla 2020",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/68/20200406",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "224",
+                    "sources::title": "Pr\u00e1vnu normu parlament schv\u00e1lil v piatok (3.4.). Rokoval o nej v skr\u00e1tenom legislat\u00edvnom konan\u00ed.",
+                    "sources::url": "https://www.teraz.sk/slovensko/prezidentka-podpisala-moznost-odkladu/458364-clanok.html ",
                     "sources::d_date": "04/06/2020",
                     "modId": "5"
+                },
+                {
+                    "recordId": "760",
+                    "sources::title": "Government resolution No. 76/2020 as of\u00a09 April 2020 (o sposobe urcenia poklesu cisteho obratu a prijmov z podnikania....) ",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/76/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "919",
+                    "sources::title": "Act No.\u00a095/2020, as of 22 April 2020",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/95/",
+                    "sources::d_date": "04/25/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "926",
+                    "sources::title": "Institute of Social Policy, First aid to Slovakia (Prv\u00e1 pomoc Slovensku:) ",
+                    "sources::url": "https://www.employment.gov.sk/files/slovensky/ministerstvo/analyticke-centrum/analyticke-komentare/isp_2020_prva_pomoc_slovensku_20200615.pdf",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "1"
                 }
             ],
             "actors": [
@@ -3260,11 +3288,6 @@
                     "recordId": "1",
                     "actors::name": "National government",
                     "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
                 },
                 {
                     "recordId": "11",
@@ -3274,197 +3297,57 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "173",
-        "modId": "87"
-    },
-    {
-        "fieldData": {
-            "title": "Broadening active labour market policy programmes - supporting job retention",
-            "title_nationalLanguage": "Roz\u0161\u00edrenie programov akt\u00edvnej politiky trhu pr\u00e1ce \u2013 podpora pri zachovan\u00ed pracovn\u00e9ho miest",
-            "d_startDate": "03/27/2020",
-            "d_endDate": "",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "SK-2020-13/291",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "06/22/2020",
-            "descriptionBackgroundInfo": "The legislator, through the Act 63/2020 Coll., introduced an enlargement of the eligibility conditions for financial contributions to active labor market policy measures. \rThis instrument is aimed to support projects finalized to save jobs, including the ones where self-employment is carried out or operated. It also supports projects aimed at maintaining employees in employment in connection with the declaration of an emergency like the ones concerning the COVID-19 epidemic.",
-            "descriptionContentOfMeasure": "The contribution will be provided to the employer or self-employed who, despite the difficult situation, decides not to dismiss workers or to maintain a job within the ALMP Projects.\rSupport is provided through the Ministry of Labor, Social Affairs and Family or via the Center of Labor, Social Affairs and Family, when the conditions and scope of support is approved by the Government of the Slovak Republic.\r\rThe maximum total amount of the contribution for one applicant (employer) is \u20ac 800,000 for the period of project implementation. The basic conditions for providing the allowance are that: a) the employer/self-employed pays to the employee a wage compensation in the amount of 80% of his average earnings; b) the employer/self-employed does not initiate termination of employment by notice or agreement; c) that at 31 December 2019 the company was not in difficulty.\r \rThe amount of the allowance for one employee corresponds to the compensation of the employee's salary in the amount of 80% of his average earnings, up to a maximum of \u20ac 1,100. Self-employed will receive the contribution to pay the salaries of their employees.\rThe contribution is provided from 13 March 2020, until the end of the calendar month in which the restrictive measures taken by the Public Health Office of the Slovak Republic will be revoked.",
-            "descriptionUseOfMeasure": "The amount of funding will depend on the capacity provided by the European Social Fund or the state budget, or other sources.\rAt present, it is not possible to identify the exact number of employers concerned. The amount of the contribution and the determination of precise conditions shall be determined by the Government.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_291.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "142",
-                    "sources::title": "63 ACT of 25 March 2020 amending Act no. 461/2003 Coll. on social insurance,",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/63/",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "5"
+                    "recordId": "34",
+                    "targetGroups::name": "Platform workers",
+                    "modId": "14"
                 },
                 {
-                    "recordId": "759",
-                    "sources::title": "N\u00e1vrh podmienok projektu podpory udr\u017eania zamestnanosti v \u010dase vyhl\u00e1senej mimoriadnej situ\u00e1cie, n\u00fadzov\u00e9ho stavu alebo v\u00fdnimo\u010dn\u00e9ho stavu a odstr\u00e1nen\u00edm ich n\u00e1sledko",
-                    "sources::url": "https://rokovania.gov.sk/RVL/Material/24674/1",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "1"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
                 }
             ],
             "funding": [
                 {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
                     "modId": "0"
                 }
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [],
+            "updates": [
+                {
+                    "recordId": "52",
+                    "updates::d_date": "06/20/2020",
+                    "updates::description": "Employers, of which at least one plant/premise was closed in April 2020 by the Public Health Office longer than for 15 days, need not pay any contributions for April (Act No 95/2020). Also some organisations of the public administration could use this option.",
+                    "modId": "4"
+                }
+            ],
             "regions": []
         },
-        "recordId": "174",
-        "modId": "96"
-    },
-    {
-        "fieldData": {
-            "title": "Extension of the support period for unemployment benefit",
-            "title_nationalLanguage": "Pred\u013a\u017eenie podporn\u00e9ho obdobia na d\u00e1vku v nezamestnanost",
-            "d_startDate": "04/04/2020",
-            "d_endDate": "",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Income support for unemployed",
-            "calc_identifier": "SK-2020-14/292",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "Through the Act 66/2020 Coll., the legislator intervened in order to cushion the condition of long-term unemployed in the local labour market. Indeed, as a consequence of the restrictions and the social distancing measures introduced during the Covid-19 pandemic crisis, jobseekers are increasingly at risk of not finding a job for a longer period of time. Therefore, the Parliament decided that during the pandemic unemployment benefit should be paid for a longer period.",
-            "descriptionContentOfMeasure": "During the Covid-19 pandemic crisis, the unemployment benefit period has been extended by one month (up to a maximum of 7 months) for those who could not find a job. The measure is finalized to sustain people that remained unemployed up to the end of the original unemployment benefit period. The Government may lay down the conditions for entitlement to the unemployment benefit, the conditions for the payment of the unemployment benefit, the length of the unemployment benefit period and the amount of the unemployment benefit, in the form of a government order for the duration of the crisis and for two months after its termination.",
-            "descriptionUseOfMeasure": "Compared to the current legal situation, it is expected that approximately 28.1 thousand more unemployment benefits will be paid out by 2020, with an average monthly rate of around EUR 518.1. Expenditure on the basis of these assumptions is expected to be around EUR 14.6 million in 2020",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-14_292.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "143",
-                    "sources::title": "66 ACT of 2 April 2020 amending and supplementing Act no. 311/2001 Labor Code, as amended, and amending and supplementing certain act",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/66",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "175",
-        "modId": "77"
+        "recordId": "178",
+        "modId": "118"
     },
     {
         "fieldData": {
@@ -4018,81 +3901,6 @@
         },
         "recordId": "184",
         "modId": "85"
-    },
-    {
-        "fieldData": {
-            "title": "New rules for teleworking",
-            "title_nationalLanguage": "V\u00fdkon pr\u00e1ce z dom\u00e1cnosti zamestnanca",
-            "d_startDate": "04/04/2020",
-            "d_endDate": "",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Protection of workers, adaptation of workplace",
-            "calc_subMinorCategory": "Teleworking arrangements, remote working",
-            "calc_identifier": "SK-2020-14/302",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/09/2020",
-            "descriptionBackgroundInfo": "The measure, that amends rules formerly introduced in the legal framework, is aimed to isolate more staff and not to reduce activity businesses and other organisations during the spread of the COVID-19 pandemic. This result is reached simplifying the rules to adopt work-from-home-based schemes.\r\rThe measure was adopted by the Act No. 66/2020 Coll., amending the Act No. 311/2001 Coll. on the Labour Code and supplementing some laws at the time of the COVID-19 pandemic. Section 250b of the Act specifies the possibility of an employer to order the employees to work from home upon defined circumstances. \r\r",
-            "descriptionContentOfMeasure": "According to this measure, the employer and the employee can enter into the work-from-home scheme on the basis of a mutual agreement. The place of remote working must be specified by the parties, while the rules concerning working conditions, health and safety and working hours remain unchanged also while the work-from-home scheme is active.\r\rAdditionally, while the worker is operating from home, the employment relationship is not subject to the provisions on the schedule of weekly working hours, daily and  weekly rest and the idle-time. No wage supplements are paid to the employee for the overtime and night work and for working on Saturdays and Sundays, unless the employee and the employer agree otherwise.\r\r",
-            "descriptionUseOfMeasure": "The measure concerns a large number of non-essential organisations, schools, institutions where there is no risk of production suspension and the supply of raw materials, materials, food, energy is not jeopardised",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Other",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-14_302.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "143",
-                    "sources::title": "66 ACT of 2 April 2020 amending and supplementing Act no. 311/2001 Labor Code, as amended, and amending and supplementing certain act",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/66",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "185",
-        "modId": "87"
     },
     {
         "fieldData": {
@@ -7535,103 +7343,6 @@
         },
         "recordId": "246",
         "modId": "81"
-    },
-    {
-        "fieldData": {
-            "title": "Technology-COVID call within OPPIK",
-            "title_nationalLanguage": "V\u00fdzva Technologie COVID-19 v r\u00e1mci OPPIK",
-            "d_startDate": "04/14/2020",
-            "d_endDate": "",
-            "calc_country": "Czechia",
-            "calc_minorCategory": "Reorientation of business activities",
-            "calc_subMinorCategory": "Change of production/innovation",
-            "calc_identifier": "CZ-2020-16/356",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "The Technology-COVID call, which was developed on the basis of a flash analysis of entrepreneurs' needs, has been prepared within the Operational Programme Enterprise and Innovations for Competitiveness 2014 (Opera\u010dn\u00ed program Podnik\u00e1n\u00ed a Inovace pro konkurenceschopnost, OPPIK) Ministry of Industry and Trade of the Czech Republic (Ministerstvo pr\u016fmyslu a  obchodu \u010cesk\u00e9 republiky, MPO \u010cR). \r\rSmall and medium companies can apply for the financial support on the expansion of capacities or the introduction of new protective equipment solutions such as respirators or ventilators. It is also possible to support the rapid introduction of both medical and non-medical solutions that can help combat coronavirus infection, including measures to mitigate the impact of further spread and consequently address the effects of this situation. ",
-            "descriptionContentOfMeasure": "Small and medium- sized companies can apply for financial support for expansion of their production capacities if the company manufactures products that are essential for combating COVID-19 pandemic.\r\rEligible for the support are small and medium enterprises doing business in the Czech Republic, except of Prague region. The minimum amount for one project is CZK 250,000 (\u20ac9,090 approx.) and maximum amount is CZK 20,000,000 (\u20ac727,272 approx.). The amount of the funding in the eligible expenditure of the project is supposed to be in the range of 35% for small companies and 45% for medium companies.\r\rEligible expenditures are in particular labour costs, cost of materials, water, energy, cost of purchasing the necessary services, software etc. \r\rThe total allocation of the call is expected to reach CZK 200,000,000 (\u20ac7,272,727 approx.). ",
-            "descriptionUseOfMeasure": "Not open yet (the call is planned to be open on 14 April 2020).",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-16_356.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "207",
-                    "sources::title": "Technologie COVID",
-                    "sources::url": "https://www.oppik.cz/dotacni-programy/technologie-covid",
-                    "sources::d_date": "04/07/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "1",
-                    "funding::name": "Companies",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": [
-                {
-                    "recordId": "1929",
-                    "regions::countryCode": "CZ",
-                    "regions::level": 2,
-                    "regions::name": "St\u0159edn\u00ed \u010cechy",
-                    "regions::nutsCode": "CZ02",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "1931",
-                    "regions::countryCode": "CZ",
-                    "regions::level": 2,
-                    "regions::name": "Jihoz\u00e1pad",
-                    "regions::nutsCode": "CZ03",
-                    "modId": "5"
-                }
-            ]
-        },
-        "recordId": "247",
-        "modId": "82"
     },
     {
         "fieldData": {
