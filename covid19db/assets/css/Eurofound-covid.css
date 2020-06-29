@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -392,7 +392,7 @@ h1, .h1 {
 	font-family: 'Source Serif Pro', serif;
   	font-size: 60px;
 	color: #fff;
-	line-height: 1.2;
+	line-height: 1.2 !important;
 	font-weight: 700;
 }
 
