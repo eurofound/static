@@ -3295,38 +3295,7 @@
                     "modId": "1"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "34",
-                    "targetGroups::name": "Platform workers",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "12",
@@ -3340,14 +3309,14 @@
                 {
                     "recordId": "52",
                     "updates::d_date": "06/20/2020",
-                    "updates::description": "Employers, of which at least one plant/premise was closed in April 2020 by the Public Health Office longer than for 15 days, need not pay any contributions for April (Act No 95/2020). Also some organisations of the public administration could use this option.",
-                    "modId": "4"
+                    "updates::description": "Employers, of which at least one plant/premise was closed in April 2020 by the Public Health Office longer than for 15 days, do not need to pay any contributions for April (Act No 95/2020). Also some organisations of the public administration could use this option.",
+                    "modId": "5"
                 }
             ],
             "regions": []
         },
         "recordId": "178",
-        "modId": "118"
+        "modId": "125"
     },
     {
         "fieldData": {
