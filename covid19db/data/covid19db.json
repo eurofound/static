@@ -480,11 +480,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -500,7 +495,7 @@
             "regions": []
         },
         "recordId": "99",
-        "modId": "92"
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -567,11 +562,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -587,7 +577,7 @@
             "regions": []
         },
         "recordId": "100",
-        "modId": "99"
+        "modId": "100"
     },
     {
         "fieldData": {
@@ -733,11 +723,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -815,11 +800,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -969,11 +949,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -1166,11 +1141,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -1375,11 +1345,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -1471,11 +1436,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -1683,11 +1643,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -1947,11 +1902,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -2034,11 +1984,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -2191,11 +2136,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -3415,11 +3355,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -3510,11 +3445,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -3691,11 +3621,6 @@
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -3863,11 +3788,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -4053,11 +3973,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -4681,11 +4596,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -5457,11 +5367,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -5644,11 +5549,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -5843,11 +5743,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -6553,11 +6448,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -6974,11 +6864,6 @@
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 },
                 {
                     "recordId": "63",
@@ -7411,11 +7296,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -8270,11 +8150,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -8663,11 +8538,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -9062,11 +8932,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -9936,11 +9801,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -10301,11 +10161,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "12"
@@ -10609,11 +10464,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -10806,11 +10656,6 @@
                     "recordId": "40",
                     "targetGroups::name": "Parents",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -12196,11 +12041,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -12477,11 +12317,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -12660,11 +12495,6 @@
                 }
             ],
             "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
                 {
                     "recordId": "62",
                     "targetGroups::name": "SMEs",
@@ -13916,11 +13746,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -14405,11 +14230,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -15703,11 +15523,6 @@
                     "modId": "18"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "60",
                     "targetGroups::name": "Sector specific set of companies",
                     "modId": "12"
@@ -15889,11 +15704,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -16919,11 +16729,6 @@
                     "modId": "14"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "12"
@@ -17005,11 +16810,6 @@
                 }
             ],
             "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
                 {
                     "recordId": "61",
                     "targetGroups::name": "Companies providing essential services",
@@ -18322,11 +18122,6 @@
                     "modId": "15"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "62",
                     "targetGroups::name": "SMEs",
                     "modId": "12"
@@ -18777,11 +18572,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -18852,11 +18642,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -18918,11 +18703,6 @@
                 }
             ],
             "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
                 {
                     "recordId": "65",
                     "targetGroups::name": "Other businesses",
@@ -19035,11 +18815,6 @@
                     "recordId": "43",
                     "targetGroups::name": "Disabled",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 },
                 {
                     "recordId": "69",
@@ -19266,11 +19041,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -19599,11 +19369,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -20062,11 +19827,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "12"
@@ -20223,11 +19983,6 @@
                 }
             ],
             "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
                 {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
@@ -20467,11 +20222,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -20857,11 +20607,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -21165,11 +20910,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -22323,11 +22063,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -22504,11 +22239,6 @@
                     "recordId": "40",
                     "targetGroups::name": "Parents",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 },
                 {
                     "recordId": "69",
@@ -22935,11 +22665,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -24345,11 +24070,6 @@
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -24926,11 +24646,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -25337,11 +25052,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -25431,11 +25141,6 @@
                     "modId": "15"
                 },
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "63",
                     "targetGroups::name": "One person or microenterprises",
                     "modId": "12"
@@ -25500,11 +25205,6 @@
                 }
             ],
             "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
                 {
                     "recordId": "62",
                     "targetGroups::name": "SMEs",
@@ -25788,11 +25488,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -26834,11 +26529,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -27341,11 +27031,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "61",
                     "targetGroups::name": "Companies providing essential services",
                     "modId": "12"
@@ -27483,11 +27168,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -29083,11 +28763,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -30976,11 +30651,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -31227,11 +30897,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -31553,13 +31218,7 @@
                     "modId": "3"
                 }
             ],
-            "targetGroups": [
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                }
-            ],
+            "targetGroups": [],
             "funding": [
                 {
                     "recordId": "7",
@@ -32043,11 +31702,6 @@
             ],
             "targetGroups": [
                 {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
-                },
-                {
                     "recordId": "62",
                     "targetGroups::name": "SMEs",
                     "modId": "12"
@@ -32128,11 +31782,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -32927,11 +32576,6 @@
                     "recordId": "40",
                     "targetGroups::name": "Parents",
                     "modId": "14"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -33845,11 +33489,6 @@
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 },
                 {
                     "recordId": "60",
@@ -34826,11 +34465,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -36694,11 +36328,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
@@ -39221,11 +38850,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "59",
-                    "targetGroups::name": "All companies",
-                    "modId": "13"
                 }
             ],
             "funding": [
