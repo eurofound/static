@@ -91,7 +91,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -577,7 +577,7 @@
             "regions": []
         },
         "recordId": "100",
-        "modId": "100"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -879,11 +879,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -1038,11 +1033,6 @@
                     "recordId": "50",
                     "targetGroups::name": "Posted workers",
                     "modId": "14"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -1251,16 +1241,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -1277,6 +1257,441 @@
         },
         "recordId": "137",
         "modId": "110"
+    },
+    {
+        "fieldData": {
+            "title": "COVID II state guarantee programme",
+            "title_nationalLanguage": "Z\u00e1ru\u010dn\u00ed program COVID II",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "06/30/2023",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-14/255",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "06/30/2020",
+            "descriptionBackgroundInfo": "After the termination of COVID I interest-free state loan programme, the Czech government has introduced the COVID II state guarantee programme for SMEs which are at risk of bankruptcy due to the measures in connection with the spread of COVID-19.\r \rLoans for SME\u00b4s are provided by [commercial banks](https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/)  while the state run Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmzrb.cz) secures the loans and offers financial aid for loan interest.",
+            "descriptionContentOfMeasure": "The measure runs under the Operational Programme Enterprise and Innovation for Competitiveness (Opera\u010dn\u00ed program Podnik\u00e1n\u00ed a inovace pro konkurenceschopnost, [OPPIK](https://www.mpo.cz/en/business/grants-and-business-support/opeic-2014-2020/operational-programme-enterprise-and-innovations-for-competitiveness-2014---2020--169167/). \r\rThe loan is aimed at SME\u00b4s with trade permission in Czech Republic (except of Prague region) who have been forced due to approved anti-COVID-19 measures to shut down or limit their businesses. Business activity of the SME has to be included at the supported economic activities list, which is, however, very wide and included accommodation, logistics, manufacturing industry etc. \r\r\u010cMZRB will secure the commercial loan up to 80% with the maximum period of 3 years. SME can also apply for financial support on the loan interest up to CZK 1,000,000 (\u20ac36,298 approx.). Loan to be secured are limited to CZK 15,000,000 (\u20ac544,465). The loans are intended to cover salaries, rent, utility costs and supplier-customer invoices. \r\rThe total amount for COVID II programme is CZK 4,000,000,000 (\u20ac145,190,563).\r\rThe program is financed from the EU Structural Funds within the OPPIK and is therefore not intended for the implementation of projects in the capital city of Prague. Financial support for projects implemented in Prague can be applied for in the COVID Prague guarantee program.\r\r\r\r",
+            "descriptionUseOfMeasure": "By 26 May 2020 1,219 companies have been supported.\rBy 21 June 2020, 2,091 companies have been supported by the total amount of CZK 12,600,000,000 (\u20ac470,061,555).\r\rNo evaluation or information on effectiveness is available by now, however, there has been a lot of criticism of COVID I and COVID II measures. The Chamber of Commerce of the Czech Republic (Hospod\u00e1\u0159sk\u00e1 komora \u010cesk\u00e9 republiky) realised in April 2020 a survey among its members, who highlighted the tangle of bureaucracy and lack of clarity in the COVID I and COVID II. To apply, companies needed to complete complex forms forecasting the next three years, which is an impossibility in the current situation. Also the capacity of Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, \u010cMZRB), when approving the loans, was very low and the process too long.\r\r",
+            "descriptionInvolvementOfSocialPartners": "Employers organisations, which are members of tripartity body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They were not involved into the management of policy measures.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_255.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "101",
+                    "sources::title": "CMRZB: State guarantee programme COVID II (\u010cMRZB: Z\u00e1ru\u010dn\u00ed program COVID II)",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "694",
+                    "sources::title": "CMRZB: Text of the call for proposals + eligibility criteria (\u010cMRZB: Text v\u00fdzvy a podm\u00ednky podpory)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/vyzva-covid-ii/",
+                    "sources::d_date": "04/21/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "920",
+                    "sources::title": "MPO \u010cR: List of companies supported by COVID I (MPO \u010cR: Seznam spole\u010dnost\u00ed, kter\u00e9 obdr\u017eely podporu v programech COVID I a COVID II)",
+                    "sources::url": "https://www.mpo.cz/cz/rozcestnik/pro-media/tiskove-zpravy/prijemci-podpory-v-programech-covid-i--expanze---covid-a-covid-ii--254872/",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "923",
+                    "sources::title": "Chamber of Commerce: Survey among Prague entrepreneurs on COVID-19 measures (HK \u010cR: \u0161et\u0159en\u00ed mezi pra\u017esk\u00fdmi podnikateli ohledn\u011b vl\u00e1dn\u00edch opat\u0159en\u00ed proti COVID-19)",
+                    "sources::url": "https://www.komora.cz/news/setreni-hospodarske-komory-jak-prazsti-podnikatele-hodnoti-vladni-programy/",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "936",
+                    "sources::title": "CMRZB: The list of lending banks (\u010cMRZB: Seznam spolupracuj\u00edc\u00edch bank)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/",
+                    "sources::d_date": "06/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "937",
+                    "sources::title": "CMRZB: Number of applications finalized/in process (\u010cMRZB: po\u010det schv\u00e1len\u00fdch a vy\u0159izovan\u00fdch \u017e\u00e1dost\u00ed)",
+                    "sources::url": "https://www.cmzrb.cz/prubezny-stav-vyrizovani-zadosti-programu-covid/",
+                    "sources::d_date": "06/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "34",
+                    "sectors::code": "B8",
+                    "sectors::name": "Other mining and quarrying",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "64",
+                    "sectors::code": "E36",
+                    "sectors::name": "Water collection, treatment and supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "65",
+                    "sectors::code": "E37",
+                    "sectors::name": "Sewerage",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "66",
+                    "sectors::code": "E38",
+                    "sectors::name": "Waste collection, treatment and disposal activities; materials recovery",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "67",
+                    "sectors::code": "E39",
+                    "sectors::name": "Remediation activities and other waste management services",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "81",
+                    "sectors::code": "H53",
+                    "sectors::name": "Postal and courier activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "90",
+                    "sectors::code": "J62",
+                    "sectors::name": "Computer programming, consultancy and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "91",
+                    "sectors::code": "J63",
+                    "sectors::name": "Information service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "97",
+                    "sectors::code": "L68",
+                    "sectors::name": "Real estate activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "99",
+                    "sectors::code": "M69",
+                    "sectors::name": "Legal and accounting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "100",
+                    "sectors::code": "M70",
+                    "sectors::name": "Activities of head offices; management consultancy activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "22",
+                    "updates::d_date": "04/22/2020",
+                    "updates::description": "The first round of applications for the COVID Guarantee Program was closed on 3 April 2020 at 11:59 p.m. The institutions are now in contact with the applicants and evaluating their applications. The next round will be announced according to the decision of the Ministry of Industry and Trade.",
+                    "modId": "2"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "1929",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "St\u0159edn\u00ed \u010cechy",
+                    "regions::nutsCode": "CZ02",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1931",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Jihoz\u00e1pad",
+                    "regions::nutsCode": "CZ03",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "138",
+        "modId": "139"
     },
     {
         "fieldData": {
@@ -1541,11 +1956,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -2480,11 +2890,6 @@
                     "recordId": "42",
                     "targetGroups::name": "The COVID-19 risk group",
                     "modId": "14"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -2550,16 +2955,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -2850,11 +3245,6 @@
                     "recordId": "44",
                     "targetGroups::name": "People in care facilities",
                     "modId": "14"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -3687,11 +4077,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -3934,11 +4319,6 @@
                     "recordId": "32",
                     "targetGroups::name": "Particular professions",
                     "modId": "14"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 },
                 {
                     "recordId": "73",
@@ -4247,7 +4627,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 }
             ],
             "funding": [
@@ -4337,11 +4717,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -4411,7 +4786,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "62",
@@ -4902,11 +5277,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -5244,11 +5614,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 },
                 {
                     "recordId": "78",
@@ -5798,16 +6163,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -6059,7 +6414,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 }
             ],
             "funding": [
@@ -6426,21 +6781,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -6707,11 +7047,6 @@
                     "recordId": "42",
                     "targetGroups::name": "The COVID-19 risk group",
                     "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -7020,7 +7355,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -8951,21 +9286,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -9377,11 +9697,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -9605,7 +9920,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -9688,11 +10003,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -10214,7 +10524,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 }
             ],
             "funding": [
@@ -10635,11 +10945,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -10811,11 +11116,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -10994,16 +11294,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -11078,11 +11368,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -11376,7 +11661,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "62",
@@ -11736,11 +12021,6 @@
                     "recordId": "48",
                     "targetGroups::name": "Seasonal workers",
                     "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -11930,11 +12210,6 @@
                     "modId": "15"
                 },
                 {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
                     "recordId": "69",
                     "targetGroups::name": "Parents in employment",
                     "modId": "8"
@@ -12083,16 +12358,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -13255,16 +13520,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -13479,16 +13734,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -13883,11 +14128,6 @@
                     "recordId": "48",
                     "targetGroups::name": "Seasonal workers",
                     "modId": "14"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -14595,7 +14835,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -14687,23 +14927,8 @@
                     "modId": "15"
                 },
                 {
-                    "recordId": "37",
-                    "targetGroups::name": "Older citizens",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "43",
-                    "targetGroups::name": "Disabled",
-                    "modId": "14"
-                },
-                {
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
                 }
             ],
@@ -14770,11 +14995,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -15171,11 +15391,6 @@
                     "recordId": "48",
                     "targetGroups::name": "Seasonal workers",
                     "modId": "14"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -15712,11 +15927,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -15782,16 +15992,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -16801,11 +17001,6 @@
                     "modId": "18"
                 },
                 {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
                     "recordId": "69",
                     "targetGroups::name": "Parents in employment",
                     "modId": "8"
@@ -16978,21 +17173,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 },
                 {
                     "recordId": "69",
@@ -17472,11 +17652,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -17920,11 +18095,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 },
                 {
                     "recordId": "71",
@@ -18381,16 +18551,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -18482,21 +18642,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -18591,16 +18736,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -18670,7 +18805,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 }
             ],
             "funding": [
@@ -20168,11 +20303,6 @@
                     "modId": "18"
                 },
                 {
-                    "recordId": "37",
-                    "targetGroups::name": "Older citizens",
-                    "modId": "15"
-                },
-                {
                     "recordId": "67",
                     "targetGroups::name": "Older people in employment (aged 55+)",
                     "modId": "9"
@@ -20388,7 +20518,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "62",
@@ -20793,11 +20923,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "77",
-                    "targetGroups::name": "Other groups of citizens",
-                    "modId": "10"
                 }
             ],
             "funding": [
@@ -21002,16 +21127,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
                 },
                 {
                     "recordId": "69",
@@ -22153,11 +22268,6 @@
                     "recordId": "32",
                     "targetGroups::name": "Particular professions",
                     "modId": "14"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -22490,16 +22600,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
                 },
                 {
                     "recordId": "69",
@@ -23406,11 +23506,6 @@
                     "recordId": "45",
                     "targetGroups::name": "Women",
                     "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -24237,11 +24332,6 @@
                     "recordId": "34",
                     "targetGroups::name": "Platform workers",
                     "modId": "14"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -24325,11 +24415,6 @@
                 {
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
                 }
             ],
@@ -24613,11 +24698,6 @@
                     "modId": "14"
                 },
                 {
-                    "recordId": "37",
-                    "targetGroups::name": "Older citizens",
-                    "modId": "15"
-                },
-                {
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
@@ -24787,16 +24867,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -25400,11 +25470,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -26459,26 +26524,6 @@
                     "recordId": "32",
                     "targetGroups::name": "Particular professions",
                     "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -26703,16 +26748,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -26924,7 +26959,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -27074,7 +27109,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -27503,7 +27538,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "62",
@@ -27584,11 +27619,6 @@
                     "recordId": "32",
                     "targetGroups::name": "Particular professions",
                     "modId": "14"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -28167,11 +28197,6 @@
                     "recordId": "43",
                     "targetGroups::name": "Disabled",
                     "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -28265,11 +28290,6 @@
                     "recordId": "43",
                     "targetGroups::name": "Disabled",
                     "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
                 }
             ],
             "funding": [
@@ -28688,11 +28708,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -29370,11 +29385,6 @@
                     "recordId": "35",
                     "targetGroups::name": "Unemployed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "66",
-                    "targetGroups::name": "Start-ups",
-                    "modId": "11"
                 }
             ],
             "funding": [
@@ -30755,11 +30765,6 @@
                     "modId": "15"
                 },
                 {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                },
-                {
                     "recordId": "77",
                     "targetGroups::name": "Other groups of citizens",
                     "modId": "10"
@@ -31324,16 +31329,6 @@
                     "recordId": "33",
                     "targetGroups::name": "Workers in non-standard forms of employment",
                     "modId": "14"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -32113,11 +32108,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -32220,16 +32210,6 @@
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
                     "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -32526,11 +32506,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -32827,16 +32802,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
                 }
             ],
             "funding": [
@@ -32901,11 +32866,6 @@
                 {
                     "recordId": "32",
                     "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
                     "modId": "14"
                 }
             ],
@@ -33251,11 +33211,6 @@
                 {
                     "recordId": "31",
                     "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
                     "modId": "15"
                 }
             ],
@@ -33749,7 +33704,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "60",
@@ -34632,11 +34587,6 @@
                     "recordId": "30",
                     "targetGroups::name": "Employees in standard employment",
                     "modId": "18"
-                },
-                {
-                    "recordId": "61",
-                    "targetGroups::name": "Companies providing essential services",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -36682,11 +36632,6 @@
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
                 }
             ],
             "funding": [
@@ -37039,7 +36984,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "62",
@@ -38631,7 +38576,7 @@
                 {
                     "recordId": "55",
                     "targetGroups::name": "Solo-self-employed",
-                    "modId": "15"
+                    "modId": "16"
                 },
                 {
                     "recordId": "63",
@@ -39250,7 +39195,7 @@
     },
     {
         "fieldData": {
-            "title": "Cyprus to pay holiday costs of infected tourists",
+            "title": "Cypriot government to pay holiday costs of infected tourists",
             "title_nationalLanguage": "\u0397 \u039a\u03cd\u03c0\u03c1\u03bf\u03c2 \u03b1\u03bd\u03b1\u03bb\u03b1\u03bc\u03b2\u03ac\u03bd\u03b5\u03b9 \u03c4\u03bf \u03ba\u03cc\u03c3\u03c4\u03bf\u03c2 \u03b4\u03b9\u03b1\u03bc\u03bf\u03bd\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03b5\u03c1\u03af\u03b8\u03b1\u03bb\u03c8\u03b7\u03c2 \u03c4\u03bf\u03c5\u03c1\u03b9\u03c3\u03c4\u03ce\u03bd \u03bc\u03b5 \u03ba\u03bf\u03c1\u03bf\u03bd\u03bf\u03ca",
             "d_startDate": "07/20/2020",
             "d_endDate": "10/31/2020",
@@ -39350,6 +39295,6 @@
             "regions": []
         },
         "recordId": "793",
-        "modId": "36"
+        "modId": "37"
     }
 ]
