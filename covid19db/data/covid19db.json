@@ -1157,6 +1157,110 @@
     },
     {
         "fieldData": {
+            "title": "COVID I interest-free state loan",
+            "title_nationalLanguage": "Bez\u00faro\u010dn\u00e1 p\u016fj\u010dka COVID I",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "03/20/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-12/253",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "COVID I provided an interest-free state loan for SME\u00b4s which business activities were affected by COVID-19. It was prepared by the Ministry of Industry and Trade of the Czech Republic (Ministerstvo pr\u016fmyslu a obchodu \u010cesk\u00e9 republiky, [MPO \u010cR](http://www.mpo.cz)) and the Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmzrb.cz), which also managed the measure. Loans should allow businesses to cover their basic operational expenses, acquisition of small tangible or intangible assets, the acquisition and financing of inventories or for other operating  expenditures. ",
+            "descriptionContentOfMeasure": "COVID I Loan programme provided support in the amount of CZK 500,000 (approx. \u20ac18,181) up to CZK 15,000,000 (approx. \u20ac545,454) with zero interest rate. Loans were granted up to 90% of eligible expenditure with maturity of 2 years, including the possibility of deferred repayment for up to 12 months. There were also no fees associated with the processing and granting of the loan or its possible early repayment.\r\rApplicants had to provide that their contractual performance had been delayed, suspended or cancelled due to measures taken to prevent the spread of coronavirus infection.\r\rThe total amount of the programme is CZK 600,000,000 (approx. \u20ac21,818,181).\r\r ",
+            "descriptionUseOfMeasure": "79 companies were supported by COVID I. \r\rNo evaluation or information on effectiveness are available by now, however, there was a lot of criticism of COVID I and COVID II measures. The Chamber of Commerce of the Czech Republic (Hospod\u00e1\u0159sk\u00e1 komora \u010cesk\u00e9 republiky, [HK \u010cR](http://www.hkcr.cz)) carried out  a survey among its members in April 2020, which highlighted the tangle of bureaucracy and lack of clarity in the COVID I and COVID II programmes. To apply, companies needed to complete complex forms forecasting the next three years, which is an impossibility in the current situation. Also the capacity of Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, \u010cMZRB), when approving the loans, was very low and the process too long.\r\r\r",
+            "descriptionInvolvementOfSocialPartners": "Employers organisations, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They were not involved into the management of policy measures. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-12_253.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "134",
+                    "sources::title": "CMRZB: COVID I Interest-free state loan (\u010cMRZB: COVID I Bez\u00faro\u010dn\u00fd \u00fav\u011br)",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/uvery/uver-covid/",
+                    "sources::d_date": "04/05/2020",
+                    "modId": "7"
+                },
+                {
+                    "recordId": "920",
+                    "sources::title": "MPO \u010cR: List of companies supported by COVID I (MPO \u010cR: Seznam spole\u010dnost\u00ed, kter\u00e9 obdr\u017eely podporu v programech COVID I a COVID II)",
+                    "sources::url": "https://www.mpo.cz/cz/rozcestnik/pro-media/tiskove-zpravy/prijemci-podpory-v-programech-covid-i--expanze---covid-a-covid-ii--254872/",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "923",
+                    "sources::title": "Chamber of Commerce: Survey among Prague entrepreneurs on COVID-19 measures (HK \u010cR: \u0161et\u0159en\u00ed mezi pra\u017esk\u00fdmi podnikateli ohledn\u011b vl\u00e1dn\u00edch opat\u0159en\u00ed proti COVID-19)",
+                    "sources::url": "https://www.komora.cz/news/setreni-hospodarske-komory-jak-prazsti-podnikatele-hodnoti-vladni-programy/",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "937",
+                    "sources::title": "CMRZB: Number of applications finalized/in process (\u010cMRZB: po\u010det schv\u00e1len\u00fdch a vy\u0159izovan\u00fdch \u017e\u00e1dost\u00ed)",
+                    "sources::url": "https://www.cmzrb.cz/prubezny-stav-vyrizovani-zadosti-programu-covid/",
+                    "sources::d_date": "06/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "938",
+                    "sources::title": "CMRZB: Text of the call for proposals (\u010cMRZB: text v\u00fdzvy)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/vyzva-uver-covid/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "68",
+                    "updates::d_date": "06/29/2020",
+                    "updates::description": "The programme was terminated after 5 days in operation since the demand was enormous. New similar measure were proposed under the name 'COVID II warranty program for companies affected by coronavirus'. In the [database](https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/).",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "136",
+        "modId": "141"
+    },
+    {
+        "fieldData": {
             "title": "Temporary recognition of entrepreneurs as recipients of  unemployment benefits ",
             "title_nationalLanguage": "Yritt\u00e4jien v\u00e4liaikainen oikeus ty\u00f6tt\u00f6myysturvaan",
             "d_startDate": "04/08/2020",
@@ -1257,6 +1361,447 @@
         },
         "recordId": "137",
         "modId": "110"
+    },
+    {
+        "fieldData": {
+            "title": "COVID II state guarantee programme",
+            "title_nationalLanguage": "Z\u00e1ru\u010dn\u00ed program COVID II",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "06/30/2023",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-14/255",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "After the termination of COVID I interest-free state loan programme, the Czech government has introduced the COVID II state guarantee programme for SMEs which are at risk of bankruptcy due to the measures in connection with the spread of COVID-19.\r \rLoans for SME\u00b4s are provided by [commercial banks](https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/)  while the state run Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmzrb.cz) secures the loans and offers financial aid for loan interest.",
+            "descriptionContentOfMeasure": "The measure runs under the Operational Programme Enterprise and Innovation for Competitiveness (Opera\u010dn\u00ed program Podnik\u00e1n\u00ed a inovace pro konkurenceschopnost, [OPPIK](https://www.mpo.cz/en/business/grants-and-business-support/opeic-2014-2020/operational-programme-enterprise-and-innovations-for-competitiveness-2014---2020--169167/). \r\rThe loan is aimed at SME\u00b4s with trade permission in Czech Republic (except of Prague region) who have been forced due to approved anti-COVID-19 measures to shut down or limit their businesses. Business activity of the SME has to be included at the supported economic activities list, which is, however, very wide and included accommodation, logistics, manufacturing industry etc. \r\r\u010cMZRB will secure the commercial loan up to 80% with the maximum period of 3 years. SME can also apply for financial support on the loan interest up to CZK 1,000,000 (\u20ac36,298 approx.). Loan to be secured are limited to CZK 15,000,000 (\u20ac544,465). The loans are intended to cover salaries, rent, utility costs and supplier-customer invoices. \r\rThe total amount for COVID II programme is CZK 4,000,000,000 (\u20ac145,190,563).\r\rThe program is financed from the EU Structural Funds within the OPPIK and is therefore not intended for the implementation of projects in the capital city of Prague. Financial support for projects implemented in Prague can be applied for in the COVID Prague guarantee program.\r\r\r\r",
+            "descriptionUseOfMeasure": "By 26 May 2020 1,219 companies have been supported.\rBy 21 June 2020, 2,091 companies have been supported by the total amount of CZK 12,600,000,000 (\u20ac470,061,555).\r\rNo evaluation or information on effectiveness is available by now, however, there has been a lot of criticism of COVID I and COVID II measures. The Chamber of Commerce of the Czech Republic (Hospod\u00e1\u0159sk\u00e1 komora \u010cesk\u00e9 republiky) realised in April 2020 a survey among its members, who highlighted the tangle of bureaucracy and lack of clarity in the COVID I and COVID II. To apply, companies needed to complete complex forms forecasting the next three years, which is an impossibility in the current situation. Also the capacity of Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, \u010cMZRB), when approving the loans, was very low and the process too long.\r\r",
+            "descriptionInvolvementOfSocialPartners": "Employers organisations, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They were not involved into the management of the policy measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_255.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "101",
+                    "sources::title": "CMRZB: State guarantee programme COVID II (\u010cMRZB: Z\u00e1ru\u010dn\u00ed program COVID II)",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "694",
+                    "sources::title": "CMRZB: Text of the call for proposals + eligibility criteria (\u010cMRZB: Text v\u00fdzvy a podm\u00ednky podpory)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/vyzva-covid-ii/",
+                    "sources::d_date": "04/21/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "920",
+                    "sources::title": "MPO \u010cR: List of companies supported by COVID I (MPO \u010cR: Seznam spole\u010dnost\u00ed, kter\u00e9 obdr\u017eely podporu v programech COVID I a COVID II)",
+                    "sources::url": "https://www.mpo.cz/cz/rozcestnik/pro-media/tiskove-zpravy/prijemci-podpory-v-programech-covid-i--expanze---covid-a-covid-ii--254872/",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "923",
+                    "sources::title": "Chamber of Commerce: Survey among Prague entrepreneurs on COVID-19 measures (HK \u010cR: \u0161et\u0159en\u00ed mezi pra\u017esk\u00fdmi podnikateli ohledn\u011b vl\u00e1dn\u00edch opat\u0159en\u00ed proti COVID-19)",
+                    "sources::url": "https://www.komora.cz/news/setreni-hospodarske-komory-jak-prazsti-podnikatele-hodnoti-vladni-programy/",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "936",
+                    "sources::title": "CMRZB: The list of lending banks (\u010cMRZB: Seznam spolupracuj\u00edc\u00edch bank)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/",
+                    "sources::d_date": "06/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "937",
+                    "sources::title": "CMRZB: Number of applications finalized/in process (\u010cMRZB: po\u010det schv\u00e1len\u00fdch a vy\u0159izovan\u00fdch \u017e\u00e1dost\u00ed)",
+                    "sources::url": "https://www.cmzrb.cz/prubezny-stav-vyrizovani-zadosti-programu-covid/",
+                    "sources::d_date": "06/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "34",
+                    "sectors::code": "B8",
+                    "sectors::name": "Other mining and quarrying",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "64",
+                    "sectors::code": "E36",
+                    "sectors::name": "Water collection, treatment and supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "65",
+                    "sectors::code": "E37",
+                    "sectors::name": "Sewerage",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "66",
+                    "sectors::code": "E38",
+                    "sectors::name": "Waste collection, treatment and disposal activities; materials recovery",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "67",
+                    "sectors::code": "E39",
+                    "sectors::name": "Remediation activities and other waste management services",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "81",
+                    "sectors::code": "H53",
+                    "sectors::name": "Postal and courier activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "90",
+                    "sectors::code": "J62",
+                    "sectors::name": "Computer programming, consultancy and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "91",
+                    "sectors::code": "J63",
+                    "sectors::name": "Information service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "97",
+                    "sectors::code": "L68",
+                    "sectors::name": "Real estate activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "99",
+                    "sectors::code": "M69",
+                    "sectors::name": "Legal and accounting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "100",
+                    "sectors::code": "M70",
+                    "sectors::name": "Activities of head offices; management consultancy activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "22",
+                    "updates::d_date": "04/22/2020",
+                    "updates::description": "The first round of applications for the COVID Guarantee Program was closed on 3 April 2020 at 11:59 p.m. The institutions are now in contact with the applicants and evaluating their applications. The next round will be announced according to the decision of the Ministry of Industry and Trade.",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "71",
+                    "updates::d_date": "05/18/2020",
+                    "updates::description": "The programme was replaced by COVID III Guarantee Program.",
+                    "modId": "1"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "1929",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "St\u0159edn\u00ed \u010cechy",
+                    "regions::nutsCode": "CZ02",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1931",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Jihoz\u00e1pad",
+                    "regions::nutsCode": "CZ03",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "138",
+        "modId": "144"
     },
     {
         "fieldData": {
@@ -3156,6 +3701,86 @@
     },
     {
         "fieldData": {
+            "title": "Introduction of a pandemic nursing benefit",
+            "title_nationalLanguage": "Zavedenie pandemick\u00e9ho o\u0161etrovn\u00e9ho",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "SK-2020-13/294",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "With regard to protection against the expansion of COVID-19, the government ordered the closure of all schools, including pre-school facilities. During this period of quarantine, one parent must remain with the children. So far, the nursing benefit has been paid only for 10 calendar days. The Act. 63/2020 Coll. extends the period of payment of this benefit to the whole period of closure of a school or pre-school facility.",
+            "descriptionContentOfMeasure": "According to this COVID-19 related measure, the entitlement to the nursing benefit arises from the first day of the need for personal and full-time treatment of a close person and only expires on the day the need for his/her personal and full-day treatment ends (and not as previously, for a maximum of 10 days). The condition of receiving the nursing benefit is that the beneficiary treats a child under 16 years of age all day, whose health condition, as confirmed by the relevant doctor, necessarily requires treatment by another natural person. The benefit is also paid if the beneficiary cares for the child until the age of eleven (up to 18 years of age with long-term adverse health conditions), when the child has been ordered to quarantine or isolate. \r\rThe benefit shall also be paid if the pre-school or social care facility in which the child is being provided, or the school the child attends, has been closed by decision of the competent authorities or has been subject to a quarantine measure. Another case of eligibility arises when the insured person cares for a close relative, sibling, spouse, spouse or parent of the spouse if the social service facility in which such a person is provided with social services in an outpatient or residential form is as a result of a decision by the competent authorities concluded or quarantined.\r\rThe first estimations suggest that the nursing benefit for workers will correspond to an average daily amount of \u20ac15.8.",
+            "descriptionUseOfMeasure": "It is foreseen that in 2020, the nursing benefit will be paid to 200,000 beneficiaries with a total duration of 101 days. The nursing benefit will be granted for all days during the closure of school and pre-school facilities, not only for 10 calendar days. Expenditure on the basis of these assumptions is expected to be around \u20ac 319.2 million in 2020. In April and May 2020, the Social Insurance Agency paid 230,262 benefits of \"pandemic nursing\" in the amount of \u20ac 62,218,391 (a year ago in 2019 it was only 29,608 benefits in the amount of \u20ac 3,259,123).",
+            "descriptionInvolvementOfSocialPartners": "Not involvement ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_294.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "142",
+                    "sources::title": "63 ACT of 25 March 2020 amending Act no. 461/2003 Coll. on social insurance,",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/63/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "177",
+        "modId": "94"
+    },
+    {
+        "fieldData": {
             "title": "Postponement of the employers' deadline for payment of compulsory social security obligations",
             "title_nationalLanguage": "Odlo\u017eenie term\u00ednu povinn\u00fdch platieb zamestn\u00e1vate\u013eov do poistn\u00fdch fondov",
             "d_startDate": "04/06/2020",
@@ -3611,6 +4236,90 @@
         },
         "recordId": "182",
         "modId": "89"
+    },
+    {
+        "fieldData": {
+            "title": "Waiver of advance payments for social and health insurance for self-employed",
+            "title_nationalLanguage": "Odklad z\u00e1loh soci\u00e1ln\u00edho a zdravotn\u00edho poji\u0161t\u011bn\u00ed pro OSV\u010c",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "CZ-2020-10/300",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "The Act 136/2020 Coll., selected modifications in the area of contributions to social security and contributions to the state employment policy and pension has been approved. This Act foregoes the obligation of self-employed persons to pay social and health insurance advance payments from March to August 2020. This measure should help self-employed to keep cash-flow when their business activities are limited by government measures against COVID-19. \r\rThere is no need to individually apply for the waiver of the obligation to pay advance premiums for March to August 2020, it is a legal regulation that will be applied to all self-employed persons by default.\r\r\r",
+            "descriptionContentOfMeasure": "Eligible are all self-employed persons performing major or subsidiary gainful activity. They are not obliged to pay advance health and social insurance premiums from March to August 2020. If the self-employed person pays or has already paid any of these advances, they will be used for any other already due liabilities and further as advance insurance premiums for September to December 2020.\r\rMinimum monthly payment for self-employed persons performing major gainful activity is for health insurance is CZK 2,352 (\u20ac86 approx.), for social insurance CZK 2,544 (\u20ac93 approx.) which now self-employed can use for different reasons. However, she/he will have to pay the health and social insurance payments for March-August 2020 in 2021, when she/he submits income and expenses report for 2020.\r\rIn case the self-employed is obliged to pay advance health and social insurance payments of higher assessment than the minimum monthly amount (depends on the income in previous year, e. g. 2019), he/she pays the difference between the minimum and real advance payment assessment in the form of balance insurance premium for the year 2020 (therefore it will be used for health and social insurance payment in 2021).",
+            "descriptionUseOfMeasure": "Not available yet.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, who are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-10_300.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "285",
+                    "sources::title": "CSSZ: Self-employed persons - coronavirus/CSSZ: Sebezam\u011bstnan\u00ed - koronavirus",
+                    "sources::url": "https://www.cssz.cz/web/en/self-employed-persons-coronavirus",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "286",
+                    "sources::title": "VZP: Changes in payments on health insurance/VZP: Zm\u011bny u plateb na zdravotn\u00ed poji\u0161t\u011bn\u00ed v souvislosti s epidemi\u00ed COVID-19",
+                    "sources::url": "https://www.vzp.cz/o-nas/aktuality/zmeny-u-plateb-na-zdravotni-pojisteni-v-souvislosti-s-epidemii-covid-19",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "955",
+                    "sources::title": "Act No. 136/2020 Coll., on selected modifications in the area of contributions to social security and contributions to the state employment policy and pension/Z\u00e1kon \u010d. 136/2020 Sb., o n\u011bkter\u00fdch \u00faprav\u00e1ch v oblasti pojistn\u00e9ho na soci\u00e1ln\u00ed zabezpe\u010den\u00ed a p\u0159\u00edsp\u011bvku na st\u00e1tn\u00ed politiku zam\u011bstnanosti a d\u016fchodov\u00e9ho poji\u0161t\u011bn\u00ed v souvislosti s mimo\u0159\u00e1dn\u00fdmi opat\u0159en\u00edmi p\u0159i epidemii v roce 2020 ",
+                    "sources::url": "https://www.zakonyprolidi.cz/cs/2020-136",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "183",
+        "modId": "95"
     },
     {
         "fieldData": {
@@ -8535,6 +9244,84 @@
     },
     {
         "fieldData": {
+            "title": "Debt moratorium on loans and mortgages",
+            "title_nationalLanguage": "Dluhov\u00e9 moratorium na p\u016fj\u010dky a hypot\u00e9ky",
+            "d_startDate": "03/26/2020",
+            "d_endDate": "",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments",
+            "calc_identifier": "CZ-2020-13/378",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/08/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "The Parliament of the Czech Republic (Parlament \u010cesk\u00e9 republiky) has approved the Act  Act 177/2020 Coll., on some measures in area of loan repayments related to COVID-19 pandemic which postpone loans and mortgages repayments from three up to six months for those who were affected by anti-coronavirus measures. The length of debt moratorium depends on the borrower. During the deferment period, individual borrowers will be fully relieved of debt service obligations whereas corporate borrowers will continue to pay interest and fees but enjoy a holiday on scheduled principal instalments for the duration of the deferment. \r\rHowever, before this act was approved, many banks have introduced their own conditions under which the borrower can ask for the postponement of repayments. Now, the new law unifies these conditions.",
+            "descriptionContentOfMeasure": "Eligible are all borrowers who were negatively affected by coronavirus pandemic. Applicants have to ask for the payment postponement at the bank and declare that their situation is caused by anti-virus measures (unemployment, quarantine, decrease in business activity). Then both interest and principal payments would be interrupted. \r\rThe act applies to loans taken out before 26 March 2020. The debt moratorium does not apply to credit cards, overdrafts, revolving loans, operating leases or loans related to capital market transactions. Repayments cannot be deferred for loans where the debtor has been late in repayment for over 30 days as of 26 March 2020. The postponements also do not involve any fees and will not cause a negative entry in the bank register for the client, leading to a bad credit rating.\r\r",
+            "descriptionUseOfMeasure": "No information available now.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved into the management of the policy measures. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-13_378.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "232",
+                    "sources::title": "MF \u010cR: You can't repay due to the state of emergency? We will give you a break/MF \u010cR: Nem\u016f\u017eete kv\u016fli nouzov\u00e9mu stavu spl\u00e1cet? D\u00e1me v\u00e1m oddechov\u00fd \u010das",
+                    "sources::url": "https://www.mfcr.cz/cs/aktualne/v-mediich/2020/nemuzete-kvuli-nouzovemu-stavu-splacet-d-38115",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "951",
+                    "sources::title": "Act 177/2020 Coll., on some measures in area of loan repayments related to COVID-19 pandemic/Z\u00e1kon \u010d. 177/2020 Sb., o n\u011bkter\u00fdch opat\u0159en\u00edch v oblasti spl\u00e1cen\u00ed \u00fav\u011br\u016f v souvislosti s pandemi\u00ed COVID-19",
+                    "sources::url": "https://www.zakonyprolidi.cz/cs/2020-177",
+                    "sources::d_date": "04/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "952",
+                    "sources::title": "MF \u010cR: Overview - Postponement of loan and mortgage repayments due to COVID-19/MF \u010cR: P\u0159ehledn\u011b - Odklad spl\u00e1tek \u00fav\u011br\u016f a hypot\u00e9k kv\u016fli koronaviru",
+                    "sources::url": "https://www.mfcr.cz/cs/o-ministerstvu/sluzby-verejnosti/komunikace-s-verejnosti/casto-kladene-otazky/uverove-moratorium-38130",
+                    "sources::d_date": "04/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "269",
+        "modId": "103"
+    },
+    {
+        "fieldData": {
             "title": "More favourable tax treatment of state subsidies due to special circumstances",
             "title_nationalLanguage": "Povoljniji porezni tretman dr\u017eavnih potpora zbog posebnih okolnosti",
             "d_startDate": "03/19/2020",
@@ -13223,6 +14010,99 @@
     },
     {
         "fieldData": {
+            "title": "Antivirus employment retention programme",
+            "title_nationalLanguage": "Antivirus - podpora zam\u011bstnanosti",
+            "d_startDate": "04/06/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "CZ-2020-15/454",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "The employment protection programme Antivirus is designed to help companies to protect jobs. The state will compensate companies \u2013 through the Labour Office of the Czech Republic \u2013 for wages paid out to employees. This measure will help employers better manage the current situation so that they will not have to resort to layoffs.\u00a0The wage reimbursement is intended for employers who have to cope with\u00a0restrictions due to COVID-19 crisis resolutions of the Czech government or whose employees are quarantined. There are two\u00a0models/regimes of reimbursement depending on\u00a0the reasons for the obstacle to work (see content of measure).\r\u00a0 \rThe government has approved the Antivirus programme to compensate employers\u2019 salary costs from March 12 until the end of April 2020 (for now).\u00a0The\u00a0applications for wage compensations\u00a0refunds have been opened since April 6, 2020 by the Labour Office. \r\rThe compensation model is based on the German Kurzarbeit model.",
+            "descriptionContentOfMeasure": "Regime A - Forced limitation or closure\u00a0of business operation and ordered quarantine.\r\r* In the event of ordered quarantine the employee receives from the employer a wage compensation amounting to 60 % of the average earnings (the first 14 days paid by employer).\r* In the event of business closure due to governmental orders the employee receives a wage compensation of 100% of the average earnings from the employer.\r\rA state contribution under\u00a0Regime A will amount to 80% of the paid wage compensation, including insurance contributions (max. CZK 39,000 (\u20ac1.415) per employee and month). \r\rRegime B - Connected economic difficulties (Obstacles to work on the part of an employer due to the connected economic difficulties because of the spread of the coronavirus).\r\rDepending on the type of obstacle the employee receives a wage compensation amounting to 60-100% of the average earnings\u00a0\r\rContribution under\u00a0Regime B will amount to 60% of the paid wage compensation, including insurance contributions (max. CZK 29,000 (\u20ac1052) per employee and month). \r\rBasic subsidy conditions: \r\r* Only employees with employment contract; (Temporary Agreements on work\u00a0\"DPP\", \"DPC\" are excluded)\u00a0\r* Salaries and insurance contributions were regularly paid. \r* The employer complies with the Labour Code and does not have overdue debts towards the state.",
+            "descriptionUseOfMeasure": "The program was launched on April 6th. The extent of use of refunds is not yet known.",
+            "descriptionInvolvementOfSocialPartners": "Both social partners were consulted. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-15_454.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "333",
+                    "sources::title": "ANTIVIRUS -employment retention ",
+                    "sources::url": "https://www.mpsv.cz/antivirus",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "334",
+                    "sources::title": "Antivirus - support for employment",
+                    "sources::url": "https://www.mpsv.cz/documents/20142/1443715/Antivirus-aj.pdf",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "335",
+                    "sources::title": "Targeted Programme for Employment Support: \u201cAntivirus\u201d\rHANDBOOK FOR EMPLOYERS\r",
+                    "sources::url": "https://www.mpsv.cz/documents/20142/1443715/Manual_Program_Antivirus_EN.pdf",
+                    "sources::d_date": "04/04/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "968",
+                    "sources::title": "Certain Aspects of Antivirus\u00b4 Regime C\rtaxes\rlegal\rworld news\rcase law\rin brief\rflash news\rCertain aspects of Antivirus\u2018 Regime C\rtaxes\rlegal\rworld news\rcase law\rin brief\rflash news\rCertain aspects of Antivirus\u2018 Regime C",
+                    "sources::url": "https://danovky.cz/en/certain-aspects-of-antivirus-regime-c",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "75",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "On 16 June 2020 the Antivirus programme has been extended by the Regime C, bill on the waiver of social security premiums for small companies of the size 50 employees and less.  \r\rRegime C enables the waiver of part of social security premiums and state unemployment policy contributions that are paid by employers (i.e. 24.8% of the aggregate income of their employees). The waiver can be claimed for three months from June to August 2020. The amount of social security premiums paid by employees has remained the same (equalling 6.5% of the assessment bases). \rThe waiver of social security premiums is carried out through a reductions in aggregate assessment base. However, it is not possible to deduct an assessment base higher than CZK 52,253 per employee, i.e. more than 1.5 multiple of the average wage set for social security purposes in 2020. \r\rThere are several conditions that an employer must meet that social security premiums are waived. If the conditions have been met is assessed every single month.  \r\r1.\tThe employer employs a maximum of 50 employees that are under employment relationship and participate in the sickness insurance scheme. The number of employees under employment relationship is determined at the end of each calendar month to which Regime C applies. \r2.\tThe number of employees has not decreased by 10% or more compared to the number of employees as of  31 March 2020.\r3.\tThe aggregate assessment bases of employees under employment relationship for an individual month to which Regime C applies may not decrease by more than 10% compared with the aggregate of assessment bases of such employees as of March 2020. ",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "345",
+        "modId": "99"
+    },
+    {
+        "fieldData": {
             "title": "Telecare psychological services  ",
             "title_nationalLanguage": "\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1 \u03a8\u03c5\u03c7\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ae\u03c2 \u03a4\u03b7\u03bb\u03b5\u03c6\u03c1\u03bf\u03bd\u03c4\u03af\u03b4\u03b1\u03c2 ",
             "d_startDate": "03/30/2020",
@@ -15313,6 +16193,88 @@
         },
         "recordId": "382",
         "modId": "81"
+    },
+    {
+        "fieldData": {
+            "title": "Country for the Future - Innovation to practice (COVID) - Digitalisation and innovations ",
+            "title_nationalLanguage": "Country for the Future - Inovace do praxe (COVID)",
+            "d_startDate": "04/02/2020",
+            "d_endDate": "05/15/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "CZ-2020-14/492",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "On 2 April 2020, the Ministry of Industry and Trade (Ministerstvo pr\u016fmyslu a obchodu \u010cesk\u00e9 republiky, [MPO \u010cR](http://www.mpo.cz)) announced a one-stage public tender in research, development and innovation (Act No. 130/2002 Coll. (the \u201cAct\u201d) in The Country for the Future (the \u201cProgram\u201d), Sub-Program 3 \u201cInnovation in Practice\u201d.). The tender is aimed at SMEs only. \r\rThe program Country for the Future\u00a0was approved by the government in May 2019, however, the current situation associated\u00a0with the expansion of COVID- 19 forced government to change the partial focus of the program. \r\rCurrently, the public tender is thematically aimed at the introduction of new innovative\u00a0solutions (innovative can be both processes/organization or\u00a0products)\u00a0which can in various respects help to combat the COVID-19 crisis\u00a0or similar future health threat.\u00a0Subsidies will also be provided for prevention-related innovations.",
+            "descriptionContentOfMeasure": "The projects that can be supported:\r\r* in the medical technology and diverse medical, monitoring and other applications, bringing a new or substantially improved manufacturing process or the provision of specialised services;\r* projects in all sectors of business, aimed at introducing innovative operational, logistical and other organisational processes that reduce the risk of spreading infectious diseases to residents, including employees and customers of companies;\r* projects that increase the degree of digitisation, automation or the ability of the organisation to respond flexibly and in an adaptive way to similar exceptional situations.\r\rAmount of subsidy:\r\rThe program will be able to get a subsidy up to 100% for:\r\r* personal expenses;\r* depreciation and other direct costs, overheads, etc.\r\rUp to 25% of project costs may be allocated to project related costs such as:\r\r* preparation of the application;\r* small investments;\r* marketing  etc. \r\rThe launch of the solution must begin in the period from 4 April 2020 to 1 September 2020, The duration of the project solution is a maximum of 36 months, and the completion of the solution should be no later than 31 August 2023.\r",
+            "descriptionUseOfMeasure": "Data not available yet, programme closed, but applications still in the process. ",
+            "descriptionInvolvementOfSocialPartners": "In general, social partners, which are members of tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They were not involved in the management of the policy measures. ",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_492.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "385",
+                    "sources::title": "MPO \u010cR: Second call of the Country for the Future Program focused on COVID-19/MPO \u010cR: Druh\u00e1 v\u00fdzva v programu The Country for the Future \u2013 zam\u011b\u0159en\u00ed COVID-19",
+                    "sources::url": "https://www.mpo.cz/cz/podnikani/podpora-vyzkumu-a-vyvoje/vyhlaseni-druhe-verejne-souteze-v-programu-the-country-for-the-future-_-zamereni-covid-19--253794/",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "386",
+                    "sources::title": "Country for the Future",
+                    "sources::url": "https://www.enovation.cz/eu-dotace/operacni-program/programy-mpo/country-for-the-future/?gclid=EAIaIQobChMI29m5q5ri6AIVCLLtCh3MQgsKEAAYASAAEgLvsvD_BwE",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "4"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "383",
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -38532,7 +39494,7 @@
     },
     {
         "fieldData": {
-            "title": "Special supporting schemes for workers and businesses  ",
+            "title": "Special support schemes for workers and businesses  ",
             "title_nationalLanguage": "\u0395\u03b9\u03b4\u03b9\u03ba\u03ac \u03c3\u03c7\u03ad\u03b4\u03b9\u03b1 \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd",
             "d_startDate": "06/13/2020",
             "d_endDate": "10/12/2020",
@@ -38723,6 +39685,387 @@
             "regions": []
         },
         "recordId": "805",
-        "modId": "36"
+        "modId": "37"
+    },
+    {
+        "fieldData": {
+            "title": "COVID Plus guarantee for loans to export-oriented large companies",
+            "title_nationalLanguage": "COVID Plus Z\u00e1ruka",
+            "d_startDate": "05/05/2020",
+            "d_endDate": "",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-19/898",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/01/2020",
+            "calc_lastUpdate": "07/01/2020",
+            "descriptionBackgroundInfo": "COVID Plus guarantee provides guarantees for loans to export-oriented large companies with more than 250 employees.The programme is sponsored by the Ministry of Finance of the Czech Republic (Ministerstvo financ\u00ed \u010cesk\u00e9 republiky, [MF \u010cR](http://www.mfcr.cz) together with the Ministry of Industry and Trade of the Czech Republic (Ministerstvo pr\u016fmyslu a obchodu \u010cesk\u00e9 republiky, [MPO \u010cR](http://www.mpo.cz) and managed by Exportn\u00ed garan\u010dn\u00ed a poji\u0161\u0165ovac\u00ed spole\u010dnost, a.s. (Export Guarantee and Insurance Company, EGAP). \r\rThe programme helps maintain the liquidity to export companies and is not intended for companies which were in existential difficulties before the state of emergency was declared (12 March 2020). Total amount of the programme is CZK 4,000,000,000 (\u20ac149,588,631). Companies negotiate the loans directly with a commercial bank. \r",
+            "descriptionContentOfMeasure": "The programme is eligible for companies, which: \r\r* have more than 250 emplyoees,\r* had in 2019 the proportion of total sales of exported goods and services at least 20% (this includes production deliveries to other exporters), \r* the main business activity is not in services in transport, accommodation, tourism or gambling industry.\r\rThe maximum amount of the loan is 25% of total annual sales of products and services in 2019, but not less than CZK 5,000,000 (\u20ac186,986 approx.) and not more than CZK 2,000,000,000 (\u20ac 74,794,315 approx.). EGAP will cover the principal of the loan up to 80%.\r\rThe guarantee can also provided for loans used for operations, working capital, refinancing or restructuring of a current loan or investment. \rGuarantee period is:\r\r* three years for working capital loans\r* up to five years for investment loans.",
+            "descriptionUseOfMeasure": "No information available at.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-19_898.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "956",
+                    "sources::title": "MPO \u010cR: Commercial banks can apply for COVID Plus guarantee/MPO \u010cR: Banky mohou \u017e\u00e1dat EGAP o z\u00e1ruky pro velk\u00e9 firmy",
+                    "sources::url": "https://www.mpo.cz/cz/rozcestnik/pro-media/tiskove-zpravy/banky-mohou-zadat-egap-o-zaruky-pro-velke-firmy--254441/",
+                    "sources::d_date": "05/05/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "27",
+                    "sectors::code": "A1",
+                    "sectors::name": "Crop and animal production, hunting and related service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "29",
+                    "sectors::code": "A3",
+                    "sectors::name": "Fishing and aquaculture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "31",
+                    "sectors::code": "B5",
+                    "sectors::name": "Mining of coal and lignite",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "32",
+                    "sectors::code": "B6",
+                    "sectors::name": "Extraction of crude petroleum and natural gas",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "33",
+                    "sectors::code": "B7",
+                    "sectors::name": "Mining of metal ores",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "34",
+                    "sectors::code": "B8",
+                    "sectors::name": "Other mining and quarrying",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "35",
+                    "sectors::code": "B9",
+                    "sectors::name": "Mining support service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "64",
+                    "sectors::code": "E36",
+                    "sectors::name": "Water collection, treatment and supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "65",
+                    "sectors::code": "E37",
+                    "sectors::name": "Sewerage",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "66",
+                    "sectors::code": "E38",
+                    "sectors::name": "Waste collection, treatment and disposal activities; materials recovery",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "67",
+                    "sectors::code": "E39",
+                    "sectors::name": "Remediation activities and other waste management services",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "90",
+                    "sectors::code": "J62",
+                    "sectors::name": "Computer programming, consultancy and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "91",
+                    "sectors::code": "J63",
+                    "sectors::name": "Information service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "93",
+                    "sectors::code": "K64",
+                    "sectors::name": "Financial service activities, except insurance and pension funding",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "94",
+                    "sectors::code": "K65",
+                    "sectors::name": "Insurance, reinsurance and pension funding, except compulsory social security",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "808",
+        "modId": "31"
     }
 ]
