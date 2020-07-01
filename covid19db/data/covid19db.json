@@ -9128,7 +9128,7 @@
             "calc_identifier": "CZ-2020-13/378",
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
-            "calc_lastUpdate": "05/07/2020",
+            "calc_lastUpdate": "07/01/2020",
             "descriptionBackgroundInfo": "The Parliament of the Czech Republic (Parlament \u010cesk\u00e9 republiky) has approved the postponement of loans and mortgages repayments from three up to six months for those who were affected by anti-coronavirus measures. The length of debt moratorium depends on the borrower. During the deferment period, individual borrowers will be fully relieved of debt service obligations whereas corporate borrowers will continue to pay interest and fees but enjoy a holiday on scheduled principal instalments for the duration of the deferment. \r\rHowever, before this act was approved, many banks have introduced their own conditions under which the borrower can ask for the postponement of repayments. Now, the new law unifies these conditions.",
             "descriptionContentOfMeasure": "Eligible are all borrowers who were negatively affected by coronavirus pandemic. Applicants have to ask for the payment postponement at the bank and declare that their situation is caused by anti-virus measures (unemployment, quarantine, decrease in business activity). Then both interest and principal payments would be interrupted. \r\rThe act applies to loans taken out before 26 March 2020. The debt moratorium does not apply to credit cards, overdrafts, revolving loans, operating leases or loans related to capital market transactions. Repayments cannot be deferred for loans where the debtor has been late in repayment for over 30 days as of 26 March 2020. The postponements also do not involve any fees and will not cause a negative entry in the bank register for the client, leading to a bad credit rating.\r\r",
             "descriptionUseOfMeasure": "No information available now.",
@@ -11840,83 +11840,6 @@
             ]
         },
         "recordId": "314",
-        "modId": "87"
-    },
-    {
-        "fieldData": {
-            "title": "Emergency package for Czech exporters",
-            "title_nationalLanguage": "Nouzov\u00fd bal\u00ed\u010dek pro \u010desk\u00e9 export\u00e9ry",
-            "d_startDate": "03/18/2020",
-            "d_endDate": "",
-            "calc_country": "Czechia",
-            "calc_minorCategory": "Reorientation of business activities",
-            "calc_subMinorCategory": "Matching / networking",
-            "calc_identifier": "CZ-2020-12/425",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/09/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "The Ministry of Foreign Affairs of the Czech Republic (Ministerstvo zahrani\u010dn\u00edch v\u011bc\u00ed \u010cesk\u00e9 republiky, MZV \u010cR) supports Czech exporters. Embassies of the Czech Republic and MZV \u010cR offer assistance to Czech entrepreneurs in case of problems with the realisation of commercial supplies abroad, especially in the case of administrative barriers imposed on importers by local authorities in connection with the COVID-19 pandemic. With respect to the mobility restrictions across Europe and other countries, MZV \u010cR offer assistance in finding new contacts and opportunities. ",
-            "descriptionContentOfMeasure": "Emergency package for Czech exporters contains mainly:\r1) Practical information on conducting foreign operations in a coronavirus situation with a number of restrictions in the target country;\r2) Embassies assistance in problems with performing trade operations;\r3) Finding and analysing opportunities, assisting in identifying and verifying suitable partners.\r4) Assistance and information sharing through a series of webinars and online consultations.\r5) Offer to use the services of local experts to assist the business on site during the negotiating and implementing the business.\r\rThese services are for free and are supported by other anti-coronavirus measures, e. g. debt moratorium, COVID I and COVID II programmes and others.",
-            "descriptionUseOfMeasure": "No info available yet.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-12_425.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "281",
-                    "sources::title": "Press release: Measures taken by the government of the Czech Republic",
-                    "sources::url": "https://www.spcr.cz/en/news/13437-measures-taken-by-the-government-of-the-czech-republic",
-                    "sources::d_date": "03/20/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "282",
-                    "sources::title": "Press release: MZV spou\u0161t\u00ed bal\u00ed\u010dek na pomoc export\u00e9r\u016fm",
-                    "sources::url": "https://www.export.cz/aktuality/mzv-spousti-balicek-na-pomoc-exporterum-2/",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "316",
         "modId": "87"
     },
     {
@@ -16109,78 +16032,6 @@
         },
         "recordId": "382",
         "modId": "81"
-    },
-    {
-        "fieldData": {
-            "title": "Country for the Future - Innovation to practice (COVID) - Digitalisation and innovations ",
-            "title_nationalLanguage": "Country for the Future - Inovace do praxe (COVID)",
-            "d_startDate": "04/02/2020",
-            "d_endDate": "05/15/2020",
-            "calc_country": "Czechia",
-            "calc_minorCategory": "Reorientation of business activities",
-            "calc_subMinorCategory": "Change of production/innovation",
-            "calc_identifier": "CZ-2020-14/492",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/12/2020",
-            "calc_lastUpdate": "05/09/2020",
-            "descriptionBackgroundInfo": "On 2 April 2020, the Ministry of Industry and Trade announced a one-stage public tender in research, development and innovation (Act No. 130/2002 Coll. (the \u201cAct\u201d) in The Country for the Future (the \u201cProgram\u201d), Sub-Program 3 \u201cInnovation in Practice\u201d.). The tender is aimed at SMEs only. \r\rThe program Country for the Future\u00a0was approved by the government in May 2019, however, the current situation associated\u00a0with the expansion of COVID- 19 forced government to change the partial focus of the program. \r\rCurrently, the public tender is thematically aimed at the introduction of new innovative\u00a0solutions (innovative can be both processes/organization or\u00a0products)\u00a0which can in various respects help to combat the COVID-19 crisis\u00a0or similar future health threat.\u00a0Subsidies will also be provided for prevention-related innovations.",
-            "descriptionContentOfMeasure": "The projects that can be supported:\r\r* in the medical technology and diverse medical, monitoring and other applications, bringing a new or substantially improved manufacturing process or the provision of specialised services;\r* projects in all sectors of business, aimed at introducing innovative operational, logistical and other organisational processes that reduce the risk of spreading infectious diseases to residents, including employees and customers of companies;\r* projects that increase the degree of digitisation, automation or the ability of the organisation to respond flexibly and in an adaptive way to similar exceptional situations.\r\rAmount of subsidy:\r\rThe program will be able to get a subsidy up to 100% for:\r\r* personal expenses;\r* depreciation and other direct costs, overheads, etc.\r\rUp to 25% of project costs may be allocated to project related costs such as:\r\r* preparation of the application;\r* small investments;\r* marketing  etc. \r\rThe launch of the solution must begin in the period from 4 April 2020 to 1 September 2020, The duration of the project solution is a maximum of 36 months, and the completion of the solution should be no later than 31 August 2023.\r",
-            "descriptionUseOfMeasure": "Data not available. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Not applicable",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_492.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Company practices",
-            "statusOfRegulation": "Not applicable"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "385",
-                    "sources::title": "Vyhl\u00e1\u0161en\u00ed druh\u00e9 ve\u0159ejn\u00e9 sout\u011b\u017ee v programu The Country for the Future \u2013 zam\u011b\u0159en\u00ed COVID-19",
-                    "sources::url": "https://www.mpo.cz/cz/podnikani/podpora-vyzkumu-a-vyvoje/vyhlaseni-druhe-verejne-souteze-v-programu-the-country-for-the-future-_-zamereni-covid-19--253794/",
-                    "sources::d_date": "04/02/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "386",
-                    "sources::title": "Country for the Future - Inovace do praxe (COVID)",
-                    "sources::url": "https://www.enovation.cz/eu-dotace/operacni-program/programy-mpo/country-for-the-future/?gclid=EAIaIQobChMI29m5q5ri6AIVCLLtCh3MQgsKEAAYASAAEgLvsvD_BwE",
-                    "sources::d_date": "04/02/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "383",
-        "modId": "80"
     },
     {
         "fieldData": {
