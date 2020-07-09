@@ -2939,215 +2939,6 @@
     },
     {
         "fieldData": {
-            "title": "Jobsharing made more flexible",
-            "title_nationalLanguage": "Arbejdsfordeling",
-            "d_startDate": "03/12/2020",
-            "d_endDate": "",
-            "calc_country": "Denmark",
-            "calc_minorCategory": "Ensuring business continuity and support for essential services",
-            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
-            "calc_identifier": "DK-2020-11/305",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/02/2020",
-            "descriptionBackgroundInfo": "In order to avoid direct dismissals, the government has made it possible for the companies to make use of the existing jobsharing scheme in a more flexible way. Jobsharing is covered by collective agreement. The flexible measures was passed by a so-called urgent statute in the Parliament. According to the\u00a0statute,\u00a0a rule about notifying the local jobcentre a week before\u00a0jobsharing can begin is abolished because it might create unnecessary red tape for the company.",
-            "descriptionContentOfMeasure": "According to the collective agreement a company can introduce a period of 13 weeks of jobsharing in the company as a provisional measure. Normally, the company must notify the local jobcentre a week before the jobsharing can start. This rule is abolished with the aim that the company can start jobsharing the same day the notification is send.\r  \rAt the same time, it becomes possible for companies to switch between the types of jobsharing periods when a cycle of jobsharing is completed. As it is, the working hours must be reduced by at least two full days per day. week or with one week of full-time work followed by one week of unemployment. However, the distribution can also be arranged with two weeks of full-time work followed by one week of unemployment or with two weeks of full-time work followed by two weeks of unemployment. According to the urgent statute, the employer can switch between the periods when the one in use expires. \r\rDuring the periods of unemployment, the employees in question will receive a supplementary unemployment benefit.",
-            "descriptionUseOfMeasure": "The media has mentioned that jobsharing is increasing among the companies affected by COVID-19 related decrease in production/sales. However, the concrete statistics is not yet published, but it is a matter of  short time.  ",
-            "descriptionInvolvementOfSocialPartners": "The social partners have welcomed the initiative to make the existing jobsharing scheme more flexible for an (open ended) period.",
-            "socialPartner_form": "Other",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_305.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "156",
-                    "sources::title": "Arbejdsfordeling g\u00f8res mere fleksibel",
-                    "sources::url": "https://bm.dk/media/12851/faktaark-om-arbejdsfordeling.pdf",
-                    "sources::d_date": "03/12/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "33",
-                    "targetGroups::name": "Workers in non-standard forms of employment",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "37",
-                    "sectors::code": "C10",
-                    "sectors::name": "Manufacture of food products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "38",
-                    "sectors::code": "C11",
-                    "sectors::name": "Manufacture of beverages",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "39",
-                    "sectors::code": "C12",
-                    "sectors::name": "Manufacture of tobacco products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "40",
-                    "sectors::code": "C13",
-                    "sectors::name": "Manufacture of textiles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "41",
-                    "sectors::code": "C14",
-                    "sectors::name": "Manufacture of wearing apparel",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "42",
-                    "sectors::code": "C15",
-                    "sectors::name": "Manufacture of leather and related products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "43",
-                    "sectors::code": "C16",
-                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "44",
-                    "sectors::code": "C17",
-                    "sectors::name": "Manufacture of paper and paper products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "45",
-                    "sectors::code": "C18",
-                    "sectors::name": "Printing and reproduction of recorded media",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "46",
-                    "sectors::code": "C19",
-                    "sectors::name": "Manufacture of coke and refined petroleum products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "47",
-                    "sectors::code": "C20",
-                    "sectors::name": "Manufacture of chemicals and chemical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "48",
-                    "sectors::code": "C21",
-                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "49",
-                    "sectors::code": "C22",
-                    "sectors::name": "Manufacture of rubber and plastic products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "50",
-                    "sectors::code": "C23",
-                    "sectors::name": "Manufacture of other non-metallic mineral products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "51",
-                    "sectors::code": "C24",
-                    "sectors::name": "Manufacture of basic metals",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "52",
-                    "sectors::code": "C25",
-                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "53",
-                    "sectors::code": "C26",
-                    "sectors::name": "Manufacture of computer, electronic and optical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "54",
-                    "sectors::code": "C27",
-                    "sectors::name": "Manufacture of electrical equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "55",
-                    "sectors::code": "C28",
-                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "56",
-                    "sectors::code": "C29",
-                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "57",
-                    "sectors::code": "C30",
-                    "sectors::name": "Manufacture of other transport equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "58",
-                    "sectors::code": "C31",
-                    "sectors::name": "Manufacture of furniture",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "59",
-                    "sectors::code": "C32",
-                    "sectors::name": "Other manufacturing",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "188",
-        "modId": "92"
-    },
-    {
-        "fieldData": {
             "title": "Establishment of an emergency fund for the solo self-employed",
             "title_nationalLanguage": "Mise en place d\u2019un fonds d\u2019urgence \u00e0 destination des ind\u00e9pendant",
             "d_startDate": "04/08/2020",
@@ -8042,6 +7833,102 @@
     },
     {
         "fieldData": {
+            "title": "Introduction of  the pandemic sickness benefit",
+            "title_nationalLanguage": "Zavedenie pandemick\u00e9ho nemocensk\u00e9ho",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "SK-2020-13/386",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/08/2020",
+            "calc_lastUpdate": "07/09/2020",
+            "descriptionBackgroundInfo": "A special sickness benefit for persons in obligatory quarantine due to the COVID-19 was introduced by amendment of the Act No. 461/2003 Coll. on Social insurance. The purpose of this measure is to help persons to overcome their lower income during quarantine. A further goal is to contain the costs for employers which might have to pay wage compensation to the employees on a sick leave for not quarantine-related reasons.",
+            "descriptionContentOfMeasure": "In case of obligatory quarantine, the benefit is paid by the Social Insurance Agency from the first day of quarantine at the level of 55% of gross wage (approx. 70% of net wage). \rThe person with diagnosed COVID-19 contacts his or her physician by phone or email. The physician sends the form to the Social Insurance Agency. The sick person also must inform his or her employer about the quarantine. There have been differences from the regular sickness benefit applied in other reasons than COVID-19. In these other cases, the first ten days of sick leave are paid by the employer as a wage compensation (25% of gross wage during first three days and 55% of gross wage from the fourth to the 10th day). The sickness benefit is paid by the Social Insurance Agency from the 11th day of the sickness (55% of gross wage).\rNot all persons in obligatory quarantine with COVID-19 are eligible for this benefit. They have to have paid sickness benefit insurance at least 270 days in the course of two years before the sickness - same as in other cases.\r",
+            "descriptionUseOfMeasure": "According to the Institute of Social Policy report, in March 2020 the number of sickness benefits applications due to the all quarantine reasons (all illnesses which required quarantine) reached its peak of 39,413 cases. The exact number of quarantine sickness benefits applications due to COVID-19 is not available. It is assumed that the vast majority of these applications refers, anyway, to COVID-19 quarantine as there were only 10 quarantine sickness benefits in March 2019. In April 2020 there were 6,451 quarantine sickness benefits applications compared to seven in April 2019. Finally, 4,065 persons applied for quarantine sickness benefit in May 2020, compared to 13 in May 2019. \rIn April 2020 the Social Insurance Agency paid out almost half of March 2020 quarantine sickness benefits.",
+            "descriptionInvolvementOfSocialPartners": "The information on social partner's involvement is not available.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_386.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "242",
+                    "sources::title": "Pandemic nursing benefit and pandemic sickness benefit. MPSVR SR. (Pandemick\u00e9 o\u0161etrovn\u00e9 a pandemick\u00e9 nemocensk\u00e9. MPSVR SR)",
+                    "sources::url": "https://www.employment.gov.sk/sk/koronavirus-pracovna-socialna-oblast/pracovna-oblast/osetrovne-nemocenske/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "243",
+                    "sources::title": "Infomation about coronavirus. How to claim the sickness benefit.",
+                    "sources::url": "https://www.socpoist.sk/ako-poziadat-o-nemocensku-davku/68337s#2",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "244",
+                    "sources::title": "Act No. 461/2003 Coll. on Social insurance (Z\u00e1kon \u010d. 461/2003 Z. z. o soci\u00e1lnom poisten\u00ed)",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/461/#predpis.cast-prva.hlava-druha.diel-druhy.skupinaParagrafov-podmienky_naroku_na_nemocenske",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "7"
+                },
+                {
+                    "recordId": "926",
+                    "sources::title": "Institute of Social Policy. First aid to Slovakia (In\u0161tit\u00fat soci\u00e1lnej politiky. Prv\u00e1 pomoc Slovensku:) ",
+                    "sources::url": "https://www.employment.gov.sk/files/slovensky/ministerstvo/analyticke-centrum/analyticke-komentare/isp_2020_prva_pomoc_slovensku_20200615.pdf",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "277",
+        "modId": "88"
+    },
+    {
+        "fieldData": {
             "title": "Temporary job offers portal",
             "title_nationalLanguage": "Ajutiste t\u00f6\u00f6pakkumiste portaal",
             "d_startDate": "03/17/2020",
@@ -11212,6 +11099,113 @@
         },
         "recordId": "345",
         "modId": "99"
+    },
+    {
+        "fieldData": {
+            "title": "Changes in the production of St. Nicolaus Distillery in Leopoldov",
+            "title_nationalLanguage": "Zmeny vo v\u00fdrobe  liehovaru St. Nicolaus v Leopoldove",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "SK-2020-12/456",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/09/2020",
+            "descriptionBackgroundInfo": "The management of the company promptly reacted to the higher demand of healthcare staff for disinfection products. The company focused on the pure alcohol production for disinfection purposes and on the production of disinfectant solution on alcohol basis. The company has also decided to supply social services facilities, mostly senior homes for free with disinfection products in order to keep strict hygienic requirements and to protect the most vulnerable group - the seniors.",
+            "descriptionContentOfMeasure": "The distillery reduced the vinegar production in order to increase the pure alcohol for disinfection purposes and disinfection solutions on alcohol basis. Immediately, the products are distributed nationwide to hospitals, healthcare facilities, pharmacies and regionally to social services facilities (senior homes). They produce 36,000 liters of pure alcohol daily.\r\rOn 27 March 2020 the company was ready to give 1,000 liters of disinfection to senior homes. They supplied senior homes mostly in towns and villages of Trnava and Nitra regions. In case of need the company is also ready to limit its alcohol beverages production in order to meet a high demand for disinfection products.",
+            "descriptionUseOfMeasure": "Estimations are not available yet.",
+            "descriptionInvolvementOfSocialPartners": "The information on social partner involvement is not available.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-12_456.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Company practices",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "345",
+                    "sources::title": "St. Nicolaus began with production of disinfection solution and pure alcohol (St. Nicolaus za\u010dal s v\u00fdrobou roztokovej dezinfekcie a \u010dist\u00e9ho liehu)",
+                    "sources::url": "https://ekonomika.pravda.sk/ludia/clanok/546163-st-nicolaus-zacal-s-vyrobou-roztokovej-dezinfekcie-a-cisteho-liehu/",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "346",
+                    "sources::title": "St. Nicolaus helps and reacts on coronavirus (St. Nicolaus pom\u00e1ha a reaguje na koronav\u00edrus)",
+                    "sources::url": "http://stn-trade.sk/novinky/st-nicolaus-pomaha-reaguje-koronavirus/",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "347",
+                    "sources::title": "We protect the most vulnerable (Chr\u00e1nime t\u00fdch najzranite\u013enej\u0161\u00edch)",
+                    "sources::url": "http://stn-trade.sk/novinky/chranime-tych-najzranitelnejsich/",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "6"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3332",
+                    "regions::countryCode": "SK",
+                    "regions::level": 3,
+                    "regions::name": "Trnavsk\u00fd kraj",
+                    "regions::nutsCode": "SK021",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "347",
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -15196,76 +15190,6 @@
     },
     {
         "fieldData": {
-            "title": "Mandatory usage of holiday entitlements and time credits",
-            "title_nationalLanguage": "Abbau von Urlaubs- und Zeitguthaben",
-            "d_startDate": "03/15/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Working time flexibility",
-            "calc_identifier": "AT-2020-12/542",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/12/2020",
-            "descriptionBackgroundInfo": "When there is a lack of employment in times of crisis, the use of holidays or time credits is a way of coping with the situation. The employee retains his or her job and has no loss of pay. The employer does need liquidity because labour costs do not decrease in the short term. However, he can release provisions and must grant correspondingly less vacation after the crisis.\rThe variant of using compensation for time off is possible if it is agreed that overtime and overtime work is not paid in money but in free time.\r\r\r\r",
-            "descriptionContentOfMeasure": "Generally, on the use of holidays, there is an obligation to agree: The use of vacation must be agreed between employer and employee, if possible in writing and documented. Time off in lieu must also always be agreed between the employer and employee.\r\rExceptionally, the employer can unilaterally order leave and time off if measures according to a specific COVID-19 law (COVID-19-Ma\u00dfnahmengesetz, especially VO 96/2020) lead to restrictions on entering holdings and as a result of such measures, services cannot be provided. In this case, the employer can (but does not have to) order the consumption of leave within the following framework: \r\r* Leave entitlement from previous years in full;\r* Leave entitlements from the current leave year to a maximum of two weeks;\r* In total, a maximum of 8 weeks of leave and time off in lieu can be order unilaterally by the employer.\r\rThe Civil Code of Austria (ABGB) was changed accordingly in order to allow for this crisis measure.",
-            "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_542.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "433",
-                    "sources::title": "WKO Factsheet on the use of holiday and time credits",
-                    "sources::url": "https://www.wko.at/service/factsheet-urlaubsverbrauch.pdf",
-                    "sources::d_date": "02/25/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "433",
-        "modId": "75"
-    },
-    {
-        "fieldData": {
             "title": "Good practice: Snowblowers to blow disinfectants",
             "title_nationalLanguage": "Good practice: Schneekanonen f\u00fcr Desinfektionsmittel",
             "d_startDate": "04/06/2020",
@@ -15344,108 +15268,6 @@
         },
         "recordId": "435",
         "modId": "89"
-    },
-    {
-        "fieldData": {
-            "title": "Special subsidised care time for working parents and carers",
-            "title_nationalLanguage": "Sonderbetreuungszeit",
-            "d_startDate": "03/16/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
-            "calc_identifier": "AT-2020-12/545",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "Due to the partial closure of school and kindergartens (with emergency service for those children who cannot be otherwise cared for, i.e. whose parents cannot work in home office), a special care time of up to three weeks for working parents with children up to the age of 14 and children with disabilities (no age limit) was established. In a later step, this was extended to workers with care needs for older people and can now be taken day wise. The employer's consent is needed.\r\rThe legal basis was an amendment to the employment law act \u00a7 18b Abs. 1 Arbeitsvertragsrechts-Anpassungsgesetz (AVRAG).",
-            "descriptionContentOfMeasure": "The employer's consent to the special care time is needed. The costs for the leave are shared between the state (which pays one third) and the employer (two thirds). Eligibility ends with a monthly wage of \u20ac5,370 (upper threshold).\r\rThe special care period is available for all those employees whose work is not necessary for the maintenance of the business and who do not have other childcare opportunities (schools and kindergartens remain open only for children of those parents whose work is necessary for the maintenance of the business).\r\rThe special care time is not to be offset against regular holiday entitlements or claims for time off or 'flexitime' credits. It is regarded as a 'normal' period of employment, and therefore counts towards employees' entitlements dependent on length of service. The legal base is an adaptation of the Employment Law Amendment Act (AVRAG, \u00a718b/1).\r",
-            "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionInvolvementOfSocialPartners": "The federal government and the top level social partner organisations negotiated and agreed on a crisis management fund which incorporates several measures, including e.g. the short-time work scheme or credit guarantees for businesses.",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Agreed (outcome)",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_545.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "438",
-                    "sources::title": "FAQ: Special care time",
-                    "sources::url": "https://www.bmafj.gv.at/Services/News/Coronavirus/FAQ--Sonderbetreuungszeit.html",
-                    "sources::d_date": "03/15/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "441",
-                    "sources::title": "Special care time now also per day",
-                    "sources::url": "https://orf.at/stories/3161629/",
-                    "sources::d_date": "04/12/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "37",
-                    "targetGroups::name": "Older citizens",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "43",
-                    "targetGroups::name": "Disabled",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "69",
-                    "targetGroups::name": "Parents in employment",
-                    "modId": "8"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "1",
-                    "funding::name": "Companies",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "436",
-        "modId": "85"
     },
     {
         "fieldData": {
@@ -16691,169 +16513,6 @@
     },
     {
         "fieldData": {
-            "title": "Rent support for companies in vulnerable sectors",
-            "title_nationalLanguage": "Tillf\u00e4llig rabatt f\u00f6r fasta hyreskostnader i utsatta branscher",
-            "d_startDate": "04/01/2020",
-            "d_endDate": "06/30/2020",
-            "calc_country": "Sweden",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "SE-2020-14/567",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "To support tenants operating in certain vulnerable sectors, the Swedish government has introduced a rent rebate scheme. The measure is regulated in the Ordinance (2020:237) on state support when certain tenants receive rent rebates (F\u00f6rordning om statligt st\u00f6d n\u00e4r vissa lokalhyresg\u00e4ster f\u00e5tt rabatt p\u00e5 hyran (2020:237)).\r\rThis measure was approved by the EU Commission on April 15, 2020. The scheme was approved under the State aid Temporary Framework adopted by the Commission on 19 March 2020, as amended on 3 April 2020.",
-            "descriptionContentOfMeasure": "The scheme is designed for tenants in the hotel, restaurants, retail and several other sectors that saw their revenues heavily decreasing or even disappearing due to the COVID-19 outbreak. The measure covers up to 50% of rent reductions negotiated between tenants and landlords (but no more than 25% of the initial fixed rent costs) for the period 1 April to 30 June 2020.\r\rThe compensation is applied for by the landlord retroactively through a digital application system administered by the County Administrative Boards.\r\rThe government has allocated SEK 5 billion (approximately EUR 453 million) for this support measure.",
-            "descriptionUseOfMeasure": "Data on the uptake of this measure are not yet available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-14_567.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "492",
-                    "sources::title": "Temporary discount on fixed rental costs in vulnerable sectors",
-                    "sources::url": "https://www.regeringen.se/pressmeddelanden/2020/04/tillfallig-rabatt-for-fasta-hyreskostnader-i-utsatta-branscher/",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "672",
-                    "sources::title": "State aid: Commission approves \u20ac453 million Swedish rent rebate scheme to support sectors affected by coronavirus outbreak",
-                    "sources::url": "https://ec.europa.eu/commission/presscorner/detail/sv/ip_20_663",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "673",
-                    "sources::title": "Regeringen har beslutat om tillf\u00e4llig rabatt f\u00f6r fasta hyreskostnader i utsatta branscher",
-                    "sources::url": "https://www.regeringen.se/artiklar/2020/04/regeringen-har-beslutat-om-tillfallig-rabatt-for-fasta-hyreskostnader-i-utsatta-branscher/",
-                    "sources::d_date": "04/16/2020",
-                    "modId": "2"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "10",
-                    "actors::name": "EU (Council, EC, EP)",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "73",
-                    "sectors::code": "G45",
-                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "75",
-                    "sectors::code": "G47",
-                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "87",
-                    "sectors::code": "J59",
-                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "109",
-                    "sectors::code": "N79",
-                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "112",
-                    "sectors::code": "N82",
-                    "sectors::name": "Office administrative, office support and other business support activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "118",
-                    "sectors::code": "Q86",
-                    "sectors::name": "Human health activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "122",
-                    "sectors::code": "R90",
-                    "sectors::name": "Creative, arts and entertainment activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "123",
-                    "sectors::code": "R91",
-                    "sectors::name": "Libraries, archives, museums and other cultural activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "125",
-                    "sectors::code": "R93",
-                    "sectors::name": "Sports activities and amusement and recreation activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "128",
-                    "sectors::code": "S95",
-                    "sectors::name": "Repair of computers and personal and household goods",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "129",
-                    "sectors::code": "S96",
-                    "sectors::name": "Other personal service activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "458",
-        "modId": "87"
-    },
-    {
-        "fieldData": {
             "title": "Suspension of evictions and of the expiration of lease contracts",
             "title_nationalLanguage": "Suspens\u00e3o das a\u00e7\u00f5es de despejo e da caducidade dos contratos de arrendamento ",
             "d_startDate": "03/12/2020",
@@ -17352,156 +17011,6 @@
     },
     {
         "fieldData": {
-            "title": "Online application for unemployment benefit ",
-            "title_nationalLanguage": "Online Anmeldung f\u00fcr Arbeitslosengeld",
-            "d_startDate": "03/15/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Income support for unemployed",
-            "calc_identifier": "AT-2020-12/576",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/06/2020",
-            "descriptionBackgroundInfo": "With new rules and more funds for short-time work, the Austrian government is trying to keep as many people as possible in their jobs. The Public Employment Service (AMS) head Johannes Kopf still expects 'due to the developments' that 'in the coming weeks a lot of people - hopefully for only a short time - will have to register as unemployed'. AMS expects an increased number of people to become unemployed during the current pandemic. In order reduce personal contacts to a minimum, applications for unemployment benefit and emergency assistance can be made without a personal interview from home. This can be done online, or via the electronic system eAMS, or, if online is not possible, via telephone and subsequent mailing of the forms.",
-            "descriptionContentOfMeasure": "Minister of Labour Christine Aschbacher (conservative People's Party \u00d6VP) has issued a decree stating that people no longer have to come personally to the AMS service centers to apply for unemployment benefits. This should both relieve the AMS and help to limit the spread of the virus.\r\rThe preferred way to submit an application is via an eAMS account, 'then a lot of the further communication is done electronically', according to AMS head Kopf. Those who do not yet have one can get one through their 'Finanzonline' account or with their Citizen Card. Those who have neither access to 'Finanzonline' nor a citizen card can apply for an electronic AMS account by email or phone. Then, however, the processing can take a few days. If waiting is not an option, unemployed can also register as unemployed using a form on the AMS website. It is also possible to report unemployment by email. The last option is to call the AMS to have the necessary forms sent to you by post.\r\rFor those who receive unemployment benefits and the entitlement period would come to an end (thus receiving the lower emergency assistance), the 'Corona crisis period' is not calculated towards this entitlement, i.e. unemployment benefits are prolonged for the duration of the crisis.",
-            "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_576.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "459",
-                    "sources::title": "AMS applications possible from home",
-                    "sources::url": "https://orf.at/corona/stories/3157908/",
-                    "sources::d_date": "03/15/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "467",
-        "modId": "84"
-    },
-    {
-        "fieldData": {
-            "title": "Corona family hardship funds",
-            "title_nationalLanguage": "Corona-Familienh\u00e4rtefonds",
-            "d_startDate": "04/15/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
-            "calc_identifier": "AT-2020-16/577",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/13/2020",
-            "calc_lastUpdate": "05/13/2020",
-            "descriptionBackgroundInfo": "In order to combat child poverty, the family ministry has decided to increase the (pre-existing) family hardship fund for families in Corona crisis times: Families in which parents (either one or both) are concerned by unemployment or short-time work, thus encountering a loss in income, should be receiving a one-time non-repayable compensation for income loss. Also self-employed with income losses will be eligible for this support.",
-            "descriptionContentOfMeasure": "Measures against child poverty are to be strengthened, family minister Anschober said: There are now payments to families who have been pushed into short-time work or unemployment by the current crisis. The minister specified that the previous family hardship compensation fund had been increased by \u20ac30 million which are now available for single payments to those affected. From 15 April 2020, parents who had been employed until 28 February and are now on  short-time work or have become unemployed due to the crisis are eligible. Self-employed persons with losses could also apply for payment. This applies to families with children who receive family allowance. The payment is valid for three months, but is paid once at the beginning and does not have to be paid back.\r\rThe exact amount of support depends on previous income. Aschbacher cited as an example a family with two children and \u20ac3,000 net family income, which would receive \u20ac780 for three months after the father's unemployment. The aim is to compensate for the loss of income due to unemployment or short-time work, the Ministry said. The ministry plans to publish the exact calculation bases next week.",
-            "descriptionUseOfMeasure": "No information available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Not applicable",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_577.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "458",
-                    "sources::title": "One-off payments for affected families",
-                    "sources::url": "https://orf.at/stories/3161232/",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                },
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "38",
-                    "targetGroups::name": "Children (minors)",
-                    "modId": "17"
-                },
-                {
-                    "recordId": "40",
-                    "targetGroups::name": "Parents",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "468",
-        "modId": "81"
-    },
-    {
-        "fieldData": {
             "title": "Alleviations for tenants",
             "title_nationalLanguage": "Erleichterungen f\u00fcr Mieter",
             "d_startDate": "04/01/2020",
@@ -17786,65 +17295,6 @@
     },
     {
         "fieldData": {
-            "title": "Electronic prescriptions",
-            "title_nationalLanguage": "Elektronisches Rezept",
-            "d_startDate": "03/18/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Access to healthcare",
-            "calc_identifier": "AT-2020-12/583",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/13/2020",
-            "descriptionBackgroundInfo": "In order to keep visits to doctors' offices to a minimum during the COVID-19 pandemic, Austria started to use electronic prescriptions on 18 March 2020. This quick initiation was possible because the country had already prepared to start electronic prescriptions in a pilot project in two political districts in the regional province in Carinthia in April 2020. However, according to the Austrian Chamber of Doctors, this measure will be discontinued again after the crisis is over. The measure is targeted especially to those who need long-term medication.\r\rIn addition to the electronic prescription, further measures for the period of the CoV pandemic were introduced, including for instance the suspension of the authorization requirement (chief physician requirement) for many medications. Furthermore, ambulance transports are free of charge until further notice; the same applies to medical aids and aids up to a total of \u20ac1,500 as well as X-ray and cross-sectional examinations. Sickness reports to doctors are currently also possible by telephone. Doctors, psychotherapists and midwives can also invoice necessary telemedical treatments (via Skype, video conference or telephone) such as a service performed in the ordination.",
-            "descriptionContentOfMeasure": "The procedure of getting an electronic recipe is that the patient calls the doctor's office. The doctor issues the prescription and saves it in the patient's (pre-existing) e-medication. The information reaches the pharmacy automatically via e-medication. There, the patients can either pick up the medicine themselves or send someone.\r\rIn cases where e-medication is not working or is not yet working, doctors were also given the opportunity to send prescriptions to the pharmacies by fax or email. The electronic prescription is primarily intended to help older people and people with previous illnesses to avoid medical practices as best they can given the spread of coronavirus in Austria. Accordingly, the measure is mainly intended for people with long-term medication. However, in principle, it is also possible that the doctor prescribes medication for acute cases. ",
-            "descriptionUseOfMeasure": "Currently no information available.",
-            "descriptionInvolvementOfSocialPartners": "The social insurance's administrative board consists of social partner and government representatives, so they are basically involved in all decisions. In this case, the process (i.e. the pre-existing project of implementing e-recipes) was sped up due to the pandemic. No specific funds (above the ones which were set aside for this anyway) were needed.",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Negotiated",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_583.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "465",
-                    "sources::title": "Electronic prescriptions - how it works (Elektronisches Rezept \u2013 so funktioniert es)",
-                    "sources::url": "https://orf.at/stories/3158210/",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "474",
-        "modId": "77"
-    },
-    {
-        "fieldData": {
             "title": "Campaign 'Safe at home'",
             "title_nationalLanguage": "Kampagne \"Sicher zu Hause\"",
             "d_startDate": "03/19/2020",
@@ -18053,113 +17503,6 @@
         },
         "recordId": "476",
         "modId": "75"
-    },
-    {
-        "fieldData": {
-            "title": "Instructions of the social partners for dealing with construction sites based on COVID-19",
-            "title_nationalLanguage": "Handlungsanleitung der Sozialpartner f\u00fcr den Umgang mit Baustellen aufgrund von COVID-19",
-            "d_startDate": "03/26/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Protection of workers, adaptation of workplace",
-            "calc_subMinorCategory": "Occupational health and safety",
-            "calc_identifier": "AT-2020-13/588",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/14/2020",
-            "calc_lastUpdate": "05/02/2020",
-            "descriptionBackgroundInfo": "The Austrian government did not want to halt construction work in times of the pandemic, so the social partners in the construction sector worked out, in cooperation with the labour inspectorate, instructions on how to protect workers against the Coronavirus in the construction industry. This resulted in a guide that was published on 26 March 2020. It applies to all workers working on construction sites. The set of instructions complements the general COVID-19 protective measures (i.e. distance of at least one meter to each other; wash hands thoroughly; do not touch your face; cough in the bent elbows or sneeze in a handkerchief, which is then immediately disposed of) - see cases AT-2020-12/590 and AT-2020-12/589 in this database.",
-            "descriptionContentOfMeasure": "To comply with occupational hygiene on the construction site, sanitary measures must be taken in accordance with Section 34 and Section 35 of the Construction Worker Protection Ordinance (BauV). \rAdditional measures in the areas industrial hygiene; organisational measures; work equipment; risk groups; minimization obligation during transport; dormitories; and coordination of work must also be implemented:\r\r**Industrial hygiene**\r\r* Provision of disinfectants and regular disinfection of the sanitary and social facilities on the construction site in short cleaning intervals \r* When using vehicles, construction machinery or tools, disinfection must be carried out by other personnel before use;\r* If disinfection is not possible in individual cases, gloves can be used as an alternative\r\r**Organisational measures**\r\r* staggering in terms of time or place to maintain the necessary distance when changing clothes, during breaks \r* plan work processes according to the technical possibilities so that the number of employees working at one location at the same time is as small as possible.\r\r**Work equipment**\r\r* if the protective distance of at least one meter cannot be maintained workers  must have mouth-nose protection or a full visor\r\r**Transport**\r \r* the number of employees must be minimised, taking into account the necessary minimum distance of one meter\r\r**Dormitories**\r \r* must not be occupied by more than one person",
-            "descriptionUseOfMeasure": "The measure has to be applied on all construction sites.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Agreed (outcome)",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_588.html",
-            "isOccupation": "Yes",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Non-binding recommendations or other texts",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "478",
-                    "sources::title": "Instructions of the social partners for dealing with construction sites based on COVID-19",
-                    "sources::url": "https://www.wko.at/branchen/gewerbe-handwerk/bau/RS10-Blg-Handlungsanleitung-Sozialpartner-COVID-19.pdf",
-                    "sources::d_date": "03/26/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "479",
-                    "sources::title": "Construction work and COVID-19",
-                    "sources::url": "https://www.proge.at/cms/P01/P01_0.a/1342628618698/home/bauarbeiten-und-covid-19",
-                    "sources::d_date": "04/03/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "32",
-                    "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [
-                {
-                    "recordId": "27",
-                    "occupations::name": "Building and related trades workers, excluding electricians",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "34",
-                    "occupations::name": "Drivers and mobile plant operators",
-                    "modId": "0"
-                }
-            ],
-            "sectors": [
-                {
-                    "recordId": "69",
-                    "sectors::code": "F41",
-                    "sectors::name": "Construction of buildings",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "70",
-                    "sectors::code": "F42",
-                    "sectors::name": "Civil engineering",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "71",
-                    "sectors::code": "F43",
-                    "sectors::name": "Specialised construction activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "479",
-        "modId": "77"
     },
     {
         "fieldData": {
@@ -20338,88 +19681,6 @@
             "regions": []
         },
         "recordId": "521",
-        "modId": "76"
-    },
-    {
-        "fieldData": {
-            "title": "Tripartite agreement on wage compensation in the private sector",
-            "title_nationalLanguage": "Trepartsaftale om l\u00f8nkompensation i den private sektor",
-            "d_startDate": "03/09/2020",
-            "d_endDate": "07/08/2020",
-            "calc_country": "Denmark",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "DK-2020-11/633",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/02/2020",
-            "descriptionBackgroundInfo": "The aim of the tripartite agreement is to secure employment for employees who otherwise would be dismissed as a result of the severe consequences for the companies due to COVID-19. Thus, the agreement offers a fixed wage compensation of 75% to the companies\u00a0covering the employees\u00a0that instead of losing their job are\u00a0send home from the company with the possibility to return. The measure applies to all companies in the private sector. ",
-            "descriptionContentOfMeasure": "The agreement covers all companies that due to the severe consequences of COVID-19 have to dismiss 30% of the employed or minimum 50 employees from the company. The government offers wage compensation to the companies for the employees that were to be dismissed\u00a0but instead, according to the agreement, will be send home with a perspective to return. The compensation for a (monthly paid) salaried employee is 75% of the wage or maximum of DKK 30,000. For an hourly paid employee the compensation is 90% or a maximum of DKK 30,000.\r\rThis agreement was concluded on 30 March 2020 and is an amendment of a first agreement from the 12 March 2020. In the first agreement the compensation for salaried employees were 75% but maximum DKK 23,000. For hourly paid employees, the compensation were 90% with a maximum of DKK 26,000. With the amendment, the maximum amount for both is DKK 30,000. The aim of the increased amount is to make it possible for more companies to participate.",
-            "descriptionUseOfMeasure": "All companies on the private labour maket are eligible. The estimated number of employees covered is not yet known. The number still accumulates. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Negotiated",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_633.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Tripartite agreements",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "525",
-                    "sources::title": "Trepartsaftale om midlertidig l\u00f8nkompensation for fyringstruede l\u00f8nmodtagere p\u00e5 det private arbejdsmarked",
-                    "sources::url": "https://www.fm.dk/nyheder/pressemeddelelser/2020/03/regeringenogarbejdsmarkedets-parter-styrker-trepartsaftalen-om-midlertidig-loenkompensation\r",
-                    "sources::d_date": "03/30/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "762",
-                    "sources::title": "Trepartsaftale skal hj\u00e6lpe l\u00f8nmodtagere",
-                    "sources::url": "https://www.fm.dk/nyheder/pressemeddelelser/2020/03/trepartsaftale-skal-hjaelpe-loenmodtagere",
-                    "sources::d_date": "03/15/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "524",
         "modId": "76"
     },
     {
