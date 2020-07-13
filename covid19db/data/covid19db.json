@@ -3734,151 +3734,6 @@
     },
     {
         "fieldData": {
-            "title": "Establishment of an emergency fund for the solo self-employed",
-            "title_nationalLanguage": "Mise en place d\u2019un fonds d\u2019urgence \u00e0 destination des ind\u00e9pendant",
-            "d_startDate": "04/08/2020",
-            "d_endDate": "06/25/2020",
-            "calc_country": "Luxembourg",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "LU-2020-15/306",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "The General Directorate for the Middle Classes introduced an emergency allowance for self-employed workers. This measure is intended to provide financial support, in the form of a certified tax-free emergency allowance, to traders, craftsmen and intellectual workers who work as self-employed persons, as well as to managing partners who hold an establishment permit. \r\rThis is an additional measure to the measure aiming at small enterprises and self-employed occupying less than ten employees.\r\rAt the moment no legal reference is available\r\r",
-            "descriptionContentOfMeasure": "The aid takes the form of a one-off lump-sum capital grant of \u20ac2,500.\r\rIt is intended exclusively for persons :\r   - who have the status of self-employed persons as their main occupation and ;\r   -  who are affiliated as such to the social security system.\r\rThe aid cannot be cumulated with the certified emergency allowance which was introduced by Grand-Ducal regulation of 25 March 2020 in order to assist commercial or craft enterprises, whether operating as sole proprietorships or companies.To be eligible, 5 conditions must be met:\r\r1. the self-employed person was affiliated to the Joint Social Security Centre as such on 15 March 2020; \r2. he has the necessary authorisations and approvals for the activity he carries out as a self-employed person;\r3. the professional income of the self-employed person used as a basis for calculating the social security contributions for the year 2019 plus, where applicable, the pensions paid by a pension insurance body must not exceed the amount of 2.5 the minimum social wage (\u20ac5,354.98 per month or \u20ac64,259.70 per year);\r4. the self-employed person employs less than 10 people;\r5. the self-employed person encounters temporary financial difficulties that have a direct causal link with the COVID-19 pandemic.\r",
-            "descriptionUseOfMeasure": "no information available",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-15_306.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "305",
-                    "sources::title": "Establishment of an emergency fund for the self-employed",
-                    "sources::url": "https://guichet.public.lu/en/entreprises/financement-aides/coronavirus/aide-independants.html",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "6"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "16"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "189",
-        "modId": "81"
-    },
-    {
-        "fieldData": {
-            "title": "Emergency fund for very small businesses and self-employed persons",
-            "title_nationalLanguage": "Notfallfong fir ganz kleng Betrieber an Ind\u00e9pendanten",
-            "d_startDate": "03/25/2020",
-            "d_endDate": "06/25/2020",
-            "calc_country": "Luxembourg",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "LU-2020-13/308",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "The aim of the measure is to provide an immediate financial support to the high number of very small businesses and self-employed persons regarding their importance for the Luxembourgish economy and who are a very vulnerable to unforeseen crises.\r\rThe legal backgrounds are: \r the declaration of a state of crisis by the law of 24 March 2020 extending the state of emergency (Loi du 24 mars 2020 portant prorogation de l\u2019\u00e9tat de crise d\u00e9clar\u00e9 par le r\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le COVID-19. M\u00e9morial A 178 du 24 mars 2020). \rand the implementation of the measure by the Grand-Ducal regulation of 25 March 2020 on the establishment of a certified emergency allowance in favour of certain micro-enterprises in the context of the COVIDpandemic-19 (R\u00e8glement grand-ducal du 25 mars 2020 ayant pour objet la mise en place d\u2019une indemnit\u00e9 d\u2019urgence certifi\u00e9e en faveur de certaines micro-entreprises dans le cadre de la pand\u00e9mie COVID-19). M\u00e9morial A 187 du 25 mars 2020",
-            "descriptionContentOfMeasure": "The General Directorate for Small and Medium-Sized Enterprises (GDSMSE) set up an emergency found for very small business and self-employed persons. This emergency fund provides immediate, non-repayable financial assistance in the form of a grant of \u20ac5,000.\r\rApplicants must meet the following criteria simultaneously: \rSize criteria: enterprises or self-employed persons both with a valid business permit issued by the GDSMSE and at maximum 9 fulltime employees.\r\rProhibition of closure criterion: both types of businesses must have interrupted their activity following the entry into force of the Grand-Ducal regulation of 18 March 2020 introducing a series of measures to combat COVID-19.\r\rTurnover criterion: Applicant companies must have an annual turnover of at least  \u20ac15,000 euros.\rAlso, if the applicant own\u2019s more than one business, he only can apply for aid for one business",
-            "descriptionUseOfMeasure": "No information available",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-13_308.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "268",
-                    "sources::title": "Establishment of an emergency fund for very small businesses and self-employed person",
-                    "sources::url": "https://guichet.public.lu/en/entreprises/financement-aides/coronavirus/fonds-urgence-petites-entreprises-independants.html",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "16"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "191",
-        "modId": "84"
-    },
-    {
-        "fieldData": {
             "title": "Suspending an employee from work in the event of an emergency or quarantine",
             "title_nationalLanguage": "Darbuotojo nu\u0161alinimas nuo darbo karantino laikotarpiu",
             "d_startDate": "03/19/2020",
@@ -7957,81 +7812,6 @@
     },
     {
         "fieldData": {
-            "title": "Extraordinary extension of unemployment benefit and social benefit",
-            "title_nationalLanguage": "Extens\u00e3o extraordin\u00e1ria do subsidio de desemprego e de benef\u00edcios sociais",
-            "d_startDate": "03/12/2020",
-            "d_endDate": "06/30/2020",
-            "calc_country": "Portugal",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Income support for unemployed",
-            "calc_identifier": "PT-2020-11/397",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/08/2020",
-            "calc_lastUpdate": "05/05/2020",
-            "descriptionBackgroundInfo": "This exceptional and temporary measure provided for Decree Law No. 10-F/2020 of 26 March 2020 aims at protecting income and guaranteeing subsistence minima by extending unemployment benefits and by facilitating the maintenance of social benefits. The measure published on 26 March applies retroactively from 12 March. This measure seeks to address the economic impact of COVID-19 disease pandemic having into account increasing unemployment and protection of those that were already unemployed and were about to end their social benefits.",
-            "descriptionContentOfMeasure": "Decree Law No. 10-F/2020 of 26 March 2020 that  \u2018Establishes an exceptional and temporary regime for complying with tax obligations and for contributions in the context of the COVID-19 disease pandemic\u2019  establishes  (in Article 1,  paragraph e) and in Article 6) the extraordinary extension of unemployment benefits and of all benefits of the social security system that guarantee subsistence minima, and suspends  the evaluation of conditions (means test) for maintaining social security system benefits. \rThe measure published on 26 March applies retroactively from 12 March. \rArticle 6\rExtraordinary extension of social benefits\r1 - Unemployment benefits and all benefits of the security system are extraordinarily extended guaranteeing subsistence minimums whose concession period or renewal term ends before the term referred to in paragraph 3.\r2 - The reassessments of the conditions for maintaining the benefits of the Social Security payment system are extraordinarily suspended. \r3 - The extension and suspension referred to in the previous numbers apply until June 30, 2020.\r4 - The measure provided for in this article is financed by the State Budget.",
-            "descriptionUseOfMeasure": "Information released by the Ministry of Labour, Solidarity and Social Security (MTSS) - April 2010'COVID-19 | Informa\u00e7\u00e3o relativa a fam\u00edlias e empresas no \u00e2mbito do MTSSS'\r\rData on 6 April 2020\u2022 since the beginning of the month, +4,098 new unemployed people were enrolled per day (double identical period April / 2019), 122 daily job offers (21% of identical period April / 2019) and\u00a0114 daily job placements (26% from the same period April / 2019)\r\u2022 in April, 12,114 new unemployment benefits claimed, 65% more than in the same period in\r2019; since March 16 more 41 thousand unemployment benefits claimed\rcompared to 16 thousand in the same period in 2019; 4,220 extensions of unemployment benefits\r",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-11_397.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "264",
-                    "sources::title": "Decree Law No. 10-F/2020 of 26 March 2020 that  \u2018Establishes an exceptional and temporary regime for complying with tax obligations and for contributions in the context of the COVID-19 disease pandemic\u2019  establishes  (in Article 1,  paragraph e) and in Article 6) the extraordinary extension of unemployment benefits and of all benefits of the social security system that guarantee subsistence minimums, and suspends  the evaluation of conditions (means test) for maintaining social security system benefits. \rThe measure published on 26 March applies retroactively from 12 March. \rArticle 6\rExtraordinary extension of social benefits\r1 - Unemployment benefits and all benefits of the security system are extraordinarily extended guaranteeing subsistence minimums whose concession period or renewal term ends before the term referred to in paragraph 3.\r2 - The reassessments of the conditions for maintaining the benefits of the Social Security payment system are extraordinarily suspended. \rDecreto-Lei n.\u00ba 10-F/2020 - Di\u00e1rio da Rep\u00fablica n.\u00ba 61/2020, 1\u00ba Suplemento, S\u00e9rie I de 2020-03-2",
-                    "sources::url": "https://dre.pt/web/guest/legislacao-consolidada/-/lc/130791178/202003280000/73801526/exportPdf/normal/1/cacheLevelPage?_LegislacaoConsolidada_WAR_drefrontofficeportlet_rp=diplom",
-                    "sources::d_date": "03/26/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "288",
-        "modId": "84"
-    },
-    {
-        "fieldData": {
             "title": "Banks will not take enforcement measures to collect debts from companies or citizens",
             "title_nationalLanguage": "Banke ne\u0107e poduzimati mjere prisilne naplate",
             "d_startDate": "03/19/2020",
@@ -9416,71 +9196,6 @@
         },
         "recordId": "320",
         "modId": "92"
-    },
-    {
-        "fieldData": {
-            "title": "Financial aid for self-employed to compensate for temporary financial difficulties caused by the COVID-19 crisis",
-            "title_nationalLanguage": "Aides remboursables destin\u00e9es \u00e0 rem\u00e9dier aux difficult\u00e9s financi\u00e8res temporaires li\u00e9es au COVID-19",
-            "d_startDate": "03/15/2020",
-            "d_endDate": "05/15/2020",
-            "calc_country": "Luxembourg",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "LU-2020-12/430",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/09/2020",
-            "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "Based on the law of 3 April 2020 on the introduction of an aid scheme for businesses in temporary difficulty/loi du 3 avril 2020 relative \u00e0 un r\u00e9gime d'aide en faveur des entreprises en difficult\u00e9 temporaire, this legal framework aims to provide refundable aids to self-employed persons holding a business permit and established in Luxembourg in craft, commercial and industrial businesses. Self-employed activities include, for example, lawyers, doctors, artists, scientists, engineers or journalists.  ",
-            "descriptionContentOfMeasure": "This measure aims at all self-employed persons holding a business permit and who are established in Luxembourg. In the case of mixed activities where one activity is exercised beyond self-employment, only eligible activities are covered by this aid (agricultural activities are not covered) on condition that the activities or their costs are kept separate.\r\rRefundable costs by the measure include both staff and rental costs for the COVID-19 epidemic period running from 15 March to 15 May 2020. Staff costs comprise both income from a professional activity and income paid by an association or company. The aid is capped at an amount equivalent to 2.5 times the social minimum wage per person concerned. Rental costs are capped at  \u20ac10,000 per month per single undertaking. \r\rThe law stipulates 4 prerequisites for the aid to be applied: the self-employed business must have financial problems during the defined period; the business must fall within the professions defined by the legislation; the business must have exercised its activities already before the crisis; and there must be a causal link between the business' financial difficulties and the COVID-19 epidemic period. \r",
-            "descriptionUseOfMeasure": "No information has been disclosed on the aid under review at the moment of writing. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-12_430.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "303",
-                    "sources::title": "Guichet public ",
-                    "sources::url": "https://guichet.public.lu/fr/entreprises/financement-aides/coronavirus/aides-difficultes-financieres-temporaires.html",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "321",
-        "modId": "80"
     },
     {
         "fieldData": {
@@ -11363,81 +11078,6 @@
         },
         "recordId": "370",
         "modId": "78"
-    },
-    {
-        "fieldData": {
-            "title": "Exceptional measures regarding teleworking for cross-border workers",
-            "title_nationalLanguage": "Mesures exceptionnelles concernant le t\u00e9l\u00e9travail des travailleurs transfrontaliers",
-            "d_startDate": "03/27/2020",
-            "d_endDate": "",
-            "calc_country": "Luxembourg",
-            "calc_minorCategory": "Ensuring business continuity and support for essential services",
-            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
-            "calc_identifier": "LU-2020-13/486",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/11/2020",
-            "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "Despite that Luxembourg is highly dependent on cross-border workers from the neighbouring countries France, Belgium and Germany and, while a large number of them continue to work in the health sector for example, a large number of them will also have to work from home. Fiscal arrangements limiting the days to conduct teleworking have always existed between Luxembourg and its neighbouring countries, but the COVID-19 period required more flexible teleworking arrangements and the governments of Luxembourg, of France, of Germany and of Belgium proceeded to adaptations on existing measures.",
-            "descriptionContentOfMeasure": "The following arrangements were made:\r\rArrangement between France and Luxembourg: \r\rThey agreed that the current situation constitutes a case of force majeure. As of Saturday, 14 March 2020 onwards, the presence of a worker at home to conduct telework will not be taken into account in the calculation of the currently applied 29-day period. This measure is applicable until further notice.\r\rArrangement between Belgium and Luxembourg: \r\rThey agreed that the current situation constitutes a case of force majeure, for which no work days are to be counted under the currently applicable 24-day rule. As of Saturday, 14 March 2020, the presence of a worker at home to carry out telework, will not be taken into account in the calculation of the 24-day period. This measure is also applicable until further notice.\r\rArrangement between Germany and Luxembourg: \r\rTeleworking from the main residence can be considered as working days in the country in which the activity is usually carried out. The days of teleworking of cross-border workers during the crisis are therefore not considered for the calculation of the 19-day limit. This time-limited arrangement applies from 11 March 2020 until further notice. \r",
-            "descriptionUseOfMeasure": "According to STATEC, in 2019, 200.221 cross-border workers worked in Luxembourg. However, no information is disclosed on how many of them are now working from home.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-13_486.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "378",
-                    "sources::title": "Government of Luxembourg",
-                    "sources::url": "https://gouvernement.lu/fr/actualites/toutes_actualites/communiques/2020/03-mars/16-lux-be-teletravail.html",
-                    "sources::d_date": "03/16/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "49",
-                    "targetGroups::name": "Cross-border commuters",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "377",
-        "modId": "74"
     },
     {
         "fieldData": {
@@ -31272,6 +30912,95 @@
         },
         "recordId": "805",
         "modId": "37"
+    },
+    {
+        "fieldData": {
+            "title": "Incentives scheme for airline companies ",
+            "title_nationalLanguage": "\u03a3\u03c7\u03ad\u03b4\u03b9\u03bf \u03ba\u03b9\u03bd\u03ae\u03c4\u03c1\u03c9\u03bd \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b9\u03c2 \u03b1\u03b5\u03c1\u03bf\u03c0\u03bf\u03c1\u03b9\u03ba\u03ad\u03c2 \u03b5\u03c4\u03b1\u03b9\u03c1\u03b5\u03af\u03b5\u03c2 ",
+            "d_startDate": "07/10/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "CY-2020-28/897",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/01/2020",
+            "calc_lastUpdate": "07/13/2020",
+            "descriptionBackgroundInfo": "The new incentives scheme has been approved by the Cabinet and announced by the Minister of Transport, Communications and Works, Mr. Yiannis Karousos, and aims to address the consequences emerged with the closing of airports in different sectors of the economy, particularly in tourism, and improve air connectivity of Cyprus with abroad.   ",
+            "descriptionContentOfMeasure": "The Scheme targets all airline companies aiming to reestablishing the air connection of Cyprus with abroad, revitalizing air passenger traffic and reducing the risk of airline companies, which plan to operate flights in the coming months. \r\rThe compensation will be performed on the aircraft occupancy indicator. Based on the indicator, an air route will be eligible to participate in the Scheme only if the airline company estimates that it is in a position to cover at least 40% of the aircraft\u2019s capacity. \r\rThe incentive will be paid to the airline companies for a capacity of 41% to 70%, assuming that if the airline company exceeds 70% of aircraft capacity it will have attained normal market conditions. It is estimated that passengers\u2019 traffic will reach 37,000 passengers in June, 196,000 in July, 460,000 in August, 634,000 in September, 693,000 in October, 388,000 in November and 334,000 passengers in December.  ",
+            "descriptionUseOfMeasure": "The budget of the Incentives Scheme, which is approved by the State Air Commissioner, amounts to \u20ac6.3 million. The Scheme will be in force for the next six months; it is addressed to all the airline companies and it is expected that more than 40 companies will express interest to use and participate in the scheme. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners did not participate in the design of the Scheme and are not expected to participate in the implementation and monitoring processes. The Scheme has been designed by the Ministry of Transport, Communication and Works and approved by the Council of Ministers. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-28_897.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "957",
+                    "sources::title": "Incentives scheme for airline companies",
+                    "sources::url": "https://www.pio.gov.cy/coronavirus/en/press/11062020_2.pdf",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2926",
+                    "regions::countryCode": "CY",
+                    "regions::level": 1,
+                    "regions::name": "\u039a\u03a5\u03a0\u03a1\u039f\u03a3 (Kypros)",
+                    "regions::nutsCode": "CY0",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "2929",
+                    "regions::countryCode": "CY",
+                    "regions::level": 1,
+                    "regions::name": "EXTRA-REGIO NUTS 1",
+                    "regions::nutsCode": "CYZ",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "807",
+        "modId": "15"
     },
     {
         "fieldData": {
