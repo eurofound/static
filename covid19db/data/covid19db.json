@@ -13276,6 +13276,83 @@
     },
     {
         "fieldData": {
+            "title": "Financial aid for solo self-employed negatively affected by COVID-19",
+            "title_nationalLanguage": "Yksinyritt\u00e4jien koronatuki",
+            "d_startDate": "04/09/2020",
+            "d_endDate": "10/15/2020",
+            "calc_country": "Finland",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "FI-2020-15/539",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "In order to support those solo-self-employed that have been negatively affected by the outbreak of COVID-19, the Finnish Government has given a temporary decree that make it possible for municipalities to apply for a grant that is then redistributed to solo-self-employed. Municipalities apply for this grant through Ministry of Economic Affairs and Labour. The amount of the grant is dependent on the number of solo-self-employed registered in the municipality. ",
+            "descriptionContentOfMeasure": "The grant is available for those solo-self-employed who are either registered or whose entrepreneurial income is no less than \u20ac20,000 per year. Only those solo-self-employed whose the financial situation and business activity has suffered from the outbreak of COVID-19 qualify for this grant. Furthermore, eligibility for the grant is dependent on the situation of the solo-self-employed - only those with reasonable possibilities to continue business activities shall be given the grant. \r\rThe Government will direct up to \u20ac250 million euros to financial aid for solo-self-employed. An individual grant is \u20ac2,000 and it can be paid out only once. Solo-self-employed can use this grant to cover expenses that have resulted from business activities between 16 March 2020 and 31 August 2020. ",
+            "descriptionUseOfMeasure": "By May 2020, municipalities had received nearly 20,000 applications from solo self-employed. ",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/FI-2020-15_539.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "431",
+                    "sources::title": "Yksinyritt\u00e4jien koronatuen valmistelu etenee - kunnille rahoitusta ja tarkemman ohjeet haun j\u00e4rjest\u00e4misest\u00e4 ",
+                    "sources::url": "https://tem.fi/artikkeli/-/asset_publisher/yksinyrittajien-koronatuen-valmistelu-etenee-kunnille-rahoitusta-ja-tarkemmat-ohjeet-haun-jarjestamisesta",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1029",
+                    "sources::title": "The granting of corona support to sole proprietors in municipalities started quickly (Yksinyritt\u00e4jien koronatuen my\u00f6nt\u00e4minen kunnissa k\u00e4yntiin ripe\u00e4sti)",
+                    "sources::url": "https://www.kuntaliitto.fi/tiedotteet/2020/yksinyrittajien-koronatuen-myontaminen-kunnissa-kayntiin-ripeasti",
+                    "sources::d_date": "05/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "430",
+        "modId": "98"
+    },
+    {
+        "fieldData": {
             "title": "State-funded unemployment security during the waiting period ",
             "title_nationalLanguage": "Valtion rahoittama ty\u00f6tt\u00f6myysetuus omavastuuajalla",
             "d_startDate": "04/20/2020",
@@ -14479,6 +14556,84 @@
         },
         "recordId": "448",
         "modId": "77"
+    },
+    {
+        "fieldData": {
+            "title": "Temporary deductions to employers' pension contribution in the private sector",
+            "title_nationalLanguage": "Yksityisen sektorin ty\u00f6nantajien ty\u00f6el\u00e4kemaksujen tilap\u00e4inen alentaminen ",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Finland",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "FI-2020-18/558",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "In accordance with Employees' Pensions Act (Ty\u00f6tekij\u00e4n el\u00e4kelaki) (395/2006), both employer and employee contribute to employees' pension. The basic percentage of employers contribution in 2020 is 25.3% of employees salary. Company size and other factors may however increase or decrease this percentage. In order to ease the pressure the outbreak of COVID-19 puts on employers and financial stability, amendment to the Employees Pensions Act and other relevant acts that temporarily decrease the employers contribution by 2.6%, have been passed. ",
+            "descriptionContentOfMeasure": "This measure applies to all private sector employers. \r\rThe Government estimates that temporary deductions to employers' pension contribution will amount to  \u20ac1,05 billion.  \r\rIn order to cover for deductions made in 2020 and increase the buffer of the workpension system that is used for financing these temporary deductions, employers' pension contribution will be increased by 0,4 between 2022 and 2025. The monetary support provided with the help of this measure is thus temporary. \r\rThere is no estimate regarding how much this temporary deduction will affect the contribution of an individual employer to its employees pensions. \r\rEmployees' contribution to pension will not be affected by this measure.\r\r\r\r",
+            "descriptionUseOfMeasure": "No information up to this date. ",
+            "descriptionInvolvementOfSocialPartners": "All peak-level social partners (Confederation of Finnish Industries, the Confederation of Unions for Professional and Managerial Staff in Finland, the Central Organisation of Finnish Trade Unions and the Finnish Confederation of Professionals STTK) were involved in designing this measure. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/FI-2020-18_558.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "416",
+                    "sources::title": "Social partners\u2019 proposals to help businesses in the corona crisis",
+                    "sources::url": "https://akava.fi/en/general-en/social-partners-proposals-to-help-businesses-in-the-corona-crisis/",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "454",
+                    "sources::title": "Ty\u00f6nantajan ty\u00f6el\u00e4kemaksuja alennetaan v\u00e4liaikaisesti koronaepidemian aiheuttaman vaikean taloustilanteen vuoksi",
+                    "sources::url": "https://stm.fi/artikkeli/-/asset_publisher/tyonantajan-tyoelakemaksuja-alennetaan-valiaikaisesti-koronaepidemian-aiheuttaman-vaikean-taloustilanteen-vuoksi",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "455",
+                    "sources::title": "Hallituksen esitys eduskunnalle laiksi ty\u00f6ntekij\u00e4n el\u00e4kelain mukaisen vakuutusmaksun tilap\u00e4isest\u00e4 alentamisesta vuonna 2020",
+                    "sources::url": "https://www.finlex.fi/fi/esitykset/he/2020/20200037.pdf",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "11",
+                    "funding::name": "Other",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "449",
+        "modId": "101"
     },
     {
         "fieldData": {
