@@ -4548,7 +4548,7 @@
             "descriptionBackgroundInfo": "In view of the scale of the COVID-19 threat and the tangible repercussions on the lives of companies and their employees, the Luxembourg government has decided on a 'force majeure / coronavirus' short-time working scheme with an accelerated procedure for all Luxembourg companies impacted by the coronavirus. The procedure has been simplified for all companies impacted by the coronavirus to speed up the treatment process following the Grand-Ducal regulation of 18 March 2020 introducing a series of measures to combat COVID-19. \r\rA company that resorts to short-time working in cases of force majeure commits not to dismiss employees for economic reasons as long as the relevant government decisions remain in force.\r\r(R\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le COVID-19. M\u00e9morial A 178 du 24 mars 2020 Shortime Work: Book v.- Employment and Unemployment -Title I - Prevention of dismissals and maintenance of employment\rChapter 1 - Measures to prevent cyclical redundancies (Livre V.- Emploi et Chomage\rTitre Premier \u2013 Pr\u00e9vention des licenciements et maintien de l\u2019emploi\rChapitre Premier.- Mesures destin\u00e9es \u00e0 pr\u00e9venir les licenciements conjoncturels)",
             "descriptionContentOfMeasure": "In the event of a drop in activity, short-time working provides for the continued employment of employees through state subsidies by reducing the working time of some or all employees in a company. The measures can apply to all employees on a permanent or fixed term contract, as well as for apprentices and interim workers.The aim is to avoid redundancies of employees for cyclical or structural reasons and in the event of force majeure preventing the normal pursuit of economic activities. In the context of the coronavirus crisis, the government decided to speed up the procedure by means of an online application accessible via the website of the public employment service. The measure is limited to 1,022 hours per year per employee.\r\rThe application for short-time work must be communicated to the staff representatives and applies to employees on permanent or fixed-term contracts who do not receive any old-age or disability pension, are insured with the Joint Social Security Centre, apprentices, persons benefiting from an employment programme. \r\rThe employer pays each employee the salary due for every hour worked as well as a compensation to at least 80% of the salary that should be received the inactive hours, but only up to a maximum of 250 % of the social minimum wage. Employers also have to continue to pay social contributions e) and withholding tax on salaries paid for hours worked as well as for inactive hours, with the exception of accident insurance contributions and family benefits.",
             "descriptionUseOfMeasure": "No information available",
-            "descriptionInvolvementOfSocialPartners": "On June 10. 2020, the ministers of work, employment and the social and solidarity economy, the minister of economy, the representatives of the trade unions OGBL and LCGB and the representatives of the employers\u2019 organization UEL (union des entreprises Luxembourgoises) decided new measures  in a common agreement new grant conditions of the short work employment linked to the COVID-19 crisis",
+            "descriptionInvolvementOfSocialPartners": "On 10 June 2020, the Ministers of work, employment and the social and solidarity economy, the Minister of economy, the representatives of the trade unions OGBL and LCGB and the representatives of the employers\u2019 organization UEL (union des entreprises Luxembourgoises) decided new measures  in a common agreement new grant conditions of the short work employment linked to the COVID-19 crisis.",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Agreed (outcome)",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-12_303.html",
@@ -4605,14 +4605,14 @@
                 {
                     "recordId": "195",
                     "updates::d_date": "07/13/2020",
-                    "updates::description": "On 10 June 2020, the ministers of work, employment and the social and solidarity economy, the minister of economy, the representatives of the trade unions OGBL and LCGB and the representatives of the employers\u2019 organization UEL (union des entreprises Luxembourgeoises) decided on new measures  in a common agreement  for new grant conditions of the short work employment linked to the COVID-19 crisis.\rWhile industrial companies will continue to benefit from cyclical short-time working and undertake not to lay off staff, the social partners recognised the particularly difficult situation of companies in certain vulnerable sectors heavily impacted by the Covid-19. These sectors are HORECA (catering), the tourism sector and the like. Businesses in these sectors will have accelerated access to partial unemployment from structural sources without limiting the number of employees affected.  Companies have the right to lay off a maximum of 25% of their employees until 31 December 2020. If a company succeeds in getting back to a good working order, it will have to give a priority of re-employment of the dismissed persons.\rFirms affected by the COVID-19crisis, other than industrial firms and those in vulnerable sectors will also be able to have recourse to short-time working from structural sources through the fast-track procedure, provided they do not make redundancies. This measure aims to preserve jobs in the enterprises concerned as far as possible.\rIn this case, however, the number of employees covered by short-time working may not exceed 25% of the workforce for the months of July and August, 20% for the months of September and October and 15% for the months of November and December.\rFinally, applications from enterprises in vulnerable sectors making more than 25% of their workforce redundant, as well as those from all other enterprises wishing to make redundancies, will be required to submit a so-called \"traditional\" short-time working application.",
-                    "modId": "2"
+                    "updates::description": "On 10 June 2020, the Ministers of work, employment and the social and solidarity economy, the Minister of economy, the representatives of the trade unions OGBL and LCGB and the representatives of the employers\u2019 organization UEL (union des entreprises Luxembourgeoises) decided on new measures  in a common agreement  for new grant conditions of the short work employment linked to the COVID-19 crisis.\rWhile industrial companies will continue to benefit from cyclical short-time working and undertake not to lay off staff, the social partners recognised the particularly difficult situation of companies in certain vulnerable sectors heavily impacted by the COVID-19. These sectors are HORECA (catering), the tourism sector and the like. Businesses in these sectors will have accelerated access to partial unemployment from structural sources without limiting the number of employees affected.  Companies have the right to lay off a maximum of 25% of their employees until 31 December 2020. If a company succeeds in getting back to a good working order, it will have to give a priority of re-employment of the dismissed persons.\r\rFirms affected by the COVID-19 crisis, other than industrial firms and those in vulnerable sectors will also be able to have recourse to short-time working from structural sources through the fast-track procedure, provided they do not make redundancies. This measure aims to preserve jobs in the enterprises concerned as far as possible.\rIn this case, however, the number of employees covered by short-time working may not exceed 25% of the workforce for the months of July and August, 20% for the months of September and October and 15% for the months of November and December.\r\rFinally, applications from enterprises in vulnerable sectors making more than 25% of their workforce redundant, as well as those from all other enterprises wishing to make redundancies, will be required to submit a so-called \"traditional\" short-time working application.",
+                    "modId": "4"
                 }
             ],
             "regions": []
         },
         "recordId": "186",
-        "modId": "97"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -4723,6 +4723,86 @@
         },
         "recordId": "187",
         "modId": "87"
+    },
+    {
+        "fieldData": {
+            "title": "Emergency fund for very small businesses and self-employed persons",
+            "title_nationalLanguage": "Notfallfong fir ganz kleng Betrieber an Ind\u00e9pendanten",
+            "d_startDate": "03/25/2020",
+            "d_endDate": "06/25/2020",
+            "calc_country": "Luxembourg",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "LU-2020-13/308",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "The aim of the measure is to provide an immediate financial support to the high number of very small businesses and self-employed persons regarding their importance for the Luxembourgish economy and who are a very vulnerable to unforeseen crises.\r\rThe legal backgrounds are: \r* The declaration of a state of crisis by the law of 24 March 2020 extending the state of emergency (Loi du 24 mars 2020 portant prorogation de l\u2019\u00e9tat de crise d\u00e9clar\u00e9 par le r\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le COVID-19. M\u00e9morial A 178 du 24 mars 2020). \r\r* The implementation of the measure by the Grand-Ducal regulation of 25 March 2020 on the establishment of a certified emergency allowance in favour of certain micro-enterprises in the context of the COVIDpandemic-19 (R\u00e8glement grand-ducal du 25 mars 2020 ayant pour objet la mise en place d\u2019une indemnit\u00e9 d\u2019urgence certifi\u00e9e en faveur de certaines micro-entreprises dans le cadre de la pand\u00e9mie COVID-19). M\u00e9morial A 187 du 25 mars 2020",
+            "descriptionContentOfMeasure": "The General Directorate for Small and Medium-Sized Enterprises (GDSMSE) set up an emergency found for very small business and self-employed persons. This emergency fund provides immediate, non-repayable financial assistance in the form of a grant of \u20ac5,000.\r\rApplicants must meet the following criteria simultaneously: \rSize criteria: enterprises or self-employed persons both with a valid business permit issued by the GDSMSE and at maximum 9 fulltime employees.\r\rProhibition of closure criterion: both types of businesses must have interrupted their activity following the entry into force of the Grand-Ducal regulation of 18 March 2020 introducing a series of measures to combat COVID-19.\r\rTurnover criterion: Applicant companies must have an annual turnover of at least  \u20ac15,000. \rAlso, if the applicant own\u2019s more than one business, he only can apply for aid for one business",
+            "descriptionUseOfMeasure": "No information available",
+            "descriptionInvolvementOfSocialPartners": "No involvement. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-13_308.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "268",
+                    "sources::title": "Establishment of an emergency fund for very small businesses and self-employed person",
+                    "sources::url": "https://guichet.public.lu/en/entreprises/financement-aides/coronavirus/fonds-urgence-petites-entreprises-independants.html",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "191",
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -11885,9 +11965,9 @@
             "calc_creationDay": "04/10/2020",
             "calc_lastUpdate": "05/03/2020",
             "descriptionBackgroundInfo": "Based on a draft legislation still discussed in Parliament (Projet de loi Nr 7545 visant \u00e0 mettre en place un r\u00e9gime de garantie en faveur de l'\u00e9conomie luxembourgeoise dans le cadre de la pand\u00e9mie Covid-19) and in order to help businesses during the crisis, new credit lines will be guaranteed at 85% by the Luxembourg government and 15% by the participating banks (for example BCEE, Raiffeisen) for loans granted during the period starting 18 March 2020 until 20 December 2020. The loans are intended as a subsidiary tool, after having resorted, where possible, to the tools of the Soci\u00e9t\u00e9 nationale de cr\u00e9dit et d'investissement (SNCI), the Office du Ducroire or the European Investment Bank in particular.\r\r",
-            "descriptionContentOfMeasure": "New credits for are reserved for businesses that were viable before 18 March 2020. The eligible business must contact one of the participating banks in Luxembourg to apply for a bank loan. \r\rThe maximum amount can be up to 25% of the business turnover for the year 2019. There are two pathways, depending on the size of the company:\r\rFor small and medium-sized enterprises, the guarantee premium, borne by the borrower, is set at : 0.25% for a maximum maturity of one year; 0.50% for a maximum maturity of 3 years; 1% for a maximum maturity of 6 years. For large companies, the guarantee premium, borne by the borrower, is set at: 0.50% for a maximum maturity of one year; 1% for a maximum maturity of 3 years; 2% for a maximum maturity of 6 years.",
+            "descriptionContentOfMeasure": "New credits for are reserved for businesses that were viable before 18 March 2020. The eligible business must contact one of the participating banks in Luxembourg to apply for a bank loan. \r\rThe maximum amount can be up to 25% of the business turnover for the year 2019. There are two pathways, depending on the size of the company:\r\rFor small and medium-sized enterprises, the guarantee premium, borne by the borrower, is set at:\r\r* 0.25% for a maximum maturity of one year; \r* 0.50% for a maximum maturity of three years; \r* 1% for a maximum maturity of six years. \r\rFor large companies, the guarantee premium, borne by the borrower, is set at: \r* 0.50% for a maximum maturity of one year; \r* 1% for a maximum maturity of three years; \r* 2% for a maximum maturity of six years.",
             "descriptionUseOfMeasure": "As this measure is still discussed in Parliament, no data can be disclosed here.",
-            "descriptionInvolvementOfSocialPartners": "",
+            "descriptionInvolvementOfSocialPartners": "Social partners assess the draft legislation in the course of the legislative procedure.",
             "socialPartner_form": "Other",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-12_469.html",
@@ -11938,7 +12018,7 @@
             "regions": []
         },
         "recordId": "360",
-        "modId": "72"
+        "modId": "74"
     },
     {
         "fieldData": {
@@ -12206,6 +12286,95 @@
     },
     {
         "fieldData": {
+            "title": "Family care leave for family support introduced",
+            "title_nationalLanguage": "Cong\u00e9 familial pour soutien familial",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "06/20/2020",
+            "calc_country": "Luxembourg",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "LU-2020-12/475",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "To limit the spread of the coronavirus, the government introduced a paid family support leave to assist private-sector employees and the self-employed who are obliged to stop working while an approved facility for persons with disabilities or the elderly is closed in order to care for a disabled adult or a dependent elderly person living in their household.\r\rThe legal backgrounds are: the declaration of a state of crisis by the \"Loi du 24 mars 2020 portant prorogation de l\u2019\u00e9tat de crise d\u00e9clar\u00e9 par le r\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le Covid-19. M\u00e9morial A 178 du 24 mars 2020.\rGrand-Ducal regulation of 18 March 2020 introducing a series of measures to combat COVID-19 (R\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le Covid-19. M\u00e9morial A 178 du 24 mars 2020)",
+            "descriptionContentOfMeasure": "The measure applies to employees in the private sector or self-employed persons if they have no other options for caring for a disabled or elderly adult.The following measures should be fulfilled:\r\r1. the approved structure, which in normal circumstances takes care of the adult person with a disability or the elderly person, has notified the Minister of the cessation of its activities or part of its activities in the context of the state of crisis ;-\r2. the private-sector employee or the self-employed person takes care in the home of the person concerned with whom he resides ;\r3. the applicant does not fall under the partial unemployment scheme during the period for which the leave is requested and no other means of care is available.If several people live in the same home as the disabled or elderly person, they may alternate family support leave. \r\rThe household member who is not engaged in a strategically important activity in the current situation (e.g. health professional), should take the family support leave.The leave may be divided among the members of a household but may not be taken into charge by the sickness assurance.",
+            "descriptionUseOfMeasure": "No information are available.",
+            "descriptionInvolvementOfSocialPartners": "not available",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-12_475.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "369",
+                    "sources::title": "Covid-19: Introduction d'un cong\u00e9 pour soutien familia",
+                    "sources::url": "https://gouvernement.lu/fr/actualites/toutes_actualites/communiques/2020/04-avril/03-conge-soutien-familial.htm",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "370",
+                    "sources::title": "The good, the bad and the ugly \u2013 L\u2019OGBL prend position par rapport aux d\u00e9cisions du Conseil de gouvernement du 3 avril 202",
+                    "sources::url": "http://www.ogbl.lu/blog/tr-coogbl-the-good-the-bad-and-the-ugly-logbl-prend-position-par-rapport-aux-decisions-du-conseil-de-gouvernement-du-3-avril-2020",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "4"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "51",
+                    "targetGroups::name": "Other groups of workers",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "199",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "This measure ended with the end of the crisis state on 25 June 2020",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "366",
+        "modId": "95"
+    },
+    {
+        "fieldData": {
             "title": "Deferral for social security contributions for self-employed",
             "title_nationalLanguage": "Zahlungsaufschub f\u00fcr Sozialversicherungsbeitr\u00e4ge",
             "d_startDate": "03/13/2020",
@@ -12383,7 +12552,7 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
             "calc_lastUpdate": "05/03/2020",
-            "descriptionBackgroundInfo": "The Natioanl Credit and Investment Company (Soci\u00e9t\u00e9 Nationale de Cr\u00e9dit et d\u2019Investissement, SNCI) wants to help soundly managed companies that find themselves with economic difficulties related to the COVID-19 crisis. The SNCI was born out of the steel crisis in 1977. The health crisis of the COVID-19 pandemic, is giving the Soci\u00e9t\u00e9 nationale de cr\u00e9dit et d'investissement the opportunity to take a stand at the bedside of Luxembourg companies.SNCI is a public-law banking institution with legal personality whose capital is fully owned by the State of Luxemburg. \r\rLegal background: Law of August 2nd 1977, Creating the SNCI, Loi du 2 ao\u00fbt 1977 portant cr\u00e9ation d\u2019une Soci\u00e9t\u00e9 Nationale de Cr\u00e9dit et d\u2019Investissement,(M\u00e9m. A - 45 du 8 ao\u00fbt 1977",
+            "descriptionBackgroundInfo": "The Natioanl Credit and Investment Company (Soci\u00e9t\u00e9 Nationale de Cr\u00e9dit et d\u2019Investissement, SNCI) wants to help soundly managed companies that find themselves with economic difficulties related to the COVID-19 crisis. The SNCI was born out of the steel crisis in 1977. The health crisis of the COVID-19 pandemic, is giving the Soci\u00e9t\u00e9 nationale de cr\u00e9dit et d'investissement the opportunity to take a stand at the bedside of Luxembourg companies. SNCI is a public-law banking institution with legal personality whose capital is fully owned by the State of Luxemburg. \r\rLegal background: Law of August 2nd 1977, Creating the SNCI, Loi du 2 ao\u00fbt 1977 portant cr\u00e9ation d\u2019une Soci\u00e9t\u00e9 Nationale de Cr\u00e9dit et d\u2019Investissement,(M\u00e9m. A - 45 du 8 ao\u00fbt 1977",
             "descriptionContentOfMeasure": "Special Anti-Crisis Financing can be granted to SMEs and large companies, which were not in financial difficulties before and which are encountering temporary financial difficulties as a result of exceptional financing needs caused by the crisis (COVID-19 pandemic)  up to 400 million euros, corresponding to a total leverage effect of nearly 700 million euros, including bank financing.The beneficiaries shall possess a valid business permit issued by the Ministry of the Economy. \r\rOnly exceptional financing needs caused by the COVID-19 pandemic crisis are eligible. The intermediary Bank is responsible for the analysis necessary to determine and verify these exceptional financing needs and then addressed to the SNCI and which it wants to co-finance together with the SNCI.\r\rThe financing amount can be between 12,500 and 10,000,000, where the SNCI share could be 60 %, and the intermediary Bank covers the remaining 40%. The SNCI\u2019s share can attain 60% of the exceptional financing need, and the remaining 40% is covered by the intermediary Bank. The duration of the financing is limited to five years, with a fixed rate regularly reviewed. The SNCI reserves the right to revise the interest rate yearly. \r\rRepayment is made in equally distributed quarterly installments. A single capital repayment can repay loans which duration does not exceed 24 months at the final maturity date.",
             "descriptionUseOfMeasure": "No information available.",
             "descriptionInvolvementOfSocialPartners": "",
@@ -12427,7 +12596,7 @@
             "regions": []
         },
         "recordId": "370",
-        "modId": "78"
+        "modId": "79"
     },
     {
         "fieldData": {
@@ -12509,7 +12678,7 @@
             "regions": []
         },
         "recordId": "371",
-        "modId": "84"
+        "modId": "85"
     },
     {
         "fieldData": {
