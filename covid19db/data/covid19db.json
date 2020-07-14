@@ -5835,10 +5835,10 @@
             "sources": [
                 {
                     "recordId": "151",
-                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020, Di\u00e1rio da Rep\u00fablica n.\u00ba 57/2020, 1\u00ba \rSuplemento, S\u00e9rie I de 2020-03-",
-                    "sources::url": "https://dre.pt/application/file/a/13051952",
+                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020,  Di\u00e1rio da Rep\u00fablica n.\u00ba 61/2020\rSuplemento, S\u00e9rie I de 2020-03-",
+                    "sources::url": "https://dre.pt/pesquisa/-/search/130779506/details/maximized",
                     "sources::d_date": "03/20/2020",
-                    "modId": "7"
+                    "modId": "9"
                 },
                 {
                     "recordId": "175",
@@ -5986,83 +5986,6 @@
         },
         "recordId": "220",
         "modId": "83"
-    },
-    {
-        "fieldData": {
-            "title": "Social tax payments for solo self-employed",
-            "title_nationalLanguage": "FIE-de sotsiaalmaksu avansilised maksed",
-            "d_startDate": "03/20/2020",
-            "d_endDate": "05/07/2020",
-            "calc_country": "Estonia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "EE-2020-12/337",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "Solo self-employed (FIE in Estonia) are obliged to pay social tax four times a year as advance payments at the end of every quarter in the amount of at least the minimum social tax obligation (in 2020, \u20ac534.6 per quarter). The final tax liability based on their business income is calculated the next year based on the income tax declaration. As several solo self-employed are in difficult position due to the restrictions, the measure is seen as a soothing measure to avoid tax arrears and economic difficulties for the sole proprietors. ",
-            "descriptionContentOfMeasure": "To help the solo self-employed persons, the state pays the social tax advanced payment for the first quarter of 2020 to the solo self-employed's prepaid account in the Tax and Customs Board. It is possible to use the payment for the first quarter payment of the social tax. If the payment for the first quarter has already made by the solo self-employed, the payment can be used for the payment of any tax liability now or in the future, or transfer the money to their bank account and use it for other business costs. The size of the payment is \u20ac534.6.",
-            "descriptionUseOfMeasure": "On 7 May 2020 the Tax and Customs Board started making the payments to the self-employed. There were altogether 28,000 self-employed in Estonia at the time, of whom 7,426 had obligation to pay the quarterly payment. A total of 1,747 of them had not paid the quarterly payment yet, thus it was paid by the Tax and Customs Board in the total amount of \u20ac800,000. There were 5,769 persons however who had already paid their tax. For them a total of \u20ac2.5 million were paid and they can choose how to use the money.",
-            "descriptionInvolvementOfSocialPartners": "N.a.",
-            "socialPartner_form": "Not applicable",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-12_337.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "180",
-                    "sources::title": "The state supports solo self-employed (Riik toetab FIE-sid sotsiaalmaksu tasumisega)",
-                    "sources::url": "https://www.emta.ee/et/uudised/riik-toetab-fie-sid-sotsiaalmaksu-tasumisega",
-                    "sources::d_date": "03/20/2020",
-                    "modId": "6"
-                },
-                {
-                    "recordId": "1125",
-                    "sources::title": "Tax Board started with the payments to solo self-employed (MTA alustas FIEde eest esimese kvartali avansilise sotsiaalmaksu tasumist)",
-                    "sources::url": "https://www.emta.ee/et/uudised/mta-alustas-fiede-eest-esimese-kvartali-avansilise-sotsiaalmaksu-tasumist",
-                    "sources::d_date": "05/07/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "6",
-                    "actors::name": "Other social actors (e.g. NGOs)",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "16"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "221",
-        "modId": "95"
     },
     {
         "fieldData": {
@@ -6546,10 +6469,10 @@
             "sources": [
                 {
                     "recordId": "151",
-                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020, Di\u00e1rio da Rep\u00fablica n.\u00ba 57/2020, 1\u00ba \rSuplemento, S\u00e9rie I de 2020-03-",
-                    "sources::url": "https://dre.pt/application/file/a/13051952",
+                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020,  Di\u00e1rio da Rep\u00fablica n.\u00ba 61/2020\rSuplemento, S\u00e9rie I de 2020-03-",
+                    "sources::url": "https://dre.pt/pesquisa/-/search/130779506/details/maximized",
                     "sources::d_date": "03/20/2020",
-                    "modId": "7"
+                    "modId": "9"
                 },
                 {
                     "recordId": "175",
@@ -10346,137 +10269,6 @@
         },
         "recordId": "317",
         "modId": "85"
-    },
-    {
-        "fieldData": {
-            "title": "Last resort wage replacement scheme for self-employed and professionals",
-            "title_nationalLanguage": "Indennit\u00e0 professionisti, lavoratori con rapporto di collaborazione coordinata e continuativa, lavoratori autonomi, lavoratori stagionali e lavoratori dello spettacolo",
-            "d_startDate": "03/17/2020",
-            "d_endDate": "",
-            "calc_country": "Italy",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "IT-2020-12/427",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/09/2020",
-            "calc_lastUpdate": "05/10/2020",
-            "descriptionBackgroundInfo": "In march 2020 the Government introduced some measures to provide income support also to those workers - partially or totally prevented from work in reason of the COVID-19 outbreak - that were anyway not covered by the main instruments sustaining the majority of the Italian workforce.\r\rThe Decree Law No. 18/2020 of 17 March 2020, Article 27, introduces an income support measure of \u20ac600 for the month of March for professionals, workers in continuous and coordinated collaboration agreement, self-employed, seasonal workers and workers of the entertainment industry. The benefit will be paid directly from the National Social Security Institute (INPS) and aims at supporting income of those workers which are not eligible for other income support measures such as the different wage guarantee funds.\rAlways through the Decree Law No. 18/2020, Article 44, the Government allocates further \u20ac300 million for income support of professionals registered to private social security agencies and self-employed and employees not covered by any other analogous measure.",
-            "descriptionContentOfMeasure": "A one lump sum of \u20ac 600 was awarded for the month of March to different groups of workers by Decree-Law No. 18/2020 of 17 March 2020 in order to support their income. The categories included are: \r\r* Professionals with a VAT number active on 23 February 2020 and workers with co-ordinated and continuous collaboration relationships.\r* Self-employed registered to the dedicated mandatory social insurance schemes (Assicurazione Generale Obbligatoria, AGO).\r* Seasonal workers in the tourism sector and in thermal establishments that involuntarily ended their employment in the period between 1 January 2020 and 17 March 2020, who are not employed and do not receive a pension.\r* Fixed-term agricultural workers, who do not receive a pension and have worked at least 50 days in agriculture in 2019.\r* Workers enrolled in the pension fund for workers in the entertainment industry (Fondo pensioni Lavoratori dello spettacolo), with at least 30 daily contributions paid in the year 2019 to the same fund, with an income of no more than \u20ac50,000, and who do not receive a pension. \rThe total amount of resources allocated for this measure is about \u20ac200 million.\r\rThe second and additional fund for income support of professionals registered to private social security agencies and self-employed and employees not covered by another analogous measure, has been increased, from \u20ac300 million to \u20ac500 million, with the Decree No. 53073 of 27 April 2020 issued by the Ministry of Economy and Finance (MEF).\rA further joint Decree issued by the MEF and the Ministry of Labour on 30 April 2020 specified that are covered by this second measure also:\r\r* Seasonal workers not covered by other measures that involuntarily ended their employment between the 1 January 2019 and 31 January 2020 and that in the same period worked at least for 30 days.\r* Workers on call that worked for at least 30 days in the period 1st January 2019 and 31 January 2020.\r* Occasional workers not registered as self employed, and checked in the respective section of the National Social Security Agency on 23 February 2020, that obtained at least one monthly contribution between 1 January 2019 and 23 February 2020 and that are unemployed from the 23 February 2020. \r* Door-to-door sales persons registered as self-employed before 24 February 2020 and with an annual income from this activity, for 2019, higher than \u20ac5,000.",
-            "descriptionUseOfMeasure": "Almost 5 million people are estimated to be eligible to this measure. As to 8 April 2020, 3.65 million requests were placed online to National Institute of Social Security (INPS).\r\rThe funds allocated by the Government for the support of professionals registered to private social security agencies (initially about \u20ac200 million on the overall amount of \u20ac300 million) was used up at a very fast pace, and compelled the government to allocate further \u20ac80 million to solve the issue.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-12_427.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "283",
-                    "sources::title": "DECRETO-LEGGE 17 marzo 2020, n. 18",
-                    "sources::url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "843",
-                    "sources::title": "Ministerial Decree of 30 April 2020",
-                    "sources::url": "https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2020/DI-10-del-04052020-Ammortizzatori-sociali-in-deroga.pdf",
-                    "sources::d_date": "05/04/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "844",
-                    "sources::title": "Ministerial Decree of 28 March 2020",
-                    "sources::url": "https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2020/D-I-28-marzo-2020.pdf",
-                    "sources::d_date": "03/28/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "845",
-                    "sources::title": "Bonus 600 euro ai professionisti iscritti alle Casse",
-                    "sources::url": "https://www.ipsoa.it/documents/lavoro-e-previdenza/amministrazione-del-personale/quotidiano/2020/05/11/bonus-600-euro-professionisti-iscritti-casse-ripartono-pagamenti",
-                    "sources::d_date": "05/11/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "32",
-                    "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "33",
-                    "targetGroups::name": "Workers in non-standard forms of employment",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "34",
-                    "targetGroups::name": "Platform workers",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "48",
-                    "targetGroups::name": "Seasonal workers",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "27",
-                    "sectors::code": "A1",
-                    "sectors::name": "Crop and animal production, hunting and related service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "122",
-                    "sectors::code": "R90",
-                    "sectors::name": "Creative, arts and entertainment activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "318",
-        "modId": "95"
     },
     {
         "fieldData": {
@@ -34397,6 +34189,159 @@
         },
         "recordId": "868",
         "modId": "19"
+    },
+    {
+        "fieldData": {
+            "title": "Grants for SMEs and entrepreneurs in tourism, accommodation, catering, travel and commerce sectors",
+            "title_nationalLanguage": "Turismi-, majutuse-, toitlustuse-, reisi- ja kaubandusettev\u00f5tete toetused",
+            "d_startDate": "05/11/2020",
+            "d_endDate": "06/19/2020",
+            "calc_country": "Estonia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "EE-2020-20/962",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/10/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "In tourism, accommodation and food, and commerce sectors, several companies were in difficult  financial situation due to the COVID-19 related containment measures resulting in significant or total loss of income. With the adoption of the supplementary state budget on 15 April 2020, the Ministry of Economic Affairs and Communication supports those companies via Enterprise Estonia (EAS), a state-founded foundation which aims at developing the Estonian economy. ",
+            "descriptionContentOfMeasure": "In May and June 2020, Enterprise Estonia provided seven different grants to partially compensate the losses due to the COVID-19 outbreak of:\r\r* micro and small companies (all sectors)\r* accommodation companies\r* catering companies\r* travel agencies\r* tourism attractions\r* tourism companies\r* commerce and service companies (for compensating their rental fees)\r\rEach grant has its own eligibility criteria and terms and conditions. Overall, the amount of the grant per company could be between \u20ac2,000 and \u20ac60,000, depending on the specific grant. For compensation of the rental fee, the minimum amount was \u20ac100. The total budget allocated to compensate the losses was \u20ac36.5 million.",
+            "descriptionUseOfMeasure": "Altogether, 3,469 companies received support from the EAS.",
+            "descriptionInvolvementOfSocialPartners": "A number of different sectoral social partners were involved \u2013 mainly they proactively provided their opinions and suggestions, which also received written feedback from the Ministry. Instead of peak-level social partners, they were concentrated more on sectoral social partners.   ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-20_962.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1138",
+                    "sources::title": "Compensation for small companies (v\u00e4ikettev\u00f5tete toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-ettevotlus/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1139",
+                    "sources::title": "Support for accommodation companies (Majutusettev\u00f5tete toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-majutus/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1140",
+                    "sources::title": "Support for catering companies (Toitlustusettev\u00f5tete toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-toitlustus/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1141",
+                    "sources::title": "Support for travel conpanies (Reisiettev\u00f5tete toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-reisiettevote/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1142",
+                    "sources::title": "Support for tourism attractions (Turismiatraktsioonide toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-turismiatraktsioon/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1143",
+                    "sources::title": "Support for tourism companies (Turismiteenuste pakkujate toetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-turismi-teenuse-pakkuja/",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1144",
+                    "sources::title": "Rent fee support for commerce and service companies (Kaubandus- ja teenindusettev\u00f5tete renditoetus)",
+                    "sources::url": "https://www.eas.ee/teenus/covid-renditoetus/",
+                    "sources::d_date": "06/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "872",
+        "modId": "21"
     },
     {
         "fieldData": {
