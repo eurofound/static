@@ -2217,8 +2217,8 @@
                 {
                     "recordId": "100",
                     "updates::d_date": "07/01/2020",
-                    "updates::description": "From July 2020, the sectors that were listed under Annex A, and therefore those obtain the largest wage supplement, were reduced. These now include those involved with tourist accommodation, travel agencies, language schools, event organisation and air transport. \r\rWith reference to those in Annex B, it was announced that these would continue receiving their supplement until September. Furthermore, From July 2020, 'personal services and other related activities' will benefit from the Annex B supplement. \r\rFrom July 2020, sectors previously supported by this scheme but not included in the updated Annex A will receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C.\r\rFinally, It was also announced that from July 2020, pensioners and students who were registered as employed with JobsPlus since the 9th of March, may now also be considered for the Wage supplement. These were previously ineligible. ",
-                    "modId": "2"
+                    "updates::description": "From July 2020, the sectors that were listed under Annex A, and therefore those obtain the largest wage supplement, were reduced. These now include those involved with tourist accommodation, travel agencies, language schools, event organisation and air transport. \r\rWith reference to those in Annex B, it was announced that these would continue receiving their supplement until September. Furthermore, From July 2020, 'personal services and other related activities' will benefit from the Annex B supplement. \r\rFrom July 2020, sectors previously supported by this scheme but not included in the updated Annex A will receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C.\r\rFinally, It was also announced that from July 2020, pensioners and students who were registered as employed with JobsPlus since the 9 March, may now also be considered for the Wage supplement. These were previously ineligible. ",
+                    "modId": "3"
                 }
             ],
             "regions": []
@@ -2538,7 +2538,7 @@
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "COVID-19 had a substantial impact upon the Maltese economy. The government rolled out several initiatives to save jobs, but it was clear early on that unemployment was rising. In view of this, an additional unemployment benefit for individuals who due to the impact of COVID-19 lost their job in the private sector after the 8th March 2020 was introduced. This will be received in conjunction with the Contributory Unemployment Benefit. \r\r",
             "descriptionContentOfMeasure": "This will be received by individuals who were working full-time or part-time in the private sector before becoming unemployed after the 8th March 2020. Additionally, individuals must be registering for work under Part 1 with Jobsplus (that national employment and training agency).\r\rSuch individuals who would qualify for the 'Contributory Unemployment Benefit' would also be eligible for this additional benefit. Between the two, individuals will receive a direct payment of \u20ac166.15 a week for those who were working full time, or \u20ac103.85 for those who were working part-time before they became unemployed. \r\rAdditionally, their Social Security Contribution will be paid, and their future contributory pension rights safeguarded. Children's allowance will continue to be received and increased to the maximum rate of \u20ac24.08 per week per child (depending on previous income, individuals may already have been in the maximum children's allowance bracket). Other benefits that the person may have been entitled to such as the 'In Work Benefit' and 'Supplementary Allowance' will also continue to be received. \r",
-            "descriptionUseOfMeasure": "In March 2020, unemployment increased by just over 300 individuals. The number of individuals who made use of this measure however was not released.\r\rBy the beginning of June, \u20ac13.2million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5million will be handed out by the end of June. A further breakdown is unavailable, however by the beginning of June, 234 individuals stopped applying for the additional employment benefit as they had found a job. \r",
+            "descriptionUseOfMeasure": "In March 2020, unemployment increased by just over 300 individuals. The number of individuals who made use of this measure however was not released.\r\rBy the beginning of June, \u20ac13.2 million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5 million will be handed out by the end of June. A further breakdown is unavailable, however by the beginning of June, 234 individuals stopped applying for the additional employment benefit as they had found a job. \r",
             "descriptionInvolvementOfSocialPartners": "This measure was announced by the Government as part of a second package of measures in response to the COVID-19 pandemic. The announcement of such measures was precipitated by social partner pressure who aired their concerns publicly in the media and directly with Government. On the announcement of these measures, social partners stated that whilst the measures were beneficial, they were not sufficient. It was also stated that consultation was limited and insufficient. This changed a few days later when a third package was agreed between the social partners; the current measure was retained as part of that package too. The measure is administered by the social security department",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Consulted",
@@ -2598,7 +2598,7 @@
             "regions": []
         },
         "recordId": "155",
-        "modId": "102"
+        "modId": "103"
     },
     {
         "fieldData": {
@@ -2613,9 +2613,9 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/04/2020",
             "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "Following the onset of COVID-19, one of the early measures taken by the Maltese government was to close down schools nationwide. This presented a problem to many working parents who were also advised not to leave their children with elderly relatives who may be at greater risk to COVID-19. As many such parents now needed to remain at home with their children, a benefit was introduced by the government. Parents working in the private sector with children under the age of 16 who cannot go to work to take care of their children following the 8th of March 2020, and who are unable to work from home may apply for this benefit. ",
+            "descriptionBackgroundInfo": "Following the onset of COVID-19, one of the early measures taken by the Maltese government was to close down schools nationwide. This presented a problem to many working parents who were also advised not to leave their children with elderly relatives who may be at greater risk to COVID-19. As many such parents now needed to remain at home with their children, a benefit was introduced by the government. Parents working in the private sector with children under the age of 16 who cannot go to work to take care of their children following the 8 March 2020, and who are unable to work from home may apply for this benefit. ",
             "descriptionContentOfMeasure": "Applicants must be parents of children under 16 years of age; they work full-time or part-time in the private sector (excludes  employees working with private companies who work/provide an essential service to a government entity). who cannot work from home and are not attending work after the 8th of March 2020 to look after their children. \r\rEligible individuals receive a direct payment of \u20ac166.15 Euro per week if they work full-time or \u20ac103.85 Euro if they work part time. \r\rAdditionally, their social security contribution is paid and future contributory pension rights safeguarded, children's allowance will be adjusted taking into consideration the individual's new income and therefore may increase to maximum rate (\u20ac24.08 per week per child). Individuals can continue to receive other benefits without deduction that they already may have been receiving including the 'In Work Benefit' and 'Tapering of Benefits'\r",
-            "descriptionUseOfMeasure": "\u20ac13.2million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5million will be handed out by the end of June. A further breakdown is unavailable.  ",
+            "descriptionUseOfMeasure": "\u20ac13.2 million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5 million will be handed out by the end of June. A further breakdown is unavailable.  ",
             "descriptionInvolvementOfSocialPartners": "This measure was announced by the Government as part of a second package of measures in response to the COVID-19 pandemic. The announcement of such measures was precipitated by social partner pressure who aired their concerns publicly in the media and directly with Government. On the announcement of these measures, social partners stated that whilst the measures were beneficial, they were not sufficient. It was also stated that consultation was limited and insufficient. This changed a few days later when a third package was agreed between the social partners; the current measure was retained as part of that package too. The measure is administered by the social security department. ",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Consulted",
@@ -2673,14 +2673,14 @@
                 {
                     "recordId": "91",
                     "updates::d_date": "06/30/2020",
-                    "updates::description": "This measure has ended - It was withdrawn once summer schools opened. ",
-                    "modId": "2"
+                    "updates::description": "This measure has ended. It was withdrawn once summer schools opened. ",
+                    "modId": "3"
                 }
             ],
             "regions": []
         },
         "recordId": "156",
-        "modId": "103"
+        "modId": "104"
     },
     {
         "fieldData": {
@@ -2695,9 +2695,9 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/04/2020",
             "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "Due to COVID-19 certain groups of individuals considered at greater risk were advised not to go to work and to work from home where possible. Individuals with disability were considered to be at greater risk to COVID-19 than other groups of individuals. A benefit was created for individuals with disability who were employed in the private sector, who due to COVID-19 were advised not to go to work on medical grounds, but were also unable to work from home. To be eligible, individuals had to be advised not to go to work on medical grounds after the 8th of March 2020. \r",
+            "descriptionBackgroundInfo": "Due to COVID-19 certain groups of individuals considered at greater risk were advised not to go to work and to work from home where possible. Individuals with disability were considered to be at greater risk to COVID-19 than other groups of individuals. A benefit was created for individuals with disability who were employed in the private sector, who due to COVID-19 were advised not to go to work on medical grounds, but were also unable to work from home. To be eligible, individuals had to be advised not to go to work on medical grounds after the 8 March 2020. \r",
             "descriptionContentOfMeasure": "Individuals who are registered with Jobsplus as a person with disability and have a special ID Number or EU disability Card issued by the Commission for the Rights of Persons with Disability, who work full or part-time in the private sector, who were medically advised to remain at home after the 8th of March 2020, and cannot work from home are eligible. \r\rThose eligible will receive a direct payment of \u20ac166.15 per week if they work full-time or \u20ac103.85 per week if they work part-time. \r\rFurthermore, the social security contribution will be paid, and their future contributory pension rights safeguarded; disability assistance will continue to be received without deductions. \r",
-            "descriptionUseOfMeasure": "\u20ac13.2million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5million will be handed out by the end of June. A further breakdown is unavailable.",
+            "descriptionUseOfMeasure": "\u20ac13.2 million have been paid out to 8,360 beneficiaries for benefits related to parents, those with medical conditions, disability and those who applied for the additional unemployment benefit. A total of \u20ac17.5 million will be handed out by the end of June. A further breakdown is unavailable.",
             "descriptionInvolvementOfSocialPartners": "This measure was announced by the Government as part of a second package of measures in response to the COVID-19 pandemic. The announcement of such measures was precipitated by social partner pressure who aired their concerns publicly in the media and directly with Government. On the announcement of these measures, social partners stated that whilst the measures were beneficial, they were not sufficient. It was also stated that consultation was limited and insufficient. This changed a few days later when a third package was agreed between the social partners; the current measure was retained as part of that package too. The measure is administered by the social security department. ",
             "socialPartner_form": "Direct consultation",
             "socialPartner_role": "Consulted",
@@ -2750,14 +2750,14 @@
                 {
                     "recordId": "90",
                     "updates::d_date": "06/05/2020",
-                    "updates::description": "This measure has ended ",
-                    "modId": "1"
+                    "updates::description": "This measure has ended.",
+                    "modId": "2"
                 }
             ],
             "regions": []
         },
         "recordId": "157",
-        "modId": "105"
+        "modId": "106"
     },
     {
         "fieldData": {
@@ -2767,7 +2767,7 @@
             "d_endDate": "06/05/2020",
             "calc_country": "Malta",
             "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_subMinorCategory": "Paid sick leave",
             "calc_identifier": "MT-2020-13/275",
             "dateType": "Temporary",
             "calc_creationDay": "04/04/2020",
@@ -2837,14 +2837,14 @@
                 {
                     "recordId": "89",
                     "updates::d_date": "06/05/2020",
-                    "updates::description": "This measure has now ended",
-                    "modId": "1"
+                    "updates::description": "This measure has now ended.",
+                    "modId": "2"
                 }
             ],
             "regions": []
         },
         "recordId": "158",
-        "modId": "110"
+        "modId": "111"
     },
     {
         "fieldData": {
@@ -2861,7 +2861,7 @@
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "As part of the national policy to tackle COVID-19, individuals diagnosed with this disease, or individuals who had been in contact with individuals diagnosed with this disease were to quarantine themselves for two weeks. In response, the government provided employers with such employees a lump sum. \r\rIt is worth noting that this measure came a few days after the government updated the law by publishing the \u201cMinimum Special Leave Entitlements (Amendment) Regulations, 2020\u201d. These Regulations amend the \u201cMinimum Special Leave Entitlement Regulations\u201d (S.L.452.101): this introduced quarantine leave for all employees, which was to be granted without loss of wages, when the employees is legally obliged to quarantine on order by the Superintendent of Public Health.",
             "descriptionContentOfMeasure": "Employers who have a member of staff (including themselves) on mandatory quarantine leave in line with the directives of the Superintendent of Public Health are entitled to a one-off lump sum of \u20ac350. The grant also applies when members of staff have to quarantine themselves as they may have contacted individuals at risk of infection e.g., those living in the same house or in the same workplace. \r\rThe measure only covers grants for full-time employees. Applications are to be made via an online form to the Malta Enterprise who may request further information and documentation to determine eligibility. ",
-            "descriptionUseOfMeasure": "By the end of May, \u20ac885,500 had been dispensed, covering 2530 employees.\r",
+            "descriptionUseOfMeasure": "By the end of May, \u20ac885,500 had been dispensed, covering 2,530 employees.\r",
             "descriptionInvolvementOfSocialPartners": "Initially a lack of clarity existed regarding if employees who required to quarantine themselves were to be paid by their employer. Trade unions argued in favour of this, whilst employer associations felt that this was not their role. These representations were made publicly as well as directly with government. Once Government amended the law on special leave, employer associations continued to argue that employers should not foot the bill for this special leave, whilst also opposing the amended special leave legal notice. In view of this, the government announced the grant for employers. Employers however still argued that whilst the grant was beneficial they were opposed to the legal notice as well as the manner in which it was introduced, which was outside of the usual channels of social dialogue. Social partner involvement was thus limited. ",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Consulted",
@@ -2908,7 +2908,7 @@
             "regions": []
         },
         "recordId": "159",
-        "modId": "116"
+        "modId": "117"
     },
     {
         "fieldData": {
@@ -2973,8 +2973,8 @@
                 {
                     "recordId": "204",
                     "updates::d_date": "07/14/2020",
-                    "updates::description": "This measure has now ended\r\r",
-                    "modId": "1"
+                    "updates::description": "This measure has now ended.\r\r",
+                    "modId": "2"
                 }
             ],
             "regions": []
@@ -4059,6 +4059,128 @@
         },
         "recordId": "179",
         "modId": "90"
+    },
+    {
+        "fieldData": {
+            "title": "Exceptional and temporary measure on layoffs to protect jobs in the context of the COVID-19 pandemic",
+            "title_nationalLanguage": "Medida excecional e tempor\u00e1ria relativa ao 'lay-off' de prote\u00e7\u00e3o dos postos de trabalho, no \u00e2mbito da pandemia COVID-19",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Portugal",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "PT-2020-13/297",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "This exceptional and temporary measure, set by Decree-Law No. 10-G/2020 of 26 March 2020, simplifies the implementation and sets new conditions to the temporary measure provided for in the Ordinance No. 71-A/2020 of 15 March to respond to the COVID-19 pandemic, which introduced exceptional changes to the \u2018Lay-off' regime defined by Labour Code (Law No. 7/2009). The measure aims at protecting jobs and maintaining labour contracts in companies by supporting 2/3 of workers\u2019 wages. This measure adds the following main provisions: it forbids the companies that are entitled to the support to eliminate jobs (collective and individual redundancies); and establishes that the state budget will cover the financing of the part of wages provided by social security.",
+            "descriptionContentOfMeasure": "Decree-Law No. 10-G/2020 of 26 March 2020 establishes that companies in a crisis situation as a result of: i) a complete halt in the activity or ii) or abrupt and sharp decrease of activity of at least 40% of\u00a0invoicing have access to extraordinary support to help pay the wages of their workers for a maximum period of 6 months. The measure aims at protecting jobs and maintaining labour contracts in companies by supporting 2/3 of workers\u2019 wages. This measure adds the following main provisions: it forbids the companies that are entitled to the support to eliminate jobs (collective and individual redundancies); and establishes that the state budget will cover the financing of the part of wages provided by social security.\rThe Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilization Program, extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery (2.2.). \r\rCompanies that remain closed as determined by the government continue to benefit from the simplified lay-off regime; the simplified lay-off, in the model currently in force, is extended until the end of July; companies that have a decrease in revenue equal to or greater than 40% may benefit, between August and December 2020, from a support mechanism for progressive recovery; companies that have benefited from the simplified lay-off regime can now benefit from an extraordinary incentive to normalize business activity, choosing one of two modalities: 1 minimum wage (635 euros) one-off or 2 minimum wages over 6 months. \r\rThe support for progressive recovery (2.2.1) introduces changes concerning the wages of workers under layoff (at the present a payment by 66%): workers will receive between 77% and 83% of their wages from August to September, and between 88% and 92%. from October to December 2020. The measure has two conditions: prohibition of dismissals during the application of the measure and in the subsequent 60 days; and prohibition of the distribution of dividends during the application of the measure.\r\rThe Resolution introduces also a one-off measure, the Stabilization Complement with the aim to improve the income of workers under layoff (2.3). The one-off measure, payable in July, in the amount of income loss of one month of lay-off, which can vary between 100\u20ac and 351\u20ac applies to all workers with an income, in February, up to 2 minimum wages and who have registered a loss of basic salary, and were in layoff in one of the months between April and June. Recipients: workers with a basic salary above 1 minimum wage and up to 2 minimum wages. \r\r\r",
+            "descriptionUseOfMeasure": "Information released by the Ministry of Labour, Solidarity and Social Security (MTSS) - April 2020\r'COVID-19 | Informa\u00e7\u00e3o relativa a fam\u00edlias e empresas no \u00e2mbito do MTSSS' \r\rInformation at 7 April:\r\rLayoff around  40,000 companies/ encompassing around 642,000 workers. In terms of sectors 24.2% are companies in the Accommodation and Food Services, 19.9% in Wholesale and Retail, 9.3% in Manufacturing Industry and 8.9% in Human Health and Social Support Activities.\r\rInformation at 6 June:\rAccording to the information provided by the Resolution of the Council of Ministers no. 41/2020, of 6 June that approved the Economic and Social Stabilization Programme, the simplified layoff regime covered around 100,000 companies and 800,000 workers.\r",
+            "descriptionInvolvementOfSocialPartners": "Tripartite consultation involving the government, the trade union confederations CGTP and UGT and the employer confederations CIP, CCP, CTP and CAP at the Standing Committee for Social Concertation (Comiss\u00e3o Permanente de Concerta\u00e7\u00e3o Social \u2013 CPCS).",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_297.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "145",
+                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020 - Di\u00e1rio da Rep\u00fablica n.\u00ba 61/2020, 1\u00ba Suplemento, S\u00e9rie I de 2020-03-26",
+                    "sources::url": "https://dre.pt/web/guest/legislacao-consolidada/-/lc/130791179/202003280000/exportPdf/normal/1/cacheLevelPage?_LegislacaoConsolidada_WAR_drefrontofficeportlet_rp=indic",
+                    "sources::d_date": "03/26/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1082",
+                    "sources::title": "Decreto-Lei n.\u00ba 27-B/2020",
+                    "sources::url": "https://data.dre.pt/eli/dec-lei/27-B/2020/06/19/p/dre",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1098",
+                    "sources::title": "Resolu\u00e7\u00e3o do Conselho de Ministros n.\u00ba 41/2020",
+                    "sources::url": "https://data.dre.pt/eli/resolconsmin/41/2020/06/06/p/dre",
+                    "sources::d_date": "06/06/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "131",
+                    "updates::d_date": "06/06/2020",
+                    "updates::description": "The Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilisation Programme, extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery (2.2.1). It introduces also a one-off measure: the Stabilisation Complement to improve income of workers under layoff (2.3). \r",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "205",
+                    "updates::d_date": "06/19/2020",
+                    "updates::description": "Decree-Law 27-B/2020 of 19 June 2020 extends the extraordinary support for the maintenance of employment contracts in a business crisis situation and the respective transitional regime in line with the Resolution of the Council of Ministers no. 41/2020, of 6 June.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "180",
+        "modId": "114"
     },
     {
         "fieldData": {
@@ -6646,8 +6768,8 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
             "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "Due to the outbreak, several companies are in a difficult position financially to continue providing their services/products, to pay their loans or to start a new business (e.g. opportunities created by the corona outbreak). For this purpose, the state provides additional funds to Kredex (a state founded foundation) and Rural Development Fund to provide support measures to companies in a form of loans and loan guarantees. On a smaller scale, those measures are already available and relevant instructions for the applicants and terms and conditions of the measures have been approved by the Kredex at the end of March 2020, but additional government finances are needed for the full provision of these measures. For this, the supplemnetary state budget was approved by the Parliament on 15 april 2020. ",
-            "descriptionContentOfMeasure": "Kredex, the Credit and Export Guarantee Fund (state founded foundation), provides loans and loan guarantees to companies. To relieve the impacts of the COVID-19, KredEx offers additional loan guarantees and loans: 1) emergency loan guarantee for issuing new loans and to relax the repayment schedules of existing bank loans, 2) emergency loan for companies who have been turned down by banks.\r\rThe guarantee enables a company to secure the obligations of an enterprise, arising from loan, leasing and guarantee contracts.\r\rRequirements to be eligible:\r\r* According to the financial projections presented, the company is sustainable and solvent in the long term.\r* The company was not in difficulty as of 31 December 2019.\r* The company has no overdue debts which have incurred before 1st January 2020.\r* No bankruptcy or liquidation proceedings have been initiated against the\rcompany.\r\rGeneral conditions:\r* The sum of outstanding amounts of loans or loan guarantee of Kredex cannot exceed \u20ac5 million per company. \r* The total amount of emergency loans from Kredex and loans with emergency guarantee by Kredex cannot exceed double the salary cost of the company for 2019 with social tax. Exceptions are available: the maximum guaranteed obligation could be up to 25% of the\rcompany's turnover in 2019 or to a justified 18-month liquidity requirement for a SME or to a justified 12-month liquidity requirement for a large company).\r\rSpecific conditions by type:\r* New loans, guarantee: Up to 90% of the guaranteed loan or lease (60% in case of a construction or retail/wholesale trade sector company)\r* Existing loans, fixed guarantee: Up to 35% of the loan and lease to be secured, but no more than the sum of the payments of the principal amount of the loan or lease which will remain accessible to the company until 31 December 2021. \r* Existing loans, proportional guarantee: Up to 50% of the loan and lease to be secured.\r* Extraordinary loan by Kredex: the amount is up to \u20ac5 million. The interest rate is from 4% per annum in case the loan is at least 50% collateralised, and 6% per annum in case of only owner-guaranteed loan.\r\rThe validity period of the guarantee is 72 months; the loan period is 6-72 months. The guarantee can be issued and amended until 31 December 2020.\r\r\rFor agriculture, fishing and food industry companies, similar measures are provided by the Rural Development Fund. The total amount of the funding is \u20ac200 million.\r\rThe maximum loan amont for single-applicants is up to \u20ac1 million, if the loan is taken together with a credit or finanncing institution, the maximum amount is \u20ac2 million. The interest rate is from 2% and fixed for 2 months. The loan period is up to six years, in case of investment loans - 10 years. At least 30% of the loan must be guaranteed (e.g. real estate, surety or other). Loan applications are accepted until 23 December 2020.\rIn case of loan guarantee, similar to Kredex measure, the total amount of the loan to be guaranteed cannot exceed double the salary cost of the company for 2019 with social tax,   25% of the company's turnover in 2019 or  a justified 18-month liquidity requirement for a SME or a justified 12-month liquidity requirement for a large company. Up to \u20ac5 million is guaranteed, but not more than 90% of a proportionally guaranteed loan or 35% of a fixed guanarteed loan. The length of the guarantee is up to 6 years.",
+            "descriptionBackgroundInfo": "Due to the outbreak, several companies are in a difficult position financially to continue providing their services/products, to pay their loans or to start a new business (for example, opportunities created by the corona outbreak). For this purpose, the state provides additional funds to Kredex (a state founded foundation) and Rural Development Fund to provide support measures to companies in a form of loans and loan guarantees. On a smaller scale, those measures are already available and relevant instructions for the applicants and terms and conditions of the measures have been approved by the Kredex at the end of March 2020, but additional government finances are needed for the full provision of these measures. For this, the supplementary state budget was approved by the Parliament on 15 April 2020. ",
+            "descriptionContentOfMeasure": "Kredex, the Credit and Export Guarantee Fund (state founded foundation), provides loans and loan guarantees to companies. To relieve the impacts of the COVID-19, KredEx offers additional loan guarantees and loans: 1) emergency loan guarantee for issuing new loans and to relax the repayment schedules of existing bank loans, 2) emergency loan for companies who have been turned down by banks.\r\rThe guarantee enables a company to secure the obligations of an enterprise, arising from loan, leasing and guarantee contracts.\r\rRequirements to be eligible:\r\r* According to the financial projections presented, the company is sustainable and solvent in the long term.\r* The company was not in difficulty as of 31 December 2019.\r* The company has no overdue debts which have incurred before 1st January 2020.\r* No bankruptcy or liquidation proceedings have been initiated against the\rcompany.\r\rGeneral conditions: \r\r* The sum of outstanding amounts of loans or loan guarantee of Kredex cannot exceed \u20ac5 million per company. \r* The total amount of emergency loans from Kredex and loans with emergency guarantee by Kredex cannot exceed double the salary cost of the company for 2019 with social tax. Exceptions are available: the maximum guaranteed obligation could be up to 25% of the\rcompany's turnover in 2019 or to a justified 18-month liquidity requirement for a SME or to a justified 12-month liquidity requirement for a large company).\r\rSpecific conditions by type:\r\r* New loans, guarantee: Up to 90% of the guaranteed loan or lease (60% in case of a construction or retail/wholesale trade sector company)\r* Existing loans, fixed guarantee: Up to 35% of the loan and lease to be secured, but no more than the sum of the payments of the principal amount of the loan or lease which will remain accessible to the company until 31 December 2021. \r* Existing loans, proportional guarantee: Up to 50% of the loan and lease to be secured.\r* Extraordinary loan by Kredex: the amount is up to \u20ac5 million. The interest rate is from 4% per annum in case the loan is at least 50% collateralised, and 6% per annum in case of only owner-guaranteed loan.\r\rThe validity period of the guarantee is 72 months; the loan period is 6-72 months. The guarantee can be issued and amended until 31 December 2020.\r\r\rFor agriculture, fishing and food industry companies, similar measures are provided by the Rural Development Fund. The total amount of the funding is \u20ac200 million.\r\rThe maximum loan amount for single-applicants is up to \u20ac1 million, if the loan is taken together with a credit or financing institution, the maximum amount is \u20ac2 million. The interest rate is from 2% and fixed for 2 months. The loan period is up to six years, in case of investment loans -  ten years. At least 30% of the loan must be guaranteed (e.g. real estate, surety or other). Loan applications are accepted until 23 December 2020.\r\rIn case of loan guarantee, similar to Kredex measure, the total amount of the loan to be guaranteed cannot exceed double the salary cost of the company for 2019 with social tax,   25% of the company's turnover in 2019 or  a justified 18-month liquidity requirement for an SME or a justified 12-month liquidity requirement for a large company. Up to \u20ac5 million is guaranteed, but not more than 90% of a proportionally guaranteed loan or 35% of a fixed guaranteed loan. The length of the guarantee is up to six years.",
             "descriptionUseOfMeasure": "Kredex (data availabe [here](https://kredex.ee/et/koroona)):\rBy 2 July 2020, 67 companies received a loan in the total amount of \u20ac117.3 million (the largest sum was \u20ac100 million per one company). 121 companies' loans were guaranteed in the toal sum of \u20ac34.5 million.\r\rRural Development Fund (data available [here](https://www.mes.ee/covid-19-kriisimeetmed)):\r\rBy 3 July 2020, 27 applications for guarantees in the amount of \u20ac7.3 million and 187 applications for loans in the amount of \u20ac97.7 million were received. 23 guarantee (\u20ac5.5 million) and 96 loan (\u20ac22 million) decision were made and altogether 76 contracts were signed (total amount \u20ac19 million).",
             "descriptionInvolvementOfSocialPartners": "In addition to the sectoral business association, the Estonian Employers Confederation was consulted during the design of the measure. The possibility to give feedback was open to all interested parties. Trade unions did not participate in the consultation process due to the nature of the measure.",
             "socialPartner_form": "No involvement",
@@ -6723,7 +6845,7 @@
             "regions": []
         },
         "recordId": "231",
-        "modId": "100"
+        "modId": "102"
     },
     {
         "fieldData": {
@@ -7260,8 +7382,8 @@
                 {
                     "recordId": "166",
                     "updates::d_date": "07/03/2020",
-                    "updates::description": "The applications were accepted between 8 and 18 May 2020. Each field had its own specific conditions for the compensation and eligibility criterias. ",
-                    "modId": "1"
+                    "updates::description": "The applications were accepted between 8 and 18 May 2020. Each field had its own specific conditions for the compensation and eligibility criteria. ",
+                    "modId": "2"
                 }
             ],
             "regions": []
@@ -8369,8 +8491,8 @@
             "calc_creationDay": "04/08/2020",
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "Estonian shipping companies are in difficult situation due to the restrictions on borders (decreased tourism, decreased cargo volumes etc). At the same time, trade must be encouraged to avoid further damage to the economy. It is important to avoid the closures of the shipping companies as these have an important role in contributing to the economic growth in Estonia. In order to use the supportive measures, the supplementary state budget was approved by the Parliament on 15 April 2020 and application for state aid was approved by the European Commission.",
-            "descriptionContentOfMeasure": "Three measures are foreseen to support the shipping companies:\r\rFirstly, between 1 April 2020 and 1 April 2021, shipping companies are not charged with waterway charges.\r\rSecondly, from 1 January 2020 retroactively til the end of 2020, all port charges for passenger transport ships in the amount of 75% will be reimbursed by the state.A total of \u20ac20 million would be used for it.\r\rThirdly, passenger international shipping companies will be paid a quarterly subsidy equal to the difference between the labor taxes calculated on the salary paid to the crew member and the labor taxes calculated from the tax base (1.5 or 2.5 times the minimum monthly wage). Two companies currently qualify under the measure. The measure would be used until the end of 2023. It is expected that \u20ac3.7 million in 2020 and \u20ac7.7 million in 2021 will be used for the measure.",
-            "descriptionUseOfMeasure": "All shipping conmpanies (no information on how many) will be eligible for the first measure. Two companies are eligible for the labour taxes measure.",
+            "descriptionContentOfMeasure": "Three measures are foreseen to support the shipping companies:\r\rFirstly, between 1 April 2020 and 1 April 2021, shipping companies are not charged with waterway charges.\r\rSecondly, from 1 January 2020 retroactively til the end of 2020, all port charges for passenger transport ships in the amount of 75% will be reimbursed by the state. A total of \u20ac20 million would be used for it.\r\rThirdly, passenger international shipping companies will be paid a quarterly subsidy equal to the difference between the labor taxes calculated on the salary paid to the crew member and the labor taxes calculated from the tax base (1.5 or 2.5 times the minimum monthly wage). Two companies currently qualify under the measure. The measure would be used until the end of 2023. It is expected that \u20ac3.7 million in 2020 and \u20ac7.7 million in 2021 will be used for the measure.",
+            "descriptionUseOfMeasure": "All shipping companies (no information on how many) will be eligible for the first measure. Two companies are eligible for the labour taxes measure.",
             "descriptionInvolvementOfSocialPartners": "n.a.",
             "socialPartner_form": "No involvement",
             "socialPartner_role": "No involvement",
@@ -8437,7 +8559,7 @@
             "regions": []
         },
         "recordId": "275",
-        "modId": "81"
+        "modId": "82"
     },
     {
         "fieldData": {
@@ -8623,7 +8745,7 @@
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "Due to the emergency situation in Estonia, a share of people have temporarily out of their regular job - whether they cannot work remotely or their employer is temporarily in situation where they cannot ensure work for their employees. At the same time, several companies have increased needs for labour force due to the crisis, for example the volume of orders from food e-stores has massively increased; the volume of production in companies producing personal protective equipment has increased etc. ",
             "descriptionContentOfMeasure": "The Estonian Unemployment Insurance Fund (EUIF) published a specific web page for companies to publish their temporary jobs and for employees to apply for the jobs. This web page brings together persons who temporarily need another job because they are laid off or cannot work in their usual job due to the current restrictions, and companies who temporarily need aditional workforce due to increased need for their services. Through the webpage, employees can contact those companies, ask additional questions and apply for the jobs. The portal was launched on 17 March 2020 and will be closed by 30 July 2020. The service is free of charge to use for all.",
-            "descriptionUseOfMeasure": "By the beginning of April 2020, more than 40 companies had published their job offers on the webpage, it increased to 63 by the middle of June. By the middle of June 2020, nearly 28,000 uniqe visits were made to the webpage and nearly 100,000 views of specific jobs or employers were made. 23.5% of visitors have visited the webpage more than once. ",
+            "descriptionUseOfMeasure": "By the beginning of April 2020, more than 40 companies had published their job offers on the webpage, it increased to 63 by the middle of June. By the middle of June 2020, nearly 28,000 unique visits were made to the webpage and nearly 100,000 views of specific jobs or employers were made. 23.5% of visitors have visited the webpage more than once. ",
             "descriptionInvolvementOfSocialPartners": "The peak-level social partners are in the government board of the Estonian Unemployment Insurance Fund (EUIF) and are thus informed about the changes planned by the EUIF.",
             "socialPartner_form": "No involvement",
             "socialPartner_role": "Not applicable",
@@ -8670,7 +8792,7 @@
             "regions": []
         },
         "recordId": "278",
-        "modId": "86"
+        "modId": "87"
     },
     {
         "fieldData": {
@@ -10356,6 +10478,90 @@
         },
         "recordId": "319",
         "modId": "82"
+    },
+    {
+        "fieldData": {
+            "title": "Regularisation of immigrants' presence on national territory",
+            "title_nationalLanguage": "A\u00a0perman\u00eancia em territ\u00f3rio nacional de cidad\u00e3os estrangeiros com processos pendentes no SEF \u00e9 considerada regular",
+            "d_startDate": "03/28/2020",
+            "d_endDate": "",
+            "calc_country": "Portugal",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "PT-2020-13/434",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "Aiming at responding to the specific nature of the threat of infection by COVID-19, the management of the customer service and scheduling of appointments must be done\u00a0in order\u00a0to ensure unequivocally the rights of all foreign citizens with pending processes in the Foreigners and Borders Service (Servi\u00e7o de Estrangeiros e Fronteiras - SEF).\r\rThe Order\u00a03863-B/2020 of 27 March 2020 provides for that,\u00a0on the date when the state of national emergency was declared, these foreign citizens are in situation of regular permanence on the national territory.\r\r",
+            "descriptionContentOfMeasure": "The Order\u00a03863-B/2020 of 27 March 2020 provides for that\u00a0from 18 March 2020,\u00a0the date when the state of national emergency was declared, \u00a0the foreign citizens with pending processes at the SEF are in situation of regular permanence in national territory.\r\rThese pending processes cover requests for entry and permanence in national territory; and requests for asylum, refugee or subsidiary protection.\r\rThe documents proving the request\u00a0made or the\u00a0scheduling at the SEF are to be considered valid by all public services, notably to obtain an user number, access to the National Health Service or other rights to health care, access to social benefits, conclusion of renting contracts,\u00a0conclusion of employment contracts, opening of bank accounts and use of essential public services.\r\r\r\r",
+            "descriptionUseOfMeasure": "Not available",
+            "descriptionInvolvementOfSocialPartners": "No involvement of social partners.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_434.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "295",
+                    "sources::title": "Despacho n.\u00ba 3863-B/2020 - Di\u00e1rio da Rep\u00fablica n.\u00ba 62/2020, 3\u00ba Suplemento, S\u00e9rie II de 2020-03-27\r\r\r\uf046 Publica\u00e7\u00e3o: Di\u00e1rio da Rep\u00fablica n.\u00ba 62/2020, 3\u00ba Suplemento, S\u00e9rie II de 2020-03-27 ",
+                    "sources::url": "https://dre.pt/home/-/dre/130835082/details/maximized",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1194",
+                    "sources::title": "Despacho n.\u00ba 5793-A/2020",
+                    "sources::url": "https://dre.pt/home/-/dre/134516291/details/maximized",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "46",
+                    "targetGroups::name": "Migrants",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "47",
+                    "targetGroups::name": "Refugees",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "197",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "The Order 5793-A/2020, of 26 May, adopts exceptional and temporary measures in order to the recovery of pending processes at the SEF. \r\rThis Order implements a simplified procedure for the instruction of applications for a residence permit. This applies both in the cases of new applications and applications for the renewal of residence permits.\r\rThis simplified procedure is in force since 26 May 2020 and for a period of one year. ",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "325",
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -12237,7 +12443,7 @@
             "calc_creationDay": "04/11/2020",
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "This measure is based on crisis legislation enforced in March 2020 by the broader grand-ducal regulation of 18 March 2020 introducing a series of measures to combat COVID-19 (R\u00e8glement grand-ducal du 18 mars 2020 portant introduction d\u2019une s\u00e9rie de mesures dans le cadre de la lutte contre le Covid-19. M\u00e9morial A 178 du 24 mars 2020) and this in activity sectors that are essential for the well functioning of the economy during the COVID-19 crisis. The aim of this measure is to ensure the well functioning of vital economy sectors.",
-            "descriptionContentOfMeasure": "With the objective to counter the current COVID-19 crisis, the government decided to suspend the trial clause in the following types of contract arrangements: permanent employment contracts (CDI); fixed-term employment contracts (CDI); apprenticeship contracts; assignment contracts. \r\rNonetheless, the measure is limited and applies to companies and their employees affected by the closure of governmental decisions, or to companies and their employees admitted to short-time working in the event of a force majeure due to COVID-19.\r\rThe trial period is suspended from the effective date of the government decision taken on 18 March 2020 or the admission of the employee concerned in the special short-time working scheme.\r\rThe remaining portion of the trial period is to be resumed the day after the end of the state of crisis.",
+            "descriptionContentOfMeasure": "With the objective to counter the current COVID-19 crisis, the government decided to suspend the trial clause in the following types of contract arrangements: \r\r* permanent employment contracts (CDI); \r* fixed-term employment contracts (CDI); \r* apprenticeship contracts; \r* assignment contracts. \r\rNonetheless, the measure is limited and applies to companies and their employees affected by the closure of governmental decisions, or to companies and their employees admitted to short-time working in the event of a force majeure due to COVID-19.\r\rThe trial period is suspended from the effective date of the government decision taken on 18 March 2020 or the admission of the employee concerned in the special short-time working scheme.\r\rThe remaining portion of the trial period is to be resumed the day after the end of the state of crisis.",
             "descriptionUseOfMeasure": "No information has been disclosed on the number of workers concerned by this crisis measure. ",
             "descriptionInvolvementOfSocialPartners": "unknown",
             "socialPartner_form": "No involvement",
@@ -12273,6 +12479,11 @@
                     "modId": "18"
                 },
                 {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
                     "recordId": "51",
                     "targetGroups::name": "Other groups of workers",
                     "modId": "15"
@@ -12298,7 +12509,7 @@
             "regions": []
         },
         "recordId": "371",
-        "modId": "83"
+        "modId": "84"
     },
     {
         "fieldData": {
@@ -12314,7 +12525,7 @@
             "calc_creationDay": "04/11/2020",
             "calc_lastUpdate": "05/03/2020",
             "descriptionBackgroundInfo": "Parental leave legislation has been regarded in Luxembourg as a fundamental policy to address certain employment challenges. During the current COVID-19 crisis and based on the current March 2020 COVID-19 grand-ducal legislation with the objective to keep essential services functioning, the government decided in March 2020 to change the currently applied parental leave legislation, which gives parents the opportunity to interrupt the leave during the COVID-19 period for professional reasons. ",
-            "descriptionContentOfMeasure": "Due to the current situation related to the coronavirus COVID-19, parents are exceptionally allowed to interrupt the current parental leave schemes for the following reasons: \r\r- if it is a professional obligation;\r- if there is a necessity to resume professional activity.\r\rThe interruption is regarded by the government to be motivated by an external cause, so that allowances already received are not to be reimbursed by the concerned parents.\r\rAt the end of the interruption, subject to the agreement of the employer if you are an employee, take the portion of the parental leave remaining at the time of the interruption.\r\rTo request the interruption of parental leave, a form has to be completed and send to the Children's Future Fund (Caisse pour l'Avenir des Enfants - CAE).",
+            "descriptionContentOfMeasure": "Due to the current situation related to the coronavirus COVID-19, parents are exceptionally allowed to interrupt the current parental leave schemes for the following reasons: \r\r* if it is a professional obligation;\r* if there is a necessity to resume professional activity.\r\rThe interruption is regarded by the government to be motivated by an external cause, so that allowances already received are not to be reimbursed by the concerned parents.\r\rAt the end of the interruption, subject to the agreement of the employer if you are an employee, take the portion of the parental leave remaining at the time of the interruption.\r\rTo request the interruption of parental leave, a form has to be completed and send to the Children's Future Fund (Caisse pour l'Avenir des Enfants - CAE).",
             "descriptionUseOfMeasure": "No information are disclosed on how many parents benefit by the temporary framework.",
             "descriptionInvolvementOfSocialPartners": "",
             "socialPartner_form": "Unknown",
@@ -12363,7 +12574,7 @@
             "regions": []
         },
         "recordId": "378",
-        "modId": "79"
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -12381,7 +12592,7 @@
             "descriptionBackgroundInfo": "Based on COVID-19 grand-ducal legislation from March 2020, the government decided to adapt some initiatives regarding essential business activities in Luxembourg. During the current crisis situation, the government identified a series of essential business activities that are vital in order to make the country functioning smoothly. The list is stipulated by the crisis grand-ducal legislation. Under this measure, new or existing leave demands by the employee in essential services can be refused by the employer. ",
             "descriptionContentOfMeasure": "The businesses concerned can either refuse all applications for leave or cancel each leave already approved by the employer. The following list are regarded as essential activities and authorised activities:\r\rCommercial companies that mainly sell food products; pharmacies; opticians, orthopaedists and hearing aid specialists; businesses that mainly sell animal feed; shops mainly selling hygiene products, washing and sanitary equipment; services selling fuel and petrol stations; passenger transport activities; distributors and specialist shops selling medical and healthcare equipment; medical pedicure limited to medical and non-cosmetic care; press distribution businesses; financial and insurance institutions; postal services; dry-cleaning and clothes cleaning services; funeral services; breakdown, repair, removal and decontamination services; necessary maintenance activities for safety reasons; as far as essential activities are concerned, these apply to the following activities and sectors: public services necessary for the proper functioning of the government; the health and care sector, including hospital activities and medical analysis laboratories; the production and distribution of energy and oil products; the food sector; the production and distribution of water; the collection and treatment of waste water; the removal and management of waste; public transport; transport, transhipment and freight forwarding services; systems for the exchange, payment and settlement of instruments; postal and telecommunications services; caretaker, security, cash transportation and cleaning services; essential activities related to the operation of the financial sector and the insurance and reinsurance sector.",
             "descriptionUseOfMeasure": "No data are available on the number of employees.",
-            "descriptionInvolvementOfSocialPartners": "",
+            "descriptionInvolvementOfSocialPartners": "Social partners were involved through their respective professional chambers during the legislation process. ",
             "socialPartner_form": "Unknown",
             "socialPartner_role": "No involvement",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-11_488.html",
@@ -12428,7 +12639,7 @@
             "regions": []
         },
         "recordId": "379",
-        "modId": "76"
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -33137,13 +33348,13 @@
     },
     {
         "fieldData": {
-            "title": "In-work Benefit ",
+            "title": "In-work benefit for working parents",
             "title_nationalLanguage": "",
             "d_startDate": "06/06/2020",
             "d_endDate": "12/31/2020",
             "calc_country": "Malta",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
             "calc_identifier": "MT-2020-23/935",
             "dateType": "Temporary",
             "calc_creationDay": "07/06/2020",
@@ -33151,7 +33362,7 @@
             "descriptionBackgroundInfo": "Offered by the Department of Social Security, the In-Work Benefit aims to assist couples and single parents who are employed and have children under the age of 23 years, who are still dependent and living with them. The In-Work Benefit provides such individuals who have a limited income with a financial benefit. In view of the COVID-19 pandemic, this benefit will see both its threshold and rate increase. ",
             "descriptionContentOfMeasure": "The In-Work Benefit is usually paid quarterly in January, April, July and October. In view of COVID-19, a one-time payment of \u20ac250 is being paid for the year 2020 as an In-Work supplement to a beneficiary in receipt of In-Work Benefit. \r\rApplicants must have children under the age of 23, living within the household. The usual eligibility for the In-work benefit are (during 1st January 2020 till 5th June 2020): A declared income (Year of Assessment 2019) of a single parent in gainful employment of more than \u20ac6,600 and less than \u20ac17,130 would be eligible for a maximum payable rate of up to \u20ac1,350 yearly per child. A couple in gainful employment whose collective income from employment is greater than \u20ac10,000 and is less than \u20ac24,630 are eligible for a maximum payable rate of up to \u20ac1,300 yearly per child. A couple of whom only one is in gainful employment and whose income from employment is greater than \u20ac6,600 and less than \u20ac17,130 are eligible for a maximum payable rate of up to \u20ac550 yearly per child \r \rAs from 6th June 2020 till 31st December 2020, the revised criteria and rate are now: A declared income for a single parent in gainful employment earning more than \u20ac6,600 and less than \u20ac18,200 is eligible for a maximum payable rate of \u20ac1,400 yearly per child. A couple in gainful employment whose collective income from employment is greater than \u20ac10,000 and is less than \u20ac26,000 are eligible for a maximum payable rate of up to \u20ac1,400 yearly per child. A couple of whom only one is in gainful employment and whose income from employment is greater than \u20ac6,600 and less than \u20ac22,000 are eligible for a maximum payable rate of up to \u20ac630 yearly per child\r\r",
             "descriptionUseOfMeasure": "The special supplement of \u20ac250 per family is expected to cost \u20ac4 million. No further information is available. ",
-            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the Covid-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The measure is administered by the Social Security Department. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The measure is administered by the Social Security Department. ",
             "socialPartner_form": "",
             "socialPartner_role": "",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-23_935.html",
@@ -33203,7 +33414,7 @@
             "regions": []
         },
         "recordId": "845",
-        "modId": "14"
+        "modId": "17"
     },
     {
         "fieldData": {
@@ -33219,9 +33430,9 @@
             "calc_creationDay": "07/07/2020",
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "The Skills Development Scheme is a scheme offered by the Malta Enterprise. It aims to support organisations in providing training which develops or updates the knowledge and skills of their workforce. \r\rDuring an announcement of COVID-19 related measures which aimed to aid the country to recovery economically, it was announced that the budget of this scheme was to be topped up by \u20ac5 million. ",
-            "descriptionContentOfMeasure": "The Skills Development Scheme supports business undertakings to provide training to develop and update the skills and knowledge of their workforce when such training is not legally mandatory for the operation of the business. The measure also does not cover team building activities, company culture, brand identity and other similar actions, or training related to gambling. The original scheme was applicable until 31 December 2022 and had a budget of \u20ac30 million. Amongst the costs that can be covered by the program are: wage costs of trainees and trainers, air travel in sending trainees abroad or bringing trainers to Malta, and the rental of necessary equipment and training rooms. \r\rCurrently limited information is available of how this scheme is to be developed in view of COVID-19, however it was stated that: \"Malta Enterprise will be building upon an existing measure to reach more businesses through a top-up of \u20ac5 million on the budget allocation for this scheme. This top-up shall be directed towards those businesses that employ fewer than 50 persons. The aim will be that of advocating mainly in-house training, and focus on fostering the sharing of skills between the most experienced and younger employees. This will also help us to address skills dissipation once workers retire.\"\r",
+            "descriptionContentOfMeasure": "The Skills Development Scheme supports business undertakings to provide training to develop and update the skills and knowledge of their workforce when such training is not legally mandatory for the operation of the business. The measure also does not cover team building activities, company culture, brand identity and other similar actions, or training related to gambling. The original scheme was applicable until 31 December 2022 and had a budget of \u20ac30 million. Amongst the costs that can be covered by the program are: wage costs of trainees and trainers, air travel in sending trainees abroad or bringing trainers to Malta, and the rental of necessary equipment and training rooms. \r\rCurrently limited information is available of how this scheme is to be developed in view of COVID-19, however it was stated that: __\"Malta Enterprise will be building upon an existing measure to reach more businesses through a top-up of \u20ac5 million on the budget allocation for this scheme. This top-up shall be directed towards those businesses that employ fewer than 50 persons. The aim will be that of advocating mainly in-house training, and focus on fostering the sharing of skills between the most experienced and younger employees. This will also help us to address skills dissipation once workers retire.\"__\r",
             "descriptionUseOfMeasure": "Whilst announced, the measure is yet to be formally offered. ",
-            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the Covid-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The current measure is administered by the Malta Enterprise. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The current measure is administered by the Malta Enterprise. ",
             "socialPartner_form": "",
             "socialPartner_role": "",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_936.html",
@@ -33285,7 +33496,7 @@
             "regions": []
         },
         "recordId": "846",
-        "modId": "17"
+        "modId": "18"
     },
     {
         "fieldData": {
@@ -33301,9 +33512,9 @@
             "calc_creationDay": "07/07/2020",
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "Micro Invest is a scheme that was in existence prior to COVID-19. It \"encourages undertakings (including start-ups, family businesses and self-employed) to invest in their business, so as to innovate, expand and develop their operations. Undertakings benefiting from this measure will be supported through a tax credit calculated as a percentage of eligible expenditure and wages costs.\" In order to be eligible for this scheme (since January 2018), applicants must have employed at least one person (full or part time), must not have employed more than 50 full time employees and their turnover did not exceed \u20ac10 Million in the previous fiscal year.\r\rIn view of COVID-19 and the impact it has had upon organisations' cash flows, Government announced that a percentage of these tax credits would be converted into grants. \r\rThe updating of this scheme is in line with scheme's documentation that was issued prior to COVID-19 which states that \"Malta Enterprise Corporation may issue and publish updates to the official Incentive Guidelines covering this aid scheme in terms of Article 8 (3)(a) of the Malta Enterprise Act, Chapter 463 of the Laws of Malta. The Tax Credits for Micro Enterprises and Self-Employed Regulations as subsidiary legislation 463.09 to the Malta Enterprise Act, forms the national legal basis of this aid scheme.\"",
-            "descriptionContentOfMeasure": "The measure aims to provide support to those who invested in 2019 in their organisation and benefited from Malta Enterprise\u2019s tax credit scheme, Microinvest. Instead of solely providing tax credits, 30% of these will be converted into grants, thus providing a grant of up to \u20ac 2,000 for any business. Furthermore, organisations in Gozo, family-run businesses, and those run by female entrepreneurs will receive a grant of \u20ac2,500. Costs covered by this scheme include refurbishment and upgrading of offices & factories, investment in machinery and other assets. In total this measure will provide around \u20ac5 million to small and medium enterprises in our country. \r\rFull guidelines and applications for this scheme are yet to be published. \r\r\r\r",
+            "descriptionContentOfMeasure": "The measure aims to provide support to those who invested in 2019 in their organisation and benefited from Malta Enterprise\u2019s tax credit scheme, Microinvest. Instead of solely providing tax credits, 30% of these will be converted into grants, thus providing a grant of up to \u20ac2,000 for any business. Furthermore, organisations in Gozo, family-run businesses, and those run by female entrepreneurs will receive a grant of \u20ac2,500. Costs covered by this scheme include refurbishment and upgrading of offices & factories, investment in machinery and other assets. In total this measure will provide around \u20ac5 million to small and medium enterprises in our country. \r\rFull guidelines and applications for this scheme are yet to be published. \r\r\r\r",
             "descriptionUseOfMeasure": "No information are available. ",
-            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the Covid-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The measure is administered by the Malta Enterprise. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The measure is administered by the Malta Enterprise. ",
             "socialPartner_form": "",
             "socialPartner_role": "",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_937.html",
@@ -33367,7 +33578,7 @@
             "regions": []
         },
         "recordId": "847",
-        "modId": "15"
+        "modId": "16"
     },
     {
         "fieldData": {
@@ -33376,15 +33587,15 @@
             "d_startDate": "06/08/2020",
             "d_endDate": "09/30/2020",
             "calc_country": "Malta",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Access to finance",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
             "calc_identifier": "MT-2020-24/938",
             "dateType": "Temporary",
             "calc_creationDay": "07/07/2020",
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "During the initial phases of the COVID-19 pandemic in Malta, several forms of enterprises were ordered to close their doors, resulting in no or limited business being conducted by these organisations. \r\rAs retail shops, restaurants and licensed accommodation were allowed to re-open once COVID-19 cases dwindled, these enterprises and their respective associations complained that business remained very poor, with some organisations stating that they were losing more money by opening. In view of this, Government announced that \u20ac100 vouchers would be distributed to all individuals aged 16 and over that can be used in a licensed accommodation, restaurants, bars or business that had closed due to the pandemic.\r",
             "descriptionContentOfMeasure": "Every resident in Malta and Gozo aged over 16 years old will receive a voucher of \u20ac100 which can be used on Malta Tourism Authority (MTA) licensed accommodation, this includes hotels and holiday homes. The voucher can also be used at restaurants, bars and retail outlets. Specifically, five \u20ac20 vouchers will be issued to every resident, \u20ac80 can be used for accommodation, restaurants or bars, while the remaining \u20ac20 can be used in any retail outlets that were closed during the COVID-19 pandemic.\r\rWhilst it was originally announced by Government that only individuals who are registered on Malta's electoral register would receive such vouchers, it was later clarified that foreigners who had a Malta residence permit will also receive them. \r\rDistribution of the vouchers began on the 8th July via registered mail. \r\r",
-            "descriptionUseOfMeasure": "440,000 individuals residing in Malta are expected to receive vouchers worth \u20ac100 ",
+            "descriptionUseOfMeasure": "440,000 individuals residing in Malta are expected to receive vouchers worth \u20ac100.",
             "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the Covid-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. It has not been announced who will administer this measure. ",
             "socialPartner_form": "",
             "socialPartner_role": "",
@@ -33456,7 +33667,7 @@
             "regions": []
         },
         "recordId": "848",
-        "modId": "18"
+        "modId": "20"
     },
     {
         "fieldData": {
@@ -33466,7 +33677,7 @@
             "d_endDate": "09/30/2020",
             "calc_country": "Malta",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Other",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
             "calc_identifier": "MT-2020-24/939",
             "dateType": "Temporary",
             "calc_creationDay": "07/07/2020",
@@ -33474,7 +33685,7 @@
             "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced that organisations which were eligible for the wage subsidy were now also eligible to apply for an electricity bill refund. ",
             "descriptionContentOfMeasure": "During the first months of resuming operations (July, August and September 2020) businesses eligible for the Wage Supplement \"will be assisted on 50% of a commercial rate account up to an amount of \u20ac1,500 per applicant.\" The measure focuses on operating costs, and thus the amount does not include the payment for the electricity meter. \r\rThe total cost of this measure is expected to reach just over \u20ac30 million.\r\rCurrently no further information is available on this measure. The Malta Enterprise, which is likely to administer the measure has stated that further information, guidelines and applications will be made available soon. \r\r",
             "descriptionUseOfMeasure": "No information are available. ",
-            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. The Malta Hotels and Restaurants Association (MHRA) had been vocal about the need for electricity subsidies during this period. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the Covid-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. The Malta Hotels and Restaurants Association (MHRA) had been vocal about the need for electricity subsidies during this period. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published. ",
             "socialPartner_form": "",
             "socialPartner_role": "",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_939.html",
@@ -33812,7 +34023,7 @@
             "regions": []
         },
         "recordId": "849",
-        "modId": "27"
+        "modId": "28"
     },
     {
         "fieldData": {
@@ -33877,6 +34088,95 @@
         },
         "recordId": "852",
         "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Right to combine unemployment benefit with training",
+            "title_nationalLanguage": "Rett til \u00e5 kombinere dagpenger med utdanning",
+            "d_startDate": "04/20/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies",
+            "calc_identifier": "NO-2020-17/949",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "07/14/2020",
+            "descriptionBackgroundInfo": "Due to the corona crisis, many workers are laid off and unemployment has increased significantly. To make it possible for the many unemployed to acquire new skills and knowledge, the government acted in April on an initiative from the social partners and opened up temporarily to make it easier to study or do training while receiving unemployment benefits. In June, the temporary scheme was extended to last through 31 December 2020.",
+            "descriptionContentOfMeasure": "In March 2020, the social partners suggested that receivers of unemployment benefit should have a right to study while unemployed. The aim was to make the corona crisis an opportunity to raise the competencies of the population. More people could learn to use digital tools, completing upper secondary school or gain vocational skills. To achieve this, the social partners argued, it was necessary that the government relaxed the regulations for unemployment benefits and removed the restrictions that makes it difficult or impossible for employees to combine training with unemployment benefits. A temporary scheme was put in place on 20 April 2020, and gives the unemployed and lay-offs possibility to combine training with unemployment benefits to a greater extent than before. The rules initially applied until 1 September, but was later extended until 31 December 2020.\r\r* Until 31 December 2020, receivers of unemployment benefit do not have to apply to the authority in order to do training or studying during the time they are laid off or unemployed.\r* The scheme is temporary and applies to both those laid off, among whom many will return to their old jobs, and the unemployed who are looking for new jobs.\r* The rules do not apply to students who receive support from the Norwegian State Educational Loan Fund.\r* The scheme applies to all types of courses and training including studies where you get credits.\r* The new temporary scheme means that everyone who ticks off for training on the Norwegian Labour and Welfare Administration\u2019s registration card will be paid unemployment benefits as usual. Previously, one had to apply to combine training with unemployment benefits and get this approved.\r* The requirement to be an active jobseeker and available for a new job applies to everyone who receives unemployment benefits, including the unemployed and laid-off people who are in training. When offered a job before the training is completed, it is up to the individual whether they choose to interrupt the training, or to complete in combination with being at work.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The social partners jointly took the initiative to request the government to amend regulations to make it easier to do training or studying while receiving unemployment benefit. They have promoted the measure publicly and in dialog with the government.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-17_949.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1107",
+                    "sources::title": "NHO and LO want to let the unemployed study",
+                    "sources::url": "https://www.utdanningsnytt.no/arbeidsliv-hoyere-utdanning-korona/nho-og-lo-vil-la-arbeidsledige-studere/237119",
+                    "sources::d_date": "03/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1108",
+                    "sources::title": "Enklare \u00e5 kombinere dagpengar med oppl\u00e6ring",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/enklare-a-kombinere-dagpengar-med-opplaring/id2698765/",
+                    "sources::d_date": "04/22/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1109",
+                    "sources::title": "Extends the right to combine unemployment benefits with education",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/forlenger-rett-til-a-kombinere-dagpenger-med-utdanning/id2704154/",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "859",
+        "modId": "11"
     },
     {
         "fieldData": {
@@ -34206,7 +34506,7 @@
             "descriptionBackgroundInfo": "In tourism, accommodation and food, and commerce sectors, several companies were in difficult  financial situation due to the COVID-19 related containment measures resulting in significant or total loss of income. With the adoption of the supplementary state budget on 15 April 2020, the Ministry of Economic Affairs and Communication supports those companies via Enterprise Estonia (EAS), a state-founded foundation which aims at developing the Estonian economy. ",
             "descriptionContentOfMeasure": "In May and June 2020, Enterprise Estonia provided seven different grants to partially compensate the losses due to the COVID-19 outbreak of:\r\r* micro and small companies (all sectors)\r* accommodation companies\r* catering companies\r* travel agencies\r* tourism attractions\r* tourism companies\r* commerce and service companies (for compensating their rental fees)\r\rEach grant has its own eligibility criteria and terms and conditions. Overall, the amount of the grant per company could be between \u20ac2,000 and \u20ac60,000, depending on the specific grant. For compensation of the rental fee, the minimum amount was \u20ac100. The total budget allocated to compensate the losses was \u20ac36.5 million.",
             "descriptionUseOfMeasure": "Altogether, 3,469 companies received support from the EAS.",
-            "descriptionInvolvementOfSocialPartners": "A number of different sectoral social partners were involved \u2013 mainly they proactively provided their opinions and suggestions, which also received written feedback from the Ministry. Instead of peak-level social partners, they were concentrated more on sectoral social partners.   ",
+            "descriptionInvolvementOfSocialPartners": "A number of different sectoral social partners were involved \u2013 they proactively provided their opinions and suggestions, which also received written feedback from the Ministry. Instead of peak-level social partners, they were concentrated more on sectoral social partners.   ",
             "socialPartner_form": "",
             "socialPartner_role": "",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-20_962.html",
@@ -34341,7 +34641,7 @@
             "regions": []
         },
         "recordId": "872",
-        "modId": "21"
+        "modId": "22"
     },
     {
         "fieldData": {
@@ -34461,7 +34761,7 @@
             "calc_lastUpdate": "07/14/2020",
             "descriptionBackgroundInfo": "Estonian Song and Dance Celebration is a traditional cultural event held in Estonia in every five years. Numerous choir and dance collectives work continuously to learn and practice the songs and dances performed during the Celebration. Due to the containment measures, the collectives were unable to meet and practice, which in turn affected the income of the leaders of the collectives. To mitigate the financial hardship, the Ministry of Culture developed a temporary support measure for them. Relevant regulation was adopted in May 2020 after the adoption of the supplementary state budget act on 15 April 2020.",
             "descriptionContentOfMeasure": "The support is meant for leaders of the collectives participating in the Estonian Song and Dance Celebration movement. The target group involves, for example, conductors, folk dance or folk music instructors, concert masters, piano accompanists.\r\rThe support covers 70% of the average income of the period October 2019 \u2013 February 2020 of the collective leader, but not more than \u20ac1,000 per month. The support can be paid for March, April and May 2020.\r\rThe applicant must be a legal person with a valid contract and no tax arrears prior to the emergency situation. They must have received regular support from the budget of the Ministry of Culture in 2019. The income of the collective leader must be decreased between March and May 2020.\rThe total budget of the measure is \u20ac0.6 million and applications were accepted between 12 and 19 May 2020.",
-            "descriptionUseOfMeasure": "According to the explanatory note of the regulation, around 2,000 collective have been affected by the COVID-19. \r\rThe support was allocated altogether to 261 collective leaders in the total amount of \u20ac120,768.",
+            "descriptionUseOfMeasure": "According to the explanatory note of the regulation, around 2,000 collectives have been affected by the COVID-19. \r\rThe support was allocated altogether to 261 collective leaders in the total amount of \u20ac120,768.",
             "descriptionInvolvementOfSocialPartners": "A few relevant organisations uniting dance and song collectives and their leaders were consulted by the Ministry of Culture.",
             "socialPartner_form": "",
             "socialPartner_role": "",
@@ -34522,7 +34822,7 @@
             "regions": []
         },
         "recordId": "881",
-        "modId": "10"
+        "modId": "11"
     },
     {
         "fieldData": {
@@ -34537,7 +34837,7 @@
             "dateType": "Temporary",
             "calc_creationDay": "07/13/2020",
             "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "Due to the COVID-19 related containment measures, the private schools and childcare institutions lost at least partially their income, while still had unavoidable costs. In addition, children and youth experienced rapid decrease in possibilities to engage in extracurricular developing activities (due to cancelled events or the loss or decrease of the income of the parents which reduce the possibilities to pay the participation fees). To mitigate the situation, the Ministry of Education and Research provides support to child private child care institutions, schools and summer camps. The budget was allocated with the adoption of the supplementary state budget on 15 April 2020.",
+            "descriptionBackgroundInfo": "Due to the COVID-19 related containment measures, the private schools and childcare institutions lost at least parts of their income, while they still had ongoing costs. In addition, children and youth experienced rapid decrease in possibilities to engage in extracurricular developing activities (due to cancelled events or the loss or decrease of the income of the parents which reduce the possibilities to pay the participation fees). To mitigate the situation, the Ministry of Education and Research provides support to child private child care institutions, schools and summer camps. The budget was allocated with the adoption of the supplementary state budget on 15 April 2020.",
             "descriptionContentOfMeasure": "Two support schemes are available. A total of \u20ac15 million is allocated for those measures.\r\r1. Private schools, private child care institutions and kindergartens and private hobby schools could apply for a support to cover their unavoidable costs made during the COVID-19 crisis.  The maximum support was \u20ac80 per month per child/student for up to 50% of the children/students per school and it could be applied for March, April and May 2020 (all months or some of the months). \rThe application rounds were open until 15 May and 29 May (additional round due to high number of interested institutions).\r\r2. For the organisers of children and youth short summer camps (3-5 days long day camps or overnight camps) which aim to provide youth work, hobby activities and work/labour education. It is possible to apply for a support of \u20ac40 per child per day in case a camp with overnight stay and \u20ac20 per day per child in case a day camp. The applications were accepted between 25 June and 10 July 2020.  ",
             "descriptionUseOfMeasure": "Data is available for the first measure. Altogether 725 institutions received the support in the total amount of \u20ac7 million.",
             "descriptionInvolvementOfSocialPartners": "No involvement.",
@@ -34604,7 +34904,7 @@
             "regions": []
         },
         "recordId": "887",
-        "modId": "14"
+        "modId": "15"
     },
     {
         "fieldData": {
