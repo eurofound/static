@@ -31871,5 +31871,248 @@
         },
         "recordId": "863",
         "modId": "10"
+    },
+    {
+        "fieldData": {
+            "title": "Increased unemployment benefit rate granted during education",
+            "title_nationalLanguage": "Forh\u00f8jet dagpengesats under uddannelse",
+            "d_startDate": "08/01/2020",
+            "d_endDate": "12/31/2021",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies",
+            "calc_identifier": "DK-2020-31/956",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/10/2020",
+            "calc_lastUpdate": "07/13/2020",
+            "descriptionBackgroundInfo": "On the 17 June 2020, a majority in the Danish Parliament agreed on strengthening the existing efforts regarding upgrading of skills with an extra DKK 390 million (\u20ac52 million) in addition to the DKK 340 million (\u20ac46 million) that  were already set aside. Thus, a total amount of DKK 730 million (\u20ac98 million) is reserved for new upgrading and training initiatives in order to mitigate the effects of unemployment and company closures due to the coronavirus crisis. Targeted education can ensure better wage income and job opportunities, and education can equip Danes for the new jobs that occurs in the short and long term. The parties to the agreement agree to invest primarily in the education of unskilled, graduates and entrepreneurs who are particularly vulnerable during the corona crisis.\r",
+            "descriptionContentOfMeasure": "From 1 August 2020 on and during 2021 insured unemployed\u00a0of 30 years of age or more will have the right to start a vocational education with 110% of their previous unemployment benefit rate if the education is in an area where there is a need for labour.  A total amount of DKK 730 million (\u20ac98 million) is reserved for the upgrading and training initiatives. Thus, if a person receives the highest unemployment benefit rate on DKK 19,000 (\u20ac2,550), another DKK 1,900 (\u20ac255) will be added.\r\rUnskilled unemployed thus have the right to start an education such as blacksmith, electrician or other professions where there is a demand for hands. They can continue their education, even if it lasts longer than the unemployment benefit period. With the agreement, insured unemployed people will have the right to start six weeks of job-oriented training from the first day of unemployment and not after five weeks, as is the requirement today. The social partners\u00a0will identify the courses that the unemployed can access immediately.\r\rBesides, the parties to the agreement agree that relevant formal training must be developed in areas where there is an urgent need for labour with special competencies related to the handling of COVID-19. It can be within testing, infection detection, care,\u00a0laboratory technology, etc.\r",
+            "descriptionUseOfMeasure": "It is too early to estimate how many person will be using the possibility of increased unemployment benefit during training.\r\rOn 8 July 2020, Statistics Denmark registered 181,139 unemployed (the workforce is around 2,8 million). That is an increase of 49,313 since 8 March.",
+            "descriptionInvolvementOfSocialPartners": "The primary actors involved in the decision making were the broad coalition of political parties. Could not find more specific information on the various central organisations websites. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-31_956.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1124",
+                    "sources::title": "Bredt politisk flertal h\u00e6ver dagpengene",
+                    "sources::url": "https://bm.dk/nyheder-presse/pressemeddelelser/2020/06/bredt-politisk-flertal-haever-dagpengene-under-uddannelse/",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "866",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Support for people who are at higher risk for severe illness from COVID-19 virus",
+            "title_nationalLanguage": "Fors\u00f8rgelse til mennesker med ekstra risiko ved corona-sygdom",
+            "d_startDate": "05/20/2020",
+            "d_endDate": "09/01/2020",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "DK-2020-21/958",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/10/2020",
+            "calc_lastUpdate": "07/13/2020",
+            "descriptionBackgroundInfo": "In May, the Danish Parliament agreed on a solution in the sickness benefit system, so that people in the special risk group for COVID-19 and their relatives are guaranteed support if they stay home during the reopening of Denmark.\r\rThe Parliament has allocated a reserve of DKK 200 million to the scheme.\r\rThe scheme came into force in May 20, and will apply until September 1.",
+            "descriptionContentOfMeasure": "The scheme is based on the National Board of Health's list of diseases and conditions that may lead to an increased risk of an elongated or serious course of illness in the case of COVID-19 infection, and the National Board of Health's recommendations for relatives of persons in the risk group. It is the individual's doctor who must specifically assess whether the employee is in the risk group or is related to a person in the risk group.\r\rPersons in the special risk group and relatives may, in agreement with the employer, stay away from work during the reopening of Denmark and receive wages during the absence period or sickness benefit if the employer does not pay wages. The premise is that there are no opportunities to work from home or be relocated so that you are not exposed to the risk of infection.\r\rPrivate and public employers who pay salaries to employees at risk or relatives while at home are entitled to sickness benefit reimbursement from the first day of absence.",
+            "descriptionUseOfMeasure": "Unknown.",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-21_958.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1127",
+                    "sources::title": "The Parliament Agreement on support for people who are at higher risk for severe illness",
+                    "sources::url": "https://bm.dk/media/13810/aftale-risikogruppe.pdf",
+                    "sources::d_date": "07/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "42",
+                    "targetGroups::name": "The COVID-19 risk group",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "71",
+                    "targetGroups::name": "The COVID-19 risk group at the workplace",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "868",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
+            "title": "State aid for the maritime transport and related activities in the COVID-19 pandemic ",
+            "title_nationalLanguage": "Odluka o usvajanju Programa dodjele dr\u017eavnih potpora sektoru mora, prometa, prometne infrastrukture i povezanim djelatnostima u aktualnoj pandemiji COVID-a 19\r",
+            "d_startDate": "07/02/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "HR-2020-27/967",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/10/2020",
+            "calc_lastUpdate": "07/13/2020",
+            "descriptionBackgroundInfo": "At the session held on July 2, 2020, the Government of the Republic of Croatia adopted the Program for the Granting of State Aid to the Maritime, Transport, Transport Infrastructure and Related Activities Sector in the current COVID-19 pandemic, approved by the European Commission on 30 June 2020, and in accordance with the Commission Communication - Temporary Framework for state aid measures to support the economy in the current COVID-19 pandemic, of 19 March 2020 and its amendments of 3 April 2020 and 8 May 2020.\r\rThe state aid instrument regulated by this Program is a state guarantee for new loans of entrepreneurs with commercial banks and the Croatian Bank for Reconstruction and Development.The emphasis is on measures aimed at ensuring liquidity, providing access to finance for the functioning of these sectors and ensuring transport connectivity and smooth traffic -\u00a0both within the Republic of Croatia and abroad\u00a0 - during and after the end of the COVID-19\u00a0pandemic as well as creating conditions for faster recovery from current crises.\r\rThe responsible institution is the Ministry of the Sea, Transport and Infrastructure, while the implementing bodies are the Croatian Bank for Reconstruction and Development and the Croatian Agency for Small Business, Innovation and Investments.\r\r\r",
+            "descriptionContentOfMeasure": "The program applies to the maritime, transport, transport infrastructure and economic activities related to construction, technical improvement, traffic-technical modernization of waterways, technical maintenance and training of waterways and navigation safety facilities (i.e. NACE 42.91Construction of water structures; 49.10 Railway transport services of passengers, intercity; 49.20.Railway freight transport; 49.31Urban and suburban passenger land transport; 49.39 Other land transport (excluding taxi service); 50.10 Sea and coastal passenger water transport; 50.30 Inland passenger water transport; 50.40Transport of goods by inland waterways; 51.10 Passenger air transport; 51.21 Air transport of goods; 50.20 Sea and coastal freight water transport; 52.10 Storage of goods; 52.2 Transport service activities; 77.34 Renting and leasing of water transport equipment; 79.11 Travel agency activities (related to nautical transport); 79.12 Activity of tour operators (tour operators) if they are related to nautical traffic; 93.29 Nautical tourism ports). \u00a0\r\rEligible beneficiaries of support under this program are classified as small, medium and large enterprises according to the categories of enterprises. The aid can be in the form of guarantees ('limited aid amounts') \u00a0and in the form of loan guarantees ('support in the form of loan guarantees'). The aid in the form of guarantees shall be directly targeted at the eligible beneficiaries who are facing a sudden lack of liquidity, and not to credit them or other financial institutions that are lenders for which guarantees are granted. \r\rThe total amount of state guarantees, which will be approved by the Croatian Bank for Reconstruction and Development (HBOR) and the Croatian Agency for Small Business, Innovation and Investment (HAMAG-BICRO), amounts to HRK 600 million (\u20ac80 million) i.e. in the form of 'limited aid amounts' \u00a0HRK 200 million (\u20ac26.7 million), and in the form of loan guarantees HRK 400 million (\u20ac53.3 million).",
+            "descriptionUseOfMeasure": "Not yet known.",
+            "descriptionInvolvementOfSocialPartners": "Due to the nature of the measure, social partners were not involved. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-27_967.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1148",
+                    "sources::title": "Odluka o usvajanju Programa dodjele dr\u017eavnih potpora sektoru mora, prometa, prometne infrastrukture i povezanim djelatnostima u aktualnoj pandemiji COVID-a 19",
+                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_07_77_1466.html",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1162",
+                    "sources::title": "Decision on the adoption of the Program for the allocation of state aid to the maritime sector, transport, transport infrastructure and related activities in the current COVID Decision on the adoption of the Program for the allocation of state aid to the maritime sector, transport, transport infrastructure and related activities in the current COVID pandemic 19",
+                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_07_77_1466.html",
+                    "sources::d_date": "07/03/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "877",
+        "modId": "18"
     }
 ]
