@@ -32546,6 +32546,84 @@
     },
     {
         "fieldData": {
+            "title": "SOS subsidy for people without any other income introduced",
+            "title_nationalLanguage": "SOS dot\u00e1cia",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "SK-2020-18/886",
+            "dateType": "Open ended",
+            "calc_creationDay": "06/19/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "This completely new measure was introduced on the basis of the Government Regulation No. 103/2020 Coll, section 3, on certain measures in the field of subsidies within the competence of the Ministry of Labor, Social Affairs and Family of the Slovak Republic in the event of an emergency situation, state of emergency or state of emergency declared in connection with COVID-19. The measure was introduced to help persons without any income during the crisis situation.",
+            "descriptionContentOfMeasure": "Eligible are the persons who used to have an income from work or self-employment before 12 March 2020 and stayed without any income during the coronavirus crisis. Not eligible are all recipients of unemployment benefits, retirement pensions, disability pensions, sickness benefits, nursing benefits, parental benefits and material need contributions. Moreover, the applicants cannot receive any other subsidy from the First aid measures. \rThe subsidy is paid out every month since March 2020 if the beneficiary meets the \"no income\" requirement. The person receives \u20ac105 in March 2020 and \u20ac210 in April and later until the individual income situation changes. The Ministry of Labour, Social Affairs and Family publishes the list of beneficiaries with approved subsidies on its website.",
+            "descriptionUseOfMeasure": "By 30 June 2020 there were totaly 11,881 approved subsidies refering to the period between 12 March 2020 and 30 June 2020 according to the lists of beneficiaries published by the Ministry of Labour, Social Affairs and Family.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in preparation of the measure via usual tripartite consultations and neither in the cross-sector commenting procedure as the measure refers to individual citizens (workers, self-employed, unemployed) who stayed without any income during the crisis situation.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-18_886.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "986",
+                    "sources::title": "First aid to employees, employers and self-employed. (Prv\u00e1 pomoc zamestnancom, podnikate\u013eom a \u017eivnostn\u00edkom.)",
+                    "sources::url": "https://www.pomahameludom.sk/",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "993",
+                    "sources::title": "SOS subsidy. Ministry of Labour, Social Affairs and Family of the Slovak Republic (SOS dot\u00e1cia. Ministerstvo pr\u00e1ce, soci\u00e1lnych vec\u00ed a rodiny)",
+                    "sources::url": "https://www.employment.gov.sk/sk/ministerstvo/poskytovanie-dotacii/archiv/2020/sos-dotacie.html",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1030",
+                    "sources::title": "Ministry expands the aid for citizens to SOS subsidy (Ministerstvo roz\u0161iruje pomoc ob\u010danom o SOS dot\u00e1ciu)",
+                    "sources::url": "https://www.employment.gov.sk/sk/informacie-media/aktuality/ministerstvo-rozsiruje-pomoc-obcanom-sos-dotaciu.html",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "796",
+        "modId": "31"
+    },
+    {
+        "fieldData": {
             "title": "Combis officially implemented remote work model",
             "title_nationalLanguage": "Combis slu\u017ebeno uveo mobilni na\u010din rada",
             "d_startDate": "06/15/2020",
@@ -33348,6 +33426,77 @@
     },
     {
         "fieldData": {
+            "title": "Rent subsidies for business which had to stay closed",
+            "title_nationalLanguage": "Dot\u00e1cie n\u00e1jomn\u00e9ho",
+            "d_startDate": "06/17/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "SK-2020-25/896",
+            "dateType": "Temporary",
+            "calc_creationDay": "06/30/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The first measures to help entrepreneurship during the corona crisis were more focused on maintaining jobs. In business, however, there is also a need for spaces that entrepreneurs rent to a significant extent from the owners. This measure in the form of a law is aimed at helping entrepreneurs who rent business premises and for which they have to pay rent. The state subsidy will go to pay part of the rent for the use of the premises, which were closed due to a government regulation for the spread of coronavirus.",
+            "descriptionContentOfMeasure": "First, there is a negotiation between the landlord and the tenant about the amount of discount. The state pays the landlord a subsidy in the same amount as he gives the entrepreneur a discount on rent. The ceiling is 50% of the amount of rent for the period of difficult use of space. In such a case, the landlord will forgive half of the rent and the other half of the rent will be refunded by the state. The tenant for the period will not pay anything for renting the premises. If the landlord and the tenant agree on a lower discount (e.g. 30%), the state will contribute equally (30%) and the rest (40%) must be paid by the entrepreneur renting the premises. In this case, the tenant can spread the payment of unpaid rent in instalments over 48 months. During the payment, the landlord is not entitled to unilaterally increase the amount of rent. The assistance provided to the tenant is financed from the resources of the state budget of the Slovak Republic. The maximum amount of the grant for one applicant is \u20ac800,000. The subsidy covers only rent, not energy supply.",
+            "descriptionUseOfMeasure": "Based on a mutual agreement, the renter will ask the landlord to submit an application for a rent subsidy for the period of difficult use. The application is submitted by the landlord on behalf of the tenant, on the landlord's own account. The application must be signed on behalf of both parties, by all authorized persons of both entities, with a qualified electronic signature. The application is submitted to the Ministry of Economy of the Slovak Republic in the period from 23 June 2020 to 30 November 2020. The total amount of available resources provided by the Ministry of Economy for this purpose is \u20ac 200 million (for about 70,000 to 100,000 applicants). The funds come from national sources.",
+            "descriptionInvolvementOfSocialPartners": "The issue of rent subsidies was raised by employers at a meeting of the Economic and Social Council (tripartite body).\r",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-25_896.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "945",
+                    "sources::title": "Act 155/2020 Coll. supplementing Act no. 71/2013 Coll. on the provision of subsidies within the competence of the Ministry of Economy of the Slovak Republi",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/155/20200617",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "946",
+                    "sources::title": "Minutes of the Economic and Social Council of the Slovak Republic (tripartite body) meeting on 21.5.202",
+                    "sources::url": " https://hsr.rokovania.sk/rokovania-hospodarskej-a-socialnej-rady-sr/?cms_location=rokovania-hospodarskej-a-socialnej-rady-sr",
+                    "sources::d_date": "05/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "806",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
             "title": "Incentives scheme for airline companies ",
             "title_nationalLanguage": "\u03a3\u03c7\u03ad\u03b4\u03b9\u03bf \u03ba\u03b9\u03bd\u03ae\u03c4\u03c1\u03c9\u03bd \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b9\u03c2 \u03b1\u03b5\u03c1\u03bf\u03c0\u03bf\u03c1\u03b9\u03ba\u03ad\u03c2 \u03b5\u03c4\u03b1\u03b9\u03c1\u03b5\u03af\u03b5\u03c2 ",
             "d_startDate": "07/10/2020",
@@ -33918,6 +34067,93 @@
         },
         "recordId": "809",
         "modId": "33"
+    },
+    {
+        "fieldData": {
+            "title": "Operating loan 'Entrepreneur 2020'",
+            "title_nationalLanguage": "Prev\u00e1dzkov\u00fd \u00faver Podnikate\u013e 2020  ",
+            "d_startDate": "04/20/2020",
+            "d_endDate": "06/24/2020",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "SK-2020-17/900",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/01/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "At its session on 31 March 2020, the government adopted a bill and the parliament approved it on 2 April 2020 as Act no. 67/2020 Coll. on certain emergency financial measures in relation to the spread of the dangerous contagious human disease COVID-19. On this legal basis, the Slovak Guarantee and Development Bank (SZRB) provides an Operating Loan called ENTREPRENEUR 2020 to support the maintenance of operations and employment in small or medium-sized enterprises, with the possibility of obtaining financial assistance from the Ministry of Finance of the Slovak Republic. An operating loan takes the form of a \"loan guarantee\" and a \"loan interest payment\".",
+            "descriptionContentOfMeasure": "The purpose of the measure is to finance operating costs related to the maintenance of business operations and employment, to finance investments in tangible and / or intangible assets, repayment of liabilities to the Social Insurance Agency and / or health insurance companies.\rThe amount of the loan may be a maximum of 50% of the client's total turnover in 2019, with a minimum amount of  \u20ac10,000 and a maximum amount of  \u20ac350,000. The maximum maturity of the loan is 3 years from the date of the first drawdown; repayment of principal and interest may be deferred for a period of 12 months from the date of the first drawdown of the loan. The loan guarantee is provided by the Ministry of Finance of the Slovak Republic after meeting the conditions defined in the loan agreement concluded with the client.",
+            "descriptionUseOfMeasure": "The originally set limit of the program for the Entrepreneur 2020 loan was \u20ac20 million. Due to great interest in this product, SZRB doubled this amount (\u20ac40 million) in agreement with its shareholder (Ministry of Finance), but decided not to continue with any further increases. The reason is that there are currently other effective state aid schemes for small and medium-sized enterprises, namely the program of the Slovak Investment Holding called SIH Anti-Corona Guarantee 1 and Anti-Corona Guarantee 2 and the EXIMBANKA SR COVID loan program.",
+            "descriptionInvolvementOfSocialPartners": "Only ad-hoc informal consultations between employers orgaisations and government.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-17_900.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "965",
+                    "sources::title": "Act 67/2020 Col. on certain emergency financial measures in relation to the spread of the dangerous contagious human disease COVID-1",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/67/20200617 ",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "966",
+                    "sources::title": "Slovensk\u00e1 z\u00e1ru\u010dn\u00e1 a rozvojov\u00e1 banka (2020):  \u00davery  (Loans",
+                    "sources::url": "https://www.szrb.sk/sk/uvery/ ",
+                    "sources::d_date": "06/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "810",
+        "modId": "18"
     },
     {
         "fieldData": {
