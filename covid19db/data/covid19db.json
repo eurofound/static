@@ -1717,6 +1717,131 @@
     },
     {
         "fieldData": {
+            "title": "Transfer of employees from hotels and restaurants to food industry",
+            "title_nationalLanguage": "Presun pracovn\u00fdch s\u00edl z hotelov a re\u0161taur\u00e1ci\u00ed do potravin\u00e1rskeho priemyslu",
+            "d_startDate": "03/19/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Transfer or redeployment of workers ",
+            "calc_identifier": "SK-2020-12/261",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The Association of Hotels and Restaurants of Slovakia and Food Chamber of Slovakia agreed to cooperate in transferring redundant employees from hotels and restaurants to the food industry.\rThe hotels and restaurants were closed or limited their operation and the demand for food products in food industry increased. This measure was set in order to meet higher demand in food industry and to avoid unemployment of employees working in the closed hotels and restaurants with limited operation.",
+            "descriptionContentOfMeasure": "Due to the closure of hotels and restaurants and resulted staff redundancy on one side and a high demand for food products on the other side, the Association of Hotels and Restaurants of Slovakia and the Food Chamber of Slovakia started to cooperate. \r\rThe Association and the Chamber help hotel and restaurant employers (posting employer) and food industry employers (user employers) with transfer and with temporary work assignments according to the Labour Law framework.The cooperation is applied through the contract between posting employer and the user employer. Also an agreement between employee and his/her posting employer is signed. A shared file was created in order to collect information on labour force offer and demand regarding these two sectors.",
+            "descriptionUseOfMeasure": "By 6 April 2020, 18 food industry companies offered approximately 270 vacant positions in total. On the other side, 23 companies from the hotel and restaurant sector offered approximately 350 redundant employees totally. ",
+            "descriptionInvolvementOfSocialPartners": "Based on the negotiations the Association of Hotels and Restaurants of Slovakia and Food Chamber of Slovakia agreed on mutual cooperation. ",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-12_261.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "235",
+                    "sources::title": "Transfer of free labour force from hotels and restaurants into food industry (Presun vo\u013en\u00fdch pracovn\u00fdch s\u00edl z hotelov a re\u0161taur\u00e1ci\u00ed do potravin\u00e1rskeho priemyslu)",
+                    "sources::url": "https://nova.blog.pravda.sk/2020/03/20/presun-volnych-pracovnych-sil-z-hotelov-a-restauracii-do-potravinarskeho-priemyslu",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "236",
+                    "sources::title": "Food chamber of Slovakia (Potravin\u00e1rska komora Slovenska)",
+                    "sources::url": "https://www.potravinari.sk/page7518sk.html",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "7"
+                },
+                {
+                    "recordId": "237",
+                    "sources::title": "Association of hotels and restaurants of Slovakia (Asoci\u00e1cia hotelov a re\u0161taur\u00e1ci\u00ed Slovenska)",
+                    "sources::url": "https://www.ahrs.sk/pre-media/1148-ts-potravinari-a-hotelieri-sa-dohodli-na-vzajomnej-spolupraci",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "7"
+                },
+                {
+                    "recordId": "341",
+                    "sources::title": "Agreement on changes in working conditions during temporary assignment (Dohoda o zmene pracovn\u00fdch podmienok po\u010das do\u010dasn\u00e9ho pridelenia)",
+                    "sources::url": "https://www.dropbox.com/sh/yo3rsl7i8qqitjq/AADvom2FzsD_-5GrbqK-22J2a?dl=0&preview=dohoda+o+zmenen+PP+pri+docasnom+prideleni.docx",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "342",
+                    "sources::title": "Agreement on employees temporary assignment (Zmluva o do\u010dasnom pridelen\u00ed zamestnancov)",
+                    "sources::url": "https://www.dropbox.com/sh/yo3rsl7i8qqitjq/AADvom2FzsD_-5GrbqK-22J2a?dl=0&preview=zmluva+o+docasnom+prideleni.docx",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1035",
+                    "sources::title": "Bratislava region supports the agreement between hotels and food industry (Bratislavsk\u00fd kraj podporuje dohodu medzi hoteliermi a potravin\u00e1rmi)",
+                    "sources::url": "https://www.teraz.sk/regiony/bsk-kraj-podporuje-dohodu-medzi-hotelie/454146-clanok.html",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1036",
+                    "sources::title": "Food industry and hotels agreed on mutual cooperatio (Potravin\u00e1ri a hotelieri sa dohodli na vz\u00e1jomnej spolupr\u00e1ci)",
+                    "sources::url": "http://www.sppk.sk/clanok/3117",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "144",
+        "modId": "119"
+    },
+    {
+        "fieldData": {
             "title": "Temporary layoffs of employees on a fixed-term contracts",
             "title_nationalLanguage": "M\u00e4\u00e4r\u00e4aikaisen ty\u00f6ntekij\u00e4n lomauttaminen",
             "d_startDate": "04/01/2020",
@@ -2990,7 +3115,7 @@
             "d_endDate": "08/31/2020",
             "calc_country": "Malta",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "MT-2020-12/278",
             "dateType": "Temporary",
             "calc_creationDay": "04/04/2020",
@@ -3069,7 +3194,7 @@
             "d_endDate": "08/31/2020",
             "calc_country": "Greece",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "GR-2020-11/280",
             "dateType": "Temporary",
             "calc_creationDay": "04/04/2020",
@@ -3394,7 +3519,7 @@
             "d_endDate": "",
             "calc_country": "Czechia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "CZ-2020-12/286",
             "dateType": "Temporary",
             "calc_creationDay": "04/05/2020",
@@ -3566,7 +3691,7 @@
             "d_endDate": "",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-12/288",
             "dateType": "Open ended",
             "calc_creationDay": "04/06/2020",
@@ -3632,7 +3757,7 @@
             "d_endDate": "",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-14/289",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
@@ -3689,6 +3814,255 @@
         },
         "recordId": "172",
         "modId": "89"
+    },
+    {
+        "fieldData": {
+            "title": "Employers' dispensation to pay a compensation for sick leave",
+            "title_nationalLanguage": "Odpustenie platby n\u00e1hrady mzdy chor\u00fdm zamestnanco",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "SK-2020-13/290",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "In connection with the deterioration of the situation of employers during the COVID-19 pandemic, the government and subsequently the parliament decided to abolish the obligation of employers to pay a wage compensation benefit to an employee during the first ten days of his incapacity for work. The employee will thus receive a sickness benefit from the Social Insurance Agency from the first day of his incapacity for work. This change was implemented by Act no. 63/2020 Coll, amending Act no. 461/2003 Coll on social insurance and Act no. 311/2001 Coll Labor Code",
+            "descriptionContentOfMeasure": "According to the local legal framework, in normal conditions the employee receives, during the first 10 days of incapacity to work, an income compensation directly from the employer. Only after 10 days, the employee receive a sickness benefit from the Social Insurance Agency. \rSelf-employed insured persons are, then, entitled to a sick benefit for the first three days of 25% and subsequently in the amount of 55% of the assessment base.\r\rOn the basis of the new COVID-19 related measure, the employer will not pay wage compensation in the case of employee's illness or if it is quarantined in reason of the epidemic, during the first 10 days of sick leave. Indeed, it will be paid by the Social Insurance Agency.\rSelf-employed as well receives full sickness benefit from the Social Insurance Agency from the first day of sick leave (i.e. not 25% during the first three days).\r\rThis measure is proposed in an effort to relieve the undertakings in times of crisis of costs related to temporary incapacity for work, as well as to increase the income of insured persons in cases of ordered quarantine measures and isolation.",
+            "descriptionUseOfMeasure": "As far as the costs of the Social Insurance Agency are concerned, they are estimated that 100,000 sickness benefits will be paid out in 2020. Beyond the current legal status, the sickness benefits will be paid to the persons concerned from the Social Insurance Agency for ten calendar days. The average assessment base of the person concerned is assumed to be at the level of the average wage of 2019, i.e. \u20ac1,092, as sickness benefits are basically based on the previous year's income. Expenditure on the basis of these assumptions is expected to be around \u20ac19.4 million in 2020.\r\rThe employers concerned are expected to achieve savings on compensation for temporary incapacity for work of about \u20ac169.4 on average per employee in quarantine measures, which is around \u20ac 16.9 million for the entire business sector (about 100,000 employees). Exact data on the total savings of employers are not available, because the Social Insurance Agency does not record data on the paid wage compensation or its amount (these data are not relevant for the performance of social insurance).\r\r",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in preparation of the measure, neither via the usual tripartite consultations, nor in the cross-sector commenting procedure. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_290.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "142",
+                    "sources::title": "63 ACT of 25 March 2020 amending Act no. 461/2003 Coll. on social insurance,",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/63/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "173",
+        "modId": "95"
+    },
+    {
+        "fieldData": {
+            "title": "Broadening active labour market policy programmes - supporting job retention",
+            "title_nationalLanguage": "Roz\u0161\u00edrenie programov akt\u00edvnej politiky trhu pr\u00e1ce \u2013 podpora pri zachovan\u00ed pracovn\u00e9ho miest",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "SK-2020-13/291",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The legislator, through the Act 63/2020 Coll., introduced an enlargement of the eligibility conditions for financial contributions to active labor market policy measures. \rThis instrument is aimed to support projects finalized to save jobs, including the ones where self-employment is carried out or operated. It also supports projects aimed at maintaining employees in employment in connection with the declaration of an emergency like the ones concerning the COVID-19 epidemic. This measure was Number 1 in a package of measures called \"First Aid\"",
+            "descriptionContentOfMeasure": "The contribution will be provided to the employer or self-employed who, despite the difficult situation, decides not to dismiss workers or to maintain a job within the ALMP Projects.\rSupport is provided through the Ministry of Labor, Social Affairs and Family or via the Center of Labor, Social Affairs and Family, when the conditions and scope of support is approved by the Government of the Slovak Republic.\r\rThe maximum total amount of the contribution for one applicant (employer) is \u20ac800,000 for the period of project implementation. The basic conditions for providing the allowance are that: \r\r* the employer/self-employed pays to the employee a wage compensation in the amount of 80% of his average earnings; \r*  the employer/self-employed does not initiate termination of employment by notice or agreement; \r*  that on 31 December 2019 the company was not in difficulties. \r\rThe contribution is not intended for self-employed themselves, but is limited to self-employed people who have hired one or more employees.\r \rThe amount of the allowance for one employee corresponds to the compensation of the employee's salary in the amount of 80% of his average earnings, up to a maximum of \u20ac 1,100. Self-employed will receive the contribution to pay the salaries of their employees.\rThe contribution is provided from 13 March 2020, until the end of the calendar month in which the restrictive measures taken by the Public Health Office of the Slovak Republic will be revoked.",
+            "descriptionUseOfMeasure": "The amount of funding will depend on the capacity provided by the European Social Fund or the state budget, or other sources. At present, it is not possible to identify the exact number of employers concerned. The amount of the contribution and the determination of precise conditions shall be determined by the Government. In March, April and May 2020, a total of 13,838 applicants applied for such assistance for 109,902 employees  in the total amount of \u20ac40.810 million. The financing consisted of a contribution from the European Social Fund (85%) and a contribution from the state budget of the Slovak Republic (15%). (Information requested from Central Office of Labour, Social Affairs and Family).",
+            "descriptionInvolvementOfSocialPartners": "Informal ad-hoc consultations.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-13_291.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "142",
+                    "sources::title": "63 ACT of 25 March 2020 amending Act no. 461/2003 Coll. on social insurance,",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/63/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "759",
+                    "sources::title": "N\u00e1vrh podmienok projektu podpory udr\u017eania zamestnanosti v \u010dase vyhl\u00e1senej mimoriadnej situ\u00e1cie, n\u00fadzov\u00e9ho stavu alebo v\u00fdnimo\u010dn\u00e9ho stavu a odstr\u00e1nen\u00edm ich n\u00e1sledko",
+                    "sources::url": "https://rokovania.gov.sk/RVL/Material/24674/1",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "74",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "This measure was Number 1 in a package of measures called \"First Aid\".",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "174",
+        "modId": "107"
+    },
+    {
+        "fieldData": {
+            "title": "Extension of the support period for unemployment benefit",
+            "title_nationalLanguage": "Pred\u013a\u017eenie podporn\u00e9ho obdobia na d\u00e1vku v nezamestnanost",
+            "d_startDate": "04/04/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "SK-2020-14/292",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "Through the Act 66/2020 Coll., the legislator intervened in order to cushion the condition of long-term unemployed in the local labour market. Indeed, as a consequence of the restrictions and the social distancing measures introduced during the Covid-19 pandemic crisis, jobseekers are increasingly at risk of not finding a job for a longer period of time. Therefore, the Parliament decided that during the pandemic unemployment benefit should be paid for a longer period.",
+            "descriptionContentOfMeasure": "During the COVID-19 pandemic crisis, the unemployment benefit period has been extended by one month (up to a maximum of seven months) for those who could not find a job. The measure is finalized to sustain people that remained unemployed up to the end of the original unemployment benefit period. The Government may lay down the conditions for entitlement to the unemployment benefit, the conditions for the payment of the unemployment benefit, the length of the unemployment benefit period and the amount of the unemployment benefit, in the form of a government order for the duration of the crisis and for two months after its termination.",
+            "descriptionUseOfMeasure": "Compared to the current legal situation, it is expected that approximately 28,100 more unemployment benefits will be paid out by 2020, with an average monthly rate of around \u20ac 518.1. Expenditure on the basis of these assumptions is expected to be around \u20ac14.6 million in 2020. In the period till 15 June, 2020, the Social Insurance Agency paid a total of 20,668 unemployment benefits due to the extension of the period of payment of this benefit in the total amount of \u20ac6.459 million (information required from Social Insurance Agency).",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in preparation of the measure via usual tripartite consultations and neither in the cross-sector commenting procedure.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-14_292.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "143",
+                    "sources::title": "66 ACT of 2 April 2020 amending and supplementing Act no. 311/2001 Labor Code, as amended, and amending and supplementing certain act (Z\u00e1konn\u00edk pr\u00e1ce)",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/66",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "6"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "175",
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -3778,7 +4152,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Slovakia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "SK-2020-15/295",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
@@ -4430,6 +4804,81 @@
         },
         "recordId": "184",
         "modId": "86"
+    },
+    {
+        "fieldData": {
+            "title": "New rules for teleworking",
+            "title_nationalLanguage": "V\u00fdkon pr\u00e1ce z dom\u00e1cnosti zamestnanca",
+            "d_startDate": "04/04/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "SK-2020-14/302",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The measure, that amends rules formerly introduced in the legal framework, is aimed to isolate more staff and not to reduce activity businesses and other organisations during the spread of the COVID-19 pandemic. This result is reached simplifying the rules to adopt work-from-home-based schemes.\r\rThe measure was adopted by the Act No. 66/2020 Coll., amending the Act No. 311/2001 Coll. on the Labour Code and supplementing some laws at the time of the COVID-19 pandemic. Section 250b of the Act specifies the possibility of an employer to order the employees to work from home upon defined circumstances. \r\r",
+            "descriptionContentOfMeasure": "According to this measure, the employer and the employee can enter into the work-from-home scheme on the basis of a mutual agreement. The place of remote working must be specified by the parties, while the rules concerning working conditions, health and safety and working hours remain unchanged also while the work-from-home scheme is active.\r\rAdditionally, while the worker is operating from home, the employment relationship is not subject to the provisions on the schedule of weekly working hours, daily and  weekly rest and the idle-time. No wage supplements are paid to the employee for the overtime and night work and for working on Saturdays and Sundays, unless the employee and the employer agree otherwise.\r\r",
+            "descriptionUseOfMeasure": "The measure concerns a large number of non-essential organisations, schools, institutions where there is no risk of production suspension and the supply of raw materials, materials, food, energy is not jeopardised.\r\rThere are no concrete figures available on the total number of employees who used the homework since mid-March till now. Nevertheless, according to the available information, most of the concerned employees were satisfied with the possibility to use it. Some employers consider the option to use homework also after the corona crisis.",
+            "descriptionInvolvementOfSocialPartners": "According to the peak organisations of employers AZZZ SR, APZ and KOZ SR, social partners were not involved via usual tripartite consultations nor in the cross-sector commenting procedure. Some social partners, e.g. KOZ SR, tried to be involved and provided comments informally via media or exceptionally through individual consultation with representatives of the respective state administration body, particularly with the Ministry of  Labour, Social Affairs and Family.",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-14_302.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "143",
+                    "sources::title": "66 ACT of 2 April 2020 amending and supplementing Act no. 311/2001 Labor Code, as amended, and amending and supplementing certain act (Z\u00e1konn\u00edk pr\u00e1ce)",
+                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/66",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "6"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "185",
+        "modId": "96"
     },
     {
         "fieldData": {
@@ -5110,6 +5559,102 @@
     },
     {
         "fieldData": {
+            "title": "Compensation for self-employed",
+            "title_nationalLanguage": "Kompensacijos savaranki\u0161kai dirbantiems asmenims",
+            "d_startDate": "03/19/2020",
+            "d_endDate": "04/27/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "LT-2020-12/314",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "After the Government declared a state of emergency and quarantine, many self-employed people had to terminate or partially restrict their activities. On 7 April 2020, the Law No. XIII-2846 amending Articles 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 and 50 of Law on Employment of the Republic of Lithuania (No. XII-2470) came into force, providing for assistance to those self-employed persons that during the quarantine period were forced to terminate their activities due to the state of emergency. Self-employed people shall apply for a flat-rate benefit to the Employment Service.",
+            "descriptionContentOfMeasure": "A fixed benefit of \u20ac257 per month may be granted to self-employed persons who have been forced to cease their activity due to the emergency situation. The benefit will be paid if a self-employed person meets all of the conditions below:\r\r* Self-employment has been registered for at least three months in the last year and has not been de-registered until the date the Government declared the state of emergency and quarantine;\r* During the state of emergency and quarantine declared by the Government, a person does not work under an employment contract and does not have a legal relationship equivalent to employment relationships;\r* The person has no outstanding debts to the state budget and in relation to social insurance payments to the state agency 'Sodra' (or the debt has been rescheduled and is not an impediment);\r* The person does not have the status of a legal person in liquidation or bankruptcy.\rBenefits paid for an incomplete month will be proportionately lower. Payment of the benefit to a self-employed person would be terminated when the Government revokes the emergency or quarantine, or the person no longer meets at least one of the conditions above.",
+            "descriptionUseOfMeasure": "By 14 April 2020, 42,314 people have applied for the benefit in Lithuania. A total of 93,666 persons have applied for the benefit to the self-employed by 6 June 2020. The total amount paid down in benefits amounted to \u20ac52,632 million.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) were consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-12_314.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "218",
+                    "sources::title": "Law amending Articles 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 and 50 of Law on Employment of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 ir 50 straipsni\u0173 pakeitimo \u012fstatymas)",
+                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/43d9edd3797d11eaa38ed97835ec4df6?jfwid=-fy7rwc7a",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1173",
+                    "sources::title": "Law amending Articles 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47, 55 and adding Article 48-1 to the Law on Employment of the Republic of Lithuania (Lietuvos Respublikos u\u017eimtumo \u012fstatymo Nr. XII-2470 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47, 55 straipsni\u0173 pakeitimo ir \u012estatymo papildymo 48-1 straipsniu \u012fstatymas)",
+                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/82caa600935a11eaa51db668f0092944?jfwid=-1819or53bv",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "194",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "On 8 May 2020, amendments to the Law on Employment of the Republic of Lithuania (Law No XIII-2882 of 7 May 2020) were introduced in Lithuania, providing that the \u20ac257 monthly benefit is also available to the self-employed who are also working under employment contracts. The benefit is granted if the person\u2019s earnings under the employment contract do not exceed \u20ac607 gross. According to the amendment to the Law, self-employed parents on parental leave will also be eligible for the benefit, provided that their gross monthly earnings do not exceed \u20ac607. The new procedure is retroactive, i.e. self-employed people who meet all the criteria will receive the benefit for the period from the start of the quarantine, that is, from 16 March 2020.\r\rIn addition, the amendments extended the period of payment of the benefit to the self-employed - the benefit will be paid for another 2 months after the emergency situation regime or quarantine announced by the Government of the Republic of Lithuania is lifted. (The quarantine regime has been lifted in Lithuania as of 16 June 2020). ",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "197",
+        "modId": "91"
+    },
+    {
+        "fieldData": {
             "title": "Exceptional suspension of termination of employment contracts in National Health Service",
             "title_nationalLanguage": "Suspens\u00e3o excecional da cessa\u00e7\u00e3o de contratos de trabalho no Servi\u00e7o Nacional de Sa\u00fade",
             "d_startDate": "04/03/2020",
@@ -5376,7 +5921,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-15/321",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
@@ -5449,7 +5994,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-12/322",
             "dateType": "Temporary",
             "calc_creationDay": "04/06/2020",
@@ -5747,7 +6292,7 @@
             "d_endDate": "04/27/2020",
             "calc_country": "Lithuania",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "LT-2020-12/329",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
@@ -6011,7 +6556,7 @@
             "d_endDate": "11/30/2020",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-12/336",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
@@ -6087,6 +6632,83 @@
         },
         "recordId": "220",
         "modId": "83"
+    },
+    {
+        "fieldData": {
+            "title": "Social tax payments for solo self-employed",
+            "title_nationalLanguage": "FIE-de sotsiaalmaksu avansilised maksed",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "05/07/2020",
+            "calc_country": "Estonia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "EE-2020-12/337",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/07/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "Solo self-employed (FIE in Estonia) are obliged to pay social tax four times a year as advance payments at the end of every quarter in the amount of at least the minimum social tax obligation (in 2020, \u20ac534.6 per quarter). The final tax liability based on their business income is calculated the next year based on the income tax declaration. As several solo self-employed are in difficult position due to the restrictions, the measure is seen as a soothing measure to avoid tax arrears and economic difficulties for the sole proprietors. ",
+            "descriptionContentOfMeasure": "To help the solo self-employed persons, the state pays the social tax advanced payment for the first quarter of 2020 to the solo self-employed's prepaid account in the Tax and Customs Board. It is possible to use the payment for the first quarter payment of the social tax. If the payment for the first quarter has already made by the solo self-employed, the payment can be used for the payment of any tax liability now or in the future, or transfer the money to their bank account and use it for other business costs. The size of the payment is \u20ac534.6.",
+            "descriptionUseOfMeasure": "On 7 May 2020 the Tax and Customs Board started making the payments to the self-employed. There were altogether 28,000 self-employed in Estonia at the time, of whom 7,426 had an obligation to pay the quarterly payment. A total of 1,747 of them had not paid the quarterly payment yet, thus it was paid by the Tax and Customs Board in the total amount of \u20ac800,000. There were 5,769 persons however who had already paid their tax. For them a total of \u20ac2.5 million were paid out and they can choose how to use the money.",
+            "descriptionInvolvementOfSocialPartners": "N.a.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-12_337.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "180",
+                    "sources::title": "The state supports solo self-employed (Riik toetab FIE-sid sotsiaalmaksu tasumisega)",
+                    "sources::url": "https://www.emta.ee/et/uudised/riik-toetab-fie-sid-sotsiaalmaksu-tasumisega",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "1125",
+                    "sources::title": "Tax Board started with the payments to solo self-employed (MTA alustas FIEde eest esimese kvartali avansilise sotsiaalmaksu tasumist)",
+                    "sources::url": "https://www.emta.ee/et/uudised/mta-alustas-fiede-eest-esimese-kvartali-avansilise-sotsiaalmaksu-tasumist",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "6",
+                    "actors::name": "Other social actors (e.g. NGOs)",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "221",
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -6176,7 +6798,7 @@
             "d_endDate": "12/31/2021",
             "calc_country": "Estonia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "EE-2020-10/341",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
@@ -7819,6 +8441,88 @@
     },
     {
         "fieldData": {
+            "title": "Tourism coupons",
+            "title_nationalLanguage": "Turizmo kuponai",
+            "d_startDate": "04/24/2020",
+            "d_endDate": "",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "LT-2020-17/371",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/08/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "On 21 April 2020, the Seimas of the Republic of Lithuania adopted Law No. XIII-2862 amending Articles 2 and 15 of and adding Article 17-1 to the Law on Tourism of the Republic of Lithuania (Law No. VIII-667).\rThe amendments provide for special coupons to be issued to passengers who were prevented from taking trips they had paid for due to the introduction of quarantine measures. The coupons entitle to taking a trip at a later time. This is aimed at protecting tourism businesses from bankruptcies and insolvencies and retaining jobs.",
+            "descriptionContentOfMeasure": "The new provisions provide for the possibility for tour operators experiencing difficulties as a result of emergencies to offer tourists an alternative, i.e. coupons, the value of which must be at least equal to the amount of money paid for the tour that did not take place. The coupon can be used to pay for a future trip or part of a trip that starts no later than 12 months after the restrictions cease to apply. The terms and conditions of the coupons will be defined in the Law on Tourism. A future coupon tour will be subject to the same conditions ensuring the tour operator's obligations as if the tourist had paid for the future trip at his own expense. If the tourist does not use the coupon within 12 months, the tour operator will be obliged to return the money paid by the tourist within 14 days from the expiry of the coupon.\r\rIf the person does not agree to accept the coupon, the money for the missed tour should be returned to him/her no later than within 14 days from the date of termination of the arranged tour contract.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were consulted only ad hoc, The tripartite meeting was not held. The Lithuanian Tourism Association was the most active when designing this measure. The Association asked the Seimas to adopt the changes to the Law on Tourism that would allow tour operators to return money to tourists for missed tours within six months (instead of currently applied 14-day deadline). However, after long discussions their proposal was rejected (President vetoed the amendments to the Law).",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-17_371.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "977",
+                    "sources::title": "Law No XIII-2862 amending Articles 2 and 15 of and adding Article 17-1 to the Law on Tourism of the Republic of Lithuania (LR turizmo \u012fstatymo Nr. VIII-667 2, 15 straipsni\u0173 pakeitimo ir \u012estatymo papildymo 17-1 straipsniu \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=831594a0855711eab005936df725feed",
+                    "sources::d_date": "04/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "262",
+        "modId": "83"
+    },
+    {
+        "fieldData": {
             "title": "Allowance for self-employed and non-standard workers",
             "title_nationalLanguage": "Indemnizatie pentru liber profesionisti",
             "d_startDate": "04/16/2020",
@@ -8244,7 +8948,7 @@
             "d_endDate": "",
             "calc_country": "Czechia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "CZ-2020-13/378",
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
@@ -8548,7 +9252,7 @@
             "d_endDate": "",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-12/385",
             "dateType": "Open ended",
             "calc_creationDay": "04/08/2020",
@@ -9290,7 +9994,7 @@
             "d_endDate": "06/30/2020",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2020-12/398",
             "dateType": "Temporary",
             "calc_creationDay": "04/08/2020",
@@ -9340,6 +10044,87 @@
         },
         "recordId": "289",
         "modId": "83"
+    },
+    {
+        "fieldData": {
+            "title": "Suspension of payment of credit facilities instalments ",
+            "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2 \u03b4\u03cc\u03c3\u03b5\u03c9\u03bd \u03c0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ce\u03bd \u03b4\u03b9\u03b5\u03c5\u03ba\u03bf\u03bb\u03cd\u03bd\u03c3\u03b5\u03c9\u03bd ",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "CY-2020-14/401",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The Article 5 of the 'Emergency Measures Law for Financial Organizations and Supervisory Authorities' (2020) decided by the Cabinet, having regard the opinion of the Central Bank of Cyprus, provides the suspension of payments of credit facilities installments to financial organizations (i.e. Banks) up until the 31 December 2020. \r\rThe law covers all natural and legal persons, self-employed workers and businesses and concerns the credit facilities (including syndicated loans) given, purchased and/or are under the management of financial organizations     ",
+            "descriptionContentOfMeasure": "The eligibility criterion for the beneficiaries (natural and legal persons of public entities, self-employed workers and businesses) is that they do not have payment delays of their credit facilities of more than 30 days at the 29 February 2020. \r\rThe Law foresees a single process for the suspension of payment, which is the submission of a relative application form to the financial organization of the beneficiary through mail, email or fax. Financial organizations, according to the law, have no right to reject any application unless the applicant does not fulfill the payment delay criterion. \r\rThe suspension of payments includes also the taxes of loans. The taxes will be added to the sum of the outstanding loan at the end period of the measure. Payments and taxes, in addition, should not be payable after the end period of the measure unless the two parties agree differently. Instead, the repayment period of the loans will be elongated accordingly. It is noted that the terms of the loan contracts and all respective legal documents shall remain the same (except the repayment period) during and after the measure.      ",
+            "descriptionUseOfMeasure": "On 30 June 2020, the Central Bank of Cyprus provided the data on the suspension of payments up until the 8 May 2020. The total number of instruments is 76,057 of which 63,206 were households and 12,851 non-financial corporation. The total number of borrowers is 43,632 of which 38,327 were households and 5,305 non-financial corporations. As far as concern the amount suspended, the total number is \u20ac1,192,018 of which \u20ac360,225 households and \u20ac831,793 non-financial corporations. Finally, the total gross carrying amount of instruments is \u20ac10,152,556 of which \u20ac4,185,233 household and \u20ac5,185,233 non-financial corporations.",
+            "descriptionInvolvementOfSocialPartners": "The government and the Central Bank of Cyprus jointly consulted the social partners - trade unions, employers' organizations and political parties. ",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-14_401.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "272",
+                    "sources::title": " Emergency Measures Law for Financial Organizations and Supervisory Authorities' (2020) ",
+                    "sources::url": "http://mof.gov.cy/gr/%CE%BD%CE%BF%CE%BC%CE%BF%CE%B8%CE%B5%CF%83%CE%AF%CE%B1/%CF%87%CF%81%CE%B7%CE%BC%CE%B1%CF%84%CE%BF%CE%BF%CE%B9%CE%BA%CE%BF%CE%BD%CE%BF%CE%BC%CE%B9%CE%BA%CE%AC-%CF%84%CF%81%CE%B1%CF%80%CE%B5%CE%B6%CE%B9%CE%BA%CE%AC",
+                    "sources::d_date": "03/30/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1025",
+                    "sources::title": "Suspended facilities 30 June 2020",
+                    "sources::url": "https://www.centralbank.cy/el/announcements/aggregate-cyprus-banking-sector-and-credit-acquiring-companies%E2%80%99-data-suspended-credit-facilities-data-which-are-compiled-every-two-weeks-30-06-2020",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "292",
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -9415,7 +10200,7 @@
             "d_endDate": "06/30/2020",
             "calc_country": "Portugal",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "PT-2020-16/410",
             "dateType": "Temporary",
             "calc_creationDay": "04/09/2020",
@@ -9486,7 +10271,7 @@
             "d_endDate": "04/14/2020",
             "calc_country": "Cyprus",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "CY-2020-14/412",
             "dateType": "Temporary",
             "calc_creationDay": "04/09/2020",
@@ -9951,7 +10736,7 @@
             "d_endDate": "",
             "calc_country": "Belgium",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "BE-2020-16/421",
             "dateType": "Open ended",
             "calc_creationDay": "04/09/2020",
@@ -10627,7 +11412,7 @@
             "d_endDate": "11/10/2020",
             "calc_country": "Cyprus",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "CY-2020-14/442",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
@@ -10950,7 +11735,7 @@
             "d_endDate": "05/31/2020",
             "calc_country": "Italy",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "IT-2020-12/451",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
@@ -11278,6 +12063,72 @@
         },
         "recordId": "345",
         "modId": "99"
+    },
+    {
+        "fieldData": {
+            "title": "Telecare psychological services  ",
+            "title_nationalLanguage": "\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1 \u03a8\u03c5\u03c7\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ae\u03c2 \u03a4\u03b7\u03bb\u03b5\u03c6\u03c1\u03bf\u03bd\u03c4\u03af\u03b4\u03b1\u03c2 ",
+            "d_startDate": "03/26/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "CY-2020-13/455",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The service for telecare psychological support is issued by the Deputy Ministry of Research, Innovation and Digital Policy and the Mental Health Services with the announcement 15 of the Ministry of Interior of the 30 March 2020. The aim is to provide psychological support primarily to persons infected by the COVID-19, their relatives and any other person in need.  The services is provided by Clinical Psychologists of the Department of Special Psychology of the Mental Health Services of Cyprus. ",
+            "descriptionContentOfMeasure": "The Telecare Psychological Service primarily serves the needs of the persons infected by COVID 19 having a mental medical history with the aim of the regular evaluation of the psychological well being of the patient, the prevention and the handling of relapses in time, support and guidance. \r\rAdditionally, the Services addresses the need of the relatives of the infected by the COVID 19 as well as other psychologically vulnerable groups of the general public and self-isolated persons. \r\rThe Services provides appointments through audiovisual means with the beneficiaries, 7 days a weak, 12 hours daily from 7:30 am - 7:30 pm. The initial contact is performed by phone and after the evaluation and definition of the needs on online appointment is scheduled. Two particular phone lines are available by the infected persons and two other for the relatives, the self-isolated and the general public.   ",
+            "descriptionUseOfMeasure": "Between 26 March and 27 June 2020, 138 persons sought and received help by the telecare psychological services. In terms of gender, 78 persons or the 57% of them were women and 60 persons or 43% men. 35% of all that sought help were in the age group 46-65 years of age followed by 21% in the age group 66+, 20% in the age group 26-45 years of age and 4% under 25 years.\r\rIn terms of residence, the largest share of persons that sought help, that is 41%, live in the district of Nicosia followed by the 28% that live in the district of Limassol. \r\rAs far as concern the isolation status, the vast majority of the persons that sought support, that is 79% of the total, were persons not suffering from COVID-19 and in non-supervised isolation. The majority of the persons that received help, that is 65% of the sum, had only one appointment with a psychologist, the 25% had 2-3 and nearly 10% had 4+ appointments. \r\rThe psychologists referred 58 persons in other services for further support as follows: 10 persons to a psychiatric, 1 person to a child psychiatric, 10 persons to a psychologist in outpatient clinics, 1 person to a rehab center and 18 persons in other services. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners have been informed but inlvolved in the designing, implementation and monitoring of the measure. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-13_455.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "344",
+                    "sources::title": "\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2 \u03c8\u03c5\u03c7\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ae\u03c2 \u03c4\u03b7\u03bb\u03b5\u03c6\u03c1\u03bf\u03bd\u03c4\u03af\u03b4\u03b1\u03c2 ",
+                    "sources::url": "https://www.pio.gov.cy/coronavirus/press.html",
+                    "sources::d_date": "03/30/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1070",
+                    "sources::title": "\u03a3\u03c4\u03b1\u03c4\u03b9\u03c3\u03c4\u03b9\u03ba\u03ac \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2 \u03c8\u03c5\u03c7\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ae\u03c2 \u03c6\u03c1\u03bf\u03bd\u03c4\u03af\u03b4\u03b1\u03c2 ",
+                    "sources::url": "",
+                    "sources::d_date": "06/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "346",
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -11697,7 +12548,7 @@
             "d_endDate": "09/30/2020",
             "calc_country": "Italy",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "IT-2020-12/464",
             "dateType": "Temporary",
             "calc_creationDay": "04/10/2020",
@@ -12280,7 +13131,7 @@
             "d_endDate": "",
             "calc_country": "Austria",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "AT-2020-11/477",
             "dateType": "Open ended",
             "calc_creationDay": "04/10/2020",
@@ -13071,7 +13922,7 @@
             "d_endDate": "06/30/2020",
             "calc_country": "Bulgaria",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "BG-2020-16/495",
             "dateType": "Temporary",
             "calc_creationDay": "04/12/2020",
@@ -14522,7 +15373,7 @@
             "d_endDate": "05/15/2020",
             "calc_country": "Romania",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "RO-2020-18/535",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
@@ -14703,7 +15554,7 @@
             "d_endDate": "01/31/2021",
             "calc_country": "United Kingdom",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "GB-2020-12/537",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
@@ -15596,7 +16447,7 @@
             "d_endDate": "04/30/2020",
             "calc_country": "France",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "FR-2020-12/553",
             "dateType": "Temporary",
             "calc_creationDay": "04/13/2020",
@@ -16141,7 +16992,7 @@
             "d_endDate": "",
             "calc_country": "Sweden",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "SE-2020-1/561",
             "dateType": "Open ended",
             "calc_creationDay": "04/13/2020",
@@ -17851,7 +18702,7 @@
             "d_endDate": "07/31/2020",
             "calc_country": "Latvia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "LV-2020-11/596",
             "dateType": "Temporary",
             "calc_creationDay": "04/14/2020",
@@ -18972,7 +19823,7 @@
             "d_endDate": "",
             "calc_country": "Latvia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "LV-2020-13/619",
             "dateType": "Open ended",
             "calc_creationDay": "04/15/2020",
@@ -19443,7 +20294,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Denmark",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "DK-2020-12/627",
             "dateType": "Temporary",
             "calc_creationDay": "04/15/2020",
@@ -20163,7 +21014,7 @@
             "d_endDate": "",
             "calc_country": "Spain",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "ES-2020-14/641",
             "dateType": "Open ended",
             "calc_creationDay": "04/15/2020",
@@ -20649,7 +21500,7 @@
             "d_endDate": "",
             "calc_country": "Spain",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "ES-2020-14/648",
             "dateType": "Open ended",
             "calc_creationDay": "04/15/2020",
@@ -21276,7 +22127,7 @@
             "d_endDate": "05/20/2020",
             "calc_country": "Spain",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "ES-2020-16/656",
             "dateType": "Temporary",
             "calc_creationDay": "04/16/2020",
@@ -22827,7 +23678,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Latvia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "LV-2020-13/686",
             "dateType": "Temporary",
             "calc_creationDay": "04/16/2020",
@@ -24928,7 +25779,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Norway",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "NO-2020-13/716",
             "dateType": "Temporary",
             "calc_creationDay": "04/17/2020",
@@ -30469,7 +31320,7 @@
             "d_endDate": "",
             "calc_country": "Belgium",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "BE-2020-13/847",
             "dateType": "Temporary",
             "calc_creationDay": "05/14/2020",
@@ -30559,7 +31410,7 @@
             "d_endDate": "",
             "calc_country": "Belgium",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "BE-2020-11/848",
             "dateType": "Open ended",
             "calc_creationDay": "05/14/2020",
@@ -31152,6 +32003,87 @@
     },
     {
         "fieldData": {
+            "title": "Wage support for companies",
+            "title_nationalLanguage": "Podpora mzdov\u00fdch v\u00fddavkov na zamestnancov - Prv\u00e1 pomoc Opatrenie 3",
+            "d_startDate": "04/21/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "SK-2020-17/871",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/31/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "To minimize the effects of the COVID-19 pandemic on the citizens, the government closed some facilities and adopted other related measures. These measures caused losses in sales of several firms and their business units. To retain employment in these firms and support self-employers, the government adopted a package of measures called the First aid for employees, employers and self-employers. One of the most important measure in the package is Measure 3.   ",
+            "descriptionContentOfMeasure": "The measure\u00a0was adopted in order to maintain employment at the employers who were not closed compulsorily by the state but experienced losses in sales due to the COVID-19 pandemic. Employers and self-employers, who experienced at least 10% losses in sales from\u00a013\u00a0to the end of March and 20%\u00a0in April and in the next months of 2020, can apply to the employment services UPSVaR for a subsidy\u00a0to replace the wage of employees in two forms: \r\r* **3A)** 80% wage replacement of employees, who can't work due to the obstacle on the side of the employer (maximum \u20ac880 per employee).\r* **3B)** a fixed sum for each employee based on the rate of sales losses. For instance, the minimum subsidy for April and the next months is \u20ac180 (20% - 39.99% losses) and the maximum is \u20ac540 for 80% and more losses. \r",
+            "descriptionUseOfMeasure": "According to the Institute of Social Policy, the largest financial support to retain employees in the firms affected by the pandemic was provided via Measure 3A and 3B. By 10 June 2020, a subsidy\u00a0was provided to more than 30,000 subjects and covered almost 588,000 employees and self-employers in March and April. The total amount of provided subsidies\u00a0was more than \u20ac154 million. The average value of the subsidy 3A and 3B increased from \u20ac268 and \u20ac186 respectively in March to \u20ac423 and \u20ac256 in April.    ",
+            "descriptionInvolvementOfSocialPartners": "According to the peak organisations of employers AZZZ SR, APZ and KOZ SR, social partners were not involved via usual tripartite consultations and neither\u00a0in cross-sector commenting procedures. Some social partners, e.g. the KOZ SR, tried to be involved and\u00a0provided comments informally\u00a0via media or exceptionally through\u00a0individual consultations with representatives of the respective state administration body.\u00a0In case of the\u00a0measure, it was the Ministry of Labour, Social Affairs and Family. \u00a0",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-17_871.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "926",
+                    "sources::title": "Institute of Social Policy. First aid to Slovakia (In\u0161tit\u00fat soci\u00e1lnej politiky. Prv\u00e1 pomoc Slovensku:) ",
+                    "sources::url": "https://www.employment.gov.sk/files/slovensky/ministerstvo/analyticke-centrum/analyticke-komentare/isp_2020_prva_pomoc_slovensku_20200615.pdf",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "927",
+                    "sources::title": "First aid to\u00a0employees, employers and self-employers (Prva pomoc) \u00a0zamestnancom\u00a0)",
+                    "sources::url": "https://www.pomahameludom.sk/",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "781",
+        "modId": "61"
+    },
+    {
+        "fieldData": {
             "title": "New minimum living income introduced",
             "title_nationalLanguage": "Nuevo Ingreso Minimo Vital",
             "d_startDate": "06/02/2020",
@@ -31523,7 +32455,7 @@
             "d_endDate": "03/31/2022",
             "calc_country": "Croatia",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "HR-2019-26/885",
             "dateType": "Temporary",
             "calc_creationDay": "06/19/2020",
@@ -32989,6 +33921,723 @@
     },
     {
         "fieldData": {
+            "title": "Emergency support allowance for artists",
+            "title_nationalLanguage": "\u0388\u03ba\u03c4\u03b1\u03ba\u03c4\u03bf \u03b5\u03c0\u03af\u03b4\u03bf\u03bc\u03b1 \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03ba\u03b1\u03bb\u03bb\u03b9\u03c4\u03b5\u03c7\u03bd\u03ce\u03bd ",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "06/23/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "CY-2020-14/901",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/01/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The scheme has been approved by the Cabinet and announced by the Minister of Education, Culture, Sports and Youth, and aims to the support the artists and other people working in the art sector because all cultural activities has been suspended. At the same time, the Ministry is drafting a relevant legislation for the definition of the attributes of artists and the definition of the benefiaries of the measure. ",
+            "descriptionContentOfMeasure": "The emergency supporting allowance targets artists and other people performing cultural and artistic activities permanently residing in the Republic and have not benefited by the other emergency state supporting measures. \r\rThe aim of the allowance is to mitigate the financial consequences of artists emerged with the suspension of the cultural activities due to the lockdown and the restrictive measures of movement. Beneficiaries of the scheme are the professionals in art and cultural sector that \r\r* have suspended their activities in accordance with the decrees issued by the Minister of Health or \r* their earnings have been substantially declined. \r\rThe general fields of art activity are considered the following \r1. Letters and literature, \r2. visual and performing arts, \r3. applied arts, \r4. theatre, \r5. cinema, television and audio-visual arts, \r6. music, \r7. dance and \r8. folklore.   \r\rBeneficiaries will receive a lump sum of \u20ac900 corresponding to the first three months of the pandemic COVID-19 crisis. \r ",
+            "descriptionUseOfMeasure": "Currently, there is no any assesment of the eligible artists and the budget available for the support of the measure is not announced. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners did not participate in the design of the measure and are not expected to participate in the implementation and monitoring process. The design was performed by the Minster of Education, Culture, Sports and Youth and approved by the Cabinet. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-14_901.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "967",
+                    "sources::title": "Emergency supporting allowance for artists",
+                    "sources::url": "http://enimerosi.moec.gov.cy/archeia/1/ypp10980a",
+                    "sources::d_date": "05/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "974",
+                    "sources::title": "\u039a\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae \u03ad\u03ba\u03c4\u03b1\u03ba\u03c4\u03b7\u03c2 \u03c7\u03bf\u03c1\u03b7\u03b3\u03af\u03b1\u03c2 \u03c3\u03b5 \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03af\u03b5\u03c2 \u03c4\u03c9\u03bd \u03c4\u03b5\u03c7\u03bd\u03ce\u03bd \u03ba\u03b1\u03b9\r\u03c4\u03bf\u03c5 \u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03c3\u03bc\u03bf\u03cd",
+                    "sources::url": "http://enimerosi.moec.gov.cy/ypp10701",
+                    "sources::d_date": "05/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "14",
+                    "occupations::name": "Legal, social, cultural and related associate professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "123",
+                    "sectors::code": "R91",
+                    "sectors::name": "Libraries, archives, museums and other cultural activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "811",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
+            "title": "Temporary job-search benefit for unemployed who would otherwise not be eligible to receive benefits",
+            "title_nationalLanguage": "Laikinoji darbo paie\u0161kos i\u0161moka",
+            "d_startDate": "06/12/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "LT-2020-24/906",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "Law amending Articles 25, 41, 42, 44 and 48-1 of Law on Employment of the Republic of Lithuania (No XII-2470) came into force in Lithuania on 12 June 2020, introducing a temporary job-search benefit. The purpose of the amendments is to provide support for persons who do not meet the eligibility criteria for unemployment social insurance benefit and for those who have previously received the unemployment benefit, but the period for its payment has expired. The aim is to ensure that not one unemployed person is left without income at the end of the quarantine.",
+            "descriptionContentOfMeasure": "Pursuant to the Law, persons registered with the Public Employment Services (PES) shall be entitled to a job-search benefit, if all of the following conditions are met:\r\r* the person has been granted the status of an unemployed person;\r* at the moment of applying to the PES for a job-search benefit and at the time of deciding on granting the benefit, the unemployed person does not participate in any active labour market policy measures.\r\rThe amount of the benefit consists of:\r\r* 33% of the minimum monthly wage (MMW) approved by the Government of the Republic of Lithuania (GRL) applicable in the month for which the job-search benefit is paid (i.e. \u20ac200 for persons not entitled to unemployment social insurance benefits and for persons for whom the benefit payment period has expired);\r* 7% of the MMW (i.e. \u20ac42 for persons entitled to the unemployment social insurance benefit).\r\rThe benefit is paid for up to six months, but no longer than by 31 December 2020.",
+            "descriptionUseOfMeasure": "According to the Ministry of Social Security and Labour, a total of 89,077 applications for temporary job-search benefits were received by the PES in Lithuania during the period from 12 June 2020 to 1 July 2020. The amount earmarked for the job-search benefits from the State budget is \u20ac265 million.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-24_906.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "981",
+                    "sources::title": "Law amending Articles 25, 41, 42, 44 and 48-1 of Law on Employment of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 25, 41, 42, 44 ir 48-1 straipsni\u0173 pakeitimo \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=502ff420abe211eab9d9cd0c85e0b745",
+                    "sources::d_date": "06/04/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "816",
+        "modId": "21"
+    },
+    {
+        "fieldData": {
+            "title": "Subsidies for older employees in companies that have announced downtime",
+            "title_nationalLanguage": "Subsidijos vyresnio am\u017eiaus asmenims, \u012fmon\u0117se paskelbusiose prastovas",
+            "d_startDate": "06/12/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "LT-2020-24/911",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "Law amending Articles 25, 41, 42, 44 and 48-1 of Law on Employment of the Republic of Lithuania No XII-2470 came into force in Lithuania on 12 June 2020, providing for higher wage subsidies payable to employers for 60+ employees put to downtime. Amendments to the Law were initiated in view of the fact that the introduction of an emergency situation and quarantine measures in the country made it more difficult for older people to integrate into or stay in the labour market.",
+            "descriptionContentOfMeasure": "The amendments to the Law introduced a special regulation for employees older than 60 years of age in Lithuania. Employers may be paid wage subsidies for 60+ employees put to downtown. The amount of the subsidy may be 100% or 70% of wages, at the choice of the employer:\r\r* If the employer chooses a 100% subsidy, the state will contribute maximum 1 minimum monthly wage (MMW) (\u20ac607 gross); \r* If the employer chooses a 70% subsidy, the state will be able to contribute 1.5 MMW (\u20ac910.5 gross).\r\rWages accrued during idle time may not exceed those fixed earlier in the employment contract. Wage subsidies may be granted during quarantine and emergency. \r\rHaving used the subsidy, the employer is required to retain at least 50% of jobs for at least 3 months from the end of the payment of the subsidy.",
+            "descriptionUseOfMeasure": "According to the Ministry of Social Security and Labour, a total of 25,242 companies reported to the State Labour Inspectorate on employees put to downtime during the period from 1 March 2020 to 1 July 2020. Over this period, a total of 189,440 employees were put to downtime (and wage subsidy applications were received). Unfortunately, information on the share of 60+ employees is not available.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SP) were consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.\r\r",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-24_911.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "981",
+                    "sources::title": "Law amending Articles 25, 41, 42, 44 and 48-1 of Law on Employment of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 25, 41, 42, 44 ir 48-1 straipsni\u0173 pakeitimo \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=502ff420abe211eab9d9cd0c85e0b745",
+                    "sources::d_date": "06/04/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "67",
+                    "targetGroups::name": "Older people in employment (aged 55+)",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "821",
+        "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "A lump sum of \u20ac200 for pensioners and disabled people",
+            "title_nationalLanguage": "Vienkartin\u0117 i\u0161moka pensininkams ir ne\u012fgaliesiems",
+            "d_startDate": "05/15/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "LT-2020-20/913",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "On 15 May 2020, the Law of the Republic of Lithuania on Lump-Sum Benefits for Recipients of Social Insurance Pensions and Social Assistance Benefits (No XIII-2886) came into force, providing for the payment of a lump-sum benefit of \u20ac200 to elderly people, disabled people, survivors and orphans. As the elderly are one of the most vulnerable groups in the country, the aim is to reduce at least partially the possible negative effects of the COVID-19 pandemic on this group in Lithuania",
+            "descriptionContentOfMeasure": "The Law provides that a lump sum of \u20ac200 will be paid to the residents of the Republic of Lithuania, who have declared their place of residence or are entered in the records of the persons who have not declared their place of residence in the procedure established in the Law of the Republic of Lithuania on Declaration of the Place of Residence (No XIII-961), receiving any of the pensions below:\r\r* social insurance old-age pension (early old-age pension, old-age pension for disabled persons);\r* social insurance work incapacity (disability) pension;\r* social insurance survivors\u2019 pension;\r* social insurance orphans\u2019 pension;\r* loss of breadwinner\u2019s pension;\r* social assistance old-age pension;\r* retirement pension;\r* compensation for special working conditions;\r* social assistance disability pension;\r* other pensions.\r\rThe lump sum will be paid to all entitled persons without individual request in August 2020.",
+            "descriptionUseOfMeasure": "According to the representatives of the Government of the Republic of Lithuania, the lump-sum benefits will be paid to some 910,000 residents of the country and will require approx. \u20ac182 million of funds.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) were consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-20_913.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "985",
+                    "sources::title": "Law of the Republic of Lithuania on Lump-Sum Benefits for Recipients of Social Insurance Pensions and Social Assistance Benefits (LR vienkartin\u0117s i\u0161mokos socialinio draudimo pensij\u0173 ir \u0161alpos i\u0161mok\u0173 gav\u0117jams \u012fstatymas)",
+                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7f73354090f711eaa51db668f0092944?jfwid=-mhqn19soi",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1002",
+                    "sources::title": "LTUC supports the position and proposals of NGOs and scientists.(LPSK palaiko NVO  ir mokslinink\u0173 pozicij\u0105 ir pasi\u016blymus)",
+                    "sources::url": "https://www.lpsk.lt/2020/04/09/lpsk-palaiko-nvo-ir-mokslininku-pozicija-ir-pasiulymus/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1045",
+                    "sources::title": "Why should we give more money to rich pensioners than to workers? (Kod\u0117l turtingiems pensininkams turime duoti daugiau pinig\u0173 nei darbuotojams)",
+                    "sources::url": "https://www.tv3.lt/naujiena/verslas/1041322/kodel-turtingiems-pensininkams-turime-duoti-daugiau-pinigu-nei-darbuotojams",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "37",
+                    "targetGroups::name": "Older citizens",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "43",
+                    "targetGroups::name": "Disabled",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "823",
+        "modId": "18"
+    },
+    {
+        "fieldData": {
+            "title": "Wage subsidies to companies at the end of quarantine",
+            "title_nationalLanguage": "Darbo u\u017emokes\u010dio subsidijos \u012fmon\u0117ms pasibaigus karantinu",
+            "d_startDate": "05/15/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "LT-2020-20/914",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "On 15 June 2020, a Law amending Articles 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47 and 55 of and adding Article 48-1 to the Law on Employment of the Republic of Lithuania No XII-2470 came into effect, laying down that wage subsidies will continue to be available for employers at the end of quarantine, thereby helping business to recover and protecting employees from possible dismissals.",
+            "descriptionContentOfMeasure": "The legislative amendments stipulate that at the end of the quarantine and emergency situation, or when the employee is returned to work from the idle time, the employer can receive subsidies for employees\u2019 wages for another six months: \r\r* 100% in the first two months, \r* 50% in the third and fourth month, and \r* 30% in the fifth and sixth month.\r\rEmployers falling within at least one of the three categories below shall be eligible for the subsidies:\r\r1. **Announced downtime**. Subsidies will only be paid for employees who were or are put to downtime and were subsidised during the quarantine or emergency. The subsidy may be paid upon revocation of downtime during the quarantine or at the end of the quarantine period.\r2. **Employ supported unemployed persons**. Subsidies may be paid to employers who employ anew supported unemployed people sent by the Public Employment Services after the quarantine is over: long-term unemployed people, young people, etc. The subsidies are available from 15 May 2020, also after the quarantine period is over.\r3. **Affected by COVID-19**. Subsidies are also earmarked to employers who are in the lists of COVID-19 affected companies compiled by the State Tax Inspectorate. The subsidies to such employers will be paid in respect of a maximum of 10 employees when the company employs up to 20 people or for a maximum of 50% of employees if the company employs 21 and more people. The subsidies are available from 15 May 2020, also after the quarantine period is over.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) were consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-20_914.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "987",
+                    "sources::title": "Law amending Articles 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47 and 55 of and adding Article 48-1 to the Law on Tourism of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47, 55 straipsni\u0173 pakeitimo ir \u012estatymo papildymo 48-1 straipsniu \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=f1954e7095d811ea9515f752ff221ec9",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "824",
+        "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "Subsidies for self-employed to reorient their business activities",
+            "title_nationalLanguage": "Subsidijos savaranki\u0161kai dirbantiems asmenims veiklos keitimui",
+            "d_startDate": "05/15/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "LT-2020-20/915",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "On 15 June 2020, the Law amending Articles 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47 and 55 of and adding Article 48-1 to the Law on Employment of the Republic of Lithuania No XII-2470 came into effect, which provides that self-employed people who were unable to carry out their activities and lost income as a result of the quarantine introduced in the country can apply to the public employment service (PES) for a subsidy of almost \u20ac7,000 to change their economic activities. The aim is to enable self-employed people who had to discontinue their activities due to the COVID-19 pandemic to continue self-employment by switching to another field.",
+            "descriptionContentOfMeasure": "The Law provides that self-employed people who were not able to carry out their activities and lost income, and to whom the \u20ac257 monthly benefit was paid during the quarantine period, may apply to the Public Employment Services (PES) for a subsidy to change their economic activity. The \u20ac257 benefit was paid to eligible self-employed persons throughout the quarantine period and for two months thereafter. \r\rThe flat-rate benefit was paid if a self-employed person meets all of the conditions below:\r\r* self-employment has been registered for at least three months in the last year and has not been de-registered until the date the Government declared the state of emergency and quarantine;\r* during the state of emergency and quarantine period, monthly gross earnings of the person working under an employment contract or on the grounds of legal relations deemed to be equal to labour relations do not exceed the minimum wage (\u20ac607 gross);\r* the person does not have the status of a legal person in liquidation or bankruptcy.\r\rThe maximum amount of aid requested for the change of self-employment activities is \u20ac6,980.50, and the person will have to carry out the activity for which the subsidy has been received for 12 months. Jobs may not be created for seasonal or temporary work. The subsidy may be used exclusively for the purchase of work equipment/implements, services and works related to the direct work functions.",
+            "descriptionUseOfMeasure": "The total allocations for the measure amount to \u20ac5.1 million. According to the Ministry of Social Security and Labour, a total of 379 applications have been received by the PES by 9 June 2020 for the total amount of \u20ac2,418,312. A total of 93,049 self-employed persons have applied for the \u20ac257 benefit by 1 July 2020.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the MSSL started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-20_915.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "987",
+                    "sources::title": "Law amending Articles 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47 and 55 of and adding Article 48-1 to the Law on Tourism of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 5-1, 20, 25, 35, 37, 38, 41, 42, 43, 44, 47, 55 straipsni\u0173 pakeitimo ir \u012estatymo papildymo 48-1 straipsniu \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=f1954e7095d811ea9515f752ff221ec9",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "825",
+        "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "New support package for the economy ",
+            "title_nationalLanguage": "\u039d\u03ad\u03bf \u03c0\u03b1\u03ba\u03ad\u03c4\u03bf \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03c4\u03b7\u03c2 \u03bf\u03b9\u03ba\u03bf\u03bd\u03bf\u03bc\u03af\u03b1\u03c2 ",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CY-2020-10/916",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/03/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "The new support package of the government aims to stimulate the economy. It consists of thirteen measures of which one fourth are designed to support businesses and Small and Medium Enterprises (SMEs), in particular, to obtain liquidity, cover the running operating costs of businesses, stay afloat and avoid dismissals. The Minister of Financed designed the package and it has been approved by the Cabinet.   ",
+            "descriptionContentOfMeasure": "The first measure provides for \u20ac800 million liquidity for the financing of Small and Medium Enterprises with favourable financing conditions and terms. The financing to SMEs will be done through the Cyprus Entrepreneurship Fund (CYPEF) and the bank institutes. Beneficiaries are SMEs with maximum number of employees to be 250 and the maximum amount of loan \u20ac1.5 million that are to be reimbursed over a period of twelve years. Interest rates will be lower than the current rates of banks with the potential of subsidy by the \u2018Scheme of Interest Rates Subsidy\u2019. \r\rThe second measure, the \u2018Scheme of Interest Rates Subsidy\u2019, aims to improve liquidity for businesses and self-employed confronting sudden lack of liquidity through subsidy of new business loans. Competent and financing authority is the General Accounting Office of the Ministry of Finance. Beneficiaries of the scheme are all undertaking companies in accordance with the EU definition \u2013 very small, small, medium and large enterprises and self-employed - and the aim of the loan shall be the covering of liquidity needs for capital and investment purposes. The maximum interest rates for long is defined to 4.25% and the maximum period of subsidy will be four years. For the first two years the subsidy will be up to 3.5 percentage points and two percentage points for the third and fourth years. \r\rThe third measure of this bundle is a lump sum subsidy targeting self-employed and very small businesses that have partially or fully suspended their activities integrated in the special schemes of the Ministry of Labour between 13 April and 12 May 2020. For businesses employing \r\r* up to one person the lump sum is \u20ac1,250, \r* 2-5 persons \u20ac3,000, \r* 6-9 persons \u20ac4,000 and \r* 10-50 persons \u20ac6,000. \r\rThe purpose of the measure is for the covering of rents, operational expenses and other business debts. \r\rThe fourth measure provides for the reduction of VAT from 9% to 5% for the period 1 July 2020 to 10 January 2020 in the sectors of tourist accommodation and catering. It is expected that the reduction will benefit the sectors that have been mostly affected by the pandemic as well as the businesses and consumers due to the increase of consumer demand.  ",
+            "descriptionUseOfMeasure": "For the moment, there is no estimation on the number of eligible busineeses that are going to use the three different measures. ",
+            "descriptionInvolvementOfSocialPartners": "The first consultation among the government and social partners for forming a package to support the economy has totally failed and the government abandoned the attempt for an agreement with social partners. Instead, the government initiated, designed, announced and implements the current bundle of measures taking into consideration the fundamental positions of the partners, particularly those for the support of SMEs.   ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-10_916.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "988",
+                    "sources::title": "New supporting package for the economy ",
+                    "sources::url": "https://www.pio.gov.cy/coronavirus/press/28052020_1.pdf",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "826",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
+            "title": "A lump sum payment for children on top of child benefit",
+            "title_nationalLanguage": "Vienkartin\u0117 i\u0161moka vaikams",
+            "d_startDate": "06/12/2020",
+            "d_endDate": "02/26/2022",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "LT-2020-24/917",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/03/2020",
+            "calc_lastUpdate": "07/15/2020",
+            "descriptionBackgroundInfo": "On 12 June 2020, the Law on Lump-Sum Payments to Children to Mitigate the Effects of the COVID-19 (Coronavirus Infection) Pandemic (No XIII-3030) came into force, providing for lump-sum payments to families with children or foster children and to abandoned children. The Law aims at reducing the negative economic and social effects of the state of emergency and quarantine and boosting the economy.",
+            "descriptionContentOfMeasure": "The Law stipulates that lump-sum payments will be available to all children who receive child benefit in Lithuania (i.e. a universal child benefit payable in respect of all children under 18).\r\rThe lump-sum benefit will be \u20ac120 or \u20ac200, depending on the amount of child benefit the family receives: \r\r* for families receiving \u20ac60 (normal amount), the lump-sum payment will be \u20ac120 and \r* for those receiving child benefit in the amount of \u20ac100 (payable for disabled children, low-income families and large families), the lump-sum payment will be \u20ac200.\r\rNormally, the lump sum will be paid by 31 July 2020, but for children who become entitled to the child benefit after 1 July 2020, the lump sum will be paid together with the child\u2019s first instalment.\r\rThe lump-sum payments will be also available for children who will become entitled to the child money by 31 December 2020. In Lithuania, the child benefit is paid by city and regional municipalities.",
+            "descriptionUseOfMeasure": "According to estimates of the Ministry of Social Security and Labour (MSSL), extra benefits will be paid to more than 0.5 million children: the \u20ac120 benefit will be paid to more than 374,000 children and the \u20ac200 benefit will be paid to approx. 134,000 children. The measure will cost the budget some \u20ac72 million.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the MSSL started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-24_917.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "989",
+                    "sources::title": "Law on Lump-Sum Payments to Children to Mitigate the Effects of the COVID-19 (Coronavirus Infection) Pandemic (LR vienkartin\u0117s i\u0161mokos vaikams, skirtos COVID-19 (koronaviruso infekcijos) pandemijos padariniams ma\u017einti, \u012fstatymas)",
+                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/c43a4f13aa5111ea8aadde924aa85003?positionInSearchResults=0&searchModelUUID=3e50910a-f058-4ce0-84ba-94e94a374cb7",
+                    "sources::d_date": "06/09/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1002",
+                    "sources::title": "LTUC supports the position and proposals of NGOs and scientists.(LPSK palaiko NVO  ir mokslinink\u0173 pozicij\u0105 ir pasi\u016blymus)",
+                    "sources::url": "https://www.lpsk.lt/2020/04/09/lpsk-palaiko-nvo-ir-mokslininku-pozicija-ir-pasiulymus/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1045",
+                    "sources::title": "Why should we give more money to rich pensioners than to workers? (Kod\u0117l turtingiems pensininkams turime duoti daugiau pinig\u0173 nei darbuotojams)",
+                    "sources::url": "https://www.tv3.lt/naujiena/verslas/1041322/kodel-turtingiems-pensininkams-turime-duoti-daugiau-pinigu-nei-darbuotojams",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors)",
+                    "modId": "17"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "6",
+                    "funding::name": "Local funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "827",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
             "title": "Support for preservation of jobs by micro-entrepreneurs whose economic activity has been disrupted due to a special circumstance caused by Coronavirus (COVID -19) for July 2020 ",
             "title_nationalLanguage": "Potpora za o\u010duvanje radnih mjesta u djelatnostima pogo\u0111enima Koronavirusom (COVID \u2013 19) za srpanj 2020. - mikropoduzetnici",
             "d_startDate": "07/01/2020",
@@ -33209,7 +34858,7 @@
             "d_endDate": "12/31/2020",
             "calc_country": "Malta",
             "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
             "calc_identifier": "MT-2020-16/932",
             "dateType": "Temporary",
             "calc_creationDay": "07/06/2020",
