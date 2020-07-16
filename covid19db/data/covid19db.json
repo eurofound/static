@@ -33753,6 +33753,90 @@
     },
     {
         "fieldData": {
+            "title": "Subsidies for short-time work",
+            "title_nationalLanguage": "Subvencioniranje kraj\u0161ega delovnega \u010das",
+            "d_startDate": "06/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "SI-2020-23/904",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "On 30 May 2020, the government issued the third COVID-19 Law (Act Determining the Intervention Measures to Mitigate and Remedy the Consequences of the COVID-19 Epidemic, ZIUOOPE). \rAmong many provisional measures, the most important is the short-time work subsidies scheme.\rThe Labour Ministry will subsidise up to 50% of working time. For the time when a worker will not work, their employer will pay an allowance of 80% of the wage and subsequently be compensated by the state. Employers who cannot provide at least 10% of their employees with 90% of normal working time, i.e. 36 hours of work per week, will meet the basic qualifying condition for the subsidy. \rEmployers can apply for this measure every month in the period from 1 June to 31 December 2020",
+            "descriptionContentOfMeasure": "The measure aims at the protection and retention of jobs. The measure helps companies to overcome temporary stagnation and prevent layoffs by subsidising up to 50% of full-time wages. \rWorkers covered by short-time subsidies scheme work at least 20 hours a week while, for the remaining working time, they are temporary laid off. \rFor this part of working time (from 5 to 20 hours a week), the state pays monthly wage compensation:\r\r* \u20ac448 for 20\u201324 hours per week.\r* \u20ac336 for 25\u201329 hours.\r* \u20ac224 for 30\u201334 hours. \r* \u20ac112 for 35 hours.\r\rEmployers must meet the following conditions:\r\r*  Be registered in the Slovenian Business Register before 13 March 2020;\r* employ full-time workers.\r* Cannot provide at least 10% of his employees with at least 90% of the work load.\r* Are not direct or indirect budget users.\r* Conduct consultations with trade unions or work councils (or workers directly) about the number of employees working under short-time subsidies scheme, their working hours and duration of the measure.\r* Notify the Employment Service of Slovenia about short-time work. \r\rAn employee who temporarily works short-time retains all rights and obligations as he or she would work full-time. Temporary short-time employees may register at the Employment Service and participate in active labour market policy measures.\rDuring short-time scheme, employers are not allowed to:\r\r* Start dismissal procedure for subsidised short-time worker up to one month after the end of the short-time work scheme.\r* Dismiss a higher number of employees.\r* Demand overtime or uneven distribution of working-time if this work could have been performed by the employees temporarily waiting for work.",
+            "descriptionUseOfMeasure": "Slovenian employers have submitted requests for short-time work subsidies for 20,556 employees just a week after the introduction of the scheme designed to help businesses, show data by the Employment Service.",
+            "descriptionInvolvementOfSocialPartners": "Negotiations between social partners were blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of emergency laws. They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-23_904.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "971",
+                    "sources::title": "Zakon o interventnih ukrepih za omilitev in odpravo posledic epidemije COVID-19 (ZIUOOPE) [Act Determining the Intervention Measures to Mitigate and Remedy the Consequences of the COVID-19 Epidemic",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-1195?sop=2020-01-119",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "972",
+                    "sources::title": "M. Z., Za subvencioniranje skraj\u0161anega delovnika prijavljenih \u017ee 20.500 zaposlenih [20,500 employees requested subsidies for short-time work], MMC RTVSL",
+                    "sources::url": "https://www.rtvslo.si/gospodarstvo/za-subvencioniranje-skrajsanega-delovnika-prijavljenih-ze-20-500-zaposlenih/52766",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "978",
+                    "sources::title": "IUS LABORIS, What do employers need to know about the Third COVID-19 Law in Sloveni",
+                    "sources::url": "https://www.lexology.com/library/detail.aspx?g=353cdad2-0e5e-4776-aa60-3869c1c3d96",
+                    "sources::d_date": "06/12/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "814",
+        "modId": "11"
+    },
+    {
+        "fieldData": {
             "title": "Temporary job-search benefit for unemployed who would otherwise not be eligible to receive benefits",
             "title_nationalLanguage": "Laikinoji darbo paie\u0161kos i\u0161moka",
             "d_startDate": "06/12/2020",
@@ -33837,6 +33921,364 @@
         },
         "recordId": "816",
         "modId": "21"
+    },
+    {
+        "fieldData": {
+            "title": "Set of measures to sustain the sectors most hit by the pandemic",
+            "title_nationalLanguage": "Pomo\u010d najbolj prizadetim sektorjem",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "SI-2020-18/908",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "The second and the third COVID-19 laws bring a lot of measures to get sectors, most hit by the epidemics, back to the normal. Measures include various projects: \r\r* Less rigid requirements for construction plans to boost the construction sector.\r* Tourist vouchers to help the tourist and hospitality sector. \r* State loans and grants to compensate the loss of income.\r* Financial incentives (loans and grants) to generate new investments and creation of new jobs. \r* Less rigid requirements for construction plans in agriculture and favorable agricultural rents (discounted or free of charge). \r\rMeasures particularly address these sectors: tourism and hospitality, road transport, agriculture, manufacturing and others.",
+            "descriptionContentOfMeasure": "The second COVID-19 law intends to boost investments in the construction sector by an accelerated procedure in obtaining building permits. The law requires, for example, more rigid criteria from environmental organisations (at least 50 active members, 3 full-time employees holding a diploma in natural sciences, \u20ac10,000 of assets in the last three years) to participate in the procedure.\rThe second and third COVID-19 laws help the tourist and hospitality sectors with tourist vouchers. Tourist agencies and organisers of sports events may issue vouchers instead of reimbursement for unrealised travels or events. Payment moratorium expires in 24 months. In order to revitalise the tourist sector, each permanent resident of Slovenia gets tourist vouchers (adults \u20ac200, minors \u20ac50), valid until 31 December 2020, to be spent on accommodation. The government estimates the cost of tourist vouchers at \u20ac345 million, while the multiplier effects are estimated to be \u20ac172 million.\rState grants and loans co-finance the loss of income in tourism and hospitality, provide support for manufacturing in the affected border areas, encourage digitalisation of companies and development projects. Micro, small and medium-sized companies as well as large companies affected by the pandemic are eligible. On top of this, the state gives \u20ac35 million to companies in the road transport industry, financial aid for managers of ski lifts, ranging from \u20ac1,000 to \u20ac12,200 per lift.\rBusinesses meet less strict requirements for obtaining co-financing of investments until 30 June 2021. The incentives will be granted if the investment creates at least 10 jobs in the manufacturing or service sector, or 3 jobs in research and development within three years after its completion. The minimum threshold for investments is \u20ac12 million in manufacturing, \u20ac3 million in the service sector, and \u20ac2 million in research and development.\rAgricultural businesses may profit from less rigid requirements for building greenhouses, irrigation systems, and plantations until 31 December 2020, subsidies for the exploitation of geothermal energy for farming, or more favorable rents (discounted or free of charge) in agriculture.",
+            "descriptionUseOfMeasure": "More rigid criteria for environmental organisations raise concern in the public since new rules exclude environmental organisations from the procedure in obtaining the building permit. It is believed that new rules jeopardise the protection of nature. Adoption of this regulation is one of the motives for mass protests held every Friday evening. Ten protests so far gathered from a few thousand to ten thousand persons. Other issues of disputes are corruption in the procurement of security and medical equipment, replacement of some top officials, the extension of the powers of the military, police brutality and others.",
+            "descriptionInvolvementOfSocialPartners": "Up to 15 May 2020, social partners communicated with the government mostly by the written proposals. Negotiations between social partners were blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of emergency laws. They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. Since 15 May, the Council is involved in negotiations about next emergency laws.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-18_908.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "971",
+                    "sources::title": "Zakon o interventnih ukrepih za omilitev in odpravo posledic epidemije COVID-19 (ZIUOOPE) [Act Determining the Intervention Measures to Mitigate and Remedy the Consequences of the COVID-19 Epidemic",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-1195?sop=2020-01-119",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "982",
+                    "sources::title": "The Government of the Republic of Slovenia, \u2018Government adopts the third anti-corona package",
+                    "sources::url": "https://www.gov.si/en/news/2020-05-20-government-adopts-the-third-anti-corona-package",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "983",
+                    "sources::title": "Employer organisations, Proposal",
+                    "sources::url": "https://www.gzs.si/LinkClick.aspx?fileticket=iCqbOyglN00%3D&portalid=12",
+                    "sources::d_date": "05/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "27",
+                    "sectors::code": "A1",
+                    "sectors::name": "Crop and animal production, hunting and related service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "818",
+        "modId": "26"
+    },
+    {
+        "fieldData": {
+            "title": "Crisis bonus for public employees",
+            "title_nationalLanguage": "Krizni dodatek za javne uslu\u017ebenc",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "SI-2020-11/910",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/02/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "On 10 April 2020, the government issued the first COVID-19 law (Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy, ZIUZEOP). Article 71 gives public employees the right to crisis bonus during the epidemics (from 13 March to 31 May). The maximum level is 100% of hourly pay.",
+            "descriptionContentOfMeasure": "According to the Collective Agreement for Public Sector, public servants have the right to bonus in the amount of 65% of hourly pay for hazardous work. The first COVID-19 law gives them another 35%, up to a maximum of 100 per cent. \rThe law says that employees who were exposed to a high health risk during the epidemics or overburdened with work have the right to crisis bonus. Directors of public institutions (health centers, hospitals, nursing homes, schools, police stations, ministries and so on) decide on who receives crisis bonus. The number of recipients was not limited.\rThe third COVID-19 law (ZIUOOPE) gives members of Civil Protection and other volunteers, participating in urgent interventions, the right to crisis bonus. Members of Civil Protection receive a daily bonus of \u20ac30, volunteers \u20ac10 (for work up to 4 hours), \u20ac20 (between 4 and 8 hours) or \u20ac30 (for more than 8 hours). On top of this, employers receive wage compensation for days when members of Civil Protection were absent from work.",
+            "descriptionUseOfMeasure": "Interim report shows that indirect budget users (health institutions, nursing homes, etc.) spent \u20ac63 million for crisis bonuses, while direct budget users (central and local government) \u20ac11 million. Distribution of crisis bonus has raised concerns about arbitrary decisions of managers as well as its justification. For instance, one hospital refused to accept COVID-19 patients from nursing home during the epidemics. Its employees nevertheless got \u20ac776,650 of crisis bonuses.    ",
+            "descriptionInvolvementOfSocialPartners": "Up to 15 May 2020, social partners communicated with the government mostly by the written proposals. Negotiations between social partners were blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of emergency laws. They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. Since 15 May, the Council is involved in negotiations about next emergency laws",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_910.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "971",
+                    "sources::title": "Zakon o interventnih ukrepih za omilitev in odpravo posledic epidemije COVID-19 (ZIUOOPE) [Act Determining the Intervention Measures to Mitigate and Remedy the Consequences of the COVID-19 Epidemic",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-1195?sop=2020-01-119",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "984",
+                    "sources::title": "Andreja Rednjak, \u2018Javni sektor terja od dr\u017eave 75 milijonov evrov koronadodatkov\u2019 [The public sector demands \u20ac75 million of corona allowances from the state] Financ",
+                    "sources::url": "https://www.finance.si/8963254/Javni-sektor-od-drzave-terja-75-milijonov-evrov-koronadodatko",
+                    "sources::d_date": "06/23/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "71",
+                    "targetGroups::name": "The COVID-19 risk group at the workplace",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "820",
+        "modId": "12"
     },
     {
         "fieldData": {
