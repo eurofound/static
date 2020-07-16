@@ -11419,6 +11419,119 @@
     },
     {
         "fieldData": {
+            "title": "Temporary layoff scheme and reimbursement of related wage compensation to employers",
+            "title_nationalLanguage": "Povra\u010dilo izpla\u010danih nadomestil pla\u010d",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "SI-2020-11/436",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "This measure, introduced in the framework of the 'Intervention measures to mitigate the effects of the SARS-CoV-2 (COVID-19) infectious disease epidemic on citizens and the economy Act (ZIUZEOP)', in force since 11 April 2020, aims at the protection and retention of jobs. In response to the COVID-19 crisis, the government adopted a \u2018temporary lay-off scheme\u2019 and reimbursement of wage compensations to workers who cannot work due to force majeure. The measure addresses laid-off workers for whom company temporary fails to provide work and workers who cannot work due to force majeure:\r \r* workers in quarantine, who cannot work from home; \r* workers who look after children during the closure of schools and kindergartens; \r* workers who cannot come to work on the grounds of the suspension of public transport or ban on the border crossing.",
+            "descriptionContentOfMeasure": "According to the Employment Relationship Act, when a company temporarily fails to provide work for business reasons (in the event of a temporary layoff), the worker is entitled to wage compensation in the amount of 80% of the wage basis. The wage basis is determined at the worker\u2019s average monthly wage for full-time work during the past three months. On the other hand, if a worker cannot carry out his work due to force majeure, he is entitled to half of the payment he would have received if he was working, but not less than 70% of the minimum wage. The temporary laid-off worker is obliged to respond to the employer\u2019s invitation in a manner and under the conditions laid down in the lay-off letter (Employment Relationship Act, Articles 137, 138). \rThe measure being examined, attempting to cushion the economic effects of the COVID-19 epidemic, grants the employers with 80% reimbursement of the sums payed to provide the economic treatment mentioned above to workers (in case of temporary lay-off as well as force majeure). This reimbursement is funded with the state budget. Reimbursement is limited to the average monthly salary in 2019 and cannot be lower than the minimum wage (it is thus higher than statutory determined compensations). \rThe maximum length of receiving compensation is from 13 March to 31 May.\rTo be eligible for the reimbursements, a company had to demonstrate a 20% lower income in the first half of 2020 and 50% lower income in the second half of 2020, compared to 2019.",
+            "descriptionUseOfMeasure": "Companies that are not eligible are: \r\r* State institutions. \r* Financial and insurance companies with more than 10 employees. \r* Companies having outstanding debt with the Financial Administration. \r* Foreign or international organisations (not including humanitarian and disability organisations).\r\rThe Employment Service of Slovenia administers employers\u2019 requests for compensations. Up to 31 May, the Employment Service received requests for wage compensation for 275,317 employees and additional 54,168 since 1 June.\rIn first reactions, employers protested against the rule requesting 20% lower incomes. They said that it would exclude many companies from the support mechanism (Mekina, 2020). The government agreed to employer organisations and lowered the threshold to 10% in the second COVID-19 law ZIUZEOP-A, issued on 30 April 2020. ",
+            "descriptionInvolvementOfSocialPartners": "No information available yet.",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_436.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "300",
+                    "sources::title": "Zakon o interventnih ukrepih na podro\u010dju pla\u010d in prispevkov, ZIUPPP [Act on the Interim Measure of Partial Reimbursement of Wage Compensation], Official Gazette RS, no. 36, 202",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO818",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "301",
+                    "sources::title": "Financial Administration, 'Preglednica ukrepov' [Table of measures]",
+                    "sources::url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Novice-2020/Preglednica-ukrepov-v-zvezi-z-delom-in-placevanjem-prispevkov-za-socialno-varnost-za-vase-zaposlene.pd",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "376",
+                    "sources::title": "Borut Mekina, \u2018Pravljica o mega protikoronskem paketu\u2019 [A fairy tale about a mega anti-corona package], Mladina, 10 April 2020",
+                    "sources::url": "https://www.mladina.si/197558/pravljica-o-mega-protikoronskem-paketu/",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "971",
+                    "sources::title": "Zakon o interventnih ukrepih za omilitev in odpravo posledic epidemije COVID-19 (ZIUOOPE) [Act Determining the Intervention Measures to Mitigate and Remedy the Consequences of the COVID-19 Epidemic",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-1195?sop=2020-01-119",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "972",
+                    "sources::title": "M. Z., Za subvencioniranje skraj\u0161anega delovnika prijavljenih \u017ee 20.500 zaposlenih [20,500 employees requested subsidies for short-time work], MMC RTVSL",
+                    "sources::url": "https://www.rtvslo.si/gospodarstvo/za-subvencioniranje-skrajsanega-delovnika-prijavljenih-ze-20-500-zaposlenih/52766",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "77",
+                    "updates::d_date": "07/02/2020",
+                    "updates::description": "The second COVID-19 law (ZIUZEOP-A) lowered the eligibility threshold for companies. All enterprises with income reduced by 10% in 2020 compared to 2019 can now be admitted to this measure. Newly established companies can prove 10% lower income on the basis of average monthly income with the pre-crisis period. The third COVID-19 law (ZIUOOPE) extends measure to June 2020, whereby the maximum reimbursement is limited to \u20ac892.50 (the maximum of unemployment benefit). Reimbursement of wage compensation will be most probably again extended to September 2020. The employer must cover the remaining 20%. Government\u2019s reimbursement includes social security compensation. The measure will be most probably again extended to September 2020",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "327",
+        "modId": "101"
+    },
+    {
+        "fieldData": {
             "title": "Suspension of value added tax (VAT) payment ",
             "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u03a6\u03cc\u03c1\u03bf\u03c5 \u03a0\u03c1\u03bf\u03c3\u03c4\u03b9\u03b8\u03ad\u03bc\u03b5\u03bd\u03b7\u03c2 \u0391\u03be\u03af\u03b1\u03c2 (\u03a6\u03a0\u0391) ",
             "d_startDate": "03/30/2020",
@@ -11983,99 +12096,6 @@
         },
         "recordId": "344",
         "modId": "80"
-    },
-    {
-        "fieldData": {
-            "title": "Antivirus employment retention programme",
-            "title_nationalLanguage": "Antivirus - podpora zam\u011bstnanosti",
-            "d_startDate": "04/06/2020",
-            "d_endDate": "08/31/2020",
-            "calc_country": "Czechia",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "CZ-2020-15/454",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/10/2020",
-            "calc_lastUpdate": "07/01/2020",
-            "descriptionBackgroundInfo": "The employment protection programme Antivirus is designed to help companies to protect jobs. The state will compensate companies \u2013 through the Labour Office of the Czech Republic \u2013 for wages paid out to employees. This measure will help employers better manage the current situation so that they will not have to resort to layoffs.\u00a0The wage reimbursement is intended for employers who have to cope with\u00a0restrictions due to COVID-19 crisis resolutions of the Czech government or whose employees are quarantined. There are two\u00a0models/regimes of reimbursement depending on\u00a0the reasons for the obstacle to work (see content of measure).\r\u00a0 \rThe government has approved the Antivirus programme to compensate employers\u2019 salary costs from March 12 until the end of April 2020 (for now).\u00a0The\u00a0applications for wage compensations\u00a0refunds have been opened since April 6, 2020 by the Labour Office. \r\rThe compensation model is based on the German Kurzarbeit model.",
-            "descriptionContentOfMeasure": "Regime A - Forced limitation or closure\u00a0of business operation and ordered quarantine.\r\r* In the event of ordered quarantine the employee receives from the employer a wage compensation amounting to 60 % of the average earnings (the first 14 days paid by employer).\r* In the event of business closure due to governmental orders the employee receives a wage compensation of 100% of the average earnings from the employer.\r\rA state contribution under\u00a0Regime A will amount to 80% of the paid wage compensation, including insurance contributions (max. CZK 39,000 (\u20ac1.415) per employee and month). \r\rRegime B - Connected economic difficulties (Obstacles to work on the part of an employer due to the connected economic difficulties because of the spread of the coronavirus).\r\rDepending on the type of obstacle the employee receives a wage compensation amounting to 60-100% of the average earnings\u00a0\r\rContribution under\u00a0Regime B will amount to 60% of the paid wage compensation, including insurance contributions (max. CZK 29,000 (\u20ac1052) per employee and month). \r\rBasic subsidy conditions: \r\r* Only employees with employment contract; (Temporary Agreements on work\u00a0\"DPP\", \"DPC\" are excluded)\u00a0\r* Salaries and insurance contributions were regularly paid. \r* The employer complies with the Labour Code and does not have overdue debts towards the state.",
-            "descriptionUseOfMeasure": "The program was launched on April 6th. The extent of use of refunds is not yet known.",
-            "descriptionInvolvementOfSocialPartners": "Both social partners were consulted. ",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-15_454.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "333",
-                    "sources::title": "ANTIVIRUS -employment retention ",
-                    "sources::url": "https://www.mpsv.cz/antivirus",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "334",
-                    "sources::title": "Antivirus - support for employment",
-                    "sources::url": "https://www.mpsv.cz/documents/20142/1443715/Antivirus-aj.pdf",
-                    "sources::d_date": "04/02/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "335",
-                    "sources::title": "Targeted Programme for Employment Support: \u201cAntivirus\u201d\rHANDBOOK FOR EMPLOYERS\r",
-                    "sources::url": "https://www.mpsv.cz/documents/20142/1443715/Manual_Program_Antivirus_EN.pdf",
-                    "sources::d_date": "04/04/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "968",
-                    "sources::title": "Certain Aspects of Antivirus\u00b4 Regime C\rtaxes\rlegal\rworld news\rcase law\rin brief\rflash news\rCertain aspects of Antivirus\u2018 Regime C\rtaxes\rlegal\rworld news\rcase law\rin brief\rflash news\rCertain aspects of Antivirus\u2018 Regime C",
-                    "sources::url": "https://danovky.cz/en/certain-aspects-of-antivirus-regime-c",
-                    "sources::d_date": "07/01/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "75",
-                    "updates::d_date": "07/01/2020",
-                    "updates::description": "On 16 June 2020 the Antivirus programme has been extended by the Regime C, bill on the waiver of social security premiums for small companies of the size 50 employees and less.  \r\rRegime C enables the waiver of part of social security premiums and state unemployment policy contributions that are paid by employers (i.e. 24.8% of the aggregate income of their employees). The waiver can be claimed for three months from June to August 2020. The amount of social security premiums paid by employees has remained the same (equalling 6.5% of the assessment bases). \rThe waiver of social security premiums is carried out through a reductions in aggregate assessment base. However, it is not possible to deduct an assessment base higher than CZK 52,253 per employee, i.e. more than 1.5 multiple of the average wage set for social security purposes in 2020. \r\rThere are several conditions that an employer must meet that social security premiums are waived. If the conditions have been met is assessed every single month.  \r\r1.\tThe employer employs a maximum of 50 employees that are under employment relationship and participate in the sickness insurance scheme. The number of employees under employment relationship is determined at the end of each calendar month to which Regime C applies. \r2.\tThe number of employees has not decreased by 10% or more compared to the number of employees as of  31 March 2020.\r3.\tThe aggregate assessment bases of employees under employment relationship for an individual month to which Regime C applies may not decrease by more than 10% compared with the aggregate of assessment bases of such employees as of March 2020. ",
-                    "modId": "2"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "345",
-        "modId": "99"
     },
     {
         "fieldData": {
@@ -36018,6 +36038,91 @@
         },
         "recordId": "877",
         "modId": "18"
+    },
+    {
+        "fieldData": {
+            "title": "Temporary tax reduction in the HORECA sector",
+            "title_nationalLanguage": "Tijdelijke btw-verlaging naar 6% in de horeca",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "BE-2020-24/970",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "On 6 June 2020, the Council of Ministers approved a draft royal decree to reduce the VAT rate applicable to certain restaurant and catering services. \r\rDespite the designation 'restaurant services', this also concerns the provision of nonfood drinks (if accompanied by a sufficient number of relevant additional services) in all possible on-trade outlets (caf\u00e9s, taverns,...).\rThis measure will apply to all permanent or temporary establishments providing restaurant or catering service",
+            "descriptionContentOfMeasure": "As a result of this Royal Decree, from the 8th of June 2020 until the 31st of December 2020 a reduced value added tax rate of 6% will apply to restaurant and catering services, excluding the supply of beers with an actual alcoholic strength by volume exceeding 0.5% as well as other beverages with an actual alcoholic strength by volume exceeding 1.2% by volume.\r\rThere will be no exceptions other than the alcoholic beverages mentioned above. This means that dishes with products that are even priced at 21% (caviar, crawfish, lobsters, crabs, oysters, ...) are also subject to the 6% VAT rate.",
+            "descriptionUseOfMeasure": "There is no registration of the uptake of the measure, given the general nature of the measure, it can be estimated that the majority of the sector can make use of it.",
+            "descriptionInvolvementOfSocialPartners": "No information is currently available on the concrete involvement of the social partners in the drafting of the measure.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-24_970.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1153",
+                    "sources::title": "Tijdelijke BTW verlaging in de horeca naar 6%",
+                    "sources::url": "https://www.practicali.be/blog/btw-verlaging-horeca",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1155",
+                    "sources::title": "Tijdelijke verlaging BTW in de horeca sector",
+                    "sources::url": "https://financien.belgium.be/nl/Actueel/tijdelijke-verlaging-van-btw-tarief-in-horec",
+                    "sources::d_date": "06/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "880",
+        "modId": "28"
     },
     {
         "fieldData": {
