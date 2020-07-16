@@ -3188,65 +3188,6 @@
     },
     {
         "fieldData": {
-            "title": "Reduced lease payments for commercial leases and primary residences as well as for financial lease",
-            "title_nationalLanguage": "\u039c\u03b5\u03af\u03c9\u03c3\u03b7 \u03b5\u03bd\u03bf\u03b9\u03ba\u03af\u03bf\u03c5 \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03b9\u03ba\u03ae\u03c2 \u03c3\u03c4\u03ad\u03b3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03c1\u03ce\u03c4\u03b7\u03c2 \u03ba\u03b1\u03c4\u03bf\u03b9\u03ba\u03af\u03b1\u03c2",
-            "d_startDate": "03/01/2020",
-            "d_endDate": "04/30/2020",
-            "calc_country": "Greece",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "GR-2020-10/282",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/04/2020",
-            "calc_lastUpdate": "05/04/2020",
-            "descriptionBackgroundInfo": "According to Legislative Act 11.03.2020/2020 and Legislative Act 20.03.2020/2020 that were issued, the following measure (in accordance with other legislative measures) was announced for dealing with the potential economic effects of the coronavirus spread (COVID-19) and the support of the economy and entrepreneurship. As such, March and April rent will be reduced by 40% for all businesses the activities of which have been suspended by state decree and for individuals working at such businesses - but only when the home is their primary residence.",
-            "descriptionContentOfMeasure": "Enterprises, whose operation has been mandatorily suspended or temporarily interrupted based on special  and extraordinary measures taken for precautionary or repressive purposes in relation to the coronavirus spread, shall be exempted from paying 40% of the total amount of rent due for the months of March  and April  2020 for  the commercial premises that they lease (i.e. they can pay only 60% of their rent, in derogation from the legal provisions on leases). Stamp duty and VAT shall be re-calculated and remitted on the amount of rent that will result  following the above partial payment; The above exemption shall also  apply in cases of financial leases of movable or immovable assets intended exclusively to be used for business purposes by the above mentioned enterprises.\r\rThe above exemption shall also apply for residential leases that concern the primary residence of lessees who are employees of the above mentioned enterprises, on condition that the employment relationship was already in effect at the time the special and extraordinary measures for the suspension or temporary interruption of the enterprise\u2019s operation were imposed; In  a Press Release of 18 March 2020, it was announced that as far as individuals, who are owners of the above mentioned real estate are concerned, (i.e. commercial premises leased to enterprises whose operation has been mandatorily interrupted/primary residences of employees), there will be a four month suspension of payment of their tax obligations and of installments of outstanding taxes in case of settlement or payment facilitation (for the implementation of  the above a further Ministerial Decision is expected to be issued).",
-            "descriptionUseOfMeasure": "No available information.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-10_282.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "713",
-                    "sources::title": "Act of  Legislative Content of 11.03.2020 \"Emergency contingency measures to tackle the adverse effects of the outbreak of  COVID-19 and to address the need to  limit the spread of the virus\u00bb \r",
-                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8ExDiwSIm0cLtIl9LGdkF53UIxsx942nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijP3fNjb3qKpGxGNtxU_uAtLw56ULsxCc54tGXdl9oyQ1\r",
-                    "sources::d_date": "03/11/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "165",
-        "modId": "90"
-    },
-    {
-        "fieldData": {
             "title": "Acceleration of income tax and VAT refund",
             "title_nationalLanguage": "\u0395\u03c0\u03b9\u03c4\u03ac\u03c7\u03c5\u03bd\u03c3\u03b7 \u03b5\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae\u03c2 \u03c6\u03cc\u03c1\u03c9\u03bd \u03c3\u03b5 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2",
             "d_startDate": "03/20/2020",
@@ -17198,6 +17139,102 @@
         },
         "recordId": "454",
         "modId": "78"
+    },
+    {
+        "fieldData": {
+            "title": "'Disease carriers allowance' extended to high-risk groups",
+            "title_nationalLanguage": "Smittob\u00e4rarpenning",
+            "d_startDate": "04/02/2020",
+            "d_endDate": "",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "SE-2020-14/565",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "To be eligible for a disease carrier allowance, a doctor must have decided that you cannot work because you are or may be infected with a disease that is classified as dangerous to public health and society. \r\rCOVID-19 has been classified as a disease that is dangerous for public health. ",
+            "descriptionContentOfMeasure": "This measure is available for workers who have been confirmed having COVID-19  (or other infectious disease that poses danger to public health). Furthermore, employees who suspect they may have COVID-19 may apply for this allowance for the time they visit doctor and/or visit test results.  \r\rThe disease carriers allowance is available to all workers, including the currently unemployed (who are searching for work) and the self-employed. It is however not a replacement for the regular sickness benefit. If an employee is too sick to work, their employer would normally pay for the first two weeks of the disease, and then the public insurance agency. It can instead apply to those employees that do not get symptoms, or get mild symptoms and who otherwise would go to work.\r\rEligible employees receive approximately 80% of their salary. The maximum amount is SEK 804 (\u20ac80) per day. In addition, employees may receive compensation for travel costs (e.g. visits to the hospital).  \r\rThis allowance is paid out by the Swedish Social Insurance Agency. \r\r\r\r\r\r",
+            "descriptionUseOfMeasure": "No information available. ",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-14_565.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1166",
+                    "sources::title": "Preventive sickness allowance for risk groups (F\u00f6rebyggande sjukpenning f\u00f6r riskgrupper)",
+                    "sources::url": "https://www.regeringen.se/artiklar/2020/06/forebyggande-sjukpenning-for-riskgrupper/",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1167",
+                    "sources::title": "'Disease carriers allowance' and travel compensation for employees (Smittb\u00e4rarpenning och reseers\u00e4ttning f\u00f6r anst\u00e4llda)",
+                    "sources::url": "https://www.forsakringskassan.se/privatpers/sjuk/anstalld/smittbararpenning",
+                    "sources::d_date": "05/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1199",
+                    "sources::title": "Coronaviruset \u2013 det h\u00e4r g\u00e4ller",
+                    "sources::url": "https://www.forsakringskassan.se/privatpers/coronaviruset-det-har-galler",
+                    "sources::d_date": "07/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "42",
+                    "targetGroups::name": "The COVID-19 risk group",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "77",
+                    "targetGroups::name": "Other groups of citizens",
+                    "modId": "10"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "174",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "In June 2020, this measure was extended to cover certain family members who live in the same household as a person who belongs to a risk group. \r\rThis extension applies only to those family members who are caretakers (personal care assistant or other) of the person in risk group and have a job that cannot be done from home. \r\rThis extension is in force until the end of September 2020. \r\rThe maximum amount of support is SEK 804 per day (approximately \u20ac80) and maximum 90 days of support can be received. \r\rThe total cost of this extension is estimated to be SEK 70 million (\u20ac7 million). \r\r\r",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "456",
+        "modId": "94"
     },
     {
         "fieldData": {
