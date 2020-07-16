@@ -10201,6 +10201,97 @@
     },
     {
         "fieldData": {
+            "title": "Ordinary wage guarantees and new regulation of the exceptional wage guarantee fund",
+            "title_nationalLanguage": "Norme speciali in materia di trattamento ordinario di integrazione salariale  e nuove disposizione per la Cassa integrazione in deroga ",
+            "d_startDate": "02/23/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "IT-2020-9/411",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "This exceptional and temporary measure was set by Decree-Law No. 18/2020 of 17 March 2020 and is finalised to allow the utilisation of the ordinary wage guarantee fund (Cassa Integrazione Guadagni Ordinaria, CIGO) and the wage integration fund (Fondo di Integrazione Salariale, FIS) for temporary suspensions of work or reductions of working time due to the COVID-19 pandemic. Moreover, it introduces a new support instrument (Cassa Integrazione in Deroga, CID) which benefits all companies with even one employee, and it simplifies the procedures for activating this measure.",
+            "descriptionContentOfMeasure": "Employers who suspend or reduce their activity for events attributable to the COVID-19 epidemic can accede to the Ordinary Wage Guarantee Fund (CIGO) or the Wage Integration Fund (FIS) for a maximum duration of nine weeks starting from 23 February 2020 until the end of August 2020. The periods of utilisation of the CIGO and the FIS for \"COVID-19\" reasons are excluded from the calculation of the maximum duration of ordinary treatments. Moreover, companies making use of the benefit are exempted from the additional contribution that is normally imposed on companies benefiting from wage subsidies. The decree law introduces a special measure (CID) for private employers not covered by the ordinary benefits, i.e. those employing less than 5 employees. However, domestic workers are excluded from the benefit.\rThe amount of the benefit depends on the previous remuneration: for gross monthly wages below \u20ac2,159.48, the benefit amounts to \u20ac939.89; for gross monthly wages above \u20ac2,159.48, the benefit amounts to \u20ac1,129.48.\rThe maximum spending limit is set at \u20ac1,347.2 million (for CIGO and FIS) and \u20ac3,293.2 million (CID), for the year 2020; once reached, INPS will not consider further requests.",
+            "descriptionUseOfMeasure": "The number of hours authorized in May 2020, considering only the authorizations for the health emergency, amounted to 849.2 million (in line with what was already authorized in April 2020, i.e. 832.4 million). For the sake of comparison, the annual number of authorised hours in the worst year after the financial crisis, in 2010, was 1,198.5 million).",
+            "descriptionInvolvementOfSocialPartners": "Trade unions are involved in the management of the measures as an agreement on the duration of work suspension is essential in all companies with more than 5 employees. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-9_411.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "283",
+                    "sources::title": "DECRETO-LEGGE 17 marzo 2020, n. 18",
+                    "sources::url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1189",
+                    "sources::title": "Law Decree No. 34 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/05/19/20G00052/sg",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1196",
+                    "sources::title": "Law Decree No. 52 of 16 June 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/06/16/20G00078/sg",
+                    "sources::d_date": "06/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "210",
+                    "updates::d_date": "07/16/2020",
+                    "updates::description": "The Law Decree No. 34 of 19 May 2020 and the Law Decree No. 52 of 15 June 2020 extended and modified wage guarantees related to the suspension or reduction of working activity as a consequence of the epidemiological emergency. The main regulatory change consists in the possibility for companies to request an additional period of 9 weeks of support for workers' income until the end of the year. Moreover, Law Decree No. 34 of 19 May 2020 introduced the possibility that the National Social Security Institute (INPS) will pay in advance a part of the benefit (e.g. a sum equal to 40% of the hours authorized for the entire period) to the workers within 15 days of submitting the demand.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "302",
+        "modId": "108"
+    },
+    {
+        "fieldData": {
             "title": "Extension period for the payment of social insurances   ",
             "title_nationalLanguage": "\u03a0\u03b1\u03c1\u03ac\u03c4\u03b1\u03c3\u03b7 \u03a0\u03c1\u03bf\u03b8\u03b5\u03c3\u03bc\u03af\u03b1\u03c2 \u039a\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u0395\u03b9\u03c3\u03c6\u03bf\u03c1\u03ce\u03bd \u03c3\u03c4\u03bf \u03a4\u03b1\u03bc\u03b5\u03af\u03bf \u039a\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ce\u03bd \u0391\u03c3\u03c6\u03b1\u03bb\u03af\u03c3\u03b5\u03c9\u03bd",
             "d_startDate": "03/31/2020",
@@ -11168,6 +11259,158 @@
         },
         "recordId": "317",
         "modId": "85"
+    },
+    {
+        "fieldData": {
+            "title": "COVID-19 indemnity for self-employed, parasubordinate workers, and employees",
+            "title_nationalLanguage": "Indennit\u00e0 Covid-19 lavoratori autonomi, parasubordinati e subordinati",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "IT-2020-12/427",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/16/2020",
+            "descriptionBackgroundInfo": "In march 2020 the Government introduced some measures to provide income support also to those workers - partially or totally prevented from work in reason of the COVID-19 outbreak - that were anyway not covered by the main instruments sustaining the majority of the Italian workforce.\r\rThe Decree Law No. 18/2020 of 17 March, Article 27, introduces an income support measure of \u20ac600 for the month of March for professionals, workers in continuous and coordinated collaboration agreement, self-employed, seasonal workers and workers of the entertainment industry. The benefit will be paid directly from the National Social Security Institute (INPS) and aims at supporting income of those workers which are not eligible for other income support measures such as the different wage guarantee funds.\rAlways through the Decree Law No. 18/2020, Article 44, the Government allocates further \u20ac300 million for income support of professionals registered to private social security agencies and self-employed and employees not covered by any other analogous measure.",
+            "descriptionContentOfMeasure": "A one lump sum of \u20ac 600 was awarded for the month of March to different groups of workers by Decree-Law No. 18/2020 of 17 March 2020 in order to support their income. The categories included are: \r\r* Professionals with a VAT number active on 23 February 2020 and workers with co-ordinated and continuous collaboration relationships.\r* Self-employed registered to the dedicated mandatory social insurance schemes (Assicurazione Generale Obbligatoria, AGO).\r* Seasonal workers in the tourism sector and in thermal establishments that involuntarily ended their employment in the period between 1 January 2020 and 17 March 2020, who are not employed and do not receive a pension.\r* Fixed-term agricultural workers, who do not receive a pension and have worked at least 50 days in agriculture in 2019.\r* Workers enrolled in the pension fund for workers in the entertainment industry (Fondo pensioni Lavoratori dello spettacolo), with at least 30 daily contributions paid in the year 2019 to the same fund, with an income of no more than \u20ac50,000, and who do not receive a pension. \rThe total amount of resources allocated for this measure is about \u20ac200 million.\r\rThe second and additional fund for income support of professionals registered to private social security agencies and self-employed and employees not covered by another analogous measure, has been increased, from \u20ac300 million to \u20ac500 million, with the Decree No. 53073 of 27 April 2020 issued by the Ministry of Economy and Finance (MEF).\rA further joint Decree issued by the MEF and the Ministry of Labour on 30 April 2020 specified that are covered by this second measure also:\r\r* Seasonal workers not covered by other measures that involuntarily ended their employment between the 1 January 2019 and 31 January 2020 and that in the same period worked at least for 30 days.\r* Workers on call that worked for at least 30 days in the period 1st January 2019 and 31 January 2020.\r* Occasional workers not registered as self employed, and checked in the respective section of the National Social Security Agency on 23 February 2020, that obtained at least one monthly contribution between 1 January 2019 and 23 February 2020 and that are unemployed from the 23 February 2020. \r* Door-to-door sales persons registered as self-employed before 24 February 2020 and with an annual income from this activity, for 2019, higher than \u20ac5,000.",
+            "descriptionUseOfMeasure": "Almost 5 million people are estimated to be eligible to this measure. As to 18 June 2020, 4,060,941 requests were placed online to National Institute of Social Security (INPS).\r\rThe funds allocated by the Government for the support of professionals registered to private social security agencies (initially about \u20ac200 million on the overall amount of \u20ac300 million) was used up at a very fast pace, and compelled the government to allocate further \u20ac80 million to solve the issue.",
+            "descriptionInvolvementOfSocialPartners": "No involvement of the social partners in designing, implementing and monitoring the measure",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-12_427.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "283",
+                    "sources::title": "DECRETO-LEGGE 17 marzo 2020, n. 18",
+                    "sources::url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "843",
+                    "sources::title": "Ministerial Decree of 30 April 2020",
+                    "sources::url": "https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2020/DI-10-del-04052020-Ammortizzatori-sociali-in-deroga.pdf",
+                    "sources::d_date": "05/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "844",
+                    "sources::title": "Ministerial Decree of 28 March 2020",
+                    "sources::url": "https://www.lavoro.gov.it/documenti-e-norme/normative/Documents/2020/D-I-28-marzo-2020.pdf",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "845",
+                    "sources::title": "Bonus 600 euro ai professionisti iscritti alle Casse",
+                    "sources::url": "https://www.ipsoa.it/documents/lavoro-e-previdenza/amministrazione-del-personale/quotidiano/2020/05/11/bonus-600-euro-professionisti-iscritti-casse-ripartono-pagamenti",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1189",
+                    "sources::title": "Law Decree No. 34 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/05/19/20G00052/sg",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1195",
+                    "sources::title": "Indennit\u00e0 Covid, Bonus baby sitting, Congedi e REM: i dati al 18 giugno 2020",
+                    "sources::url": "https://www.inps.it/nuovoportaleinps/default.aspx?itemdir=53856",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "34",
+                    "targetGroups::name": "Platform workers",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "48",
+                    "targetGroups::name": "Seasonal workers",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "27",
+                    "sectors::code": "A1",
+                    "sectors::name": "Crop and animal production, hunting and related service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "209",
+                    "updates::d_date": "07/16/2020",
+                    "updates::description": "This measure was renewed for the months of April and May through Law Decree No. 34 of 19 May 2020. Indemnity ranges from \u20ac500 to \u20ac1,000 according to the beneficiary.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "318",
+        "modId": "106"
     },
     {
         "fieldData": {
