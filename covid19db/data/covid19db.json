@@ -9028,6 +9028,133 @@
     },
     {
         "fieldData": {
+            "title": "Extension of temporary unemployment due to force majeure",
+            "title_nationalLanguage": "Verruiming van de tijdelijke werkloosheid voor bedienden wegens overmacht",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BE-2020-11/380",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/08/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "The measure was introduced due to the strong increase in requests for temporary unemployment (which normally can only be implemented under certain conditions). The measure alleviates pressure on the institutions that are tasked with organizing and distributing unemployment benefits, both the National Employment Office (NEO) and the trade unions (that also play an important role in paying out the unemployment benefits). The use of temporary unemployment means that the employers no longer have to pay the wages of their employees (the cost is transferred to the government through the unemployment benefit), thereby enabling them to reduce their costs and enhances their ability to better cope with the period of inactivity of the business.\r\rThe measures makes the procedure shorter and more simplified for employees in order to make sure that they receive their unemployment benefit as fast as possible.",
+            "descriptionContentOfMeasure": "From 13 March 2020, the notion of temporary unemployment due to force majeure will be flexibly applied by the NEO. All situations of temporary unemployment due to the corona virus can be considered as temporary unemployment due to force majeure, even if, for example, it is still possible to work on certain days.\r\rFor the duration of the restrictive measures (currently until 31 May 2020), the employer is no longer obliged to send notices of temporary unemployment for reasons of force majeure to the competent unemployment office of the NEO. The period may be extended until 30 June 2020 if the public health measures are extended or strengthened by the government.\r\rThe employee may use a simplified form to submit the application for benefits to the designated payment institution.\r\rFrom 01 February 2020 until 30 June 2020, the employee receives a benefit equal to 70% of his average capped salary (capped at \u20ac2,754.76 per month). \r\rThe employee who is made temporarily unemployed due to force majeure (reason \"coronavirus\") will receive a supplement of \u20ac5.63 per day on top of the unemployment benefit, from the NEO. A withholding tax on professional income of 26.75% is deducted from the benefit. \r",
+            "descriptionUseOfMeasure": "Approximately 1.2 million employees currently make use of the system of temporary unemployment out of an active population of less than 4 million.",
+            "descriptionInvolvementOfSocialPartners": "The National Labour Council provides advice and a collective agreement (147) has been signed which formalizes the measure until the 30 June.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-11_380.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "248",
+                    "sources::title": "National Employment Office",
+                    "sources::url": "https://www.rva.be/nl/nieuws/tijdelijke-werkloosheid-ten-gevolge-van-het-uitbreken-van-het-coronavirus-covid-19-vereenvoudiging-van-de-procedure",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "250",
+                    "sources::title": "Federal Office for Employment, Labour and Social Dialogue",
+                    "sources::url": "https://werk.belgie.be/nl/nieuws/tijdelijke-werkloosheid-aanvraag-tot-erkenning-als-onderneming-moeilijkheden-niet-meer",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "251",
+                    "sources::title": "De Tijd: Coronacrisis kost Belgische economie dit jaar 45 miljard euro'",
+                    "sources::url": "https://www.tijd.be/politiek-economie/belgie/algemeen/coronacrisis-kost-belgische-economie-dit-jaar-45-miljard-euro/10219587.html",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "257",
+                    "sources::title": "National Labour Council",
+                    "sources::url": "http://www.cnt-nar.be/CAO-ORIG/cao-147-(18.03.2020).pdf",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "783",
+                    "sources::title": "Vakbonden hekelen opnieuw misbruik tijdelijke werkloosheid bij ziekte",
+                    "sources::url": "https://www.hln.be/nieuws/binnenland/vakbonden-hekelen-opnieuw-misbruik-tijdelijke-werkloosheid-bij-ziekte~a09d134c/",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "784",
+                    "sources::title": "Misbruik van regelingen door werkgevers moet ophouden!",
+                    "sources::url": "https://www.hetacv.be/csc-west-henegouwen/2020/03/26/misbruik-van-regelingen-door-werkgevers-moet-ophouden!",
+                    "sources::d_date": "03/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "59",
+                    "updates::d_date": "06/26/2020",
+                    "updates::description": "The measure has been extended until the 31 August 2020. ",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "271",
+        "modId": "104"
+    },
+    {
+        "fieldData": {
             "title": "Online platform \"There is no quarantine on the Internet\"",
             "title_nationalLanguage": "E.platforma \"Internete karantino nera\"\r",
             "d_startDate": "03/16/2020",
@@ -10566,6 +10693,94 @@
         },
         "recordId": "305",
         "modId": "96"
+    },
+    {
+        "fieldData": {
+            "title": "Flemish interruption premium",
+            "title_nationalLanguage": "Vlaamse Corona hinderpremie",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "BE-2020-12/417",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "Companies obliged to temporarily halt their activities because of the corona measures taken by the federal government may be eligible for the corona interruption premium of the Flemish government. The premium aims to compensate for the losses due to the companies inactivity. The compensation is a combination of a fixed sum of \u20ac4,000 for the period up until the 5th of April with an additional premium \u20ac160 per day after the 5th of April.\r\r",
+            "descriptionContentOfMeasure": "The premium is directed towards companies that are forced to close due to the measures taken to reduce the spread of the Corona virus.\r\rFor the hotel and catering sector, it is sufficient that the consumption hall has to be closed in order to qualify for the corona interruption premium, even if collection and take-out services are still offered or other activities are carried out. \r\rApart from being forced to close other conditions apply:\r\r* The company has a legal personality under private law or a foreign company registered in Belgium with a comparable status, with at least one working partner or one full-time equivalent (FTE) registered social security employee.\r* In case of sole proprietorship: you are self-employed in your main profession.\r* If it is an independent activity in a secondary occupation, they are only eligible if they pay similar social security contributions as a self-employed person in main occupation.\r* If the association or non-profit organisation has at least one full-time equivalent (FTE) social security registered person.",
+            "descriptionUseOfMeasure": "The concrete amount of beneficiaries is unclear as the companies/organisations have to apply themselves. It is however to be expected that a large amount of companies or organisations will apply, as many have been forced to close over the past few weeks. The number will continue to grow as companies/organisations can apply until the second half of May. ",
+            "descriptionInvolvementOfSocialPartners": "It is to be expected that the social partners were at least informed of the measure. The extent or their involvement is unclear.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-12_417.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "289",
+                    "sources::title": "Flemish Agency for Innovation and Entrepreneurship",
+                    "sources::url": "https://www.vlaio.be/nl/nieuws/corona-hinderpremie-wordt-sinds-6-april-aangevuld-met-premie-sluitingsdag",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "290",
+                    "sources::title": "Flemish Agency for Innovation and Entrepreneurship",
+                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/corona-hinderpremie/wie-heeft-recht-op-een-corona-hinderpremie",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "4"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "8",
+                    "funding::name": "Regional funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "60",
+                    "updates::d_date": "06/20/2020",
+                    "updates::description": "The Flemish Government has decided to extend the duration of the premium until the 30 June for those entrepreneurs who are still obliged to physically close their company.",
+                    "modId": "4"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "308",
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -12512,6 +12727,179 @@
         },
         "recordId": "347",
         "modId": "85"
+    },
+    {
+        "fieldData": {
+            "title": "Replacement income for self-employed (bridging right)",
+            "title_nationalLanguage": "Vervangingsinkomen voor zelfstandigen (overbruggingsrecht)",
+            "d_startDate": "04/18/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "BE-2020-16/458",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "In certain situations self-employed can qualify for the temporary COVID-19 bridging right:\r\r* If the federal government has obliged the self-employed to interrupt the activity in whole or in part they are immediately eligible for the bridging right. There is no minimum duration of interruption required. This concerns, for example, self-employed who are obliged to close their business (such as restaurants, caf\u00e9s and non-food businesses). Restaurants providing or delivering takeaway meals are also covered.\r\r* If the government has not obliged the self-employed to interrupt their activity partially or completely, but the self-employed is forced to interrupt their activity for a period of at least 7 consecutive calendar days as a result of the COVID-19 crisis, for example for self-isolation, a lack of raw materials or for various reasons of economic or organisational nature (linked to COVID-19), then they are also eligible for the bridging right.\r\rThis includes self-employed exercising a care profession such as physiotherapists, dentists and medical specialists.",
+            "descriptionContentOfMeasure": "Certain conditions apply in order to be able to benefit from the bridging right: \r\r* The person has to be self-employed as main profession (including helpers, assisting spouses in the maxi-status and (primo-starters), or self-employed as secondary profession with provisional social security contributions that are at least equal to the minimum contributions for self-employed persons in their main profession;\r* The person has to be self-employed and pay social security contributions in Belgium;\r* The person must not receive a replacement income.\r\rThe Corona bridging right amounts to (for March, April, May and June):\r\r* \u20ac1,291,69 without family responsibilities;\r* \u20ac1,614.10 with family responsibilities.\r\rIf granted, the bridging right for March will be paid at the beginning of April and for April, at the beginning of May.",
+            "descriptionUseOfMeasure": "It is unclear how many people are eligible and will make use of the support.",
+            "descriptionInvolvementOfSocialPartners": "It is to be expected that the social partners were at least informed about the measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-16_458.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "349",
+                    "sources::title": "1819 Brussels",
+                    "sources::url": "https://1819.brussels/nl/blog/faq-coronavirus-en-ondernemingen-antwoord-op-uw-meest-gestelde-vragen",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "930",
+                    "sources::title": "Overbruggingsrecht voor zelfstandigen (coronavirus",
+                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/overbruggingsrecht-voor-zelfstandigen-coronaviru",
+                    "sources::d_date": "06/25/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "61",
+                    "updates::d_date": "06/25/2020",
+                    "updates::description": "The federal government decided to extend the crisis bridging right for the months of July and August for self-employed workers who had to stop their activity for at least seven consecutive days because of the COVID-19 pandemic. The government may extend this measure until the end of December 2020 if it is deemed necessary. In addition, a separate bridging right will be provided to support the self-employed during their restart. This 'Relance payment' (restart bridging right) will be as high as the crisis bridging right. The Relance payment is currently still in the development stage.\r",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "349",
+        "modId": "89"
+    },
+    {
+        "fieldData": {
+            "title": "Extension of meal/eco/gift/sport/culture cheques",
+            "title_nationalLanguage": "Uitbreiding geldigheidsduur van maaltijd/eco/geschenk/sport en culuurcheques",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Provision of services in kind (e.g. food vouchers)",
+            "calc_identifier": "BE-2020-12/459",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "Benefits like meal/culture/eco/sports and culture cheques are quite common forms of fringe benefits in Belgium.\r\rThe COVID-19 crisis makes it more difficult to pay with cheques, especially eco-cheques (which can be used to buy a wide range of eco-friendly products or services). This is the reason why the social partners are asking for an extension of the validity period of the cheques in a joint national labour council advice. The government is expected to follow this advice.",
+            "descriptionContentOfMeasure": "For meal, eco and gift vouchers, which expire in March, April, May and June 2020, it is necessary that an immediate extension of 6 months is provided from the date of expiry of such vouchers. \rFor the sports/culture vouchers: request to postpone the expiry date of the sports/culture vouchers from 30 September to 31 December 2020.\r\rThere is no limit per person to the amount of cheques that can be be extended. Following the advice of the national labour council the extension should happen automatically.\r\rFinally, the cheque publishers commit themselves to a fast and effective information campaign.",
+            "descriptionUseOfMeasure": "It is unclear how many cheques are currently in circulation that are about to expire. Given the fact that these types of benefits are very common in a wide range of sectors, the amount is probably significant.",
+            "descriptionInvolvementOfSocialPartners": "The advice was formulated within the National Labour Council, an important national bipartite social dialogue body.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-12_459.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "351",
+                    "sources::title": "Advies Nationale Arbeidsraad nummer 2.161",
+                    "sources::url": "http://www.cnt-nar.be/ADVIES/advies-2161.pdf",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "929",
+                    "sources::title": "Corona: verlenging geldigheidsduur van onder meer maaltijdcheques is een fei",
+                    "sources::url": "https://www.sd.be/ellawebsite/nl/legalnews/ce85102f-0ba3-409d-80d8-761e77a51b3",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "58",
+                    "updates::d_date": "05/30/2020",
+                    "updates::description": "The advice by the social partners was followed and the extension implemented.\r\r* For lunch vouchers, eco vouchers and gift vouchers that are due to expire in the months of March to June 2020, the validity period shall be extended by six months from the due date of the vouchers in question.\r* For sports and culture vouchers, which have a fixed expiry date of 30 September, the period of validity shall be extended until 31 December 2020.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "350",
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -19124,226 +19512,6 @@
     },
     {
         "fieldData": {
-            "title": "Inclusion of women experiencing gender violence in housing programmes",
-            "title_nationalLanguage": "Inclusi\u00f3n de mujeres en situaciones de violencia de g\u00e9nero en el programa de ayudas a la vivienda",
-            "d_startDate": "03/31/2020",
-            "d_endDate": "",
-            "calc_country": "Spain",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Keeping a safe home",
-            "calc_identifier": "ES-2020-14/609",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "The lockdown as a consequence of the COVID-19 crisis has raised fears about an increase in gender-based violence, as women have to stay home.\r\rThis new program will aim to provide an immediate housing solution to people who are victims of gender-based violence, people who are evicted from their usual home, homeless people and other especially vulnerable people.\r\rThe new 'program to help victims of gender-based violence, people evicted from their habitual residence, the homeless and other especially vulnerable people', will allow them to face these extremely urgent situations, which until now have not been resolved. with the program that it replaces, for being ineffective in its design to address the impact of the pandemic that is being suffered, and that will surely continue beyond the suspension of launches approved in Royal Decree-Law 11/2020 . Therefore, it must be replaced to gain immediacy in the solution to this new reality.",
-            "descriptionContentOfMeasure": "This new program will aim to provide an immediate housing solution to people who are victims of gender-based violence, people who are evicted from their usual home, homeless people and other especially vulnerable people.\r\rThe persons referred to in the previous section and the public administrations, public companies and non-profit entities, collaborative economy or the like, may always be beneficiaries of this program, always non-profit, whose purpose is to provide a housing solution for those people and on their behalf.\r\rThe autonomous communities and the cities of Ceuta and Melilla will make available to the beneficiary a house that is publicly owned, or that has been assigned for use to a public administration, even if it maintains private ownership, appropriate to its circumstances in terms of size, services and location, to be occupied by rental, cession of use, or any temporary occupation regime admitted by law. When this type of housing is not available, the aid may be applied to suitable, privately owned housing or to any residential accommodation or facilities that may be occupied by the beneficiaries, in the same regimes.\r\r**Amount of aid**\r\rThe amount of these grants, within the limits of this program and taking into account the personal circumstances of the beneficiary, may reach the following amounts:\r\r* a. Up to \u20ac600 per month and up to 100% of the rent or occupancy price of the property, established. In cases duly justified by the aid granting body, it may reach up to \u20ac900 per month and up to 100% of the rent or occupancy price, established.\r\r* b. Up to \u20ac200 per month to meet the costs of maintenance, community and basic supplies with the limit of 100% of them.\r\rThe determination of the amount must have the favorable report of the social services of the autonomous community, the city of Ceuta and Melilla or the corresponding local administration.",
-            "descriptionUseOfMeasure": "No data available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-14_609.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "490",
-                    "sources::title": "Royal Decree 11/2020",
-                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4208",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "6",
-                    "actors::name": "Other social actors (e.g. NGOs)",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "7",
-                    "actors::name": "Local / regional government",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "45",
-                    "targetGroups::name": "Women",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "500",
-        "modId": "70"
-    },
-    {
-        "fieldData": {
-            "title": "Extension of social housing programmes",
-            "title_nationalLanguage": "Extensi\u00f3n de programas de vivienda social",
-            "d_startDate": "03/31/2020",
-            "d_endDate": "",
-            "calc_country": "Spain",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Keeping a safe home",
-            "calc_identifier": "ES-2020-14/610",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "The objective of this programme is to increase the stock of social housing in order to allow particularly vulnerable groups to have access to it during the health crisis provoked by the COVID-19. \r\rIn order to reach this goal, two measures are included in Royal Decree 11/2020; first, the law opens the door for local and regional governments to increase their social housing stock; secondly, it is allowed to use with anticipation the funds allocated in the budget of the Ministry of Transport and Housing for the next four years.",
-            "descriptionContentOfMeasure": "Aid in this new case may be obtained by homes that, individually or in blocks, are acquired by Public Administrations, public bodies and other entities governed by public law, as well as public companies and non-profit third sector entities , in order to increase the public park of houses for rent or assignment in social use.\r\rThe Ministry of Transport, Mobility and Urban Agenda is authorized to transfer to the Autonomous Communities and the Cities of Ceuta and Melilla 100% of the funds committed for the year 2020 in the agreements for the execution of the 2018-2021 State Housing Plan , specifically 346,637,200 euros entered in budget line 17.09.261N.753, without waiting for the acquisition of the financial commitment by them or any other requirement required in the agreements.\r\rThe aforementioned Ministry of Transport, Mobility and Urban Agenda is also authorized to transfer to the Autonomous Communities and the Cities of Ceuta and Melilla 100% of the funds committed for the year 2021 in the agreements for the execution of the State Plan for Housing 2018-2021, specifically 354,255,600 euros, in the first quarter of 2021, without waiting for the acquisition of the financial commitment by them or any other requirement required in the agreements",
-            "descriptionUseOfMeasure": "No data available",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Not applicable",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-14_610.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "490",
-                    "sources::title": "Royal Decree 11/2020",
-                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4208",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "6",
-                    "actors::name": "Other social actors (e.g. NGOs)",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "7",
-                    "actors::name": "Local / regional government",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "77",
-                    "targetGroups::name": "Other groups of citizens",
-                    "modId": "10"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "501",
-        "modId": "71"
-    },
-    {
-        "fieldData": {
-            "title": "Access to reduced supplies' prices for self-employed through the so-called social bonus",
-            "title_nationalLanguage": "Derecho a percepci\u00f3n del bono social por parte de trabajadores aut\u00f3nomos que hayan cesado su actividad o hayan visto reducida su facturaci\u00f3n como consecuencia del COVID-19",
-            "d_startDate": "03/31/2020",
-            "d_endDate": "",
-            "calc_country": "Spain",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Keeping a safe home",
-            "calc_identifier": "ES-2020-14/612",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/07/2020",
-            "descriptionBackgroundInfo": "Article 28 of Royal Decree-Law 11/2020, of March 31, which adopts urgent complementary measures in the social and economic field to deal with COVID-19, establishes the right to receive the social bonus by self-employed workers who have ceased their activity or have had their turnover reduced as a result of COVID-19.\r\rThe objective of this measure is to allow self-employees whose activities have ceased or their income fell substantially, to have access to utilities (water, electricity etc.) at a reduced cost.\r\r",
-            "descriptionContentOfMeasure": "Will be considered vulnerable consumers in their habitual residence, those consumers of utilities who, complying with the income requirement of section 2, prove after the entry into force of Royal Decree 463/2020, of March 14, that the owner of the supply point, or one of the members of its family unit, are self-employed or self-employed professionals, are entitled to the benefit for total cessation of professional activity or for having seen their turnover in the month prior to the request for the social bonus reduced by at least 75 percent in relation to with the average billing for the previous semester, in the terms established in Royal Decree-Law 8/2020, of March 17.",
-            "descriptionUseOfMeasure": "No data available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-14_612.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "490",
-                    "sources::title": "Royal Decree 11/2020",
-                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4208",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "503",
-        "modId": "72"
-    },
-    {
-        "fieldData": {
             "title": "Cancellation of the advance payments of the personal income tax",
             "title_nationalLanguage": "Iedz\u012bvot\u0101ju ien\u0101kuma nodok\u013ca avansa maks\u0101jumi",
             "d_startDate": "03/12/2020",
@@ -19407,84 +19575,6 @@
         },
         "recordId": "504",
         "modId": "81"
-    },
-    {
-        "fieldData": {
-            "title": "Extension of the extraordinary subsidy for lack of activity to domestic workers",
-            "title_nationalLanguage": "Beneficiarios del subsidio extraordinario por falta de actividad para las personas integradas en el Sistema Especial de Empleados de Hogar del R\u00e9gimen General de la Seguridad Social",
-            "d_startDate": "03/31/2020",
-            "d_endDate": "",
-            "calc_country": "Spain",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "ES-2020-14/617",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "The objective of this measure is to grant access for domestic workers to the extraordinary benefit for lack of activity. \r\rA response is accordingly given to the group of domestic workers, especially vulnerable in the current circumstances, given that they do not have the right to unemployment benefit. For this reason, a temporary extraordinary subsidy is created from which they will be able to benefit in the absence of activity, the reduction in hours worked or the termination of the contract as a consequence of COVID-19. The amount of the subsidy will depend on the remuneration previously received, as well as the reduction in activity suffered, requiring proof of such reduction from the employer. This subsidy is compatible with the maintenance of other activities and the maximum amount to be received will be the SMI without extraordinary payments.\r\rThe health crisis caused by COVID-19 has triggered new situations of need linked to the lack of employment and has aggravated the situation in which previously unemployed people found themselves. Although the state system of unemployment benefits and also the welfare systems of the autonomous communities have served to respond to some of these situations, it is necessary to complete the scope of coverage in order to include new situations of need due to lack of employment generated by the current health crisis.\r\r",
-            "descriptionContentOfMeasure": "Will benefit from this extension those persons who are registered in the Special System of Home Employees of the General Social Security Regime before the entry into force of Royal Decree 463/2020, of March 14, for The one that declares the state of alarm for the management of the situation of sanitary crisis caused by the COVID-19, are in any of the following situations:\r\r1. They have stopped providing services, totally or partially, on a temporary basis, in order to reduce the risk of contagion, for reasons beyond their control, in one or more homes and due to the health crisis of COVID-19.\r\r2. Their employment contract has been terminated for the cause of dismissal contained in article 49.1.k of Royal Legislative Decree 2/2015, of October 23, which approves the Consolidated Text of the Law on the Statute of Workers or for the withdrawal of the employer, in the terms provided for in article 11.3 of Royal Decree 1620/2011, of November 14, which regulates the special employment relationship of the family home service, due to the crisis of the COVID-19.\r\rThe amount of the subsidy must not be higher than the Cross-industry Minimum Wage (\u20ac950 month).",
-            "descriptionUseOfMeasure": "No data available at the moment.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-14_617.html",
-            "isOccupation": "Yes",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "490",
-                    "sources::title": "Royal Decree 11/2020",
-                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4208",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "33",
-                    "targetGroups::name": "Workers in non-standard forms of employment",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [
-                {
-                    "recordId": "20",
-                    "occupations::name": "Personal service workers",
-                    "modId": "0"
-                }
-            ],
-            "sectors": [
-                {
-                    "recordId": "131",
-                    "sectors::code": "T97",
-                    "sectors::name": "Activities of households as employers of domestic personnel",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "508",
-        "modId": "70"
     },
     {
         "fieldData": {
@@ -27550,6 +27640,151 @@
     },
     {
         "fieldData": {
+            "title": "Temporary COVID-19 wage subsidy scheme",
+            "title_nationalLanguage": "",
+            "d_startDate": "03/26/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "IE-2020-13/777",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/23/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "On 24 March 2020 the Irish Government announced new measures to provide financial support to workers affected by the COVID-19 crisis. As part of these measures, the Revenue service operates a Temporary Wage Subsidy Scheme. The scheme enables employees whose employers are affected by the pandemic to receive significant supports directly from their employer through the payroll system. The scheme is expected to last 12 weeks from 26 March 2020.\r\rThe scheme was introduced as part of the terms of the Emergency Measures in the Public Interest (COVID-19) Act 2020.\r\rOn Wednesday 15 April, the Minister for Finance announced further updates to the Temporary Wage Subsidy Scheme. ",
+            "descriptionContentOfMeasure": "The Scheme is available to employers from all sectors (excluding the public service and non-commercial semi-state sector) whose business activities are adversely impacted by the COVID-19 pandemic.\r\rIt is open to employers who retain staff on payroll; some of the staff may be temporarily not working or some may be on reduced hours and/or reduced pay. Provided the employer meets certain conditions and, subject to the levels of pay made to employees, the employer may be eligible for the scheme for some, or all of its employees.\r\rThe employer includes the subsidy as part of the employees\u2019 wages in addition to any amount that the employer would otherwise be able to pay. The subsidy element on the employee\u2019s payslip is indicated as a payment described as \u201cGovCov19 WageSub\u201d.  \r\rA subsidy of 85% is payable for employees whose net weekly income does not exceed \u20ac412. \rA subsidy of 70% is payable for those whose net weekly pay was previously no more than \u20ac500 but less than \u20ac586, with a cap of \u20ac410.\r\rTo qualify for the Scheme, employers must be experiencing significant negative economic disruption due to COVID-19, be able to demonstrate, to the satisfaction of Revenue, a minimum of a 25% decline in turnover and be unable to pay normal wages and normal outgoings fully. They must also retain their employees on the payroll.\r\rThe scheme is confined to employees who were on the employer\u2019s payroll as at 29 February 2020, and for whom a payroll submission was made to Revenue in the period from 1 February 2020 to 15 March 2020.",
+            "descriptionUseOfMeasure": "47,400 employers are registered with Revenue for the scheme.\r\rAccording to the minister responsible, on 29 April 2020, 'The cumulative value of payments made to employers under the scheme is \u20ac652 million, almost 400,000 employees have now received at least one payment under the scheme'. \r\rAccording to preliminary statistics from the Irish Revenue, to 21 May: \r \r* Over 55,500 employers registered with Revenue for the wage subsidy scheme.\r* Over 48,300 employers have already received subsidy payments.\r\u2022 Over 473,500 employees have already received at least one payment.\r\rUp to 5 June 2020, over 58,300 employers had registered for the TWSS and over \u20ac1.37 billion had been paid out. The scheme has supported over 514,700 employees who received at least one payment. The cost of the scheme is over \u20ac500 million per month according to the Department of Finance.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were consulted. They welcomed the scheme and asked that it be extended for the duration of the crisis.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-13_777.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "741",
+                    "sources::title": "Revenue Commissioners",
+                    "sources::url": "https://www.revenue.ie/en/employing-people/documents/pmod-topics/guidance-on-operation-of-temporary-covid-wage-subsidy-scheme.pdf",
+                    "sources::d_date": "04/25/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "779",
+                    "sources::title": "Covid-19: Over \u20ac650 million now given to businesses employed",
+                    "sources::url": "https://www.thejournal.ie/wage-subsidy-covid-19-5086879-Apr2020/",
+                    "sources::d_date": "04/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "885",
+                    "sources::title": "Donohoe tweaks wage subsidy scheme so mothers returning from maternity qualify",
+                    "sources::url": "https://www.irishtimes.com/business/economy/donohoe-tweaks-wage-subsidy-scheme-so-mothers-returning-from-maternity-qualify-1.4265920",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "886",
+                    "sources::title": "COVID-19 Temporary Wage Subsidy Scheme Preliminary Statistics\r(as at 21 May 2020)",
+                    "sources::url": "https://revenue.ie/en/corporate/documents/statistics/registrations/wage-subsidy-scheme-statistics-21-may-2020.pdf",
+                    "sources::d_date": "05/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1058",
+                    "sources::title": "Business welcomes acceleration of Covid Roadmap",
+                    "sources::url": "https://www.ibec.ie/connect-and-learn/media/2020/06/05/business-welcomes-acceleration-of-covid-roadmap",
+                    "sources::d_date": "06/05/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1059",
+                    "sources::title": "COVID-19 information and advice for taxpayers and agents",
+                    "sources::url": "https://www.revenue.ie/en/corporate/communications/covid19/temporary-covid-19-wage-subsidy-scheme.aspx",
+                    "sources::d_date": "07/07/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1060",
+                    "sources::title": "Minister Donohoe announces extension of Temporary Wage Subsidy Scheme until end August",
+                    "sources::url": "Minister Donohoe announces extension of Temporary Wage Subsidy Scheme until end August",
+                    "sources::d_date": "06/05/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1061",
+                    "sources::title": "Opening up the Wage Subsidy Scheme to New Mothers Welcome - ICTU",
+                    "sources::url": "https://www.ictu.ie/bdc19/news/2020/06/02/opening-up-the-wage-subsidy-scheme-to-new-mothers/",
+                    "sources::d_date": "06/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "38",
+                    "updates::d_date": "05/29/2020",
+                    "updates::description": "Mothers returning from work had previously not been eligible to receive the COVID-19 wage subsidy support, as they had not been on the payroll of their employers on 29 February, nor they had been paid in either January or February. Following criticism from women's groups and opposition parties, the Irish government announced that the scheme would be retroactively modified, so mothers returning from maternity leave will become eligible, backdating it to 26 March. While legislation will be adapted as part of the usual Financial Bill cycle 2020, Irish Revenue will already implement the change.\r\rWhen the Temporary Wage Subsidy Scheme (TWSS) was amended to allow women who were on maternity leave to access the payment, this was welcomed by ICTU. ICTU and the National Women\u2019s Council had campaigned to have the anomaly addressed.",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "39",
+                    "updates::d_date": "05/21/2020",
+                    "updates::description": "On 21 May, Revenue has generated further subsidy payments under the scheme worth over \u20ac33 million. The cumulative value of payments made under the Scheme is now \u20ac1,048 million. This includes \u20ac96 million in income tax paid that has been refunded over the same time.",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "40",
+                    "updates::d_date": "05/05/2020",
+                    "updates::description": "From 5 May onwards, the scheme is based on each eligible employee\u2019s average net weekly pay for January and February 2020, calculated from the payroll submissions made (to Revenue) by the employer for that period.",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "115",
+                    "updates::d_date": "07/07/2020",
+                    "updates::description": "From 5th May the Scheme funds up to 85% of salaries. In addition, employees earning over \u20ac76,000 in take home pay, who had previously been excluded from the scheme, can apply if their gross pay had now fallen below the \u20ac76,000 level. ",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "116",
+                    "updates::d_date": "06/23/2020",
+                    "updates::description": "On 23 June a facility was introduced to include in the scheme, apprentices returning to work who had been on an apprenticeship education and training programme in February 2020 and who therefore were not on their employer\u2019s payroll in February 2020.",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "118",
+                    "updates::d_date": "07/07/2020",
+                    "updates::description": "The Government agreed to extend the scheme until the 31 August 2020 and businesses re-opening, who were not previously registered for the scheme, are able to apply to join the scheme, provided they meet the relevant eligibility criteria. This decision was taken _\u201chaving regard to the novel set of arrangements surrounding the re-opening of the economy, as well as the need to avoid the risk of forcing otherwise viable firms to close\u201d.__\r\rIbec welcomed the extension. Chief Executive Danny McCoy said: \u201cThe extension of the TWSS scheme until August will provide confidence to employers and employees, helping vulnerable firms to stay afloat and keeping their employees engaged whilst protecting the incomes of individuals. \r\rCompanies were also asked to review their eligibility for the scheme. Where a business, after reviewing its position and the economic impact of the pandemic, considers that it did not meet the eligibility criteria but had reasonable grounds for assuming it would, it should immediately cease claiming the subsidy for the extended scheme. Revenue will require evidence of the assumptions supporting the original self-assessment of eligibility and, once the basis is reasonable, will not seek to claw-back the subsidy paid for the original period.  If there was not a reasonable basis, the subsidy is repayable.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "687",
+        "modId": "89"
+    },
+    {
+        "fieldData": {
             "title": "New services of Croatian Post for elderly citizens",
             "title_nationalLanguage": "Nove usluge Hrvatske po\u0161te ",
             "d_startDate": "04/02/2020",
@@ -29930,6 +30165,92 @@
     },
     {
         "fieldData": {
+            "title": "Restrictions on evictions and rent freezes for landlords ",
+            "title_nationalLanguage": "",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "07/20/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "IE-2020-13/819",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/06/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "The housing situation had been a longstanding issue of concern for the Irish public. Mainly due to an undersupply of dwellings, house prices and rents are comparatively among the highest in Europe. Rents or mortgage payments are the largest proportion of income people in Ireland spend. The job or income losses due to the pandemic situation has aggravated this crisis, increasing the difficulty many people face with keeping up with mortgage and rent payments. At the same time, the possibility to find new accommodation is reduced in times of the public health policy with social distancing. As part of its package of 'Emergency Measures in the Public Interest (COVID-19) Act 2020' the Irish government therefore introduced restrictions on evictions and rent freezes for landlords.",
+            "descriptionContentOfMeasure": "The Government  Act includes new measures to protect renters, during the emergency period of 3 months.\r\r1. Renters may not be evicted from their home, or \r2. Be served a notice of termination by their landlord. Notices of termination which the renter had received prior to the emergency period are frozen for the duration of the emergency (3 months).\r3. It is also prohibited for landlords to increase rents.\r\rAll types of rentals are included, such as shared accommodation with the landlord, student accommodation and \u2018digs\u2019 type accommodation where meals are provided.\r\rRenters shall continue to pay rent and continue to follow any rules as part of their tenancy.\r\rRenters having difficulties to pay their rents should contact their landlords and possibly agree on a reduced amount for the duration of the emergency measures. For those having lost their jobs or part of their employment income, a means tested social welfare, rental support benefit is available. \r\r\r",
+            "descriptionUseOfMeasure": "Not known yet. ",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-13_819.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "806",
+                    "sources::title": "Emergency Measures in the Public Interest (COVID-19 Act) 2020",
+                    "sources::url": "http://www.irishstatutebook.ie/eli/2020/act/2/enacted/en/html",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "810",
+                    "sources::title": "Renting and Covid 19",
+                    "sources::url": "https://www.citizensinformation.ie/en/housing/renting_a_home/tenancies_and_covid19.html",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1064",
+                    "sources::title": "Government announces decision to extend emergency measures to protect tenants until 20th July 2020",
+                    "sources::url": "https://www.rtb.ie/news/emergency-measures-for-the-rental-sector-extended-to-20th-july-2020/",
+                    "sources::d_date": "06/22/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "77",
+                    "targetGroups::name": "Other groups of citizens",
+                    "modId": "10"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "121",
+                    "updates::d_date": "06/22/2020",
+                    "updates::description": "The Government agreed to extend the emergency period during which rent increases and tenancy terminations (in all but limited and exceptional cases) are prohibited. The emergency period will be extended to 20 July 2020.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "729",
+        "modId": "71"
+    },
+    {
+        "fieldData": {
             "title": "Banks introduce measures to cushion effects of COVID-19",
             "title_nationalLanguage": "",
             "d_startDate": "03/18/2020",
@@ -31427,6 +31748,116 @@
     },
     {
         "fieldData": {
+            "title": "Additional support for the service voucher sector",
+            "title_nationalLanguage": "Bijkomende steun voor de dienstencheque sector",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BE-2020-18/852",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/14/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "Domestic personnel of private households can be employed and payed via so called service vouchers (dienstencheque), a form of payment that is partially subsidized by the government. The service voucher sector and its employees are particularly vulnerable to the consequences of the Corona crisis. The nature of their jobs makes it difficult to maintain distance from their clients (who are probably at home due to the quasi lockdown). The remuneration in the sector is fairly low in general. If employees have to make use of temporary unemployment, which is a percentage of their wage, this could lead to financial problems for the employees.",
+            "descriptionContentOfMeasure": "The Walloon government has planned to increase the hourly allowance from 1 to 31 May in certain cases. For hours without services provided: all companies can claim an aid of \u20ac18 per hour per worker not benefiting from temporary unemployment (all requests will be processed on the basis of \u20ac18 instead of \u20ac14).\r\rFor hours with services provided: only companies with a maximum of 250 workers under a service voucher contract (declared to Sodexo during the first quarter of 2020) will be able to benefit from the reimbursement amounting up to \u20ac27 instead of \u20ac23.86 .\rThis reimbursement value applies for services which took place in the month of May.\r\rBrussels has also implemented some additional support measures specifically for the service voucher sector.\r\rThe automatic granting of flat-rate aid in the form of a lump sum of \u20ac4,000 to recognised service voucher companies.\r\rOn condition that they submit an application: the possibility for service voucher companies to financially support their employees who were placed in temporary unemployment as a result of Covid-19 measures. In particular, an additional \u20ac2.50 gross per declared hour of temporary unemployment\r\rTemporary increase of the amount of the regional intervention by \u20ac2 per service voucher offered at the issuing company for reimbursement.\r\rFlanders: From 16 March to 19 April, the regional contribution will be increased by \u20ac8.64. This means \u20ac23 instead of \u20ac14.36 per voucher. This increase in payment for the service voucher companies has to make up for the additional costs they have to provide protective materials for their personnel.\r\r\r",
+            "descriptionUseOfMeasure": "For Wallonia the total amount is currently unknown, as the uptake is up the individual company and workers.\r\rIn Brussels three of the four measures are applied automatically by data is currently unavailable about the uptake. Uptake on the measure that requires application is unknown as well.\r\rIn Flanders the measure applies to all service voucher companies.",
+            "descriptionInvolvementOfSocialPartners": "Their degree of involvement is not clear, however it is to be expected that they were at least informed. As it is within their area of competence and expertise.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-18_852.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "863",
+                    "sources::title": "Coronavirus: Measures for service voucher companie",
+                    "sources::url": "https://emploi.wallonie.be/en/home/news/page-content-inner/actualites/coronavirus--mesures-pour-les-entreprises-titres-services.html",
+                    "sources::d_date": "04/01/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "878",
+                    "sources::title": "Brussels: Support measures for the Brussels service cheque economy.",
+                    "sources::url": "http://werk-economie-emploi.brussels/nl/dienstencheques-covid-19",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "879",
+                    "sources::title": "Flanders: service sector support measures",
+                    "sources::url": "https://www.vvsg.be/kennisitem/vvsg/dienstencheques-2",
+                    "sources::d_date": "05/12/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "8",
+                    "funding::name": "Regional funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "131",
+                    "sectors::code": "T97",
+                    "sectors::name": "Activities of households as employers of domestic personnel",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "62",
+                    "updates::d_date": "06/07/2020",
+                    "updates::description": "The Government of the Brussels-Capital Region is extending two measures intended to help approved service voucher companies in Brussels and their staff during the coronavirus crisis. \rThe measures provide an increased regional intervention for approved service voucher companies as well as an hourly additional temporary unemployment allowance for their staff.\rThe two aid measures were applicable for the period from 18 March to 30 April, 2020. But the Government of the Brussels-Capital Region extends this period until June 30, 2020 inclusive.\rService voucher companies also have a longer period to submit their request for assistance.\r",
+                    "modId": "3"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "1826",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "R\u00c9GION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                    "regions::nutsCode": "BE1",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "762",
+        "modId": "70"
+    },
+    {
+        "fieldData": {
             "title": "Regional measures to help business to stay afloat",
             "title_nationalLanguage": "Regionale maatregelen om ondernemingen te doen overleven",
             "d_startDate": "03/13/2020",
@@ -31637,6 +32068,85 @@
         },
         "recordId": "765",
         "modId": "61"
+    },
+    {
+        "fieldData": {
+            "title": "Corona parental leave",
+            "title_nationalLanguage": "Conge parental Corona",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "BE-2020-18/860",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/19/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "A new parental leave called the Corona parental leave has been put in place in addition to the more traditional parental leave in order to help parents take care of their children during the Corona crisis and closure of schools. The Corona parental leave can be granted for 20% or 50% of full-time working-time. This law was voted on the 2 May and is applicable retro-actively to 1 May and covers the month of May and June. The reference is the arr\u00eat\u00e9 royal n\u00b0 23 du 13.05.2020 taken under article 5, \u00a71, 5\u00b0, of the law of  27 Mars 2020 with respect to the special measures to be taken to fight the coronavirus COVID-19 (II). ",
+            "descriptionContentOfMeasure": "The Corona parental leave is oriented towards parents (biological, foster and by adoption) with children aged 12 years or younger, or parents with children with disabilities 21 years or younger. The leave can be taken for 20 or 50% of full-time working. To benefit from the 20% reduction the parent should work full-time and to benefit from the 50% reduction the parent should work at least 75% of a full-time.  If an employed parent wishes to reduce their work by 100% or 10% they should apply for the traditional parental leave,  self-employed parents however can apply for a 100 percent reduction of work via the Corona parental leave.\r\rParents that have worked for one month in the private sector or one day in the public sector are eligible for the Corona parental leave. Parents that are self-employed as main activity are also eligible, but not if they are benefiting from the Bridge benefit (see elsewhere in the database).\r\rThe flat-rate benefit is 25% higher than the benefit for the traditional parental leave, for example \u20ac149,60 for a 20% reduction  as compared to \u20ac119,68 for the traditional parental leave for employed parents.  For the self-employed a 100% reduction is compensated by \u20ac532,24 a month, or \u20ac875 if single parent.\r",
+            "descriptionUseOfMeasure": "It is not known how many benefit or will benefit from the Corona parental leave at this stage.",
+            "descriptionInvolvementOfSocialPartners": "It is not known whether the social partners where involved, but it is to be expected that they were at least informed about the measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-18_860.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "874",
+                    "sources::title": "Corona parental leave",
+                    "sources::url": "https://www.onem.be/sites/default/files/coronavirus/FAQ_CPC_FR_20200514.pdf",
+                    "sources::d_date": "05/14/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "928",
+                    "sources::title": "Verlenging maatregelen",
+                    "sources::url": "https://www.rva.be/nl/nieuws/verlenging-maatregelen",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "57",
+                    "updates::d_date": "06/19/2020",
+                    "updates::description": "The Corona Parental leave system will be prolonged until the 30th of September 2020.\r\rIn addition two changes are applied, starting on 1 July:\r\r* Single parents as well as parents that have a disabled child now have the additional option to take full-time corona parental leave as well.\r* The level of the interruption benefit for this same group of parents (single and with a disabled child) will be increased as well by 50%. \r* The benefit cannot be higher than the gross wage of the person involved.\r\r",
+                    "modId": "5"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "770",
+        "modId": "64"
     },
     {
         "fieldData": {
@@ -36002,6 +36512,107 @@
         },
         "recordId": "849",
         "modId": "28"
+    },
+    {
+        "fieldData": {
+            "title": "COVID-19 Restart Grant",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/22/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "IE-2020-21/940",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/07/2020",
+            "calc_lastUpdate": "07/17/2020",
+            "descriptionBackgroundInfo": "The Department of Business, Enterprise and Innovation launched a restart grant for small businesses.\r\rThe \u20ac250 million Restart Grant provides direct grant aid to micro and small businesses to help with the costs associated with reopening and reemploying workers following COVID-19 closures.\r\rThe grant is the equivalent to the rates bill of the business in 2019, with a minimum payment of \u20ac2,000 and a maximum payment of \u20ac10,000.\r\rScheme applies to small businesses with a turnover of under \u20ac5 million and employing 50 people or less.\r\rThe business must have suffered a projected 25%+ loss in revenue from 1st April 2020 to 30th June 2020.\r\rCompanies apply through their local authority.\r",
+            "descriptionContentOfMeasure": "**Support Available**\rThe \u20ac250 million Restart Grant provides direct grant aid to micro and small businesses to help with the costs associated with reopening and reemploying workers following COVID-19 closures.\rThe grant is the equivalent to the rates bill of the business in 2019, with a minimum payment of \u20ac2,000 and a maximum payment of \u20ac10,000.\r\r**Eligibility Criteria** \rAny business (subject to qualifying criteria) that has a commercially rateable premises, or where rates are paid on behalf and attributable to the business premises.\rScheme applies to small businesses with a turnover of under \u20ac5m and employing 50 people or less.\r\r**Non-Eligible Business**\rMultiple chain stores, i.e. a business that is a non-financially independent branch of a group of chain stores which is owned and managed by a single entity.\rNon-commercial organisations such as community and sporting premises (including charity shops and community and sporting premises with a bar).\rBusinesses that do not operate from rateable premises (tradesmen, service providers, etc).\rPremises that were vacant prior to the Covid-19 emergency.\r \r**Qualifying Criteria for Grant**\rA business must have a turnover of less than \u20ac5 million and have 50 or less employees.\r\r* The business must have suffered a projected 25%+ loss in revenue to 30 June 2020.  \r* The business must commit to remain open or to reopen if it was closed. \r* The business must also declare the intention to retain employees that are benefiting from the Temporary Wage Subsidy Scheme (TWSS).\r\r\r\r\r",
+            "descriptionUseOfMeasure": "Full figures not currently available.",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-21_940.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1065",
+                    "sources::title": "COVID-19 Restart Grant from your Local Authority",
+                    "sources::url": "https://dbei.gov.ie/en/What-We-Do/Supports-for-SMEs/COVID-19-supports/COVID-19-Restart-Grant-Local-Authority-Websites.html",
+                    "sources::d_date": "06/22/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1066",
+                    "sources::title": "Government supports for COVID-19 impacted businesses",
+                    "sources::url": "https://dbei.gov.ie/en/What-We-Do/Supports-for-SMEs/COVID-19-supports/",
+                    "sources::d_date": "07/07/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1067",
+                    "sources::title": "Ibec CEO Update: Sustaining distressed SMEs",
+                    "sources::url": "https://www.ibec.ie/connect-and-learn/insights/insights/2020/06/23/reboot-and-reimagine---sustaining-distressed-smes",
+                    "sources::d_date": "06/23/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1211",
+                    "sources::title": "Government approves details of Restart Grant for small businesses",
+                    "sources::url": "https://merrionstreet.ie/en/News-Room/News/Government_approves_details_of_Restart_Grant_for_Small_Businesses.html",
+                    "sources::d_date": "05/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "6",
+                    "funding::name": "Local funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "850",
+        "modId": "14"
     },
     {
         "fieldData": {
