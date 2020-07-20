@@ -11008,7 +11008,7 @@
                     "sources::title": "DECRETO-LEI N.\u00ba 10-A/2020 - DI\u00c1RIO DA REP\u00daBLICA N.\u00ba 52/2020, 1\u00ba SUPLEMENTO, S\u00c9RIE I DE 2020-03-13",
                     "sources::url": "https://dre.pt/web/guest/legislacao-consolidada/-/lc/130660075/202003240000/73801265/diplomaPagination/diploma/2?did=130241777",
                     "sources::d_date": "03/13/2020",
-                    "modId": "5"
+                    "modId": "6"
                 }
             ],
             "actors": [
@@ -11249,6 +11249,85 @@
             "regions": []
         },
         "recordId": "292",
+        "modId": "92"
+    },
+    {
+        "fieldData": {
+            "title": "Sick leave during pandemic covered by state funds",
+            "title_nationalLanguage": "Bolni\u0161ki stale\u017e med epidemijo",
+            "d_startDate": "04/11/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "SI-2020-15/402",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "The 'Intervention measures to mitigate the effects of the COVID-19 infectious disease epidemic on citizens and the economy Act' (ZIUZEOP), adopted on 2 April 2020, alleviate the negative consequences of the epidemic on companies, exempting them from paying sick leave compensations in the period from 11 April to 31 May 2020 (Article 56). \rNormally, employers are paying compensations for the first 30 days of sick leave, and the Health Insurance Institute covers those exceeding 30 days of sick leave.",
+            "descriptionContentOfMeasure": "In the reference period, an insured person has the right to the sick leave compensation paid by the Health Insurance Institute since the very first day of sick leave. \rThe level of compensation usually depends on the reason for sick leave: it is, for instance, determined at 100% for workplace injuries and 80% for illness. \rThe Intervention act (ZIUZEOP) envisages higher compensation levels for infected persons: 90% compensation for those who, according to doctor\u2019s instruction, have to be isolated, 100% for those who get infected at the workplace. \rHealthy persons are not entitled to sick leave compensation. Belong to this category parents who have to look after small children during the closure of schools and kindergartens; persons who cannot come to work due to the suspension of public transport or border crossing; persons with chronic diseases; and healthy persons who have been in contact with infected people.",
+            "descriptionUseOfMeasure": "The measure addresses companies as well as self-employed persons, but not organizations directly or indirectly financed by the state budget. \rThe request to receive the sick-pay compensation from the Health Insurance Institute can be filed within 30 September 2020. The Health Insurance Institute estimates that the costs for sick leave compensation will be about \u20ac30 million (Dnevnik, 8 April 2020).",
+            "descriptionInvolvementOfSocialPartners": "No information yer available.",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-15_402.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "299",
+                    "sources::title": "Health Insurance Institute, 'Odsotnost z dela in bolni\u0161ki stale\u017e zaradi novega koronavirusa (COVID-19)' [Absence from work and sick leave due to new coronavirus (COVID-19)",
+                    "sources::url": "https://www.zzzs.si/zzzs/internet/zzzs.nsf/o/55F91A45343677D6C125852D0030324",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "970",
+                    "sources::title": "Request of trade unions to be included in the preparation of emergency laws due to COVID-1",
+                    "sources::url": "http://sindikat-pergam.si/wp-content/uploads/2020/04/Poziv_sindikalne-centrale_20.04.2020.pd",
+                    "sources::d_date": "04/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "293",
         "modId": "92"
     },
     {
@@ -13501,6 +13580,313 @@
     },
     {
         "fieldData": {
+            "title": "Measures to allow self-employed to postpone or avoid the payment of social security contributions",
+            "title_nationalLanguage": "Odlog in oprostitev pla\u010dila prispevkov za socialno varnos",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "SI-2020-11/438",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "The 'Act on the Interim Measure of Partial Reimbursement of Wage Compensation' (ZIUPPP, adopted on 20 March 2020) and the 'Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy' (ZIUZEOP, adopted on 2 April 2020) alleviate the negative consequences of the pandemic by permitting self-employed persons to postpone the payment of social security contributions or not to pay them at all. \rEligible are self-employed persons who who cannot carry out their work and have no outstanding debt with the Financial Administration.",
+            "descriptionContentOfMeasure": "The law on wage compensation (ZIUPPP, adopted on 20 March 2020) laid down a temporary suspension of social security contributions whose payment deadline expires in April, May, and June 2020. Deferred payment must be paid in two years, until 31 March 2022, in one installment with no interest charge. It is an automatically recognized right meaning that there is no need to submit any claim for obtaining this right. Eligible are self-employed persons (including farmers) who do not employ other workers.\rThe  first and second COVID-19 laws (ZIUZEOP and ZIUZEOP-A) have introduced the right of self-employed persons to be fully exempt from paying social security contributions. Eligible persons are self-employed, clerics, associates, and farmers who cannot carry out their work. They have to make a request to Financial Administration in which they prove 10% lower income in 2020 compared to 2019 or, in cases of recently established businesses, 10% lower average monthly income compared to the pre-crisis level. Later on, beneficiaries will have to pay social security contributions if their revenue exceeds 90% of the revenue in the pre-crisis period. Tee Financial administration manages the requests for exemption from paying social security contributions. Postponed and annulled payments of social security contributions are limited to the period between 13 March and 31 May 2020. After 31 May no new claims will be accepted. In addition to these two measures, self-employed may also claim for deferred payment of income tax.",
+            "descriptionUseOfMeasure": "While the COVID-19 law (ZIUZEOP, issued on 10 April 2020) was in parliamentary procedure, non-governmental organizations protested against discriminatory \u201creferential period\u201d for self-employed persons. While referential period for companies was one year, it was one month (February) for self-employed. The argument was that this rule exclude many self-employed persons, as they typically receive their fees irregularly and many may have had no money inflows in February. Their proposal was not integrated into the first COVID-19 law, issued on 10 April 2020.\rTwo cultural organizations (the Association of Slovene Film Directors and the Association of Cultural Workers) organized on-line surveys on how many of their self-employed members do not qualify for the annulled payment of social security contributions. An on-line survey of the first association showed that 84% of film directors and screenwriters are not eligible, while the other association came up with the figure of one-quarter of respondents. It is mainly due to the irregularity of their income and the fact that the government suspended the payment of subsidies to the already done or agreed work (Association of Slovene Film Directors, email, 13 April 2020). Associations stressed that the emergency measure left out the most socio-economically deprived group of self-employed (\u0160u\u010dur, 2020).\r\rThe second COVID-19 law (ZIUZEOP-A from 30 April 2020) finally adopted their proposals: it extended the referential period as well as the group of eligible persons (besides full-time also part-time self-employed).\r",
+            "descriptionInvolvementOfSocialPartners": "The law was adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not yet appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 202",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_438.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "300",
+                    "sources::title": "Zakon o interventnih ukrepih na podro\u010dju pla\u010d in prispevkov, ZIUPPP [Act on the Interim Measure of Partial Reimbursement of Wage Compensation], Official Gazette RS, no. 36, 202",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO818",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "307",
+                    "sources::title": "Financial Administration, 'Ukrepi na dav\u010dnem podro\u010dju za bla\u017eitev posledic koronavirusa za samozaposlene' [Measures to mitigate the effects of epidemic on self-employed",
+                    "sources::url": "https://www.gov.si/novice/2020-04-03-ukrepi-na-davcnem-podrocju-za-blazitev-posledic-koronavirusa-za-samozaposlene",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "377",
+                    "sources::title": "Maja \u0160u\u010dur, \u2018Na \u010digavi strani je ministrstvo\u2019 [On whose side is ministry], Dnevnik, 11 April 202",
+                    "sources::url": "https://www.dnevnik.si/1042926927/Kultura/pomoc-samozaposlenim-v-kulturi-na-cigavi-strani-je-ministrstv",
+                    "sources::d_date": "04/11/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "78",
+                    "updates::d_date": "07/02/2020",
+                    "updates::description": "The second COVID-19 law (ZIUZEOP-A from 30 April 2020) changes the eligibility rules for this measure, qualifying all self-employed persons whose revenue is reduced by 10% in 2020 compared to 2019. \rIn cases of recently established self-employed, the comparative basis is the average monthly income. The law extend the measure also to part-time self-employed, not only to full-time. ",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "329",
+        "modId": "87"
+    },
+    {
+        "fieldData": {
+            "title": "Health and safety at work in the epidemic",
+            "title_nationalLanguage": "Za\u0161\u010dita delavcev na delovnem mestu v \u010dasu epidemij",
+            "d_startDate": "03/19/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "SI-2020-12/439",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "Trade unions have been calling attention to the lack of health and safety measures at work since the outbreak of the pandemic. Workers who had to continue working in large groups or on assembly lines felt left behind. Trade unions reported cases where workers kept working close to each other with no safety equipment. Under the trade union pressure, the Minister of Health issued instructions for companies on how to implement health and safety measures at work.",
+            "descriptionContentOfMeasure": "Experts for occupational medicine participated in drafting instructions for companies, issued on 19 March 2020 by the Minister of Health. They recommended work at a slower pace; rearrangement of workplaces which would guarantee a safe distance between persons; organization of coming to work and leaving in a way that would avoid large gatherings; ban on smoking pauses and breaks which would lead to the creation of groups (Ministry of Health, Measures for health and safety at work during the epidemic). The Association of occupational, transport, and sports medicine also published their own more detailed instructions for companies at its website and offered consultancies on how practically implement safety measures in particular environments. It advised the temporary shutdown of the production process if appropriate safety measures could not be adopted. \rThe Labour Inspectorate recommended work at home when feasible. When this was not possible, the Labour Inspectorate was checking if the company adopted appropriate health and security measures, such as:\r\r* A distance of two metres between workers or the use of safety equipment (masks, gloves, glasses).\r* Availability of soap, warm water, and hand sanitizer.\r* Regular cleaning and disinfection of surfaces in general use (hooks, bathrooms, keyboards, and so on).\r* Awareness about health and safety at work among workers.\r* Participation of an expert for occupational medicine in planning health and safety measures.",
+            "descriptionUseOfMeasure": "The Labour Inspectorate reported about receiving numerous complaints against violation of health and safety at work. On 19 March, the Labour Inspectorate announced more controls. In this domain, the Chamber of Commerce and Industry of Slovenia published an example of good practice from the Chinese owned company Hisense Gorenje, on how to adopt health and safety measures in production.",
+            "descriptionInvolvementOfSocialPartners": "The two Covid-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Negotiated",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-12_439.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "308",
+                    "sources::title": "Ministry for Health, Ukrepi za varovanje zdravja delavcev v \u010dasu epidemije Covid-19 [Measures for health and safety at work during the epidemic",
+                    "sources::url": "https://www.gov.si/assets/ministrstva/MZ/DOKUMENTI/Koronavirus/Ukrepi-za-varovanje-zdravja-delavcev-v-casu-epidemije-COVID-19.pd",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "309",
+                    "sources::title": "The Association of occupational, transport, and sports medicine (ZMDP\u0160), 'Priporo\u010dila za zagotavljanje varnih delovnih pogojev v\r\u010dasu epidemije COVID 19' [Recommendations for safe working conditions during the epidemic",
+                    "sources::url": "https://www.zmdps.si/priporocila-za-zagotavljanje-varnih-delovnih-pogojev-v-casu-epidemije-covid-19/",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "310",
+                    "sources::title": "The Association of free trade unions of Slovenia, 'Izbruh novega koronavirusa' [The outbreak of corona crisis",
+                    "sources::url": "https://www.zsss.si/korona-virus/priporocila-za-zascito-zdravja",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "311",
+                    "sources::title": "Labour Inspectorate, 'Delo na domu in zagotavljanje varnega in zdravega dela v izrednih razmerah' [Work at home \u2013 healthy and safe work in the state of emergency",
+                    "sources::url": "https://www.gov.si/novice/2020-03-18-delo-na-domu-in-zagotavljanje-varnega-in-zdravega-dela-v-izrednih-razmerah/",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "312",
+                    "sources::title": "Labour Inspectorate, 'In\u0161pektorat za delo napoveduje poostren nadzor' [The Labour Inspectorate announces stricter checks",
+                    "sources::url": "https://www.gov.si/novice/2020-03-19-inspektorat-za-delo-napoveduje-poostren-nadzor",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "313",
+                    "sources::title": "The Chamber of Commerce and Industry of Slovenia, 'Primeri praks ravnanja \u010dlanov' [Examples of GZS members",
+                    "sources::url": "https://www.gzs.si/koronavirus/vsebina/Splo%C5%A1ni-poslovni-nasveti/Primeri-praks-ravnanja-%C4%8Dlano",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "330",
+        "modId": "85"
+    },
+    {
+        "fieldData": {
+            "title": "Limitation of certain rights of healthcare workers",
+            "title_nationalLanguage": "Omejitev nekaterih pravic zdravstvenih delavcev",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Mobilisation of a larger workforce",
+            "calc_identifier": "SI-2020-11/441",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "The 'Decree on the limitation of certain rights of healthcare and associated professionals', issued on 12 March 2020, ensures the health safety of healthcare workers and their availability during the pandemic. Two ordinances (from 15 March and 27 March 2020) mandate deployment of doctors without a license and interns. 'Ordinance on temporary measures in health care to control the spread of epidemic COVID-19', published on 31 March, temporarily suspends all non-urgent medical procedures",
+            "descriptionContentOfMeasure": "With the declaration of the epidemic on 12 March 2020, some limitations of the healthcare workers and medical professionals\u2019 rights came into force. They are not allowed to travel to infected areas or areas with the direct risk of infection outside Slovenia. During the epidemic, they have no longer the right to annual leave holiday, the right to strike, and the right to education in infected areas. Two subsequent ordinances mandate participation of doctors without license and interns in healthcare services. The last ordinance from 31 March 2020 suspended all preventive health services. Directors of health centres and hospitals must, at the request of the minister of health, redeploy their staff to tasks related to curbing and managing the epidemic",
+            "descriptionUseOfMeasure": "Measures relate to all healthcare workers in the network of the public health system, public and private alike. They are temporary and valid only until the end of the epidemic.",
+            "descriptionInvolvementOfSocialPartners": " No information yet available.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_441.html",
+            "isOccupation": "Yes",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "314",
+                    "sources::title": "Odredba o omejitvi dolo\u010denih pravic zdravstvenih delavcev in zdravstvenih sodelavcev [Decree on the limitation of certain rights of healthcare and allied professionals",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0531/odredba-o-omejitvi-dolocenih-pravic-zdravstvenih-delavcev-in-zdravstvenih-sodelavce",
+                    "sources::d_date": "03/12/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "315",
+                    "sources::title": "Odlok o razporejanju zdravnikov brez licence [Ordinance on the deployment of doctors without a licence",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0569/odlok-o-razporejanju-zdravnikov-brez-licence",
+                    "sources::d_date": "03/15/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "316",
+                    "sources::title": "Odlok o razporejanju zdravstvenih delavcev in zdravstvenih sodelavcev - pripravnikov na podro\u010dju zdravstvene dejavnosti [Ordinance on the deployment of medical and non-medical professionals - interns in healthcare activities",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ODLO203",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "317",
+                    "sources::title": "Odlok o za\u010dasnih ukrepih na podro\u010dju zdravstvene dejavnosti zaradi zajezitve in obvladovanja epidemije COVID-19 [Ordinance on temporary measures in health care to control the spread of epidemic COVID-19",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ODLO202",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "12",
+                    "occupations::name": "Health associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "occupations::name": "Health professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "332",
+        "modId": "91"
+    },
+    {
+        "fieldData": {
             "title": "Suspension of value added tax (VAT) payment ",
             "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u03a6\u03cc\u03c1\u03bf\u03c5 \u03a0\u03c1\u03bf\u03c3\u03c4\u03b9\u03b8\u03ad\u03bc\u03b5\u03bd\u03b7\u03c2 \u0391\u03be\u03af\u03b1\u03c2 (\u03a6\u03a0\u0391) ",
             "d_startDate": "03/30/2020",
@@ -13591,6 +13977,185 @@
     },
     {
         "fieldData": {
+            "title": "Exemption from companies' obligation to pay pension and disability contributions",
+            "title_nationalLanguage": "Oprostitev pla\u010dila prispevkov za pokojninsko in invalidsko zavarovanje za zaposlene in krizni dodate",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "SI-2020-11/443",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "The 'Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy' (ZIUZEOP), valid since 11 April 2020, alleviate the negative consequences of the pandemic exempting companies from paying pension and disability insurance in April and May 2020 (Article 33). Not included are organisations, directly or indirectly financed by the state budget, financial and insurance companies with more than 10 employees, embassies, and foreign organisations.",
+            "descriptionContentOfMeasure": "All companies (not included are organisations, directly or indirectly financed by the state budget, financial and insurance companies with more than 10 employees, embassies, and foreign organisations) are exempted from paying contributions for pension and disability insurance in April and May 2020. \rMore in detail, the state agreed to pay pensions and disability insurances until to a threshold corresponding to the contribution due for a salary equal to three times the minimum monthly wages. As indicated by the Financial Administration, employers have to pay the difference. \rIn addition, the law compels employers to pay to their employees \u20ac200 per month if the worker's pay is below three minimum monthly wages. The so-called 'crisis bonus' is exempted from all taxes and social security contributions.",
+            "descriptionUseOfMeasure": "The measure addresses all insured persons with salaries below three minimum monthly wages. Publicly-financed organizations (receiving more than 70% of their income from public funds) cannot claim exemption from paying pension and disability insurance. The same holds for companies and organization in the finance and insurance sector. It is a temporary measure for the period of the Covid-19 epidemic.",
+            "descriptionInvolvementOfSocialPartners": "The two COVID-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_443.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "301",
+                    "sources::title": "Financial Administration, 'Preglednica ukrepov' [Table of measures]",
+                    "sources::url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Novice-2020/Preglednica-ukrepov-v-zvezi-z-delom-in-placevanjem-prispevkov-za-socialno-varnost-za-vase-zaposlene.pd",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "79",
+                    "updates::d_date": "07/02/2020",
+                    "updates::description": "The second COVID-19 law ZIUZEOP-A (issued on 30 April 2020) extends the eligibility rules. Employers are exempted from paying \u2018occupational pension\u2019 too. The law also entitles to the full crisis bonus the disabled persons in disability companies and the rehabilitation centers who were working during the epidemics. The bonuses for disabled persons are paid by the government, while employers must cover crisis bonuses for other employees in disability companies and rehabilitation centers. Companies from financial and insurance sector, employing less than 10 workers, may also benefit from the measure",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "334",
+        "modId": "89"
+    },
+    {
+        "fieldData": {
+            "title": "One-time solidarity allowance for retired persons, large families and other vulnerable groups",
+            "title_nationalLanguage": "Enkratni solidarnostni dodatek za upokojence in druge ranljive skupin",
+            "d_startDate": "04/30/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "SI-2020-18/444",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "07/20/2020",
+            "descriptionBackgroundInfo": "The 'Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy ' (ZIUZEOP), adopted by the National Assembly on 2 April 2020, endows retirees and other vulnerable groups with the right to one-time solidarity allowance. The measure aims at preventing social hardship of persons with low incomes under the condition that they are permanent residents in Slovenia. Allowances vary with social groups and their revenues. The measure reaches the following social groups: retirees, unemployed disabled persons, recipients of social benefit, students, and big families.",
+            "descriptionContentOfMeasure": "The main subjects eligible for the 'one-time solidarity allowance' are retirees and unemployed disabled persons with the income below \u20ac700/month. \rThe bonus varies with the income which a person receives: it is \u20ac300 for pensioners with \u20ac500 per month and less, \u20ac230 for those with pensions between \u20ac500.01 and \u20ac600, and \u20ac130 for those with pensions between \u20ac600.01 and \u20ac700. Recipients of social benefits and regular students are entitled to one-time support of \u20ac150. \rAll persons concerned will receive a bonus by the end of April. \rThe \u2018One-time solidarity allowance\u2019 is exempted from taxes, social security contributions, and income tax. \rFor the duration of the epidemic, large families will receive \u20ac100 (families with three children) or \u20ac200 bonus (with four children or more).",
+            "descriptionUseOfMeasure": "One-time solidarity bonus goes to vulnerable social groups whose situation particularly worsened due to the pandemic: retirees and unemployed disabled persons with income below \u20ac700 per month as well as recipients of social benefits and students. Large families exceptionally receive a bonus every month until the end of the epidemic.",
+            "descriptionInvolvementOfSocialPartners": "The two COVID-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-18_444.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "271",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo (ZIUZEOP) [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO819",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "973",
+                    "sources::title": "Zakon o interventnih ukrepih za zajezitev epidemije COVID-19 in omilitev njenih posledic za dr\u017eavljane in gospodarstvo, ZIUZEOP-A [Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy",
+                    "sources::url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2020-01-0901?sop=2020-01-090",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "37",
+                    "targetGroups::name": "Older citizens",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "39",
+                    "targetGroups::name": "Youth (18-25)",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "43",
+                    "targetGroups::name": "Disabled",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "81",
+                    "updates::d_date": "07/02/2020",
+                    "updates::description": "The \u2018Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy\u2019 (ZIUZEOP-A) endows the right of one-time solidarity allowance to some **new groups**. \rDisabled persons who work part-time and are temporarily laid off or who cannot work due to force majeure receive same allowances as retired persons. The right of one-time allowance of \u20ac150 is given to the following groups: family assistants; recipients of family allowance; recipients of childcare allowance, persons on maternity or paternity leave; recipients of partial reimbursement for lost income due to care work; recipients of disability benefits; and recipients of war veterans allowances; foster parents. \rChildren, entitled to child benefits, receive \u20ac30 each",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "335",
+        "modId": "93"
+    },
+    {
+        "fieldData": {
             "title": "Monthly basic income for self-employed",
             "title_nationalLanguage": "Mese\u010dni temeljni dohodek",
             "d_startDate": "03/13/2020",
@@ -13605,7 +14170,7 @@
             "descriptionBackgroundInfo": "The legal provisions contained in the 'Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy (ZIUZEOP)' endows self-employed, clerics and farmers, who cannot carry out their activities or that can do it on a much smaller scale, with the right to a basic income for the time of the epidemic. Those ones concerned are eligible if they prove that their income declined during the crisis and if they have no outstanding debt with the Financial Administration.",
             "descriptionContentOfMeasure": "Monthly basic income is determined at \u20ac350 for March and \u20ac700 for April and May 2020. Eligible persons have to make a request to the Financial Administration, in which they declare that their income decreased at least of 10% in 2020 with respect to 2019, or a 10% lower average monthly revenue compared to pre-crisis period. Later on, beneficiaries will have to return the support received, if in 2020 their income exceeds 90% of their revenue in 2019. The financial administration is appointed to manage claims for basic income.The measure addresses self-employed, clerics and farmers who have no other insurance deriving from other types of employment. The measure is limited to the period between 13 March and 31 May 2020. After 31 May no new claims are possible.",
             "descriptionUseOfMeasure": "While the first COVID-19 law (ZIUZEOP, issued on 10 April 2020) was in parliamentary procedure, non-governmental organizations protested against discriminatory \u201creferential period\u201d for self-employed persons. While referential period for companies was one year, it was one month (February) for self-employed. NGOs said that this rule exclude many self-employed persons, since they receive their fees irregularly and many may have had no money inflows in February. Their proposal was not integrated into the first COVID-19 law, issued on 10 April 2020. \r\rTwo cultural organizations (the Association of Slovene Film Directors and the Association of Cultural Workers) organized on-line surveys on how many of their self-employed members do not qualify for the income income and for the annulled payment of social security contributions. An on-line survey of the first association showed that 84% of film directors and screenwriters are not eligible, while the other association came up with the figure of one-quarter of respondents. It is mainly due to the irregularity of their income and the fact that the government suspended the payment of subsidies to the already done or agreed work (Association of Slovene Film Directors, email, 13 April 2020). Associations stressed that the emergency measure left out the most socio-economically deprived group of self-employed (\u0160u\u010dur, 2020).\r\rThe second COVID-19 law (ZIUZEOP-A from 30 April 2020) adopted their proposals: it extended the referential period as well as the group of eligible persons (besides full-time also part-time self-employed).",
-            "descriptionInvolvementOfSocialPartners": "The two Covid-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "descriptionInvolvementOfSocialPartners": "The two COVID-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
             "socialPartner_form": "Other",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_445.html",
@@ -13694,7 +14259,7 @@
             "regions": []
         },
         "recordId": "336",
-        "modId": "91"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -13798,7 +14363,7 @@
             "descriptionBackgroundInfo": "The 'Intervention Measure Act on Deferred Payments of Borrowers' Obligations (ZIUOPOK, adopted on 20 March 2020) determines postponement of debt repayment for twelfth months. The next law (\u2018Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy\u2019, ZIUZEOP), adopted on 2 April 2020, offers state guarantees for the repayment of debt. From a general point of view, the deferral of payments, in the Slovenian legal framework, is an emergency measure for preventing severe economic damage and preserving financial stability in the Republic of Slovenia. It determines the postponement of outstanding debt for twelfth months. The measure concerns companies, farmers, not-for-profit organizations, and individual persons. The temporary failure of debt service must be a consequence of the epidemic. Company or person can apply for postponement of payments to the bank within six months after the end of the state of emergency. The borrower is obliged to monthly reporting on solving financial difficulties.",
             "descriptionContentOfMeasure": "Intervention Measure Act on Deferred Payments of Borrowers' Obligations (ZIUOPOK, adopted on 20 March 2020) determines postponement of debt repayment for twelfth months. The next law (\u2018Act Determining the Intervention Measures to Contain the COVID-19 Epidemic and Mitigate its Consequences for Citizens and the Economy\u2019, ZIUZEOP), issued on 10 April 2020, offers state guarantees for the repayment of debts. Guarantees may amount to 25% of installments for which the bank and the creditor agreed to postpone. They may amount to 50% for individual persons or companies whose activities were closed down by state or local authorities during the pandemic. Guarantees also apply to newly settled credits intending to provide liquidity for business firms. The total sum of the guarantee fund is \u20ac200 million.",
             "descriptionUseOfMeasure": "Deferred payments of debt and state guarantees address the needs of companies, farmers, not-for-profit organizations, and individual persons. A bank which does not consent to the justified request for the postponement of borrower\u2019s obligations can be fined up to \u20ac250,000. State-owned SID Bank administers the state guarantees. Bank of Slovenia and Market Inspection survey and control the implementation of the two laws. For the duration of the deferral of payments, the company cannot pay profits, performance bonuses, and any financial liabilities to the parent or affiliated companies or owners. \rCompanies \u2018in difficulties\u2019 are excluded from state guarantees. ",
-            "descriptionInvolvementOfSocialPartners": "The two Covid-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "descriptionInvolvementOfSocialPartners": "The two COVID-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
             "socialPartner_form": "Other",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_447.html",
@@ -13872,7 +14437,7 @@
             "regions": []
         },
         "recordId": "338",
-        "modId": "88"
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -16094,7 +16659,7 @@
             "descriptionBackgroundInfo": "The first and second COVID-19 law (ZIUZEOP and ZIUZEOP-A) introduce some changes in insolvency proceedings and compulsory dissolution. The measure aims at protecting companies from bankruptcies due to negative consequences of the epidemic. The management can abstain from the duty to start the compulsory settlement or bankruptcy until 31 August if the company became insolvent because of the epidemic. When a creditor files for a bankruptcy proceeding over a debtor, the debtor will have 4 months instead of current 2 months for financial restructuring to prevent bankruptcy. Extensions will be applicable to bankruptcy proceedings, filed for by creditors until 31 August 2020. Other changes tackle compensation of unpaid wages from the Guarantee Fund, personal bankruptcy procedures, and enforcement proceedings.",
             "descriptionContentOfMeasure": "Deferred compulsory settlement or bankruptcy means that management is not obliged to start this procedure during the period of epidemic and the three succeeding months (until 31 August). The management can abstain from the duty if the company becomes insolvent due to the state, ministry or local authority\u2019s ban on production or trade or if company was solvent on 31 December 2020.\r \rOn the other hand, the law reinforces some workers\u2019 rights. Workers can have easier access to reimbursements of the Public Scholarship, Development, Disability and Maintenance Fund of the Republic of Slovenia (Guarantee Fund) for unpaid wages in the last three months, unpaid sick leave, annual leave and severance payment. Employees are entitled to compensation from the Guarantee Fund if they filed for a bankruptcy proceeding. This rule is valid until 30 June 2020. From July 2020, workers again needs court\u2019s final decision in a bankruptcy proceeding to get access to the Guarantee Fund. Employees may have also easier access to the Guarantee Fund if they have not received wage compensations one month from the time the state paid reimbursements to their employers. In these cases, the employer is presumed no longer solvent (presumption is valid until September 2020) and employees may file for a bankruptcy proceeding. If they do so, they are exempt from paying the advance for costs of a bankruptcy proceeding. \r\rAs for personal bankruptcy and enforcement, the law stipulates that payments under emergency laws are not the object of personal bankruptcy and enforcement. Exceptions are made for wage compensation. \r\rFinally, during the COVID-19 epidemic the enforcement proceedings are temporarily suspended. Exemptions are enforcement based on a claim for legal alimony and other urgent matters, determined by the court.",
             "descriptionUseOfMeasure": "Emergency regulation on insolvency curbs the risks of bankruptcies on the one hand, while protects the interests of workers on the other. The exemption of payments under emergency regulation from bankruptcy estate protects persons in the personal bankruptcy procedure.",
-            "descriptionInvolvementOfSocialPartners": "The two Covid-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
+            "descriptionInvolvementOfSocialPartners": "The two COVID-19 laws (ZIUZEOP and ZIUZEOP-A) were adopted under an accelerated procedure with no involvement of the Economic and Social Council. Its functioning was blocked because the new government, which came to power on 13 March 2020, had not appointed its members in the Economic and Social Council. On 20 April, trade unions protested against the exclusion of social partners in the preparation of the second emergency law (ZIUZEOP-A). They demanded the reactivation of the Economic and Social Council. The first meeting of the Economic and Social Council was held not before 15 May 2020. The Council then became involved in negotiations about the third emergency law ZIUOOPE, issued on 30 May 2020",
             "socialPartner_form": "Other",
             "socialPartner_role": "Consulted",
             "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-11_481.html",
@@ -16190,7 +16755,7 @@
             "regions": []
         },
         "recordId": "372",
-        "modId": "100"
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -16752,138 +17317,6 @@
         },
         "recordId": "383",
         "modId": "89"
-    },
-    {
-        "fieldData": {
-            "title": "COVID-19: Income support for workers",
-            "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19 \u043c\u044f\u0440\u043a\u0430: \u041f\u043e\u0434\u043f\u043e\u043c\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0440\u0430\u0431\u043e\u0442\u0435\u0449\u0438\u0442\u0435 \u0432 \u0440\u0435\u0430\u043b\u043d\u0438\u044f \u0441\u0435\u043a\u0442\u043e\u0440",
-            "d_startDate": "03/13/2020",
-            "d_endDate": "",
-            "calc_country": "Bulgaria",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "BG-2020-11/494",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/12/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "Key tax and spending measures have been implemented under the revised 2020 state budget, allowing for a budget deficit of BGN 3.5 billion (\u20ac1,75 billion) and increased ceiling on newly incurred public debt of up to BGN 10 billion (approx. \u20ac5 billion) for 2020. \r\rBy doing so, the Bulgarian government is able to implement a measure that will cover 60% of the wages of employees in affected sectors that would otherwise have been laid off, including the social security contributions that are to be paid by the employers (over 1.2 percent of 2019 GDP). ",
-            "descriptionContentOfMeasure": "The Emergency and Measures Act adopted measures to compensate for the businesses affected by the epidemic. The following types of activities remain outside the scope of the measures - Classes A - Agriculture, K - Financial and Insurance Activities, O - Government, P - Education, Q - Human Health and Social Work, T - Household Activities as Employers, and U - activities of extraterritorial organizations and services. \r\rAll other companies outside the above may apply for compensation. Those whose activities that are directly prohibited by restrictive measures do not need to prove a reduction in their income (it is presumed). Businesses that do not have a direct prohibition of activity may apply if their earnings in the month preceding the application have decreased by 20% compared to the same month in 2019. In addition, the employer cannot dismiss employees for whom he or she receives compensation, after the end of the state of emergency for an additional period equal to that for which he was compensated. Employers will be able to establish part-time work for the whole enterprise or its unit and at the same time receive compensation in proportion to the reduced working hours.",
-            "descriptionUseOfMeasure": "More than 80% of employees can benefit from the measures and most of the employers in the country. So far, (mid April 2020) over 800 companies have benefited from the measure.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Negotiated",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_494.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "388",
-                    "sources::title": "International Monetary Fund",
-                    "sources::url": "https://www.imf.org/en/Topics/imf-and-covid19/Policy-Responses-to-COVID-19",
-                    "sources::d_date": "04/12/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "390",
-                    "sources::title": "873 \u043c\u043e\u043b\u0431\u0438 \u0441\u0430 \u043f\u043e\u0434\u0430\u0434\u0435\u043d\u0438 \u043f\u043e \u043c\u044f\u0440\u043a\u0430\u0442\u0430 60/40",
-                    "sources::url": "https://btvnovinite.bg/bulgaria/873-molbi-sa-podadeni-po-mjarkata-60-40.htm",
-                    "sources::d_date": "04/08/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "601",
-                    "sources::title": "\u0417\u0418\u0414 \u043d\u0430 \u0417\u0414\u0411\u0420\u0411 \u0437\u0430 2020 \u0433., \u043f\u0440\u0438\u0435\u0442 \u043e\u0442 \u041d\u0421 \u043d\u0430 06.04.2020 \u0433.",
-                    "sources::url": "https://parliament.bg/bg/laws/ID/157391",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "766",
-                    "sources::title": "companies are applying for the measure 60/40",
-                    "sources::url": "https://news.bnt.bg/news/ot-utre-firmite-kandidatstvat-po-myarkata-60-40-1046377news.html",
-                    "sources::d_date": "03/30/2019",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "3",
-                    "actors::name": "Trade unions",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "48",
-                    "targetGroups::name": "Seasonal workers",
-                    "modId": "14"
-                },
-                {
-                    "recordId": "51",
-                    "targetGroups::name": "Other groups of workers",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "4",
-                    "funding::name": "Employers organisation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [
-                {
-                    "recordId": "2",
-                    "occupations::name": "Administrative and commercial managers",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "13",
-                    "occupations::name": "Business and administration associate professionals",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "8",
-                    "occupations::name": "Business and administration professionals",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1",
-                    "occupations::name": "Chief executives, senior officials and legislators",
-                    "modId": "0"
-                }
-            ],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "385",
-        "modId": "115"
     },
     {
         "fieldData": {
@@ -19824,7 +20257,7 @@
                     "sources::title": "DECRETO-LEI N.\u00ba 10-A/2020 - DI\u00c1RIO DA REP\u00daBLICA N.\u00ba 52/2020, 1\u00ba SUPLEMENTO, S\u00c9RIE I DE 2020-03-13",
                     "sources::url": "https://dre.pt/web/guest/legislacao-consolidada/-/lc/130660075/202003240000/73801265/diplomaPagination/diploma/2?did=130241777",
                     "sources::d_date": "03/13/2020",
-                    "modId": "5"
+                    "modId": "6"
                 }
             ],
             "actors": [
@@ -22766,135 +23199,6 @@
         },
         "recordId": "521",
         "modId": "76"
-    },
-    {
-        "fieldData": {
-            "title": "Corona - Arts and culture - Overview of support measures for artists",
-            "title_nationalLanguage": "Corona Kunst und Kultur",
-            "d_startDate": "03/30/2020",
-            "d_endDate": "",
-            "calc_country": "Austria",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "AT-2020-14/631",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "07/10/2020",
-            "descriptionBackgroundInfo": "'There are very specific measures for the arts and culture to cover the special features of the cultural scene. But of course artists also have access to the entire range of support. We want to prevent people from losing their jobs, their income and at all costs everyday life can no longer afford. Nobody should be left behind ' explains State Secretary for Art and Culture Ulrike Lunacek on the unprecedented situation, which is very challenging for the entire art and culture business.\r\rThe federal government's mix of measures to combat the effects of COVID-19 includes a range of support for the cultural sector. ",
-            "descriptionContentOfMeasure": "An overview of measures for artists is available on the [Federal government's page:](https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html)\r\rIn addition to the general support measures set by government (for example, the [Corona short time work scheme](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-10_229.html) or the [hardship fund for self-employed](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_212.html)), the page also lists specific funds which are only available for artists.\r\rThis includes, for instance:\r\r* COVID-19 fund for artists and intermediaries ('Kulturvermittler');\r* All artists who are not eligible to apply the hardship fund of the Austrian Chamber of Commerce can bring an application to the KSVF (Artist Social Insurance Fund) from 30 March 2020. \r\rThe support is intended to compensate for the loss of income caused by closings and cancellations. \r\rThe KSVF's COVID-19 fund is endowed with up to \u20ac5 million and is intended to ensure rapid aid. In addition to artists, cultural mediators can now apply for this grant. The amount paid out by the KSVF corresponds to that of the hardship fund. The fund consists of two phases:\r\r* in the first phase \u20ac1,000 are paid as emergency aid (until 2 July 2020), \r* in the second phase (starting on 10 July), a one-time payment of \u20ac3,000 is paid (amount received from phase 1 is deducted)\r\rA separate service page has been set up for loss of income due to the Corona measures: KSVF service fund.\r\rIndividual funds run by copyright collecting societies (e.g. music, visual arts, film-making, etc.). Seven dedicated funds are also listed on the webpage.\r\rIn addition to the state instruments for compensating artists' loss of income, there is now also a private initiative. To help artists in the current crisis, foundations have joined together to form the \"Foundations Help Artists\" initiative and are supported by well-known people.\r\rWork grants from the City of Vienna due to COVID-19: Since the end of March, freelance artists and freelance scientists with their main residence in Vienna have been able to apply for one-time work grants of up to \u20ac3,000. In this crisis situation, there should be the opportunity to continue to pursue artistic and scientific activities (project development, reading, exhibition and lecture preparation and the like).",
-            "descriptionUseOfMeasure": "Not available yet.",
-            "descriptionInvolvementOfSocialPartners": "Social partner involvement is unknown.",
-            "socialPartner_form": "Unknown",
-            "socialPartner_role": "Not applicable",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-14_631.html",
-            "isOccupation": "Yes",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "508",
-                    "sources::title": "Corona arts and culture (Corona Kunst und Kultur)",
-                    "sources::url": "https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "513",
-                    "sources::title": "AKM and OESTIG set up emergency fund for musicians",
-                    "sources::url": "https://www.ots.at/presseaussendung/OTS_20200313_OTS0040/akm-und-oestig-richten-kultur-katastrophenfonds-fuer-musikschaffende-ein",
-                    "sources::d_date": "03/13/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "620",
-                    "sources::title": "Artists social insurance fund (K\u00fcnstler-Sozialversicherungsfonds)",
-                    "sources::url": "https://www.ksvf.at/covid-19.html",
-                    "sources::d_date": "04/16/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "6",
-                    "actors::name": "Other social actors (e.g. NGOs)",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "7",
-                    "actors::name": "Local / regional government",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "32",
-                    "targetGroups::name": "Particular professions",
-                    "modId": "14"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "6",
-                    "funding::name": "Local funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "11",
-                    "funding::name": "Other",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [
-                {
-                    "recordId": "10",
-                    "occupations::name": "Legal, social and cultural professionals",
-                    "modId": "0"
-                }
-            ],
-            "sectors": [
-                {
-                    "recordId": "122",
-                    "sectors::code": "R90",
-                    "sectors::name": "Creative, arts and entertainment activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [
-                {
-                    "recordId": "140",
-                    "updates::d_date": "07/09/2020",
-                    "updates::description": "An update of the COVID-19 fund by KSVF was provided.",
-                    "modId": "1"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "522",
-        "modId": "85"
     },
     {
         "fieldData": {
