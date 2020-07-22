@@ -3188,6 +3188,166 @@
     },
     {
         "fieldData": {
+            "title": "Outstanding tax payments postponed to October",
+            "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03c6\u03bf\u03c1\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ce\u03bd \u03c5\u03c0\u03bf\u03c7\u03c1\u03b5\u03ce\u03c3\u03b5\u03c9\u03bd \u03ad\u03c9\u03c2 \u03c4\u03bf\u03bd \u039f\u03ba\u03c4\u03ce\u03b2\u03c1\u03b9\u03bf",
+            "d_startDate": "03/11/2020",
+            "d_endDate": "10/31/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "GR-2020-11/280",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/04/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The Greek government's package of measures to support businesses and individuals affected by coronavirus measures began its implementation Friday (20 March 2020)\u00a0 and it is still on going until 31 October 2020.Specifically, payment of outstanding debts that had a deadline between March 11 and April 30, 2020, will be extended to August 31. The same will hold true of debts under an installment plan. The same exact dates of payment deadlines and the August extension also holds true for VAT-related debts.",
+            "descriptionContentOfMeasure": "By virtue of A.1074/2020 as amended by A.1085/2020 & A.1075/2020 as amended by A.1086/2020, Art. 14 L.4690/2020, \u0391.1148/2020 & \u0391.1149/2020, the measure applies to: \r\r1. Businesses that have ceased their operations with a State decision\r2. Businesses that have been substantially affected by the situation.\r3. Employees whose contracts are temporarily suspended. \r4. Individuals eligible to receive the financial support of \u20ac800. \r5. Natural persons - owners who lease their estate to said businesses\u00a0and their employees.\r\rGreek authorities have created a list of the latter based on the Code of Business Activity (\u039a\u0391\u0394) as this has been declared to the Tax Authorities. For these companies, and only in the condition that they will not dismiss any personnel, payments related to tax liabilities and monthly instalments\u00a0are suspended or extended till 31 October 2020 without interest or surcharges.\rFor businesses which compulsorily discontinue their operation due to the spread of coronavirus or their KAD is included in the list of the Ministry of Finance, there is a provision by law that they will pay 60% of the rent on the commercial property for the months of March and April. The same applies to the rent of employees of undertakings who are compulsorily ceasing their activity due to the spread of the coronavirus and whose employment contract is suspended, on the condition that this is their first residence.",
+            "descriptionUseOfMeasure": "The estimation is 500,000 companies with more than 1,5 million employees.",
+            "descriptionInvolvementOfSocialPartners": "Not known.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-11_280.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "129",
+                    "sources::title": "Outstanding tax payments in Greece postponed to Augus",
+                    "sources::url": "https://www.tornosnews.gr/en/greek-news/economy/39435-outstanding-tax-payments-in-greece-postponed-to-august.htm",
+                    "sources::d_date": "03/21/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "130",
+                    "sources::title": "\u039a\u03bf\u03c1\u03bf\u03bd\u03bf\u03ca\u03cc\u03c2: A\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u03a6\u03a0\u0391 \u03ba\u03b1\u03b9 \u03b2\u03b5\u03b2\u03b1\u03b9\u03c9\u03bc\u03ad\u03bd\u03c9\u03bd \u03bf\u03c6\u03b5\u03b9\u03bb\u03ce\u03bd \u03c4\u03c9\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd \u03c0\u03bf\u03c5 \u03b5\u03c0\u03bb\u03ae\u03b3\u03b7\u03c3\u03b1",
+                    "sources::url": "https://www.epixeiro.gr/article/17367",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "636",
+                    "sources::title": "suspension of tax and VAT payments",
+                    "sources::url": "https://covid19.gov.gr/anastoli-paratasi-ekptosi-pliromon",
+                    "sources::d_date": "04/05/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1203",
+                    "sources::title": "Law 4690/2020",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8- 11WGLkYj8Z5MXD0LzQTLWPU9yLzB8V68knBzLCmTXKaO6fpVZ6Lx3UnKl3nP8NxdnJ5r9cmWyJWelDvWS_18kAEhATUkJb0x1LIdQ163nV9K--td6SIuY8BZwXQHhcod6cUC5Ygay8wxapHPUJW6i8lMYUvqxMF",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "11",
+                    "funding::name": "Other",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "163",
+        "modId": "98"
+    },
+    {
+        "fieldData": {
+            "title": "Reduced lease payments for commercial leases and primary residences as well as for financial lease",
+            "title_nationalLanguage": "\u039c\u03b5\u03af\u03c9\u03c3\u03b7 \u03b5\u03bd\u03bf\u03b9\u03ba\u03af\u03bf\u03c5 \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03b9\u03ba\u03ae\u03c2 \u03c3\u03c4\u03ad\u03b3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03c1\u03ce\u03c4\u03b7\u03c2 \u03ba\u03b1\u03c4\u03bf\u03b9\u03ba\u03af\u03b1\u03c2",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "04/30/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "GR-2020-10/282",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/04/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "According to Legislative Act 11.03.2020/2020, Legislative Act 20.03.2020/2020, art.46 L.4683/2020, Art. 4 L. 4690/2020, Art.15 - L.4690/2020 & \u0391.1135/2020 as amended by A.1146/2020 & \u0391.1164/2020\u00a0, the following measure (in accordance with other legislative measures) was announced for dealing with the potential economic effects of the coronavirus spread (COVID-19) and the support of the economy and entrepreneurship. As such, from March until\u00a0August 2020, rent will be reduced by 40% for all businesses the activities of which have been suspended by state decree\u00a0and\u00a0for individuals working at such businesses (or their spouse or the other party of a partnership agreement)\u00a0 but only when the home is their primary residence or as student residence for their dependent members.\u00a0",
+            "descriptionContentOfMeasure": "By virtue of the Legislative Act 11.03.2020/2020, Legislative Act 20.03.2020/2020, art.46 L.4683/2020, Art. 4 L. 4690/2020, Art.15 - L.4690/2020 & \u0391.1135/2020 as amended by A.1146/2020 & \u0391.1164/2020, enterprises, whose operation has been mandatorily suspended or temporarily interrupted based on special  and extraordinary measures taken for precautionary or repressive purposes in relation to the coronavirus spread, shall be exempted from paying 40% of the total amount of rent due for the months March till August\u00a0 2020 for  the commercial premises that they lease (i.e. they can pay only 60% of their rent, in derogation from the legal provisions on leases). \r\rStamp duty and VAT shall be re-calculated and remitted on the amount of rent that will result  following the above partial payment; The above exemption shall also  apply in cases of financial leases of movable or immovable assets intended exclusively to be used for business purposes by the above mentioned enterprises.the following measure (in accordance with other legislative measures) was announced for dealing with the potential economic effects of the coronavirus spread (COVID-19) and the support of the economy and entrepreneurship.\u00a0The above exemption shall also apply for residential leases that concern the primary residence of lessees who are employees (or their spouse or the other party of a partnership agreement).f the above mentioned enterprises, on condition that the employment relationship was already in effect at the time the special and extraordinary measures for the suspension or temporary interruption of the enterprise\u2019s operation were imposed.",
+            "descriptionUseOfMeasure": "No available information.",
+            "descriptionInvolvementOfSocialPartners": "Not known",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-10_282.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "713",
+                    "sources::title": "Act of  Legislative Content of 11.03.2020 \"Emergency contingency measures to tackle the adverse effects of the outbreak of  COVID-19 and to address the need to  limit the spread of the virus\u00bb \r",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8ExDiwSIm0cLtIl9LGdkF53UIxsx942nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijP3fNjb3qKpGxGNtxU_uAtLw56ULsxCc54tGXdl9oyQ1\r",
+                    "sources::d_date": "03/11/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1205",
+                    "sources::title": "Law 4683/10.04.2020",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8u8Ba_xZ1WCXtIl9LGdkF53UIxsx94 2CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijDvRysmIdVvLrpgpMPxJeljCPno9sz64m7tFy4dr7W0K",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1206",
+                    "sources::title": "Ministerial Decision A 1146/2020",
+                    "sources::url": "\u03a5\u03c0\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03ae \u0391\u03c0\u03cc\u03c6\u03b1\u03c3\u03b7 \u0391 1146/2020",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1207",
+                    "sources::title": "Ministerial Decision A. 1164/2020",
+                    "sources::url": "\u03a5\u03c0\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03ae \u0391\u03c0\u03cc\u03c6\u03b1\u03c3\u03b7 \u0391. 1164/2020",
+                    "sources::d_date": "07/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "165",
+        "modId": "97"
+    },
+    {
+        "fieldData": {
             "title": "Acceleration of income tax and VAT refund",
             "title_nationalLanguage": "\u0395\u03c0\u03b9\u03c4\u03ac\u03c7\u03c5\u03bd\u03c3\u03b7 \u03b5\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae\u03c2 \u03c6\u03cc\u03c1\u03c9\u03bd \u03c3\u03b5 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2",
             "d_startDate": "03/20/2020",
@@ -3618,6 +3778,79 @@
         },
         "recordId": "169",
         "modId": "132"
+    },
+    {
+        "fieldData": {
+            "title": "Deductions from assessed tax liabilities for companies retaining employees",
+            "title_nationalLanguage": "\r\u0388\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7 25% \u03b3\u03b9\u03b1 \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03b2\u03b5\u03b2\u03b1\u03b9\u03c9\u03bc\u03ad\u03bd\u03c9\u03bd \u03bf\u03c6\u03b5\u03b9\u03bb\u03ce\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c6\u03c5\u03c3\u03b9\u03ba\u03ce\u03bd \u03c0\u03c1\u03bf\u03c3\u03ce\u03c0\u03c9\u03bd\r\u0388\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7 25% \u03b3\u03b9\u03b1 \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03b2\u03b5\u03b2\u03b1\u03b9\u03c9\u03bc\u03ad\u03bd\u03c9\u03bd \u03bf\u03c6\u03b5\u03b9\u03bb\u03ce\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c6\u03c5\u03c3\u03b9\u03ba\u03ce\u03bd \u03c0\u03c1\u03bf\u03c3\u03ce\u03c0\u03c9",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "GR-2020-14/287",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/05/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "Legislative Act 30 March 2020/2020, Law 4682/03.04.2020\u00a0and recent\u00a0Law 4701/01.07.2020 (article 36) include provisions to support businesses economically affected by the COVID-19 crisis by providing (among others): a 25% reduction of assessed liabilities on installments of tax payments that\u00a0were due between 30 March 2020 through 30 April 2020, 1 May to 31 May 2020 and 1 June to 30 June 2020 respectively. The 25% discount applies also on installments for tax liabilities (including VAT and withholding taxes) under a settlement scheme, provided that no past installment is overdue",
+            "descriptionContentOfMeasure": "By virtue of the Legislative Act 30 March 2020/2020 and subsequent Laws 4682/03.04.2020\u00a0and\u00a04701/01.07.2020 (article 36) entities, whose operation has been mandatorily suspended or have been economically affected because of COVID-19 (their main activity must be among the specific Activity Code Numbers announced by the Ministry of Finance on 26 March 2020), including freelancers and individual entrepreneurs, individuals eligible to receive the financial support of \u20ac800, are entitled to a 25% deduction on their installments in relation to \r\r* assessed tax liabilities and \r* settled tax liabilities on the basis of a special settlement or payment facilitation process, which\u00a0were due  on 30 March 2020 through to 30 April 2020, 1 May to 31 May 2020 and 1 June to 30 June 2020 respectively, on condition that these payments are timely settled. \r\rThe above deduction does not apply to liabilities arising from the retrieval of government reliefs nor to tax liabilities towards foreign states. By virtue of special Ministerial Decision, the timely payment of the March tax liabilities, which are eligible for the 25% deduction, has been extended to 10 April. Based on relevant announcements by the Ministry of Finance,  the above reliefs shall apply on condition that the beneficiary enterprises will retain \rthe existing number of their employees.\r\r\r",
+            "descriptionUseOfMeasure": "Entities whose operation has been mandatorily suspended (249,474) or have been economically affected (595,395) because of COVID-19 (their main activity must be among the specific Activity Code Numbers announced by the Ministry of Finance on 26 March 2020), as well as freelancers and individual entrepreneurs.\r\r",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-14_287.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "714",
+                    "sources::title": "Act of Legislative Content of 30.03.2020 \"Measures to combat the pandemic of coronavirus COVID-19 and other urgent provisions\"\r",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL80cV-U9HiiGLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijNgwgWjea8J2rK1WVS135n0kJ4A6-bChGSocWFWnc1Oo\r",
+                    "sources::d_date": "03/30/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1200",
+                    "sources::title": "Law 4701/2020 \u201cFramework for Microcredit provision, financial sector regulations and other provisions\u201d ",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-trapezes-pistotika-idrumata/nomos-4701-2020-phek-128a-30-6-2020.html",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1201",
+                    "sources::title": "Law 4682/2020 Government Gazette 46/A/3 April 2020.",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-ygeia/astheneies/nomos-4682-2020-phek-46a-3-4-2020.html",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "170",
+        "modId": "107"
     },
     {
         "fieldData": {
@@ -8166,6 +8399,100 @@
         },
         "recordId": "248",
         "modId": "109"
+    },
+    {
+        "fieldData": {
+            "title": "Soft loans to provide liquidity in the most affected sectors",
+            "title_nationalLanguage": "Lengvatin\u0117s paskolos likvidumui palaikyti labiausiai paveiktiems sektoriams",
+            "d_startDate": "04/16/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "LT-2020-16/359",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/07/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The National Development Agency (INVEGA) plans to provide soft loans to companies through financial institutions to maintain companies\u2019 liquidity. Loans are granted to companies if the turnover has fallen by more than 60% as a result of the COVID-19 pandemic.The terms and conditions of loans are regulated by the Regulations on the provision of guarantees for small and medium business loans, as approved by the Order No. 4-188 of the Minister for the Economy and Innovation of the Republic of Lithuania of 27 March 2020.  \r",
+            "descriptionContentOfMeasure": "The measure is targeted at small- and medium-sized businesses operating in the most affected sectors, i.e. where activities are completely banned and there is no turnover or it has fallen by more than 60%. The size of the loan will be limited to the amount needed to cover the company's necessary expenses. The financial institution will calculate how much money the company needs to survive (for salaries, rent, etc). for the period from 16 March 2020 to 31 July 2020 and will pay that amount to the company. Business entities will start repaying the loan 6 months after receiving the loan. The maximum amount of the loan is of \u20ac100,000. The company will pay a fixed interest rate depending on the duration of the loan - 0.1% for the loans shorter than 12 months, 0.19% - for the loans that will be repaid in 13 - 36 months. ",
+            "descriptionUseOfMeasure": "No information yet available.",
+            "descriptionInvolvementOfSocialPartners": "No information available.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-16_359.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "200",
+                    "sources::title": "LR ekonomikos ir inovacij\u0173 ministro \u012fsakymas Nr. 4-188 (2020-03-27)",
+                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/e96a3f05706a11eaa38ed97835ec4df6?jfwid=-1cf20o8km",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "505",
+                    "sources::title": "Invega informacija",
+                    "sources::url": "https://invega.lt/wp-content/uploads/Likvidumo-paskola-01.png",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "226",
+                    "updates::d_date": "04/24/2020",
+                    "updates::description": "As of 24 April 2020, the eligibility criteria for the support have been changed. Currently the eligibility criteria for the support are the following: \r\r1. the monthly turnover of the company decreased by 30% as compared to the average monthly turnover in 2019 (i.e. the monthly turnover of the borrower after 16 March 2020 is compared with the average monthly turnover in 2019);  \r2. the company has retained at least 50% of the employees compared to the number of employees on 1 March 2020.\r3. The company will pay a fixed interest rate depending on the duration of the loan:\r    * 0.1% for the loans shorter than 12 months;\r    * 0.19% for the loans that will be repaid in 13-36 months;\r    * 0.69% for the loans that will be repaid in 37-72 months.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "250",
+        "modId": "89"
     },
     {
         "fieldData": {
@@ -13325,6 +13652,89 @@
     },
     {
         "fieldData": {
+            "title": "Extraordinary financial incentive to support the normalisation of business activity",
+            "title_nationalLanguage": "Incentivo financeiro extraordin\u00e1rio para apoio \u00e0 normaliza\u00e7\u00e3o da atividade\u00a0da empresa",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Portugal",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "PT-2020-13/433",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "This exceptional and temporary measure, set by Decree-Law 10-G/2020 of 26 March, aims\u00a0 \rto respond to the COVID-19 pandemic,\u00a0aiming at\u00a0maintaining employment and the mitigation of situations relation to business crisis for companies. \r\rFollowing \u00a0the period of temporary reduction of the normal working time or suspension of the employment contract provided for in the legislation under simplified conditions, businesses are entitled to\u00a0an extraordinary financial incentive to support the normalisation of the activity, in order to facilitate a gradual relaunch of work.\r\rThe Resolution of the Council of Ministers no. 41/2020, of 6 June, extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery.\r",
+            "descriptionContentOfMeasure": "Companies in crisis situation as a result of: i) a complete halt in the activity or ii) an abrupt and sharp decrease of activity of at least 40% of revenue have access to a temporary and\u00a0extraordinary financial incentive to support the normalisation of the activity. \r\rFollowing\u00a0\u00a0the period of temporary reduction of the normal working time or suspension of the employment contract provided for in the legislation under simplified conditions, the employers are entitled to this temporary and extraordinary financial incentive to support the\u00a0upturn\u00a0of the business activity. \r\rThis incentive is paid as a lump sum by the Institute of Employment and Vocational Training (Instituto do Emprego e Forma\u00e7\u00e3o Profissional, I.P. - IEFP, I.P.). \r\rThe amount to be paid is equal to the value of one national minimum wage per worker.\r\r",
+            "descriptionUseOfMeasure": "Information released by the Ministry of Labour, Solidarity and Social Security (MTSS) \u2013 April 2020 - 'COVID-19 | Informa\u00e7\u00e3o relativa a fam\u00edlias e empresas no \u00e2mbito do MTSSS' \r\r**Information on 7 April:**\rLayoff around 40,000 companies/ encompassing around 642,000 workers. In terms of sectors 24.2% are companies in the Accommodation and Food Services, 19.9% in Wholesale and Retail, 9.3% in Manufacturing Industry and 8.9% in Human Health and Social Support Activities.\r\r**Information on 6 June:**\rAccording to the information provided by the Resolution of the Council of Ministers 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme, the simplified layoff regime covered around 100,000 companies and 800,000 workers.",
+            "descriptionInvolvementOfSocialPartners": "Tripartite consultation involving the government, the trade union confederations CGTP and UGT and the employer confederations CIP, CCP, CTP and CAP at the Standing Committee for Social Concertation.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_433.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "151",
+                    "sources::title": "Decreto-Lei n.\u00ba 10-G/2020,  Di\u00e1rio da Rep\u00fablica n.\u00ba 61/2020\rSuplemento, S\u00e9rie I de 2020-03-",
+                    "sources::url": "https://dre.pt/pesquisa/-/search/130779506/details/maximized",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "1098",
+                    "sources::title": "Resolu\u00e7\u00e3o do Conselho de Ministros n.\u00ba 41/2020",
+                    "sources::url": "https://data.dre.pt/eli/resolconsmin/41/2020/06/06/p/dre",
+                    "sources::d_date": "06/06/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "181",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "The Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery (2.2.1). It introduces also a one-off measure, the Stabilisation Complement to improve income of workers under layoff (2.3). \r\rCompanies that remain closed as determined by the government continue to benefit from the simplified layoff regime; the simplified layoff, in the model currently in force, is extended until the end of July; companies that have a reduction of revenue equal to or greater than 40% may benefit, between August and December 2020, from a support mechanism for progressive recovery; companies that have benefited from the simplified layoff regime can now benefit from an extraordinary incentive to normalize business activity, choosing one of two modalities: one minimum wage (\u20ac 635) one-off or two minimum wages over six months, per job in lay-off.\r\r",
+                    "modId": "6"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "324",
+        "modId": "90"
+    },
+    {
+        "fieldData": {
             "title": "Regularisation of immigrants' presence on national territory",
             "title_nationalLanguage": "A\u00a0perman\u00eancia em territ\u00f3rio nacional de cidad\u00e3os estrangeiros com processos pendentes no SEF \u00e9 considerada regular",
             "d_startDate": "03/28/2020",
@@ -18463,6 +18873,171 @@
     },
     {
         "fieldData": {
+            "title": "Coronavirus business interruption loan scheme for SMEs",
+            "title_nationalLanguage": "Coronavirus Business Interruption Loan Scheme",
+            "d_startDate": "03/23/2020",
+            "d_endDate": "03/23/2026",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "GB-2020-13/521",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "As part of the Budget 2020 package, the Government announced that it would provide a new Coronavirus Business Interruption Loan Scheme (CBILS) to both SMEs and large companies (see separate case). Loans were initially due to be worth up to GBP1.2m to support SMEs. On 17 March, this was increased to GPB5 million. The government will provide lenders with a guarantee of 80% on each loan. The Government has also said the first 12 months of the loan would be offered interest free, with Government meeting the cost of those interest payments. Initially, the interest free period was due to last 6 months.\u00a0 The scheme went live on 23 March 2020.\r\rThe background regulation is the Coronavirus Act 2020, emergency legislation which received Royal Assent on the 25 March after having been fast-tracked through Parliament in just four days.",
+            "descriptionContentOfMeasure": "This temporary\u00a0scheme aims to allow\u00a0small and medium\u00a0businesses across the UK with an annual turnover of up to GBP 45 million, which\u00a0are experiencing lost or deferred revenues to access\u00a0loans, overdrafts, invoice finance and asset finance of up to \u00a35 million for up to 6 years.The government will also make a Business Interruption Payment to cover the first 12 months of interest payments and any lender-levied fees. This means smaller businesses will benefit from no upfront costs and lower initial repayments.The government will provide lenders with a guarantee of 80% on each loan (subject to pre-lender cap on claims) to give lenders further confidence in continuing to provide finance to SMEs.The scheme is delivered through commercial lenders, backed by the government-owned British Business Bank.\u00a0There are 40 accredited lenders able to offer the scheme, including all the major banks, as well as\u00a0challenger banks, asset-based lenders and smaller specialist local lenders.\u00a0 \r\rA business is eligible if:\r\r* it is based in the UK\r* has an annual turnover of up to GBP 45 million\r* has a borrowing proposal which the lender would consider viable, if not for the coronavirus pandemic. \r\rTo access the scheme, businesses should approach their own provider \u2013 ideally via the lender\u2019s website. They may also consider approaching other lenders if they are unable to access the finance they need.\u00a0 Decision-making on eligibility for CBILS is fully delegated to the accredited CBILS lenders. On 25 March, the Chancellor, Governor of the Bank of England, and CEO of the Financial Conduct Authority together wrote to Britain\u2019s banking sector with a warning not to allow fundamentally viable companies to collapse because of the coronavirus crisis.\r\rFinance terms are up to six years for term loans and asset finance facilities. For overdrafts and invoice finance facilities, terms will be up to three years.\u00a0The borrower always remains 100% liable for the debt.\r\rAt the discretion of the lender, the scheme may be used for unsecured lending for facilities of GBP 250,000 and under. Initially, the eligibility criteria stated that for facilities above GBP 250,000, the lender must establish a lack or absence of security prior to businesses using CBILS. It also stated that if the lender could offer finance on normal commercial terms without the need to make use of the scheme, they should do so. \r\rHowever, these\u00a0were changed as the scheme progressed. Thus, on the 2 April 2020, the\u00a0Government made changes to the scheme, namely:\r\r* No personal guarantees for facilities under GBP 250k: Personal guarantees of any form cannot be taken under the scheme for any facilities below GBP 250k.\r* Personal guarantees for facilities above GBP 250k: Personal guarantees may still be required, at a lender\u2019s discretion, but recoveries under these are capped at a maximum of 20% of the outstanding balance of the CBILS facility after the proceeds of business assets have been applied. A Principal Private Residence (PPR) cannot be taken as security to support a personal guarantee or as security for a CBIL backed facility.\r* Security: For all facilities, including those over GBP 250,000, CBILS can now support lending to smaller businesses even where a lender considers there to be sufficient security, making more smaller businesses eligible to receive the business interruption payment.\r\rThe Government announced that these changes should be retrospectively applied by lenders for any CBILS facilities offered since 23 March 2020. For any commercial (non-CBILS) facilities offered since the same date, providing the borrower meets the CBILS eligibility criteria, lenders have been asked to bring these facilities onto CBILS wherever possible (e.g. where the lender is accredited to offer the same facility through CBILS) and changes retrospectively applied as necessary.\r",
+            "descriptionUseOfMeasure": "By the 19 July (the latest available data), the CBILS had received a total of \r112,212 applications (this figure includes\u00a0approved applications, applications that are still to be processed, applications that have been declined or turn out not to be eligible as well as withdrawn applications, where borrowers decide not to proceed). This number also includes a number of\u00a0applications that have subsequently been converted to applications for the Bounce Back Loan Scheme (BBLS scheme) - see the [specific case for this new initiative](https://static.eurofound.europa.eu/covid19db/cases/GB-2020-19/944).\r\u00a0\rThe number of facilities/loans approved by the 19 July was 55,674 with a value of \u00a312.20bn (HM Treasury, 2020).",
+            "descriptionInvolvementOfSocialPartners": "The social partners were informed about the raft of measures at the inception of the crisis; however, they were not formally involved in the design, implementation or monitoring of the measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-13_521.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "409",
+                    "sources::title": "UK Government Corona Virus Covid-19 Guidance ",
+                    "sources::url": "https://www.gov.uk/guidance/apply-for-the-coronavirus-business-interruption-loan-scheme",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "831",
+                    "sources::title": "Coronavirus Act 2020",
+                    "sources::url": "https://www.legislation.gov.uk/ukpga/2020/7/contents",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1040",
+                    "sources::title": "HM Treasury 'HM Treasury coronavirus (COVID-19) business loan scheme statistics.'",
+                    "sources::url": "https://www.gov.uk/government/collections/hm-treasury-coronavirus-covid-19-business-loan-scheme-statistics",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "412",
+        "modId": "82"
+    },
+    {
+        "fieldData": {
+            "title": "Reclaiming of statutory sick pay by SMEs",
+            "title_nationalLanguage": "Reclaiming of Statutory Sick Pay by SMEs",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "GB-2020-12/524",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "As it is anticipated that many employees will be off sick with the virus (the Government states that in a worst case scenario, a fifth of all employees will be absent from work) and that a large proportion of these who work in SMEs will only have statutory entitlement, this measure allows eligible firms to claim back the Statutory Sick Pay (SSP) they disburse to such employees.\r\rThe legal reference is the emergency legislation, the Coronavirus Act 2020. Section 39 is the relevant regulation (which amends The Social Security Contributions and Benefits Act 1992); this section gives the\u00a0Secretary of State the power to make regulations to allow businesses to reclaim SSP payments from the Government for absences related to coronavirus. The Explanatory Notes say that if it is necessary, regulations could be made to allow larger employers to reclaim the costs of SSP as well.Regulations on the SSP rebate have not yet been made. However, on 3 April 2020 the Department for Business, Energy and Industrial Strategy (BEIS) published guidance on a forthcoming Coronavirus Statutory Sick Pay Rebate Scheme.\r",
+            "descriptionContentOfMeasure": "In Budget 2020, the UK Government\u00a0announced that\u00a0Statutory Sick Pay (SSP) costs for businesses with fewer than 250 employees would be met in full for up to 14 days per employee. The Chancellor estimates that this will cost up to \u00a32 billion and help up to 2 million businesses. In its factsheet on government support for those affected by Covid-19, HM Treasury said that the eligibility criteria for the scheme would be as follows:\r\r* this refund will cover up to 2 weeks\u2019 SSP per eligible employee who has been off work because of COVID-19;\r* employers with fewer than 250 employees will be eligible;\u00a0the size of an employer will be determined by the number of people they employed as of 28 February 2020;\r* employers will be able to reclaim expenditure for any employee who has claimed SSP (according to the new eligibility criteria) as a result of COVID-19;\r* employers should maintain records of staff absences, but employees will not need to provide a GP fit note;\r* eligible period for the scheme will commence the day after the regulations on the extension of Statutory Sick Pay to self-isolators comes into force;\r\u2022 the government will work with employers over the coming months to set up the repayment mechanism for employers as soon as possible. Existing systems are not designed to facilitate employer refunds for SSP47.\r\rSSP is the minimum that employers have to pay out to qualifying sick employees. It is currently paid at GBP 94.25 per week (GBP 95.85 from 6 April 2020) and can be paid for up to 28 weeks. In order to\u00a0qualify for SSP, an\u00a0employee\u2019s average weekly earnings must be above GBP 118 (GBP 120 from 6 April 2020). Some employers may pay enhanced sick pay over and above the SSP rate. This would be detailed in an employment contract. The self-employed are not eligible for SSP. \r\rThe Statutory Sick Pay (General) (Coronavirus Amendment) Regulations 2020 (SI 2020/287) came into force on 13 March 2020. These Regulations (as amended) make it clear in law that employees are entitled to SSP if they are unable to work because they are self-isolating as a result of them or someone in their household showing symptoms of coronavirus.\u00a0 Normally, SSP is paid from the fourth day of absence. However, on the\u00a028 March, the Government made the Statutory Sick Pay (Coronavirus) (Suspension of Waiting Days and General Amendment) Regulations 2020 (SI 2020/374). These provide that SSP is payable from the first day of absence where a worker is self-isolating because they or someone in their household has shown symptoms of coronavirus. The Regulations have retrospective from 13 March 2020.\rUnder the Coronavirus Act 2020, the Secretary of State has the power to make regulations to allow businesses to reclaim SSP payments from the Government for absences related to coronavirus. The Explanatory Notes say that if it is necessary, regulations could be made to allow larger employers to reclaim the costs of SSP as well.\r\rRegulations on the SSP rebate have not yet been made. However, on 3 April 2020 the Department for Business, Energy and Industrial Strategy (BEIS) published guidance on a forthcoming Coronavirus Statutory Sick Pay Rebate Scheme.\r\rThe guidance says that employers will be covered in the following circumstances: If employers are:\u00a0\r\r* claiming for an employee who\u2019s eligible for sick pay due to coronavirus\r* had a PAYE payroll scheme that was created and started on or before 28 February 2020\r* had fewer than 250 employees on 28 February 2020.\r\rThe scheme covers all types of employment contracts, including:\r* full-time employees\r* part-time employees\r* employees on agency contracts\r* employees on flexible or zero-hour contracts.\r",
+            "descriptionUseOfMeasure": "Uptake currently unknown as there is no data available at this stage. It will apply to those employees working in organisations employing 250 or under, who are away from work due to coronavirus. This also applies if such employees are self-isolating due to a member of their household being unwell with the virus. ",
+            "descriptionInvolvementOfSocialPartners": "The social partners were informed as to the raft of measures introduced by the Government by way of response to the coronavirus crisis. However, the partners were not involved in the design, implementation or monitoring of this measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-12_524.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "417",
+                    "sources::title": "How to access government financial support if you or your business has been affected by COVID-19",
+                    "sources::url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/878995/Covid-19_fact_sheet.pdf",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "831",
+                    "sources::title": "Coronavirus Act 2020",
+                    "sources::url": "https://www.legislation.gov.uk/ukpga/2020/7/contents",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1074",
+                    "sources::title": "UK Government (2020) 'Coronavirus Statutory Sick Pay Rebate Scheme set to launch.' ",
+                    "sources::url": "https://www.gov.uk/government/news/coronavirus-statutory-sick-pay-rebate-scheme-set-to-launch",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "122",
+                    "updates::d_date": "05/19/2020",
+                    "updates::description": "On the 19 May, the government announced the forthcoming launch of\u00a0a\u00a0new online service from the 26 May, which will allow\u00a0small and medium-sized employers to recover Statutory Sick Pay (SSP) payments they have made to their employees.\r\rThe Coronavirus Statutory Sick Pay Rebate Scheme was announced at Budget as part of a package of support measures for businesses affected by the COVID-19 outbreak.\r\rEmployers will be able to make their claims through a new online service from 26 May. This means they will receive repayments at the relevant rate of SSP that they have paid to current or former employees for eligible periods of sickness starting on or after 13 March 2020.\r\rThey can reclaim up to two weeks\u2019 SSP paid to employees with coronavirus; employees who are self-isolating and unable to work from home; or those who are shielding because they are at high risk.\r\rHMRC said employers will receive their rebate within six working days.\r\r",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "415",
+        "modId": "79"
+    },
+    {
+        "fieldData": {
             "title": "Temporary right of workers outside of EU/EEA countries to change employer and sector",
             "title_nationalLanguage": "Kolmansien maiden kansalaisten v\u00e4liaikainen oikeus vaihtaa ty\u00f6nantajaa tai toimialaa ilman jatkolupaa",
             "d_startDate": "04/09/2020",
@@ -21960,6 +22535,165 @@
     },
     {
         "fieldData": {
+            "title": "Changes to statutory sick pay (SSP)",
+            "title_nationalLanguage": "Changes to Statutory Sick Pay (SSP)",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "06/26/2020",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "GB-2020-11/586",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/14/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "On the 17 March, the Chancellor announced\u00a0a package of government-backed and guaranteed loans to support businesses, making available an initial GBP 330 billion of guarantees \u2013 equivalent to 15% of GDP. This was on top of a series of measures announced at Budget 2020 on the 12 March, where the government announced GBP 30 billion of additional support for public services, individuals and businesses experiencing financial difficulties because of COVID-19.\u00a0 \r\rChanges to SSP were part of the initial Budget\u00a0package, subsequently extended on the 17 March, and accounted for in Sections 39 to 44 of the Coronavirus Act 2020. Section 40 amends the Social Security Contributions and Benefits Act 1992.\u00a0 Under the Coronavirus Act 2020, the changes in SSP will be back-dated to 13th of March.\r\r",
+            "descriptionContentOfMeasure": "In order to traditionally qualify for SSP (currently \u00a394.25 and payable by employers for a maximum of 28 weeks), there is a wait of three\u00a0days before an individual employee becomes eligible. However, under the new ruling,\u00a0SSP will be\u00a0paid from day 1, rather than day 4 of an individual's\u00a0absence from work if that person is\u00a0absent from work due to sickness or the\u00a0need to self-isolate caused by COVID-19. This applied retrospectively from\u00a0the 13th of\u00a0March.\u00a0\r\rMoreover, from\u00a0the 20th of March\u00a0onwards, those who have COVID-19 or who are advised to self-isolate will be able to obtain an \u201cisolation note\u201d by visiting the National Health Service (NHS) 111 online and completing an online form, rather than visiting a doctor. For COVID-19 cases, this replaces the usual need to provide a \u201cfit note\u201d after seven days of sickness absence. \r\rFor those not eligible for\u00a0SSP e.g. the\u00a0self-employed or those earning below the Lower Earnings Limit of GBP 118 per week, but who have\u00a0COVID-19 or are advised to self-isolate, the government says that they can\u00a0now more easily make a claim for Universal Credit (UC) or new style Employment and Support Allowance. \r\rFor those who are\u00a0self-employed and receiving Universal Credit with\u00a0COVID-19 or advised to self-isolate, the requirements of the Minimum Income Floor will be temporarily relaxed. This change took effect on 13 March and will last for the duration of the outbreak, to ensure that self-employed UC claimants will receive support.\r",
+            "descriptionUseOfMeasure": "\r",
+            "descriptionInvolvementOfSocialPartners": "The social partners were informed as to the raft of measures to be introduced at the beginning of the coronavirus pandemic; however, they were not formally involved in the design, implementation or monitoring of this measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-11_586.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "476",
+                    "sources::title": "HM Treasury 'How to access government financial support if you or your business has been affected by COVID-19",
+                    "sources::url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/878995/Covid-19_fact_sheet.pdf",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "831",
+                    "sources::title": "Coronavirus Act 2020",
+                    "sources::url": "https://www.legislation.gov.uk/ukpga/2020/7/contents",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1055",
+                    "sources::title": "UK Government (2020) Guidance on shielding and protecting people who are clinically extremely vulnerable from COVID-19 ",
+                    "sources::url": "https://www.gov.uk/government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19",
+                    "sources::d_date": "07/07/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1056",
+                    "sources::title": "HM Government (2020) 'Guidance \r\rNHS test and trace: how it works.'",
+                    "sources::url": "https://www.gov.uk/guidance/nhs-test-and-trace-how-it-works",
+                    "sources::d_date": "07/07/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "114",
+                    "updates::d_date": "05/28/2020",
+                    "updates::description": "The changes to statutory sick pay as a result of the coronavirus pandemic were further extended to encompass people in the following two categories:\r\r1. From the 16 April 2020, regulations were passed so that\u00a0any person classed as extremely vulnerable and at very high risk of severe illness from coronavirus (COVID-19), and who have been advised to remain at home for at least 12 weeks will be entitled to Statutory Sick Pay (SSP). The process is known as shielding, and the regulations mean that people are deemed as incapable of work for the period in which they are shielding.\r\rThere are around 1.5 million \"extremely vulnerable\" persons in the UK, who were directed to shield for at least 12 weeks. However, 'shielding' is to end on the 1 August, with those who have been shielding being able to return to work. Thus, those who are shielding will  continue to be eligible for SSP until 31 July, but this ends on the 1st of August (UK Government, 2020).\r\rIf an individual cannot work as they are shielding due to coronavirus (COVID-19), then they will be entitled to receive SSP for every day that they are unable to work. They will be entitled to SSP from day one of sickness, in line with how SSP will be paid to those self-isolating, or absent, due to coronavirus. Individuals must, however, shield for a minimum of four days to be eligible for SSP payment from day one. Individuals must also meet the other eligibility requirements for SSP.\r\rThe changes have been made, as previously those individuals who were shielding were not entitled to SSP, and the amendments are intended as a safety net for individuals in cases where their employer opts not to furlough them under the Coronavirus Job Retention Scheme (CJRS) and does not have other suitable policies in place, e.g. allowing the individuals to work from home.\r\r\r2. On the 28th of May, those\u00a0who\u00a0have been\u00a0told by NHS Test and Trace that they have been in contact with someone who has tested positive for COVID-19. This requires 14 days' self-isolation, but this period is superseded or extended by the seven day self-isolation rule if the person develops symptoms (UK Government, 2020).\r\r",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "477",
+        "modId": "82"
+    },
+    {
+        "fieldData": {
+            "title": "Mortgage and rent protective provisions",
+            "title_nationalLanguage": "Mortgage and Rent Provisions",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "06/17/2020",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "GB-2020-12/587",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/14/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The measures - mortgage holidays and the prevention of eviction from residential tenancies in relation to\u00a0COVID-19\u00a0- are part of the measures announced by the Chancellor on the 17 March, in addition to his Budget 2020 pledges. \r\rThe protection from eviction - set to last for at least three months - is set in statute in Section 81 of the Coronavirus Act 2020.",
+            "descriptionContentOfMeasure": "Under the new measure, if a person is\u00a0experiencing financial difficulties in meeting their\u00a0mortgage repayments because of COVID-19,\u00a0they may be entitled to a mortgage or rental holiday for 3 months. This includes landlords whose tenants are experiencing financial difficulties because of COVID-19. Where a\u00a0tenant is experiencing financial difficulties because of COVID-19, the government will ensure\u00a0they do not face the threat of eviction for at least three months:\r\r* The government has agreed with mortgage lenders that they will offer repayment holidays of three months to households in financial difficulty due to COVID-19.\r\r* This will also apply to landlords whose tenants are experiencing financial difficulties because of COVID-19.\r* The offer of a payment holiday can be made available to customers who are up to date with payments and not already in arrears.\r* Customers who are concerned about their current financial situation should contact their lender at the earliest possible opportunity to discuss whether this is a suitable option for them.\r* Under the Coronavirus Act,\u00a0landlords will not be able to start proceedings to evict tenants for at least a three month period. This applies to private and social renters.\r* At the end of this period, landlords and tenants will be expected to work together to establish an affordable repayment plan, taking into account tenants\u2019 individual circumstances. \r",
+            "descriptionUseOfMeasure": "Currently unknown.\r\rHowever, research by the Resolution Foundation published on the 30th May (Judge, 2020), analysed\u00a0the findings of a YouGov survey of 6000\u00a0working-age adults, focusing on levels of housing stress, and how families in different housing tenures are coping.\r\rThe study found\u00a0that while the earnings hit has been widely experienced across tenure groups, renters are one-and-a-half to two times more likely to have fallen behind with their housing payments compared to mortgaged home owners. Owners entered the crisis with lower average housing costs and a bigger financial buffer than renters, and have also been more successful at directly reducing housing costs in recent weeks. While just one-in-twelve home owners applying for a mortgage holiday have been refused, that figure stands at one-in-two for those renters who have sought a rent reduction. While the social security system potentially offers a (more generous) backstop for renters, eligibility rules and caps leave some renters without adequate support. The study\u00a0showed that one-third of new benefit claimants are in housing cost arrears.\u00a0 ",
+            "descriptionInvolvementOfSocialPartners": "Whilst the social partners were informed as to the total raft of measures, they were not involved in the design, implementation or formal monitoring of this measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-12_587.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "477",
+                    "sources::title": "HM Treasury 'How to access government financial support if you or your business has been affected by COVID-19.'",
+                    "sources::url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/878995/Covid-19_fact_sheet.pdf",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1054",
+                    "sources::title": "Judge, L. (2020) 'Coping with housing costs during the coronavirus crisis: Flash findings from the Resolution Foundation\u2019s coronavirus survey. 30 May 2020.' Resolution Foundation",
+                    "sources::url": "https://www.resolutionfoundation.org/app/uploads/2020/05/Coping-with-housing-costs-during-the-coronavirus-crisis.pdf",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "478",
+        "modId": "85"
+    },
+    {
+        "fieldData": {
             "title": "Instructions of the social partners for dealing with construction sites based on COVID-19",
             "title_nationalLanguage": "Handlungsanleitung der Sozialpartner f\u00fcr den Umgang mit Baustellen aufgrund von COVID-19",
             "d_startDate": "03/26/2020",
@@ -23721,6 +24455,148 @@
     },
     {
         "fieldData": {
+            "title": "Wage support programme for job retention - Kurzarbeit with training obligation",
+            "title_nationalLanguage": "Munkahelyv\u00e9delmi b\u00e9rt\u00e1mogat\u00e1si program - Kurzarbeit",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Hungary",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "HU-2020-18/640",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "Under the government decree 105/2020. (IV. 10.) the aim of the measure is to prevent layoffs in face of the COVID-19 crisis. This measure follows the German example of Kurzarbeit, but is on a much smaller scale with a lot of narrowing criteria the applicant must fulfill. The support can be extended from 1 May 2020 for three months. The amount of the income support will be transferred directly from the state to the employee while the reduced wage will be paid by the employer.",
+            "descriptionContentOfMeasure": "Businesses who are shedding 30-50% of working time of employees compared with their pre-covid situation who can prove that their orders have not fallen by more than 50% and are working towards the \u201cinterests of the national economy\u201d are eligible. For every employee that is considered for layoff the state agrees to pay 70% of the part of the salary that was lost due to the worktime reduction. Only the part of salaries up to HUF 214,300 net (twice the minimum wage - \u20ac612 as of 15 Apr) per month receive the income supplement, earnings after that threshold are not subsidised. \r\rThe government calculates that on average a monthly HUF 64,500 per employee will be paid out, so the total cost for 3 months could be HUF 193.6bn (according to government calculations) or HUF 128bn according to our (KOPINT-T\u00e1rki Institute) calculations. \rAdditional criteria for eligibility-the employer must agree to keep headcount level until the end of the year in order to be considered for the subsidy\r\r* the shortened work contract may not drop below four hours per day of working time \r* employers must organise a training for the employee in 30% of the hours that have been cut from working time and pay wages for this time as well.\r\rApplications open on 16 April, 2020",
+            "descriptionUseOfMeasure": "Some 500,000 workers (estimate) could benefit. The Ministry for Innovation and Technology (ITM) said that 195,000 people were working under the short-time working scheme by July 2020. They added that the scheme had reached 1.2 million people. The total number of employed was 4,023,600 in 2019. Data show that around half of Hungary\u2019s workforce is employed in jobs with high or medium vulnerability to being lost due to covid-19.\r\rApplications must be filed to the public employment services for review. Critics note that the employer has attractive alternatives: if dismissed, employees get unemployment benefits for three months, they can be sent home on unpaid leave, or citing the COVID-19 situation as a vis maior they get no wages for down-time. Critics also argue that the measure came much too late, 5 weeks after Hungary announced a 'state of danger' for the pandemic on 11 March 2020.\r\rSo far (up to mid-July) the companies applied for the support for 200,000 employees, the applied funding amounted to HUF 33 billion (about \u20ac90 million). The funding has been approved for nearly 14,000 companies, and for 180,000 employees. \r\rThe proportions of the types of supported companies were as follows:\r\r* 13.3% micro-enterprises, \r* 25% small companies, \r* 27.9% medium-sized companies, \r* 33.8% large companies, \r\rWith regard to sectors, the composition is the following: \r\r* manufacturing: 49.1 % (nearly 100,000 applications); \r* trade and machinery: 16.7%, nearly 33,000 applications; \r* accommodation, hospitality: 9.1%, nearly 18,000 applications; \r* administrative activities and supporting services administration: 4,9% nearly 10,000 applications.\r\r",
+            "descriptionInvolvementOfSocialPartners": "Unknown.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HU-2020-18_640.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "527",
+                    "sources::title": "How will the Hungarian Kurzarbeit work?",
+                    "sources::url": "https://www.portfolio.hu/gazdasag/20200410/hogy-mukodik-majd-a-magyar-kurzarbeit-konkret-szamokat-mondott-az-allamtitkar-42545",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "528",
+                    "sources::title": "Employers' organisations welcome Orban plan",
+                    "sources::url": "https://magyarnemzet.hu/gazdasag/elegedettek-a-munkaadoi-kepviseletek-az-orban-tervvel-7980053/",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "529",
+                    "sources::title": "Further crisis management measures needed",
+                    "sources::url": "http://www.liganet.hu/page/88/art/10490/akt/1/html/tovabbi-valsagkezelesi-intezkedesekre-van-szukseg.htm",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "530",
+                    "sources::title": "Trade unions: thousands lose jobs daily while government stalls with measures",
+                    "sources::url": "https://merce.hu/2020/04/09/a-szakszervezetek-szerint-naponta-ezrek-veszitik-el-az-allasaikat-a-kormany-pedig-halogato-intezkedeseket-hoz/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "644",
+                    "sources::title": "Emergency state: deviating from Labour Code",
+                    "sources::url": "https://ado.hu/munkaugyek/veszelyhelyzet-csokkentett-munkaidos-foglalkoztatas-es-elteresek-a-munka-torvenykonyvetol",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "674",
+                    "sources::title": "Expanding the Hungarian wage subsidy scheme",
+                    "sources::url": "https://www.portfolio.hu/gazdasag/20200420/bejelentettek-maris-nagy-konnyites-jon-a-magyar-bertamogatasi-rendszerben-427214",
+                    "sources::d_date": "04/20/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1179",
+                    "sources::title": "Csizmadia-Illessy (2020). The virus and work.",
+                    "sources::url": "",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1180",
+                    "sources::title": "Ministry: Funds left for economic support in second wave",
+                    "sources::url": "https://www.vg.hu/gazdasag/gazdasagi-hirek/maradt-forras-a-masodik-hullam-gazdasagi-kezelesere-2387360",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "20",
+                    "updates::d_date": "04/22/2020",
+                    "updates::description": "The measure has been extended; the eligibility criteria for application have been eased. As was announced on 20th of April 2020, more applicants became eligible for the support: those who work 2 hours per day only can also apply. This implies that those companies the turnover of which declined by 75% became also eligible. Those companies which are eligible can use this measure in combination with the new working time banking system.  At the same time, the companies are also eligible for a job retention loan for a 9-month wage, with a 0.1% preferential interest. The loan will last two years - the detailed provision on this will be published shortly.   \rSo far it has been unchanged that a max. of HUF 75,000 wage support can be applied for per employee. \r",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "235",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The measure was extended by one month, i.e. up to 31 August 2020 (the original deadline was 31 July 2020. ",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "531",
+        "modId": "88"
+    },
+    {
+        "fieldData": {
             "title": "Agreement on the anticipation by banks of wage subsidies measures ex-COVID-19",
             "title_nationalLanguage": "Convenzione in tema di anticipazione sociale in favore dei lavoratori destinatari di integrazione al reddito ex Covid-19",
             "d_startDate": "03/30/2020",
@@ -23961,6 +24837,105 @@
     },
     {
         "fieldData": {
+            "title": "Suspension on loan payments for private individuals",
+            "title_nationalLanguage": "T\u0151ke \u00e9s kamatfizet\u00e9si k\u00f6telezetts\u00e9g felf\u00fcggeszt\u00e9se mag\u00e1nszem\u00e9lyeknek",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Hungary",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Preventing over-indebtedness",
+            "calc_identifier": "HU-2020-12/650",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "Under Section 1 of the 47/2020 (18 March) government decree and 62/2020 on detailed rules concerning the payment moratorium, the reason for the measure is to alleviate the adverse effects of the coronavirus pandemic during the period Hungary is in a \u2018state of emergency\u2019 announced by the government on 11 March. The goal is to protect people who lose their income because of the pandemic and cannot make debt repayments. Another goal is to keep lending activities afloat despite the crisis.",
+            "descriptionContentOfMeasure": "Every commercial loan, mortgage or other loan contract signed before 2020 March 18 will receive a freeze on loan repayments, capital repayment and any related fees until at least 31 December 2020 (can be extended). The length of the loan will be extended by the period of the freeze. The Banking Association said the deferred loan payments would amount to about HUF 450 billion in the 9-month period, but our estimations based on partner interviews suggest it would be at most half of that amount. Clients must sign a statement (online) to opt out of the payment freeze scheme, so the default is that they do get the suspension.",
+            "descriptionUseOfMeasure": "Hundreds of thousands of people or about 30-50% of credit clients have indicated to their banks until April that they would not avail of the payment freeze option and continue to make payments as before. The prediction of the National Bank of Hungary on the uptake was about 30% of all individual clients at the time. In its inflation report of June 2020, the National Bank of Hungary said that the loan suspension for individuals managed to serve its purpose of replacing lost income so that consumption could stay level or flatten out. Out of a total of about HUF 1,100 billion (\u20ac3.274 million) in household loan repayments eligible for the deferral, HUF 600 billion worth of repayments were requested for deferral under the scheme. The bank estimates that 50-70% of the amount freed in this way was spent towards consumption by households (private individuals).",
+            "descriptionInvolvementOfSocialPartners": "unknown",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HU-2020-12_650.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "533",
+                    "sources::title": "Government decree 47/2020 (EN)",
+                    "sources::url": "",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "534",
+                    "sources::title": "Government Decree 62/2020 (EN",
+                    "sources::url": "",
+                    "sources::d_date": "03/24/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "535",
+                    "sources::title": "Banking Association on the loan payment moratorium (press release)",
+                    "sources::url": "http://www.bankszovetseg.hu/hirek-aktualitasok.cshtml?lang=hun#a",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "536",
+                    "sources::title": "Banks: Hundreds of thousands continue loan payments despite freeze optio",
+                    "sources::url": "https://bank360.hu/blog/bankok-torlesztes-folytatas",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1182",
+                    "sources::title": "MNB Inflation Report June 2020 pg22",
+                    "sources::url": "",
+                    "sources::d_date": "06/25/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "93",
+                    "sectors::code": "K64",
+                    "sectors::name": "Financial service activities, except insurance and pension funding",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "541",
+        "modId": "88"
+    },
+    {
+        "fieldData": {
             "title": "Measures regarding insolvency and legal protection processes",
             "title_nationalLanguage": "Tiesisk\u0101s aizsardz\u012bbas procesa un maks\u0101tnesp\u0113jas procesa jaut\u0101jumi",
             "d_startDate": "04/03/2020",
@@ -24024,6 +24999,91 @@
         },
         "recordId": "542",
         "modId": "74"
+    },
+    {
+        "fieldData": {
+            "title": "Suspension on loan payments for companies",
+            "title_nationalLanguage": "T\u0151ke \u00e9s kamatfizet\u00e9si k\u00f6telezetts\u00e9g felf\u00fcggeszt\u00e9se az \u00e9v v\u00e9g\u00e9ig v\u00e1llalatoknak",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Hungary",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "HU-2020-12/652",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "Under Secton 1 of the 47/2020 government decree and 62/2020 providing details to it, the reason for this measure is to alleviate the adverse effects of the coronavirus pandemic during the period Hungary is in an \u2018emergency situation\u2019 announced by the government. Another goal is to keep lending activities afloat despite the crisis. The payment moratorium for companies was one of the first measures announced by the Hungarian government, at the proposal of the central bank.",
+            "descriptionContentOfMeasure": "Every commercial loan or financial lease under a loan contract signed before 2020 March 18 will receive a freeze on loan repayments, capital repayment and any related fees until at least 31 December 2020 (can be extended). The length of the loan will be extended with the period of the freeze. \r\rThe Banking Association said the deferred loan payments would amount to about HUF 450 billion in the 9-month period, but our estimations based on partner interviews suggest it would be at most half of that amount.After the freeze period the loan is extended to the period necessary to keep loan payments to their pre-COVID levels and banks cannot charge compound interest either. These rules apply to any fees related to the loan, too.Based on central bank data, the measure could affect up to HUF 8,300 billion worth of bank loans at 33,000 companies.",
+            "descriptionUseOfMeasure": "In its June Inflation Report, the bank said that the measure was intended to help businesses\u2019 liquidity tensions. Out of a total of HUF 2,500 billion (\u20ac7.44bn) worth of loans eligible for the repayment deferral, HUF 1,500 billion worth of company loan repayments were actually deferred under the scheme by June 2020. This is estimated to be equivalent to about 6.5% of companies\u2019 annual payroll costs. The measure could have an indirect effect on employment, as companies with long-term loans employ about 1.25 million people. Sectors that are indebted to a higher rate include: agriculture commerce, accommodation and catering, and processing.",
+            "descriptionInvolvementOfSocialPartners": "unknown",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HU-2020-12_652.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "533",
+                    "sources::title": "Government decree 47/2020 (EN)",
+                    "sources::url": "",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "534",
+                    "sources::title": "Government Decree 62/2020 (EN",
+                    "sources::url": "",
+                    "sources::d_date": "03/24/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "538",
+                    "sources::title": "How does the loan payment moratorium affect each sector",
+                    "sources::url": "https://piacesprofit.hu/kkv_cegblog/torlesztesi-moratorium-hogyan-hat-a-konnyites-az-egyes-szektorokra",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1182",
+                    "sources::title": "MNB Inflation Report June 2020 pg22",
+                    "sources::url": "",
+                    "sources::d_date": "06/25/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "543",
+        "modId": "86"
     },
     {
         "fieldData": {
@@ -24677,6 +25737,161 @@
     },
     {
         "fieldData": {
+            "title": "Suspension of employment contracts",
+            "title_nationalLanguage": "\u0391\u03c1\u03b8\u03c1\u03bf 11, \u03c0\u03b1\u03c1. 2\u0391, '\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2' ,   \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0) , \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 68 & \u03a5\u0391 13031/\u03941.4551, 12997/231/2020 & 12998/232/23.03.2020\r",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Flexibilisation and security",
+            "calc_identifier": "GR-2020-12/667",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "By virtue of the Legislative Act 20 March 2020 \"Urgent measures to address the consequences of the spread of COVID-19  coronavirus, to support the society and entrepreneurship, and to safeguard the smooth operation of the market and public administration\" and the Ministerial Decisions 13031/\u03941.4551, 12997/231/2020 & 12998/232/23-3-2020, businesses that have been financially affected as per their Activity Code Numbers (ACN), or their operation has been suspended under a state decision, are able  to suspend contracts of employment of part or all of the staff for a continuous period of 45 days, while prohibiting employees\u2019 dismissal. \r\rThen, on 7 April 2020, the Ministry of Labour issued the circular 14676/253/2020, revoking the authorization formerly issued to businesses-employers entailing the power suspend their employees for emergency reasons. (i.e. reasons of public interest). The measure can be applied in case of closure consequent to a State decision or to other companies listed by sector and only to cover extraordinary, urgent, non-deferred needs for reasons of public interest, or to cover extraordinary and non-deferred business needs in general. For the suspension period, the employee's remuneration was a the employers' expense.\r\r",
+            "descriptionContentOfMeasure": "Businesses that have been financially affected as per their Activity Code Numbers (ACN), or their operation has been suspended under a state decision, can suspend contracts of employment of part or all of the staff for a continuous period of 45 days, while prohibiting employees\u2019 dismissal. The list of ACNs is dynamic and more ACNs may be included. Should a dismissal take place - regardless of whether that dismissal concerns an employee whose employment has been suspended - it will be considered null and void. The suspension of the employment contracts may be applied for up to one (1) month from 20 March 2020, with the possibility of extension following a joint decision of the Ministers of Finance and Labour and Social Affairs, taking into account the development of the crisis. \r\rSince 7 April 2020, businesses-employers can terminate their employees' contract suspension due to emergencies (i.e.reasons of public interest). Such revocation is applied either in case of closure by an order of a state decision or to affected businesses based on their ACN and only to cover extraordinary, urgent, non-deferred needs for reasons of public interest, or to cover extraordinary and non-deferred business needs in general. The employer shall declare to the ERGANI platform the work provided and the suspension period of 45 days is extended respectively to the days of work provided. The measure will be applied for as long the suspension period lasts.\r\r",
+            "descriptionUseOfMeasure": "No available information",
+            "descriptionInvolvementOfSocialPartners": "A tripartite meeting of all national social partners with the Ministry of Labour  took place at the beginning of the virus outbreak (10 March 2020). During the meeting, the government briefed the social partners on the situation in whole and on the suggested measures and policies, and all parties were engaged in dialogue. The proposals and opinions of the social partners were taken into consideration, without being binding.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_667.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "556",
+                    "sources::title": "Act of Legislative Content on \u201cUrgent measures to address the consequences of the spread of the\rcoronavirus COVID-19, to support society and entrepreneurship and to ensure the smooth functioning of the\rmarket and public administration.\u201d (O.G A\u2019 68/20-3-2020)",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-ygeia/astheneies/praxe-nomothetikou-periekhomenou-tes-20-3-2020.html",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "557",
+                    "sources::title": "Circular 14676 /253/2020 \"Clarifications on\u00a023-3-2020 JMC (B\u03841078) for measures to support employees and companies-employers of the private sector, to deal with the effects of the COVID-19\u00a0and other measures",
+                    "sources::url": "https://www.taxheaven.gr/circulars/32752",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "792",
+                    "sources::title": "Minister of Labour, Mr Giannis Vroutsis, Announcement",
+                    "sources::url": "https://www.ypakp.gr/uploads/docs/12345.pdf",
+                    "sources::d_date": "04/22/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "793",
+                    "sources::title": "Corrections to companies' statements and payment dates for 800 euros.",
+                    "sources::url": "https://www.e-nomothesia.gr/law-news/egkuklios-oik-14676-253-7-4-2020-diorthoseis-stin-ypoboli-diloseon.html",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "558",
+        "modId": "91"
+    },
+    {
+        "fieldData": {
+            "title": "Employers authorised to unilaterally switch to teleworking",
+            "title_nationalLanguage": "\u0386\u03c1\u03b8\u03c1\u03bf 4, \u03c0\u03b1\u03c1. 2, ' \u0388\u03ba\u03c4\u03b1\u03ba\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03c0\u03c1\u03bf\u03c3\u03c9\u03c1\u03b9\u03bd\u03ac \u03bc\u03ad\u03c4\u03c1\u03b1 \u03c3\u03c4\u03b7\u03bd \u03b1\u03b3\u03bf\u03c1\u03ac \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03bd\u03c4\u03b9\u03bc\u03b5\u03c4\u03ce\u03c0\u03b9\u03c3\u03b7 \u03ba\u03b1\u03b9 \u03c4\u03bf\u03bd \u03c0\u03b5\u03c1\u03b9\u03bf\u03c1\u03b9\u03c3\u03bc\u03cc \u03c4\u03b7\u03c2 \u03b4\u03b9\u03ac\u03b4\u03bf\u03c3\u03b7\u03c2 \u03c4\u03bf\u03c5 \u03ba\u03bf\u03c1\u03c9\u03bd\u03bf\u03ca\u03bf\u03cd COVID-19 \u03c9\u03c2 \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b7\u03bd \u03bf\u03c1\u03b3\u03ac\u03bd\u03c9\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03c7\u03c1\u03cc\u03bd\u03bf\u03c5 \u03ba\u03b1\u03b9 \u03c4\u03bf\u03c5 \u03c4\u03cc\u03c0\u03bf\u03c5 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2', \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5  (\u03a0\u039d\u03a0), \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 55, 11.03.2020  - \u03a4\u03b7\u03bb\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1)",
+            "d_startDate": "03/11/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "GR-2020-11/668",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The Ministry of Labour and Social Affairs issued the Circular 12339/404/ dated 12 March 2020, providing clarifications on a series of measures on how to deal with COVID-19 pandemic in everyday working life. According to this measure, employers are authorized to unilaterally impose to the employees the system of teleworking and organize any detail related to it. The aim of the measure is to support companies in adapting their work organization to comply with the social distancing measures adopted as a consequence of the COVID-19 pandemic.\r[Art. 4 par.2, Legislative Act of  11.03.2020 - Telework).",
+            "descriptionContentOfMeasure": "According to this measure, employers may determine unilaterally that the work provided by the employee at the place of work shall be carried out with the system of remote work (teleworking). Upon Joint Ministerial Decision of the Ministers of Finance, Labour and Social Affairs and Health, the period of application of this extraordinary and temporary measure, which was initially scheduled between 11 March 2020 and 10 April 2020, has been\u00a0extended up to 30 April 2020. Employers shall submit to the ERGANI platform (Digital System of the Ministry of Labour and Social Affairs), the special document named \"FORM 4.1 DECLARATION OF REMOTE WORKING'', within the first 10 days of the following month from the provision of work.",
+            "descriptionUseOfMeasure": "No available information.",
+            "descriptionInvolvementOfSocialPartners": "A tripartite meeting of all national social partners with the Ministry of Labour  took place at the beginning of the virus outbreak (10 March 2020). During the meeting, the government briefed the social partners on the situation in whole and on the suggested measures and policies, and all parties were engaged in dialogue. The proposals and opinions of the social partners were taken into consideration, without being binding.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-11_668.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "558",
+                    "sources::title": "Act of  Legislative Content of 11.03.2020 \"Emergency contingency measures to tackle the adverse effects of the outbreak of  COVID-19 and to address the need to  limit the spread of the virus\u00bb ",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8ExDiwSIm0cLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijP3fNjb3qKpGxGNtxU_uAtLw56ULsxCc54tGXdl9oyQ1",
+                    "sources::d_date": "03/11/2020",
+                    "modId": "4"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "559",
+        "modId": "83"
+    },
+    {
+        "fieldData": {
             "title": "Payment of Easter bonus may be deferred by companies affected by the pandemic",
             "title_nationalLanguage": "\u0391\u03c1\u03b8\u03c1\u03bf 19,' \u03a7\u03c1\u03cc\u03bd\u03bf\u03c2 \u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u03b5\u03c0\u03b9\u03b4\u03cc\u03bc\u03b1\u03c4\u03bf\u03c2 \u03a0\u03ac\u03c3\u03c7\u03b1',  \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0), \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 75, 30.03.2020",
             "d_startDate": "03/30/2020",
@@ -24744,6 +25959,105 @@
         },
         "recordId": "560",
         "modId": "74"
+    },
+    {
+        "fieldData": {
+            "title": "State income benefit to support freelancers, self-employed and sole proprietors",
+            "title_nationalLanguage": "\u0391\u03c1\u03b8\u03c1\u03bf 25, '\u039c\u03ad\u03c4\u03c1\u03b1 \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03c9\u03bd \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03b9\u03ce\u03bd, \u03b1\u03c5\u03c4\u03bf\u03c4\u03b5\u03bb\u03ce\u03c2 \u03b1\u03c0\u03b1\u03c3\u03c7\u03bf\u03bb\u03bf\u03cd\u03bc\u03b5\u03bd\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b9\u03b4\u03b9\u03bf\u03ba\u03c4\u03b7\u03c4\u03ce\u03bd \u03b1\u03c4\u03bf\u03bc\u03b9\u03ba\u03ce\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd', \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0), \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 75, 30.03.2020); '\u0391\u03c1\u03b8\u03c1\u03bf 8, '\u039c\u03ad\u03c4\u03c1\u03b1 \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03c9\u03bd \u03b5\u03c0\u03b1\u03b3\u03b3\u03b5\u03bb\u03bc\u03b1\u03c4\u03b9\u03ce\u03bd, \u03b1\u03c5\u03c4\u03bf\u03b1\u03c0\u03b1\u03c3\u03c7\u03bf\u03bb\u03bf\u03c5\u03bc\u03ad\u03bd\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b9\u03b4\u03b9\u03bf\u03ba\u03c4\u03b7\u03c4\u03ce\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd', \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0)  \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 68, 20.03.2020 \r\r",
+            "d_startDate": "03/15/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "GR-2020-12/670",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "By virtue of the Legislative Act 20 March 2020 \"Urgent measures to address the consequences of the spread of COVID-19 coronavirus, to support the society and entrepreneurship, and to safeguard the smooth operation of the market and public administration\" and as was amended by Art. 25 'Financial support measures for freelancers, self-employed and  sole propriators who are affected by COVID-19 pandemic' of the Legislative Act 30 March 2020 \"Measures to combat the pandemic of coronavirus COVID-19 and other urgent provisions\", freelancers, self-employed and  sole proprietors are entitled to a special state benefit of \u20ac800. In addition, according to Art. 8, LA - 20.03.2020 as amended by art. 25, LA - 30.03.2020 & \u0394.15/\u0394'/\u03bf\u03b9\u03ba.21552/681/26.6.2020, employees and the self-employed receiving the 800-euro handout will be given a suspension of social security contributions pertaining to May 2020. ",
+            "descriptionContentOfMeasure": " By virtue of the Legislative Act 20 March 2020 \"Urgent measures to address the consequences of the spread of COVID-19  coronavirus, to support the society and entrepreneurship, and to safeguard the smooth operation of the market and public administration\" and as was amended by Art. 25 'Financial support measures for freelancers, self-employed and  sole propriators who are affected by COVID-19 pandemic' of the Legislative Act 30 March 2020 \"Measures to combat the pandemic of coronavirus COVID-19 and other urgent provisions\", freelancers, self-employed and  sole proprietors, who are affected by COVID-19,\u00a0are entitled to a special state benefit of 800 Euros for the period 15/03 \u2013 30/4/2020. Social security contributions on the nominal amount of the salary for the aforementioned period is covered by the State. \r\rThe special state benefit is exempted from tax, seizure and shall not be offset against any liability.  In addition, according to Art. 8, LA - 20.03.2020 as amended by art. 25, LA - 30.03.2020 & \u0394.15/\u0394'/\u03bf\u03b9\u03ba.21552/681/26.6.2020, employees and the self-employed receiving the \u20ac800 handout will be given a suspension of social security contributions pertaining to May 2020. The payment of said contributions will be made in four monthly instalments starting in October 2020.",
+            "descriptionUseOfMeasure": "No available information",
+            "descriptionInvolvementOfSocialPartners": "Unknown",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_670.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "556",
+                    "sources::title": "Act of Legislative Content on \u201cUrgent measures to address the consequences of the spread of the\rcoronavirus COVID-19, to support society and entrepreneurship and to ensure the smooth functioning of the\rmarket and public administration.\u201d (O.G A\u2019 68/20-3-2020)",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-ygeia/astheneies/praxe-nomothetikou-periekhomenou-tes-20-3-2020.html",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1216",
+                    "sources::title": "Legislative Act 30.03.2020",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL80cV-U9HiiGLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijNgwgWjea8J2rK1WVS135n0kJ4A6-bChGSocWFWnc1Oo",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1217",
+                    "sources::title": "Circular \u0394.15/\u0394'/\u03bf\u03b9\u03ba.21552/681/26.6.2020",
+                    "sources::url": "https://www.taxheaven.gr/circulars/33594/d-15-d-oik-21552-681-26-6-2020",
+                    "sources::d_date": "06/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "561",
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -25945,6 +27259,192 @@
         },
         "recordId": "590",
         "modId": "73"
+    },
+    {
+        "fieldData": {
+            "title": "Financial support for suspended and dismissed employees",
+            "title_nationalLanguage": "\u0388\u03ba\u03c4\u03b1\u03ba\u03c4\u03b7 \u03bf\u03b9\u03ba\u03bf\u03bd\u03bf\u03bc\u03b9\u03ba\u03ae \u03b5\u03bd\u03af\u03c3\u03c7\u03c5\u03c3\u03b7 \u03c9\u03c2 \u00ab\u03b1\u03c0\u03bf\u03b6\u03b7\u03bc\u03af\u03c9\u03c3\u03b7 \u03b5\u03b9\u03b4\u03b9\u03ba\u03bf\u03cd \u03c3\u03ba\u03bf\u03c0\u03bf\u03cd\u00bb \u03c3\u03c4\u03bf\u03c5\u03c2 \u03b5\u03c1\u03b3\u03b1\u03b6\u03cc\u03bc\u03b5\u03bd\u03bf\u03c5\u03c2 \u03cd\u03c8\u03bf\u03c5\u03c2 800 \u03b5\u03c5\u03c1\u03c9",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "GR-2020-12/695",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "By virtue of 16073/287/2020 and 18657/370/15.5.2020, an exceptional financial support of \u20ac800 is provided, among others, to specific employees' categories (e.g actors, singers), tourism and food industry employees, constructors, cargo handlers, guides and private nurses, tour escorts, employees in the area of \u200b\u200bMount Athos. The government with the article 11 of 20 March 2020 Legislative Act (Government Gazette A' 68) in conjunction with  the article 3 of the Circular of  Ministry of Labour no 123339/404/12.03.2020, in the context of the \u201cemergency contingency measures to address the effects of the coronavirus COVID-19, support society and entrepreneurship and ensure the uninterrupted operation of the market and public administration\u201d, introduces an extraordinary financial aid to employees whose work has been suspended.",
+            "descriptionContentOfMeasure": "By virtue of 16073/287/2020 and 18657/370/15.5.2020, an exceptional financial support of \u20ac800, for 45 calendar days, is provided to specific employees' categories (e.g actors, singers), tourism and food industry employees, constructors, cargo handlers, guides and private nurses, tour escorts, employees in the area of \u200b\u200bMount Athos. Also, employees who are employed by more than one employer and at least one of them has not suspended their employment contract and if so, their weekly working hours do not exceed 50% of their total working hours based on their employment contracts from 15 March to 20 April 2020. The indemnification is still \r\rThe special purpose indemnification, amounting to \u20ac800, is provided to all employees whose employment contract is under suspension because they are employed by enterprises that  \r\r* are under suspension by order of the public authorities, and \r*  are significantly affected by the extraordinary measures addressing COVID-19, based on their activity code (primary or secondary). \r\rThe indemnification covers the period from 20 March to 30 April , 2020 and is not offset with any sums due. Employees dismissed or voluntarily resigned during the period March 1 to 20, are also entitled to the indemnification.The expense for the indemnification, as well as the insurance coverage of the employees, is covered by the state, provided that certain required procedures are followed. \r\rNot eligible are employees that  \r\r* are employed in companies whose activities were not included in the businesses affected by COVID-19;\r* work by telecommuting;\r* work as safety personnel. \r",
+            "descriptionUseOfMeasure": "According to the data, by 22 April 2020, approximately 686,000 workers received the extraordinary financial aid. In addition, 160,000 applications are expected after the list of professions eligible for the aim has been extended.",
+            "descriptionInvolvementOfSocialPartners": "A tripartite meeting of all national social partners with the Ministry of Labour  took place at the beginning of the virus outbreak (10 March 2020). During the meeting, the government briefed the social partners on the situation in whole and on the suggested measures and policies, and all parties were engaged in dialogue. The proposals and opinions of the social partners were taken into consideration, without being binding.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_695.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "715",
+                    "sources::title": "\u201cUrgent measures to address the consequences of the spread of the\rcoronavirus COVID-19, to support society and entrepreneurship and to ensure the smooth functioning of the\rmarket and public administration.\u201d (O.G A\u2019 68/20-3-2020)",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8fyrq-mVMtyLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijPWQDxYYKEanM_uAmcNNHpVArRrSuTx5VwB0BaO1SczK\r",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "726",
+                    "sources::title": "Inter-ministerial decree of the Ministers of Finance and Labor No. 12998/232 \u201csupport measures for employees of private sector employers to address the effects of coronavirus COVID 19\u201d dated 28/3/2020.",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8yNwbRNbiFj3uFUDqazHcNeJInJ48_97uHrMts-zFzeyCiBSQOpYnTy36MacmUFCx2ppFvBej56Mmc8Qdb8ZfRJqZnsIAdk8Lv_e6czmhEembNmZCMxLMtSMvm0m024awEtaFRYna2dJj0WizTQqWmbFPxeywvmI",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1161",
+                    "sources::title": "Amendment of Decision 16073/287/ 22-4-2020 and addition of new categories of employees to receive special purpose compensation of 800 euros",
+                    "sources::url": "https://www.taxheaven.gr/circulars/33137/18657-370-15-5-2020https://www.taxheaven.gr/circulars/33137/18657-370-15-5-2020",
+                    "sources::d_date": "05/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "591",
+        "modId": "96"
+    },
+    {
+        "fieldData": {
+            "title": "Prohibition of dismissal of employees",
+            "title_nationalLanguage": "\u0391\u03c0\u03b1\u03b3\u03cc\u03c1\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03bf\u03bb\u03cd\u03c3\u03b5\u03c9\u03bd",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Flexibilisation and security",
+            "calc_identifier": "GR-2020-12/696",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The government with the article 11 of 20 March 2020 Legislative Act (Government Gazette A' 68) in conjunction with  the Circular of  Ministry of Labour no 123339/404/12.03.2020, in the context of the \u201cemergency contingency measures to address the effects of the coronavirus COVID-19, support society and entrepreneurship and ensure the uninterrupted operation of the market and public administration\u201d , introduces the invalidity of termination of employment contracts for the duration of the measures addressing the coronavirus.",
+            "descriptionContentOfMeasure": "Companies whose business has been suspended by a public authority and companies which are significantly affected by the emergency measures to deal with COVID-19, on the basis of principal or secondary activity, are required, not to make staff reductions by termination of employment contracts, for as long as the measures to deal with COVID-19 are in place.\r\rIf they are made, such complaints shall be void. Termination of employment contracts made from 18 March 2020 onwards are void. Furthermore, after the expiry of the time of suspension of their staff's employment contracts, companies are required to maintain the same number of jobs, for a period equal to that of suspension (i.e. 45 days). This means they have to employ the same number of workers and on the same terms of employment as on 21 March 2020. The concept of the same number of jobs does not include voluntarily leavers, retiring on retirement, and fixed-term workers whose employment contract expires after the expiry of the suspension.  \r\rThe job retention clause and the invalidity of any employment contracts also apply to companies which agree to workers whose contracts of employment are suspended from the provision of teleworking work to meet their temporary needs.",
+            "descriptionUseOfMeasure": "There are no data.",
+            "descriptionInvolvementOfSocialPartners": "A tripartite meeting of all national social partners with the Ministry of Labour  took place at the biggining of the virus outbreak (10 March 2020). During the meeting, the government briefed the social partners on the situation in whole and on the suggested measures and policies, and all parties were engaged in dialogue. The proposals and opinions of the social partners were taken into consideration, without being binding.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_696.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "715",
+                    "sources::title": "\u201cUrgent measures to address the consequences of the spread of the\rcoronavirus COVID-19, to support society and entrepreneurship and to ensure the smooth functioning of the\rmarket and public administration.\u201d (O.G A\u2019 68/20-3-2020)",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8fyrq-mVMtyLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijPWQDxYYKEanM_uAmcNNHpVArRrSuTx5VwB0BaO1SczK\r",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "726",
+                    "sources::title": "Inter-ministerial decree of the Ministers of Finance and Labor No. 12998/232 \u201csupport measures for employees of private sector employers to address the effects of coronavirus COVID 19\u201d dated 28/3/2020.",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8yNwbRNbiFj3uFUDqazHcNeJInJ48_97uHrMts-zFzeyCiBSQOpYnTy36MacmUFCx2ppFvBej56Mmc8Qdb8ZfRJqZnsIAdk8Lv_e6czmhEembNmZCMxLMtSMvm0m024awEtaFRYna2dJj0WizTQqWmbFPxeywvmI",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "592",
+        "modId": "78"
     },
     {
         "fieldData": {
@@ -37522,6 +39022,174 @@
     },
     {
         "fieldData": {
+            "title": "Increase of the tax-exempt amount of income for workers earning below the annual minimum wage",
+            "title_nationalLanguage": "Neapmokestinamojo pajam\u0173 dyd\u017eio padidinimas",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "01/01/2021",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "LT-2020-27/918",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/03/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "On 1 July 2020, the Law amending Article 20 of the Law of the Republic of Lithuania on Personal Income Tax (PIT) (No IX-1007) was enacted, providing that a monthly tax-exempt amount of income (TEAI), which applies to income derived from employment relationships or relations in their essence corresponding to employment relationships, shall be increased by \u20ac50, i.e. from \u20ac350 to \u20ac400. The aim is to mitigate the negative economic and social effects of the state of emergency and quarantine on the low-paid and to boost the economy.",
+            "descriptionContentOfMeasure": "The Law stipulates that the maximum annual TEAI shall be \u20ac4,800 (\u20ac400 per month) in Lithuania, if the person\u2019s annual income does not exceed the minimum monthly wage (MMW). Prior to the entry into force of the Law, the annual TEAI in Lithuania was \u20ac4,200 (\u20ac350 per month). For persons whose monthly income related to employment relationships or relations in their essence corresponding to employment relationships exceeds the MMW effective on 1 January of the current calendar year, the applicable monthly TEAI shall be calculated according to a special formula.\r\rThe set up TEAI will apply from 1 January 2020 upon filing tax returns for the tax year 2020 and upon calculation of the PIT.\r\rThe Law enters into force on 1 July 2020 and is valid until 31 December 2020. Previously, the increase of the TEAI to \u20ac400 was planned in Lithuania as of 2021. ",
+            "descriptionUseOfMeasure": "According to the estimates of the Ministry of Finance, the implementation of the measure will require allocations from the state budget in the amount of \u20ac84 million.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) were actively involved in the process of adoption of this measure. In order to prevent abuses by employers, the President of Lithuania proposed to sign a Memorandum committing employers not to reduce wages/salaries for employees that would increase with an increase in the TEAI. However, not all of trade unions (TUs) supported this idea and, e.g. the Lithuanian Trade Union Confederation (LTUC), refused to sign the Memorandum seeing no real benefits from it. According to the LTUC, it would agree to sign a collective or national agreement which sets out specific obligations of employers. Yet, the trade union Solidarumas will sign the document and believes employers will abide by the agreement. The Memorandum was also signed by the associations Infobalt and Investors\u2019 Forum, the Lithuanian Employers' Confederation, the Confederation of Industrialists, and the Association of Lithuanian Chambers of Commerce, Industry and Crafts.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-27_918.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "990",
+                    "sources::title": "Law amending Article 20 of the Law of the Republic of Lithuania on Personal Income Tax (LR gyventoj\u0173 pajam\u0173 mokes\u010dio \u012fstatymo No IX-1007 20 straipsnio pakeitimo \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=09ffa160ba1c11eab9d9cd0c85e0b745",
+                    "sources::d_date": "06/23/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "994",
+                    "sources::title": "Some TUs not to sign the Memorandum on non-reduction of salaries (Dalis profs\u0105jung\u0173 nepasira\u0161ys memorandumo d\u0117l atlyginim\u0173 nema\u017einimo)",
+                    "sources::url": "https://www.15min.lt/naujiena/aktualu/lietuva/dalis-profsajungu-nepasirasys-memorandumo-del-atlyginimu-nemazinimo-56-1322642?copied&fbclid=IwAR14V4BTZ7TWBD5j_3IfruuAmozg01GcR8_4spv0IvTDmmb0R625xqAIc7o&copied",
+                    "sources::d_date": "05/24/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "828",
+        "modId": "16"
+    },
+    {
+        "fieldData": {
+            "title": "Increasing social assistance for low-income households",
+            "title_nationalLanguage": "Socialin\u0117s paramos nepasiturintiems didinimas",
+            "d_startDate": "05/21/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "LT-2020-21/919",
+            "dateType": "Open ended",
+            "calc_creationDay": "07/03/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "On 21 May 2020, Law No XIII-2883 on Amendments to Articles 3, 6, 7, 9, 10, 11, 15, 17, 21 and 23 of the Law of the Republic of Lithuania on Cash Social Assistance for Low-Income Families (Single Residents) (Law No IX-1675) came into effect in Lithuania, favouring the low-income population in accessing cash social assistance. The amendments are aimed at protecting the most vulnerable groups that are likely to have been affected by the COVID-19 pandemic.",
+            "descriptionContentOfMeasure": "The main changes introduced by the amendments include the following:\r\r1. The property owned by individuals will temporarily not be evaluated for the purpose of granting of cash social benefits or compensations for heating, hot and cold water to deprived persons (it is a temporary measure - it will be valid from the entry into force of the Law until six months after the quarantine is over, i.e. till 16 December 2020).\r2. The amount of state-supported income (SSI), on which the right to social benefits directly depends, has been increased. In accordance with the former procedure, a person was entitled to a social benefit when income per family member did not exceed the amount of the SSI or \u20ac125. From 1 June 2020, persons with an average income per family member of less than 1.1 SSI per month (i.e. \u20ac137.50) will be entitled to the social benefit.\r3. The amount of the social benefit per resident has been increased by \u20ac50 and its amount has been differentiated depending on the length of receiving assistance. The benefit will be paid in the amount of \r\r* up to \u20ac175 (previously - up to \u20ac125) when paid for up to 6 months; \r* \u20ac150 - when paid for 6 to 12 months; \r* and \u20ac137.5 - when paid for more than 12 months.\r\r4. Criteria for granting additional allowance upon employment have been simplified: \r\r* 100% of the social benefit will be paid for the first 3 months, \r* 80% for 4-6 months, and \r* 50% for 7-12 months. \r\r",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "Social partners (SPs) consulted only ad hoc, the tripartite meeting was not held. On 24 April 2020, the Advisory Group for Post-Quarantine Social Issues under the Ministry of Social Security and Labour started its work in Lithuania, discussing measures to reduce social effects during the post-quarantine period in Lithuania. SPs were also invited to participate in the group.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-21_919.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "991",
+                    "sources::title": "Law No XIII-2883 on Amendments to Articles 3, 6, 7, 9, 10, 11, 15, 17, 21 and 23 of the Law of the Republic of Lithuania on Cash Social Assistance for Low-Income Families (Single Residents) (LR pinigin\u0117s socialin\u0117s paramos nepasiturintiems gyventojams \u012fstatymo Nr. IX-1675 3, 6, 7, 9, 10, 11, 15, 17, 21 ir 23 straipsni\u0173 pakeitimo \u012fstatymas)",
+                    "sources::url": "https://www.e-tar.lt/portal/legalAct.html?documentId=0ad2b1909a9b11ea9515f752ff221ec9",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1001",
+                    "sources::title": "The 1.3 billion euro social support scheme launched (Pateikta 1.3 mlrd. eur\u0173 socialin\u0117s paramos programa)",
+                    "sources::url": "https://www.lps.lt/2507-pateikta-1-3-mlrd-euru-socialines-paramos-programa",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "6",
+                    "funding::name": "Local funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "829",
+        "modId": "14"
+    },
+    {
+        "fieldData": {
             "title": "Support for preservation of jobs by micro-entrepreneurs whose economic activity has been disrupted due to a special circumstance caused by Coronavirus (COVID -19) for July 2020 ",
             "title_nationalLanguage": "Potpora za o\u010duvanje radnih mjesta u djelatnostima pogo\u0111enima Koronavirusom (COVID \u2013 19) za srpanj 2020. - mikropoduzetnici",
             "d_startDate": "07/01/2020",
@@ -38708,6 +40376,256 @@
     },
     {
         "fieldData": {
+            "title": "The Kickstart Initiative and incentivising apprenticeships",
+            "title_nationalLanguage": "The Kickstart Initiative and Incentivising Apprenticeships",
+            "d_startDate": "07/08/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
+            "calc_identifier": "GB-2020-28/943",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/08/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "On the 8 July, the Chancellor of the Exchequer announced his 'Plan for Jobs' in his Summer Statement to the House of Commons. The plan is focused on boosting economic recovery, following the UK's lockdown and the recent easing of restrictions. The Chancellor described the plan as the 'second phase' of response to the coronavirus crisis and as being about jobs. He began his speech by stating that the government will not accept rising unemployment and that it will do all it can to give 'everyone the opportunity of good and secure work.' The Plan for Jobs has 'a clear goal: to protect, support and create jobs', given the 25% contraction in the UK economy in the preceding months and the predictions by the\u00a0Office for Budget Responsibility and Bank of England as to\u00a0significant job losses.\r",
+            "descriptionContentOfMeasure": "These initiatives are aimed at supporting young people, who it is predicted, will be hardest hit by the crisis (the Chancellor reported that the under-25s are two and a half times more likely to work in a sector that has been closed e.g. retail and hospitality).\u00a0The new Kickstart Scheme is thus a\u00a0__'new programme to give hundreds of thousands of young people, in every region and nation of Britain, the best possible chance of getting on and getting a job.'__\r\rUnder the scheme, employers will be directly paid to create new jobs for any\u00a016 to 24-year-old at risk of long-term unemployment.\u00a0These will have to be new jobs, as the\u00a0funding will be conditional on proof that\u00a0these jobs are additional.\u00a0 The jobs will have to be 'decent';\u00a0with a minimum of 25 hours per week paid at least the National Minimum Wage.\u00a0 Employers will also have to provide\u00a0'Kickstarters' with training and support to find a permanent job.\u00a0If employers meet these conditions, the Government\u00a0will pay young people\u2019s wages for six months, plus an amount to cover overheads. Thus, for\u00a0a 24-year-old, the grant will be around \u00a36,500.\r\rEmployers can apply to be part of the scheme from August. There is to be no cap on the numbers of places available and the Chancellor has pledged\u00a0an initial \u00a32 billion, a sum he says will be enough to fund hundreds of thousands of jobs.\r\rThe Government also pledged on the 8 July\u00a0to: \r\r* pay employers \u00a31000 to take on new\u00a0trainees, with triple the number of places;\r* provide \u00a3100 million to create more places on Level 2 and 3 courses, so as to support 18-19-year olds leaving school or college to find work in high-demand sectors like engineering, construction and social care;\u00a0\r* funding for\u00a0new careers advisers to support over a quarter of a million more people; \r* for the next six months, paying employers to create new apprenticeships and paying businesses to hire young apprentices, with a payment of \u00a32000 per apprentice. \r* In addition, there will be a new bonus for businesses to hire apprentices aged 25 and over, with a\u00a0payment of \u00a31,500.\r",
+            "descriptionUseOfMeasure": "As yet unknown. The package was announced on the 8th of July, 2020.",
+            "descriptionInvolvementOfSocialPartners": "It is assumed that the social partners at peak-level will have been informed; however, there will not have been formal consultation/involvement in the design, implementation and monitoring of the measure.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-28_943.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1075",
+                    "sources::title": "HM Government (2020) 'A Plan for Jobs Speech.'",
+                    "sources::url": "https://www.gov.uk/government/speeches/a-plan-for-jobs-speech",
+                    "sources::d_date": "07/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "51",
+                    "targetGroups::name": "Other groups of workers",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "68",
+                    "targetGroups::name": "Youth (18-25) in employment",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "853",
+        "modId": "10"
+    },
+    {
+        "fieldData": {
+            "title": "The Bounce Back Loan Scheme",
+            "title_nationalLanguage": "The Bounce Back Loan Scheme",
+            "d_startDate": "05/04/2020",
+            "d_endDate": "11/04/2020",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "GB-2020-19/944",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "On 4 May 2020, the UK Government launched the new Bounce Back Loan Scheme (BBLS), the latest in a round of measures proposed by the Government to help small businesses facing significant financial difficulties in the current climate. Under the BBLS, businesses will be able to apply for quick and easy-to-access loans between \u00a32,000 and up to 25% of their turnover; the maximum loan available under the Scheme is \u00a350,000. No loan repayments are required for the first 12 months and the government will cover the interest repayments for the same period.\r\rFor those businesses seeking more than \u00a350,000, BBLS is intended to sit alongside the Coronavirus Business Interruption Loan Scheme (CBILS).   Under CBILS, a participating lender can provide up to \u00a35 million in the form of term loans, overdrafts, invoice finance or asset finance.  Both schemes are operated by the British Business Bank, through accredited lenders\r",
+            "descriptionContentOfMeasure": "The scheme helps small and medium-sized businesses to borrow between \u00a32,000 and up to 25% of their turnover. The maximum loan available is \u00a350,000. The government guarantees 100% of the loan and there are\u00a0no fees or interest to pay for the first twelve\u00a0months. After twelve months, the interest rate will be 2.5% a year.\r\rAn SME can apply for the loan if the business: \r\r* is based in the UK\r* was established before 1 March 2020\r* has been adversely impacted by the coronavirus.\r\rSMEs from any sector can apply with the exception of banks, insurers and reinsurers (but not insurance brokers); public-sector bodies and state-funded primary and secondary schools. \r\rIf a firm is\u00a0already claiming funding under the CBILS (a loan of up to \u00a350,000), then this can be transferred into the Bounce Back Loan Scheme. Businesses have until the 4th of November to arrange this with their lender. \r\rThe loan will run for six years\rThe length of the loan is 6 years, but businesses\u00a0can repay early without paying a fee. No repayments will be due during the first 12 months.\r\rThe scheme is being run under the auspices of the British Bank, with eleven\u00a0lenders participating in the scheme (including many of the main retail banks). Businesses\u00a0should approach a suitable lender directly\u00a0via the lender\u2019s website. Applicants must complete a short online form and self-declare eligibility.\u00a0The lender will make the decision as to whether a loan will be offered.\r\r\r\r\r",
+            "descriptionUseOfMeasure": "HM Treasury has published data on the total number of applications received, the number of successful applications and on the cumulative value of all loans/facilities granted.\r\rThus, on the 10 May, 363,646 applications had been received, of which 268,173 had been successful with a value of \u00a38.38 billion. By the 31 May, there had been 873,192 applications, of which 699,354 had been approved. The cumulative value of approved loans was \u00a321.29 billion.\r\rOn the 19 July (the most recent data available), 1,316,970 applications had been received, with 1,084,153 successful and with a cumulative value of \u00a332.79 billion. \r\u00a0",
+            "descriptionInvolvementOfSocialPartners": "Unknown; information may have been provided. No formal involvement.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-19_944.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1087",
+                    "sources::title": "The CBI's Coronavirus Response",
+                    "sources::url": "https://www.cbi.org.uk/coronavirus-hub/cbi-in-action/",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1088",
+                    "sources::title": "HM Treasury\u00a0Coronavirus Covid-19 Business Loan Scheme Statistics",
+                    "sources::url": "https://www.gov.uk/government/collections/hm-treasury-coronavirus-covid-19-business-loan-scheme-statistics",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1089",
+                    "sources::title": "UK Government 'Apply for a coronavirus Bounce Back Loan.'",
+                    "sources::url": "https://www.gov.uk/guidance/apply-for-the-coronavirus-business-interruption-loan-scheme",
+                    "sources::d_date": "04/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "854",
+        "modId": "11"
+    },
+    {
+        "fieldData": {
+            "title": "The Future Fund Scheme",
+            "title_nationalLanguage": "The Future Fund Scheme",
+            "d_startDate": "05/20/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "GB-2020-21/945",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The government\u2019s \u00a3250 million Future Fund opened\u00a0for applications on the 20 May. The Fund is aimed at\u00a0innovative and high-growth British businesses, to facilitate their ability to\u00a0secure investment during the\u00a0coronavirus outbreak.\u00a0 The Fund will be open until September and is delivered in partnership with the British Business Bank. It is part of the raft of financial measures. launched by the government as part of its response to the crisis. ",
+            "descriptionContentOfMeasure": "Announced by the Chancellor on the 20th of\u00a0April, the Future Fund issues convertible loans from \u00a3125,000 to \u00a35 million, to innovative UK companies with good potential, that typically rely on equity investment and are currently affected by Covid-19. The government funding is subject to at least equal match funding from private investors.\r\rThese convertible loans may be an option for businesses that rely on equity investment and are unable to access other government business support programmes because they are either pre-revenue or pre-profit.\r\rThe key features of the scheme are as follows. The application process is investor-led. This means an investor, or lead investor of a group of investors, applies in connection with an eligible company. The Future Fund will match up to 100% of the amount provided by investor(s), up to a maximum of \u00a35 million.\u00a0 The Future Fund loan amount provided to the company ranges from \u00a3125,000 to \u00a35 million (this must be at least co-matched by investor capital).\u00a0 Funding must not be used to \r* repay any borrowings;\r* pay any dividends; \r* pay any bonuses; \r* pay any advisory fees. \r\rThe loans will have a minimum of 8% per annum (non-compounding) interest charge applied. This interest will be higher if the company and the investor(s) agree between themselves. Unlike a typical bank loan, the interest is not payable on a monthly basis and instead will accrue until the loan converts. At this point, the interest will either be repaid or convert in equity. The loan will mature after 36 months.\u00a0 The loan cannot be repaid early by the company other than with the agreement of all of the investors.\u00a0 The loans will convert into shares in the company in certain circumstances, including an exit or a new funding round.\r\rIn order to be eligible for the scheme, each of the investor(s) and the company must meet specific criteria.\r\rTo be eligible for the scheme, the company must meet the following criteria:\r\r1. The company must have raised at least \u00a3250,000 in equity from third-party investors in previous funding rounds in the last five years (from 1 April 2015 to 19 April 2020, inclusive).\r2. If the company is a member of a corporate group, it must be the ultimate parent company.\r3. The company does not have any of its shares or other securities listed on a regulated market, a multilateral trading facility, a recognised investment exchange and/or any other similar market, stock exchange or listing venue.\r4. The company must be a UK incorporated limited company or be eligible to apply as a non-UK parent company.\r5. The company must have been incorporated on or before 31 December 2019 (or in the case of\u00a0a non-UK jurisdiction company*, this criterion applies only to at least one UK subsidiary operating company).\r6. At least one of the following must be true for the company:\r\r* Half or more employees are UK based\r* Half or more revenues are from UK sales\r\rThe scheme's\u00a0eligibility criteria have been amended to include innovative companies that participate in accelerator programmes based outside the UK.\u00a0 Where before, these companies didn\u2019t qualify because they had to register in an overseas jurisdiction to take part in an accelerator programme, the new criteria means they can now access the fund, providing they meet all other conditions for eligibility.\r\u00a0\rThe scheme is designed by government and delivered by the British Business Bank.\u00a0Initially, \u00a3250 million was made available by the government for investment through the scheme, to be matched by private investors. However, the\u00a0Treasury made clear that the amount could be increased if needed.\u00a0 ",
+            "descriptionUseOfMeasure": "The Government has allocated \u00a3250 million to the Future Fund, which will initially run until the end of September. Government may extend the scheme thereafter.\r\rHM Treasury has published data on the total number of applications received, the numbers of successful applications and the (cumulative) value of all successful applications. \r\rOn the 7 June,\u00a0533 applications had been received, of which 53 had been approved to a value of \u00a355.9m. By the 28 June, 674 applications had been received in total, of which 322 had been approved to a cumulative value of\u00a0\u00a3320.6 million. By 19 July, 781 applications had been received, of which 465 had been approved to a cumulative value of\u00a0\u00a3468.7 million",
+            "descriptionInvolvementOfSocialPartners": "Unknown; no information available. The CBI has been lobbying government on its financial response and reports being involved in discussions.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-21_945.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1090",
+                    "sources::title": "HM Treasury Coronavirus Business Loan Scheme Statistics",
+                    "sources::url": "https://www.gov.uk/government/collections/hm-treasury-coronavirus-covid-19-business-loan-scheme-statistics",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1091",
+                    "sources::title": "CBI Political Engagements ",
+                    "sources::url": "https://www.cbi.org.uk/coronavirus-hub/cbi-in-action/",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1092",
+                    "sources::title": "British Bank (2020) Scheme Overview: The Future Fund",
+                    "sources::url": "https://www.british-business-bank.co.uk/ourpartners/coronavirus-business-interruption-loan-schemes/future-fund/",
+                    "sources::d_date": "07/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "6",
+                    "actors::name": "Other social actors (e.g. NGOs)",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "funding::name": "Other",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "135",
+                    "updates::d_date": "07/21/2020",
+                    "updates::description": "Data on uptake added up to 19 July.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "855",
+        "modId": "14"
+    },
+    {
+        "fieldData": {
             "title": "Right to combine unemployment benefit with training",
             "title_nationalLanguage": "Rett til \u00e5 kombinere dagpenger med utdanning",
             "d_startDate": "04/20/2020",
@@ -39212,6 +41130,76 @@
     },
     {
         "fieldData": {
+            "title": "\u00a0'SYNERGASIA': Income support for employees working fewer hours",
+            "title_nationalLanguage": "\u03a3\u03a5\u039d\u0395\u03a1\u0393\u0391\u03a3\u0399\u0391",
+            "d_startDate": "06/15/2020",
+            "d_endDate": "10/15/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "GR-2020-25/957",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/10/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "By virtue of Law 4690/2020, (Art. 31, \u03bf\u03b9\u03ba.23103/478/13.6.2020, Circular \u03bf\u03b9\u03ba. 26400/605 a special labour support mechanism, named ''SYNERGASIA'', has been established aiming to support employers to maintain the same headcount of full-time employees. Beneficiaries include\u00a0full-time employees and all businesses that present at least 20% reduction of sales, in comparison to the reference month and depending upon the month of participation to the mechanism.\u00a0The duration of the measure starts 15 June 2020 to 15 October 2020, and exceptionally until 31 December 2020.",
+            "descriptionContentOfMeasure": "By virtue of Law 4690/2020, (Art. 31, \u03bf\u03b9\u03ba.23103/478/13.6.2020, Circular \u03bf\u03b9\u03ba. 26400/605 a special labour support mechanism, named ''SYNERGASIA'', has been established. The mechanism\u00a0stipulates the ability of enterprises\u00a0to reduce the weekly working hours of all or part of the employees by up to 50%, without their employment contract being converted to part-time.\r\rThe mechanism applies only to full-time employees on the date of the law's publication.\u00a0 Employees included in the mechanism are entitled to receive an additional support on top of their wage from the Greek state amounting to 60% of their net salary corresponding to the time where they do not provide any work. In case the net earnings of the employees, after the above adjustment, are less than the statutory minimum wage, the difference is covered by the state. \r\r\u03a4he above mentioned employees are also entitled to receive annual leave and Christmas allowance proportion by the state, calculated upon the 60% of the employee state aid and the corresponding non working period.\u00a0The social security contributions are covered in full by the employer both for the working and non working periods, unless explicitly regulated otherwise, as in art. 31 par. 5a of the Law.\u00a0 Employers are not allowed to terminate the employment contracts of employees who joined the mechanism and if so, such termination shall be considered as null and void. \r\rEmployers shall also maintain the same nominal salaries of the employees for as long as the employees participate the mechanism.\u00a0To be enrolled to the SYNERGASIA mechanism, the employers shall submit a statement to the online platform named ''myBusinessSupport'', stating their gross income in relation to the turnover cycle, depending on the month of participation to the SYNERGASIA mechanism.\u00a0The remuneration of the employees, which corresponds to 60% of their reduced net salary corresponding to the hours they do not provide work, is paid within the first ten days of the month following the implementation of the mechanism.\u00a0Beneficiaries include\u00a0full-time employees and all businesses that present at least 20% reduction of sales, in comparison to the reference month and depending upon the month of participation to the mechanism.\u00a0The duration of the measure starts 15 June 2020 to 15 October 2020, and exceptionally until 31 December 2020.",
+            "descriptionUseOfMeasure": "No available information",
+            "descriptionInvolvementOfSocialPartners": "No available answer",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-25_957.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1128",
+                    "sources::title": "Law 4690 / 2020 (OGJ 104, 30.05.2020)",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-ygeia/astheneies/nomos-4690-2020-phek-104a-30-5-2020.html",
+                    "sources::d_date": "06/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "867",
+        "modId": "10"
+    },
+    {
+        "fieldData": {
             "title": "Support for people who are at higher risk for severe illness from COVID-19 virus",
             "title_nationalLanguage": "Fors\u00f8rgelse til mennesker med ekstra risiko ved corona-sygdom",
             "d_startDate": "05/20/2020",
@@ -39701,6 +41689,77 @@
     },
     {
         "fieldData": {
+            "title": "Health and Safety measures in the workplace",
+            "title_nationalLanguage": "\u039c\u03ad\u03c4\u03c1\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b1 \u03c4\u03b7\u03c2 \u03c5\u03b3\u03b5\u03af\u03b1\u03c2 \u03ba\u03b1\u03b9 \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2 \u03c4\u03c9\u03bd \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03c3\u03c4\u03bf\u03c5\u03c2 \u03c7\u03ce\u03c1\u03bf\u03c5\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 (\u0395\u03b3\u03ba\u03cd\u03ba\u03bb\u03b9\u03bf\u03c2 17312/\u03949.506/4.5.2020)",
+            "d_startDate": "05/04/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "GR-2020-19/972",
+            "dateType": "Open ended",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The Ministry of Labour issued a Circular (17312/\u03949.506/4.5.2020) concerning four categories of health and safety measures to be taken in the workplace in order to protect all workers, regardless their work status. The Circular addresses\u00a0private and public workplaces, suspended and currently operating, providing specifications for tackling the spread of coronavirus as an occupational hazard, on the basis of the existing legislation for occupational health for workers in Greece. The employer, in coordination with the Safety Technician and the Occupational Doctor (where and when is needed) detect and evaluate the occupational hazards in the workplace and take the appropriate each time measures in order to secure safety and protect workers\u2019 health.\r",
+            "descriptionContentOfMeasure": "\r* Organizational measures, a minimum distance\u00a0between working positions and avoidance of gathering of many people in the same place. For example, the employer may introduce different timetables,\u00a0teleworking and rotation work; \r* Hygiene measures and personal protective equipment -the employer is required to provide masks, gloves, as well as appropriate facilities (e.g. washbasins) and products (e.g. disinfectants) to all employees and train them as to the proper use.\u00a0Employees shall adhere to all guidelines for personal protection;\r*Environmental measures - regular maintenance of ventilation systems at workplace,\u00a0natural airing, regular cleaning and disinfection of working facilities, surfaces, working tools;\u00a0\r* Special preventive measures \u2013 monitoring of workers\u2019 health, high-risk workers,\u00a0\u00a0a \u201cself-evaluation\u201d form , in order to facilitate businesses in taking all the appropriate measures for the protection of occupational health of their working force.\r",
+            "descriptionUseOfMeasure": "No available answer.",
+            "descriptionInvolvementOfSocialPartners": "No involvement.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-19_972.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1220",
+                    "sources::title": "Health and Safety measures in order to protect workers at workplace (Circular 17312/\u03949.506/4.5.2020)",
+                    "sources::url": "https://www.taxheaven.gr/circulars/33003/17312-d9-506-4-5-2020",
+                    "sources::d_date": "05/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1221",
+                    "sources::title": "Social distancing regulations, safety measures in the workplace, special purpose benefit in May",
+                    "sources::url": "https://www.ballas-pelecanos.com/news/social-distancing-regulations-safety-measures-in-the-workplace-special-purpose-benefit-in-may-p64.html",
+                    "sources::d_date": "05/12/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "882",
+        "modId": "10"
+    },
+    {
+        "fieldData": {
             "title": "Lex voucher for tour operators in the tourism sector",
             "title_nationalLanguage": "Lex voucher na podporu cestovn\u00edho ruchu",
             "d_startDate": "02/20/2020",
@@ -39952,6 +42011,170 @@
         },
         "recordId": "887",
         "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Protection of rent payments for renters and landlords",
+            "title_nationalLanguage": "Prote\u00e7\u00e3o do arrendamento habitacional ",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Portugal",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "PT-2020-14/978",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilisation Programme extends the exceptional support to renting houses until September 2020 and enlarges its scope.\r\rAccording to the Law 4-C/2020, of 6 April, amended by the Law 17/2020, of 29 May, these exceptional measures were approved to be in force during the State of Emergency and the following month.\r\rAlthough the state of emergency was already lifted, many families will take some time to reach financial stability and to recover the income lost. Therefore the extension of the support was approved until September. \r\rAdditionally, despite the six month period following the granting of the financial support for families to start the reimbursement, and taking into consideration the situation of most vulnerable families, the loan may be converted into a non-repayable grant.",
+            "descriptionContentOfMeasure": "Under the scope of the exceptional measures to support housing renting, a financial support granted by IHRU, I. P. (Institute of Housing and Urban Rehabilitation) was created. This was oriented to households with significant losses in income and to landlords with low resources, with a significant loss in income due to the non-payment of rents. The financial support, under the form of a loan, was approved to be in force during the State of Emergency and the following month.\r\rTenants can ask for an interest free loan to support the difference between the monthly rent and a maximum effort rate of 35% of the household income, allowing them to pay the rent. The outstanding income cannot be inferior to the Social Support Index. \rLandlords who have demonstrated reductions in their household income above 20% of the previous month, and whose tenants did not make use of the IHRU loans (see above), can request an interest free loan to compensate the monthly rents that have not been paid, if the available household income diminishes below the Social Support Index for that reason.   \r\r\r",
+            "descriptionUseOfMeasure": "Information not available.",
+            "descriptionInvolvementOfSocialPartners": "Tripartite consultation involving the government, the trade union confederations CGTP and UGT and the employer confederations CIP, CCP, CTP and CAP at the Standing Committee for Social Concertation.\r",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-14_978.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1147",
+                    "sources::title": "Resolu\u00e7\u00e3o do Conselho de Ministros n.\u00ba 40-A/2020",
+                    "sources::url": "https://data.dre.pt/eli/resolconsmin/40-A/2020/05/29/p/dre",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1240",
+                    "sources::title": "lei 17/2020",
+                    "sources::url": "https://dre.pt/web/guest/pesquisa/-/search/134762424/details/maximized",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1241",
+                    "sources::title": "Lei 4C/2020",
+                    "sources::url": "https://dre.pt/pesquisa/-/search/131193441/details/maximized",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "888",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
+            "title": "Wage support for job creation",
+            "title_nationalLanguage": "Munkahelyteremt\u0151 b\u00e9rt\u00e1mogat\u00e1s",
+            "d_startDate": "05/18/2020",
+            "d_endDate": "",
+            "calc_country": "Hungary",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
+            "calc_identifier": "HU-2020-21/986",
+            "dateType": "Open ended",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "The aim of the measure is to create jobs for registered job-seekers, reducing the level of unemployment (which has risen during the COVID-19 pandemic). Businesses may apply to the local branch of the National Employment Office (which acts as a state authority) for a full grant of 100% of wages for six months for employing a registered job-seeker, which is then reviewed. The candidate for the job can be stated in the application form or it can be selected (recruited) by the Employment Office. If the application is approved, the Office signs a contract with the employer which includes details and conditions about the grant. This is a de minimis subsidy, so the rules of decree 1407/2013/EU apply. (Meaning that certain sectors such as export-linked sectors, farming and fisheries are excluded.)",
+            "descriptionContentOfMeasure": "Businesses that apply for this subsidy will receive 100% of the wages and social contributions of the employee for six months, but they must promise to keep them on for another three months at least after the grant period at their own expense. The subsidy cannot exceed HUF 200,000 (\u20ac595) per month including social taxes. The employer must choose between two options when applying for the support:\r\r* Headcount increase: the new hire will result in an increase or be level to the existing headcount at the firm (counting part-time workers as one) on the day the application is submitted\r* Net headcount increase: the new hire must be an addition to (or stay level with) the headcount _average in the six months prior to submitting the application_, meaning that any workers laid off due to the COVID-19 pandemic can be re-hired with the help of this subsidy.",
+            "descriptionUseOfMeasure": "The amount earmarked for this subsidy is HUF 80 billion (\u20ac238 million).The Ministry for Innovation and Technology announced it can help 70,000 people with the measure (calculated by expecting that most companies will apply for the maximum amount of subsidy). In May 2020, when the measure was announced, the number of those registered job-seekers in Hungary, who were in receipt of unemployment benefit or social assistance (income substitution) stood at around 160,000.  ",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HU-2020-21_986.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1177",
+                    "sources::title": "NFSZ (2020) Munkahelyteremto berkoltseg tamogatas (Support for wage costs for job creation \u2013 announcement",
+                    "sources::url": "",
+                    "sources::d_date": "05/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1178",
+                    "sources::title": "Govt launches wage support programme",
+                    "sources::url": "https://index.hu/gazdasag/2020/05/18/bertamogatas_munkahelyteremtes_80_milliard_forintos_program_indul",
+                    "sources::d_date": "05/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1235",
+                    "sources::title": "New criteria for job creation wage support",
+                    "sources::url": "https://www.portfolio.hu/uzlet/20200714/valtoznak-a-munkahelyteremto-bertamogatas-igenylesenek-feltetelei-44117",
+                    "sources::d_date": "07/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "227",
+                    "updates::d_date": "07/16/2020",
+                    "updates::description": "As of 16 July 2020, the scheme will only accept applications from the following target groups:\r\r* applicants aged 15 to 25\r* the long-term unemployed, that is, persons who have been job seekers for six months or more.\r\rThe applications received before 16 July will still be decided based on the previous criteria.The Ministry for Innovation and Technology said that until July more than 34,000 registered job-seekers were approved for the job creation subsidy and 80% of these applicants were people who lost their jobs due to COVID-19.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "896",
+        "modId": "17"
     },
     {
         "fieldData": {
@@ -40975,5 +43198,85 @@
         },
         "recordId": "918",
         "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Foreclosure procedures on pecuniary assets of natural persons are temporarily halted",
+            "title_nationalLanguage": "Zakon o provedbi ovrhe na nov\u010danim sredstvima ",
+            "d_startDate": "04/17/2020",
+            "d_endDate": "07/17/2020",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Preventing over-indebtedness",
+            "calc_identifier": "HR-2020-16/1012",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/20/2020",
+            "calc_lastUpdate": "07/21/2020",
+            "descriptionBackgroundInfo": "Foreclosure proceedings in Croatia are initiated by creditor and securing proceedings are initiated by submitter of motion. In case the law stipulates that an institution or a person, who are not beneficiaries of a certain claim are authorized to initiate foreclosure or securing proceedings for such claim, such institution or a person act as creditors, i.e. submitters of motion in such proceedings. \r\rForeclosure orders are issued exclusively on basis of enforceable or credible documents. Enforceable documents are: enforceable court decision and enforceable judiciary settlement, enforceable settlement from Article 186.a of the Law on Civil Proceedings, enforceable decision of arbitration court, enforceable decision passed in administrative proceedings and enforceable settlement in administrative proceedings, in case they refer to payment of a monetary claim and unless law stipulates otherwise, enforceable notarial decision and enforceable notarial document, settlements entered into in proceedings in front of court of honour at chambers in the Republic of Croatia and settlements entered into in mediation proceedings, in accordance with provisions of the law stipulating mediation proceedings, and other documents stipulated by law as enforceable documents. Pursuant to the Law on Enforcement, credible documents are invoices, bills of exchange, cheque with protest and returned invoices, whenever it is necessary to constitute a claim, public documents, extracts from commercial records, legally notarized private documents that are considered to be public documents in accordance with special regulation. Calculation of accrued interest is considered to constitute invoice.\r\rForeclosure orders in the basis of enforceable documents are passed by courts and on the basis of credible documents by public notaries. Public notary is under obligation to issue and submit foreclosure order or to forward the file to the court within 30 days, at the latest, counting from the date of receipt of motion. Responsible institution for the foreclosure procedure is the Financial Agency (FINA). In case the debtor does not receive foreclosure, one more delivery shall be attempted within time limit that may not be shorter than 30 or longer than 60 days. In case of failed repeated delivery, document that had to be submitted shall be posted on court e-notice board. After that, in case debtor does not file a complaint, foreclosure order becomes valid and enforceable. Upon enforceability of foreclosure order, proceedings are continued in front of agency that implements foreclosure order in accordance with provisions of the Law on Enforcement and the law stipulating foreclosure of monetary assets. Further proceedings depend on whether the debtor has sufficient assets to pay the debt or not. Law on enforcement does not stipulate time limit in which foreclosure order must be issued. In practice, courts issue foreclosure orders within 2-3 months.",
+            "descriptionContentOfMeasure": "The government issued a decree on amendments to Zakon o provedbi ovrhe na nov\u010danim sredstvima (The Act on the foreclosure on pecuniary assets) (OG 68/18, 2/20 and 46/20) and after the article 25, added two articles 25.a and 25.b) which define special circumstances when foreclosure can be postponed in special circumstances. Due to the Act, the Financial Agency (FINA) will not perform foreclosure procedure on pecuniary assets of natural persons. The Decree is valued for three months with the possibility on extension for next three months. During the mentioned period of postponed foreclosure, no income interest should be calculated and paid.  ",
+            "descriptionUseOfMeasure": "As many natural persons in Croatia face serious problems with foreclosure, such measure should be very welcomed in the circumstances of COVID19 and present financial difficulties. This is particularly important knowing that the Act allows for HRK 100 (\u20ac 13) of initial debt to become HRK 1,000 (\u20ac130), with almost no limit. ",
+            "descriptionInvolvementOfSocialPartners": "Due to the nature of the measure social partners were not involved. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-16_1012.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1237",
+                    "sources::title": "Zakon o provedbi ovrhe na nov\u010danim sredstvima ",
+                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_04_47_952.html",
+                    "sources::d_date": "04/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1238",
+                    "sources::title": "Prijedlog odluke o produ\u017eenju roka trajanja posebnih okolnosti",
+                    "sources::url": "https://vlada.gov.hr/sjednice/241-sjednica-vlade-republike-hrvatske-29970/29970",
+                    "sources::d_date": "07/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1239",
+                    "sources::title": "Odluku o produzenju roka trajanja posebnih okolnosti",
+                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_07_83_1549.html",
+                    "sources::d_date": "07/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "229",
+                    "updates::d_date": "07/16/2020",
+                    "updates::description": "According to the government\u2019s data there were 105,184 active judicial and notarial enforcement proceedings, including enforcement on real estate, movable property and funds of citizens and economic operators. In addition, the enforcement procedures have been started on assets of 23,665 pensioners. The government on its meeting on 16 July 2020, accepted the Decision on the extension of the Act on the foreclosure on pecuniary assets during the special circumstances for next three months, i.e. until 18 October 2020. The Decision is published in the OG 83/20",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "922",
+        "modId": "13"
     }
 ]
