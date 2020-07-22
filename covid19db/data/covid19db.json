@@ -44758,6 +44758,86 @@
     },
     {
         "fieldData": {
+            "title": "Sickness compensation for COVID-19 risk groups can be paid preventively",
+            "title_nationalLanguage": "Ers\u00e4ttning till riskgrupper ",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "SE-2020-27/981",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/22/2020",
+            "descriptionBackgroundInfo": "In order to support employees and self-employed who belong to risk groups, sickness allowance can now be paid out preventively. The aim is to support those employees and self-employed who cannot work from home but need to refrain from work due to the COVID-19 pandemic. \r\rThe right to sickness allowance is regulated in chapter 27 of the Socialf\u00f6rs\u00e4kringsbalk (2010:110) (Social Insurance Code). A preventive sickness allowance is normally available only for employees who are in rehabilitation or who receive medical treatment but are not eligible for regular sickness allowance. ",
+            "descriptionContentOfMeasure": "Preventive sickness benefit for employees is available for people belonging to the at-risk group of falling seriously ill with COVID-19. Even self-employed can apply. Casual employees can receive this form of financial support in case they have had to cancel already booked shifts due to the risk of infection. \r\rThis measure is available for employees who need to refrain from working in order to avoid being infected and who cannot work from home or whose employer cannot assign them to other duties. \r\rThe maximum amount of support is SEK 804 (approximately \u20ac80) per day (before taxes). This support can be paid out for a maximum of 90 days. This applies for the period of 1 July to 30 September 2020. \r ",
+            "descriptionUseOfMeasure": "No information available. ",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-27_981.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1175",
+                    "sources::title": "\u00c5tg\u00e4rder inom sjukf\u00f6rs\u00e4kringen med anledning av nya coronaviruset (COVID-19 related changes to sickness allowance)",
+                    "sources::url": "https://www.regeringen.se/regeringens-politik/socialforsakringar/atgarder-inom-sjukforsakringen-med-anledning-av-corona/",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "71",
+                    "targetGroups::name": "The COVID-19 risk group at the workplace",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "891",
+        "modId": "18"
+    },
+    {
+        "fieldData": {
             "title": "Start-up loans for the cultural sector",
             "title_nationalLanguage": "Cultuur Opstart Lening",
             "d_startDate": "05/27/2020",
