@@ -5386,97 +5386,6 @@
     },
     {
         "fieldData": {
-            "title": "Wage subsidies for companies declaring idle time due to quarantine regime",
-            "title_nationalLanguage": "Subsidijos darbo u\u017emokes\u010diui \u012fmon\u0117ms, deklaruojan\u010dioms prastovas karantino metu ",
-            "d_startDate": "03/19/2020",
-            "d_endDate": "04/27/2020",
-            "calc_country": "Lithuania",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "LT-2020-12/311",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "05/05/2020",
-            "descriptionBackgroundInfo": "Law No. XIII-2821 amending Articles 47 and 49 of the Labour Code (LC), effective as of 17 March 2020, introduced new conditions for companies to declare idle time. Pursuant to Article 47 of the LC, the employer may declare idle time for an employee or a group of employees, inter alia, if the Government declares quarantine and for this reason the employer is not able provide the employee with the work agreed upon in the employment contract. On 7 March 2020, the Seimas adopted the Law amending Articles 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 and 50 of Law on Employment of the Republic of Lithuania (No. XII-2470) which provides for the payment of wage subsidies to employers who retain jobs during idle time established as a result of an emergency situation or quarantine. The idea is to help employers retain jobs.",
-            "descriptionContentOfMeasure": "When the government declares a state of emergency and quarantine and for this reason the employer is not able to provide employees with the work agreed upon in the employment contract, the employer has the right to establish idle time or partial idle time. According to the amendments to the Law, the amount of the subsidy may reach 90% or 70% of the wage amount subject to the employer's choice. If the employer contributes 10% and chooses a 90% subsidy, the state will contribute max. one minimum monthly wage (MMW) (\u20ac607 gross); if the employer chooses a 70% subsidy, the state will be able to contribute more - 1.5 MMW or \u20ac910.5 gross. Wages accrued during idle time may not exceed those fixed earlier in the employment contract. Payment of the subsidy shall be terminated when the government revokes the emergency or quarantine. Employers shall have to inform the State Labour Inspectorate on the establishment of idle time for employees. Having used the subsidy, the employer is required to retain at least 50% of jobs for at least three months from the end of the payment of the subsidy. ",
-            "descriptionUseOfMeasure": "No information yet available.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-12_311.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "153",
-                    "sources::title": "Lietuvos Respublikos darbo kodekso 47 ir 49 straipsni\u0173 pakeitimo \u012fstatymas Nr. XIII-2821 (2020-03-17",
-                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/cedb2d3268f811eaa38ed97835ec4df6",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "6"
-                },
-                {
-                    "recordId": "218",
-                    "sources::title": "Law amending Articles 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 and 50 of Law on Employment of the Republic of Lithuania (LR u\u017eimtumo \u012fstatymo Nr. XII-2470 5-1, 13, 24, 35, 37, 38, 39, 41, 42, 44, 49 ir 50 straipsni\u0173 pakeitimo \u012fstatymas)",
-                    "sources::url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/43d9edd3797d11eaa38ed97835ec4df6?jfwid=-fy7rwc7a",
-                    "sources::d_date": "04/07/2020",
-                    "modId": "9"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "1",
-                    "funding::name": "Companies",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "194",
-        "modId": "90"
-    },
-    {
-        "fieldData": {
             "title": "Reinforcement of resources and powers of the authority for working conditions (ACT)",
             "title_nationalLanguage": "Refor\u00e7o dos meios e poderes da Autoridade para as Condi\u00e7\u00f5es de Trabalho (ACT)",
             "d_startDate": "04/03/2020",
@@ -33182,6 +33091,130 @@
     },
     {
         "fieldData": {
+            "title": "COVID-19 pandemic unemployment payment introduced",
+            "title_nationalLanguage": "",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "08/10/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "IE-2020-11/782",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/25/2020",
+            "calc_lastUpdate": "07/22/2020",
+            "descriptionBackgroundInfo": "The COVID-19 Pandemic Unemployment Payment is an emergency payment of \u20ac350 per week introduced by the Irish government for a 12 week period and intended to compensate those workers whose employers cannot retain them on their payroll. The payment will also be made to people who are self-employed but whose trade has temporarily ceased.\r\rWorkers are eligible to apply for the Pandemic Unemployment Payment if they were in employment or self-employment immediately before Friday 13 March, and have been temporarily laid-off from work or asked to stay at home from work where their employer is not in a position to retain them on their payroll.\r\r\r\r\r\r",
+            "descriptionContentOfMeasure": "In addition, regulation Nr. S.I. No. 95/2020, amendment 3, temporarily suspend the rule in section 62(4) of the Social Welfare Consolidation Act 2005 which provides that Jobseeker\u2019s Benefit is paid only from the fourth day of unemployment. The measure is being introduced to mitigate the impact on employers and employees arising from COVID-19 and will apply from the 19 March 2020 until 10 August 2020 inclusive. For that period, Jobseeker\u2019s Benefit will be paid from the first day of unemployment.\r\rThe COVID-19 Pandemic Unemployment Payment is a payment of \u20ac350 per week available to employees and the self-employed who have lost their job on (or after) March 13 due to the COVID-19 (Coronavirus) pandemic.\r\rThe payment was originally set at a rate of \u20ac203 but it was increased to \u20ac350 by the government on 24 March. \r\rSince 29 June, there is an additional lower rate of \u20ac203 per week, for those whose prior earnings were below \u20ac200 per week.  \r\rAlso, by 13 July, recipients had to confirm their continued eligibility for the payment.\r\rEligible workers should not be in receipt of any employment income and be between 18 and 66 years of age.\r\r",
+            "descriptionUseOfMeasure": "On 14 April the Irish Times reported that there were 533,000 people receiving the Government\u2019s special Covid-19 unemployment payment of \u20ac350 a week. This was in addition to the 210,000 on the 'live register' of social welfare claimants.\r\rFigures from the Central Statistics Office show the following numbers of people were claiming the PUP each month:\rMarch 2020 - 283,139\rApril 2020 - 602,107\rMay 2020 - 543,164\rJune 2020 - 438,933\r\rAccording to the Central Statistics Office, at the end of June 2020, the majority of those whose income from employment has been affected due to COVID-19 were still being facilitated through the COVID-19 Pandemic Unemployment Payment (438,933 persons).\r\r",
+            "descriptionInvolvementOfSocialPartners": "They were consulted.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-11_782.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "742",
+                    "sources::title": "Gov.ie",
+                    "sources::url": "https://www.gov.ie/en/service/be74d3-covid-19-pandemic-unemployment-payment/",
+                    "sources::d_date": "04/25/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "743",
+                    "sources::title": "Irish Times - Some 533,000 receiving Covid-19 unemployment payment",
+                    "sources::url": "https://www.irishtimes.com/news/ireland/irish-news/some-533-000-receiving-covid-19-unemployment-payment-1.4228604",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "744",
+                    "sources::title": "Covid-19 financial measures will help economy bounce back says Ibec",
+                    "sources::url": "https://www.irishtimes.com/business/economy/covid-19-financial-measures-will-help-economy-bounce-back-says-ibec-1.4211183",
+                    "sources::d_date": "03/24/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "803",
+                    "sources::title": "S.I. No. 95/2020 Amemdment 3",
+                    "sources::url": "http://www.irishstatutebook.ie/eli/2020/si/95/made/en/print?q=welfare",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1104",
+                    "sources::title": "Information on the change in the rate of payment from the COVID-19 Pandemic Unemployment Payment",
+                    "sources::url": "https://www.gov.ie/en/publication/information-on-the-change-in-the-rate-of-payment-from-the-covid-19-pandemic-unemployment-payment/",
+                    "sources::d_date": "07/09/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1105",
+                    "sources::title": "110,000 people see cut in PUP from \u20ac350 to \u20ac203 a week",
+                    "sources::url": "https://www.rte.ie/news/coronavirus/2020/0707/1151928-covid-pandemic-unemployment-payment/",
+                    "sources::d_date": "07/07/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1106",
+                    "sources::title": "CSO statistical release - COVID-19 crisis continues to impact labour market in June 2020",
+                    "sources::url": "https://www.cso.ie/en/releasesandpublications/er/lr/liveregisterjune2020/",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "151",
+                    "updates::d_date": "06/29/2020",
+                    "updates::description": "On 29 June, the rate of payment from the COVID-19 Pandemic Unemployment Payment changed.\r\rFrom that date there are two rates of payment. These are based on what a person earned from previous employment:\r\r* if they earned less than \u20ac200 a week, the payment will change to \u20ac203 per week. This is the rate of payment of Jobseeker's Benefit.\rif they earned \u20ac200 or more a week, the payment won\u2019t change and they will continue to receive \u20ac350 per week.\r\rTo continue receiving this payment, a claimant needs to confirm eligibility by 13 July.\r\rExplaining the change, the Government stated: __\u201cWhen the Pandemic Unemployment Payment was launched in March 2020, it was paid at a flat rate. This meant that everyone who received the payment was getting the same amount of weekly income support. The rate of payment was not based on previous income or the number of hours worked. This meant that everyone who needed income support was able to get it quickly. As a result, some recipients, mainly working a lower number of hours, received a higher amount of income support than from their previous employment. It is important that the social welfare system is fair - that is why changes have been made to the rate of payment. If you receive a lower rate of Pandemic Unemployment Payment, it will still be greater than the amount you previously earned from your employer.\u201d__",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "692",
+        "modId": "93"
+    },
+    {
+        "fieldData": {
             "title": "Increased illness benefit for COVID-19 absences",
             "title_nationalLanguage": "",
             "d_startDate": "03/13/2020",
@@ -45196,6 +45229,141 @@
         },
         "recordId": "896",
         "modId": "17"
+    },
+    {
+        "fieldData": {
+            "title": "Pandemic-related parental leave in order to take care of children under 13",
+            "title_nationalLanguage": "Cong\u00e9 pour raisons familiales li\u00e9 \u00e0 la pand\u00e9mie Covid-19 couvrant la p\u00e9riode du 25 mai 2020 au 15 juillet 2020",
+            "d_startDate": "05/25/2020",
+            "d_endDate": "07/15/2020",
+            "calc_country": "Luxembourg",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "LU-2020-22/988",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/22/2020",
+            "descriptionBackgroundInfo": "The Government has drawn up a specific measure for those parents who have to look after their child(ren) under 13 years of age, so that they will be able to benefit from leave for family reasons. The employee under this measure benefits from the full salary paid the CNS.\r\rLegal background: Labour Code, Book II, Title III, Chapter IV, Section (Code du travail, Livre II, Titre III, Chapitre IV, section 7.Amended Grand-Ducal Regulation of 10 May 1999 , Introducing parental leave and leave for family reasons (R\u00e8glement grand-ducal du 10 mai 1999 d\u00e9finissant les maladies ou d\u00e9ficiences d'une gravit\u00e9 exceptionnelle en application de l'article 15, alin\u00e9a 2 de la loi du 12 f\u00e9vrier 1999 portant cr\u00e9ation d'un cong\u00e9 parental et d'un cong\u00e9 pour raisons familiales. M\u00e9morial A 58 , 27 mai 199",
+            "descriptionContentOfMeasure": "The parental leave could be taken if:\r\r* The child was born on or after 1 September and is dependent on the applicant.- Schoolchildren under 13 years of age whose school is closed for crisis-related reasons and who cannot be cared for either by a childcare facility or by a third party relative.\r* A child who is vulnerable regarding the CMI recommendations (respiratory, cardiac or immunosuppressive pathology).\r\rA new application for family leave must be submitted even if you have already made an application with the form that was put online on 30 March 2020.\r\rParents of children with disabilities aged 13 to 18 (or up to 25) are eligible for family leave if they receive the additional special allowance for disabled children from the EAC.\r\rThe extraordinary Family Related Leave (FRC) (COVID-19) is time-limited and will not impact the balance of the normal FRC. It is treated separately from the normal FCP.\rClaimants could be:\rThe COVID-19 pandemic compassionate leave applies to parents who are:\r\r* employees, or;\r* self-employed\r\rand are parents of a child referred to above.\r\rIf other persons can take care of the child, whether the parents or another member of the household, the parent is not entitled to family leave. \r",
+            "descriptionUseOfMeasure": "Not available.",
+            "descriptionInvolvementOfSocialPartners": "Unknown.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-22_988.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1181",
+                    "sources::title": "Covid-19 pandemic-related compassionate leave covering the period from 25 May 2020 to 15 July 202",
+                    "sources::url": "https://guichet.public.lu/fr/actualites/2020/mars/13-conge-raisons-familiales-covid-19.htm",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "898",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Aid of \u20ac5,000 for micro-companies",
+            "title_nationalLanguage": "Aide de 5000 euros pour les micro-entreprises (moins de 10 salari\u00e9s)",
+            "d_startDate": "04/24/2020",
+            "d_endDate": "",
+            "calc_country": "Luxembourg",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "LU-2020-17/989",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "07/22/2020",
+            "descriptionBackgroundInfo": "Aide suppl\u00e9mentaire created by the directorate general for the middle classes pour les micro-entreprises, commerciales ou artisanales.\r\rLegal background: \r\r* Grand-ducal regulation concerning having as its object the introduction of a certified additional emergency allowance in favour of certain micro-enterprises in the context of the pandemic COVID-19 (R\u00e8glement grand-ducal du 24 avril 2020 ayant pour objet la mise en place d\u2019une indemnit\u00e9 d\u2019urgence certifi\u00e9e compl\u00e9mentaire en faveur de certaines micro-entreprises dans le cadre de la pand\u00e9mie Covid-19, M\u00e9morial A 329 du 24/04/2020). \r\r* Law Loi du 20 juin 2020 ayant pour objet la mise en place d\u2019un r\u00e9gime temporaire d\u2019aide de minimis en faveur de certaines entreprises commerciales et artisanales dans le cadre de la pand\u00e9mie du Covid-19, M\u00e9morial A 534 du 25/06/2020)",
+            "descriptionContentOfMeasure": "These are the main conditions:\rThe following micro-enterprises are concerned:\r\r* those whose closure was imposed by the grand-ducal regulation of 18 March 2020 and which have not been authorised to resume their activities.  \r* Those who had to close and were able to reopen after the end of the crisis state but have lost at least 50% of their turnover within the period of 15 April and 25 May 2020.\r* Those who did not have to close but who suffered a significant loss of turnover as a result of the COVID-19 crisis of 50% of their turnover within the period of 15 April and 25 May 2020.\r\rOther conditions are:\r* Employing less than ten wage earners\r* being registered as an employer at the social security.\r* have a turnover between \u20ac15,000 and \u20ac2.000.000.\r* In order to be eligible, the company must have achieved a minimum annual turnover of \u20ac15,000.",
+            "descriptionUseOfMeasure": "Not available.",
+            "descriptionInvolvementOfSocialPartners": "Not available.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-17_989.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1185",
+                    "sources::title": "Financial aid of EUR 5,000 for micro-businesses (employing less than 10 people",
+                    "sources::url": "https://guichet.public.lu/fr/entreprises/financement-aides/coronavirus/aide-urgence-moins-10-salaries.htm",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "899",
+        "modId": "13"
     },
     {
         "fieldData": {
