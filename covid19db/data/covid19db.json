@@ -5397,6 +5397,222 @@
     },
     {
         "fieldData": {
+            "title": "Jobsharing made more flexible",
+            "title_nationalLanguage": "Arbejdsfordeling",
+            "d_startDate": "03/12/2020",
+            "d_endDate": "",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "DK-2020-11/305",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/23/2020",
+            "descriptionBackgroundInfo": "In order to avoid direct dismissals, the government has made it possible for the companies to make use of the existing jobsharing scheme in a more flexible way. Jobsharing is covered by collective agreement. The flexible measures was passed by a so-called urgent statute in the Parliament. According to the\u00a0statute,\u00a0a rule about notifying the local jobcentre a week before\u00a0jobsharing can begin is abolished because it might create unnecessary red tape for the company.",
+            "descriptionContentOfMeasure": "According to the collective agreement a company can introduce a period of 13 weeks of jobsharing in the company as a provisional measure. Normally, the company must notify the local jobcentre a week before the jobsharing can start. This rule is abolished with the aim that the company can start jobsharing the same day the notification is send.\r  \rAt the same time, it becomes possible for companies to switch between the types of jobsharing periods when a cycle of jobsharing is completed. As it is, the working hours must be reduced by at least two full days per day. week or with one week of full-time work followed by one week of unemployment. However, the distribution can also be arranged with two weeks of full-time work followed by one week of unemployment or with two weeks of full-time work followed by two weeks of unemployment. According to the urgent statute, the employer can switch between the periods when the one in use expires. \r\rDuring the periods of unemployment, the employees in question will receive a supplementary unemployment benefit.",
+            "descriptionUseOfMeasure": "In February 2020, the number of employees\u00a0encompassed by\u00a0jobsharing\u00a0was 264. After the partial closure of the labour market 12 March, the number in the same month increased to 5,788 employees. In April the number\u00a0increased further to 8,244 and in May - the last month of statistics -\u00a0the number was 7,475, that is a small decrease in relation to the previous month.",
+            "descriptionInvolvementOfSocialPartners": "The social partners have welcomed the initiative to make the existing jobsharing scheme more flexible for an (open ended) period.",
+            "socialPartner_form": "Other",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_305.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "156",
+                    "sources::title": "Arbejdsfordeling g\u00f8res mere fleksibel",
+                    "sources::url": "https://bm.dk/media/12851/faktaark-om-arbejdsfordeling.pdf",
+                    "sources::d_date": "03/12/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "147",
+                    "updates::d_date": "07/09/2020",
+                    "updates::description": "In February 2020, the number of employees\u00a0encompassed by\u00a0jobsharing\u00a0was 264. After the partial closure of the labour market 12 March, the number in the same month increased to 5,788 employees. In April the number\u00a0increased further to 8,244 and in May - the last month of statistics -\u00a0the number was 7,475, that is a small decrease in relation to the previous month.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "188",
+        "modId": "97"
+    },
+    {
+        "fieldData": {
             "title": "Emergency fund for very small businesses and self-employed persons",
             "title_nationalLanguage": "Notfallfong fir ganz kleng Betrieber an Ind\u00e9pendanten",
             "d_startDate": "03/25/2020",
@@ -25255,6 +25471,104 @@
     },
     {
         "fieldData": {
+            "title": "Temporary compensation scheme for self-employed persons",
+            "title_nationalLanguage": "Midlertidig kompensationsordning for selvst\u00e6ndige",
+            "d_startDate": "03/09/2020",
+            "d_endDate": "06/08/2020",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "DK-2020-11/624",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/23/2020",
+            "descriptionBackgroundInfo": "The outbreak of corona virus has already had major financial consequences. Many self-employed people face major challenges, and this requires further initiatives. Therefore, has the government together with all the parties in the Parliament passed a new temporary compensation scheme for the self-employed. \r\rThe companies must apply for compensation on the Danish Commerce Agency's corporate portal for companies. The scheme is managed by the The Danish Business Authority.\r\rThe legal reference to the scheme is BEK nr 332 af 01/04/2020.",
+            "descriptionContentOfMeasure": "Self-employed, freelancers and other companies with a maximum of 10 full-time employees may receive temporary compensation for lost revenue due to coronavirus / covid-19.\r\rTo apply for lost revenue compensation, it requires: \r\r* Turnover or B-income has been at least DKK 10,000 per average. month before coronavirus / COVID-19;\r* Maximum of ten full-time employees. This means, for example, a half-time employee equivalent to half a full-time employee, etc. The business owner and employee spouse do not count in the ten full-time employees;\r* Have expected loss of at least 30% due to coronavirus / COVID-19\r* Lost revenue from March 9 through June 8, 2020.\r\rState compensation is 75% of the revenue loss, however, a maximum of 23,000 kr. per month corresponding to the rates in the salary compensation scheme for salaried employees agreed with the social partners in the tripartite agreement. \r\rThe compensation may amount to up to DKK 34,500 per month, if the self-employed has a spouse employed.\r\rSelf-employed or small businesses can receive maximum compensation for three months from 9 March until 9 June. It is a requirement that the company does not have more than 10 full-time employees.",
+            "descriptionUseOfMeasure": "Unknown",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_624.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "500",
+                    "sources::title": "BEK nr 332 af 01/04/2020",
+                    "sources::url": "https://www.retsinformation.dk/Forms/R0710.aspx?id=213844",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "501",
+                    "sources::title": "Midlertidig kompensation for selvst\u00e6ndige som f\u00f8lge af coronavirus/covid-19",
+                    "sources::url": "https://indberet.virk.dk/myndigheder/stat/ERST/omsaetningskompensation_selvstaendige",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "791",
+                    "sources::title": "National measures to protect non-standard workers including workers in the platform economy",
+                    "sources::url": "https://www.etuc.org/sites/default/files/publication/file/2020-03/PF%20Covid-19%20Briefing%20NSW%20-%20Platform%20workers%20%2BSC%20v.Ludo2_.pdf",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1251",
+                    "sources::title": "BEK nr 797 af 08/06/2020",
+                    "sources::url": "https://www.retsinformation.dk/eli/lta/2020/797",
+                    "sources::d_date": "06/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "34",
+                    "targetGroups::name": "Platform workers",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "165",
+                    "updates::d_date": "07/10/2020",
+                    "updates::description": "On 18 April, the temporary compensation scheme for self-employed and freelancers was extended for one month to apply from 9 March 2020 to 8 July 2020.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "515",
+        "modId": "81"
+    },
+    {
+        "fieldData": {
             "title": "Expanded entitlement for employer for reimbursement and for self-employed for sickness benefit\r",
             "title_nationalLanguage": "Udvidet ret for arbejdsgiver til refusion og for selvst\u00e6ndige til sygedagpenge ",
             "d_startDate": "03/12/2020",
@@ -25841,6 +26155,92 @@
         },
         "recordId": "522",
         "modId": "90"
+    },
+    {
+        "fieldData": {
+            "title": "Increased access to unemployment benefits and sickness benefits",
+            "title_nationalLanguage": "\u00d8get adgang til dagpenge og sygedagpenge",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "06/09/2020",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "DK-2020-10/634",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/23/2020",
+            "descriptionBackgroundInfo": "Increased access to unemployment benefits and sickness benefits due to COVID-19: In order to mitigate the negative consequences that the spread of COVID-19 can have on unemployed and sick pay recipients, the government and all the parties of the Folketing agree to provide easier conditions for unemployed and sick pay recipients in the coming temporary period. \r\rThe legal references are \"LOV nr 274 af 26/03/2020\" and \"LOV nr 275 af 26/03/2020\". ",
+            "descriptionContentOfMeasure": "For unemployment benefit recipients: The period from 1 March to 31 May is not included in the unemployed seniority. It will be a condition that the members be a member of the a-box during the period.\r\rFor sickness benefit recipients: Persons who have received sickness benefit for more than 22 weeks during the period from March 9 to June 9, in the nine preceding calendar months, i.e. when the reassessment date and cannot extend the payment of sickness benefit in accordance with the existing extension rules, the right to sickness benefit will be extended for three months. \r\rSuspension of G-days: Employer's payment of unemployment benefit (G-days) to employees who are covered by a division of work or returned home is suspended. ",
+            "descriptionUseOfMeasure": "Unknown",
+            "descriptionInvolvementOfSocialPartners": "No involvement",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-10_634.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "515",
+                    "sources::title": "LOV nr 275 af 26/03/2020",
+                    "sources::url": "https://www.retsinformation.dk/Forms/R0710.aspx?id=213710",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "516",
+                    "sources::title": "LOV nr 274 af 26/03/2020",
+                    "sources::url": "https://www.retsinformation.dk/Forms/R0710.aspx?id=213709",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "517",
+                    "sources::title": "Besk\u00e6ftigelsesministeriet",
+                    "sources::url": "https://bm.dk/arbejdsomraader/aktuelle-fokusomraader/covid-19/",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "4"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "159",
+                    "updates::d_date": "07/10/2020",
+                    "updates::description": "Due to the Corona situation, the Danish Parliament has decided to extend the temporary period by one month until 30 June 2020.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "525",
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -27649,6 +28049,85 @@
         },
         "recordId": "550",
         "modId": "71"
+    },
+    {
+        "fieldData": {
+            "title": "Three months' suspension of eligibility criteria for long-term unemployment benefit holders",
+            "title_nationalLanguage": "Timekrav for folk p\u00e5 kontanthj\u00e6lp s\u00e6ttes p\u00e5 pause",
+            "d_startDate": "03/09/2020",
+            "d_endDate": "09/08/2020",
+            "calc_country": "Denmark",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "DK-2020-11/660",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/23/2020",
+            "descriptionBackgroundInfo": "With the different initiatives to support wage earners and self-employed, now follows an initiative from the government to support unemployed people - and in this case - receiving social security protection because the person is no longer eligible for an unemployment benefit. A so-called 225 hours rule in force requires that the unemployed needs to have had 225 hours of employment the last 12 months in order to continously receiving\u00a0a cash benefit. This rule the government and the Parliament has suspended on the background that finding a new job is impossible in the current situation. \r\rLegal reference: LFF 2020-04-14 nr 169",
+            "descriptionContentOfMeasure": "To be able to fulfill the demand of 225 hours work within the last 12 months with the aim to keep the cash benefit requires an active search for jobs. Finding new jobs has become a significantly difficult task. The COVID-19 has send thousands of employees home with a wage compensation waiting for reopening of the labour market. However, this has not avoided a drastic increase in unemployment due to bankruptcies or close downs of parts of a company. On this background, the government and the Parliament on 06.04.2020 decided to put the 225 hours rule on hold with effect from 09.03.2020 and three months forward. This means that the\u00a0unemployed person receiving\u00a0social security\u00a0benefits\u00a0in this period will receive the cash benefit without documenting 225 hours of employment in the last 12 months nor without having continuously to search for jobs. \r\rA person of 30 years of age with children receives DKK 15.355 a month (1 January 2020)\rPersons under 30 years without children receives DKK 11.554 a month\rSingles under 30 years with children receives DKK 14.677\u00a0 a month",
+            "descriptionUseOfMeasure": "It is too early to estimate the number of beneficiaries that falls under this specific rule.",
+            "descriptionInvolvementOfSocialPartners": "The social partners have expressed agreement with this support measure for unemployed receiving a cash benefit.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-11_660.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "553",
+                    "sources::title": "Bredt flertal s\u00e6tter timekrav for folk p\u00e5 kontanthj\u00e6lp p\u00e5 pause",
+                    "sources::url": "https://bm.dk/nyheder-presse/nyheder/2020/04/bredt-flertal-saetter-timekrav-for-folk-paa-kontanthjaelp-paa-pause/",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1252",
+                    "sources::title": "225-timers-krav p\u00e5 pause indtil september p\u00e5 grund af corona-udbruddet",
+                    "sources::url": "https://bm.dk/nyheder-presse/pressemeddelelser/2020/06/225-timers-krav-paa-pause-indtil-september-paa-grund-af-corona-udbruddet/",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "158",
+                    "updates::d_date": "07/10/2020",
+                    "updates::description": "Due to the Corona situation, the Danish parliament has decided to extend the suspension of the 225-hour rule for social security protection recipients until September 8, 2020.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "551",
+        "modId": "86"
     },
     {
         "fieldData": {
