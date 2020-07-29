@@ -12853,6 +12853,123 @@
     },
     {
         "fieldData": {
+            "title": "Allowances for idle time for self-employed",
+            "title_nationalLanguage": "D\u012bkst\u0101ves pabalsti pa\u0161nodarbin\u0101tajiem  ",
+            "d_startDate": "03/14/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "LV-2020-11/413",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "Initially, the allowance for idle time was granted only to employees. On March 31, the government supported the proposal of the Ministry of Culture and expanded the normative regulation also to self-employed and the micro-entrepreneurs.  \rThe allowance for idle time measure in general is described in Section 14 of the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' (adopted on 20 March 2020, valid from 22 March 2020).\rSpecifically regarding the self-employed, the government has adopted the Regulations of Cabinet of Ministers No. 179, 'Regulations regarding the Allowance for Idle Time for self-employed who are affected by spread of COVID-19' (Adopted on 31 March 2020).",
+            "descriptionContentOfMeasure": "The eligible self-employed are individuals registered in the State Revenue Service as involved in economic activity, that have paid social contributions as self-employed, or as receiver of author\u2019s fee, or have paid micro-enterprise tax, or have paid taxes as individual merchants, and have not got income during the idle period, except some permanent authors\u2019 fees.\rThe allowance is calculated using the State Revenue Service data that is provided in the declarations of self-employed, according to the following criteria:\r\r* For those who pay micro-enterprise tax, 50% of average monthly income from the economic activity as micro-entrepreneur (reference period is last two full quarters).\r* Self-employed person in general tax regime \u2013 75% of the average income (the reference period is the two last full quarters, income is calculated in accordance with the state mandatory social insurance contribution of a person).\r* For a person from both above mentioned categories who within the idle time has returned to work after child care leave \u2013 100% of granted parents benefit (the reference period is of six months before declaring the state of emergency).\r\rFor neither of categories the allowance can be more than \u20ac700.\rThe regulations define 17 reasons when the allowance can be rejected. ",
+            "descriptionUseOfMeasure": "For the period from 12 March 2020 to 30 June 2020 the State Revenue Service (SRS) has paid idle-time allowances to 2,388 self-employed persons. Among self-employed persons, the largest number of idle-time benefits has been granted to the following sectors: 16% arts, entertainment and recreation; 9.8% professional, scientific and technical services and 9% education. For 11.9% of the recipients of benefits, the type of main activity is not indicated, but for another 21.2% the type of main activity is 'Other services'.",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published the 'Statement on support for government action to limit the spread of COVID-19 and reduce the impact of the crisis on Latvian companies and workers'. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that everything we do helps to address this crisis.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-11_413.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "486",
+                    "sources::title": "VID \u0123ener\u0101ldirektore: d\u012bkst\u0101ves maks\u0101jumi ir atbalsts uz\u0146\u0113m\u0113jiem, nevis darbiniekiem",
+                    "sources::url": "https://www.tvnet.lv/6946518/vid-generaldirektore-dikstaves-maksajumi-ir-atbalsts-uznemejiem-nevis-darbiniekiem",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "487",
+                    "sources::title": "State Revenue Service informative page on COVID-19",
+                    "sources::url": "https://www.vid.gov.lv/lv/covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "488",
+                    "sources::title": "Regulation of the Cabinet of Ministers Nr 179 Regulations regarding the allowance if idle time for self-employed who are affected by the Spread of Covid-19",
+                    "sources::url": "https://likumi.lv/ta/id/313680-noteikumi-par-dikstaves-pabalstu-pasnodarbinatam-personam-kuras-skarusi-covid-19-izplatiba",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1218",
+                    "sources::title": "Law on the Suppression of Consequences of the Spread of COVID-19 Infection",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/315287-law-on-the-suppression-of-consequences-of-the-spread-of-covid-19-infection",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1219",
+                    "sources::title": "Summary of statistics on idle-time benefits",
+                    "sources::url": "https://www.vid.gov.lv/lv/statistika-3",
+                    "sources::d_date": "07/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "214",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe latest edition of the Regulations of Cabinet of Ministers No. 179, 'Regulations regarding the Allowance for Idle Time for self-employed who are affected by spread of Covid-19' (7 May 2020) establishes that idle-time allowances for self employed is available up to 30 June 2020.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "304",
+        "modId": "89"
+    },
+    {
+        "fieldData": {
             "title": "Free paid days to parents for the purpose of childcare",
             "title_nationalLanguage": "Zile libere platite pentru parintii cu copii in ingrijire",
             "d_startDate": "04/15/2020",
@@ -24379,6 +24496,95 @@
     },
     {
         "fieldData": {
+            "title": "Additional child-bonus for employees entitled to the allowance for idle time",
+            "title_nationalLanguage": "Papildus maks\u0101jums d\u012bkst\u0101ves pabalstu sa\u0146\u0113m\u0113jiem par katru b\u0113rnu vai apg\u0101d\u012bb\u0101 eso\u0161u personu ",
+            "d_startDate": "03/14/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "LV-2020-11/595",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/14/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "On 9 March 2020, the government adopted amendments to Cabinet Regulations No. 165, introducing an additional children-related bonus for employees receiving allowance for idle time. \rAllowance for idle time in general is described in Section 14 of the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' (adopted on 20 March 2020, valid from 22 March 2020).\r\rThe conditions of eligibility for the allowance are set by the Regulation of the Cabinet of Ministers No. 165, 'Regulations Regarding the Employers Affected by the Crisis Caused by COVID-19 which are Eligible for the Allowance for Idle Time and Division of the Payment for Late Tax Payments in Installments or Deferral Thereof for up to Three Years'. \r",
+            "descriptionContentOfMeasure": "An employee who receives the allowance for idle time is granted also with an additional bonus of the amount of \u20ac50 for each dependent child in age 24 years old if, at the moment of awarding the allowance for idle time, the personal income tax relief for the child is applied to the employee. \rThe additional payment is made by the State Social Security agency for the period in which the employee is entitled to the idle time allowance.\r\rThe State Social Security agency is informed about the persons receiving the allowance for the idle time from the State Revenue Service. The additional payment is transferred to the employee's bank account to which the idle time allowance is transferred.\r\rIn addition, entitlements to the parental benefit expiring during the state of emergency are extended for the duration of the state of emergency (capped at \u20ac700) for persons who are not able to return to work and gain income due to the emergency circumstances.",
+            "descriptionUseOfMeasure": "No information to date. ",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published 'Statement on support for government action to limit the spread of COVID-19 and reduce the impact of the crisis on Latvian companies and workers'. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that everything we do helps to address this crisis.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-11_595.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "484",
+                    "sources::title": "Regulation of the Cabinet of Ministers Nr. 165 \u201cRegulations Regarding the Employers Affected by the Crisis Caused by COVID-19 which are Eligible for the Allowance for Idle Time and Division of the Payment for Late Tax Payments in Instalments or Deferral Thereof for up to Three Years\u201d",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313514-regulations-regarding-the-employers-affected-by-the-crisis-caused-by-covid-19-which-are-eligible-for-the-allowance-for-idle-time-and-division-of-the-payment-for-late-tax-payments-in-instalments-or-deferral-thereof-for-up-to-three-years",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1218",
+                    "sources::title": "Law on the Suppression of Consequences of the Spread of COVID-19 Infection",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/315287-law-on-the-suppression-of-consequences-of-the-spread-of-covid-19-infection",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "486",
+        "modId": "85"
+    },
+    {
+        "fieldData": {
             "title": "Submission of annual reports",
             "title_nationalLanguage": "Gada p\u0101rskatu iesnieg\u0161ana",
             "d_startDate": "03/12/2020",
@@ -25748,6 +25954,106 @@
         },
         "recordId": "512",
         "modId": "75"
+    },
+    {
+        "fieldData": {
+            "title": "Support measures to reorient business towards the production of disinfectants",
+            "title_nationalLanguage": "Atbalsta pas\u0101kumi dezinfekcijas l\u012bdzek\u013cu ra\u017eo\u0161anai",
+            "d_startDate": "03/12/2020",
+            "d_endDate": "06/10/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "LV-2020-11/622",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "The measure has been established by Section 7 of the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' (adopted on 20 March 2020, valid from 22 March 2020).\r\rIts aim is to support local manufacturers, supporting their conversion in disinfectants producers. This initiative is then aimed to improve, at the same time, population's access to disinfectants. \rIt provides changes regarding turnover of excise goods (strong alcohols). Furthermore, it introduces simplifications in the procedures for production of disinfection means.",
+            "descriptionContentOfMeasure": "The measure establishes that during the emergency situation related to the spread of COVID-19, the excise tax should be reduced with reference to undenatured alcohol which is used in the production of disinfectants, if denatured alcohol is not available. In the light of the above, during the COVID-19 epidemic no financial excise duty is required to obtain a security certificate for disinfectant manufacturers importing alcohol from another Member State. \r\rFurthermore, the State Revenue Service may grant a reduction of the general excise duty in the amount of up to 90 % to companies which have a special permit (licence) for the operation of an approved warehouse and which carries out production of alcohol. \r\rIn addition, the Ministry of Economy is elaborating a simplified procedure to admit into the market individual protection means against COVID-19 infection, encompassing disinfectants. The ones produced locally and recognized in the simplified procedure could be used only in Latvia, and they will not need to meet EU standard and EU mark. Such products will not need evaluation from the third side; they will be recognized by the producer\u2019s certificate, sample of a product and laboratory test.",
+            "descriptionUseOfMeasure": "No information on the usage of measure, but a number of local companies are producing disinfectants.",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published \u201cStatement on support for government action to limit the spread of COVID-19 and reduce the impact of the crisis on Latvian companies and workers\u201d. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that everything we do helps to address this crisis.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-11_622.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "487",
+                    "sources::title": "State Revenue Service informative page on COVID-19",
+                    "sources::url": "https://www.vid.gov.lv/lv/covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "499",
+                    "sources::title": "Konfisc\u0113to spirtu dezinfekcijas l\u012bdzek\u013cos br\u012bvpr\u0101t\u012bgi p\u0101rstr\u0101d\u0101s \u00abMadara Cosmetics\u00bb",
+                    "sources::url": "https://www.lsm.lv/raksts/zinas/latvija/konfisceto-spirtu-dezinfekcijas-lidzeklos-brivpratigi-parstradas-madara-cosmetics.a353260/",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1222",
+                    "sources::title": "During the period of downtime benefits, the SRS has paid downtime benefits in the amount of more than 53 million euros to almost 55 thousand people.",
+                    "sources::url": "https://www.vid.gov.lv/lv/dikstaves-pabalstu-perioda-teju-55-tukstosiem-cilveku-vid-izmaksajis-dikstaves-pabalstus-vairak-0",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "215",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end on 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020). \rAll support measures (except distant trade of alcohol) regarding manufacturing of disinfectants terminated on 10 June 2020, including the present one.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "513",
+        "modId": "88"
     },
     {
         "fieldData": {
@@ -28548,6 +28854,107 @@
         },
         "recordId": "553",
         "modId": "79"
+    },
+    {
+        "fieldData": {
+            "title": "ALTUM Working capital loan",
+            "title_nationalLanguage": "ALTUM Apgroz\u0101mo l\u012bdzek\u013cu aizdevums",
+            "d_startDate": "03/25/2020",
+            "d_endDate": "",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "LV-2020-13/663",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "In cooperation with the Ministry of Economics state owned development finance institution ALTUM has prepared assistance measures for companies affected by crisis due to spread of COVID-19 epidemic. \rWorking capital loan is liquidity support for businesses, farmers and those in the fisheries industry, intended to help companies whose activities have been affected by COVID-19.\rALTUM is a state-owned development finance institution, which offers state aid for various target groups with the help of financial tools (such as loans, credit guarantees, investing in venture capital funds, etc.). ALTUM develops and implements state aid programmes to compensate for the market's shortcomings that can't be solved by private financial institutions.\rThe law \u201cOn Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19\u201d (adopted on 20 March 2020, valid from 22 March 2020) and Regulations of Cabinet Nr. 122 Regarding the Increase of the Reserve Capital provides funding for the measure.",
+            "descriptionContentOfMeasure": "Amount of the available loan is up to \u20ac1 million, but the total loan does not exceed at least one of the criteria:\r- 25% of 2019 turnover;\r- loan amount must not exceed twice the total remuneration of employees (incl. social contributions) in 2019 (for those established in 2019, planned two-year amount);\r- the amount of liquidity required to ensure operation for the next 12 months.\rTerm of the loan is 1-3 years. The loan holidays is available up to 12 month. Reduced interest rate and reduced collateral requirements are applied for these loans.\r\rThere are also several requirements for eligibility. The loan can not be applied to refinance other loans (principal payments, debt repayments of related companies, debt payments incurred before March 2020, dividend payments, etc.). Negative impact of COVID-19 on business activities has to be justified. If the company was already in financial distress as of December 31, 2019 the loan will not be granted. Companies operating in the gambling, financial brokerage, firearms, tobacco, alcohol, real estate sectors are not eligible.",
+            "descriptionUseOfMeasure": "In the period from 25 March 2020 to 10 June 2020 a total of 342 companies have received working capital loans for the total amount of \u20ac69 million, most of them small (39%) and micro (41%) companies, 17% loans to medium-sized companies and 3% to large companies. \rThe most demanded is financing up to \u20ac100,000 for one transaction, which was received by 68% of ALTUM customers, of which the smallest loan in the amount of \u20ac1,840 was received by a trading company from Riga. 10% of entrepreneurs have borrowed financing from \u20ac101,000 to \u20ac200,000 during the crisis, 14% from \u20ac201,000 to \u20ac999,000, while 9% of companies have received the maximum loan amount of \u20ac1 million.\rWorking capital loans are most actively used by companies operating in the service sector (31%), manufacturing (24%) and trade companies (24%), as well as transport (9%), construction (7%) and agriculture (3%). Loans to support operations during the virus crisis are used by companies all over Latvia - most of the financed companies are located in Riga and Pieriga (65%), Latgale (12%), Kurzeme (10%), Vidzeme (7%) and Zemgale (6%).",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published \u201cStatement on support for government action to limit the spread of the COVID-19 and to reduce the impact of the crisis on Latvian companies and workers\u201d. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that every measure taken helps to address this crisis.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-13_663.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "552",
+                    "sources::title": "Regulations of Cabinet Nr 122 Regarding the Increase of the Reserve Capital",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313436-regarding-the-increase-of-the-reserve-capital",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "559",
+                    "sources::title": "ALTUM Working capital loan",
+                    "sources::url": "https://www.altum.lv/en/services/businesses-covid-19/working-capital-loan-covid-19/about/",
+                    "sources::d_date": "04/16/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "560",
+                    "sources::title": "Covid-19 skartie uz\u0146\u0113m\u0113ji var pieteikties ALTUM atbalsta programm\u0101m",
+                    "sources::url": "https://www.altum.lv/lv/jaunumi/covid-19-skartie-uznemeji-no-sodienas-var-pieteikties-altum-atbalsta-programmam",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1218",
+                    "sources::title": "Law on the Suppression of Consequences of the Spread of COVID-19 Infection",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/315287-law-on-the-suppression-of-consequences-of-the-spread-of-covid-19-infection",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1224",
+                    "sources::title": "ALTUM atbalsts kr\u012bzes skartiem uz\u0146\u0113mumiem b\u016bs pieejams ar\u012b turpm\u0101k; kr\u012bzes laik\u0101 veicin\u0101ta 264 miljonu eiro iepl\u016b\u0161ana tautsaimniec\u012bb\u0101",
+                    "sources::url": "https://www.altum.lv/lv/jaunumi/altum-atbalsts-krizes-skartiem-uznemumiem-bus-pieejams-ari-turpmak-krizes-laika-veicinata-264-miljonu-eiro-ieplusana-tautsaimnieciba",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "220",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe change of the umbrella law do not affect the content of measure.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "554",
+        "modId": "82"
     },
     {
         "fieldData": {
