@@ -732,6 +732,190 @@
     },
     {
         "fieldData": {
+            "title": "Temporary suspension of individual and collective dismissals",
+            "title_nationalLanguage": "Sospensione temporanea delle procedure di licenziamento individuale e collettivo",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "08/17/2020",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Flexibilisation and security",
+            "calc_identifier": "IT-2020-12/219",
+            "dateType": "Temporary",
+            "calc_creationDay": "03/31/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "The Italian Government, through Article 46 of the Law Decree No. 18 of 2020, suspended all the proceedings for collective dismissals and individual layoffs based on economic or productive reasons. This measure has been taken to prevent companies from dismissing wide part of their workforce as a consequence of the impossibility to carry out their business due to the two months lockdown applied in Italy to contrast the COVID-19 outbreak. The suspension of dismissals was later extended until 17 August 2020 by Law Decree No. 34 of 2020.",
+            "descriptionContentOfMeasure": "In consequence of the adoption of this measure, all collective dismissals' proceedings initiated from 23 February 2020 are suspended until 15 May 2020, and no new proceedings can be initiated from 17 March 2020 until the same final date. In addition, individual dismissals are banned from 17 March 2020 until 15 May 2020. The suspension does not apply to dismissals for disciplinary reasons, that can still be initiated.\rThe ban of individual dismissal is applied to all employers. The ban of collective dismissals, only to those than can enter in this proceeding (the ones with more than 15 employees).\rThe suspension of dismissals was later extended until 17 August 2020 by Law Decree No. 34 of 2020 (art. 80).",
+            "descriptionUseOfMeasure": "No details available.",
+            "descriptionInvolvementOfSocialPartners": "No involvement of the social parthers.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-12_219.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "78",
+                    "sources::title": "Article 46 of Law Decree No. 18 of 2020",
+                    "sources::url": "www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18!vig=",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "79",
+                    "sources::title": "Sospensione, illegittimit\u00e0 o nullit\u00e0? I licenziamenti \u201ceconomici\u201d al tempo del Coronavirus",
+                    "sources::url": "http://www.bollettinoadapt.it/sospensione-illegittimita-o-nullita-i-licenziamenti-economici-al-tempo-del-coronavirus/",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "1189",
+                    "sources::title": "Law Decree No. 34 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/05/19/20G00052/sg",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "102",
+        "modId": "107"
+    },
+    {
+        "fieldData": {
+            "title": "Simplifying the adoption of the smart working regime",
+            "title_nationalLanguage": "Disposizioni per semplificare l'accesso al regime di smart working",
+            "d_startDate": "03/04/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "IT-2020-10/221",
+            "dateType": "Temporary",
+            "calc_creationDay": "03/31/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "The smart working regime is a particular way to carry out the employees' performance, allowing them to conduct it partly at the employer's premises, and in part outside them (for instance at home, in other public spaces or at clients' premises). To cope with the COVID-19 crisis, the Government, via the Prime Minister's Decree of 4 March 2020, simplified the conditions to apply the smart working regime (lavoro agile) to the workforce. The goal is to encourage companies to employ this job scheme to ensure, when possible, business continuity.\r",
+            "descriptionContentOfMeasure": "Article 1, lett. n) of the Prime Minister's Decree of 4 March 2020 authorises the adoption of the smart working regime without executing, with the employees, the individual agreement required by the law in normal conditions. This individual agreement contains, in general, significant dispositions steering the performance under the smart working regime, like the rules implementing the right to disconnect. Moreover, Article 1, lett. n) specifies that the informative obligations bearing on the employer according to Law No. 81 of 2017 can be fulfilled, while the measure is into force, through electronic communications.\r\rAll the workers that can realise their performance working remotely are eligible, provided that the employer wants to activate this scheme.\r\rLaw Decree No. 18 of 17 March 2020, converted into law No. 27 of 24 April 2020, further intervened on the issue of smart working: Until the end of the state of emergency, workers with disabilities or who have a person with a disability in their family unit, have the right to smart working, provided it is compatible with the characteristics of their activity. In addition, the Law Decree states that, in accepting requests to smart working, priority has to be given to workers in the private sector with reduced working capacity.",
+            "descriptionUseOfMeasure": "No data are available yet on the use of the measure.",
+            "descriptionInvolvementOfSocialPartners": "No involvement of the social partners in designing, implementing and monitoring the measure.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-10_221.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "80",
+                    "sources::title": "Prime Minister's Decree of 4 March 2020",
+                    "sources::url": "http://www.governo.it/sites/new.governo.it/files/DPCM4MARZO2020.pdf",
+                    "sources::d_date": "03/04/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "81",
+                    "sources::title": "Smart working - Ministero del Lavoro",
+                    "sources::url": "https://www.lavoro.gov.it/strumenti-e-servizi/smart-working/Pagine/default.aspx",
+                    "sources::d_date": "03/04/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "283",
+                    "sources::title": "DECRETO-LEGGE 17 marzo 2020, n. 18",
+                    "sources::url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1189",
+                    "sources::title": "Law Decree No. 34 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/05/19/20G00052/sg",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1190",
+                    "sources::title": "CGIL: smart working needs to be bargained",
+                    "sources::url": "http://www.cgil.it/lavoro-cgil-smart-working-va-contrattato/",
+                    "sources::d_date": "05/18/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "213",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "Law Decree No. 34 of 19 May 2020 introduced a specific right to smart working for parents employed in the private sector. The eligible workers are those with at least one dependent child under 14 years of age, appointed with tasks that can be carried out remotely. An additional requirement is that there is no other parent in the family which is beneficiary of income support instruments, in cases of suspension or cessation of work, or that there is no non-working parent.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "104",
+        "modId": "117"
+    },
+    {
+        "fieldData": {
             "title": "Danone guarantees jobs and salaries to all its employees for 3 months",
             "title_nationalLanguage": "Danone garantit emplois et salaires pendant 3 mois et salaires pendant 3 mois\r",
             "d_startDate": "03/26/2020",
@@ -5127,6 +5311,125 @@
         },
         "recordId": "183",
         "modId": "95"
+    },
+    {
+        "fieldData": {
+            "title": "Idle-time allowance for employees ",
+            "title_nationalLanguage": "D\u012bkst\u0101ves pabalsti uz\u0146\u0113mumu darbiniekiem",
+            "d_startDate": "03/14/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "LV-2020-11/301",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/06/2020",
+            "calc_lastUpdate": "07/29/2020",
+            "descriptionBackgroundInfo": "The measure consists of an allowance which is granted to employees suspended from job during the COVID-19 pandemic, in the idle time period. The period of idle time is a limited time period lasting from 14 March 2020 until 14 May 2020, but that can be shortened through a decision of the Cabinet on the emergency situation.\rThe measure in general is described in Section 14 of the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' (adopted on 20 March 2020, valid from 22 March 2020).\rInitially the conditions of eligibility for the allowances for idle time for employees were regulated by the Regulation of Cabinet of Ministers No. 152, 'Regulations Regarding the Allowance for Idle Time for the Employees Affected by COVID-19', adopted on 24 March 2020. On 28 March 2020, the new Regulation of the Cabinet of Ministers No. 165, 'Regulations Regarding the Employers Affected by the Crisis Caused by COVID-19 which are Eligible for the Allowance for Idle Time and Division of the Payment for Late Tax Payments in Instalments or Deferral Thereof for up to Three Years' replaced the previous one.",
+            "descriptionContentOfMeasure": "The allowance for the idle time is determined by the State Revenue Service, in the amount of 75% of the average monthly gross work remuneration, calculated in the period of last six months before the declaration of the emergency situation, or in accordance with the actual data declared by employees within the previous six months. Anyway, it cannot exceed \u20ac700 per calendar month. \rThe allowance for idle time is not subject to the personal income tax and to the mandatory State social insurance contributions. \rThe employers and taxpayers, afflicted by the COVID-19 crisis, that can apply for the allowance, are those with:\r \r* An income from economic activity which, due to the spread of COVID-19, decreased by at least 30% in March or April 2020, in comparison with the respective month in 2019.\r* An income from economic activity which, due to the spread of COVID-19, decreased by at least 20% in March or April 2020, in comparison with the respective month in 2019, provided that they meet at least one of the following criteria: i) in 2019, the export volume of the employer affected by the crisis amounts to 10% of the total turnover or is not less than \u20ac500,000; or ii) the average monthly gross work remuneration disbursed by the employer affected by the crisis in 2019 is not less than \u20ac800; or iii) as on 31 December 2019, long-term investments in fixed assets are at least \u20ac500,000.\rThe Regulations of the Cabinet of Ministers No. 165 set forth in total 14 reasons when the allowance should not be paid, encompassing the existence of a tax debt higher than \u20ac1,000, or if the employee has commenced the employment relationships after 1 March 2020.",
+            "descriptionUseOfMeasure": "For the period from 12 March 2020 to 30 June 2020 the State Revenue Service (SRS) has paid 133,462 idle-time allowances in the total amount of \u20ac53.6 million. A total of 55,179 natural persons, including 2,388 self-employed persons, have received these benefits one or more times.\rThe 20% of employers whose employees have received idle-time allowances are from wholesale and retail trade; automotive and motorcycle repair industries; 13.9% operates in the accommodation and food service providers; 9.5% of employers are from the manufacturing industry and the same number of employers are providing professional, scientific and technical services.\rThe average amount of the benefit paid for March (less than a month) was \u20ac245, \u20ac439 for April, \u20ac446 for May, and \u20ac420 for June.",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published 'Statement on support for government action to limit the spread of COVID-19 and reduce the impact of the crisis on Latvian companies and workers'. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that everything we do helps to address this crisis.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-11_301.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "484",
+                    "sources::title": "Regulation of the Cabinet of Ministers Nr. 165 \u201cRegulations Regarding the Employers Affected by the Crisis Caused by COVID-19 which are Eligible for the Allowance for Idle Time and Division of the Payment for Late Tax Payments in Instalments or Deferral Thereof for up to Three Years\u201d",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313514-regulations-regarding-the-employers-affected-by-the-crisis-caused-by-covid-19-which-are-eligible-for-the-allowance-for-idle-time-and-division-of-the-payment-for-late-tax-payments-in-instalments-or-deferral-thereof-for-up-to-three-years",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "485",
+                    "sources::title": "VID izmaks\u0101jis d\u012bkst\u0101ves pabalstus 5516 darbiniekiem ",
+                    "sources::url": "https://www.vid.gov.lv/lv/vid-izmaksajis-dikstaves-pabalstus-5516-darbiniekiem-nodoklu-samaksas-termina-pagarinajumu-0",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "486",
+                    "sources::title": "VID \u0123ener\u0101ldirektore: d\u012bkst\u0101ves maks\u0101jumi ir atbalsts uz\u0146\u0113m\u0113jiem, nevis darbiniekiem",
+                    "sources::url": "https://www.tvnet.lv/6946518/vid-generaldirektore-dikstaves-maksajumi-ir-atbalsts-uznemejiem-nevis-darbiniekiem",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "487",
+                    "sources::title": "State Revenue Service informative page on COVID-19",
+                    "sources::url": "https://www.vid.gov.lv/lv/covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1218",
+                    "sources::title": "Law on the Suppression of Consequences of the Spread of COVID-19 Infection",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/315287-law-on-the-suppression-of-consequences-of-the-spread-of-covid-19-infection",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1219",
+                    "sources::title": "Summary of statistics on idle-time benefits",
+                    "sources::url": "https://www.vid.gov.lv/lv/statistika-3",
+                    "sources::d_date": "07/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "212",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rAccording to the latest edition of the Regulation of the Cabinet of Ministers No. 165, 'Regulations Regarding the Employers Affected by the Crisis Caused by COVID-19 which are Eligible for the Allowance for Idle Time and Division of the Payment for Late Tax Payments in Instalments or Deferral Thereof for up to Three Years', the idle-time allowances for employees are available up to 30 June 2020.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "184",
+        "modId": "101"
     },
     {
         "fieldData": {
@@ -12959,8 +13262,8 @@
                 {
                     "recordId": "214",
                     "updates::d_date": "07/17/2020",
-                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe latest edition of the Regulations of Cabinet of Ministers No. 179, 'Regulations regarding the Allowance for Idle Time for self-employed who are affected by spread of Covid-19' (7 May 2020) establishes that idle-time allowances for self employed is available up to 30 June 2020.",
-                    "modId": "3"
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe latest edition of the Regulations of Cabinet of Ministers No. 179, 'Regulations regarding the Allowance for Idle Time for self-employed who are affected by spread of COVID-19' (7 May 2020) establishes that idle-time allowances for self employed is available up to 30 June 2020.",
+                    "modId": "4"
                 }
             ],
             "regions": []
@@ -25795,8 +26098,8 @@
                 {
                     "recordId": "217",
                     "updates::d_date": "07/17/2020",
-                    "updates::description": "The state of emergency declared in Latvia on March 13 as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law \u201cOn Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19\u201d is no longer in force. Instead, the \"Law on the Suppression of Consequences of the Spread of COVID-19 Infection\u201d was adopted on 6 June 2020 (in force from 10 June 2020).\rThe change of umbrella law do not affect the measure.\r",
-                    "modId": "3"
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe change of umbrella law does not affect the measure.",
+                    "modId": "4"
                 }
             ],
             "regions": []
@@ -28947,8 +29250,8 @@
                 {
                     "recordId": "220",
                     "updates::d_date": "07/17/2020",
-                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe change of the umbrella law do not affect the content of measure.",
-                    "modId": "4"
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe change of the umbrella law does not affect the content of measure.",
+                    "modId": "5"
                 }
             ],
             "regions": []
@@ -30257,8 +30560,8 @@
                 {
                     "recordId": "218",
                     "updates::d_date": "07/17/2020",
-                    "updates::description": "The state of emergency declared in Latvia on March 13 as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. \rInstead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).",
-                    "modId": "5"
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. \rInstead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).",
+                    "modId": "6"
                 },
                 {
                     "recordId": "225",
