@@ -26008,6 +26008,86 @@
     },
     {
         "fieldData": {
+            "title": "Direct refund of the overpayment of VAT",
+            "title_nationalLanguage": "PVN p\u0101rmaksas atmaksa",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "LV-2020-14/618",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "Refund of the overpayment of a value added tax is a measure introduced with the objective to make available additional financial resources to deal with the crisis caused by the COVID-19 virus.\rThe measure is introduced in Section 6 of the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' (adopted on 20 March 2020, valid from 22 March 2020).",
+            "descriptionContentOfMeasure": "Normally, according to Section 109 of the Value Added Tax Law, the State Revenue service carry forward the approved amount of overpaid tax to the next taxation period. \rSection 6 of the 'Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' sets forth different procedures for the anticipated refund of overpaid value added tax in the time period from 1 April 2020 to 31 December 2020. During this time period the procedures of refunding laid down in Sections 109 and 110 of the Value Added Tax Law should not be applied.\rState Revenue Service has to refund the approved and overpaid amount of value added tax which has been submitted to State Revenue Service after 31 March 2020 within 30 days.\rPrior to the refund of the approved and overpaid amount of value added tax, State Revenue Service has to cover the taxes and duties of the taxpayer administered by the State Revenue Service, other payments stipulated by the State and the payments related thereto.",
+            "descriptionUseOfMeasure": "Until 30 June 2020, the State Revenue Service provided faster refund of the overpaid value added tax (VAT) to 101,816 companies in the total amount of \u20ac240,643,900.",
+            "descriptionInvolvementOfSocialPartners": "Top level social partner organisations \u2013 the Latvian Employers\u2019 confederation and the Free Trade Union Confederation of Latvia \u2013 on 17 March 2020 has published the 'Statement on support for government action to limit the spread of COVID-19 and reduce the impact of the crisis on Latvian companies and workers'. The social partners emphasized the need for cooperation of government, businesses, workers and citizens to ensure that everything we do helps to address this crisis.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-14_618.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "483",
+                    "sources::title": "Law On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19",
+                    "sources::url": "https://likumi.lv/ta/en/en/id/313373-on-measures-for-the-prevention-and-suppression-of-threat-to-the-state-and-its-consequences-due-to-the-spread-of-covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "487",
+                    "sources::title": "State Revenue Service informative page on COVID-19",
+                    "sources::url": "https://www.vid.gov.lv/lv/covid-19",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1222",
+                    "sources::title": "During the period of downtime benefits, the SRS has paid downtime benefits in the amount of more than 53 million euros to almost 55 thousand people.",
+                    "sources::url": "https://www.vid.gov.lv/lv/dikstaves-pabalstu-perioda-teju-55-tukstosiem-cilveku-vid-izmaksajis-dikstaves-pabalstus-vairak-0",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "216",
+                    "updates::d_date": "07/17/2020",
+                    "updates::description": "The state of emergency declared in Latvia on 13 March as a result of the global COVID-19 pandemic came to an end at 10 June 2020. Therefore, the law 'On Measures for the Prevention and Suppression of Threat to the State and Its Consequences Due to the Spread of COVID-19' is no longer in force. Instead, the 'Law on the Suppression of Consequences of the Spread of COVID-19 Infection' was adopted on 6 June 2020 (in force from 10 June 2020).\rThe new umbrella law does not change the content of measure.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "509",
+        "modId": "84"
+    },
+    {
+        "fieldData": {
             "title": "Postponement of tax payments",
             "title_nationalLanguage": "Nodoklu br\u012bvdienas",
             "d_startDate": "03/22/2020",
@@ -38379,6 +38459,77 @@
         },
         "recordId": "739",
         "modId": "63"
+    },
+    {
+        "fieldData": {
+            "title": "Sickness leave paid by state in case of COVID-19 infection",
+            "title_nationalLanguage": "Valsts apmaks\u0101 darba nesp\u0113jas dienas COVID-19 saslimu\u0161ajiem",
+            "d_startDate": "03/21/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Latvia",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "LV-2020-12/831",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/10/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "In the view to contrast the effects of the COVID-19 pandemic, the government approved some amendments\u00a0to the law\u00a0'On Maternity and Sickness Insurance'. The purpose of the amendment is to support employers by establishing special arrangements for the payment of sickness benefits to face the 2020 health crisis. The law was amended on 20 March 2020, in force from 22 March 2020.",
+            "descriptionContentOfMeasure": "A person in sick leave since affected by COVID-19, or being in quarantine from 21 March to 30 June this year, will be granted with a paid sickness benefit for the period from the second day of incapacity for work. The sickness benefit will be granted in the amount of 80% of the beneficiary's average insurance contribution salary. Doctors prescribe sickness leave to people who have been diagnosed with the disease in the laboratory and to people who have been quarantined because they have been in contact with a COVID-19 patient. \rIf the illness is not related to COVID-19, the sick leaves are issued and paid according to the ordinary regulation. They are issued for the first 10 days of illness and paid for by the employer.\rThe procedure for issuing new sickness leave applies also to self-employed persons who have paid social contributions at least from the minimum wage, and thus is socially insured.",
+            "descriptionUseOfMeasure": "No information to date",
+            "descriptionInvolvementOfSocialPartners": "On 17 March 2020, the social partners jointly issued statement calling for immediate payment in amount of 100% of sickness leave from the state budget. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LV-2020-12_831.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1272",
+                    "sources::title": "LDDK un LBAS aicina steidzami nodro\u0161in\u0101t darba nesp\u0113jas lapu 100% apmaksu no valsts bud\u017eeta",
+                    "sources::url": "https://www.tvnet.lv/6925282/lddk-un-lbas-aicina-steidzami-nodrosinat-darba-nespejas-lapu-100-apmaksu-no-valsts-budzeta",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1273",
+                    "sources::title": "Par maternit\u0101tes un slim\u012bbas apdro\u0161in\u0101\u0161anu",
+                    "sources::url": "https://likumi.lv/ta/id/38051-par-maternitates-un-slimibas-apdrosinasanu",
+                    "sources::d_date": "08/03/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "741",
+        "modId": "62"
     },
     {
         "fieldData": {
