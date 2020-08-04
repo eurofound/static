@@ -30162,6 +30162,97 @@
     },
     {
         "fieldData": {
+            "title": "VAT reduction from 24% to 6% for products needed to protect against COVID-19",
+            "title_nationalLanguage": "\u0391\u03c1\u03b8\u03c1\u03bf 1, '\u039c\u03b5\u03af\u03c9\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03a6. \u03a0. \u0391. \u03c3\u03c4\u03bf 6%, \u03b1\u03c0\u03cc 24%, \u03c3\u03b5 \u03c0\u03c1\u03bf\u03ca\u03cc\u03bd\u03c4\u03b1 \u03c0\u03bf\u03c5 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03b1\u03c1\u03b1\u03af\u03c4\u03b7\u03c4\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b1 \u03b1\u03c0\u03cc \u03c4\u03bf\u03bd \u03ba\u03bf\u03c1\u03c9\u03bd\u03bf\u03ca\u03cc', \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0),  \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 68,  20.03.2020 & E\u03b3\u03ba\u03cd\u03ba\u03bb\u03b9\u03bf\u03c2 2038/2020)",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "GR-2020-12/677",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "In the view of the spread of COVID-19 in Greece, the government intervened to sustain the business dealing with essential commodities to contrast the pandemic and, at a later stage, to sustain those enterprises most endangered by the economic crisis, providing VAT reductions. \r\rThe measures has been taken in two waves: \r\r* The first one was contained in the Legislative Act of 20 March 2020 (Article 1)\u00a0and in the Circular 2038/2020, in force from March 2020, relating to products concerning sanitizing and the prevention of COVID-19 transmission; \r* Additional VAT reductions were granted till the end of October 2020 by Law No. 4690 of 30 May 2020 and by the \u0395. 2080/2020 and were concerning other significant business sectors.",
+            "descriptionContentOfMeasure": "By virtue of the Legislative Act 20 March 2020 \"Urgent measures to address the consequences of the spread of COVID-19, to support the society and entrepreneurship, and to safeguard the smooth operation of the market and public administration\" and of the Circular No. 2038/2020, VAT is reduced from 24% to 6%, as of 20 March 2020, for products needed to protect against COVID-19 and to prevent its transmission. This is a general - horizontal  measure, till the end of 2020, and it concerns masks, gloves, antiseptic solutions, wipes, soap, and ethyl alcohol, if used as a raw material by the industry for the production of antiseptics.\rThe exact tariff headings are set out in \u0391rticle 1 of LA of 20 March 2020. In addition, Article 11 of Law No. 4690 of 30 May 2020 and the \u0395.2080/2020 provide, till the end of October,\u00a0VAT reduction from 24% to 13% for passenger transport, coffee and non-alcoholic drinks and the provision of services in cafes, restaurants, pastry shops etc. and to 6% for movie tickets.",
+            "descriptionUseOfMeasure": "No specific information yet available.",
+            "descriptionInvolvementOfSocialPartners": "The social partners were not involved in the designing of this measure.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_677.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "554",
+                    "sources::title": "Act of Legislative Content on \u201cUrgent measures to address the consequences of the spread of the\rcoronavirus COVID-19, to support society and entrepreneurship and to ensure the smooth functioning of the\rmarket and public administration.\u201d (O.G A\u2019 68/20-3-2020)",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8fyrq-mVMtyLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijPWQDxYYKEanM_uAmcNNHpVArRrSuTx5VwB0BaO1SczK",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1212",
+                    "sources::title": "Law 4690/2020, art. 11 \"Reduction of Value Added Tax rates for specific goods and services\"",
+                    "sources::url": "https://www.e-nomothesia.gr/kat-ygeia/astheneies/nomos-4690-2020-phek-104a-30-5-2020.html",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "568",
+        "modId": "97"
+    },
+    {
+        "fieldData": {
             "title": "e-prescriptions and delivery of pharmaceutical products to patients via courier",
             "title_nationalLanguage": "\u0391\u03c1\u03b8\u03c1\u03b1 36,49,50,51 &53,''A\u03c5\u03bb\u03b7 \u03c3\u03c5\u03bd\u03c4\u03b1\u03b3\u03bf\u03b3\u03c1\u03ac\u03c6\u03b7\u03c3\u03b7',  \u03a0\u03c1\u03ac\u03be\u03b7 \u039d\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd \u03a0\u03b5\u03c1\u03b9\u03b5\u03c7\u03bf\u03bc\u03ad\u03bd\u03bf\u03c5 (\u03a0\u039d\u03a0) , \u0391\u03c1. \u03a6\u03cd\u03bb\u03bb\u03bf\u03c5 68,  20.03.2020",
             "d_startDate": "03/23/2020",
@@ -30810,6 +30901,122 @@
         },
         "recordId": "586",
         "modId": "75"
+    },
+    {
+        "fieldData": {
+            "title": "Special purpose leave for working parents",
+            "title_nationalLanguage": "\u0391\u03b4\u03b5\u03b9\u03b1 \u03b5\u03b9\u03b4\u03b9\u03ba\u03bf\u03cd \u03c3\u03ba\u03bf\u03c0\u03bf\u03cd \u03b3\u03b9\u03b1 \u03b3\u03bf\u03bd\u03b5\u03af\u03c2 \u03b5\u03c1\u03b3\u03b1\u03b6\u03cc\u03bc\u03b5\u03bd\u03bf\u03c5\u03c2",
+            "d_startDate": "03/11/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "GR-2020-11/691",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "The government introduced the 'special purpose leave for working parents' in the private sector, for their convenience during the shutdown of school units or special schools for children with disabilities and the further extraordinary measure linked with the pandemic. The measure was adopted through a law within the framework of the labor market extraordinary and temporary measures aimed to address and limit the spread of COVID-19, with regard to the organization and the place of work (Article 4 of the Official Government Gazette A55, March 11, 2020).\rFurthermore, the circulars of the Ministry of Interior No. 108/OIK.7874/2020 and 109/OIK.8000 provide 'Special purpose leave' for the employees in the public sector. In addition, with Article 35 of Law No. 4690/30 May 2020, parent employees in the private sector are eligible to reduced working hours as it is the case in the public sector.",
+            "descriptionContentOfMeasure": "The working parents of preschool children, compulsory education students (under the age of 15) and children attending special schools, are entitled to use the special purpose leave during the period 11 March 2020 to 10 April 2020 and for the duration of the extraordinary and temporary measures aimed to address the spread of COVID-19. The employer is obliged to grant it. \rThe leave applies to employees of the public and private sector. According to the law, the minimum duration of the leave is four days, of which three days are special purpose and one day of regular leave. The regular leave days are deducted from the annual leave. The leave may be used exclusively by one parent or alternatively by both. During the special purpose leave the employee\u2019s salary and social security contributions are paid regularly. Two thirds of the expense are paid by the state and one third by the employer. \rThe utilization of the special purpose leave is not allowed in case of suspension of the operations of the enterprise due to the extraordinary measures. After the decision to extend the closure of schools until 10 May, newer arrangements (decisions of the Ministry of Labour and Interior) provide for the extension of the special purpose leave for working parents until 10 May in both the public and private sectors.",
+            "descriptionUseOfMeasure": "The number of employees affected by the measure is not known.",
+            "descriptionInvolvementOfSocialPartners": "The measure was considered positive. A tripartite meeting of all national social partners with the Ministry of Labor took place at the beginning of the virus outbreak (10 March 2020). During the meeting, the government briefed the social partners on the situation in whole and on the suggested measures and policies, and all parties were engaged in dialogue. The proposals and opinions of the social partners were taken into consideration, without being binding.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-11_691.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "580",
+                    "sources::title": "Legislative Act \u201cEmergency contingency measures to tackle the adverse effects of the outbreak of COVID 19 and to address the need to limit the spread of the virus\u201d, Official Government Gazette A55, March 11, 2020. ",
+                    "sources::url": "http://www.et.gr/idocs-nph/search/pdfViewerForm.html?args=5C7QrtC22wHUdWr4xouZundtvSoClrL8ExDiwSIm0cLtIl9LGdkF53UIxsx942CdyqxSQYNuqAGCF0IfB9HI6qSYtMQEkEHLwnFqmgJSA5WIsluV-nRwO1oKqSe4BlOTSpEWYhszF8P8UqWb_zFijP3fNjb3qKpGxGNtxU_uAtLw56ULsxCc54tGXdl9oyQ1",
+                    "sources::d_date": "03/11/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "717",
+                    "sources::title": "Extension of validity of the extraordinary measures taken in the labour market to address and limit the spread of COVID 19, on the organisation of working time and the special purpose leave for working parent",
+                    "sources::url": "https://www.ergasiaka-gr.net/wp-content/uploads/2020/04/K%CE%A5%CE%91-14556-PARATASEIS.pdf",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "719",
+                    "sources::title": "Public: Special purpose leave extended until 10 Ma",
+                    "sources::url": "https://www.aftodioikisi.gr/dimosio/dimosio-parateinetai-i-adeia-eidikoy-skopoy-eos-10-ma-oy",
+                    "sources::d_date": "04/11/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "720",
+                    "sources::title": "New extension of the special purpose leave in the private sector-Until 10 Ma",
+                    "sources::url": "https://www.dikaiologitika.gr/eidhseis/ergasiaka/296321/nea-paratasi-tis-adeias-eidikoy-skopoy-ston-idiotiko-tomea-mexri-tis-10-maio",
+                    "sources::d_date": "04/22/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1242",
+                    "sources::title": "Special purpose leave. For whom it is valid until 31 Jul",
+                    "sources::url": "https://www.ergasiaka-gr.net/2020/07/adeia-eidikou-skopou-gia-poious-ischuei-mechri-31-iouliou",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "230",
+                    "updates::d_date": "07/21/2020",
+                    "updates::description": "Extension of the Special Purpose Leave for working parents until 31 July 2020.\rThe Special Purpose Leave for working parents was extended (Ministerial Decision 17787/520/8.5.2020, B'1778), following the programme of school units. So, for parents with children:\r \r* Primary school was extended until 26 June 2020 (Article 2 of P.D. 79/2017). \r* High school until 12 June 2020 (Government Gazette, 1764/B'). \r* Nurseries  until 31 July 2020 (Circular No. 26696/791/1-7-2020 Ministry of Labour).",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "236",
+                    "updates::d_date": "05/30/2020",
+                    "updates::description": "In addition, with art. 35 of Law 4690/30.05.2020, parent employees in the private sector are eligible to reduced working hours, during the school year 2019 - 2020, as it is the case in the public sector. They may agree with their employer to work on a reduced daily working schedule up to 25% without reductions to their salary. In this case they will be employed on other working days further to their ordinary working schedule, in order to cover the reduced hours, and without such work being considered as overwork or overtime. ",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "587",
+        "modId": "97"
     },
     {
         "fieldData": {
@@ -45873,6 +46080,88 @@
     },
     {
         "fieldData": {
+            "title": "Consumption cheques for employees introduced to promote spending",
+            "title_nationalLanguage": "Consumptiecheque",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "06/07/2021",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "BE-2020-24/941",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/08/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "In the framework of measures taken to cushion the economic effects of the COVID-19 pandemic, the federal government has launched a new initiative in June in the form of so called 'consumption cheques'. \rThe cheques have two goals. On the one hand, they stimulate consumers to buy locally and from sectors that are struck hard by the current crisis. On the other hand, they provide employees some additional purchasing power.",
+            "descriptionContentOfMeasure": "The consumer cheque is a paper cheque that the employees can spend in Belgian sectors that were most affected during the lockdown: in particular the hospitality industry, sports clubs and the culture sector. The check is granted by the employer.\r\rThe granting of the cheque must be governed by a sectoral collective agreement. If there is no sectoral collective agreement, an enterprise collective agreement must be concluded via the local trade union delegation. If there is no trade union delegation within the company, the granting must be regulated in an individual annex to the employment contract. \r\rThe maximum amount that can be granted per employee is \u20ac300. The cheque falls outside the wage standard and may not be granted to replace existing wage benefits.\r\rThe cheque cannot be granted on an individual basis. Employers are obliged to award it to all staff members or to an objectively defined category within the staff.",
+            "descriptionUseOfMeasure": "The measure is not finalised as of today, it is still to be launched formally.",
+            "descriptionInvolvementOfSocialPartners": "No data yet available.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-24_941.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1071",
+                    "sources::title": "Consumptiecheque",
+                    "sources::url": "https://www.unizo.be/consumptiechequ",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1072",
+                    "sources::title": "Consumptiecheque: voordelen en voorwaarden",
+                    "sources::url": "https://www.acerta.be/nl/blog/werkgevers/krijgen-jouw-medewerkers-een-consumptiechequ",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "851",
+        "modId": "37"
+    },
+    {
+        "fieldData": {
             "title": "COVID-Rent support for entrepreneurs",
             "title_nationalLanguage": "COVID n\u00e1jemn\u00e9",
             "d_startDate": "06/26/2020",
@@ -47778,6 +48067,88 @@
         },
         "recordId": "883",
         "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Additional financial support for people in precarious situations",
+            "title_nationalLanguage": "Aanvullende financi\u00eble ondersteuning voor mensen in precaire situatie",
+            "d_startDate": "06/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "BE-2020-23/974",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "During the federal Super-Core (temporary government) of 6 June 2020, a number of important measures were taken to support the social service providers and their clients.\r\rConcretely, living wage recipients (social assistance), persons with disabilities and people with a guaranteed income for the elderly will receive \u20ac50 on top of their benefit for a total of six months. The costs of this will be borne entirely by the federal authorities. In addition, subsidies for food aid will be increased by a further \u20ac3 million. For new living wage (social assistance) dossiers, the social services will receive an additional subsidy of 15% on the amount paid out in the period from June to December.",
+            "descriptionContentOfMeasure": "**Additional premium for those receiving social assistance benefits:**\rAnyone who receives social assistance benefit - such as a living wage, an allowance for the disabled, or an income guarantee for the elderly - receives an additional premium of \u20ac50 each month from July to December 2020. In addition, further \u20ac100 million are made available to the social services to provide allowances in the event of rent payment problems, or school and energy costs.\r\r**Increased sickness benefit:**\rFor sick days, from 1st March to 31st August 2020, the sickness benefit will be increased, unless the illness started before the 1st of March or is covered by the guaranteed salary.",
+            "descriptionUseOfMeasure": "No data on uptake of the measure available.",
+            "descriptionInvolvementOfSocialPartners": "No data are available about the concrete involvement of social partners.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-23_974.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1157",
+                    "sources::title": "Coronamaatregelen: aanpassingen en nieuwe steunmaatregelen",
+                    "sources::url": "https://www.hetacv.be/actualiteit/nieuws-en-persberichten/2020/07/02/coronamaatregelen-overzicht-aanpassingen-en-nieuwe-vormen-van-steu",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1158",
+                    "sources::title": "VVSG: Bijkomende federale maatregelen voor hulp aan kwetsbare groepe",
+                    "sources::url": "https://www.vvsg.be/nieuws/bijkomende-federale-maatregelen-voor-hulp-aan-kwetsbare-groepe",
+                    "sources::d_date": "07/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "37",
+                    "targetGroups::name": "Older citizens",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "43",
+                    "targetGroups::name": "Disabled",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "77",
+                    "targetGroups::name": "Other groups of citizens",
+                    "modId": "10"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "884",
+        "modId": "21"
     },
     {
         "fieldData": {
