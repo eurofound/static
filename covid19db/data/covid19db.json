@@ -40557,6 +40557,110 @@
     },
     {
         "fieldData": {
+            "title": "Creating incentives for unemployed to work in horticulture and other essential services and flexibilisation of successive fixed-term contracts",
+            "title_nationalLanguage": "Behouden van arbeidscapaciteit in horticulturele en kritieke sectoren",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Smoothing frictions or reallocation of workers",
+            "calc_identifier": "BE-2020-13/861",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/20/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "In the entire country there are exceptional rules and relaxation of existing regulations to allow additional earnings in the horticultural and forest sector. That sector is in high need of additional seasonal workers, yet there is a shortage, because of the closing of borders due to the COVID-19 pandemic, which resulted in a reduced inflow of foreign seasonal workers.\r\rThe Special Powers Decree No. 14 of 27 April 2020 provides that during the period from 1 April 2020 to 30 June 2020, employers in critical sectors may conclude successive fixed-term employment contracts.",
+            "descriptionContentOfMeasure": "Workers on temporary unemployment benefits can work in the horticultural and forest sector and maintain 75% of their benefits in combination with that wage.\r\rSeveral short, consecutive temporary contracts would normally automatically be transformed into open-ended contracts. In order to avoid this, there is a relaxation in the rules governing these contracts because of the crisis in critical sectors.\r\rEmployers in critical sectors may conclude successive fixed-term employment contracts for a minimum period of 7 days, without being requested to utilize an employment contract of indefinite duration. Normally these successive fixed-term contracts would be changed automatically into a contract of indefinite duration.",
+            "descriptionUseOfMeasure": "It is unclear (and probably too soon) to estimate the extent of the measures. The list of critical sector is however quite long, so in theory the possibility to create successive contracts applies to quite a large group.",
+            "descriptionInvolvementOfSocialPartners": "It is Unknown the degree of involvement of the social partners. But it is to be expected that they were at least informed.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-13_861.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "875",
+                    "sources::title": "Ministerial decree",
+                    "sources::url": "http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2020032301",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "876",
+                    "sources::title": "Federal unemployment services: overtime in critical sectors",
+                    "sources::url": "https://www.rva.be/nl/burgers/loopbaanonderbreking-tijdskrediet-en-thematische-verloven/faq/inlichtingen-verband-met-het-coronavirus/3-kan-ik-bijkomende-uren-en-overuren-presteren-door-het-coronavirus",
+                    "sources::d_date": "03/13/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "877",
+                    "sources::title": "Additional measures in horticultural sector",
+                    "sources::url": "https://www.boerenbond.be/actualiteit/inzet-van-arbeid-de-overheid-komt-de-land-en-tuinbouw-te-hulp",
+                    "sources::d_date": "04/11/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "48",
+                    "targetGroups::name": "Seasonal workers",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "27",
+                    "sectors::code": "A1",
+                    "sectors::name": "Crop and animal production, hunting and related service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "56",
+                    "updates::d_date": "05/09/2020",
+                    "updates::description": "On the ministerial council of the 9th of May it was decided that people that receive a living wage (social assistance) are allowed to earn an additional income in the horticultural sector without a decrease in the social assistance. Normally they were only allowed to earn an additional \u20ac200 per month before their benefits would be reduced.\r\rThe regulations for students were adapted as well in order to cope with the exceptional circumstances. Normally the number of hours they are allowed to earn an additional living is limited to \u20ac475. In the crisis, several exemptions apply, that exclude a number of hours from this \u20ac475 limit. Students are therefore allowed to work more hours in the horticultural sector.\r\rSeasonal workers that are working in the sector are also allowed to work for more days (130 days in gardening/landscaping and 60 in the agricultural sector).\r\rFrom the 1st of April the temporary unemployed, early pensioners, people in time credit systems as well as in career break were allowed to earn an additional income in the horticultural sector while keeping 75% of their benefits.",
+                    "modId": "7"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "771",
+        "modId": "69"
+    },
+    {
+        "fieldData": {
             "title": "Stricter regulations for the meat industry",
             "title_nationalLanguage": "Sch\u00e4rfere Auflagen f\u00fcr die Fleischindustrie",
             "d_startDate": "01/01/2021",
@@ -50516,5 +50620,79 @@
         },
         "recordId": "922",
         "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Return to Work Safely Protocol",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/09/2020",
+            "d_endDate": "",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "IE-2020-19/1016",
+            "dateType": "Open ended",
+            "calc_creationDay": "07/24/2020",
+            "calc_lastUpdate": "08/04/2020",
+            "descriptionBackgroundInfo": "The Protocol was published by the central government Department of Business, Enterprise and Innovation, to set a national-level framework for protecting workers across the economy from the risk of COVID-19 infection in the workplace.\r\rThe Protocol was developed and agreed in consultation with the members of the Labour Employer Economic Forum, which is the forum for high-level dialogue between government, and union and employer representatives on labour market issues. Participants in this process included national employer federation Ibec, the Irish Congress of Trade Unions, Chambers Ireland (a national group of local business bodies) and the Construction Industry Federation (representing construction sector employers). \r\rIt is the result of a collaborative effort, led by the Department of Business, Enterprise and Innovation, and involving the Health and Safety Authority (HSA - the occupational health and safety regulatory agency), the Department of Health and the HSE.",
+            "descriptionContentOfMeasure": "The Protocol covers COVID-19 safety principles in workplaces in all sectors and geographic reasons, but allows for local sectoral agreements to deal with issues more specific to individual sectors.\r\rIt estabilshes the Health and Safety Authority (HSA) as the lead agency for inspection and enforcement of the protocol. It sets out social distancing guidelines and practices, as well as providing for at least one COVID-19 workplace representative in all workplaces.\r\rThe protocol sets out rules on handwashing and hygiene ettiquette, as well as providing that workplace safety statements should be revised to take account of COVID-19. It also has procedures for dealing with a suspected case of COVID-19 in the workplace and provides that all workers should sign forms confirming that they are not infected with COVID-19 or awaiting test results for same.",
+            "descriptionUseOfMeasure": "Not a funding programme - it applies to al workplaces but sets out COVID-19 safety rules rather than providing financial assistance.",
+            "descriptionInvolvementOfSocialPartners": "The impetus for a protocol arose from discussions at the national social partner dialogue body, the Labour Employer Economic Forum (LEEF) and while it was published by the central government Department for Business, Enterprise and Innovation (DBEI), the national level union and employer bodies (ICTU, Ibec and CIF) has a central role in its formulation.\r\rWhen the protocol was announced, DBEI said: \"The Protocol was developed and agreed in consultation with the members of the Labour Employer Economic Forum, which is the forum for high-level dialogue between government, and union and employer representatives on labour market issues. Participants in this process included Ibec, the Irish Congress of Trade Unions, Chambers Ireland and the Construction Industry Federation. It is the result of a collaborative effort, led by the Department of Business, Enterprise and Innovation, and involving the Health and Safety Authority (HSA), the Department of Health and the HSE.\"",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-19_1016.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Tripartite agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1262",
+                    "sources::title": "Return to Work Safely Protocol",
+                    "sources::url": "file:///C:/Users/ColmanHiggins/Documents/Eurofound/Return-to-Work-Safely-Protocol.pdf",
+                    "sources::d_date": "05/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "926",
+        "modId": "10"
     }
 ]
