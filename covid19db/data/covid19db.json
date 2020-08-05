@@ -50449,6 +50449,89 @@
     },
     {
         "fieldData": {
+            "title": "Temporary Wage Subsidy Childcare Scheme (TWSCS)",
+            "title_nationalLanguage": "",
+            "d_startDate": "04/21/2020",
+            "d_endDate": "06/28/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "IE-2020-17/1007",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/17/2020",
+            "calc_lastUpdate": "08/05/2020",
+            "descriptionBackgroundInfo": "The scheme existed as a supplement to the economy-wide Temporary Wage Subsidy Scheme (TWSS), but only for the childcare sector.\r\rThis was instead of the normal State supports for the childcare sector, which had continued to be paid from when childcare providers closed on 13 March 2020 up to 20 April 2020.\r\rThe scheme ceased to operate from when childcare services were allowed to re-open from 29 June 2020.",
+            "descriptionContentOfMeasure": "The measure was aimed at providing extra support to the 4,600 childcare providers, to ensure that they were still available to provide services once the economy re-opened.\r\rChildcare providers already in the TWSS could join the TWSCS and get funding from the Department of Children and Youth Affairs. The TWSCS scheme tops up the economy-wide TWSS to 100% of the childcare worker's pre-COVID-19 wage levels, up to a limit of \u20ac585 per week. \r\rFor the childcare provider, the scheme also paid 15% of payroll to cover ongoing overheads outside of pay or a minimum payment of \u20ac300 per week per childcare provider.\r\rThe scheme replaced all other state supports for the childcare sector, which are suspended for the duration of the scheme.",
+            "descriptionUseOfMeasure": "As of Wednesday, April 22, 3,533 childcare providers had signed up for the TWSCS, out of a total of about 4,600 providers nationally. It was also open to providers to sign up for the scheme after that date.",
+            "descriptionInvolvementOfSocialPartners": "Unions and employer bodies were consulted by the central government Department of Children and Youth Affairs when devising the measure, but the decisions were made by the Department, which devised the contract that childcare providers had to sign up to, to receive funds under the scheme.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-17_1007.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1226",
+                    "sources::title": "Childcare providers sign up for subsidy",
+                    "sources::url": "https://www.irn.ie/article/25722",
+                    "sources::d_date": "04/23/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "7",
+                    "occupations::name": "Teaching professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "917",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
             "title": "Apprentice bonus for companies creating apprenticeships",
             "title_nationalLanguage": "Lehrlingsbonus",
             "d_startDate": "03/16/2020",
@@ -50694,5 +50777,77 @@
         },
         "recordId": "926",
         "modId": "10"
+    },
+    {
+        "fieldData": {
+            "title": "Enterprise Ireland/IDA Sustaining Enterprise Scheme",
+            "title_nationalLanguage": "",
+            "d_startDate": "04/08/2020",
+            "d_endDate": "",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "IE-2020-15/1018",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/24/2020",
+            "calc_lastUpdate": "08/05/2020",
+            "descriptionBackgroundInfo": "Support of up to \u20ac800,000 can be provided to companies who have been negatively impacted by COVID-19. The objectives of the fund are to: ensure eligible companies have access to necessary liquidity in the short-term; and sustain the business so that the company can return to viability and contribute to the recovery of the Irish economy.\r\rTotal of \u20ac180 million available in the fund.",
+            "descriptionContentOfMeasure": "Funding from \u20ac100,000, up to \u20ac800,000, is available to eligible companies which: employ 10 or more full-time employees, are operating in the manufacturing and internationally traded service sectors, have seen (or expect to see) a 15% or greater reduction in actual or projected turnover or profit, or a significant increase in costs, as a result of COVID-19 health crisis. \r\rThe Sustaining Enterprise Fund will be used to support the implementation of a Sustaining Enterprise Project Plan which should be provided by the company outlining the eventual stabilisation of the business and a return to viability. \r\rFunding will be provided for a five-year period, using the following instruments: repayable advances, grant aid, equity or loan note. Funding provided will comprise a combination of repayable and non-repayable support. Up to 50% of the funding provided will be non-repayable, with maximum non-repayable support of \u20ac200,000. \r\rThe scheme is not open to: \r\r* Medium and large undertakings (employing more than 50 people and with turnover >\u20ac10m annually) who were in financial difficulty on 31 December 2019.\r* Those who are active in the primary agricultural, fishery or aquaculture sectors.\r* Those operating in the coal and steel sector, or were covered by specific rules for Financial Services.",
+            "descriptionUseOfMeasure": "As of July 22, 2020, 148 applications were being developed, 51 were received and 19 were approved, drawing down \u20ac7.9 million.\r\rThe scheme was approved by the European Commission under EU state aid rules.\r",
+            "descriptionInvolvementOfSocialPartners": "The Ibec employer body likely to have been informed about the scheme - unions not involved.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-15_1018.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1263",
+                    "sources::title": "Enterprise Ireland welcomes new Covid-19 business supports and opens EU-approved \u20ac180 million scheme",
+                    "sources::url": "https://www.enterprise-ireland.com/en/News/PressReleases/2020-Press-Releases/Enterprise-Ireland-welcomes-new-Covid-19-business-supports-and-opens-EU-approved-180-million-euro-scheme.html",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1264",
+                    "sources::title": "Sustaining Enterprise Fund - from Enterprise Ireland website",
+                    "sources::url": "https://www.enterprise-ireland.com/en/funding-supports/Company/Esetablish-SME-Funding/Sustaining-Enterprise-Fund.html\r",
+                    "sources::d_date": "07/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "928",
+        "modId": "15"
     }
 ]
