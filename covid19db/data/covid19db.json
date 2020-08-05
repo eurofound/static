@@ -50354,6 +50354,119 @@
     },
     {
         "fieldData": {
+            "title": "Measures for maintaining employment in transport and tourism",
+            "title_nationalLanguage": "\u041c\u044f\u0440\u043a\u0430 \u0437\u0430 \u0437\u0430\u043f\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0437\u0430\u0435\u0442\u043e\u0441\u0442\u0442\u0430 \u0432 \u0441\u0435\u043a\u0442\u043e\u0440\u0438\u0442\u0435 \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442 \u0438 \u0442\u0443\u0440\u0438\u0437\u044a\u043c",
+            "d_startDate": "06/26/2020",
+            "d_endDate": "12/31/2021",
+            "calc_country": "Bulgaria",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BG-2020-26/1002",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/16/2020",
+            "calc_lastUpdate": "08/05/2020",
+            "descriptionBackgroundInfo": "The instrument has been added by the national Employment Agency into the national 'Human Resources Development' 2014-2020 programme, in the chapter 'Improving access to employment and quality of jobs'. \r\rThis measure is aimed at employers and self-employed in the sector of transport and tourism. Applicants must prove that they have at least a 20% drop in sales revenue and have paid their taxes and social security contributions for 2019. The duration of the measure is six months. The measure is projected to help maintain the employment of more than 22,000 people.\r\rThe total amount provided for this measure is BGN 40 million (\u20ac20 million).  \r\rThe measure may be combined with measure 'COVID-19: Income support for workers 60/40'. In this way, sector-specific support can become 80/20;",
+            "descriptionContentOfMeasure": "The measure aims to maintain the employment of workers and self-employed engaged in the sectors - hotels and restaurants, transport and tourism, by providing compensation for part of the salary, taxes and social security contributions in amount of BGN 290 (\u20ac148) monthly, for a period up to six months. \r\rThe requirement towards the employers, who benefit from the programme, is to sustain the employment of the supported workers and self-insured persons for the entire period of subsidised employment, as well as for an additional period equal to half of the period for which the compensations have been paid. For example, if they receive benefits for six months, they must keep the particular worker at work for at least nine months. This will ensure a relatively sustainable employment of people for a longer period of time.\r",
+            "descriptionUseOfMeasure": "The measure is projected to help maintain the employment of more than 22,000 people. Interested employers and self-employed persons may submit an application to a local 'Labour Office' directorate. In cases of multiple sites, the employer submits an application to only one directorate. The application shall be submitted on paper, electronically or by registered letter with acknowledgment of receipt through a licensed postal operator.\r\rThe decision of the Council of Ministers is from 26 June 2020. The measure itself came into force on 01 July 2020. There is still no confirmed official information on the number of submitted applications. Data for July will be released in August 2020.",
+            "descriptionInvolvementOfSocialPartners": "The measure was proposed by the social partners and developed during the negotiations in the National Council for National Cooperation. The measure is proposed by the unions.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-26_1002.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1202",
+                    "sources::title": "\u041c\u042f\u0420\u041a\u0410 \u0417\u0410 \u0417\u0410\u041f\u0410\u0417\u0412\u0410\u041d\u0415 \u041d\u0410 \u0417\u0410\u0415\u0422\u041e\u0421\u0422\u0422\u0410 \u0412 \u0421\u0415\u041a\u0422\u041e\u0420\u0418\u0422\u0415 \"\u0422\u0420\u0410\u041d\u0421\u041f\u041e\u0420\u0422\" \u0418 \"\u0422\u0423\u0420\u0418\u0417\u042a\u041c\"",
+                    "sources::url": "https://coronavirus.bg/bg/450 ",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1227",
+                    "sources::title": "Short-term employment support in response to the COVID-19 pandemic",
+                    "sources::url": "https://www.az.government.bg/pages/kratkosrochna-podkrepa-za-zaetost-covid-19/",
+                    "sources::d_date": "07/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "912",
+        "modId": "29"
+    },
+    {
+        "fieldData": {
             "title": "Measure: 'Employment for you': subsidised employment for hiring unemployed",
             "title_nationalLanguage": "\u041c\u044f\u0440\u043a\u0430 '\u0417\u0430\u0435\u0442\u043e\u0441\u0442 \u0437\u0430 \u0442\u0435\u0431'",
             "d_startDate": "06/26/2020",
@@ -50849,5 +50962,80 @@
         },
         "recordId": "928",
         "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Subsidies for microenterprises",
+            "title_nationalLanguage": "Subsidijos mikro\u012fmon\u0117ms",
+            "d_startDate": "05/13/2020",
+            "d_endDate": "12/01/2020",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "LT-2020-20/1022",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/27/2020",
+            "calc_lastUpdate": "08/05/2020",
+            "descriptionBackgroundInfo": "On 11 May 2020, the Government of the Republic of Lithuania passed Resolution No. 474, adopting the Procedure for distribution and use of a Subsidy Facility for Microenterprises (the Procedure) which comes as part of the 'Economic Stimulus and Coronavirus (COVID-19) Mitigation Action Plan' effective in Lithuania since 13 May 2020. According to the Procedure, the microenterprises most affected by the negative effects of COVID-19 may receive a non-refundable subsidy.\rThe purpose of this measure is to help microenterprises to provide liquidity in the short term through the use of the subsidy for working capital (payment of wages, purchase of raw materials, etc.). ",
+            "descriptionContentOfMeasure": "According to the Procedure, the eligible microenterprises shall receive a call to submit a subsidy application from the State Tax Inspectorate (STI); the enterprise itself does not have to apply anywhere. The call sent contains a link to the subsidy application form and where to apply for the subsidy. The application is considered a financial commitment for granting the subsidy.\rThe call to submit subsidy applications shall be sent to enterprises that meet the criteria below:\r\r* on the first day of the month in which the list is drawn up, but no later than on 1 July 2020, the enterprise employs between 1 and 9 employees;\r* the enterprise is on the lists of COVID-19 affected companies compiled by the STI;\r* the enterprise paid personal income tax to municipal and state budgets in 2019;\r* the enterprise is not subject to bankruptcy, restructuring or liquidation proceedings.\r\rThe subsidy will be calculated on the basis of the personal income tax (PIT) paid by the enterprise in 2019:\r\r* where the  enterprise paid the PIT in the amount of up to \u20ac1,000 in 2019, a minimum subsidy of \u20ac500 shall be granted;\r* where the  enterprise paid the PIT in the amount of \u20ac1,000-\u20ac2,000 in 2019, the subsidy shall be \u20ac1,000;\r* where the applicant\u2019s payment of the PIT in 2019 exceeds \u20ac2,000, the amount of the subsidy shall make half of the PIT paid by the applicant in 2019.\r\rEnterprises are free to apply at any time until the total amount under this facility (\u20ac100 million) is allocated, but no later than by 1 December 2020. The facility is implemented by the STI and Lithuanian Business Support Agency. Payments are carried out by the National Centre of General Functions. The calls shall be sent to enterprises in stages. ",
+            "descriptionUseOfMeasure": "The STI has drawn up a list of 34 thousand microenterprises to be called personally to submit subsidy applications.\rUp to \u20ac100 million has been allocated from the state budget for the implementation of the measure. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners consulted only ad hoc, tripartite meeting was not held.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-20_1022.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1269",
+                    "sources::title": "Procedure for distribution and use of a Subsidy Facility for Microenterprises (Ekonomikos skatinimo ir koronaviruso (COVID-19) plitimo sukelt\u0173 pasekmi\u0173 ma\u017einimo priemoni\u0173 plano l\u0117\u0161\u0173 priemon\u0117s \u201eSubsidijos mikro\u012fmon\u0117ms\u201c paskirstymo ir naudojimo tvarkos apra\u0161as)",
+                    "sources::url": "https://www.e-tar.lt/portal/lt/legalAct/530eb7c0944111ea9515f752ff221ec9/asr",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "932",
+        "modId": "12"
     }
 ]
