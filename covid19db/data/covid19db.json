@@ -19512,6 +19512,220 @@
     },
     {
         "fieldData": {
+            "title": "Guarantee of water and energy supply to vulnerable consumers",
+            "title_nationalLanguage": "Garant\u00eda de suministro de agua y energ\u00eda a consumidores vulnerables",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "ES-2020-12/502",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "Protection is extended to energy and water supplies, guaranteeing the essential public services for vulnerable families. As a novelty, the services of telecommunications are also guaranteed. This means that over the duration of this measure, those who can't afford to pay the bills of these essential services can't be interrupted. The objective of this measure is to protect those families / persons at risk of exclusion or in a vulnerable position.",
+            "descriptionContentOfMeasure": "There is no quantification of the support provided.\r\rDuring the month following the entry into force of this royal decree-law, suppliers of electric energy, natural gas and water may not suspend supply to those consumers in which the condition of vulnerable, severe vulnerable consumer or at risk of exclusion occurs, as defined in articles 3 and 4 of Royal Decree 897/2017, of October 6, which regulates the figure of the vulnerable consumer, the social bonus and other protection measures for domestic consumers.\rThe validity of the social bond is automatically extended until September 15, 2020 for those beneficiaries of the bond that expires before that date, the period provided for in article 9.2 of Royal Decree 897/2017, of 6 October.",
+            "descriptionUseOfMeasure": "There is no estimation on the number of eligible persons.",
+            "descriptionInvolvementOfSocialPartners": "This is a pure social measure, but not really in the labour relations domain. As a result, social partners were not involved, though they could have been informed",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_502.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "77",
+                    "targetGroups::name": "Other groups of citizens",
+                    "modId": "10"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "393",
+        "modId": "84"
+    },
+    {
+        "fieldData": {
+            "title": "Preference for Remote Work",
+            "title_nationalLanguage": "Car\u00e1cter preferente del trabajo a distancia",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "ES-2020-12/503",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "In order to protect workers and ensure business continuity, new work arrangements will be established that allow the activity to be maintained by alternative mechanisms, particularly through remote work, and the company must adopt the appropriate measures if this is technically and reasonably possible and if the necessary adaptation effort is proportionate. These alternative measures, particularly remote work, should be a priority over the temporary cessation or reduction of activity. This is regulated in Royal Drecree 8/2020 of 17th March.\r",
+            "descriptionContentOfMeasure": "With the aim of facilitating the exercise of the remote work in those sectors, companies or jobs where it has not been foreseen until now, a risk assessment will be made, in the terms provided in Article 16 of Law 31/1995, of November 8, on Occupational Risk Prevention, exceptionally, through a self-evaluation carried out voluntarily by the worker himself. There is no monetary support involved in this measure. The measures established in this regulation have as priority objectives to guarantee that business activity and employment relations resume as normal after the exceptional health situation. There is no specific sector / company targeted, not a specific eligibility criteria, but all companies must show they've done all what is possible to allow remote work.\r\rMoreover, the regulation does not specify any aspect related to work organization, the equipment necessary in order to perform remote work etc.",
+            "descriptionUseOfMeasure": "There is no estimation as to the number of workers / companies involved.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were informed - and not formally consulted - on the content of this policy measure\r",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_503.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "394",
+        "modId": "79"
+    },
+    {
+        "fieldData": {
+            "title": "Right to flexible schedule and reduction of working hours for workers with care responsibilities",
+            "title_nationalLanguage": "Derecho de adaptaci\u00f3n del horario y reducci\u00f3n de jornada",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "ES-2020-12/504",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "This measure allows workers to adapt or reduce their schedule to care for their dependents, with a 100% reduction in the workday being possible. The objective is to facilitate those persons with care responsibilities, including disabled, elderly or child, to adapt their working time and eventually reduce it in order to be able to guarantee the care tasks. This policy was included in Royal Decree 8/2020 of 17th March. Those employees eligible will contact their company that will apply the regulations contained in the Labour Code in relation to working time reduction.",
+            "descriptionContentOfMeasure": "Employees who demonstrate care duties with respect to the spouse or domestic partner, as well as with respect to relatives by blood relationship up to the second degree of the worker, will have the right to access the adaptation of their working day and / or the reduction thereof in the terms provided for in this law, when there are exceptional circumstances related to the actions necessary to avoid community transmission of COVID-19. \r\rSuch exceptional circumstances occur when the presence of the worker is necessary for the care of any of the people indicated before who, due to reasons of age, illness or disability, needs personal and direct care as a direct consequence of the COVID-19. Likewise, exceptional circumstances will be considered to exist when there are decisions taken by the governmental authorities related to COVID-19 that imply the closure of educational centers or of any other nature that dispense care or attention to the person in need of them. Exceptional circumstances that require the presence of the employee will also be considered to be present, when the person who until now had been in charge of the direct care or assistance of the working person's spouse or family member up to the second degree could not continue to do so for related justified causes. with COVID-19.",
+            "descriptionUseOfMeasure": "There is no estimation as to the number of employees benefiting from this measure.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were informed, though not formally consulted, on this measure",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_504.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "395",
+        "modId": "80"
+    },
+    {
+        "fieldData": {
             "title": "Mortgage debt moratorium",
             "title_nationalLanguage": "Moratoria de deuda hipotecaria",
             "d_startDate": "03/18/2020",
@@ -20209,6 +20423,76 @@
         },
         "recordId": "409",
         "modId": "82"
+    },
+    {
+        "fieldData": {
+            "title": "Income protection for self-employed workers and freelancers affected by the state of emergency",
+            "title_nationalLanguage": "Prestaci\u00f3n extraordinaria por cese de actividad para los afectados por declaraci\u00f3n del estado de alarma para la gesti\u00f3n de la situaci\u00f3n de crisis sanitaria",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "07/22/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "ES-2020-12/519",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "The measure is aimed at providing income protection for self-employed workers and freelancers. More specifically, this measure makes more flexible the access to benefits in case of cessation of activity for self-employed workers in case of financial difficulty. \r\rThe cessation of activity benefit already existed. What changes under the new regulation is that the requirements are relaxed and the periods for applying change: it will be charged for a period of one month (or until the state of alarm ends). Exceptionally, people who have seen their businesses closed and activities suspended may collect the cessation of activity benefit (unemployment of the self-employed).",
+            "descriptionContentOfMeasure": "Exceptionally and with validity until the last day of the next month when the state of alarm ends, will be entitled to an extraordinary benefit for cessation of activity:\r\r*Self-employed workers included in the Special Scheme for Self-Employed Workers, the self-employed agricultural workers included in the Special System for Agricultural self-employee Workers and the self-employed workers included in the Special Scheme for Sea Workers whose activities are suspended.\r\r*Self-employed workers included in the Special Scheme for Self-Employed Workers, the self-employed agricultural workers included in the Special System for Self-Employed Agricultural Workers and the self-employed workers included in the Special Scheme for Sea Workers who, without ceasing their activity, their monthly income prior to which the benefit is requested is reduced by at least 75 percent in relation to the average billing for the previous calendar semester, provided they are not in some of the cases included in the next two points below.\r\r*Self-employed agricultural workers of seasonal productions included in the Special System for Self-Employed Agricultural Workers, as well as fishing productions, shellfish or of specific seasonal products included in the Special Scheme for Sea Workers, when their average turnover in the months of the production campaign prior to the one requested for the benefit is reduced, at least, by 75 percent in relation to the same months of the campaign of the previous year.\r\r*Self-employed workers who carry out activities in any of the following CNAE 2009 codes: 5912, 5915, 5916, 5920 and between 9001 and 9004, both included, provided that, without ceasing their activity, their turnover in the month natural prior to which the benefit is requested is reduced by at least 75 percent in relation to that made in the previous 12 months.",
+            "descriptionUseOfMeasure": "There are no estimates on the number of workers who can benefit from this measure",
+            "descriptionInvolvementOfSocialPartners": "Peak-level social partners were informed of the content of this measure, as well as the main sectoral  organisations representing self-employee workers, with and without employees\r",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_519.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "410",
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -22066,6 +22350,76 @@
     },
     {
         "fieldData": {
+            "title": "Flexibilisation of temporary adjustment of business activities to avoid layoffs",
+            "title_nationalLanguage": "Medidas de flexibilizaci\u00f3n de los mecanismos de ajuste temporal de actividad para evitar despidos",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "ES-2020-12/548",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "With the objective of allowing companies to maintain their activities in the context of the COVID-19, measures have been taken in order to speed up and make more flexible the process whereby companies can implement collective temporary redundancies and apply reduced working time schemes. \r\rContract suspensions and reductions in working hours that have their direct cause in loss of activity as a consequence of COVID-19, including the declaration of the state of alarm, which imply suspension or cancellation of activities, temporary closure of places of public influx, restrictions on public transport and, in general, the mobility of people and / or goods, lack of supplies that seriously impede the continued development of the activity, or in urgent and extraordinary situations due to the contagion of the staff or the adoption of preventive isolation measures decreed by the health authority, which are duly accredited, will be considered as coming from a situation of force majeure, with the consequences derived from article 47 of the revised text of the Workers' Statute Law, approved by Royal Legislative Decree 2/2015, of October 23.",
+            "descriptionContentOfMeasure": "In the cases in which the company decides to suspend contracts or temporarily reduce the working day, the following process will be followed:\r\r* The procedure will begin at the request of the company, which will be accompanied by a report regarding the link of the loss of activity as a result of COVID-19, as well as, where appropriate, the corresponding supporting documentation. The company must communicate its request to the workers and transfer the previous report and the supporting documentation, if any, to their representation.\r* The existence of force majeure, as a motivating cause for the suspension of contracts or the reduction in working hours provided for in this article, must be verified by the labor authority, regardless of the number of workers affected.\r* The resolution of the labor authority will be dictated within a period of five days from the request, following a report, where appropriate, of the Labor and Social Security Inspection and must be limited to verifying the existence, when appropriate, of force majeure. alleged by the company, corresponding to it, the decision on the application of measures to suspend contracts or reduce working hours, which will take effect from the date of the act of force majeure.\r* The report of the Labor and Social Security Inspection, whose request will be optional for the labor authority, will be fulfilled within the non-extendable period of five days.",
+            "descriptionUseOfMeasure": "There is no estimate yet as to the number of companies and/or workers affected",
+            "descriptionInvolvementOfSocialPartners": "Social partners were involved in designing, implementing and monitoring this policy measure. Their involvement was preceded by a bipartite agreement between the most representative trade unions and employer organisation about measures to face the COVID-19 crisis. ",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_548.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "439",
+        "modId": "78"
+    },
+    {
+        "fieldData": {
             "title": "Temporarily shortened working requirement for unemployment benefit eligibility",
             "title_nationalLanguage": "Ty\u00f6ss\u00e4oloehdon v\u00e4liaikainen lyhennys",
             "d_startDate": "04/20/2020",
@@ -22161,6 +22515,75 @@
         },
         "recordId": "441",
         "modId": "104"
+    },
+    {
+        "fieldData": {
+            "title": "Exemption from payment of social contributions by companies in case of temporary collective dismissal or use of reduced working time schemes",
+            "title_nationalLanguage": "Exoneraci\u00f3n de pago de cotizaciones sociales por las empresas en caso de expediente de regulaci\u00f3n de empleo temporal y reducci\u00f3n de jornada",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "ES-2020-12/551",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "In order to help companies to maintain their activities and stay afloat, the government approved in those cases where the company is under a temporary collective dismissal procedure or applies reduced working time schemes, a tax exemption from social security contributions of employees.\r\rThis exemption will not have effects for the worker, that will maintain the consideration of this period as effectively worked for all purposes, and therefore all social contributions will be considered as paid.\r\r",
+            "descriptionContentOfMeasure": "In the cases of suspension of contracts and reduction of working hours authorized based on temporary force majeure linked to COVID-19 defined in article 22, the General Treasury of Social Security will exempt the company from the payment of the business contribution provided in article 273.2 of the Consolidated Text of the General Law of Social Security, approved by Royal Legislative Decree 8/2015, of October 30, as well as the one regarding quotas for joint collection concepts, while the period of suspension of contracts or reduction of authorized working hours based on said cause when the company, on February 29, 2020, had fewer than 50 workers registered with Social Security. \r\rIf the company had 50 workers or more, registered with Social Security, the exemption from the obligation to contribute will reach 75% of the business contribution.",
+            "descriptionUseOfMeasure": "At the moment, there is no estimate as to the total number of companies / workers affected by temporary collective dismissals procedures or reduced working time procedures",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in designing, implementing or monitoring the measure",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_551.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "442",
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -23110,6 +23533,111 @@
     },
     {
         "fieldData": {
+            "title": "Short-time work allowance newly introduced",
+            "title_nationalLanguage": "Korttidsarbete (korttidspermittering)",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "SE-2020-12/564",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "Starting 7 April, it will be possible for employers to apply for financial support for short-time work. The new system means that individual employers affected by temporary and serious financial difficulties that could not reasonably have been foreseen or avoided will be able to receive support for a limited period of time. The aim of the measure is thus to dampen the effect of the ongoing health crisis and save jobs by easing the financial burden of wage costs for companies experiencing difficulties. \r\rShort-time work (also known as short-time layoffs) is regulated in the Act (2013:948) on short-time work (Lag (2013:948) om st\u00f6d vid korttidsarbete).\r\r",
+            "descriptionContentOfMeasure": "Short-time working means that employers can reduce their employees\u2019 working hours and receive financial support from the central government to compensate for a significant part of the costs for retaining the employee. \r\rThis measure covers only the private sector. This measure is not available for sole traders. \r\rWorking-time can be reduced by up to 60% (although this is likely to shortly be extended to 80%). The support is intended to correspond to 75% of the employer\u2019s costs after the reduced working hours. The basis of calculation is ordinary salary (or wage for hourly employees) excluding the employer\u2019s social insurance contributions, however to still take the statutory employer\u2019s social insurance contributions of 31.42% into account, the share of support will be 98.6%, i.e. 75% of 1.3142 = 98.565%.\r\rThe application to receive such support opened on April 7 but will be retroactively applied to as early as from 16 March.\r\rEmployers wishing introduce short-time work must first ensure that they have the possibility for short-time working in their central and local collective bargaining agreement. Employers whose employees are not covered by a collective bargaining agreement must instead sign an agreement for short-time working covering at least 70% of the employees at the operating unit. ",
+            "descriptionUseOfMeasure": "The use of short-term work is likely to be widespread. One day after the application openened, the administrating authority - The Swedish Agency for Economic and Regional Growth - had already received 15,000 applications. \r\rBy 13 July 2020 approximately 73,500 companies had applied for support. The amount of support that has been paid out is SEK 26 billion (approximately \u20ac2,6 billion). The number of employees covered by this measure was approximately 570,000. ",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-12_564.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "539",
+                    "sources::title": "Short-Time Work Allowance ",
+                    "sources::url": "https://tillvaxtverket.se/english/short-time-work-allowance.html",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "540",
+                    "sources::title": "F\u00f6rslag till \u00e4ndringar g\u00e4llande korttidsarbete",
+                    "sources::url": "https://tillvaxtverket.se/om-tillvaxtverket/nyhetsrummet.html#/pressreleases/foerslag-till-aendringar-gaellande-korttidsarbete-2991023?utm_source=rss&utm_medium=rss&utm_campaign=Subscription&utm_content=current_news",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "911",
+                    "sources::title": "an amendment to the short-time working scheme allows for a reduction in activity of up to 80%.",
+                    "sources::url": "https://www.planetlabor.com/en/legal-developments/national-legislation/sweden-an-amendment-to-the-short-time-working-scheme-allows-for-a-reduction-in-activity-of-up-to-80/",
+                    "sources::d_date": "06/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1169",
+                    "sources::title": "Statistics on short-time work allowance (Statistik om korttidsarbete\r\r\u00d6versikt)",
+                    "sources::url": "https://tillvaxtdata.tillvaxtverket.se/tillvaxtdata_publik#page=1bfc35b3-1578-496c-a1b6-04a02c537636",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1170",
+                    "sources::title": "Increased support for short-time allowance welcomed but sole traders should be included (Ut\u00f6kad korttidspermittering v\u00e4lkommet \u2013 men enskild firma saknas)",
+                    "sources::url": "https://www.foretagarna.se/nyheter/riks/2020/april/utokat-stod-for-korttidsarbete/",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "193",
+                    "updates::d_date": "05/27/2020",
+                    "updates::description": "On 27th of May the parliament voted through an increase of the measure, now allowing up to 80% reduction in working hours, compared to the previously available 60%. This extension is available in May, June and July 2020. ",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "455",
+        "modId": "101"
+    },
+    {
+        "fieldData": {
             "title": "'Disease carriers allowance' extended to high-risk groups",
             "title_nationalLanguage": "Smittob\u00e4rarpenning",
             "d_startDate": "04/02/2020",
@@ -23285,6 +23813,194 @@
         },
         "recordId": "457",
         "modId": "77"
+    },
+    {
+        "fieldData": {
+            "title": "Rent support for companies in vulnerable sectors",
+            "title_nationalLanguage": "Tillf\u00e4llig rabatt f\u00f6r fasta hyreskostnader i utsatta branscher",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "SE-2020-14/567",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "To support tenants operating in certain vulnerable sectors, the Swedish government has introduced a rent rebate scheme. The measure is regulated in the Ordinance (2020:237) on state support when certain tenants receive rent rebates (F\u00f6rordning om statligt st\u00f6d n\u00e4r vissa lokalhyresg\u00e4ster f\u00e5tt rabatt p\u00e5 hyran (2020:237)).\r\rThis measure was approved by the EU Commission on April 15, 2020. The scheme was approved under the State aid Temporary Framework adopted by the Commission on 19 March 2020, as amended on 3 April 2020.",
+            "descriptionContentOfMeasure": "The scheme is designed for tenants in the hotel, restaurants, retail and several other sectors that saw their revenues heavily decreasing or even disappearing due to the COVID-19 outbreak. The measure covers up to 50% of rent reductions negotiated between tenants and landlords (but no more than 25% of the initial fixed rent costs) for the period 1 April to 30 June 2020.\r\rThe rent compensation is applied for by the landlord retroactively through a digital application system administered by the County Administrative Boards.\r\rThe government has allocated SEK 5 billion (approximately EUR 453 million) for this support measure.",
+            "descriptionUseOfMeasure": "Data on the uptake of this measure are not yet available.",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-14_567.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "492",
+                    "sources::title": "Temporary discount on fixed rental costs in vulnerable sectors",
+                    "sources::url": "https://www.regeringen.se/pressmeddelanden/2020/04/tillfallig-rabatt-for-fasta-hyreskostnader-i-utsatta-branscher/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "672",
+                    "sources::title": "State aid: Commission approves \u20ac453 million Swedish rent rebate scheme to support sectors affected by coronavirus outbreak",
+                    "sources::url": "https://ec.europa.eu/commission/presscorner/detail/sv/ip_20_663",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "673",
+                    "sources::title": "Regeringen har beslutat om tillf\u00e4llig rabatt f\u00f6r fasta hyreskostnader i utsatta branscher",
+                    "sources::url": "https://www.regeringen.se/artiklar/2020/04/regeringen-har-beslutat-om-tillfallig-rabatt-for-fasta-hyreskostnader-i-utsatta-branscher/",
+                    "sources::d_date": "04/16/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "10",
+                    "actors::name": "EU (Council, EC, EP)",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "104",
+                    "sectors::code": "M74",
+                    "sectors::name": "Other professional, scientific and technical activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "107",
+                    "sectors::code": "N77",
+                    "sectors::name": "Rental and leasing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "112",
+                    "sectors::code": "N82",
+                    "sectors::name": "Office administrative, office support and other business support activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "118",
+                    "sectors::code": "Q86",
+                    "sectors::name": "Human health activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "123",
+                    "sectors::code": "R91",
+                    "sectors::name": "Libraries, archives, museums and other cultural activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "128",
+                    "sectors::code": "S95",
+                    "sectors::name": "Repair of computers and personal and household goods",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "129",
+                    "sectors::code": "S96",
+                    "sectors::name": "Other personal service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "170",
+                    "updates::d_date": "07/12/2020",
+                    "updates::description": "In June 2020, the list of sectors covered by this measure was extended. The following sectors were added: consumer laundry, car repair shops, car rental, household goods rental, traffic schools, sports and leisure education and portrait photography. \r\r",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "458",
+        "modId": "99"
     },
     {
         "fieldData": {
@@ -23643,6 +24359,146 @@
         },
         "recordId": "464",
         "modId": "80"
+    },
+    {
+        "fieldData": {
+            "title": "State credit line for companies and the self-employed",
+            "title_nationalLanguage": "Aprobaci\u00f3n de una L\u00ednea de credito para la cobertura por cuenta del Estado de la financiaci\u00f3n otorgada por entidades financieras a empresas y aut\u00f3nomos",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "ES-2020-12/574",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "In order to facilitate the maintenance of employment and mitigate the economic effects of COVID-19, the Ministry of Economic Affairs and Digital Transformation will grant guarantees to the credit granted by financial institutions, credit financial institutions and electronic money entities to companies and self-employed to meet their needs arising, among others, from the management of invoices, the need for cash, maturities of financial or tax obligations or other liquidity needs.\r\r",
+            "descriptionContentOfMeasure": "The Ministry of Economic Affairs and Digital Transformation may grant guarantees for a maximum amount of  \u20ac100,000 million. The applicable conditions and requirements to be met, including the maximum term for the request for the guarantee, will be established by Agreement of the Council of Ministers, without the need for subsequent regulatory development for its application.\r\rThe Official Credit Institute within 10 days of the adoption of the Council of Ministers Agreement is the body in charge of arranging what is necessary for the effective implementation of this line of guarantees.\r\rThe guarantees regulated in this norm and the conditions developed in the Council of Ministers Agreement will comply with the European Union regulations regarding State Aid.",
+            "descriptionUseOfMeasure": "No statistics on the number of companies / self-employed accessing this financing programme.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in designing, implementing or monitoring this measure",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_574.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "465",
+        "modId": "78"
+    },
+    {
+        "fieldData": {
+            "title": "New insurance coverage line for export-oriented SMEs",
+            "title_nationalLanguage": "L\u00ednea extraordinaria de cobertura aseguradora para PYMES internacionalizadas",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "09/18/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "ES-2020-12/575",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "With extraordinary character and with a duration of 6 months from the entry into force, it is established the creation of an insurance coverage line of up to \u20ac2,000 million with the guarantee of the Reserve Fund for the Risks of Internationalization.\r\rThe objective of this policy is to help export-oriented SMEs to get access to funding and coverage of risks incurred during the COVID-19 crisis.",
+            "descriptionContentOfMeasure": "The financial liquidity needs of the exporting company will be eligible provided that they respond to new financing needs and not to situations prior to the current crisis.\r\rThe beneficiaries of this policy are SMEs according to the definition in Annex I of Commission Regulation EU 651/2014, as well as other larger companies, provided they are unlisted entities, in which the following circumstances concur:\r\r*That they are internationalized companies or in the process of internationalization, by meeting at least one of the following requirements: companies in which the international business, reflected in its latest available financial information, represents at least a third (33%) of its turnover; or companies that are regular exporters (those companies that have exported regularly over the last four years according to the criteria established by the Secretary of State for Commerce).\r\r*That the company faces a liquidity problem or lack of access to financing as a result of the impact of the COVID-19 crisis on its economic activity.\r\r*Those companies in bankruptcy or pre-bankruptcy are expressly excluded, as well as those companies with incidents of default with companies in the Public Sector or debts with the Administration, registered before December 31, 2019.\r\rThe percentage of credit risk coverage in the operations subscribed under this line will not exceed the limit that may be established at any time in accordance with the EU regulations on State aid.",
+            "descriptionUseOfMeasure": "No stats on the use of measure are available",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in designing, implementing or monitoring this measure",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-12_575.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "396",
+                    "sources::title": "Royal Decree-Law 8/2020, of March 17, on extraordinary and urgent measures to face the economic and social impact of COVID-19.",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-3824",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "466",
+        "modId": "76"
     },
     {
         "fieldData": {
@@ -25105,6 +25961,76 @@
         },
         "recordId": "488",
         "modId": "70"
+    },
+    {
+        "fieldData": {
+            "title": "Prohibition of objective dismissals",
+            "title_nationalLanguage": "Prohibici\u00f3n de despidos objetivos",
+            "d_startDate": "03/27/2020",
+            "d_endDate": "06/21/2020",
+            "calc_country": "Spain",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Flexibilisation and security",
+            "calc_identifier": "ES-2020-13/598",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/14/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "This measure is part of a second package of measures to mitigate the social and economic impact of the COVID-19 crisis.\r\rThe objective of this prohibition is to avoid employers taking advantage of the health crisis in order to dismiss workers.\r\rThe Government approved in Royal Decree 9/2020 the temporary prohibition, from 27 March until the health crisis ends, dismissals due to force majeure or objective causes of an economic, technical, organizational or production nature, which are justified by the impact of the coronavirus.\r\r",
+            "descriptionContentOfMeasure": "Under this regulation, objective dismissals are prohibited. These dismissals have a severance pay of 20 days per year worked and a maximum of one year salary, when the judge finds these cases appropriate. Although, in the case of finding them inadmissible, the compensation rises to 33 days per year worked and a maximum of two annuities.\r\rThe legal wording indicates: 'Force majeure and the economic, technical, organizational and production causes covered by the measures for suspension of contracts and reduction of working hours provided for in articles 22 and 23 of Royal Decree Law 8/2020, of March 17 cannot be understood as justifications for the termination of the employment contract or dismissal.'\r\rThus, it follows from this text that more than prohibiting these dismissals, it makes them more expensive, because, if they occur, the judge will declare them inadmissible, and therefore the compensation will be greater than if they were due to objective causes.\r\r",
+            "descriptionUseOfMeasure": "No estimates exist.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were informed and consulted before the implementation of the measure, though not formal negotiations took place",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/ES-2020-13_598.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "489",
+                    "sources::title": "Royal Decree 9/2020",
+                    "sources::url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4152",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "489",
+        "modId": "80"
     },
     {
         "fieldData": {
@@ -31960,6 +32886,85 @@
     },
     {
         "fieldData": {
+            "title": "More opportunities for VET",
+            "title_nationalLanguage": "Fler m\u00f6jligheter till yrkesutbildning",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Enhancing employability and training",
+            "calc_identifier": "SE-2020-14/704",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/16/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "As unemployment is expected to rise as a consequence of the COVID-19 outbreak, the government is increasing opportunities for further education/training throughout the country. This will include increased funding to regional vocational adult education and reinforcement of vocational higher education with new places, short courses and course packages, as well as various kinds of pilot projects so that more people can complete their qualification. Additionally, folk high schools will be expanded, with full financing from central government and possibilities for distance learning will be improved, partly through additional support to education providers in vocational higher education in terms of distance teaching, and partly by making more distance courses available via study associations.\r\r",
+            "descriptionContentOfMeasure": "The measure of introducing more opportunities for vocational education and training\rthroughout the country will include the following budget posts:        \r1. Increased funding for regional vocational adult education (SEK 0.70 billion)\r2. New places in vocational higher education (SEK 0.25 billion)\r3. More courses and course packages in vocational higher education (SEK 0.08 billion)\r4. Vocational higher education flex (SEK 0.04 billion)\r5. Support for distance teaching (SEK 0.01 billion)\r6. Expansion of folk high school (SEK 0.08 billion)\r7. Investment in study associations (non-formal adult education) (SEK 0.03 billion)\r\rThe measure was announced on April 30, but exactly when new places and courses will be available it not yet clear.",
+            "descriptionUseOfMeasure": "It is too early to say how many will be making use of the reinforced VET opportunities.",
+            "descriptionInvolvementOfSocialPartners": "The social partners are not involvfed in designing, implementing or monitoring this measure. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-14_704.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "630",
+                    "sources::title": "Crisis package for jobs and transition",
+                    "sources::url": "https://www.government.se/press-releases/2020/03/crisis-package-for-jobs-and-transition/",
+                    "sources::d_date": "03/30/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1099",
+                    "sources::title": "Increased intake of adult learners for the fall (Fler utbildningsplatser f\u00f6r vuxna i h\u00f6st)",
+                    "sources::url": "https://www.regeringen.se/pressmeddelanden/2020/06/fler-utbildningsplatser-for-vuxna-i-host/",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "143",
+                    "updates::d_date": "07/09/2020",
+                    "updates::description": "Investments in the education system increase the intake of students in 2020 by 1,500 in the vocational adult education system, 2,500 in the vocational system and 500 in the folk high school. \r",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "614",
+        "modId": "86"
+    },
+    {
+        "fieldData": {
             "title": "Removal of income ceiling for student aid to facilitate work in essential services",
             "title_nationalLanguage": "Borttaget inkomsttak f\u00f6r studiemedel",
             "d_startDate": "01/01/2020",
@@ -33292,6 +34297,97 @@
     },
     {
         "fieldData": {
+            "title": "Temporary amendment to the regulation of layoffs ",
+            "title_nationalLanguage": "Endringer i permitteringsregelverket",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "NO-2020-12/720",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/17/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "The regulation of lay-off is amended to reduce employers' costs of lay-off so that they can better adapt to market failure and avoid permanent dismissals. Many businesses are required to shut down, and the ripple effects of measures to limit infection are significant. This has resulted in a very high number of layoffs in a number of industries. The amendment to the lay-off regulation reduce the cost for employers and increase the unemployment benefit for the unemployed. Part time lay-off can be applied if the employee work 40% or less (changed from 50%).",
+            "descriptionContentOfMeasure": "The lay-off regulations secure unemployment benefits to the individual employee if he or she is laid off. In this way, companies can quickly reduce their costs, while at the same time the working relationship can continue. The period where employers have to pay wages during lay-offs (the employer's period) is reduced from 15 to 2 days. The state carry the cost from day 3. The unemployment benefit starts when the unemployed person has been unemployed and has been registered as a real job seeker for at least three of the last fifteen days. These three days constitute the waiting period in the unemployment benefit scheme. To reduce the burden on workers the waiting time is removed for the laid off. \r\r\rThe temporarily dismissed are guaranteed 100% salary up to 6G (approx. \u20ac50,700) from day 3, when employer is exempted from paying wage, through day 20. Unemployment benefits for laid-off persons and those who become ordinary unemployed are adjusted upwards and shall constitute 80% of the former wage (dagpengegrunnlaget) up to 3G (aprox. \u20ac25,350) and 62.4% of the part of former wage that is between 3G and 6G (aprox. \u20ac50,700). The lower income limit for entitlement to unemployment benefit is lowered to 0.75G (aprox. \u20ac6,340) over the past 12 months or 2.25G over the past 36 months. The requirement for reduced working hours for entitlement to unemployment benefits is changed from a minimum of 50% to a minimum of 40%.",
+            "descriptionUseOfMeasure": "In the period from 9 Mars to 15 April, 342 228 persons have applied for unemployment benefit. In accomodation and food and beverage services (NACE I) the unemployed constitute 57 per cent of the employed in the industries. In industy (NACE C) and construction and building (NACE F), 12 per cent is registred as laid off. ",
+            "descriptionInvolvementOfSocialPartners": "The social partners have been consulted regularly during design and implementation of the measure.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-12_720.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "638",
+                    "sources::title": "Slik blir endringene i permitterings- og dagpengeregelverket",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/slik-blir-endringene-i-permitterings--og-dagpengeregelverket/id2694346/",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1094",
+                    "sources::title": "Changes in the redundancy scheme",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/endringer-i-permitteringsordningen/id2704157/",
+                    "sources::d_date": "07/23/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1095",
+                    "sources::title": "Companies need a longer redundancy period",
+                    "sources::url": "https://www.nho.no/tema/arbeidsliv/koronaviruset/bedriftene-trenger-lengre-permitteringsperiode/?utm_source=spmailer&utm_medium=email&utm_campaign=Nyhetsbrev,%2026.%20juni%202020&utm_content=Bedriftene%20trenger%20lengre%20permitteringsperiode",
+                    "sources::d_date": "06/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "139",
+                    "updates::d_date": "07/23/2020",
+                    "updates::description": "The 23 June 2020, the parliament adopted amendments to the Lay-off Wages Act (repeal of temporary employer period introduced as a result of the outbreak of covid-19). The period the employer has an obligation to pay for wages at the start of a new layoff is increased from 2 to 10 days from 1 September 2020. The government argues that it will be unfortunate if the cost of laying off is so low that unnecessarily many are laid off.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "630",
+        "modId": "83"
+    },
+    {
+        "fieldData": {
             "title": "Guide to the COVID-19 'Job-VET-model'",
             "title_nationalLanguage": "Vejviser til COVID-19 Job-VEU\rmodellen",
             "d_startDate": "03/27/2020",
@@ -33608,6 +34704,109 @@
     },
     {
         "fieldData": {
+            "title": "Temporary income assurance scheme for self-employed and freelancers ",
+            "title_nationalLanguage": "Midlertidig inntektssikringsordning for selvstendig n\u00e6ringsdrivende og frilansere ",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "11/01/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "NO-2020-14/724",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/17/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "The outbreak of viruses and measures introduced to prevent infection have had major effects in the labour market, and several measures have been implemented to ensure income for those affected. The Storting (parliament) asked the government to introduce a temporary scheme for self-employed and freelancers who are now losing all or part of their income base as a result of the corona pandemic. The regulation (FOR-2020-04-08-735) takes effect immediately and the payments will be disbursed as soon as NAV gets a technical solution in place for the scheme.",
+            "descriptionContentOfMeasure": "A compensation scheme for self-employed persons and freelancers who have lost all, or part of their income was approved by the government on 8 April. The new temporary scheme covers up to 80 per cent of income, limited up to an annual income of 6G (approx. EUR 50700) (1G = the basic amount in the national insurance), and applies to income that does not entitle to unemployment benefit. The scheme includes those who have lost income on or after March 16. The compensation is given from day 17 after the loss of income. One must apply in arrears for the loss of income the month before, so that The Norwegian Labour and Welfare Administration will know about any income for the month in which the application applies. Generally, the basis for compensation for freelancers is calculated on the basis of an average of the income reported to the Tax Administration via the current \u201ca-scheme\u201d in the last 12 months before March 2020. A shorter period can be used for newly established freelancers. Generally, the basis for compensation to self-employed persons is calculated on the basis of business income over the past three income years. The application is due in early May. The Norwegian Labour and Welfare Administration is already in the process of creating a digital solution that allows payments to be made automatically. The application is due in early May. Those applying for the new scheme will receive detailed guidance along the way in the application process.",
+            "descriptionUseOfMeasure": "No information to date",
+            "descriptionInvolvementOfSocialPartners": "The social partners have been consulted regularly during design and implementation of the measure.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-14_724.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "647",
+                    "sources::title": "Prop 67 S (2019\u20132020) Endringer i statsbudsjettet 2020",
+                    "sources::url": "https://www.regjeringen.no/contentassets/86cb8515420749e1ae7122bf24827632/no/pdfs/prp201920200067000dddpdfs.pdf",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "648",
+                    "sources::title": "Innst. 216 S (2019\u20132020) Innstilling fra finanskomiteen om Endringer i statsbudsjettet 2020",
+                    "sources::url": "https://www.stortinget.no/globalassets/pdf/innstillinger/stortinget/2019-2020/inns-201920-216s.pdf",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "649",
+                    "sources::title": "New compensation scheme for self-employed and freelancers",
+                    "sources::url": "https://www.nav.no/no/person/innhold-til-person-forside/nyheter/endringer-i-permitterings-og-dagpengeregelverket/ny-kompensasjonsordning-for-selvstendig-naeringsdrivende-og-frilansere",
+                    "sources::d_date": "04/17/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "801",
+                    "sources::title": "Frilansere og selvstendig n\u00e6ringsdrivende kan n\u00e5 s\u00f8ke om kompensasjon for tap av inntekt",
+                    "sources::url": "https://www.nav.no/no/person/innhold-til-person-forside/nyheter/frilansere-og-selvstendig-naeringsdrivende-kan-na-soke-om-kompensasjon-for-tap-av-inntekt",
+                    "sources::d_date": "05/04/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "137",
+                    "updates::d_date": "06/12/2020",
+                    "updates::description": "The 12 June 2020, a temporary law, valid through 1 November 2020, replaced the temporary government regulation.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "634",
+        "modId": "77"
+    },
+    {
+        "fieldData": {
             "title": "Reduction of employer's responsibility for funding sick leave to three days if illness is Covid-19-related",
             "title_nationalLanguage": "Arbeidsgivers finansieringsansvar for koronavirusrelatert sykefrav\u00e6r reduseres til tre dager",
             "d_startDate": "03/16/2020",
@@ -33910,6 +35109,108 @@
     },
     {
         "fieldData": {
+            "title": "Business Compensation Scheme",
+            "title_nationalLanguage": "Kompensasjonsording for n\u00e6ringslivet",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "NO-2020-10/730",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/19/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "The government has established a compensation scheme where the state covers parts of the fixed costs for companies that have had at least 30% decrease in turnover due to the outbreak of Covid-19 and infection control measures. The goal is to help the business sector avoid bankruptcies and recover quickly after the crisis is over. The scheme is temporary and will apply for the months of March, April and May. The government has set up a dedicated site where the companies can apply for grant to cover fixed and unavoidable costs. It is meant to be both easy to use and manage, and designed to give quickly imbursement. The scheme was designed by the government in close collaboration with The Confederation of Norwegian Enterprise (NHO), The Norwegian Confederation of Trade Unions (LO), Enterprise Federation of Norway (Virke), SMB Norway, Norwegian Employers Association for the Financial Sector (FA) and the Tax Administration. The EFTA Surveillance Authority ESA has approved the scheme. ",
+            "descriptionContentOfMeasure": "The Business Compensation Scheme will comprise companies with at least 30% drop in sales compared to the same month the year before. For March, the rate will be 20%, since the strict anti-infection measures were first introduced on March 12. The scheme will initially apply to March, April and May, and payments will be made in arrears based on actual sales in the months in question. A two-part model is used for calculating compensation. \r\r1. Companies instructed by the state to shut down to prevent spread of COVID-19 virus will be able to apply for compensation of up to 90% of their unavoidable fixed costs in the specified months, calculated as follows: reduction in turnover x unavoidable fixed costs x 90 percent adjustment factor. \r\r2. Firms that are not required to shut down, but still experiencing a reduction in turnover of 30% or more (20% in March), will have to pay an excess. Compensation is calculated as follows: reduction in sales x (unavoidable fixed costs - excess of NOK 10,000/approximately EUR 890) x 80% adjustment factor. The minimum limit for compensation is NOK 5,000. If the support per enterprise exceeds NOK 30 million per month, the excess will be bisect.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The social partners have been consulted regularly during design and implementation of the measure.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-10_730.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "660",
+                    "sources::title": "Act on temporary grant scheme for enterprises with a large drop in turnover",
+                    "sources::url": "https://lovdata.no/dokument/NL/lov/2020-04-17-23",
+                    "sources::d_date": "04/17/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "661",
+                    "sources::title": "Business Compensation Scheme ",
+                    "sources::url": "https://kompensasjonsordning.no/en/",
+                    "sources::d_date": "04/19/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "662",
+                    "sources::title": "Foretak med minst 30 % omsetningsfall kan f\u00e5 kompensasjon",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/foretak-med-minst-30--omsetningsfall-kan-fa-kompensasjon/id2696396/",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1081",
+                    "sources::title": "Endringer i kompensasjonsordningen",
+                    "sources::url": "https://www.regjeringen.no/no/aktuelt/endringer-i-kompensasjonsordningen/id2721709/",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "130",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "The Government proposed to the parliament on May 29 to extend the compensation scheme from 31 May to 31 of August in a stepped down form. The compensation rate, initially 80 per cent, will be reduced to 70 per cent for June and July and to 50 per cent for August. The regulation took effect on 30 June.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "640",
+        "modId": "74"
+    },
+    {
+        "fieldData": {
             "title": "Baden-W\u00fcrttemberg: Emergency aid for businesses with up to 50 employees",
             "title_nationalLanguage": "Baden-W\u00fcrttemberg: Soforthilfe f\u00fcr Unternehmen bis zu 50 Arbeitnehmern",
             "d_startDate": "03/25/2020",
@@ -34084,6 +35385,95 @@
         },
         "recordId": "647",
         "modId": "78"
+    },
+    {
+        "fieldData": {
+            "title": "Increased loan facilities and credit guarantees for Swedish businesses",
+            "title_nationalLanguage": "Ut\u00f6kade l\u00e5ne- och garantim\u00f6jligheter till f\u00f6retag i Sverige",
+            "d_startDate": "03/26/2020",
+            "d_endDate": "",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "SE-2020-13/740",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/20/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "To mitigate the impact of the virus outbreak on jobs and businesses, a range of measures were presented to make it easier for Swedish companies, particularly small- and medium-sized ones, to access finance. The two bodies administrating this support measure are Almi Business Partner (Almi F\u00f6retagspartner AB) - a Swedish state-owned company group consisting of 16 regional subsidiaries providing loans and business development, and The Swedish Export Credit Corporation - the authority with the task of promoting Swedish exports.",
+            "descriptionContentOfMeasure": "Almi F\u00f6retagspartner AB will receive a capital contribution of SEK 3 billion to increase its lending to small- and medium-sized businesses throughout the country. This reinforcement of the loan fund will increase Almi\u2019s preparedness to meet the needs of businesses whose activities have been adversely affected by the COVID-19 outbreak.\r\rThe Swedish Export Credit Corporation\u2019s credit framework will be increased from SEK 125 billion to SEK 200 billion and can be used to provide both state-supported and commercial credit to Swedish export companies. This will give the agency enhanced opportunities to meet the export industry\u2019s increased demand for credit.\r\rThe Swedish Export Credit Agency promotes Swedish exports and the competitiveness of Swedish industry by providing guarantees that facilitate the financing of purchases of Swedish goods and services. Increased credit guarantees totalling SEK 500 billion and lower risk for banks will provide new and improved credit opportunities for companies. A new guarantee for faster and more secure payment to Swedish export companies will also be introduced. This will apply to small- and medium-sized export companies, major export companies and their suppliers.",
+            "descriptionUseOfMeasure": "The demand for this measure has been high: by the end of May 2020, the Swedish Export Credit Corporation had issued guarantee offers worth over SEK 120.7 billion. ",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-13_740.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "671",
+                    "sources::title": "Increased loan facilities and credit guarantees for Swedish businesses",
+                    "sources::url": "https://www.government.se/press-releases/2020/03/increased-loan-facilities-and-credit-guarantees-for-swedish-businesses/",
+                    "sources::d_date": "03/24/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1150",
+                    "sources::title": "The most common questions about Almi's Bryggl\u00e5n (Vanligaste fr\u00e5gorna om Almis Bryggl\u00e5n)",
+                    "sources::url": "https://www.almi.se/information-med-anledning-av-coronaviruset/faq-corona/",
+                    "sources::d_date": "05/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "66",
+                    "targetGroups::name": "Start-ups",
+                    "modId": "11"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "172",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "In April 2020, Almi started granting a new type of loan for start-ups and established small and medium sized companies whose need for financing is connected to the COVID-19 crisis. \r\rStart-ups may loan up to SEK 500,000 (approximately \u20ac50,000). No information available regarding the maximum amount for established small and medium sized companies. \r\r",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "650",
+        "modId": "77"
     },
     {
         "fieldData": {
@@ -34709,6 +36099,92 @@
     },
     {
         "fieldData": {
+            "title": "Interest reduction and loan payment delays for small enterprises using microcredit Qredits system",
+            "title_nationalLanguage": "Rentekorting kleine ondernemers op microkredieten Qredits ",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "",
+            "calc_country": "Netherlands",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "NL-2020-12/752",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/21/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "This expansion of the Qredits system is part of the package of emergency measures to deal with the COVID-19. This was a package of several measures which have been taken to combat the pandemic and its effects.\rThe Qredits microfinancing system is an existing government sponsored financier. This microcredits fund is more a permanent feature that is being temporally expanded as part of the package of emergency measures by the national government.",
+            "descriptionContentOfMeasure": "The Qredits microcredit fund is a governmental fund which provides financing as well as support and coaching to micro and small enterprises which face challenges gaining financing via more traditional avenues (such as bank loans). Users of the fund tend to be small, notably micro-enterprises and are often run by individuals with a poorer socio-economic or migrant background. \rWith the aim of supporting small entrepreneurs who are hit by the COVID-19-related measures, Qredits has relaxed some of the financing conditions. \rSmall entrepreneurs can delay their loan payments for up to six months and the interest rate will be kept at 2%. The national government supports Qredits in this effort with a maximum of \u20ac6 million. ",
+            "descriptionUseOfMeasure": "Through this program, the Government expects to support approximately 3,000 to 6,000 firms.",
+            "descriptionInvolvementOfSocialPartners": "Since the outbreak of the Corona crisis, the government has had regular and close consultation with the social partners. Together the national level social partners and the government arrived at the first and second packages of emergency measures, announced March 17th and May 20th respectively.",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-12_752.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "684",
+                    "sources::title": "Coronavirus: kabinet neemt pakket nieuwe maatregelen voor banen en economie",
+                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-covid-19/nieuws/2020/03/17/coronavirus-kabinet-neemt-pakket-nieuwe-maatregelen-voor-banen-en-economie",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "708",
+                    "sources::title": "Kamerbrief over noodpakket banen en economie",
+                    "sources::url": "https://www.rijksoverheid.nl/binaries/rijksoverheid/documenten/kamerstukken/2020/03/17/kamerbrief-over-noodpakket-banen-en-economie/Kamerbrief-noodpakket-banen-en-economie.pdf",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "709",
+                    "sources::title": "Vragen over Qredits",
+                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/overzicht-financiele-regelingen/qredits",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "177",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "The aim of this measure is to support the 6,000 small entrepreneurs who currently have Qredits loans. Besides this Qredits hopes to provide another 2,000 entrepreneurs with _Overbruggingskredieten_, or bridging credits. In total Qredits aims to support 8,000 small entrepreneurs.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "662",
+        "modId": "79"
+    },
+    {
+        "fieldData": {
             "title": "Temporary guarantees for companies active in agriculture and horticulture sectors",
             "title_nationalLanguage": "Borgstellingskrediet voor de Landbouw overbruggingsfinanciering (BL-C)",
             "d_startDate": "03/17/2020",
@@ -35250,6 +36726,188 @@
         },
         "recordId": "670",
         "modId": "83"
+    },
+    {
+        "fieldData": {
+            "title": "Temporary subsidy for self-employed ",
+            "title_nationalLanguage": "Tijdelijke Overbruggingsregeling Zelfstandige Ondernemers (Tozo) ",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "",
+            "calc_country": "Netherlands",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "NL-2020-12/761",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/21/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "The national government initiated this measure, together with the Association for Dutch Municipalities (VNG), and other social partners, specifically Divosa (an association of municipal government directors or managers who work in the social policy domains).\r\rIt consist of a financial aid programme for entrepreneurs and solo self-employed. It is also part of a package of emergency measures accepted by the Dutch parliament.\rThis has been introduced as a bunch of emergency measures specifically to combat or cushion the effects of the COVID-19 crisis. More specific, this measure is aimed at providing self-employed a minimum income to live from. The ultimate aim is to keep the economy functioning (including the financial flow) until the pandemic is under control.\r\rThe municipal governments implement this national measure. The proceeding has been conducted employing the existing implementation mechanisms for another measure, the Bbz regulation (a separate, existing measure which helps struggling entrepreneurs, entrepreneurs who wish to end their enterprise, or individuals who wish to start an enterprise from a welfare position).\r\rThe funding is provided entirely by the national government. The municipal governments are fully reimbursed by a portion of budget set aside by the national Ministry of Employment and Social Affairs, to the amount of 3.8 billion euro. This amount has been reserved for the Tozo measure.",
+            "descriptionContentOfMeasure": "This measure, named Tijdelijke Overbruggingsregeling Zelfstandige Ondernemers (TOZO) is governmental financial aid for self-employed people and entrepreneurs that are negatively affected by the COVID-19. \rThe government and municipal governments pay a portion of the income for entrepreneurs and self-employed to supplement their daily subsistence. Users of the measure can receive either a payment in the form of a social security benefit, where the municipal government pays out money to bring an entrepreneur to the minimum social assistance level (bijstandsniveau) for up to three months. \r\r* The municipal governments supplement income up to this level, or up to the amount of \u20ac1,050 for a single person and up to \u20ac1,500 for a couple. \r* The other option is for the entrepreneur to take out a loan of up to around \u20ac10,000 as capital for the enterprise. This loan can be paid back within three years at an interest rate of 2%. \r\rThe eligibility criteria are based on being self-employed (working at least 1,225 hours a year or 23.5 hours a week), while the solo-enterprise must have been active before the COVID-19 crisis and the TOZO came into effect.\r\rIt should be noted that this measure is separate and different from the Bbz measure (mentioned in the background information to this measure). Where the Bbz is a measure to help support existing entrepreneurs or individuals receiving welfare payments to set-up an enterprise, the TOZO is an emergency measure to help provide rapid financial support to enterprises. The TOZO measure is registered as a type of welfare payment within the Bbz for administrative ease and efficiency (this way a new system of screening and delivery did not need to be set up). The access to TOZO financing is easier than with the Bbz, certain criteria were removed, including the check of partner earnings for instance. The application for TOZO financing is also made quicker, taking up to 4 weeks instead of the usual 13 weeks.\r\r",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "Since the outbreak of the Corona crisis, the government has had regular and close consultation with the social partners. Together the national level social partners and the government arrived at the first and second packages of emergency measures, announced 17 March and 20 May respectively.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-12_761.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "696",
+                    "sources::title": "Tijdelijke Overbruggingsregeling Zelfstandige Ondernemers (Tozo",
+                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/overzicht-financiele-regelingen/tozo",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "697",
+                    "sources::title": "Vragen over de Tijdelijke overbruggingsregeling zelfstandig ondernemers (Tozo",
+                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/overzicht-financiele-regelingen/tozo .",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "703",
+                    "sources::title": "Tijdelijke overbruggingsregeling zelfstandig ondernemers (Tozo), ",
+                    "sources::url": "https://www.divosa.nl/onderwerpen/tijdelijke-overbruggingsregeling-zelfstandig-ondernemers-tozo ",
+                    "sources::d_date": "04/21/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1254",
+                    "sources::title": "Visual noodpakket Tozo 2",
+                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/documenten/publicaties/2020/05/26/visual-noodpakket-tozo-2",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "185",
+                    "updates::d_date": "07/13/2020",
+                    "updates::description": "The measure has been extended and the extension is called Tozo 2.0. Tozo 2.0 is the 4 month extension of the original Tozo measure. The Tozo 2.0 income support only applies to the months of June to September.  If an entrepreneur applied for income support under Tozo and wishes to apply for Tozo 2, they can extend the support.  The requirements for eligibility under Tozo relation to Tozo 2 are mostly the same.  ",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "671",
+        "modId": "83"
+    },
+    {
+        "fieldData": {
+            "title": "Right to delay tax payments for entrepreneurs",
+            "title_nationalLanguage": "Versoepeling uitstel van betaling belasting en verlaging boetes",
+            "d_startDate": "03/17/2020",
+            "d_endDate": "10/01/2020",
+            "calc_country": "Netherlands",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "NL-2020-12/762",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/21/2020",
+            "calc_lastUpdate": "08/07/2020",
+            "descriptionBackgroundInfo": "This measure was proposed by the Ministry of Finance and the Dutch Tax Authority. It has been introduced as an emergency measure specifically to combat or cushion the effects of the COVID-19 crisis. The aim is to improve liquidity of the enterprises and self-employed. The ultimate aim is to keep the economy functioning (including the financial flow) until the pandemic is under control.\rThis was part of the package of emergency measures to deal with the coronavirus.",
+            "descriptionContentOfMeasure": "The Dutch Tax Authority is allowing businesses and self-employed people to apply for a delay of their income tax payments for 3 months. It is also possible to request a change in your tax liability in anticipation of lower income (this will still have to be corrected at the end of the year). This applies to: income tax, income-related contribution to the health insurance, corporation tax, sales tax (VAT), insurance tax, gambling tax, landlord levy, environmental taxes, oil, alcohol or tobacco tax, consumption tax . \rFurthermore, the usual administrative fee for late delivery of tax declarations has been lowered from its usual 4% to 0.01%.",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "Since the outbreak of the Corona crisis, the government has had regular and close consultation with the social partners. Together the national level social partners and the government arrived at the first and second packages of emergency measures, announced March 17th and May 20th respectively.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-12_762.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "698",
+                    "sources::title": "Betalingsproblemen door coronavirus? De Belastingdienst neemt maatregelen om ondernemers (inclusief zzp\u2019ers) te helpen",
+                    "sources::url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/berichten/nieuws/uitstel-betaling-gevolgen-coronavirus",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1255",
+                    "sources::title": "Noodpakket 2.0: overzicht maatregelen tweede steunpakket",
+                    "sources::url": "https://www.pwc.nl/nl/themas/covid-19/covid-19-helpdesk/noodpakket-2-0.html",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "188",
+                    "updates::d_date": "05/20/2020",
+                    "updates::description": "With the emergency measures packet 2.0 (from 20 May 2020), the possibility for enterprises to get a delay for their tax payment was extended till 1 October 2020. On the first request, delay of tax payment will still be for a period of three months.\r \rOther tax payment delays have also received the possibility of extension and requests for this can be made by entrepreneurs until mid-June.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "672",
+        "modId": "80"
     },
     {
         "fieldData": {
