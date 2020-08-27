@@ -54015,5 +54015,277 @@
         },
         "recordId": "942",
         "modId": "18"
+    },
+    {
+        "fieldData": {
+            "title": "Measures for tourism and hospitality ",
+            "title_nationalLanguage": "Mjere za turizam i ugostiteljstvo ",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "03/30/2021",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "HR-2020-24/1045",
+            "dateType": "Temporary",
+            "calc_creationDay": "08/26/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "Croatia is highly dependable on tourism, which represent around 18-20% of its GDP. Therefore, the consequences of the COVID-19 on Croatian economy should be seen primarily through this economic sector and its spill-over effects on the whole economy. As the share of exports in Croatia's GDP, primarily due to positive trends in tourism, has increased over the last 10 years, so its GDP has become increasingly sensitive to changes in exports. Negative factors, as a sudden decrease in exports, due to an exogenous event like the COVID-19, could have a very fast adverse result in significant GDP decline. Tourism is very sensitive to safety and health because if tourists do not feel safe, they do not travel. Moreover, the tourist sector is experiencing growing recruitment problems. Waiters, chefs, cleaners, and helpers in offices, hotels, and other establishments are needed, but due to the work\u2019s seasonal nature and limited employment possibilities out of season, young people are not willing to enroll in educational programs for these occupations. Further, there is a widespread lack of bakers, pastry-cooks, and confectionery makers. ",
+            "descriptionContentOfMeasure": "Representative trade unions, the Tourism and Services Trade Union of Croatia and Trade Union of Istria, Kvarner and Dalmatia on workers\u2019 side, and Croatian Employers\u2019 Association , Catering and Tourism Association, on employers\u2019 side, agreed on 25 March 2020 to suspend the Collective Agreement of Hospitality until the decision of the competent government bodies to terminate outstanding COVID-19 pandemic measures. The main goal is to aid and preserve skilled labour force in the sector, which is essential for the satisfaction of guests. The parties concluded on 8 June 2020, a new agreement that temporary postpones the increase in the level of the minimum and other wages. The parties further agreed that during the COVID-19 pandemic, the worker who is temporary not working according to the employer\u2019s decision, is entitled to wage compensation in the amount of at least 50% of his or her basic wage. If the mentioned amount will be lower than the amount of minimal wage, stipulated by the Decree on minimal wage, the worker is eligible on the wage equal to the minimal wage. All other stipulations of the Collective agreement stay on force. Trade Unions accepted the Agreement fully aware that this is the case of special circumstances that employers could not expect or prevent and therefore they are not responsible for them. ",
+            "descriptionUseOfMeasure": "The touristic results in 2020 are much better that expected with around 75% of incoming foreign tourists in comparison with the situation in 2019. However, there is no guarantee for 2021 and therefore such measures can be also applied in the nearly future.  ",
+            "descriptionInvolvementOfSocialPartners": "Social partners agreed on the content of the new agreement that temporary postpones the increase in the level of the minimum and other wages. The agreement also stipulates the amount of the wage compensation for the worker that is temporary not working according to the employer\u2019s decision",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-24_1045.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1307",
+                    "sources::title": "Sporazum",
+                    "sources::url": "http://www.stuh.hr/",
+                    "sources::d_date": "06/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "955",
+        "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "A shortened weekly working time was introduced in Lipik Glas  ",
+            "title_nationalLanguage": "Skra\u0107eno radno vrijeme uvedeno u Lipik Glas ",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Working time flexibility",
+            "calc_identifier": "HR-2020-27/1046",
+            "dateType": "Temporary",
+            "calc_creationDay": "08/26/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "Croatian company Lipik Glas has produced sets of windscreens which were installed in London taxis. The London taxi company LTI, owned by Chinese company Geely, had begun changing its traditional and famous London taxis, and all windshields on the new cars were produced in Lipik. The company Lipik Glas has already produced windscreens for some very exclusive auto brands, like Aston Martin, Alfa Romeo, Bentley, Ferrari, McLaren and Spyker. The company was very successful and employed more than 200 workers. However, due to the COVID-19 pandemic, the company faced serious financial problems and one of the possibilities was to introduce a shortened weekly working time. ",
+            "descriptionContentOfMeasure": "According to the national program for the introduction of shortened working time, financed from EU SHARE project, the Autonomous Trade Union in Power Industry, Chemistry and Non-metal Industry of Croatia and the management board of Lipik Glas signed an Agreement on a temporary shortened working time. According to the Agreement, among others, weekly working hours by particular phases of the production and departments, depending on the types and quantity of working tasks are defined. On changes of agreed working time, there is a need to inform works council. Both sides hope that such document is an important step in preservation of the company and jobs. The Trade Union particularly expressed its satisfaction with the process of the company that employer presented the production plans and agreed that wages would not be lowered even if workers work shorter.",
+            "descriptionUseOfMeasure": "This is an important measure for the preservation of a successful company that faces problems outsides of its control.  The Trade Union is fully aware that when the complete car industry halts the production, neither the workers nor the management can be blamed. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners were directly included in designing, implementing and monitoring the measure according to the demands by social partner organisations. The mentioned Agreement was used as a blueprint for some other agreements that the Autonomous Trade Union in Power Industry, Chemistry and Non-metal Industry of Croatia signed with management in other companies in the sector, like companies Lipovica, Saponija and Inkerporboard. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-27_1046.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1308",
+                    "sources::title": "Subvencije za kra\u0107i radni tjedan zatra\u017eene za samo 25.000 radnika 2000 kuna potpore mjese\u010dno po radniku davat \u0107e se tvrtkama do kraja godine",
+                    "sources::url": "https://www.vecernji.hr/vijesti/subvencije-za-kraci-radni-tjedan-zatrazene-za-samo-25-000-radnika-1419276 ",
+                    "sources::d_date": "07/24/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1309",
+                    "sources::title": "Skra\u0107ivanje radnog vremena je dobrodo\u0161la mjera",
+                    "sources::url": "https://www.ekn.hr/hrvatski/clanak_4/skracivanje-radnog-vremena-je-dobrodosla-mjera_156/",
+                    "sources::d_date": "08/13/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1310",
+                    "sources::title": "Potpora za o\u010duvanje radnih mjesta - skra\u0107ivanje radnoga vremena: Pla\u0107a i materijalna prava kao da radno vrijeme nije privremeno skra\u0107eno",
+                    "sources::url": "http://sssh.hr/hr/dokumenti/publikacije/sindikalna-akcija-18",
+                    "sources::d_date": "07/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2778",
+                    "regions::countryCode": "HR",
+                    "regions::level": 3,
+                    "regions::name": "Po\u017ee\u0161ko-slavonska \u017eupanija",
+                    "regions::nutsCode": "HR049",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "956",
+        "modId": "20"
+    },
+    {
+        "fieldData": {
+            "title": "The Annex to the Collective Agreement for Croatian State Administration Employees ",
+            "title_nationalLanguage": "Dodatak Kolektivnom ugovoru za za dr\u017eavne slu\u017ebenike i namje\u0161tenike",
+            "d_startDate": "06/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Croatia",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Remuneration and rewards for workers in essential services",
+            "calc_identifier": "HR-2020-23/1047",
+            "dateType": "Temporary",
+            "calc_creationDay": "08/27/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "The government and representative Trade Unions of state administration employees agreed in 2019 on the base pay rise for two plus two percent that was to apply on 1 June 2020 and 1 October 2020. However, due to the COVID-19 crisis and its adverse economic and financial consequences, it was obvious that such promises would not be possible to realize. ",
+            "descriptionContentOfMeasure": "After four meetings with the representative Trade Unions of state administration employees, the Minister of Labour and Pension System and Trade Unions (the Police Union of Croatia, the Trade Union of Interior Ministry Employees and the Local and State Administration Employees' Trade Union) signed an Annex to the Basic collective agreement for state administration employees. Later the same annex was signed with Trade Unions of Public Servants. Both documents envisage the deferral of the promised wage increase. Therefore, the base amount for the calculation of salaries in 2020 will stay HRK 5,8009.79 (\u20ac774,64), while from 1 January 2021 it will be HRK 6.044,51 (\u20ac805,93). ",
+            "descriptionUseOfMeasure": "During 2020 the holiday bonuses will be paid out as in previous years, while the jubilee awards will receive all employees that are eligible in 2020. Discussion regarding the Christmas bonuses will take place during the preparation of the State budget for 2021. Trade Unions are generally satisfied with the achieved negotiation and Annexes because Unions are fully adverse of a dire situation in economy and public finance. The Unions intend to discuss with the government all the problems in state and local administration services, not only the low salaries but primarily working conditions, material rights and ways of improving the status of state and local administration employees. They do not want to negotiate only about the suspension of the base pay increase and Christmas bonuses because the problems in state and local administration are much deeper.",
+            "descriptionInvolvementOfSocialPartners": "The Annex has been signed by three representative Trade Unions: the Police Union of Croatia, the Trade Union of Interior Ministry Employees and the Local and State Administration Employees' Trade Union. The Trade Unions began the initiative with the intention to be active stakeholders in the process so as to meet their obligations towards trade union members. According to their opinion, this is damage control and the Trade Unions did not wish to leave it up to a government to make unilaterally some reductions in employees\u2019 rights. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-23_1047.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1312",
+                    "sources::title": "Potpisan Dodatak III. Kolektivnom ugovoru za dr\u017eavne slu\u017ebenike i namje\u0161tenike",
+                    "sources::url": "https://www.sdlsn.hr/potpisan-dodatak-iii-kolektivnom-ugovoru-za-drzavne-sluzbenike-i-namjestenike/",
+                    "sources::d_date": "06/03/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1313",
+                    "sources::title": "Potpisan dodatak kolektivnom ugovoru s javnim slu\u017ebama, dodatak dva parafirali i dr\u017eavni slu\u017ebenici i namje\u0161tenici",
+                    "sources::url": "https://slobodnadalmacija.hr/vijesti/hrvatska/potpisan-dodatak-kolektivnom-ugovoru-s-javnim-sluzbama-dodatak-dva-parafirali-i-drzavni-sluzbenici-i-namjestenici-1023689",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1314",
+                    "sources::title": "Dodatak III. Kolektivnom ugovoru za dr\u017eavne slu\u017ebenike i namje\u0161tenike",
+                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_06_66_1335.html",
+                    "sources::d_date": "06/05/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "6",
+                    "actors::name": "Other social actors (e.g. NGOs)",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "114",
+                    "sectors::code": "O84",
+                    "sectors::name": "Public administration and defence; compulsory social security",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "957",
+        "modId": "17"
     }
 ]
