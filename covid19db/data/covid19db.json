@@ -54018,6 +54018,400 @@
     },
     {
         "fieldData": {
+            "title": "Agreement between Air Malta and Engineers Union",
+            "title_nationalLanguage": "",
+            "d_startDate": "04/08/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Wage flexibility ",
+            "calc_identifier": "MT-2020-15/1033",
+            "dateType": "Open ended",
+            "calc_creationDay": "08/10/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "The COVID-19 pandemic hit airlines hard, with Air Malta no exception. The relevant Minister stated that whereas Air Malta would usually have around 20 flights a day, it was down to two flights a day. Air Malta therefore initiated discussions with relevant Unions to save the airline and the workers. Discussions were initiated with unions representing engineers, cabin crew and the pilots (each group has its own union). New agreements were concluded with the former two groups, resulting in no jobs being lost. A new agreement, however, was not reached with the pilot's union, ALPA, resulting in sizeable redundancies",
+            "descriptionContentOfMeasure": "Air Malta offered unions representing various employee groups a minimum floor of the average pay of the last twelve months, capped at \u20ac1200, as basic monthly income, included if they were not needed to operate and stayed home. The offer also allowed employees to earn more than this figure; Air Malta stated \"if compensation for actual work performed would (in terms of the applicable collective agreement) result in compensation in excess of \u20ac1200 in a month, they would be remunerated on the basis of the actual amount due in terms of the applicable collective agreement for the work performed.\" The same offer was made to various groups of employees, including engineers, cabin crew and pilots, and covered both those on indefinite and definite contracts. Of the applicable groups, only the engineers thorough their union, the Association of Airline Engineers (AAE), accepted the offer. Air Malta consequently began redundancy procedures against cabin crew and pilots; following further discussions, cabin crew eventually also reached an agreement with Air Malta and redundancies were avoided. ",
+            "descriptionUseOfMeasure": "Few specifics are available about the measure. However, all engineer employees of Air Malta were retained. Numbers and futher information is not available. ",
+            "descriptionInvolvementOfSocialPartners": "As COVID-19 struck and Air Malta was practically grounded, the organisation called the unions representing its workers (including engineers, cabin crew and pilots) to either accept a much reduced minimum salary of \u20ac1,200 monthly, including if they were not required to operate, with employees able to earn more if work was performed as per their collective agreement, or to face redundancy. The engineer's union (following a vote by their members, of which 90% voted in favour) accepted the offer, the cabin crews' and pilots' unions rejected the offer. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-15_1033.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1293",
+                    "sources::title": "Statement by Air Malta on the COVID-19 crisis",
+                    "sources::url": "https://www.airmalta.com/information/about/news-overview/news-detail/032-2020-en",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "11",
+                    "occupations::name": "Science and engineering associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "5",
+                    "occupations::name": "Science and engineering professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "943",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
+            "title": "Malta Chamber Think Tank ",
+            "title_nationalLanguage": "",
+            "d_startDate": "04/06/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
+            "calc_identifier": "MT-2020-15/1034",
+            "dateType": "Open ended",
+            "calc_creationDay": "08/11/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "COVID-19 was very damaging to the Maltese economy. In response, the Malta Chamber of Commerce, Enterprise and Industry (Malta Chamber), an employers' association, established a thematic group aimed at thinking outside the box and considering multiple scenarios of how the post-pandemic landscape will look. The aim of the process is to develop strategic initiatives to address the possible new realities in the short, medial and long term.\r",
+            "descriptionContentOfMeasure": "The Think Tank draws on the experience and expertise of various members of the Malta Chamber and includes leading CEOs, entrepreneurs and academics. Its first assignment was to focus on a multi-disciplinary action plan on how Malta\u2019s economy could recover from COVID-19 and take advantage of the new norm. A series of round-tables were established to focus on specific fields of expertise, engaging the country\u2019s leaders and experts in areas of interest of the economy, namely Tourism, Hospitality, Construction, Financial Services, Education and Training, Retail, Importers, Exporters, Digital and Media, Technology, Manufacturing, Transport and Logistics. The preliminary findings of the Think Tank were presented to the Cabinet of Ministers on the 11 August 2020. Amongst the proposal made to the government were those to improve good governance, government assistance, sustainability, quality, and a series of sector-specific recommendations. ",
+            "descriptionUseOfMeasure": "The first suggestions that emerged from this Think Tank were presented to Government in August 2020.  ",
+            "descriptionInvolvementOfSocialPartners": "The measure was developed and implemented by the Malta Chamber, an employers association. The Think Tank does not appear to bring any other social partners other than members of the Malta Chamber into the fold. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-15_1034.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1294",
+                    "sources::title": "Cabinet asks for briefing on chamber proposals for economic sustainability ",
+                    "sources::url": "https://www.businesstoday.com.mt/business/business/1029/cabinet_asks_for_briefing_on_chamber_proposals_for_economic_sustainability#.XzK6Mq_is2w",
+                    "sources::d_date": "08/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "944",
+        "modId": "11"
+    },
+    {
+        "fieldData": {
+            "title": "Information for members of employer associations ",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "MT-2020-18/1035",
+            "dateType": "Open ended",
+            "calc_creationDay": "08/11/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a negative impact upon many enterprises in Malta. In order to support such organisations, the major employer associations in Malta have been providing their members with information and support regarding applicable government measures. Information was also provided on employer relations, obtained through the Department of Industrial and Employment Relations (DIER).  \r\r",
+            "descriptionContentOfMeasure": "Information is provided through the employer associations' websites regarding government measures available to support business, how to apply for them, as well as information regarding other topics of relevance. Examples of such topics include employer rights and employee rights. \r\rAmongst the associations providing such information, the Malta Employers Association (MEA) is providing information through its website, whilst a COVID-19 booklet for employers has also been published. The Malta Chamber of SMEs (formerly known as the GRTU) also offers information over its website via a dedicated section. The Malta Chamber of Commerce, Enterprise and Industry (also known as the Malta Chamber) provide an information booklet through Trade Malta - a public-private partnership between themselves and the Government of Malta. The aforementioned associations also provide information through other means such as helpdesks and information sessions. ",
+            "descriptionUseOfMeasure": "No information is available. ",
+            "descriptionInvolvementOfSocialPartners": "The measures were all initiated by the employer associations themselves, and thus were designed, implemented and monitored solely by the employer associations. The only exception is that where the Malta Chamber is collaborating with the Government via Trade Malta. The level of interaction in this case is unclear. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-18_1035.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1295",
+                    "sources::title": "SME Chamber - Covid",
+                    "sources::url": "http://www.smechamber.mt/covid",
+                    "sources::d_date": "08/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1296",
+                    "sources::title": "MEA - COVID-19 employers handbook",
+                    "sources::url": "https://www.maltaemployers.com/en/covid-19-employers-handbook",
+                    "sources::d_date": "07/31/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "945",
+        "modId": "8"
+    },
+    {
+        "fieldData": {
+            "title": "The List of fundamental rights of employees during the Covid-19  pandemic",
+            "title_nationalLanguage": "Listina z\u00e1kladn\u00fdch pr\u00e1v zamestnanca po\u010das pand\u00e9mie koronav\u00edrusu",
+            "d_startDate": "04/08/2020",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "SK-2020-15/1036",
+            "dateType": "Temporary",
+            "calc_creationDay": "08/12/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "In relation to the Covid-19 pandemic, the government adopted several measures to alleviate its impact on employers, employees as well as citizens.  Several measures were implemented via changes in the Labour Code, Act on Social insurance and other labour related legislation. They also had impact on employment and working conditions of employees.  It was not easy for employees to familiarise with many changes and expected some support and instructions from trade unions. ",
+            "descriptionContentOfMeasure": "To assist employees affected by the Covid-19 pandemic, trade union OZ Kovo prepared the List of fundamental rights of employees. It is a guiding document, which consists of answers to 11 frequently asked questions of employees facing to problems in their employment during the pandemic crisis in Slovakia. The List provides concrete instructions based on respective labour and social legislation for employees on their rights and entitlements during the pandemic crisis. Most questions concern the rights of employers to change employment conditions of employees concerning e.g. paid holiday, dismissals, changes in working time schedule and job description, use of home work. Other questions concern employees\u2019 entitlements, e.g. to wages, use of pandemic nursing.        ",
+            "descriptionUseOfMeasure": "The List of fundamental rights of employees is publicly available on the webpage of the Metal Trade Union Association OZ Kovo. Any employee, regardless of his or her membership in OZ Kovo, or in other trade union can use it. Since 8 April 2020, employees can use the instructions of trade unions to respond properly to concrete challenges affecting their employment conditions and wages in practice. ",
+            "descriptionInvolvementOfSocialPartners": "This is an initiative of the Trade Union Association OZ Kovo, which prepared the List of fundamental rights of employees by its own experts. OZ Kovo responded to the demand of trade unionists for better guidance in orientation in actual changes in the labour and social legislation. OZ Kovo published the List on 8 April 2020, about four weeks after the Covid-19 pandemic was officially declared in Slovakia. \t\t\t\t\t\t\t\t\t\t\t\t\t",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-15_1036.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1304",
+                    "sources::title": "Listina z\u00e1kladn\u00fdch pr\u00e1v zamestnanca po\u010das pand\u00e9mie koronav\u00edrusu",
+                    "sources::url": "https://www.ozkovo.sk/wp-content/uploads/2020/04/Listina-z%C3%A1kladn%C3%BDch-pr%C3%A1v-zamestnanca-po%C4%8Das-koronavirusu_08.04.2020.pdf",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "31",
+                    "occupations::name": "Food processing, wood working, garment and other craft and related trades workers",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "946",
+        "modId": "30"
+    },
+    {
+        "fieldData": {
+            "title": "Access to Employment ",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/21/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "MT-2020-21/1044",
+            "dateType": "Open ended",
+            "calc_creationDay": "08/24/2020",
+            "calc_lastUpdate": "08/27/2020",
+            "descriptionBackgroundInfo": "The Access to Employment (A2E) Scheme is a Jobsplus Scheme (The Malta Government Employment and Training Agency) to foster recruitment of the more challenged amongst jobseekers and inactive persons. These include individuals aged 24 or more who have been inactive or unemployed for more than six months, persons over 50 years who do not have a job, and any person who is a registered disabled person under national law and is not in full-time employment. The scheme had originally been in existence between 2015-2019. It was re-opened for a second call in 2020 with more advantageous terms, and some terms and conditions of this scheme needed to be revisited in view of COVID-19. ",
+            "descriptionContentOfMeasure": "The measure aims to support access of individuals including: those who are aged 24 or over who have been unemployed or inactive for the previous 6 months; those unemployed for 12 months and during which they participated in traineeship with the applicant undertaking; those aged 24 and over who have not attained an upper secondary educational or vocational qualification (ISCED 3) and do not have a job; those older than 50 and do not have a job; or any person who is a registered disabled person under national law and is not in full-time employment, amongst others.\r\rThe Scheme is demand driven and grants are awarded on a first-come first-served basis, subject to the annual ceilings and total budget. The total available budget for the A2E is \u20ac12 million, with an indicative annual calendar year ceilings of around \u20ac2.4 million. \r\rSubsidies provided vary depending on the classification of the employee. Compared to the 2015-2019 scheme, the 2020 scheme provides greater grants for all categories of recruits. During the 2015-2019 call, employers were eligible to receive a subsidy of \u20ac85 per week per new recruit engaged, for a period of 26 weeks, 52 weeks or 104 weeks, depending on the target group. In the case of registered disabled persons, a subsidy of \u20ac125 per week for a maximum of 156 weeks was provided. In the case of the 2020 subsidy, the amounts provided are \u20ac105 and \u20ac155 per week, respectively. \r\rThe second offering of this scheme coincided with COVID-19, consequently Jobsplus clarified that only soft copy applications submitted via email would be accepted, that the scheme could not be used to re-hire those terminated due to redundancies, and that employers could not continue to claim for this subsidy if wages were no longer being incurred due to employees receiving another COVID-19 related benefit (for example the COVID-19 \u2013 Person with Disability Benefit or the COVID-19 wage subsidy, both offered by the Government of Malta to prevent redundancies). However, it was clarified that employers could apply to reduce the hours of work of employees within this scheme (generally from 40 hours to 20 hours per week). For this to occur however, employers are to provide a copy of their correspondence with the Director of Employment and Industrial Relations, following which, the A2E will assess the request on a case by case basis and will inform the employer accordingly.\r",
+            "descriptionUseOfMeasure": "Between 2015 and 2019, 778 unique employers applied for the funding of 2,029 participants. 1,310 of these participants engaged with 573 unique employers, remained active in the scheme with a total of \u20ac7.9 million being committed. Jobsplus paid a total of \u20ac5.6 million to beneficiaries till the end of 2019. No statistics are available for the 2020 second call. ",
+            "descriptionInvolvementOfSocialPartners": "The measure was developed by Jobsplus, a government employment and training agency. Social partners are represented on the Jobsplus' board, which includes representatives of Employer Associations, Unions, Government, and also the Commissioner for the Rights of Persons with a Disability. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-21_1044.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1306",
+                    "sources::title": "Access to Employment (A2E) Scheme \rAccess to Employment (A2E) Scheme",
+                    "sources::url": "https://jobsplus.gov.mt/schemes-jobseekers/a2e-scheme",
+                    "sources::d_date": "07/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "37",
+                    "targetGroups::name": "Older citizens",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "43",
+                    "targetGroups::name": "Disabled",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "67",
+                    "targetGroups::name": "Older people in employment (aged 55+)",
+                    "modId": "9"
+                },
+                {
+                    "recordId": "72",
+                    "targetGroups::name": "Disabled workers",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "954",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
             "title": "Measures for tourism and hospitality ",
             "title_nationalLanguage": "Mjere za turizam i ugostiteljstvo ",
             "d_startDate": "06/08/2020",
