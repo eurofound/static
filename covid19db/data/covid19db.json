@@ -28205,92 +28205,6 @@
     },
     {
         "fieldData": {
-            "title": "Increased access to unemployment benefits and sickness benefits",
-            "title_nationalLanguage": "\u00d8get adgang til dagpenge og sygedagpenge",
-            "d_startDate": "03/01/2020",
-            "d_endDate": "06/09/2020",
-            "calc_country": "Denmark",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
-            "calc_identifier": "DK-2020-10/634",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/15/2020",
-            "calc_lastUpdate": "07/23/2020",
-            "descriptionBackgroundInfo": "Increased access to unemployment benefits and sickness benefits due to COVID-19: In order to mitigate the negative consequences that the spread of COVID-19 can have on unemployed and sick pay recipients, the government and all the parties of the Folketing agree to provide easier conditions for unemployed and sick pay recipients in the coming temporary period. \r\rThe legal references are \"LOV nr 274 af 26/03/2020\" and \"LOV nr 275 af 26/03/2020\". ",
-            "descriptionContentOfMeasure": "For unemployment benefit recipients: The period from 1 March to 31 May is not included in the unemployed seniority. It will be a condition that the members be a member of the a-box during the period.\r\rFor sickness benefit recipients: Persons who have received sickness benefit for more than 22 weeks during the period from March 9 to June 9, in the nine preceding calendar months, i.e. when the reassessment date and cannot extend the payment of sickness benefit in accordance with the existing extension rules, the right to sickness benefit will be extended for three months. \r\rSuspension of G-days: Employer's payment of unemployment benefit (G-days) to employees who are covered by a division of work or returned home is suspended. ",
-            "descriptionUseOfMeasure": "Unknown",
-            "descriptionInvolvementOfSocialPartners": "No involvement",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-10_634.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "515",
-                    "sources::title": "LOV nr 275 af 26/03/2020",
-                    "sources::url": "https://www.retsinformation.dk/Forms/R0710.aspx?id=213710",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "516",
-                    "sources::title": "LOV nr 274 af 26/03/2020",
-                    "sources::url": "https://www.retsinformation.dk/Forms/R0710.aspx?id=213709",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "517",
-                    "sources::title": "Besk\u00e6ftigelsesministeriet",
-                    "sources::url": "https://bm.dk/arbejdsomraader/aktuelle-fokusomraader/covid-19/",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "4"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "159",
-                    "updates::d_date": "07/10/2020",
-                    "updates::description": "Due to the Corona situation, the Danish Parliament has decided to extend the temporary period by one month until 30 June 2020.",
-                    "modId": "2"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "525",
-        "modId": "83"
-    },
-    {
-        "fieldData": {
             "title": "Credit guarantee for SMEs",
             "title_nationalLanguage": "Fondo centrale di garanzia PMI",
             "d_startDate": "04/09/2020",
@@ -52951,6 +52865,81 @@
     },
     {
         "fieldData": {
+            "title": "Grant support for micro and small enterprises",
+            "title_nationalLanguage": "\u0411\u0435\u0437\u0432\u044a\u0437\u043c\u0435\u0437\u0434\u043d\u0430 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0430 \u0437\u0430 \u043c\u0438\u043a\u0440\u043e \u0438 \u043c\u0430\u043b\u043a\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f",
+            "d_startDate": "05/12/2020",
+            "d_endDate": "",
+            "calc_country": "Bulgaria",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Mobilisation of a larger workforce",
+            "calc_identifier": "BG-2020-20/1006",
+            "dateType": "Open ended",
+            "calc_creationDay": "07/17/2020",
+            "calc_lastUpdate": "08/28/2020",
+            "descriptionBackgroundInfo": "Grant in the amount of between BGN 3,000 (\u20ac1,500) and BGN 10,000 (\u20ac5,000) for micro and small enterprises. Total budget is BGN 173 million (\u20ac86 million). \r\rEligibility criteria cover costs needed to overcome the shortage of funds or lack of liquidity resulting from the COVID-19 epidemic, as follows:\r* expenses for purchase of raw materials and consumables;\r* expenses for external services (including overheads);\r* staff costs (including remuneration costs and costs for social security and health contributions at the expense of the employer).",
+            "descriptionContentOfMeasure": "The measure is aimed at micro and small enterprises with a staff of up to 50 employees registered before 1 July 2019, from all economic sectors (except those falling within the scope of the Rural Development Programme), which registered a decrease of at least 20% in turnover for April 2020 compared to the monthly arithmetic average in 2019, with a minimum turnover of candidates for 2019 of BGN 30,000 (\u20ac15,338). \r\rThe measure includes:\r1) 100% grant support with a minimum aid amount of BGN 3,000 (\u20ac1,533) and a maximum of BGN 10,000 (\u20ac5,112).\r2) The grant requested by the applicant may not exceed 10% of the turnover for 2019.\r\rThe projects will be submitted and evaluated electronically through the Information System for Management and Monitoring of EU Funds in Bulgaria (UMIS 2020). The procedure is open for application.",
+            "descriptionUseOfMeasure": "The purpose of the measure is to support employment in micro, small and medium-sized enterprises, as well as to help enterprises themselves to avoid bankruptcy. In Bulgaria, over 90% of enterprises are exactly like that, which makes this measure of structural importance for the whole state of the economy.\r\r\rThe total grants paid so far to Bulgarian companies amount to \u20ac22,190,000.\r\rAs of 7 August 2020, a total of 7 388 project proposals have been approved for funding under the procedure, for which the value of the provided grant amounts to \u20ac31,530,000. The total number of submitted project proposals under the procedure is 27,623 so far.",
+            "descriptionInvolvementOfSocialPartners": "The social partners were not involved in the preparation of the measure, but all unanimously supported it and identified it as extremely important. The social partners assisted the executive in facilitating the implementation of the measure. The main dialogue was conducted with business representatives as direct beneficiaries of the grants. The unions had a consultative role.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-20_1006.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1215",
+                    "sources::title": "BG16RFOP002-2.073 \u201e\u041f\u043e\u0434\u043a\u0440\u0435\u043f\u0430 \u043d\u0430 \u043c\u0438\u043a\u0440\u043e \u0438 \u043c\u0430\u043b\u043a\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f \u0437\u0430 \u043f\u0440\u0435\u043e\u0434\u043e\u043b\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0442\u0435 \u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u044f \u043e\u0442 \u043f\u0430\u043d\u0434\u0435\u043c\u0438\u044f\u0442\u0430 COVID-19",
+                    "sources::url": "https://opic.bg/procedure/bg16rfop002-2073-podkrepa-na-mikro-i-malki-predpriyatiya-za-preodolyavane-na-ikonomicheskite-posledstviya-ot-pandemiyata-covid-19",
+                    "sources::d_date": "05/12/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "916",
+        "modId": "28"
+    },
+    {
+        "fieldData": {
             "title": "Temporary Wage Subsidy Childcare Scheme (TWSCS)",
             "title_nationalLanguage": "",
             "d_startDate": "04/21/2020",
@@ -54319,6 +54308,96 @@
         },
         "recordId": "946",
         "modId": "30"
+    },
+    {
+        "fieldData": {
+            "title": "Start loans for the cultural and creative industries",
+            "title_nationalLanguage": "Cultuur Opstart Lening",
+            "d_startDate": "06/01/2020",
+            "d_endDate": "",
+            "calc_country": "Netherlands",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "NL-2020-23/1042",
+            "dateType": "Temporary",
+            "calc_creationDay": "08/17/2020",
+            "calc_lastUpdate": "08/28/2020",
+            "descriptionBackgroundInfo": "The Dutch government presented a package of emergency measures to support businesses and workers during the corona crisis. The cultural and creative sector appears especially badly hit by the crisis and this has led to extra measures being taken. On 27 March, the Minister for Education, Culture and Science sent a letter to Parliament explaining the need for and content of the planned measures.\r\rFollowing this first letter on plans to initiate a package of measures, a few weeks later, the announcement was made (after lobbying form the cultural and creative sector), that more support was needed. The Minister for Education, Culture and science announced on 15 April  that more financing would be provided to the sector.  In April extra budget (\u20ac300 million) has been made available by the government to raise subsidies to the institutions crucial to the sector at national and regional level",
+            "descriptionContentOfMeasure": "This particular measure targets enterprises in the cultural and creative sectors who cannot make sufficient use of the generic governmental support measures. The loan is meant for the development of publically orientated productions, programme\u2019s, exhibitions, performances or projects. The loan can also be used in combination with a loan from a bank. The interest on the loan is 1% and can be paid back early (without any financial consequences attached).  \rThe government has made \u20ac30 million available to finance these loans. An institution may receive a minimum of \u20ac 10,000 to a maximum of \u20ac 500,000 per loan application. One institute can take out a maximum of two loans. ",
+            "descriptionUseOfMeasure": "No information yet.",
+            "descriptionInvolvementOfSocialPartners": "As with the Extra package of support measures for the cultural sector, the sector had lobbied for more support from the government, showing that their sector is being especially badly hit. Based on consultation and discussion with organisations form the sector and cultural funds, the government decided to add extra financial support to the existing emergency measures for the cultural and creative sectors.  ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-23_1042.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1302",
+                    "sources::title": "Rijksoverheid, (2020), Kamerbrief aanvullende ondersteuning culturele en creatieve sector\u2013 April 15th 2020",
+                    "sources::url": "https://www.rijksoverheid.nl/binaries/rijksoverheid/documenten/kamerstukken/2020/04/15/aanvullende-ondersteuning-culturele-en-creatieve-sector/aanvullende-ondersteuning-culturele-en-creatieve-sector.pdf",
+                    "sources::d_date": "08/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1303",
+                    "sources::title": "Rijksoverheid, (2020), Infographic aanvullende ondersteuning \u20ac 300 miljoen culturele en creatieve sector ",
+                    "sources::url": "https://www.rijksoverheid.nl/binaries/rijksoverheid/documenten/brochures/2020/05/27/infographic-aanvullende-ondersteuning-300-miljoen-culturele-en-creatieve-sector/300mln_aanvullend_cultuur_final_NKC.pdf",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "6",
+                    "actors::name": "Other social actors (e.g. NGOs)",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "123",
+                    "sectors::code": "R91",
+                    "sectors::name": "Libraries, archives, museums and other cultural activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "952",
+        "modId": "14"
     },
     {
         "fieldData": {
