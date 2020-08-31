@@ -5018,11 +5018,6 @@
             ],
             "funding": [
                 {
-                    "recordId": "3",
-                    "funding::name": "Employer",
-                    "modId": "0"
-                },
-                {
                     "recordId": "5",
                     "funding::name": "European Funds",
                     "modId": "0"
