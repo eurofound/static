@@ -11021,6 +11021,146 @@
     },
     {
         "fieldData": {
+            "title": "Extension of temporary unemployment due to force majeure",
+            "title_nationalLanguage": "Verruiming van de tijdelijke werkloosheid voor bedienden wegens overmacht",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BE-2020-11/380",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/08/2020",
+            "calc_lastUpdate": "09/02/2020",
+            "descriptionBackgroundInfo": "The measure was introduced due to the strong increase in requests for temporary unemployment (which normally can only be implemented under certain conditions). The measure alleviates pressure on the institutions that are tasked with organizing and distributing unemployment benefits, both the National Employment Office (NEO) and the trade unions (that also play an important role in paying out the unemployment benefits). The use of temporary unemployment means that the employers no longer have to pay the wages of their employees (the cost is transferred to the government through the unemployment benefit), thereby enabling them to reduce their costs and enhances their ability to better cope with the period of inactivity of the business.\r\rThe measures makes the procedure shorter and more simplified for employees in order to make sure that they receive their unemployment benefit as fast as possible.",
+            "descriptionContentOfMeasure": "From 13 March 2020, the notion of temporary unemployment due to force majeure will be flexibly applied by the NEO. All situations of temporary unemployment due to the corona virus can be considered as temporary unemployment due to force majeure, even if, for example, it is still possible to work on certain days.\r\rFor the duration of the restrictive measures (currently until 31 May 2020), the employer is no longer obliged to send notices of temporary unemployment for reasons of force majeure to the competent unemployment office of the NEO. The period may be extended until 30 June 2020 if the public health measures are extended or strengthened by the government.\r\rThe employee may use a simplified form to submit the application for benefits to the designated payment institution.\r\rFrom 01 February 2020 until 30 June 2020, the employee receives a benefit equal to 70% of his average capped salary (capped at \u20ac2,754.76 per month). \r\rThe employee who is made temporarily unemployed due to force majeure (reason \"coronavirus\") will receive a supplement of \u20ac5.63 per day on top of the unemployment benefit, from the NEO. A withholding tax on professional income of 26.75% is deducted from the benefit. \r",
+            "descriptionUseOfMeasure": "Approximately 1.2 million employees currently make use of the system of temporary unemployment out of an active population of less than 4 million.",
+            "descriptionInvolvementOfSocialPartners": "The National Labour Council provides advice and a collective agreement (147) has been signed which formalizes the measure until the 30 June.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Agreed (outcome)",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-11_380.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "248",
+                    "sources::title": "National Employment Office",
+                    "sources::url": "https://www.rva.be/nl/nieuws/tijdelijke-werkloosheid-ten-gevolge-van-het-uitbreken-van-het-coronavirus-covid-19-vereenvoudiging-van-de-procedure",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "250",
+                    "sources::title": "Federal Office for Employment, Labour and Social Dialogue",
+                    "sources::url": "https://werk.belgie.be/nl/nieuws/tijdelijke-werkloosheid-aanvraag-tot-erkenning-als-onderneming-moeilijkheden-niet-meer",
+                    "sources::d_date": "03/23/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "251",
+                    "sources::title": "De Tijd: Coronacrisis kost Belgische economie dit jaar 45 miljard euro'",
+                    "sources::url": "https://www.tijd.be/politiek-economie/belgie/algemeen/coronacrisis-kost-belgische-economie-dit-jaar-45-miljard-euro/10219587.html",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "257",
+                    "sources::title": "National Labour Council",
+                    "sources::url": "http://www.cnt-nar.be/CAO-ORIG/cao-147-(18.03.2020).pdf",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "783",
+                    "sources::title": "Vakbonden hekelen opnieuw misbruik tijdelijke werkloosheid bij ziekte",
+                    "sources::url": "https://www.hln.be/nieuws/binnenland/vakbonden-hekelen-opnieuw-misbruik-tijdelijke-werkloosheid-bij-ziekte~a09d134c/",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "784",
+                    "sources::title": "Misbruik van regelingen door werkgevers moet ophouden!",
+                    "sources::url": "https://www.hetacv.be/csc-west-henegouwen/2020/03/26/misbruik-van-regelingen-door-werkgevers-moet-ophouden!",
+                    "sources::d_date": "03/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1320",
+                    "sources::title": "Tijdelijk werkloos door corona: nieuwe regeling vanaf 1 septembe",
+                    "sources::url": "https://www.abvv.be/nieuws?p_p_id=101_INSTANCE_8Y463V3l8MDQ&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_101_INSTANCE_8Y463V3l8MDQ_advancedSearch=false&_101_INSTANCE_8Y463V3l8MDQ_delta=5&p_r_p_564233524_resetCur=false&_101_INSTANCE_8Y463V3l8MDQ_cur=5&_101_INSTANCE_8Y463V3l8MDQ__andOperator=tru",
+                    "sources::d_date": "08/28/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "59",
+                    "updates::d_date": "06/26/2020",
+                    "updates::description": "The measure has been extended until the 31 August 2020. ",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "240",
+                    "updates::d_date": "08/28/2020",
+                    "updates::description": "The system has been extended as well as adapted (starting September 2020). From that date, two systems will apply (one for companies or sectors that are considered to be very badly hit and one for companies that are less impacted but still require the measure):\r\r1. Companies that are 'particularly badly' affected by the corona crisis can continue to use the system of temporary unemployment due to force majeure by Corona until the end of this year. They must demonstrate that in the second quarter (April-May-June 2020), 20% of the total number of working days declared were days of temporary unemployment (force majeure due to Corona or economic unemployment). \r\r2. There are also sectors that have been recognised as 'particularly hardly hit'. The employer should do nothing for the taxi sector, the audiovisual sector, the hotel industry, entertainment companies, the socio-cultural sector, the tourist attractions sector. These are automatically recognised. \r\r3. For a number of sectors, the employer must file a declaration with the national unemployment offices and it only applies to certain activities (i.e. not automatically to all employees of the joint committee).  \r\r4. Other companies can make use of the classic systems of temporary unemployment that already existed before the corona crisis: 'temporary unemployment for reasons of force majeure' and 'temporary unemployment for economic reasons'. Each system has its own criteria and formalities which may also deviate from the arrangements for the corona crisis. For this group the 'normal' rules become applicable again.\r",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "271",
+        "modId": "108"
+    },
+    {
+        "fieldData": {
             "title": "Emergency aid for freelancers, micro-entrepreneurs and solo self-employed",
             "title_nationalLanguage": "Soforthilfe ",
             "d_startDate": "03/23/2020",
@@ -16791,6 +16931,103 @@
         },
         "recordId": "348",
         "modId": "92"
+    },
+    {
+        "fieldData": {
+            "title": "Replacement income for self-employed (bridging right)",
+            "title_nationalLanguage": "Vervangingsinkomen voor zelfstandigen (overbruggingsrecht)",
+            "d_startDate": "04/18/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "BE-2020-16/458",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "09/02/2020",
+            "descriptionBackgroundInfo": "In certain situations self-employed can qualify for the temporary COVID-19 bridging right:\r\r* If the federal government has obliged the self-employed to interrupt the activity in whole or in part they are immediately eligible for the bridging right. There is no minimum duration of interruption required. This concerns, for example, self-employed who are obliged to close their business (such as restaurants, caf\u00e9s and non-food businesses). Restaurants providing or delivering takeaway meals are also covered.\r\r* If the government has not obliged the self-employed to interrupt their activity partially or completely, but the self-employed is forced to interrupt their activity for a period of at least 7 consecutive calendar days as a result of the COVID-19 crisis, for example for self-isolation, a lack of raw materials or for various reasons of economic or organisational nature (linked to COVID-19), then they are also eligible for the bridging right.\r\rThis includes self-employed exercising a care profession such as physiotherapists, dentists and medical specialists.",
+            "descriptionContentOfMeasure": "Certain conditions apply in order to be able to benefit from the bridging right: \r\r* The person has to be self-employed as main profession (including helpers, assisting spouses in the maxi-status and (primo-starters), or self-employed as secondary profession with provisional social security contributions that are at least equal to the minimum contributions for self-employed persons in their main profession;\r* The person has to be self-employed and pay social security contributions in Belgium;\r* The person must not receive a replacement income.\r\rThe Corona bridging right amounts to (for March, April, May and June):\r\r* \u20ac1,291,69 without family responsibilities;\r* \u20ac1,614.10 with family responsibilities.\r\rIf granted, the bridging right for March will be paid at the beginning of April and for April, at the beginning of May.",
+            "descriptionUseOfMeasure": "It is unclear how many people are eligible and will make use of the support.",
+            "descriptionInvolvementOfSocialPartners": "It is to be expected that the social partners were at least informed about the measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-16_458.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "349",
+                    "sources::title": "1819 Brussels",
+                    "sources::url": "https://1819.brussels/nl/blog/faq-coronavirus-en-ondernemingen-antwoord-op-uw-meest-gestelde-vragen",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "930",
+                    "sources::title": "Overbruggingsrecht voor zelfstandigen (coronavirus",
+                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/overbruggingsrecht-voor-zelfstandigen-coronaviru",
+                    "sources::d_date": "06/25/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1321",
+                    "sources::title": "Verdere verlenging van 2 tijdelijke crisismaatregelen overbruggingsrecht",
+                    "sources::url": "https://www.groups.be/1_101528.ht",
+                    "sources::d_date": "08/06/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "61",
+                    "updates::d_date": "06/25/2020",
+                    "updates::description": "The federal government decided to extend the crisis bridging right for the months of July and August for self-employed workers who had to stop their activity for at least seven consecutive days because of the COVID-19 pandemic. The government may extend this measure until the end of December 2020 if it is deemed necessary. In addition, a separate bridging right will be provided to support the self-employed during their restart. This 'Relance payment' (restart bridging right) will be as high as the crisis bridging right. The Relance payment is currently still in the development stage.\r",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "242",
+                    "updates::d_date": "08/06/2020",
+                    "updates::description": "The measure has been extended (for those companies that are deemed eligible) until the 31st of December 2020, mainly companies that are related in one way or another to the events sector.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "349",
+        "modId": "94"
     },
     {
         "fieldData": {
@@ -52879,81 +53116,6 @@
     },
     {
         "fieldData": {
-            "title": "Grant support for micro and small enterprises",
-            "title_nationalLanguage": "\u0411\u0435\u0437\u0432\u044a\u0437\u043c\u0435\u0437\u0434\u043d\u0430 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0430 \u0437\u0430 \u043c\u0438\u043a\u0440\u043e \u0438 \u043c\u0430\u043b\u043a\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f",
-            "d_startDate": "05/12/2020",
-            "d_endDate": "",
-            "calc_country": "Bulgaria",
-            "calc_minorCategory": "Ensuring business continuity and support for essential services",
-            "calc_subMinorCategory": "Mobilisation of a larger workforce",
-            "calc_identifier": "BG-2020-20/1006",
-            "dateType": "Open ended",
-            "calc_creationDay": "07/17/2020",
-            "calc_lastUpdate": "08/28/2020",
-            "descriptionBackgroundInfo": "Grant in the amount of between BGN 3,000 (\u20ac1,500) and BGN 10,000 (\u20ac5,000) for micro and small enterprises. Total budget is BGN 173 million (\u20ac86 million). \r\rEligibility criteria cover costs needed to overcome the shortage of funds or lack of liquidity resulting from the COVID-19 epidemic, as follows:\r\r* expenses for purchase of raw materials and consumables;\r* expenses for external services (including overheads);\r* staff costs (including remuneration costs and costs for social security and health contributions at the expense of the employer).",
-            "descriptionContentOfMeasure": "The measure is aimed at micro and small enterprises with a staff of up to 50 employees registered before 1 July 2019, from all economic sectors (except those falling within the scope of the Rural Development Programme), which registered a decrease of at least 20% in turnover for April 2020 compared to the monthly arithmetic average in 2019, with a minimum turnover of candidates for 2019 of BGN 30,000 (\u20ac15,338). \r\rThe measure includes:\r\r1. 100% grant support with a minimum aid amount of BGN 3,000 (\u20ac1,533) and a maximum of BGN 10,000 (\u20ac5,112).\r2. The grant requested by the applicant may not exceed 10% of the turnover for 2019.\r\rThe projects will be submitted and evaluated electronically through the Information System for Management and Monitoring of EU Funds in Bulgaria (UMIS 2020). The procedure is open for application.",
-            "descriptionUseOfMeasure": "The purpose of the measure is to support employment in micro, small and medium-sized enterprises, as well as to help enterprises themselves to avoid bankruptcy. In Bulgaria, over 90% of enterprises are exactly like that, which makes this measure of structural importance for the whole state of the economy.\r\r\rThe total grants paid so far to Bulgarian companies amount to \u20ac22,190,000.\r\rAs of 7 August 2020, a total of 7 388 project proposals have been approved for funding under the procedure, for which the value of the provided grant amounts to \u20ac31,530,000. The total number of submitted project proposals under the procedure is 27,623 so far.",
-            "descriptionInvolvementOfSocialPartners": "The social partners were not involved in the preparation of the measure, but all unanimously supported it and identified it as extremely important. The social partners assisted the executive in facilitating the implementation of the measure. The main dialogue was conducted with business representatives as direct beneficiaries of the grants. The unions had a consultative role.",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-20_1006.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1215",
-                    "sources::title": "BG16RFOP002-2.073 \u201e\u041f\u043e\u0434\u043a\u0440\u0435\u043f\u0430 \u043d\u0430 \u043c\u0438\u043a\u0440\u043e \u0438 \u043c\u0430\u043b\u043a\u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u044f \u0437\u0430 \u043f\u0440\u0435\u043e\u0434\u043e\u043b\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0442\u0435 \u043f\u043e\u0441\u043b\u0435\u0434\u0441\u0442\u0432\u0438\u044f \u043e\u0442 \u043f\u0430\u043d\u0434\u0435\u043c\u0438\u044f\u0442\u0430 COVID-19",
-                    "sources::url": "https://opic.bg/procedure/bg16rfop002-2073-podkrepa-na-mikro-i-malki-predpriyatiya-za-preodolyavane-na-ikonomicheskite-posledstviya-ot-pandemiyata-covid-19",
-                    "sources::d_date": "05/12/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "916",
-        "modId": "30"
-    },
-    {
-        "fieldData": {
             "title": "Temporary Wage Subsidy Childcare Scheme (TWSCS)",
             "title_nationalLanguage": "",
             "d_startDate": "04/21/2020",
@@ -55391,5 +55553,64 @@
         },
         "recordId": "959",
         "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Social partner agreement on prevention and protection at the workplace",
+            "title_nationalLanguage": "Gedeeld besluit van de Hoge raad voor preventie and bescherming op het werk aangaande testen op de werkvloer. ",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "BE-2020-27/1051",
+            "dateType": "Open ended",
+            "calc_creationDay": "08/31/2020",
+            "calc_lastUpdate": "09/02/2020",
+            "descriptionBackgroundInfo": "The High Council for Prevention and Protection at Work is a consultative body in which social dialogue takes place on matters relating to well-being at work between social partners, experts, representatives of the administrations and, where appropriate, representatives of the policy unit of the competent minister. \rThis concrete statement was concluded by them in reaction to some cases whereby (often multinational) companies decided to test their employees during their work in order prevent eventual spreading of the virus. \rThe social partners within the High Council do not agree with these practices if not accompanied by the appropriate preventive measures.",
+            "descriptionContentOfMeasure": "Several reasons are addressed on the reasons the council is sceptical of such measures in the context of prevention:\r* The employee can not be forced to take a test, the tests always have to be taken on a voluntary basis. However, the social partners fear that even though there is no formal way of forcing an employee to take a test, employers can still pressure the employee in other ways to undertake a test;\r* With regard to privacy, such medical information can only be shared between the test agency involved and the employee in question. The employer has no right to acquire information of that nature;\r* The social partners do not believe that testing alone is sufficient to prevent the spreading of the virus in workplaces. Tests are not 100% conclusive in nature and there is still a relatively high degree of false negatives in test results. In addition, they only provide insight at that moment in time and not even in the near future, if the employee comes in contact with other people.\r* Finally the social partners plead for a better cooperation and implementation of medical services at work (like occupational physicians) within the general healthcare in the context of contact tracing. Currently, general healthcare and occupational healthcare cooperate too little, leading to inefficiency and errors.",
+            "descriptionUseOfMeasure": "The advice of the High Council on Prevention and Protection at Work is not that concrete that it can be quantified;  neither the advice against testing at the workplace, nor the necessity for improved communication and cooperation between the general medical field and occupational healthcare.",
+            "descriptionInvolvementOfSocialPartners": "The High Council on Prevention and Protection is an established organ that discusses all matters related to prevention and protection at the workplace. It provides advice to the minister of work and in general is required to provide advice at least every six months, in urgent matters this can be increased to every two months. \r\rThis statement is however more formulated as a reaction on recent events in some workplaces, which could lead to further debates on prevention and the role of testing at the workplace.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-27_1051.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1322",
+                    "sources::title": "https://www.hetacv.be/docs/default-source/acv-csc-docsitemap/3980-actualiteit-actualite/3980-nieuws-en-persberichten-actualites-et-communiques-de-presse/2020/20200701_verklaring_sopa_hr_testscovid19.pdf?sfvrsn=9c9a907b_",
+                    "sources::url": "https://www.hetacv.be/docs/default-source/acv-csc-docsitemap/3980-actualiteit-actualite/3980-nieuws-en-persberichten-actualites-et-communiques-de-presse/2020/20200701_verklaring_sopa_hr_testscovid19.pdf?sfvrsn=9c9a907b_",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "961",
+        "modId": "23"
     }
 ]
