@@ -55540,5 +55540,207 @@
         },
         "recordId": "969",
         "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Apprenticeship incentivisation scheme",
+            "title_nationalLanguage": "",
+            "d_startDate": "03/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
+            "calc_identifier": "IE-2020-10/1064",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/04/2020",
+            "calc_lastUpdate": "09/08/2020",
+            "descriptionBackgroundInfo": "The aim is to encourage employers to take on apprentices, as Ireland expands its apprenticeship system beyond the traditional craft construction and maintenance trades into a range of other manufacturing and service sector jobs.  \r\rIt is also designed to support employers to continue to recruit apprentices during the immediate COVID-19 period.\r\rThe scheme was launched in July as part of the new Government's Jobs Stimulus Programme, but it is open to all employers taking on apprentices between March 2020 to December 2020 inclusive.\r\r",
+            "descriptionContentOfMeasure": "Apprenticeship employers are eligible for a \u20ac3,000 payment for each new apprentice who is registered between March 1 and December 31, 2020. \r\r\u20ac2,000 per apprentice is payable at the point of registration, with a further \u20ac1,000 payable in the third quarter of 2021 for each eligible apprentice retained in employment.\r\rThe incentive support covers all 58 national apprenticeship programmes and will apply to any new apprenticeship programmes which are launched in 2020.  Three new apprenticeship programmes were launched in August 2020 alone.\r\rSOLAS, the statutory agency overseeing the apprenticeship system, is responsible for developing, delivering and administering the scheme.  Further information is available on www.apprenticeship.ie \r",
+            "descriptionUseOfMeasure": "Applications were received from employers representing 310 individual apprentices in the first three weeks after the scheme went live in August 2020, according to the Tanaiste (Deputy Prime Minister) and Minister for Enterprise, Trade and Employment, Leo Varadkar, on September 4.\r\rMore information on the level of uptake for the scheme should be available later in 2020.",
+            "descriptionInvolvementOfSocialPartners": "Social partners not involved - the measure is a Government-led initiative.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-10_1064.html",
+            "isOccupation": "Yes",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1335",
+                    "sources::title": "Government Press Release 4/9/2020",
+                    "sources::url": "https://dbei.gov.ie/en/News-And-Events/Department-News/2020/September/04092020.html",
+                    "sources::d_date": "09/04/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "68",
+                    "targetGroups::name": "Youth (18-25) in employment",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "27",
+                    "occupations::name": "Building and related trades workers, excluding electricians",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "13",
+                    "occupations::name": "Business and administration associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "34",
+                    "occupations::name": "Drivers and mobile plant operators",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "30",
+                    "occupations::name": "Electrical and electronic trades workers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "occupations::name": "Science and engineering associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "32",
+                    "occupations::name": "Stationary plant and machine operators",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "974",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
+            "title": "Collective agreement Volkswagen Slovensko Bratislava for 2019-2023",
+            "title_nationalLanguage": "Kolekt\u00edvna zmluva Volkswagen Slovensko Bratislava\u00a02019 \u2013 2023 ",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Changes of management approach",
+            "calc_identifier": "SK-2020-14/1067",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/07/2020",
+            "calc_lastUpdate": "09/08/2020",
+            "descriptionBackgroundInfo": "The automotive industry was seriously hit by the COVID-19 pandemic and all major car producers in Slovakia, including their suppliers, interrupted or reduced their production for several weeks. In relation to the\u00a0pandemic, the government adopted a package of measures to alleviate its impact on employers, employees as well as citizens. Affected employers in the automotive industry, needed to respond properly to maintaining employment and restart of production. One of them was Volkswagen Slovakia, Bratislava, where it was a threat of serious decline in usual income of employees.   ",
+            "descriptionContentOfMeasure": "During the standard operation, the remuneration system in VW Slovakia in Bratislava includes\u00a0 bonuses based on the defined production goals, e.g. bonuses for working groups make 5-10% over the wage tariffs. During the COVID-19 pandemic, working groups were unable to achieve the defined production goals after the restart of production, that would result in lower wages of employees. To stabilise the workforce, the management of Volkswagen Slovakia in Bratislava\u00a0and the Modern Trade Unions Volkswagen (MOV) agreed on exceptional\u00a0rules for the remuneration of employees\u00a0in the existing collective agreement. The bonuses of working groups will be 8% of wage tariffs regardless of the actual achievement of defined production goals.  ",
+            "descriptionUseOfMeasure": "The agreement between the MOV and\u00a0the management of Volkswagen Slovensko in Bratislava will be applied also to VW plants in Martin and Stupava. Agreed bonuses for working groups over employees\u00b4 wage tariffs will be paid during the 2nd and 3rd quarter of 2020. For instance, an employee performing a job classified in the middle of wage tariffs, would obtain a bonus over his or her wage tariff in amount of about \u20ac150-200 in average.   ",
+            "descriptionInvolvementOfSocialPartners": "This is a joint initiative of management of Volkswagen Slovakia in Bratislava and the local trade union\u00a0Modern\u00e9 odbory Volkswagen. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-14_1067.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1340",
+                    "sources::title": "Modern\u00e9 odbory Volkswagen",
+                    "sources::url": "https://moderneodbory.sk/ ",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3341",
+                    "regions::countryCode": "SK",
+                    "regions::level": 1,
+                    "regions::name": "EXTRA-REGIO NUTS 1",
+                    "regions::nutsCode": "SKZ",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "977",
+        "modId": "17"
     }
 ]
