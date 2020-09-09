@@ -33896,95 +33896,6 @@
     },
     {
         "fieldData": {
-            "title": "Working time banking period raised in the pandemic situation",
-            "title_nationalLanguage": "Munkaid\u0151keret hosszabb\u00edt\u00e1sa a vesz\u00e9lyhelyzetben",
-            "d_startDate": "04/25/2020",
-            "d_endDate": "",
-            "calc_country": "Hungary",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Working time flexibility",
-            "calc_identifier": "HU-2020-17/722",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/17/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "Under the government decree 104/2020 which contains details on decree 47/2020 laying out the main economic COVID-19 defence measures, employers can raise the period of allocated cumulative working time (working time banking) to 24 months during the period of the covid emergency. The measure was designed to make working arrangements more flexible for the employer to help protect jobs in companies where business has shut down or work reduced due to the pandemic.",
-            "descriptionContentOfMeasure": "The new measure states that the rules of the Labour Code capping the working time banking period at 4 months (or 6 months in some professions) will now not apply. The Labour Code (modified in late 2018) earlier allowed the working time banking frame to be raised to 36 months only by collective agreement. Now employers can use this method of working time arrangement for up to 24 months without signing/modifying a collective agreement. This means that an employer who is unable to give work to the employee during the pandemic period will continue to pay full wages, but can order extended working hours to make up for the loss when business returns to normal.",
-            "descriptionUseOfMeasure": "Trade unions widely protested this measure, saying that it could \u201ctie\u201d the employee to the company for two years, if work not available now would have to be made up for in coming years. The VDSZ union recommended using working time banking system until 31 December 2020 only. The union said the measure would not prevent any job cuts.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HU-2020-17_722.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "533",
-                    "sources::title": "Government decree 47/2020 (EN)",
-                    "sources::url": "",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "4"
-                },
-                {
-                    "recordId": "643",
-                    "sources::title": "Government decree 104/2020",
-                    "sources::url": "",
-                    "sources::d_date": "04/25/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "644",
-                    "sources::title": "Emergency state: deviating from Labour Code",
-                    "sources::url": "https://ado.hu/munkaugyek/veszelyhelyzet-csokkentett-munkaidos-foglalkoztatas-es-elteresek-a-munka-torvenykonyvetol",
-                    "sources::d_date": "04/14/2020",
-                    "modId": "2"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "3",
-                    "actors::name": "Trade unions",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "30",
-                    "targetGroups::name": "Employees in standard employment",
-                    "modId": "18"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "1",
-                    "funding::name": "Companies",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "632",
-        "modId": "74"
-    },
-    {
-        "fieldData": {
             "title": "Temporary prolongation of the payment period during layoff",
             "title_nationalLanguage": "Forlengelse av perioden med dagpenger under permittering",
             "d_startDate": "03/27/2020",
@@ -55527,5 +55438,543 @@
         },
         "recordId": "982",
         "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Hospitals: New collective agreement expands access to overtime",
+            "title_nationalLanguage": "Avtale om utvidede rammer for overtidsarbeid i sykehus i forbindelse med koronavirusepidemien",
+            "d_startDate": "03/15/2020",
+            "d_endDate": "09/13/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "NO-2020-12/1073",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/08/2020",
+            "calc_lastUpdate": "09/09/2020",
+            "descriptionBackgroundInfo": "To facilitate the adaption to crisis management during the COVID-19 crisis, the Employers\u2019 Association Spekter and the central organisations in the local commune sector (Unio, LO Stat, Akademikerne and YS Stat ) on 15 March made an agreement on working time. The measures were introduced to make it possible on short notice to increase staffing in hospitals and other associated institutions, and, for infection control reasons, to reduce the number of shifts and unnecessary movement of staff between different wards.",
+            "descriptionContentOfMeasure": "On 15 March, the Employers\u2019 Association Spekter and the central organisations in the hospital sector (Unio, LO Stat, Akademikerne and YS Stat) made an agreement on working time. The agreement was made pursuant to section 10-12 (4) in the Working Environment Act that gives larger trade unions right to enter into a collective agreement that deviates from the law's working hours provisions. \r\rThe collective agreement expanded the limits to overtime (from 10 to 20 hours per 7 days), and gave the employer the opportunity to averaging working hours. The limit of total working hours in any 24-hour period were raised from 10 to 16 hours. According to the agreement, employers are obliged to discuss the use of overtime with shop stewards before overtime work under the agreement is implemented. The agreement states that overtime cannot be imposed pursuant to the agreement when the extraordinary situation associated with coronavirus no longer exists. The validity period of the agreement was originally 26 weeks, and the agreement could be terminated with two month's notice from each of the parties.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The collective agreement on working time during the COVID-19 pandemic was negotiated by the parties, the Employers\u2019 Association Spekter and the central organisations in the hospital sector (Unio, LO Stat, Akademikerne and YS Stat), on initiative from the state and the social partners jointly, to facilitate crisis management. By taking such action, the social partners wanted to keep regulation of working time in a collective agreement and avoid state intervention.  ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-12_1073.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1349",
+                    "sources::title": "Central working time agreements entered into during the corona crisis",
+                    "sources::url": "https://www.fagforbundet.no/fagforeninger/oslo/nyheter/sentrale-arbeidstidsavtaler-inngatt-under-koronakrisen-149971/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "12",
+                    "occupations::name": "Health associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "occupations::name": "Health professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "118",
+                    "sectors::code": "Q86",
+                    "sectors::name": "Human health activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "983",
+        "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Municipalities: New collective agreement expands access to overtime",
+            "title_nationalLanguage": "Ny avtale utvider adgangen til overtid i kommunene",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "09/16/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "NO-2020-12/1074",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/08/2020",
+            "calc_lastUpdate": "09/09/2020",
+            "descriptionBackgroundInfo": "To facilitate the adaption to crisis management during the COVID-19 crisis, The Norwegian Association of Local and Regional Authorities (KS) and the central organisations in the local commune sector (Unio, LO Kommune, Akademikerne and YS ) on 18 March made an agreement on working time. The measures were introduced to make it possible on short notice to increase staffing in nursing homes and in home care, and, for infection control reasons, to reduce the number of shifts.",
+            "descriptionContentOfMeasure": "The agreement was made pursuant to section 10-12 (4) in the Working Environment Act that gives larger trade unions right to enter into a collective agreement that deviates from the law's working hours provisions. The collective agreement expanded the limits to overtime (from 10 to 25 hours per 7 days), and gave the employer the opportunity to averaging working hours. The limit of total working hours in any 24-hour period were raised from 10 to 16 hours. According to the agreement, employers are obliged to discuss the use of overtime with shop stewards before overtime work under the agreement is implemented. The agreement states that overtime cannot be imposed pursuant to the agreement when the extraordinary situation associated with coronavirus no longer exists. The validity period of the agreement was originally 26 weeks, and the agreement could be terminated with one month's notice from each of the parties.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The collective agreement on working time during the COVID-19 pandemic was negotiated by the parties, The Norwegian Association of Local and Regional Authorities (KS) and the central organisations in the local commune sector, on initiative from the state and the social partners jointly, to facilitate crisis management. By taking such action, the social partners wanted to keep regulation of working time in a collective agreement and avoid state intervention.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-12_1074.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1349",
+                    "sources::title": "Central working time agreements entered into during the corona crisis",
+                    "sources::url": "https://www.fagforbundet.no/fagforeninger/oslo/nyheter/sentrale-arbeidstidsavtaler-inngatt-under-koronakrisen-149971/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "6",
+                    "occupations::name": "Health professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "119",
+                    "sectors::code": "Q87",
+                    "sectors::name": "Residential care activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "984",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Private nursing homes and paramedics: New collective agreement expands access to overtime ",
+            "title_nationalLanguage": "Avtale om utvidede rammer for overtidsarbeid for alle NHOs medlemsvirksomheter innenfor Pleie- og omsorgsoverenskomsten  og Ambulanseoverenskomsten",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "09/18/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "NO-2020-12/1077",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/09/2020",
+            "calc_lastUpdate": "09/09/2020",
+            "descriptionBackgroundInfo": "To facilitate the adaption to crisis management during the COVID-19 crisis, The Norwegian Federation of Service Industries and Retail Trade (member of NHO) and the unions in private nursing sector (e.g. Fagforbundet, Norsk sykepleierforbund) on 20 March made an agreement on working time. The measures were introduced to make it possible on short notice to increase staffing in private nursing homes and paramedic, and, for infection control reasons, to reduce the number of shifts and unnecessary movement of staff between different wards. Similar collective agreements were made with another employers\u2019 organisation, Enterprise Federation of Norway (Virke), to cover the rest of the private nursing sector.",
+            "descriptionContentOfMeasure": "On 20 March, the Norwegian Federation of Service Industries and Retail Trade (member of NHO) and the unions in private nursing sector (e.g. Fagforbundet, Norsk sykepleierforbund) made an agreement on working time. The agreement was made pursuant to section 10-12 (4) in the Working Environment Act that gives larger trade unions right to enter into a collective agreement that deviates from the law's working hours provisions. \r\rThe collective agreement expanded the limits to overtime (from 10 to 25 hours per 7 days), and gave the employer the opportunity to averaging working hours. The limit of total working hours in any 24-hour period were raised from 10 to 16 hours. According to the agreement, employers are obliged to discuss the use of overtime with shop stewards before overtime work under the agreement is implemented. The agreement states that overtime cannot be imposed pursuant to the agreement when the extraordinary situation associated with coronavirus no longer exists. The validity period of the agreement was originally 26 weeks, and the agreement could be terminated with two month's notice from each of the parties.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The collective agreement on working time during the Covid-12 pandemic was negotiated by the parties, The Norwegian Association of Local and Regional Authorities (KS) and the central organisations in the local commune sector, on initiative from the state and the social partners jointly, to facilitate crisis management. By taking such action, the social partners wanted to keep regulation of working time in a collective agreement and avoid state intervention.  ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-12_1077.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1349",
+                    "sources::title": "Central working time agreements entered into during the corona crisis",
+                    "sources::url": "https://www.fagforbundet.no/fagforeninger/oslo/nyheter/sentrale-arbeidstidsavtaler-inngatt-under-koronakrisen-149971/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1353",
+                    "sources::title": "Open conflict between LO and Virke",
+                    "sources::url": "https://frifagbevegelse.no/nyheter/samholdet-slar-sprekker-6.490.692479.c57bb6e93e",
+                    "sources::d_date": "04/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "12",
+                    "occupations::name": "Health associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "occupations::name": "Health professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "118",
+                    "sectors::code": "Q86",
+                    "sectors::name": "Human health activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "119",
+                    "sectors::code": "Q87",
+                    "sectors::name": "Residential care activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "120",
+                    "sectors::code": "Q88",
+                    "sectors::name": "Social work activities without accommodation",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "987",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Agreement on care for young people in child welfare institutions who are infected with coronavirus, or are ill with suspected coronavirus",
+            "title_nationalLanguage": "Avtale om \u00e5 ivareta ungdom p\u00e5 barneverninstitusjon som er smittet med koronavirus, eller er syk med mistanke om koronavirus",
+            "d_startDate": "03/31/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "NO-2020-14/1081",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/09/2020",
+            "calc_lastUpdate": "09/09/2020",
+            "descriptionBackgroundInfo": "On 31 March, the state employer and the central organisations in the state sector (Unio, LO Stat, Akademikerne and YS Stat) made an agreement concerning child welfare institution under the Child, Adolescent and Family Agency. The agreement was meant to be used if there was a need to take care of young people who live in a child welfare institution and who were infected with coronavirus, or were ill with suspected coronavirus, where it was not possible to use ordinary shift.  ",
+            "descriptionContentOfMeasure": "The agreement of 31 March, between the state employer and the central organisations in the state sector (Unio, LO Stat, Akademikerne and YS Stat), gave the employer and the employee in child welfare institutions opportunity to agree on companion shifts with a duration up to 7 days. \r\rThe agreement could be used if there was a need to take care of young people infected with coronavirus or ill with suspected coronavirus, where it was not possible to use ordinary shift. The agreement regulates remuneration and requires that the employee is allowed necessary periods of rest. The agreement was made pursuant to section 10-12 (4) in the Working Environment Act that gives larger trade unions right to enter into a collective agreement that deviates from the law's working hours provisions. The validity period of the agreement was from 30 March 2020 until 31 August 2020, and the agreement could be terminated with one month\u2019s notice from each of the parties.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The collective agreement on working time during the COVID-19 pandemic was negotiated by the state employer and the central organisations in the state sector (Unio, LO Stat, Akademikerne and YS Stat), to facilitate crisis management. By taking such action, the social partners wanted to keep regulation of working time in a collective agreement and avoid provisional legislation.  ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-14_1081.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1349",
+                    "sources::title": "Central working time agreements entered into during the corona crisis",
+                    "sources::url": "https://www.fagforbundet.no/fagforeninger/oslo/nyheter/sentrale-arbeidstidsavtaler-inngatt-under-koronakrisen-149971/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "119",
+                    "sectors::code": "Q87",
+                    "sectors::name": "Residential care activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "991",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Frame agreement on working time regulations in kindergartens in connection with coronavirus",
+            "title_nationalLanguage": "Rammeavtale om arbeidstidsbestemmelser i forbindelse med koronautbruddet",
+            "d_startDate": "03/31/2020",
+            "d_endDate": "09/29/2020",
+            "calc_country": "Norway",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "NO-2020-14/1082",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/09/2020",
+            "calc_lastUpdate": "09/09/2020",
+            "descriptionBackgroundInfo": "On 31 March, the employers\u2019 association, Private Kindergarten National Association (PBL), and unions organising kindergarten personnel (Fagforbundet, Utdanningsforbundet, Delta), made an agreement on working time regulations in kindergartens in case that there might be a need to provide an extended service to children of employees in essential services (for example hospitals, nursing homes). According to the agreement, kindergartens could extended opening hours and keep open at night to provide care after discussions with shop stewards. ",
+            "descriptionContentOfMeasure": "The agreement from 31 March between Private Kindergarten National Association (PBL) and unions organising kindergarten personnel, was made pursuant to section 10-12 (4) in the Working Environment Act that gives larger trade unions right to enter into a collective agreement that deviates from the law's working hours provisions.\r\r* The agreement regulates extended opening hours, work at evenings and nights and at Sundays; overtime and other working time related issues. \r* The collective agreement expanded the limits to overtime (from 10 to 25 hours per 7 days), and gave the employer the opportunity to averaging working hours. \r* The limit of total working hours in any 24-hour period were raised from 10 to 16 hours. \r* The agreement regulate remuneration and require that the employee is allowed necessary periods of rest. \r* The agreement states that overtime cannot be imposed pursuant to the agreement when the extraordinary situation associated with coronavirus no longer exists. \r\rThe validity period of the agreement was originally 26 weeks, and the agreement could be terminated with two months' notice from each of the parties.",
+            "descriptionUseOfMeasure": "No information to date.",
+            "descriptionInvolvementOfSocialPartners": "The collective agreement on working time during the COVID-19 pandemic was negotiated by the employers\u2019 association, Private Kindergarten National Association (PBL), and unions organising kindergarten personnel (Fagforbundet, Utdanningsforbundet, Delta), to facilitate crisis management. By taking such action, the social partners wanted to keep regulation of working time in a collective agreement and avoid provisional legislation.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-14_1082.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1349",
+                    "sources::title": "Central working time agreements entered into during the corona crisis",
+                    "sources::url": "https://www.fagforbundet.no/fagforeninger/oslo/nyheter/sentrale-arbeidstidsavtaler-inngatt-under-koronakrisen-149971/",
+                    "sources::d_date": "03/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "73",
+                    "targetGroups::name": "Workers in care facilities",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "22",
+                    "occupations::name": "Personal care workers",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "992",
+        "modId": "13"
     }
 ]
