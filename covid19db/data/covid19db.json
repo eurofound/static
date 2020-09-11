@@ -55059,6 +55059,87 @@
     },
     {
         "fieldData": {
+            "title": "Water and energy premium in case of temporary unemployment ",
+            "title_nationalLanguage": "Water- en energievergoeding bij tijdelijke werkloosheid door COVID-19",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "08/17/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Provision of services in kind (e.g. food vouchers)",
+            "calc_identifier": "BE-2020-12/1053",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/01/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "In order to prevent the large group of people that relied on economic unemployment benefits, an energy and water premium was established. Concretely, every employee who became temporarily unemployed as a result of the corona crisis receives a lump sum of \u20ac202.68 from the Flemish government for the payment of the water and energy bill. ",
+            "descriptionContentOfMeasure": "Every employee that had to rely on economic unemployment to a certain extent is eligible for the measure. The amount of \u20ac202.68 is given automatically, without any additional actions necessary by the person struck by economic unemployment due to the COVID-19 crisis or any of the measures implemented by the government (for example: forced closure of certain businesses and sectors). The measure applies only to citizens in Flanders. The premium applies to people and not households, meaning that in a household with two adults two premiums can apply. In case of rental the premium is distributed to the tenant and not the landlord (as it is the tenant who pays the energy- and water bills of his/her property). ",
+            "descriptionUseOfMeasure": "In June it was reported that approximately 700,000 Flemish citizens applied for the water- and energy premium.",
+            "descriptionInvolvementOfSocialPartners": "Unknown",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-12_1053.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1325",
+                    "sources::title": "Tijdelijk werklozen krijgen 200 euro op rekening gestort voor water- en energiefactuu",
+                    "sources::url": "https://www.abvv.be/-/tijdelijk-werklozen-krijgen-200-euro-op-rekening-gestort-voor-water-en-energiefactuur",
+                    "sources::d_date": "05/22/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "1326",
+                    "sources::title": "Vlaanderen.be",
+                    "sources::url": "https://www.vlaanderen.be/water-en-energievergoeding-bij-tijdelijke-werkloosheid-door-covid-1",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "51",
+                    "targetGroups::name": "Other groups of workers",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "8",
+                    "funding::name": "Regional funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1829",
+                    "regions::countryCode": "BE",
+                    "regions::level": 1,
+                    "regions::name": "VLAAMS GEWEST",
+                    "regions::nutsCode": "BE2",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "963",
+        "modId": "26"
+    },
+    {
+        "fieldData": {
             "title": "Annex to the collective agreement for Zagreb  Airport ",
             "title_nationalLanguage": "Dodatak Kolektivnog ugovora za Zra\u010dnu luku Zagreb",
             "d_startDate": "04/08/2020",
@@ -56172,6 +56253,111 @@
         },
         "recordId": "993",
         "modId": "23"
+    },
+    {
+        "fieldData": {
+            "title": "Trade union initiative for a complete closure of shops on Sunday",
+            "title_nationalLanguage": "Pobuda za zaprtje trgovin ob nedelja",
+            "d_startDate": "05/13/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Changes of working hours or work arrangements",
+            "calc_identifier": "SI-2020-20/1095",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "During the COVID-19 epidemics, all shops were closed on Sundays. The Trade Union of Workers in the Trade Sector (ZSSS-SDTS) tries to take this opportunity for a permanent closure of shops on Sundays. If realized, it would bring an end to a long-lasting public debate on the opening hours of shops on Sundays (for more information see the article [\u2018Slovenia: Social partners in favour of partial Sunday opening hours in retail\u2019](https://www.eurofound.europa.eu/is/publications/article/2018/slovenia-social-partners-in-favour-of-partial-sunday-opening-hours-in-retail). The debate began in 2003 with a referendum which led to a ban on Sunday shopping. However, the referendum decision was never carried out as retail companies\u2019 appeal to the Constitutional Court managed to defer its implementation",
+            "descriptionContentOfMeasure": "With the end of epidemics, the government lifted many restrictions on business activities, but a ban on Sunday shopping remained in place. The Trade Union of Workers in the Trade Sector (ZSSS-SDTS) launched a proposal to transform a temporary ban on Sunday shopping into a permanent one and, in this way, implement a public referendum\u2019s decision from 2003.\r\rOn the initiative of a trade union, The Left party (Slov. Levica) gave a law amendment into the parliamentary procedure. The draft law seemingly had wide support among parliamentary deputies from the opposition as well as coalition parties. In the mid-July, the draft law successfully passed the discussion in the Parliamentary Committee for the Economy. Only the Modern Centre Party and the government spokesperson openly expressed their concerns that the draft law infringes the entrepreneurial freedom of retailers. However, the second parliamentary reading of the draft law showed that many deputies gave their support in bad faith.\r\rIn the name of retailers, unsatisfied with the continued prohibition on Sunday opening of shops, the Slovenian Chamber of Commerce appealed to the Constitutional Court. On the ground of this appeal, the government lifted restriction on Sunday opening on 23 July 2020. From then on, all shops are again open on Sundays.\r\rThe parliament will decide on the draft law in September 2020. ",
+            "descriptionUseOfMeasure": "The Trade Union of Workers in the Trade Sector (ZSSS-SDTS) and Centre for Social Research (Cedra) surveyed workers in the retail sector. \r\r* 98% of respondents agreed to the closure of shops on Sundays. \r* 95% would agree to a complete closure despite lower salaries which are already very low, at 78% of the Slovenian average salary (Cedra, 2020).\r\rIn a survey, commissioned by the government in October 2017, the opinion poll research company Ninamedia established that 80.5% of respondents support the closure of shops on Sundays. In July 2020, similar research showed that the percentage of supporters was even higher, 87%.\r\rThe trade union representative commented on government reopening of shops on Sunday as a \u2018knife in the back of the labour class\u2019.",
+            "descriptionInvolvementOfSocialPartners": "The Trade Union of Workers in the Trade Sector (ZSSS-SDTS) launched a proposal to transform a temporary ban on Sunday shopping into a permanent one and, in this way, implement a public referendum\u2019s decision from 2003. On the initiative of a trade union, The Left party (Slov. Levica) gave a law amendment into the parliamentary procedure.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-20_1095.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1372",
+                    "sources::title": "\u2018Za novelo zakona \u017ee ve\u010d kot 46 poslancev\u2019, Dnevnik, 15 July 202",
+                    "sources::url": "https://www.dnevnik.si/104293410",
+                    "sources::d_date": "07/15/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1373",
+                    "sources::title": "Trgovci v nedeljo odpirajo trgovine, MMC RTV SLO, 24 July 202",
+                    "sources::url": "https://www.rtvslo.si/gospodarstvo/trgovci-v-nedeljo-odpirajo-trgovine-sindikat-noz-v-hrbet-delavskemu-razredu/53161",
+                    "sources::d_date": "07/24/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1374",
+                    "sources::title": "Zelena lu\u010d pristojnega odbora DZ-ja za nedeljsko zaprtje trgovin, MMC RTV SLO, 15 July 202",
+                    "sources::url": "https://www.rtvslo.si/slovenija/zelena-luc-pristojnega-odbora-dz-ja-za-nedeljsko-zaprtje-trgovin/53076",
+                    "sources::d_date": "07/15/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1375",
+                    "sources::title": "Cedra, Predstavitev izsledkov anketne raziskave: stali\u0161\u010de delavk in delavcev glede zaprtja trgovin ob nedeljah, 27 May 202",
+                    "sources::url": "http://cedra.si/sl/2020/05/predstavitev-izsledkov-anketne-raziskave-stalisce-delavk-in-delavcev-glede-zaprtja-trgovin-ob-nedeljah",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1005",
+        "modId": "21"
     },
     {
         "fieldData": {
