@@ -49421,6 +49421,72 @@
     },
     {
         "fieldData": {
+            "title": "Deferral of rent payments for houses and flats",
+            "title_nationalLanguage": "Odklad plateb n\u00e1jemn\u00e9ho dom\u016f a byt\u016f",
+            "d_startDate": "04/27/2020",
+            "d_endDate": "07/31/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "CZ-2020-18/969",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "The Act No. 209/2020 Coll., on certain measures to mitigate the effects of the SARS-CoV-2 coronavirus epidemic on tenants of premises used to satisfy housing needs, on recipients of loans provided by the State Housing Development Fund and in connection with the provision of services related to the use of flats and non-residential premises in a house with flats, covers all leases or subleases of premises used to meet the housing needs of the tenant or subtenant.\r\rAccording to the act, during the period of 12 March 2020 until 31 July 2020 the landlord may not terminate a lease unilaterally, solely on the grounds that the tenant is in arrears with the payment of rent related to the use of the premises used to meet the housing needs.\r",
+            "descriptionContentOfMeasure": "Eligible are all tenants and subtenants of premises used to satisfy housing needs:\r\r* who are in delay with rent payments between 12 March 2020 and the day following the end of the emergency measures (but no later than on 31 July 2020);\r* whose delay in payment is the result of restrictions resulting from the emergency measures in the event of an epidemic, which made it impossible or substantially hindered the proper payment of the rent.\r\rTenants have to prove, that they are in delay with the payment due to the emergency measures (for example due to job-loss), to the Labour Office and to the landlord.\r\rThe rent will have to be paid till 31 December 2020. In case the tenant or subtenant fails to pay the rent until 31 December 2020, the landlord may terminate the lease without a termination period.\r\r\r ",
+            "descriptionUseOfMeasure": "No information available yet.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-18_969.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1151",
+                    "sources::title": "Act No. 209/2020 Coll., on certain measures to mitigate the effects of the SARS-CoV-2 coronavirus epidemic on tenants of premises used to satisfy housing needs, on recipients of loans provided by the State Housing Development Fund and in connection with the provision of services related to the use of flats and non-residential premises in a house with flats/Z\u00e1kon \u010d. 209/2020 Sb., o n\u011bkter\u00fdch opat\u0159en\u00edch ke zm\u00edrn\u011bn\u00ed dopad\u016f epidemie koronaviru SARS CoV-2 na n\u00e1jemce prostor slou\u017e\u00edc\u00edch k uspokojov\u00e1n\u00ed bytov\u00e9 pot\u0159eby, na p\u0159\u00edjemce \u00fav\u011bru poskytnut\u00e9ho St\u00e1tn\u00edm fondem rozvoje bydlen\u00ed a v souvislosti s poskytov\u00e1n\u00edm pln\u011bn\u00ed spojen\u00fdch s u\u017e\u00edv\u00e1n\u00edm byt\u016f a nebytov\u00fdch prostor\u016f v dom\u011b s byty",
+                    "sources::url": "https://www.zakonyprolidi.cz/cs/2020-209",
+                    "sources::d_date": "04/27/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1152",
+                    "sources::title": "MMR: Support of tenants/MMR: Podpora n\u00e1jemn\u00edk\u016f",
+                    "sources::url": "https://www.mmr.cz/cs/ministerstvo/vsechna-opatreni-a-pomoc-mmr-pri-pandemii-covid-19/podpora-najemniku",
+                    "sources::d_date": "04/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "879",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
             "title": "Temporary tax reduction in the HORECA sector",
             "title_nationalLanguage": "Tijdelijke btw-verlaging naar 6% in de horeca",
             "d_startDate": "06/08/2020",
@@ -54902,6 +54968,97 @@
     },
     {
         "fieldData": {
+            "title": "COVID-19: 40 urgent measures for construction workers ",
+            "title_nationalLanguage": "COVID-19: 40 medidas urgentes para os trabalhadores da constru\u00e7\u00e3o civil",
+            "d_startDate": "06/18/2020",
+            "d_endDate": "",
+            "calc_country": "Portugal",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "PT-2020-25/1052",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/01/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "The FEVICCOM (Federa\u00e7\u00e3o dos Sindicatos da Constru\u00e7\u00e3o), the Federation of construction workers unions and the STARQ (Sindicato dos Trabalhadores de Arqueologia), the archeology workers union, both affiliated of the trade union confederation CGTP, proposed on 18 June 2020, 40 urgent measures to defend the health, wages, employment and labour rights of construction workers in the context of the pandemic crisis.\r\rThe background for the proposed measures is to respond to the \"generalized environment of sanitary insecurity and the existence of irregular companies, of informal and illegal work, has caused a worsening and uncontrolled hygiene, safety and health conditions in the works, especially serious for low skilled workers often subcontracted on a temporary and precarious basis, including many immigrants.\"",
+            "descriptionContentOfMeasure": "The urgent recommendations refer to various issues, all related with occupational health and security and protection of workers and public health, of which we highlight:\r\r**EMPLOYERS RESPONSIBILITY:**\r\r* To secure that employers take the responsibility to respond for the level of security namely with their obligation to appoint the Safety Coordinator of the project and site;  to implement a  Workplace Health and Safety Plan and to ensure compliance with the management and general organization rules of the shipyard. \r* To reinforce workers information and consultation and, whenever they exist, consult and involve their representative structures, namely, trade union delegates and workers' representatives for safety and health at work; \r* Periodically carry out, by an element of the team's or shipyard's hierarchical chain, the survey of dangerous situations verified with the aim of adopting measures and developing procedures.\r\r**MOVEMENTS TO / FROM THE WORKPLACE:**\r\r* Provide that all workers can, if possible, commute to work in their own vehicle, by bicycle or on foot, avoiding, whenever possible, public transport; \r* Ensure that personnel transport vehicles are sanitized frequently.\r* In medium and long distance journeys, the available seats per vehicle must be reduced to ensure greater physical distance (2/3 of the capacity); \r* reduce or avoid stops at service stations; \r* the frequency of the number of work / home trips reduced; \r* verify (without registration and with worker authorization) the body temperature at the entrance for each trip and used mask during the trip, by all passengers.\r\r**WORKPLACES:**\r\rIn addition to an extensive list of security and protection recommendations, the proposal requires:\r\r* To ensure that each entity prepares and/or revises the Contingency Plan with the prevention, containment and mitigation measures for COVID-19 disease in the workplace, for each construction site; and that the Contingency Plan and any updates, must be made known to all workers and their representatives. It must also be ensured that sanitary rules are complied with when new teams of subcontractors enter the works;\r* Place informational posters from the Directorate-General for Health (DGS) in the works, with translation into several languages, according to the nationalities of the workers.\r* Intensify the action of those responsible for work safety, namely with regard to the promotion, dissemination, inspection and permanent information of all the COVID-19 pandemic prevention procedures.\r* Keep information up to date for all workers and for all other players on the job, taking into account their legitimate concerns, seeking to support them in solving problems they detect or persist; \r* Maintain regular communication between workers, companies and other contracting entities, namely on the conditions of hygiene, safety and health in the workplace.\r\r**ACCOMMODATION AND HOUSING CONDITIONS:**\r\rTo guarantee housing and housing conditions for all workers, which ensure the conditions of hygiene and safety for themselves, their families and the communities where they operate, in interconnection with Social Security services and municipal entities.",
+            "descriptionUseOfMeasure": "It is not mentioned, but the proposed measures would cover, should cover all companies and workers in the construction sector.",
+            "descriptionInvolvementOfSocialPartners": "The 40 measures to defend the health and security and working  conditions of construction workers in the context of the pandemic crisis were proposed by the FEVICCOM (Federa\u00e7\u00e3o dos Sindicatos da Constru\u00e7\u00e3o), the Federation of construction workers unions and the STARQ (Sindicato dos Trabalhadores de Arqueologia), the archeology workers union, both affiliated of the trade union confederation CGTP,  proposed on 18 June 2020. They are urgent trade union recommendations formulated by FEVICCOM in the context of sector ad-hoc ongoing social dialogue between the government and the sector organizations in the construction sector.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-25_1052.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1323",
+                    "sources::title": "Covid-19: 40 medidas urgentes para os trabalhadores da constru\u00e7\u00e3o civil",
+                    "sources::url": "http://www.cgtp.pt/accao-e-luta-geral/14301-covid-19-40-medidas-urgentes-para-os-trabalhadores-da-construcao-civi",
+                    "sources::d_date": "06/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1324",
+                    "sources::title": "Covid-19: Recomenda\u00e7\u00f5es para as empresas e para os trabalhadores",
+                    "sources::url": "https://www.aiccopn.pt/archive/doc/Recomendacoes__Emp_Trab_julho2020.pd",
+                    "sources::d_date": "07/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "962",
+        "modId": "25"
+    },
+    {
+        "fieldData": {
             "title": "Annex to the collective agreement for Zagreb  Airport ",
             "title_nationalLanguage": "Dodatak Kolektivnog ugovora za Zra\u010dnu luku Zagreb",
             "d_startDate": "04/08/2020",
@@ -55064,6 +55221,65 @@
         },
         "recordId": "969",
         "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Joint statement of peak level employer\u2019s organizations for the support of businesses and workers",
+            "title_nationalLanguage": "\u0391\u03bd\u03b1\u03ba\u03bf\u03af\u03bd\u03c9\u03c3\u03b7 \u03a3\u0395\u0392, \u0393\u03a3\u0395\u0392\u0395\u0395, \u0395\u03a3\u0395\u0395, \u03a3\u0395\u03a4\u0395 \u03b3\u03b9\u03b1 \u03c4\u03bf\u03bd COVID-19, \u00ab\u03a3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd\u00bb, 6 \u039c\u03b1\u03c1\u03c4\u03af\u03bf\u03c5 2020",
+            "d_startDate": "03/06/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GR-2020-10/1062",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/04/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "On March 6,2020, the peak organisations of the Employers' (SEV, GSEVEE, ESEE, SETE) made a joint statement on the need to support enterprises and workers. In their statement, they argue that in view of  the developments of the COVID-19 crisis and within the framework of their institutional role as social partners and having social responsibility, called the employers and the companies to act proactively, collectively, organized and quickly, in order to contribute, to the maximum possible level, to limiting the spread of the virus, while protecting the health of all workers and the jobs themselves. ",
+            "descriptionContentOfMeasure": "The statement of the national employers' organisations (SEV, GSEVEE, ESEE, SETE) is addressed to all companies throughout Greece and includes recommendations and instructions in order to mitigate the consequences of the COVID-19 -19 crisis.  \r\rIn this context, they urge the companies to strictly adhere to the health and safety rules at the workplaces and in accordance with the [guidelines](https://eody.gov.gr/neos-koronaios-covid-19/) issued by the National Public Health Organisation.\r\rThey encourage businesses to adopt voluntary preventive measures to limit the spread of the virus in the workplace and to protect workers' health in accordance with the [guidelines of the European Centre for Disease Control and Prevention](https://www.ecdc.europa.eu/sites/default/files/documents/RRA-outbreak-novel-coronavirus-disease-2019-increase-transmission-globally-COVID-19.pdf)\r\rThey recommend that undertakings should include both the facilitation of workers and the smooth functioning of undertakings to the fullest extent possible: the adoption of flexible practices in terms of time and place of work, as well as facilitation of leaves, if there are exceptional family obligations from any closure of kindergartens, schools, etc.\r\rFinally, they stress that they are at the disposal of the entire business community and the competent authorities in order to assist, in any way deemed appropriate, for  the protection of the health of workers and the preservation coherence within the Greek economy.",
+            "descriptionUseOfMeasure": "The joint statement from the employers'  social partner organisations represents all economic sectors and businesses irrespectively of size and therefore is quite a significant one.  On the basis of the legislative initiatives taken by the government to mitigate the impact of the COVID-19 crisis, this statement acted as a recommendation to their members to fully support and  implement the measures taken by the government. ",
+            "descriptionInvolvementOfSocialPartners": "This initiative from employers' organisations includes recommendations to their members for the adoption of measures and practices managing the pandemic crisis. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-10_1062.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1364",
+                    "sources::title": "\u0391\u03bd\u03b1\u03ba\u03bf\u03af\u03bd\u03c9\u03c3\u03b7 \u03a3\u0395\u0392, \u0393\u03a3\u0395\u0392\u0395\u0395, \u0395\u03a3\u0395\u0395, \u03a3\u0395\u03a4\u0395 \u03b3\u03b9\u03b1 \u03c4\u03bf\u03bd \u03ba\u03bf\u03c1\u03bf\u03bd\u03bf\u03ca\u03cc COVID-",
+                    "sources::url": "https://www.gsevee.gr/deltiatupou/1075-covid-1",
+                    "sources::d_date": "03/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "972",
+        "modId": "18"
     },
     {
         "fieldData": {
@@ -55539,6 +55755,76 @@
     },
     {
         "fieldData": {
+            "title": "Social partners explore possible  joint initiatives for COVID-19 crisis \r\u201cSupport for SMEs and workers\u201d ",
+            "title_nationalLanguage": "\u0394\u03b9\u03b5\u03c1\u03b5\u03c5\u03bd\u03b7\u03c4\u03b9\u03ba\u03ae \u03c3\u03c5\u03bd\u03ac\u03bd\u03c4\u03b7\u03c3\u03b7 \u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ce\u03bd \u03b5\u03c4\u03b1\u03af\u03c1\u03c9\u03bd (GSEE, \u0393\u03a3\u0395\u0392\u0395\u0395, \u0395\u03a3\u0395\u0395) \u03b3\u03b9\u03b1 \u03b1\u03bd\u03ac\u03bb\u03b7\u03c8\u03b7 \u03ba\u03bf\u03b9\u03bd\u03ce\u03bd \u03c0\u03c1\u03c9\u03c4\u03bf\u03b2\u03bf\u03c5\u03bb\u03b9\u03ce\u03bd \u03b3\u03b9\u03b1 \u03c4\u03bf\u03bd COVID-19",
+            "d_startDate": "07/16/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GR-2020-29/1080",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/09/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "On 16 July 2020, a meeting was held between of the presidents of the workers' organization (GSEE) and the employers' associations representing the micro, small and medium-sized enterprises (GSEVEE and ESEE). This meeting was an effort of the peak level national social partners  to address the effects of the pandemic of COVID-19 with possible joint initiatives. The three social partners agreed to explore the possibility of joint initiatives and actions in the near future, aimed at protecting work and developing small and medium-sized enterprises. Also they agreed to continue and extend the social dialogue with the other national social partners.",
+            "descriptionContentOfMeasure": "A meeting was held on 16 July 2020 between GSEE and the employers' associations representing the d micro, small and medium-sized enterprises (GSEVEE and ESEE).  \r\rAs noted in the joint press release, the impact of the COVID-19 pandemic, almost immediately following the long-standing crisis, has accelerated the challenges faced by the Greek society. These can only be effectively addressed through social dialogue, synergies and cooperation. Issues such as digitalization and green transformation are raised with a new dynamic, which requires effective intervention and adaptation of all stakeholders. \r\rThis adjustment is a necessary condition for improving the position of both workers and small and medium-sized enterprises. Cooperation between small-scale entrepreneurship and the valuable resource of human labour can be not only a factor in economic development, promotion of quality employment and social cohesion, but also a means of strengthening democracy and combating inequalities. In this context, the organizations agreed that after the first consultation with the Prime Minister and the Committee on the Plan for the Development of the Greek Economy, the bilateral social dialogue on labour protection and the development of small and medium-sized enterprises will continue with the participation of the other social partners.",
+            "descriptionUseOfMeasure": "This initiative from social partners raises to the possibility of taking joint actions between trade unions and employers organisations, with a focus on protection and support  of SMEs and the workers and to mitigate the consequences of COVID-19 crisis. ",
+            "descriptionInvolvementOfSocialPartners": "This is an initiative of social partners' organisations (GSEE, ESEE, GSEVEE).  The Greek Tourism Confederation (SETE) and the Hellenic Federation of Entreprises (SEV) were absent at the meeting. The initiative of social partners addresses to the development of joint actions to protect the SMEs and workers and mitigate the consequences of COVID-19. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-29_1080.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1366",
+                    "sources::title": "\u03a3\u03c5\u03bd\u03ac\u03bd\u03c4\u03b7\u03c3\u03b7 \u03c0\u03c1\u03bf\u03ad\u03b4\u03c1\u03c9\u03bd \u0393\u03a3\u0395\u0395, \u03ba. \u0393\u03b9\u03ac\u03bd\u03bd\u03b7 \u03a0\u03b1\u03bd\u03b1\u03b3\u03cc\u03c0\u03bf\u03c5\u03bb\u03bf\u03c5, \u0393\u03a3\u0395\u0392\u0395\u0395, \u03ba. \u0393\u03b9\u03ce\u03c1\u03b3\u03bf\u03c5 \u039a\u03b1\u03b2\u03b2\u03b1\u03b8\u03ac, \u0395\u03a3\u0395\u0395, \u03ba. \u0393\u03b9\u03ce\u03c1\u03b3\u03bf\u03c5 \u039a\u03b1\u03c1\u03b1\u03bd\u03af\u03ba\u03b1",
+                    "sources::url": "https://esee.gr/synantisi-proedron-gsee-k-gianni-panagopoyloy-gsevee-k-giorgoy-kavvatha-esee-k-giorgoy-karanika",
+                    "sources::d_date": "07/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "990",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
             "title": "Agreement on care for young people in child welfare institutions who are infected with coronavirus, or are ill with suspected coronavirus",
             "title_nationalLanguage": "Avtale om \u00e5 ivareta ungdom p\u00e5 barneverninstitusjon som er smittet med koronavirus, eller er syk med mistanke om koronavirus",
             "d_startDate": "03/31/2020",
@@ -55886,5 +56172,250 @@
         },
         "recordId": "993",
         "modId": "23"
+    },
+    {
+        "fieldData": {
+            "title": "A new employment model in H\u00f6fe",
+            "title_nationalLanguage": "Novi zaposlitveni model v Hoferj",
+            "d_startDate": "09/01/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Changes of working hours or work arrangements",
+            "calc_identifier": "SI-2020-36/1096",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "At the beginning of August 2020, discount retailer H\u00f6fer announced a new employment model. According to this model, workers, mainly employed in sales services and logistics, will be employed full time, 40 hours a week, but will work fewer hours, on average 30 hours a week. Discount retailer H\u00f6fer emphasises the benefits for workers from this model, better work-life balance and more time spent with their families. H\u00f6fer launched the new employment model with paid advertisements in daily newspapers Delo and Dnevnik on 10 August 2020. ",
+            "descriptionContentOfMeasure": "The new employment model targets workers in sales services and logistics. It is important to note that majority of them are already part-time workers, working 30 hours a week on average. Although their payment per hour is high compared to the average payment in the retail sector, these workers receive lower wage and also have lower pension security. Their pension insurance is proportional to part-time employment, so their annual contributions for pension security are equivalent to eight months of full pension insurance and these workers risk old-age poverty. Moreover, researchers point out the problem of a high intensity of work due to which workers carry out the work of eight hours in six hours, but are paid only for six hours (Kanjuo-Mr\u010dela in Ignjatovi\u010d, 2018).\r\rThe new employment model which will requalify part-time employment into full-time employment will solve the problem of partial pension insurance. With the requalification of the employment contract, workers will also receive a full annual holiday allowance. Yet, as all other working conditions will remain the same, the new model does not solve many existing troubles, for instance, the problems of underemployment and high intensity of work. \r\rIt also raises many open questions \u2013 the payment of bonuses for \u2018overtime\u2019, the right of workers to second employment as they are in fact part-time employees, full availability of workers to the employer etc.",
+            "descriptionUseOfMeasure": "Discount retailer H\u00f6fer will introduce the new employment model with a test period from September to December 2020. In this period, the company will test the reactions of employees and adapt a model if necessary. Until the end of 2020, a quarter of all employees in sales and logistics will be included in the H\u00f6fer (full-time) employment model. The transitional period will be concluded by the end of 2021 when more than 1,200 employees (75% of all workers) in sales and logistics are expected to be included in the \u2018H\u00f6fer (full-time)\u2019 employment model. ",
+            "descriptionInvolvementOfSocialPartners": "There was no involvement of social partners in designing the measure. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-36_1096.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Company practices",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1376",
+                    "sources::title": "H\u00f6fer, Press Release, 4 August 202",
+                    "sources::url": "https://www.hofer.si/sl/o-hoferju/za-medije/sporocila-za-medije/sporocila-za-medije/hofer-v-prodaji-in-logistiki-po-novem-z-zaposlitvijo-za-polni-delovni-cas",
+                    "sources::d_date": "08/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1377",
+                    "sources::title": "V Hoferju zdaj zaposleni za polni delovni \u010das (advertisement), Delo, 10 August 202",
+                    "sources::url": "",
+                    "sources::d_date": "08/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1006",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
+            "title": "Re-establishment of tripartite negotiation on the third and forth emergency laws",
+            "title_nationalLanguage": "Obnova tripartitnega socialnega dialoga",
+            "d_startDate": "04/20/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "SI-2020-17/1099",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/11/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "The previous (centrist) government of Marjan \u0160arec resigned on 27 January 2020 hoping that his resignation would lead to new elections. Contrary to his expectations, the Slovenian Democratic Party of Janez Jan\u0161a managed to form a new coalition with the two \u0160arec\u2019s coalition partners. The new right-wing government came into office on 13 March 2020, a day after the outbreak of COVID-19. This caused a two-month halt of the main tripartite body (The Economic and Social Council) in the period when the key \u2018anti-corona laws\u2019 (#PKP1 and #PKP2) were adopted.",
+            "descriptionContentOfMeasure": "When Janez Jan\u0161a\u2019s government took office, it should have appointed its representatives in the Economic and Social Council; instead it was postponed, and, as a result, practically blocked the main tripartite body from 13 March to 30 April 2020 (Podvr\u0161i\u010d, 2020) from fulfilling its role. As a consequence of the government\u2019s inactivity, social dialogue was practically non-existent in the period when the first two \u2018anti-corona laws\u2019 (#PKP1 and #PKP2) were adopted. Trade unions and employer organizations could only send comments on draft laws under great time pressure. They had a day or two to comment on the draft laws in writings but did not receive any response to their inputs and most of their proposals were not taken into consideration in final laws. \r\rOn 20 April, all seven confederations of trade unions demanded the restoration of social dialogue and the re-establishing of the Economic and Social Council. The government appointed its representatives on 30 April, two days after the adoption of the second \u2018anti-corona law\u2019.  The first meeting of the Council was held on 15 May 2020. The Council then became involved in negotiations about the third and the fourth emergency laws. From then on, its functioning seems to slide back into the old track. ",
+            "descriptionUseOfMeasure": "While trade unions publicly expressed their dissatisfaction with the way of how social dialogue was managed during the crisis, the employer organisations seem to be more satisfied with the outcome. Five employer organisations (Association of Employers Slovenia - ZDS, Chamber of Commerce and Industry of Slovenia \u2013 GZS, Slovenian Chamber of Commerce \u2013 TZS, Chamber of Craft and Small Businesses of Slovenia \u2013 OZS, Association of Employers in Craft and Small Business of Slovenia - ZDOPS) assessed anti-corona laws as timely and substantively appropriate.",
+            "descriptionInvolvementOfSocialPartners": "On 20 April, all seven confederations of trade unions demanded the restoration of social dialogue and re-establishing of the Economic and Social Council. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-17_1099.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1381",
+                    "sources::title": "Request of trade unions to be included in the preparation of emergency laws due to COVID-1",
+                    "sources::url": "http://sindikat-pergam.si/wp-content/uploads/2020/04/Poziv_sindikalne-centrale_20.04.2020.pd",
+                    "sources::d_date": "04/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1382",
+                    "sources::title": "Skupna izjava za medije predsednikov delodajalskih organizacij in zborni",
+                    "sources::url": "https://www.zds.si/sl/stalisca/skupna-izjava-za-medije-predsednikov-delodajalskih-organizacij-in-zbornic",
+                    "sources::d_date": "05/11/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1383",
+                    "sources::title": "\u2018Vlada imenovala svoje predstavnike, na \u010delo ESS-ja Cigler Kralj\u2019, MMC RTV, 30 April 202",
+                    "sources::url": "https://www.rtvslo.si/gospodarstvo/vlada-imenovala-svoje-predstavnike-na-celo-ess-ja-cigler-kralj/52237",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1384",
+                    "sources::title": "Podvr\u0161i\u010d, A. (2020), \u2018Slovenia: protection of regular employment to the fore; but social partners sidelined and strong contestation\u2019, in Podvr\u0161i\u010d, A., Becker, J., Piroska, D., Profant, T. and Hodul\u00e1k, V., Mitigating the COVID-19 effect, Working Paper 2020.07, Brussels, The European Trade Union Institute, pp. 14-20.",
+                    "sources::url": "https://www.etui.org/publications/mitigating-covid-19-effec",
+                    "sources::d_date": "08/31/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1009",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Employers make recommendations for the economic upturn for Slovenia 5.0",
+            "title_nationalLanguage": "Gospodarski zagon za Slovenijo 5.0",
+            "d_startDate": "08/20/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "SI-2020-34/1101",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/11/2020",
+            "calc_lastUpdate": "09/11/2020",
+            "descriptionBackgroundInfo": "The Chamber of Commerce and Industry of Slovenia (GZS) issued recommendations for the economic upturn in the \u2018post-corona\u2019 period. In the introduction, the employer organisation assesses the four emergency laws for mitigation of the COVID-19 effects. Emergency measures have provided efficient support to people and protection of employment. Not so efficient, according to GZS, has been the financial help provided to companies: as they have problems to fulfil the conditions in order to obtain guarantees and deferred debt instalments, financial instruments are underused.",
+            "descriptionContentOfMeasure": "The Chamber of Commerce and Industry of Slovenia (GZS) positively assessed the government\u2019s plans for investments which may foster economic growth in many activities, particularly in the construction. There are investments needs in the development (knowledge, innovation, digitalisation), the improvement of infrastructure, the transition to a low-carbon society, and housing. GZS identified six domains which should be prioritized:\r\r* growth of domestic consumption (energy renovation of buildings, new investments in public buildings);\r* investments in infrastructure (road, rail, and IT infrastructure system, renewable-energy power plants, 5G investments);\r* Support to the digitalisation of business enterprises as well as public administration, tax exemptions for investments in digitalisation;  \r* more investments in research, particularly for the joint projects between research institutions and businesses;\r* environmental investments (improved waste collection and recycling, the transition to climate-neutral and circular economy, new resources of water):\r* investments in agriculture, food processing, and food self-sufficiency.\r\rGZS estimates that between three and four billion euro could be spent annually for the above-mentioned projects. ",
+            "descriptionUseOfMeasure": "The Chamber of Commerce and Industry of Slovenia (GZS) has estimated costs for each priority area. Among financial sources, included in GZS\u2019 calculations are the European Rescue Fund, the European Cohesion Fund and other European and national funds. Sources for investments may also come from the private sector as well as households. GZS highlights that the investment potential of companies is high, since they achieved the record profits in 2019, while their indebtedness is considerably low.",
+            "descriptionInvolvementOfSocialPartners": "The Chamber of Commerce and Industry of Slovenia (GZS) issued recommendations for the economic upturn in the \u2018post-corona\u2019 period.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-34_1101.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1385",
+                    "sources::title": "Komentar GZS: Nov gospodarski zagon za Slovenijo 5.",
+                    "sources::url": "https://www.gzs.si/mediji/Novice/ArticleID/76409/komentar-gzs-nov-gospodarski-zagon-za-slovenijo-5",
+                    "sources::d_date": "08/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "funding::name": "Local funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1011",
+        "modId": "15"
     }
 ]
