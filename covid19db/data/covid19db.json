@@ -58699,6 +58699,104 @@
     },
     {
         "fieldData": {
+            "title": "Amendment of the sectoral collective agreement for the Lithuanian national public health system",
+            "title_nationalLanguage": "Nacionalin\u0117s sveikatos sistemos biud\u017eetinio sektoriaus \u0161akos kolektyvin\u0117s sutarties pakeitimas",
+            "d_startDate": "07/14/2020",
+            "d_endDate": "12/31/2021",
+            "calc_country": "Lithuania",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "LT-2020-29/1114",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "09/17/2020",
+            "descriptionBackgroundInfo": "In Lithuania, a sectoral collective agreement for the budget sector of the Lithuanian national health system was signed on 14 December 2018 (CA) (No S-323) and was subsequently updated on 14 July 2020 (No S-205). Where the first version of the agreement focused on setting wage regimes in budgetary health establishments, the updated version also covered aspects such as teleworking, overtime, and additional occupational health and safety measures. For example, the document provides for the payment of wage supplements for extra work and adverse working conditions, as well as the possibility to work remotely for a certain period of time. Such changes were largely due to the COVID-19 pandemic and related higher risks of contracting viral diseases, as well as the need for overtime and/or teleworking for workers in this sector.",
+            "descriptionContentOfMeasure": "Among other things, we can mention the following provisions as the most important ones set in the updated agreement:\r\r* At the request of an employee, the employer shall make it possible for the employee to work remotely for at least 20% of his/her total working time (unless telework is not possible due to the nature of the work). The employer must have approved the teleworking procedure which is to be coordinated with employees\u2019 representatives.\r* Overtime may be allowed with the consent of employees. In such cases, the maximum annual overtime shall be 260 hours.\r* Employees working in workplaces exposed to harmful factors shall be paid a premium (supplement) equal to at least 20% of the fixed part of the official salary (15% for those working in workplaces exposed to hazardous factors).\r* In order to reduce the risk of communicable diseases, the employer shall organise vaccination of employees who may be at potential risk of infection with vaccine-controlled infections at the employer\u2019s own expense.  \r\rThe signed agreement is to remain valid in Lithuania for three years, until 31 December 2021. The agreement shall apply to employees of budgetary institutions of the Lithuanian national health system who have become members of the signatory trade union (TU) organisations and their member TUs before the date of signing this agreement.",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "The agreement was signed between the Ministry of Health of the Republic of Lithuania and two trade unions - the Lithuanian Federation of Healthcare Trade Unions and Medical Staff Trade Union Solidarumas.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-29_1114.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1415",
+                    "sources::title": "Agreement on the amendment of the sectoral collective agreement for the budget sector of the Lithuanian national health system (Susitarimas d\u0117l Lietuvos nacionalin\u0117s sveikatos sistemos biud\u017eetinio sektoriaus \u0161akos kolektyvin\u0117s sutarties pakeitimo)",
+                    "sources::url": "https://sam.lrv.lt/uploads/sam/documents/files/Teisine_informacija/S-205.pdf",
+                    "sources::d_date": "07/14/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "12",
+                    "occupations::name": "Health associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "occupations::name": "Health professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "118",
+                    "sectors::code": "Q86",
+                    "sectors::name": "Human health activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1024",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
             "title": "Practical tool for companies to document business changes due to COVID-19",
             "title_nationalLanguage": "Corona-Dokumentation",
             "d_startDate": "09/03/2020",
@@ -58826,6 +58924,115 @@
         },
         "recordId": "1027",
         "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "Postponement of collectively agreed wage increases in transport sector",
+            "title_nationalLanguage": "Kollektiivsete t\u00f6\u00f6tasukokkulepete edasil\u00fckkamine transpordisektoris",
+            "d_startDate": "04/13/2020",
+            "d_endDate": "01/01/2022",
+            "calc_country": "Estonia",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Wage flexibility ",
+            "calc_identifier": "EE-2020-16/1122",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "09/17/2020",
+            "descriptionBackgroundInfo": "Due to the COVID-19 pandemic and its containment measures, the transport sector was hit hard. Countries\u2019 borders were closed, which strongly affected the freight transport. It also had an enormous impact on tourism resulting in almost zero income for passenger transport companies. In Estonia, one of the largest passenger transport company is Tallink Group that operates in passenger water transport sector in Estonia, Finland, Sweden and Latvia. Tallink as well as freight road transport companies made use of the wage subsidy provided by the Estonian Unemployment Insurance Fund, but as the measure was temporary and the difficulties in the sector remain, additional auxiliary measures were needed to keep the business running and retain employment. \r\rTo keep the businesses afloat and retain employment, changes to collective agreements in the transport sector were made. There are two sector-level collective agreements concluded in the road transport sector \u2013 one for passenger transport and the other for freight transport, and there are several collective agreements concluded in water transport between Tallink Group and its subsidiaries and seamen's union.  ",
+            "descriptionContentOfMeasure": "In road transport sector, regarding passenger transport, on 13 January 2020, a new collective agreement for 2020-2023 was signed, which should have increased the wage of bus drivers as of April 2020. As a result of the COVID-19 crisis, it was agreed in April that the wage increase would be postponed until June 2020. Regarding freight transport, a collective agreement was signed in 2019 for 2019-2022, according to which the wage of truck drivers should have increased in May 2020. It was agreed, however, that the wage increase would be postponed by a year. \r\rIn passenger water transport, similar measures were used in Tallink Group by its subsidiaries. In case of service personnel the wage increase was postponed to 2022, but in case of technical personnel the postponement agreement was not reached. Additional changes included different aspects of different agreements. For example, it was agreed that shortening the work days length, changing the calculation periods for banked working time, paying hourly wage instead of daily wages, guaranteeing a gross monthly wage, and making sure the work time is divided as equally as possible. \r\rHowever, additional negotiations are on their way, as the condition for freezing the wage increase was that there would be no redundancies, and if redundancies would take place, the consent to postpone the wage agreement will become null and void. Tallink has now announced the dismissals of more than 1,000 employees, which is enormous number in Estonian context. ",
+            "descriptionUseOfMeasure": "The collective agreements of Tallink Group and its subsidiaries cover more than 1,000 employees. \rIn road transport sector, the numbe rof employees was around 22,000 in 2019.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were directly involved in the re-negotiation of the already signed collective agreement.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-16_1122.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1443",
+                    "sources::title": "Kollektiivlepingu ajutine muutmine Hansaliini t\u00f6\u00f6tajatele",
+                    "sources::url": "https://emsa.ee/2020/08/04/kollektiivlepingu-ajutine-muutmine-hansaliini-tootajatele/",
+                    "sources::d_date": "08/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1444",
+                    "sources::title": "Viking XPRS kollektiivleping on ajutiselt muudetud",
+                    "sources::url": "https://emsa.ee/2020/09/14/viking-xprs-kollektiivleping-on-ajutiselt-muudetud/",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1445",
+                    "sources::title": "Meremeeste ameti\u00fching: uue kokkuleppeta ei saa tuhandet t\u00f6\u00f6tajat koondada",
+                    "sources::url": "https://majandus24.postimees.ee/7055396/meremeeste-ametiuhing-uue-kokkuleppeta-ei-saa-tuhandet-tootajat-koondada",
+                    "sources::d_date": "09/05/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1446",
+                    "sources::title": "S\u00f5itjateveo \u00fcldt\u00f6\u00f6kokkulepe",
+                    "sources::url": "https://uus.etta.ee/sektsioonid/bussisektsioon/soitjateveo-uldtookokkulepe-2020-2023",
+                    "sources::d_date": "04/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1032",
+        "modId": "17"
     },
     {
         "fieldData": {
