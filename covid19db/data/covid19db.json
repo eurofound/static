@@ -56448,6 +56448,72 @@
     },
     {
         "fieldData": {
+            "title": "Research conducted by employer associations",
+            "title_nationalLanguage": "Ri\u010berka mmexxija minn asso\u010bjazzjonijiet ta 'min i\u0127addem\rRi\u010berka mmexxija minn asso\u010bjazzjonijiet ta 'min i\u0127addem\rRi\u010berka mmexxija minn asso\u010bjazzjonijiet ta 'min i\u0127addemV\rRi\u010berka mmexxija minn asso\u010bjazzjonijiet ta 'min i\u0127addem",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "MT-2020-14/1056",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/03/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a negative impact upon many enterprises in Malta. In order to support such organisations, the major employer and professional associations in Malta have been conducting research amongst their members to determine the impact of COVID-19. The primary aim of this is to have an up to date picture of the impact upon members and to use this to inform the government whilst also using it to provide direction when drafting policy recommendations. ",
+            "descriptionContentOfMeasure": "Various employer associations have been conducting research amongst their members. The purpose of this data is to inform policy recommendations and for use during lobbying with government and other social partners. \r\rThe Malta Employers Association (MEA) conducted its third COVID-19 survey amongst its members in September 2020. The survey had three aims:\r\r* To evaluate business performance by sector and company size; \r* To determine employers\u2019 projections for the coming months; \r* To study the labour market potential in surviving the pandemic. \r\rPreliminary findings published by the MEA (September 2020) highlighted that 81% of organisations reported a loss of business since the start of the pandemic, with 45% of respondents reporting a loss of business of 45% or more. Almost half of respondents, however, reported that the situation was better between June and August than it was between March and May. 19% (45 organisations) reported making redundancies between June-August. 65% of organisations also reported that they have employees who are making use of teleworking \r\rOther related research has been conducted by the Malta Chamber of Commerce, Enterprise and Industry (known as the Malta Chamber) as well as by The Malta Chamber of SMEs. Research by the latter (July 2020) highlighted that sales levels, uncertainty, and employee wages were the greatest concerns for SMEs, that 13% of respondents had instigated redundancies due to COVID-19, and that government COVID-19 measures had been generally well received. \r\rSurveys have also been conducted by other professional groups that represent employers / self-employed professional workers, such as that conducted by the Chamber of Architects (Kamra tal-Periti).  ",
+            "descriptionUseOfMeasure": "The individual research projects have been used for lobbying and to inform recommended policy direction. More specific information is unavailable.",
+            "descriptionInvolvementOfSocialPartners": "The surveys were designed by the specific employer's associations and then distributed amongst their members. The analysis and publication of these findings was also the remit of the specific employer associations. The findings were used primarily during discussions between the employer associations and government.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-14_1056.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1331",
+                    "sources::title": "Malta Chamber SMEs - Survey on the continued effect of COVID-19 on business in Malta",
+                    "sources::url": "http://www.smechamber.mt/wp-content/uploads/2020/07/SME20-CovidSurvey-v3.pdf",
+                    "sources::d_date": "07/31/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1463",
+                    "sources::title": "Malta Employers Association - COVID-19 survey September 2020",
+                    "sources::url": "https://www.maltaemployers.com/loadfile/f92fd886-9cb2-48bb-9268-741dc469b5e3",
+                    "sources::d_date": "09/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "966",
+        "modId": "16"
+    },
+    {
+        "fieldData": {
             "title": "Information and support group 'ANTI-COVID-19' for workers by trade union GSEE",
             "title_nationalLanguage": "\u03a3\u03c5\u03c3\u03c4\u03b1\u03c3\u03b7 \u03bf\u03bc\u03ac\u03b4\u03b1\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03cc\u03c1\u03b7\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u0395\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u201cANTI-COVID 19\u201d \u03b1\u03c0\u03cc \u03c4\u03b7 \u03b3\u03c3\u03b5",
             "d_startDate": "03/18/2020",
@@ -58279,6 +58345,70 @@
     },
     {
         "fieldData": {
+            "title": "European Commission unveils vaccine strategy",
+            "title_nationalLanguage": "",
+            "d_startDate": "06/17/2020",
+            "d_endDate": "",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Access to healthcare",
+            "calc_identifier": "EU-2020-25/1091",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "On 15 July the Commission has presented Communication on immediate short-term measures to strengthen EU health preparedness for COVID-19 outbreaks. \rAt the heart of this initiative is the belief that continued vigilance and fast response from the Commission and the Member States is essential to ensure that the spread of the virus can be contained and new, generalised lockdowns can be avoided.",
+            "descriptionContentOfMeasure": "The priority actions for national and EU authorities  laid out in the communication include:\r\r* increased testing coverage, contact tracing and surveillance by public health bodies to map clusters in order to contain the spread of outbreaks;\r* ensuring the smooth supply of personal protective equipment, medicines and medical devices through mechanisms such as emergency joint procurements and strategic EU stockpiles;\r* maintaining rapid access to public health surge capacities without neglecting other areas of healthcare, including through financial support for the transport of medical personnel and patients between Member States;\r* reducing the burden of seasonal flu to avoid additional pressure on the already-stretched health care systems, through increased vaccination coverage.",
+            "descriptionUseOfMeasure": "Potentially all EU citizens will be affected. ",
+            "descriptionInvolvementOfSocialPartners": "Social partners' involvement unknown.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2020-25_1091.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1397",
+                    "sources::title": "COMMUNICATION FROM THE COMMISSION\r\rEU Strategy for COVID-19 vaccines",
+                    "sources::url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1597339415327&uri=CELEX:52020DC0245",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "10",
+                    "actors::name": "EU (Council, EC, EP)",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1001",
+        "modId": "19"
+    },
+    {
+        "fieldData": {
             "title": "European social partners call for strategy for retail and wholesale sector",
             "title_nationalLanguage": "",
             "d_startDate": "04/08/2020",
@@ -59370,6 +59500,95 @@
     },
     {
         "fieldData": {
+            "title": "Free movement of people in the EU: more clarity and predictability of restricting measures",
+            "title_nationalLanguage": "",
+            "d_startDate": "09/09/2020",
+            "d_endDate": "",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Smoothing frictions or reallocation of workers",
+            "calc_identifier": "EU-2020-37/1125",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "A proposal for a Recommendation published by the European Commission on 9 September 2020 aimed at ensuring the coordination and timely communication at the EU level of measures taken by Member States that restrict free movement due to the COVID-19 (coronavirus) pandemic.\r\rThe legal basis for the proposal are Articles 21(2), 46, 52(2), 168(6) and 292 of the Treaty on the Functioning the European Union. The Council Recommendation is to be adopted at the Justice and Home Affairs Council on 8-9 October 2020.",
+            "descriptionContentOfMeasure": "The  proposal for Recommendation sets out four key areas where Member States should work closer together.\r\r* Common criteria and thresholds for Member States when deciding whether to introduce travel restrictions.\r* Mapping of common criteria using an agreed colour code.\r* A common framework for measures applied to travellers from high-risk areas. The Member States should no longer turn back such persons. Instead, it advises that these travellers should either undergo quarantine or Coronavirus testing upon arrival.\r* Clear and timely information to the public about any restrictions. The Commission proposes that the Member states should notify on the intended changes at least a week before they become effective, and also provide information to the reOPEN EU web platform,",
+            "descriptionUseOfMeasure": "People enjoying free movement within the EU. The number is currently difficult to quantify due to disruptions caused by the pandemic.",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not involved in the development of the Recommendation's proposal, however, they previously expressed opinions about the need to regulate this issue.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2020-37_1125.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1423",
+                    "sources::title": "Proposal for a\rCOUNCIL RECOMMENDATION\ron a coordinated approach to the restriction of free movement in response to the\rCOVID-19 pandemic",
+                    "sources::url": "https://ec.europa.eu/info/sites/info/files/council-proposal-coordinated-approach-restriction-movement_en.pdf",
+                    "sources::d_date": "09/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1434",
+                    "sources::title": "BUSINESSEUROPE proposals for a European economic recovery plan",
+                    "sources::url": "https://www.businesseurope.eu/publications/businesseurope-proposals-european-economic-recovery-plan",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1458",
+                    "sources::title": "ETUC comments on the Commission Communication on a phased and coordinated approach for restoring freedom of movement",
+                    "sources::url": "https://www.etuc.org/en/document/etuc-comments-commission-communication-phased-and-coordinated-approach-restoring-freedom",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "10",
+                    "actors::name": "EU (Council, EC, EP)",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "49",
+                    "targetGroups::name": "Cross-border commuters",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "50",
+                    "targetGroups::name": "Posted workers",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1035",
+        "modId": "23"
+    },
+    {
+        "fieldData": {
             "title": "Local Chamber of Industry and Commerce issue handout for companies to develop hygiene concepts",
             "title_nationalLanguage": "Handreichung zur Erarbeitung eines Hygienekonzepts",
             "d_startDate": "05/13/2020",
@@ -59681,6 +59900,90 @@
         },
         "recordId": "1056",
         "modId": "20"
+    },
+    {
+        "fieldData": {
+            "title": "Ensuring business continuity and protection of workers in private security service during Covid- 19 pandemic ",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/08/2020",
+            "d_endDate": "",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Remuneration and rewards for workers in essential services",
+            "calc_identifier": "EU-2020-19/1153",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/17/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "The EU social partners in private security namely the Confederation of European Security Services (CoESS) and the European Services Workers Union (UNI-Europa)  welcomed fact that the European Commission and many European governments have officially recognised private security as \u201cessential services\u201d. However, in their opinion too often private security workers remain invisible. For this reason, they decided to agree on a set of recommendations for public authorities.\r\r**Parties to the declaration:**\r\r* UNI Europa is a European trade union federation, which represents more than seven million workers and 320 affiliates in 50 different countries.\r* CoESS acts as the voice of the private security industry, covering 21 countries in Europe and representing two million guards, over 45,000 companies. The private security services provide a wide range of services, both for private and public clients.",
+            "descriptionContentOfMeasure": "According to the social partners the status of \"essential services\" should prompt public authorities to rethink how to purchase security services and value a sector that aims to put the health and safety of workers and citizens first. CoESS and UNI Europa, share the common goal of ensuring business continuity when the provision of private security services is essential, as well as keeping staff in a safe working environment.\rThe recommendations of the social partners concern the following issues:\r\r* better recognition of private security as essential services;\r* access to personal protective equipment;\r* financial and administrative support to struggling businesses and workers;\r* best value procurement that respects important quality criteria;\r* improving contracting practices;\r* adequate removal of barriers for the redeployment of workers;\r* ensure that cash continues to offer access to payment for all because cash payments are currently stigmatised and restricted in many shops, although it is particularly vital to  marginalised groups of people.",
+            "descriptionUseOfMeasure": "There is no information on the use.",
+            "descriptionInvolvementOfSocialPartners": "The own initiative of social partners.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2020-19_1153.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1453",
+                    "sources::title": "Joint Declaration\rEnsuring business continuity and protection of workers in the COVID19 pandemic ",
+                    "sources::url": "https://www.uni-europa.org/wp-content/uploads/2020/05/20200508-CoESS_UNI_Joint_Statement_Covid19.pdf",
+                    "sources::d_date": "05/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1454",
+                    "sources::title": "COMMUNICATION FROM THE COMMISSION\r\rCOVID-19\r\rGuidance on the implementation of the temporary restriction on non-essential travel to the EU, on the facilitation of transit arrangements for the repatriation of EU citizens, and on the effects on visa policy",
+                    "sources::url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52020XC0330(02)&from=EN",
+                    "sources::d_date": "03/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "9",
+                    "actors::name": "EU level social partners",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "110",
+                    "sectors::code": "N80",
+                    "sectors::name": "Security and investigation activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1063",
+        "modId": "17"
     },
     {
         "fieldData": {
