@@ -56924,6 +56924,108 @@
     },
     {
         "fieldData": {
+            "title": "Creation of a new instrument for temporary Support to mitigate Unemployment Risks in an Emergency (SURE)",
+            "title_nationalLanguage": "",
+            "d_startDate": "05/19/2019",
+            "d_endDate": "12/31/2022",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "EU-2019-21/1065",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/05/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "The EU instrument \"Support to mitigate Unemployment Risks in an Emergency\" (SURE)  is one of the three safety nets, for jobs and workers, businesses and Member States, contained in the Eurogroup report agreed on 9 April 2020. In order to provide requesting Member States with financial assistance at favourable terms, the European Commission will raise funds on international capital markets on behalf of the EU. SURE loans will be backed by the EU budget and guarantees provided by Member States. Formally, the financial assistance will be granted by a decision adopted by the Council on a proposal from the Commission.",
+            "descriptionContentOfMeasure": "SURE is a temporary scheme which can provide up to \u20ac100 billion of loans under favourable terms to all Member States. The instrument enables Member States to request EU financial support to help finance the sudden and severe increases of national public expenditure, as from 1 February 2020, related to national short-time work schemes and similar measures, including for self-employed persons, or to some health-related measures, in particular at the workplace in response to the crisis.\r\rSURE will become available after all Member States have provided their guarantees. Each Member State's contribution to the overall amount of the guarantee corresponds to its relative share in the total gross national income (GNI) of the European Union, based on the 2020 EU budget. The instrument will then be operational until 31 December 2022. On the proposal from the Commission, the Council may decide to extend the period of availability of the instrument, each time for a further six-month period, if the severe economic disturbances caused by the COVID-19 outbreak persist.",
+            "descriptionUseOfMeasure": "On August 24, the first SURE loans were proposed by the Commission for the following countries:\r\r* Italy - \u20ac27.4 billion;\r* Spain - \u20ac21.3 billion, \r* Poland - \u20ac11.2 billion; \r* Belgium - \u20ac7.8 billion;\r* Portugal - \u20ac5.9 billion; \r* Romania - \u20ac4 billion; \r* Greece - \u20ac2.7 billion; \r* Czechia - \u20ac2 billion; \r* Slovenia - \u20ac1.1 billion.\r* Croatia - \u20ac1 billion;\r* Lithuania- \u20ac602 million; \r* Slovakia - \u20ac631 million;\r* Bulgaria - \u20ac511 million:\r* Cyprus - \u20ac479 million; \r* Malta - \u20ac244 million:\r* Latvia - \u20ac192 million; \r\r\r\r\r\r\r\r",
+            "descriptionInvolvementOfSocialPartners": "Social partners were not directly involved in the work on this initiative. However, they had demanded its creation (especially trade unions) and monitored the design process.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2019-21_1065.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1404",
+                    "sources::title": "COUNCIL REGULATION (EU) 2020/672\r\rof 19 May 2020\r\ron the establishment of a European instrument for temporary support to mitigate unemployment risks in an emergency (SURE) following the COVID-19 outbreak",
+                    "sources::url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32020R0672",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1434",
+                    "sources::title": "BUSINESSEUROPE proposals for a European economic recovery plan",
+                    "sources::url": "https://www.businesseurope.eu/publications/businesseurope-proposals-european-economic-recovery-plan",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1435",
+                    "sources::title": "EU urged to swiftly approve 'SURE' to save jobs from C19 breakdown",
+                    "sources::url": "https://www.etuc.org/en/pressrelease/eu-urged-swiftly-approve-sure-save-jobs-c19-breakdown",
+                    "sources::d_date": "04/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1436",
+                    "sources::title": "MFF and Recovery Plan: the ETUC demands reinforcement of social partners involvement",
+                    "sources::url": "https://www.etuc.org/en/pressrelease/mff-and-recovery-plan-etuc-demands-reinforcement-social-partners-involvement",
+                    "sources::d_date": "08/05/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1437",
+                    "sources::title": "SURE: Commission proposals to the Council for support to the Member States",
+                    "sources::url": "https://ec.europa.eu/info/publications/sure-commission-proposals-council-support-member-states_en",
+                    "sources::d_date": "08/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "10",
+                    "actors::name": "EU (Council, EC, EP)",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "funding::name": "Other",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "975",
+        "modId": "23"
+    },
+    {
+        "fieldData": {
             "title": "Collective agreement Volkswagen Slovensko Bratislava for 2019-2023",
             "title_nationalLanguage": "Kolekt\u00edvna zmluva Volkswagen Slovensko Bratislava\u00a02019 \u2013 2023 ",
             "d_startDate": "04/01/2020",
@@ -58105,6 +58207,156 @@
     },
     {
         "fieldData": {
+            "title": "EU social partners in central governments' sector call for investing in public sector staff",
+            "title_nationalLanguage": "",
+            "d_startDate": "06/30/2020",
+            "d_endDate": "",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "EU-2020-27/1088",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "On 9 July social partners for central government administration reached a joint statement on COVID- 19 and its aftermath. The parties to the statement are:  the EU Public Administration Employers Platform (EUPAE) and Trade Unions' National and European Administration Delegation (TUNED) composed of European Confederation of Independent Trade Unions (CESI) and European Federation of  Public Service Unions (EPSU) representatives. The statement was agreed within the  Sectoral Social Dialogue Committee for Central Government administrations established on 17 September 2010.\r\r",
+            "descriptionContentOfMeasure": "As the lock-downs are being gradually lifted and in view of ensuring a safe recovery and  prevent new waves of the pandemic, social partners point out the following i.a.:\r\r* As part of continued government efforts to suppress, control and prevent the lethal virus, a greater focus should be placed on occupational safety, health and inequalities as an integral part of public health and an effective response to health emergencies;\r* the key role of public administration in dealing with the pandemic should be recognized; once again it has been well proven that public administration is an asset supporting governments, citizens and businesses;\r* it must be ensured that public sector workers must be valued as part of the economic recovery and that therefore public investment in the public sector and its staff will be critical to reducing inequalities and unemployment and to social, environmental and economic development. recovery;\r* in connection with the above, the importance of budgetary stability for the proper functioning of a democratic welfare state is essential;\r* the best way to protect citizens using public administration institutions is to protect employees and civil servants entrusted with the task of caring; therefore these workers must be given priority with regard to protective equipment;\r* the proposal to give legal force to the EU social partners' agreement on information and consultation of employees in central administration is particularly relevant in the present situation.\r* there is an urgent need to learn lessons from the development of teleworking and the use of digital tools during a pandemic, this should be done in consultation with employee representatives. ",
+            "descriptionUseOfMeasure": "The statement concerns central government staff in the Member States.",
+            "descriptionInvolvementOfSocialPartners": "The statement is an independent joint initiative of social partners representing the central  administration sector. Employers 'side: EUPAE, trade unions' side: TUNED - joint union representation of EPSU and CESI.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2020-27_1088.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1401",
+                    "sources::title": "Statement on Covid-19 and its aftermath by EU social partners in central governments: investing in public sector staff",
+                    "sources::url": "https://www.epsu.org/article/statement-covid-19-and-its-aftermath-eu-social-partners-central-governments-investing-public",
+                    "sources::d_date": "07/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "9",
+                    "actors::name": "EU level social partners",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "114",
+                    "sectors::code": "O84",
+                    "sectors::name": "Public administration and defence; compulsory social security",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "998",
+        "modId": "22"
+    },
+    {
+        "fieldData": {
+            "title": "European social partners call for strategy for retail and wholesale sector",
+            "title_nationalLanguage": "",
+            "d_startDate": "04/08/2020",
+            "d_endDate": "",
+            "calc_country": "European Union",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Measures to support a gradual relaunch of work",
+            "calc_identifier": "EU-2020-15/1093",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "The statement of the representative social partners of this sector, namely: Eurocommerce and UNI Europa, is to point out that they  remain committed to protecting employees and their jobs, suppliers and customers, and maintaining this essential economic activity during pandemic crisis. They expect also the  commitment from the EU and national authorities. The statement concerns the situation of 29 million people work in the  retail and wholesale sector in Europe.",
+            "descriptionContentOfMeasure": "The EU social partners in the retail and wholesale sector stress that they are working together to ensure the continued safety of its workforce who are interacting daily with European consumers, during the pandemic.\r\rThey also ask EU and national authorities governments to engage with social partners in drawing up an exit strategy and support measures to avoid significant permanent closures of shops and the social impact these risk to local employment and the viability of rural communities and town centres, and to help return the sector to normality after the virus has subsided.\r\rIn the opinion of EuroCommerce and UNI-Europa, employees in food retail and wholesale need to be classified as essential workers, who should be given help if schools and childcare facilities have closed; while in frontier regions, national authorities must let them cross the border freely to get to work. \r",
+            "descriptionUseOfMeasure": "There is no information on the use.",
+            "descriptionInvolvementOfSocialPartners": "The statement was an independent initiative of the social partners. It was prepared by social partner organizations representative at European level for this sector: Eurocommerce on the side of employers and UNI Europa on the side of trade unions.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/EU-2020-15_1093.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1408",
+                    "sources::title": "Joint statement EuroCommerce/UNI-Europa",
+                    "sources::url": "https://www.uni-europa.org/2020/04/joint-statement-eurocommerce-uni-europa/",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "9",
+                    "actors::name": "EU level social partners",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1003",
+        "modId": "18"
+    },
+    {
+        "fieldData": {
             "title": "Trade union initiative for a complete closure of shops on Sunday",
             "title_nationalLanguage": "Pobuda za zaprtje trgovin ob nedelja",
             "d_startDate": "05/13/2020",
@@ -58516,6 +58768,164 @@
         },
         "recordId": "1011",
         "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Bonuses from supermarket chains to reward their employees.",
+            "title_nationalLanguage": "M\u03c0\u03cc\u03bd\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03c4\u03b9\u03c2 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2 \u03c3\u03bf\u03c5\u03c0\u03b5\u03c1 \u03bc\u03b1\u03c1\u03ba\u03b5\u03c4 \u03c9\u03c2 \u03b5\u03c0\u03b9\u03b2\u03c1\u03ac\u03b2\u03b5\u03c5\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03c4\u03bf\u03c5\u03c2.",
+            "d_startDate": "03/31/2020",
+            "d_endDate": "05/31/2020",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Remuneration and rewards for workers in essential services",
+            "calc_identifier": "GR-2020-14/1106",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/11/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "During the pandemic crisis, many businesses were forced or voluntarily shut down.  On the contrary, the food and supermarket retailers, an industry with high rates of flexible forms of employment, not only closed down but also increased their turnover.\r\rThe major supermarket chains in Greece, recognizing the extraordinary efforts made by their employees during the pandemic in order to serve the consumers, granted a series of bonuses to their staff, proceeded in new recruitments and gave pay increases. Among the companies were the leading Supermarkets in Greece such as \u201cMasoutis\u201d, \u201cSklavenitis\u201d, \u201cLidl Hellas\u201d, \u201cAB Basilopoulos\u201d (Ahold Group) and \u201c\u039cy Market\u201d.",
+            "descriptionContentOfMeasure": "Supermarket chains in Greece, recognizing the great efforts made by their employees, rewarded their staff by granting bonuses and making new hires.  The Masoutis chain, first of all, distributed to its employees the 30% of its annual net profits as an additional bonus. The company SKLAVENITIS granted an exceptional benefit of \u20ac5 million at the end of March 2020, while announced 1,000 recruitments.  AB Vasilopoulos (Ahold Group) allocated more than \u20ac3 million to its employees. The \u201cMy Market\u201d company also allocated an additional amount of \u20ac2.5 million to its employees. It also made 450 recruitments for its e-shop activity and its distribution centres. LIDL Hellas granted an exceptional benefit amounting to \u20ac1.8 million in the form of vouchers.",
+            "descriptionUseOfMeasure": "It is estimated that, the bonuses given to the employees in the supermarket sector, concern over 60,000 food retail workers, increased their income and rewarded them for their significant  contribution to the proper functioning of businesses during the lock-down period.",
+            "descriptionInvolvementOfSocialPartners": "It is an initiative of companies. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-14_1106.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Company practices",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1393",
+                    "sources::title": "\u039c\u03c0\u03b1\u03c1\u03ac\u03b6 bonus \u03b3\u03b9\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03b5\u03c1\u03b3\u03b1\u03b6\u03cc\u03bc\u03b5\u03bd\u03bf\u03c5\u03c2 \u03c4\u03b7\u03c2 \"\u03c0\u03c1\u03ce\u03c4\u03b7\u03c2 \u03b3\u03c1\u03b1\u03bc\u03bc\u03ae\u03c2\"",
+                    "sources::url": "https://www.naftemporiki.gr/afieromata/story/1604434/mparaz-bonus-gia-tous-ergazomenous-tis-protis-grammi",
+                    "sources::d_date": "06/01/2020",
+                    "modId": "1"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "21",
+                    "occupations::name": "Sales workers",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1016",
+        "modId": "22"
+    },
+    {
+        "fieldData": {
+            "title": "Employers organisations FAQs on COVID-19",
+            "title_nationalLanguage": "FAQs der Arbeitgeberverb\u00e4nde zu COVID-19",
+            "d_startDate": "05/31/2020",
+            "d_endDate": "",
+            "calc_country": "Germany",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "DE-2020-23/1113",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "Against the background of the COVID-19 pandemic, many employer and business organisations compiled information leaflets, guidelines and FAQs to help their members to keep up with the amount of new information released during the first half of 2020 (e.g. regards newly available help measures) and make them aware of what is available regards company support, but also what needs to be observed by companies in a time of a pandemic.",
+            "descriptionContentOfMeasure": "The Confederation of German Confederation of Skilled Crafts (ZDH) published FAQs - especially designed for crafts businesses. Whilst the information is put together for the needs of the crafts sector, information might also be interesting for companies from other sectors. It is available online (for free). The ZDH's FAQ site gives advice on topics, such as public and financial support measures, legal amendments to existing short-time working rules, social security issues and tax deductions or deferrals for self-employed persons and occupational health and safety issues. In addition, the ZDH published FAQs on how to deal with vocational training and trainees' examinations that usually conclude the training but might now be deferred to COVID-19.\r\rThe Confederation of German Employer Organisations (BDA) published FAQs on current short-time working rules. Short-time working rules were eased right at the beginning of the COVID-19 outbreak to help companies stay afloat during a time of low demand. Read more on the [[COVID-19 Database](https://static.eurofound.europa.eu/covid19db/cases/DE-2020-10_541.html?utm_source=externalDashboard&utm_medium=powerbi&utm_campaign=covid-19). The BDA's guideline provides an overview on companies' rights and obligations when sending their workers on short-time work. In addition, the BDA published guidelines on legal labour issues that might occur during a pandemic. They provide an overview on companies' rights and obligations during a pandemic - especially in the field of employment and labour relations. Topics covered by the guideline are: \r\r* legal definition on infection and suspecting an infection plus information and notification obligations\r* information on infection protection law information and on Federal Government's social protection package \r* rules for home-office and short-time working arrangements \r* information on the COVID-19 app employees returning from holidays.\r\r",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "The FAQs and guidelines are designed and implemented by the employer organisations themselves. Providing this kind of material is part of the organisations' member services. This information is meant to help members to navigate and observe the legal obligations during a pandemic and help business to stay afloat during a time of crisis.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-23_1113.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1406",
+                    "sources::title": "FAQ \u2013 Labour Law Consequences of a Pandemic (FAQ - Arbeitsrechtliche Folgen einer Pandemie)",
+                    "sources::url": "https://www.arbeitgeber.de/www/arbeitgeber.nsf/res/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf/$file/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1407",
+                    "sources::title": "FAQ - Short-time work (FAQ - Kurzarbeit)",
+                    "sources::url": "https://www.arbeitgeber.de/www/arbeitgeber.nsf/res/FAQ%20-%20Kurzarbeitergeld.pdf/$file/FAQ%20-%20Kurzarbeitergeld.pdf",
+                    "sources::d_date": "07/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1411",
+                    "sources::title": "ZDH:  Corona FAQ for crafts businesses (Corona: FAQ f\u00fcr Handwerksbetriebe)",
+                    "sources::url": "https://www.zdh.de/service/fuer-betriebe/corona-faq-fuer-handwerksbetriebe/#c108601",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1417",
+                    "sources::title": "COVID-19 pandemic and consequences for examinations in the crafts sector (Corona-Pandemie und die Folgen f\u00fcr das Pr\u00fcfungswesen im Handwerk)",
+                    "sources::url": "https://www.zdh.de/fileadmin/user_upload/themen/Service/FAQ_Coronavirus-Pandemie_und_die_Folgen_fuer_das_Pruefungswesen_Update_20200506.pdf",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1023",
+        "modId": "27"
     },
     {
         "fieldData": {
@@ -59024,6 +59434,86 @@
     },
     {
         "fieldData": {
+            "title": "COVID-19 info-hotline for East European workers  ",
+            "title_nationalLanguage": "Corona-Hotline f\u00fcr osteurop\u00e4ische Besch\u00e4ftigte",
+            "d_startDate": "03/15/2020",
+            "d_endDate": "",
+            "calc_country": "Germany",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "DE-2020-12/1144",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "During the pandemia, certain industries were at risk of collapse because the borders were closed for foreign workers. It showed that agriculture and forestry, meat processing, private care of the elderly and construction depend on seasonal and posted workers from abroad. Moreover, also the wharf industry and other manufcturing industries depend on posted workers.\rFollowing on public outcries that the supply of meat and vegetables might be affected, government permitted foreign workers to enter the country for work. \r\r__Faire Mobilit\u00e4t__, a network of consultants for Eastern European workers run by the Confederation of German Trade Unions (DGB) and predominately funded by the Federal Employment Agency, set up a phone hotline for foreign workers in need of support.\r\r",
+            "descriptionContentOfMeasure": "Established in 2011, __Faire Mobilit\u00e4t__ today holds nine advisory centers located all over Germany. Social and labour rights experts speaking different languages give comprehensible information and direct support in case of need. Data by the advisory centers indicate that workers contact them because of wage issues or wage theft, lack of information, violations of social rights or health and safety. The consultants provide individual support; big cases involving a number of workers are made public via email newsletters and media contacts.\r\rThe COVID-19 pandemic poses a particular challenge because mobile workers from abroad are often contained in groups at their employers' premises or they work together with little space for social distancing.  \r\r__Faire Mobilit\u00e4t__ runs a standard phone hotline; in face of COVID-19, the hotline was extended to provide information on the workers' rights and obligations with regard to the pandemia but also to give support in case of individual anxieties. \r",
+            "descriptionUseOfMeasure": "Data on the use of the COVID-19 hotline is not yet available. \r\r",
+            "descriptionInvolvementOfSocialPartners": "Faire Mobilit\u00e4t is a structure set up by the DGB and has the DGB on its steering board. Employers organisations are not involved.\rIn case any violations of labour rights become known, the sectoral affiliates of DGB will get involved as well.\r .\rIn case COVID 19 infections become known because of the hotline, Faire Mobilit\u00e4t and the sectoral trade union at local level will contact the labour inspectorate for investigating the  occupational safety and health standards and the conditions of housing. \r",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-12_1144.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1450",
+                    "sources::title": "Hotline for Eastern European workers ",
+                    "sources::url": "",
+                    "sources::d_date": "03/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "48",
+                    "targetGroups::name": "Seasonal workers",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "50",
+                    "targetGroups::name": "Posted workers",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "75",
+                    "targetGroups::name": "Migrants in employment",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1054",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
             "title": "Trygghetsfonden - Competences for work",
             "title_nationalLanguage": "Trygghetsfonden - Kompetens f\u00f6r arbete",
             "d_startDate": "02/01/2017",
@@ -59107,5 +59597,154 @@
         },
         "recordId": "1055",
         "modId": "22"
+    },
+    {
+        "fieldData": {
+            "title": "Agreed premium but no wage rise for rubber workers",
+            "title_nationalLanguage": "Coronapr\u00e4mie im verl\u00e4ngerten Tarifvertrag Kautschuk ",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "03/31/2021",
+            "calc_country": "Germany",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Wage flexibility ",
+            "calc_identifier": "DE-2020-14/1146",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/16/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "In March 2020, the Chemicals and Mine Workers Union (IGBCE) and the Employers of the Rubber Industry (ADK) met for negotiating a new collective agreement. Under the conditions of the COVID-19 outbreak, the collective bargaining partners negotiated via Skype and took a very fast decision aimed at safeguarding the businesses.\r",
+            "descriptionContentOfMeasure": "The collective bargaining process took place in a short digital meeting. Both sides, the IGBCE and ADK, were interested in a fast outcome. Industrial actions or campaigns did not take place. The partners   agreed to extend the collective wage agreement from March 2018 to last until 31 March 2021 and to not negotiate a wage rise. For compensation and for mitigating any financial hardships due to COVID-19, they agreed on a one-time premium of \u20ac200 for full-time workers and of \u20ac100 for apprentices. The premium for part time workers varies depending on the number of hours worked.     ",
+            "descriptionUseOfMeasure": "There is no information on the use of the measure.",
+            "descriptionInvolvementOfSocialPartners": "This was a standard collective bargaining procedure under unususal circumstances. A particular monitoring or assessment procedure was not agreed; also, there was no unusual involvement of the collective bargaining partners. Under the Works Constitution, the payment of the premium is monitored by the works council. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-14_1146.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Permanent measure applied "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1448",
+                    "sources::title": "Collective agreement rubber industry ",
+                    "sources::url": "",
+                    "sources::d_date": "04/01/2018",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1449",
+                    "sources::title": "Employers on collective agreement ",
+                    "sources::url": "",
+                    "sources::d_date": "04/01/2019",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1056",
+        "modId": "20"
+    },
+    {
+        "fieldData": {
+            "title": "New assistance fund to support micro-enterprises",
+            "title_nationalLanguage": "Micro-Enterprise Assistance Fund",
+            "d_startDate": "09/14/2020",
+            "d_endDate": "",
+            "calc_country": "Ireland",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "IE-2020-38/1155",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/18/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "Funding for micro-enterprises which have not been eligible for other COVID-19 support grants.  The total fund is \u20ac2 million and grants are up to \u20ac1,000, so about 2,000 businesses are to benefit.  The launch event for the scheme to place in County Kildare, which was subject to a localised increase in public health restrictions during August - although the scheme is available nationally.",
+            "descriptionContentOfMeasure": "Grants of up to \u20ac1,000 available to micro-enterprises (defined as those with at least one and up to 10 full-time employees), which have been impacted by a 30% reduction in turnover due to COVID-19 restrictions or downturn in trade.\r\rThe grant is based on the amount of additional vouched expenditure from September 14th, 2020 and is confined to those with a commercial focus, with an up to date tax compliance certificate and within eligible sector (exclude gambling, coal and steel etc).  They must be businesses which are not eligible for other state sectoral funding schemes.\r\rThe total fund is \u20ac2 million, so it is expected that about 2,000 businesses will benefit.",
+            "descriptionUseOfMeasure": "Not yet known - scheme just launched September 14.",
+            "descriptionInvolvementOfSocialPartners": "Social partners not involved - the fund is a national government initiative.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-38_1155.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1459",
+                    "sources::title": "T\u00e1naiste announces additional funding for small businesses\rUp to 2,000 businesses nationwide eligible",
+                    "sources::url": "https://dbei.gov.ie/en/News-And-Events/Department-News/2020/September/14092020.html",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1065",
+        "modId": "14"
     }
 ]
