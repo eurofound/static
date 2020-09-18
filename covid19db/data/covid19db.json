@@ -55501,13 +55501,13 @@
     },
     {
         "fieldData": {
-            "title": "Access to Employment ",
-            "title_nationalLanguage": "",
+            "title": "Employment grant to promote access to employment ",
+            "title_nationalLanguage": "Access to Employment",
             "d_startDate": "05/21/2020",
             "d_endDate": "",
             "calc_country": "Malta",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Other",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
             "calc_identifier": "MT-2020-21/1044",
             "dateType": "Open ended",
             "calc_creationDay": "08/24/2020",
@@ -55587,7 +55587,7 @@
             "regions": []
         },
         "recordId": "954",
-        "modId": "13"
+        "modId": "15"
     },
     {
         "fieldData": {
@@ -56445,6 +56445,93 @@
         },
         "recordId": "965",
         "modId": "26"
+    },
+    {
+        "fieldData": {
+            "title": "Information and support group 'ANTI-COVID-19' for workers by trade union GSEE",
+            "title_nationalLanguage": "\u03a3\u03c5\u03c3\u03c4\u03b1\u03c3\u03b7 \u03bf\u03bc\u03ac\u03b4\u03b1\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03cc\u03c1\u03b7\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u0395\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u201cANTI-COVID 19\u201d \u03b1\u03c0\u03cc \u03c4\u03b7 \u03b3\u03c3\u03b5",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GR-2020-12/1057",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/03/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "According to the Greek General Confederation of Labour (GSEE), dealing with the COVID-19 it's  an unprecedented situation, which resulted in exceptional emergency measures which particularly affects the labour market, and therefore  the working  conditions.  For this reason, GSEE through its structures and network, will provide prompt information on their website, instructions and clarifications on the new measures and policies for dealing with the coronavirus pandemic.",
+            "descriptionContentOfMeasure": "GSEE creates the 'ANTI-COVID-19' Employee Information and Support Group. The Group runs a special [web page](https://gsee.gr/?page_id=36762) dedicated to the pandemic through which the workers (through a platform):\r\r* can obtain information and clarification on labour market issues;  \r* submit questions and receive individualised answers; \r* submit any complaints with full respect of anonymity and in order to prevent any phenomena of employers' arbitrariness. \r\rGSEE also calls on  workers to be individually and collectively vigilant in managing the consequences of the emergency situation, receive the immediate information and to resort to the help of the trade unions in order to tackle their problems at work and face any employers' arbitrariness during the crisis. Support is aimed at all employees throughout Greece, without restrictions. Anyone independently of union membership  can use the website and the supporting structures of  GSEE to: \r\r* be informed of its working conditions and on what is entitled to as a result of the measures to deal with the COVID-19 crisis, \r* ask questions about changes in terms and conditions of work, \r* submit specific complaints about employers' arbitrariness, \r* report and make complaints of attempts or acts from employers to restrict collective action\r* submit complaints on violation of workers' rights.",
+            "descriptionUseOfMeasure": "The \"Anti-Covid 19\" Information initiative was quite succesful and an important number of workers either visited the web sites of GSEE and its supporting organisations (KEPEA, INE/GSEE, EEKE) or turned to the platform for information and help.",
+            "descriptionInvolvementOfSocialPartners": "The measure was absolutely an initiative of Trade union. GSEE designed, implemented, founded and made the monitoring of this initiative. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_1057.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1359",
+                    "sources::title": "\u0394\u0395\u039b\u03a4\u0399\u039f \u03a4\u03a5\u03a0\u039f\u03a5 18/3/20 \u03a3\u03a5\u03a3\u03a4\u0391\u03a3\u0397 ANTI-COVID-19 \u039f\u039c\u0391\u0394\u0391\u03a3 \u03a0\u039b\u0397\u03a1\u039f\u03a6\u039f\u03a1\u0397\u03a3\u0397\u03a3 \u039a\u0391\u0399 \u03a5\u03a0\u039f\u03a3\u03a4\u0397\u03a1\u0399\u039e\u0397\u03a3 \u0395\u03a1\u0393\u0391\u0396\u039f\u039c\u0395\u039d\u03a9",
+                    "sources::url": "https://gsee.gr/?p=3679",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1360",
+                    "sources::title": "\u03a0\u039b\u0391\u03a4\u03a6\u039f\u03a1\u039c\u0391 \u0393\u03a3\u0395\u0395 \u0391\u039d\u03a4\u0399-COVID-19 - \u03a3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03b1 \u03b5\u03c1\u03c9\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03c4\u03b9\u03c2 \u03ba\u03b1\u03c4\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b5\u03c2 \u03c4\u03c9\u03bd \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03c3\u03b5 \u03cc\u03bb\u03b7 \u03c4\u03b7\u03bd \u03b5\u03c0\u03b9\u03ba\u03c1\u03ac\u03c4\u03b5\u03b9\u03b1 - \u03a3\u03b5 \u03c3\u03c5\u03bd\u03b5\u03c7\u03ae \u03b5\u03c0\u03b1\u03b3\u03c1\u03cd\u03c0\u03bd\u03b7\u03c3\u03b7 \u03b7 \u0393\u03a3\u0395\u0395 \u03ba\u03b1\u03b9 \u03bf\u03b9 \u03b4\u03bf\u03bc\u03ad\u03c2 \u03c4\u03b7",
+                    "sources::url": "https://www.kepea.gr/aarticle.php?id=184",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1361",
+                    "sources::title": "\u0394\u0395\u039b\u03a4\u0399\u039f \u03a4\u03a5\u03a0\u039f\u03a5\r19/3/20\r\u03a4\u03a3\u039f\u03a5\u039d\u0391\u039c\u0399 \u0395\u03a1\u03a9\u03a4\u0397\u039c\u0391\u03a4\u03a9\u039d \u039a\u0391\u0399 \u039a\u0391\u03a4\u0391\u0393\u0393\u0395\u039b\u0399\u03a9\u039d\r\u03a3\u03a4\u0397\u039d \u0391\u039dTI COVID 19 \u039f\u039c\u0391\u0394\u0391 \u03a4\u0397\u03a3 \u0393\u03a3\u0395\u0395",
+                    "sources::url": "https://gsee.gr/?p=3679",
+                    "sources::d_date": "03/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1362",
+                    "sources::title": "\u039a\u03bf\u03c1\u03bf\u03bd\u03b1\u03ca\u03cc\u03c2 : \u0392\u03c1\u03bf\u03c7\u03ae \u03ba\u03b1\u03c4\u03b1\u03b3\u03b3\u03b5\u03bb\u03b9\u03ce\u03bd \u03b1\u03c0\u03cc \u03b5\u03c1\u03b3\u03b1\u03b6\u03cc\u03bc\u03b5\u03bd\u03bf\u03c5\u03c2 \u03c3\u03c4\u03b7 \u0393\u03a3\u0395\u0395",
+                    "sources::url": "https://www.tanea.gr/2020/03/20/greece/koronaios-vroxi-kataggelion-apo-ergazomenous-sti-gsee",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1363",
+                    "sources::title": "\u03a0\u03bb\u03b1\u03c4\u03c6\u03cc\u03c1\u03bc\u03b1 \u0393\u03a3\u0395\u0395 anti-covid-19: \u03a4\u03b9 \u03b1\u03c0\u03bf\u03ba\u03b1\u03bb\u03cd\u03c0\u03c4\u03bf\u03c5\u03bd \u03c4\u03b1 \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03b1 \u03b1\u03c0\u03cc \u03c4\u03b1 \u03b5\u03c1\u03c9\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03c4\u03b9\u03c2 \u03ba\u03b1\u03c4\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b5\u03c2",
+                    "sources::url": "https://www.capital.gr/oikonomia/3444819/platforma-gsee-anti-covid-19-ti-apokaluptoun-ta-stoixeia-apo-ta-erotimata-kai-tis-kataggelie",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "967",
+        "modId": "35"
     },
     {
         "fieldData": {
@@ -58432,131 +58519,6 @@
     },
     {
         "fieldData": {
-            "title": "Guidelines on labour law consequences from employer confederation BDA",
-            "title_nationalLanguage": "Leitfaden zu arbeitsrechtlichen Konsequenzen",
-            "d_startDate": "07/31/2020",
-            "d_endDate": "",
-            "calc_country": "Germany",
-            "calc_minorCategory": "Protection of workers, adaptation of workplace",
-            "calc_subMinorCategory": "Occupational health and safety",
-            "calc_identifier": "DE-2020-31/1110",
-            "dateType": "Temporary",
-            "calc_creationDay": "09/14/2020",
-            "calc_lastUpdate": "09/15/2020",
-            "descriptionBackgroundInfo": "Against the background of the COVID-19 pandemic, the Confederation of German Employer Organisations (BDA) has compiled several guidelines and information leaflets to help their members to keep up with the amount of new information released during the first half of 2020 (e.g. regards newly available help measures). In addition, the BDA also provides information on legal obligations during a pandemic - especially with a view to labour and employment relationships.",
-            "descriptionContentOfMeasure": "The Confederation of German Employer Organisations (BDA) published guidelines on legal labour issues that might occur during a pandemic. They provide an overview on companies' rights and obligations during a pandemic - especially in the field of employment and labour relations. Topics covered by the guideline are:\r\r*legal definition on infection and suspecting an infection plus information and notification obligations\r*information on infection protection law\r*information on Federal Government's social protection package\r*rules for home-office and short-time working arrangements\r*information on the COVID-19 app\r*employees returning from holidays\r\rThis information is meant to help members to navigate and observe the legal obligations during a pandemic. ",
-            "descriptionUseOfMeasure": "No information available.",
-            "descriptionInvolvementOfSocialPartners": "This guideline is a unilateral employer organisation action. The Confederation of German Employer Organisations (BDA) published the guideline on legal aspects in the field of employment relations as part of their member services and to help companies to keep up with the very specific legal regulations to be observed during the pandemic. ",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-31_1110.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Other initiatives or policies",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1406",
-                    "sources::title": "FAQ \u2013 Labour Law Consequences of a Pandemic (FAQ - Arbeitsrechtliche Folgen einer Pandemie)",
-                    "sources::url": "https://www.arbeitgeber.de/www/arbeitgeber.nsf/res/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf/$file/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf",
-                    "sources::d_date": "09/14/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "4",
-                    "funding::name": "Employers organisation",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "1020",
-        "modId": "12"
-    },
-    {
-        "fieldData": {
-            "title": "German employers BDA supports members with FAQ on short-time work ",
-            "title_nationalLanguage": "FAQ \u2013 Kurzarbeit \rFAQ \u2013 Kurzarbeit (Stand 30. Juli 2020)",
-            "d_startDate": "07/30/2020",
-            "d_endDate": "",
-            "calc_country": "Germany",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "DE-2020-31/1111",
-            "dateType": "Temporary",
-            "calc_creationDay": "09/14/2020",
-            "calc_lastUpdate": "09/18/2020",
-            "descriptionBackgroundInfo": "Against the background of the COVID-19 pandemic, the Confederation of German Employer Organisations (BDA) has compiled several guidelines and information leaflets to help their members to keep up with the amount of new information released during the first half of 2020 (e.g. regards newly available help measures). In this context, the BDA has also released information on current short-time work rules.",
-            "descriptionContentOfMeasure": "The Confederation of German Employer Organisations (BDA) published FAQs on current short-time working rules. Short-time working rules were eased right at the beginning of the COVID-19 outbreak to help companies stay afloat during a time of low demand. The BDA's guideline provides an overview on companies' rights and obligations when sending their workers on short-time work. Topics covered by the guideline are:\r\r*information on legal amendments to existing short-time working rules \r*information on which employee groups can apply for short-time work where, under what circumstances and for how long \r*information on deductions from the short-time working allowance due to a side-job\r*examples on the level of the short-time working allowance for employees with different backgrounds (children or no children) and during different months of the short-time working arrangement\r*information on collectively agreed top-ups to be provided in addition to the public short-time working allowance\r*information on holidays, over-time and other legal issues to be observed during short-time work\r",
-            "descriptionUseOfMeasure": "No information available.",
-            "descriptionInvolvementOfSocialPartners": "The Confederation of German Employer Organisations (BDA) designed and implemented the guideline on short-time work on its own. The guideline is part of the BDA\u2019s member services. This information is meant to help members to navigate and observe the legal obligations during a pandemic and help business to stay afloat during a time of crisis.",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-31_1111.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Other initiatives or policies",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1406",
-                    "sources::title": "FAQ \u2013 Labour Law Consequences of a Pandemic (FAQ - Arbeitsrechtliche Folgen einer Pandemie)",
-                    "sources::url": "https://www.arbeitgeber.de/www/arbeitgeber.nsf/res/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf/$file/Arbeitsrechtliche-Folgen-einer-Pandemie.pdf",
-                    "sources::d_date": "09/14/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1407",
-                    "sources::title": "FAQ - Short-time work (FAQ - Kurzarbeit)",
-                    "sources::url": "https://www.arbeitgeber.de/www/arbeitgeber.nsf/res/FAQ%20-%20Kurzarbeitergeld.pdf/$file/FAQ%20-%20Kurzarbeitergeld.pdf",
-                    "sources::d_date": "07/30/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "4",
-                    "funding::name": "Employers organisation",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "1021",
-        "modId": "10"
-    },
-    {
-        "fieldData": {
             "title": "Amendment of the sectoral collective agreement for the Lithuanian national public health system",
             "title_nationalLanguage": "Nacionalin\u0117s sveikatos sistemos biud\u017eetinio sektoriaus \u0161akos kolektyvin\u0117s sutarties pakeitimas",
             "d_startDate": "07/14/2020",
@@ -58785,6 +58747,110 @@
     },
     {
         "fieldData": {
+            "title": "Suspension of the collective agreement of the tour guides of Crete and Santorini in case of pandemic",
+            "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03b9\u03ba\u03ae\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03be\u03b5\u03bd\u03b1\u03b3\u03ce\u03bd \u039a\u03c1\u03b7\u03c4\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03a3\u03b1\u03bd\u03c4\u03bf\u03c1\u03af\u03bd\u03b7\u03c2 \u03c3\u03b5 \u03c0\u03b5\u03c1\u03af\u03c0\u03c4\u03c9\u03c3\u03b7 \u03c0\u03b1\u03bd\u03b4\u03b7\u03bc\u03af\u03b1\u03c2",
+            "d_startDate": "07/09/2020",
+            "d_endDate": "12/31/2021",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GR-2020-28/1120",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "During 2020, only a few sectoral or occupational collective agreements were signed. More specifically, until September 2020, only 11 collective labour agreements had been concluded. The vast majority of them (10 out of 11) do not include clauses relating to the pandemic. Only the occupational / local collective agreement of the tour guides in Crete and Santorini includes a condition that provides for the suspension of the agreement due to cases of \u201cforce majeure\u2019, including pandemic.  ",
+            "descriptionContentOfMeasure": "On 9 July 2020, an occupational collective agreement was signed covering the tour guides working for the tourist offices of Crete and Santorini. The collective agreement was signed between the \"Association of Tourist and Travel Agencies of Crete\" and the \"Trade Union of Professional Guides of Crete and Santorini\". A new term has been added between the terms laid down in the agreement and in particular in the section relating to reasons that can result in the cancellation of the collective agreement. This sets out the cases of \u201cforce majeure\u201d  for which the collective agreement is suspended. Among the cases of force majeure is the pandemic. As long as the pandemic exists and there is low or no turnover of the companies, the implementation of the agreement is suspended. It should be noted that the corresponding previous collective agreement (2018-2019) did not specify the cases of force majeure for which the employment agreement could be suspended.\r",
+            "descriptionUseOfMeasure": "\rThere is no information.",
+            "descriptionInvolvementOfSocialPartners": "It is an occupational collective agreement for tour guides working in the tourist offices of Crete and Santorini. The collective agreement was signed between the \"Association of Tourist and Travel Agencies of Crete\" and the \"Trade union of Professional Guides of Crete and Santorini\".",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-28_1120.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1419",
+                    "sources::title": "\u03a3.\u03a3.\u0395. (9.7.2020) \u0393\u03b9\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03cc\u03c1\u03bf\u03c5\u03c2 \u03b1\u03bc\u03bf\u03b9\u03b2\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c4\u03c9\u03bd \u039e\u03b5\u03bd\u03b1\u03b3\u03ce\u03bd \u03c0\u03bf\u03c5 \u03b5\u03c1\u03b3\u03ac\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7 \u03b5\u03be\u03b1\u03c1\u03c4\u03b7\u03bc\u03ad\u03bd\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c3\u03c4\u03b9\u03c2 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2 \u03c4\u03bf\u03c5\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd \u0393\u03c1\u03b1\u03c6\u03b5\u03af\u03c9\u03bd \u039a\u03c1\u03ae\u03c4\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03a3\u03b1\u03bd\u03c4\u03bf\u03c1\u03af\u03bd\u03b7",
+                    "sources::url": "https://www.taxheaven.gr/labordoc/143/content/90",
+                    "sources::d_date": "07/09/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1420",
+                    "sources::title": "\u03a3.\u03a3.\u0395. (22.2.2018) \u03b3\u03b9\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03cc\u03c1\u03bf\u03c5\u03c2 \u03b1\u03bc\u03bf\u03b9\u03b2\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c4\u03c9\u03bd \u039e\u03b5\u03bd\u03b1\u03b3\u03ce\u03bd \u03c0\u03bf\u03c5 \u03b5\u03c1\u03b3\u03ac\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7 \u03b5\u03be\u03b1\u03c1\u03c4\u03b7\u03bc\u03ad\u03bd\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c3\u03c4\u03b9\u03c2 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2 \u03c4\u03bf\u03c5\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd \u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c9\u03bd \u039a\u03c1\u03ae\u03c4\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03a3\u03b1\u03bd\u03c4\u03bf\u03c1\u03af\u03bd\u03b7",
+                    "sources::url": "https://www.taxheaven.gr/labordoc/143/content/84",
+                    "sources::d_date": "02/22/2018",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "14",
+                    "occupations::name": "Legal, social, cultural and related associate professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2464",
+                    "regions::countryCode": "GR",
+                    "regions::level": 1,
+                    "regions::name": "N\u0397\u03a3\u0399\u0391 \u0391\u0399\u0393\u0391\u0399\u039f\u03a5, K\u03a1\u0397\u03a4\u0397 (NISIA AIGAIOU, KRITI)",
+                    "regions::nutsCode": "EL4",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "1030",
+        "modId": "24"
+    },
+    {
+        "fieldData": {
             "title": "Postponement of collectively agreed wage increases in transport sector",
             "title_nationalLanguage": "Kollektiivsete t\u00f6\u00f6tasukokkulepete edasil\u00fckkamine transpordisektoris",
             "d_startDate": "04/13/2020",
@@ -58955,5 +59021,91 @@
         },
         "recordId": "1037",
         "modId": "16"
+    },
+    {
+        "fieldData": {
+            "title": "Trygghetsfonden - Competences for work",
+            "title_nationalLanguage": "Trygghetsfonden - Kompetens f\u00f6r arbete",
+            "d_startDate": "02/01/2017",
+            "d_endDate": "",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Active labour market policies, incl. subsidised job creation",
+            "calc_identifier": "SE-2017-5/1145",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/16/2020",
+            "calc_lastUpdate": "09/18/2020",
+            "descriptionBackgroundInfo": "Trygghetsfonden (TSL) is a measure/instrument helping people who have been laid off to a new job. They help an average of 15,000 people a year to a new and often more qualified job.\r\rThe goal is to find a solution for privately employed workers who are laid off due to lack of work (and now COVID-19). The solution can mean a new job, start of own business or start studying. When needed, TSL can offer shorter vocational training or validation of vocational skills to increase employability. TSL facilitates structural change in the labor market and strengthens matching.\r\rAbout 1,000 union ombudsmen, 4,000 - 5,000 employers, about 30 adjustment companies and about 40 employees at TSL annually ensure that the adjustment work is successful. A total of 70,000 employers and 2,000,000 employees are covered by TSL's adjustment solution.\r\rIn 2004, Swedish Trade Union Confederation LO and the Confederation of Swedish Enterprise entered into an agreement in which the adjustment support became part of the collective agreement and Trygghetsfonden TSL was formed. TSL adjustment solution applies to all workplaces that have a collective agreement with an LO affiliated trade union. ",
+            "descriptionContentOfMeasure": "\"Competences for work\" was a pilot project within TSL that was co-financed by the European Social Fund between 2017 and 2019. It is now part of the regular activities. \"Competences for work\" is for those who have been laid off and where a shorter vocational education or validation can facilitate the path to a new job. \r\rTSL has built up a long-term model for managing education and selection of participants in adjustment support. The overall goals of Competences to work have been to investigate and analyse how TSL can strengthen the conversion process and create better opportunities to match participants 'skills and experiences with companies' demand. One goal has been to increase the proportion of TSL participants who feel they get a job.",
+            "descriptionUseOfMeasure": "A total of 70,000 employers and 2,000,000 employees are covered by TSL's adjustment solutions.",
+            "descriptionInvolvementOfSocialPartners": "In 2004, Swedish Trade Union Confederation LO and the Confederation of Swedish Enterprise entered into an agreement in which the adjustment support became part of the collective agreement and Trygghetsfonden TSL was formed. \r\rThe conversion process:\r\r1. Employers & unions apply for conversion directly from TSL via web, telephone\ror email.\r2. TSL contacts employers and unions for more information.\r3. TSL's adjustment adviser meets with the dissmissed person to assess the need for\rcoaching or training.\r4. A conversion company assigned by TSL takes over and implements decisions\rmeasures.\r5. The system generates feedback to unions and companies about the results.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2017-5_1145.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Permanent measure applied "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1451",
+                    "sources::title": "TSL ",
+                    "sources::url": "https://www.tsl.se/om-tsl/",
+                    "sources::d_date": "09/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1452",
+                    "sources::title": "TSL Competences for work",
+                    "sources::url": "https://www.tsl.se/om-tsl/esf-projekt/",
+                    "sources::d_date": "09/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1055",
+        "modId": "22"
     }
 ]
