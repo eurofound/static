@@ -58501,7 +58501,7 @@
             "calc_identifier": "DE-2020-31/1111",
             "dateType": "Temporary",
             "calc_creationDay": "09/14/2020",
-            "calc_lastUpdate": "09/16/2020",
+            "calc_lastUpdate": "09/18/2020",
             "descriptionBackgroundInfo": "Against the background of the COVID-19 pandemic, the Confederation of German Employer Organisations (BDA) has compiled several guidelines and information leaflets to help their members to keep up with the amount of new information released during the first half of 2020 (e.g. regards newly available help measures). In this context, the BDA has also released information on current short-time work rules.",
             "descriptionContentOfMeasure": "The Confederation of German Employer Organisations (BDA) published FAQs on current short-time working rules. Short-time working rules were eased right at the beginning of the COVID-19 outbreak to help companies stay afloat during a time of low demand. The BDA's guideline provides an overview on companies' rights and obligations when sending their workers on short-time work. Topics covered by the guideline are:\r\r*information on legal amendments to existing short-time working rules \r*information on which employee groups can apply for short-time work where, under what circumstances and for how long \r*information on deductions from the short-time working allowance due to a side-job\r*examples on the level of the short-time working allowance for employees with different backgrounds (children or no children) and during different months of the short-time working arrangement\r*information on collectively agreed top-ups to be provided in addition to the public short-time working allowance\r*information on holidays, over-time and other legal issues to be observed during short-time work\r",
             "descriptionUseOfMeasure": "No information available.",
@@ -58554,71 +58554,6 @@
         },
         "recordId": "1021",
         "modId": "10"
-    },
-    {
-        "fieldData": {
-            "title": "Employers organisations issues FAQs for crafts businesses",
-            "title_nationalLanguage": "FAQ f\u00fcr Handwerksbetriebe",
-            "d_startDate": "09/14/2020",
-            "d_endDate": "",
-            "calc_country": "Germany",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Other",
-            "calc_identifier": "DE-2020-38/1113",
-            "dateType": "Temporary",
-            "calc_creationDay": "09/14/2020",
-            "calc_lastUpdate": "09/16/2020",
-            "descriptionBackgroundInfo": "Against the background of the COVID-19 pandemic, the German Confederation of Skilled Crafts (ZDH) has compiled several guidelines and information leaflets to help their members to keep up with the amount of new information released during the first half of 2020 (e.g. regards newly available help measures) and make them aware of what is available regards company support, but also what needs to be observed by companies in a time of a pandemic.",
-            "descriptionContentOfMeasure": "The Confederation of German Confederation of Skilled Crafts (ZDH) published FAQs - especially designed for crafts businesses. Whilst the information is put together for the needs of the crafts sector, information might also be interesting for companies from other sectors. It is available online (for free). In detail, the ZDH's FAQ site gives advice on the following topics: \r\r*public measures and financial support to help business with their liquidity\r*legal amendments to existing short-time working rules \r*information on vocational training in firms and schools as well as on holding exams and receiving certificates\r*information on social security issues and tax deductions or deferrals for self-employed persons\r*foreign trade and mobility\r*working in another European state\r*occupational health and safety\r*cybersecurity",
-            "descriptionUseOfMeasure": "No information available.",
-            "descriptionInvolvementOfSocialPartners": "The Confederation of German Confederation of Skilled Crafts (ZDH) designed and implemented the guideline on short-time work on its own. The guideline is part of the BDA\u2019s member services. This information is meant to help members to navigate and observe the legal obligations during a pandemic and help business to stay afloat during a time of crisis.",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/DE-2020-38_1113.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Other initiatives or policies",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1411",
-                    "sources::title": "ZDH:  Corona FAQ for crafts businesses (Corona: FAQ f\u00fcr Handwerksbetriebe)",
-                    "sources::url": "https://www.zdh.de/service/fuer-betriebe/corona-faq-fuer-handwerksbetriebe/#c108601",
-                    "sources::d_date": "09/14/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "4",
-                    "funding::name": "Employers organisation",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "1023",
-        "modId": "16"
     },
     {
         "fieldData": {
