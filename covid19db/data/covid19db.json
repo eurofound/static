@@ -2384,405 +2384,6 @@
     },
     {
         "fieldData": {
-            "title": "COVID-19 wage supplement ",
-            "title_nationalLanguage": "None",
-            "d_startDate": "03/24/2020",
-            "d_endDate": "",
-            "calc_country": "Malta",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "MT-2020-13/264",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/03/2020",
-            "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "This measure provides employees with a basic wage cover in view of the disruption caused by the COVID pandemic to certain industries. Funds are forwarded to employers who are in turn obliged to forward these to their employees. Full time employees in specific sectors will receive \u20ac800 a month from the government through their employers. As part of the agreement, employers in these sectors will continue providing their workers with a further \u20ac400 a month. Employers who were too highly impacted by the pandemic and cannot afford the further \u20ac400 must register with the Department of industrial relations. ",
-            "descriptionContentOfMeasure": "Full time employees working in organisations that operate in sectors severely hit by the COVID-19 pandemic, or on order of the Superintendent of Public Health had to suspend their operations are entitled up to five days salary based on a monthly wage of \u20ac800 . This is also applicable to self-employed individuals. Part-time employees are eligible for \u20ac500 a month. The sectors that can apply for this supplement are under constant review and are listed on the Malta Enterprise website (Annex A). \r\rIn other sectors also thought to have been hit by the pandemic but to a lesser degree, the list of which are also available on the Malta Enterprise website (Annex B), full time and part-time employees are entitled to the equivalent of one days' salary per week, set at \u20ac160 per month and \u20ac100 per month, respectively. Those in Gozo are entitled to two days' salary per week; \u20ac320 per month for full-time and \u20ac200 per month for part-time employees.  \r\rFull-time self-employed in sectors thought to have been hit but to a lesser degree who have employees will receive \u20ac320 per month, part-time self employed \u20ac200 per month. Full-time self-employed based in Gozo in these same sectors will also be entitled to \u20ac320 per month but will rise to  \u20ac480 if they employ staff, and the employees will be entitled to two days salary. Part-time self-employed in Gozo will be entitled to \u20ac200, rising to \u20ac300 if they employ staff. The employees will receive two days salary. \r\rIn July 2020, the sectors in Annex A were reviewed and reduced. Those sectors previously supported by this scheme but not included in the updated Annex A will from July 2020 receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C. It was also announced in July 2020 that pensioners and students who were registered as employed with JobsPlus since the 9th of March, may now also be considered for the Wage supplement. These were previously ineligible.\r",
-            "descriptionUseOfMeasure": "By the end of May it was announced that \u20ac55 million had been disbursed, saving 93,580 jobs. A futher \u20ac 25 million was expected to be distributed by the beginning of June. \r",
-            "descriptionInvolvementOfSocialPartners": "Social partners initially aired their COVID-19 related concerns both publicly and directly with the government. This led the government to announce a series of packages, with the current measure forming part of the third package. The measures that formed part of this third package were the result of tripartite negotiations between Malta's largest trade unions, employer associations, the government and the Central Bank. It was unanimously approved by the Malta Council for Economic and Social Development (MCESD). The measure is administered by the Government via the Malta Enterprise.",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-13_264.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Tripartite agreements",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "116",
-                    "sources::title": "Supporting businesses impacted by Covid-19",
-                    "sources::url": "http://covid19.maltaenterprise.com",
-                    "sources::d_date": "03/25/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "119",
-                    "sources::title": "Malta Enterprise - Annex A",
-                    "sources::url": "",
-                    "sources::d_date": "05/27/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "120",
-                    "sources::title": "Malta Enterprise - Annex B",
-                    "sources::url": "",
-                    "sources::d_date": "03/27/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "1020",
-                    "sources::title": "Malta Enterprise - Annex B updated June - September ",
-                    "sources::url": "",
-                    "sources::d_date": "07/01/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1021",
-                    "sources::title": "Malta Enterprise - Annex A updated June - September ",
-                    "sources::url": "",
-                    "sources::d_date": "07/01/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1022",
-                    "sources::title": "Malta Enterprise - Annex C updated June - September ",
-                    "sources::url": "",
-                    "sources::d_date": "07/01/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "3",
-                    "actors::name": "Trade unions",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "4",
-                    "actors::name": "Employers' organisations",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "37",
-                    "sectors::code": "C10",
-                    "sectors::name": "Manufacture of food products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "38",
-                    "sectors::code": "C11",
-                    "sectors::name": "Manufacture of beverages",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "39",
-                    "sectors::code": "C12",
-                    "sectors::name": "Manufacture of tobacco products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "40",
-                    "sectors::code": "C13",
-                    "sectors::name": "Manufacture of textiles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "41",
-                    "sectors::code": "C14",
-                    "sectors::name": "Manufacture of wearing apparel",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "42",
-                    "sectors::code": "C15",
-                    "sectors::name": "Manufacture of leather and related products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "43",
-                    "sectors::code": "C16",
-                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "44",
-                    "sectors::code": "C17",
-                    "sectors::name": "Manufacture of paper and paper products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "45",
-                    "sectors::code": "C18",
-                    "sectors::name": "Printing and reproduction of recorded media",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "46",
-                    "sectors::code": "C19",
-                    "sectors::name": "Manufacture of coke and refined petroleum products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "47",
-                    "sectors::code": "C20",
-                    "sectors::name": "Manufacture of chemicals and chemical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "48",
-                    "sectors::code": "C21",
-                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "49",
-                    "sectors::code": "C22",
-                    "sectors::name": "Manufacture of rubber and plastic products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "50",
-                    "sectors::code": "C23",
-                    "sectors::name": "Manufacture of other non-metallic mineral products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "51",
-                    "sectors::code": "C24",
-                    "sectors::name": "Manufacture of basic metals",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "52",
-                    "sectors::code": "C25",
-                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "53",
-                    "sectors::code": "C26",
-                    "sectors::name": "Manufacture of computer, electronic and optical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "54",
-                    "sectors::code": "C27",
-                    "sectors::name": "Manufacture of electrical equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "55",
-                    "sectors::code": "C28",
-                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "56",
-                    "sectors::code": "C29",
-                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "57",
-                    "sectors::code": "C30",
-                    "sectors::name": "Manufacture of other transport equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "58",
-                    "sectors::code": "C31",
-                    "sectors::name": "Manufacture of furniture",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "59",
-                    "sectors::code": "C32",
-                    "sectors::name": "Other manufacturing",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "60",
-                    "sectors::code": "C33",
-                    "sectors::name": "Repair and installation of machinery and equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "73",
-                    "sectors::code": "G45",
-                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "74",
-                    "sectors::code": "G46",
-                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "75",
-                    "sectors::code": "G47",
-                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "77",
-                    "sectors::code": "H49",
-                    "sectors::name": "Land transport and transport via pipelines",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "79",
-                    "sectors::code": "H51",
-                    "sectors::name": "Air transport",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "80",
-                    "sectors::code": "H52",
-                    "sectors::name": "Warehousing and support activities for transportation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "86",
-                    "sectors::code": "J58",
-                    "sectors::name": "Publishing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "87",
-                    "sectors::code": "J59",
-                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "88",
-                    "sectors::code": "J60",
-                    "sectors::name": "Programming and broadcasting activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "103",
-                    "sectors::code": "M73",
-                    "sectors::name": "Advertising and market research",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "104",
-                    "sectors::code": "M74",
-                    "sectors::name": "Other professional, scientific and technical activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "107",
-                    "sectors::code": "N77",
-                    "sectors::name": "Rental and leasing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "108",
-                    "sectors::code": "N78",
-                    "sectors::name": "Employment activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "109",
-                    "sectors::code": "N79",
-                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "110",
-                    "sectors::code": "N80",
-                    "sectors::name": "Security and investigation activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "111",
-                    "sectors::code": "N81",
-                    "sectors::name": "Services to buildings and landscape activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "112",
-                    "sectors::code": "N82",
-                    "sectors::name": "Office administrative, office support and other business support activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "116",
-                    "sectors::code": "P85",
-                    "sectors::name": "Education",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "122",
-                    "sectors::code": "R90",
-                    "sectors::name": "Creative, arts and entertainment activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "125",
-                    "sectors::code": "R93",
-                    "sectors::name": "Sports activities and amusement and recreation activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "129",
-                    "sectors::code": "S96",
-                    "sectors::name": "Other personal service activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [
-                {
-                    "recordId": "100",
-                    "updates::d_date": "07/01/2020",
-                    "updates::description": "From July 2020, the sectors that were listed under Annex A, and therefore those obtain the largest wage supplement, were reduced. These now include those involved with tourist accommodation, travel agencies, language schools, event organisation and air transport. \r\rWith reference to those in Annex B, it was announced that these would continue receiving their supplement until September. Furthermore, From July 2020, 'personal services and other related activities' will benefit from the Annex B supplement. \r\rFrom July 2020, sectors previously supported by this scheme but not included in the updated Annex A will receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C.\r\rFinally, It was also announced that from July 2020, pensioners and students who were registered as employed with JobsPlus since the 9 March, may now also be considered for the Wage supplement. These were previously ineligible. ",
-                    "modId": "3"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "147",
-        "modId": "137"
-    },
-    {
-        "fieldData": {
             "title": "Termination of employment during trial period for financial and production-related reasons",
             "title_nationalLanguage": "Ty\u00f6sopimuksen purkaminen koeajalla taloudellisen tai tuotannollisen perusteen vuoksi ",
             "d_startDate": "04/01/2020",
@@ -3400,142 +3001,6 @@
         },
         "recordId": "158",
         "modId": "111"
-    },
-    {
-        "fieldData": {
-            "title": "Quarantine leave - Grants for employers",
-            "title_nationalLanguage": "None",
-            "d_startDate": "03/18/2020",
-            "d_endDate": "",
-            "calc_country": "Malta",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Paid sick leave",
-            "calc_identifier": "MT-2020-12/276",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/04/2020",
-            "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "As part of the national policy to tackle COVID-19, individuals diagnosed with this disease, or individuals who had been in contact with individuals diagnosed with this disease were to quarantine themselves for two weeks. In response, the government provided employers with such employees a lump sum. \r\rIt is worth noting that this measure came a few days after the government updated the law by publishing the \u201cMinimum Special Leave Entitlements (Amendment) Regulations, 2020\u201d. These Regulations amend the \u201cMinimum Special Leave Entitlement Regulations\u201d (S.L.452.101): this introduced quarantine leave for all employees, which was to be granted without loss of wages, when the employees is legally obliged to quarantine on order by the Superintendent of Public Health.",
-            "descriptionContentOfMeasure": "Employers who have a member of staff (including themselves) on mandatory quarantine leave in line with the directives of the Superintendent of Public Health are entitled to a one-off lump sum of \u20ac350. The grant also applies when members of staff have to quarantine themselves as they may have contacted individuals at risk of infection e.g., those living in the same house or in the same workplace. \r\rThe measure only covers grants for full-time employees. Applications are to be made via an online form to the Malta Enterprise who may request further information and documentation to determine eligibility. ",
-            "descriptionUseOfMeasure": "By the end of May, \u20ac885,500 had been dispensed, covering 2,530 employees.\r",
-            "descriptionInvolvementOfSocialPartners": "Initially a lack of clarity existed regarding if employees who required to quarantine themselves were to be paid by their employer. Trade unions argued in favour of this, whilst employer associations felt that this was not their role. These representations were made publicly as well as directly with government. Once Government amended the law on special leave, employer associations continued to argue that employers should not foot the bill for this special leave, whilst also opposing the amended special leave legal notice. In view of this, the government announced the grant for employers. Employers however still argued that whilst the grant was beneficial they were opposed to the legal notice as well as the manner in which it was introduced, which was outside of the usual channels of social dialogue. Social partner involvement was thus limited. ",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-12_276.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "125",
-                    "sources::title": "Quarantine leave",
-                    "sources::url": "https://covid19.maltaenterprise.com/quarantine-leave/",
-                    "sources::d_date": "03/18/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "159",
-        "modId": "117"
-    },
-    {
-        "fieldData": {
-            "title": "Facilitating teleworking",
-            "title_nationalLanguage": "",
-            "d_startDate": "02/15/2020",
-            "d_endDate": "05/08/2020",
-            "calc_country": "Malta",
-            "calc_minorCategory": "Protection of workers, adaptation of workplace",
-            "calc_subMinorCategory": "Teleworking arrangements, remote working",
-            "calc_identifier": "MT-2020-7/277",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/04/2020",
-            "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "As part of the Maltese effort to reduce the transmission of COVID-19, workers were encouraged to work from home where possible. Many Maltese organisations were not in a position to carry out this transition seamlessly, with few organisations offering employees the opportunity to work from home prior to COVID-19. In order to facilitate this change of working method, the government introduced a grant to support employers to invest in technology to facilitate this change. \r",
-            "descriptionContentOfMeasure": "This call supports employers and self-employed individuals to invest in technology that enables teleworking: the aim of the call is to partially cover the costs involved in making a transition to telework. \r \rSupport is limited up to \u20ac500 per teleworking agreement and \u20ac4,000 per undertaking. The grant shall be awarded against 45% of the eligible cost. In order to be eligible, the employee should not have had an active teleworking agreement prior to the 15th of February 2020. All costs must be incurred after this date. The employee must be able to address their role via teleworking, a formal teleworking agreement must be in place, and they can connect to the work place via a VPN or equivalent solution. \r\r",
-            "descriptionUseOfMeasure": "By the beginning of June, \u20ac300,000 had been disbursed via this scheme, whilst \u20ac376,000 has been approved. ",
-            "descriptionInvolvementOfSocialPartners": "The measure was one of the very first to be introduced by the Maltese government. Direct and public communication had occurred between government, unions and government. Amongst the many concerns that were discussed were the costs associated with sudden number of teleworking employees. In view of these concerns, this measure was introduced through the Malta Enterprise by the Government; consultation was limited and social partners were dissatisfied with the package of measures introduced during this early phase of the pandemic.",
-            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-7_277.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "126",
-                    "sources::title": "Facilitating teleworking activities",
-                    "sources::url": "https://covid19.maltaenterprise.com/teleworking/",
-                    "sources::d_date": "03/01/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "204",
-                    "updates::d_date": "07/14/2020",
-                    "updates::description": "This measure has now ended.\r\r",
-                    "modId": "2"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "160",
-        "modId": "109"
     },
     {
         "fieldData": {
@@ -12956,14 +12421,7 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [
-                {
-                    "recordId": "133",
-                    "updates::d_date": "07/09/2020",
-                    "updates::description": "Added information on usage of measure and social partner invovlement.",
-                    "modId": "2"
-                }
-            ],
+            "updates": [],
             "regions": []
         },
         "recordId": "298",
@@ -13045,14 +12503,7 @@
             ],
             "occupations": [],
             "sectors": [],
-            "updates": [
-                {
-                    "recordId": "129",
-                    "updates::d_date": "07/08/2020",
-                    "updates::description": "Added information in effectiveness box.",
-                    "modId": "1"
-                }
-            ],
+            "updates": [],
             "regions": []
         },
         "recordId": "299",
@@ -58688,6 +58139,79 @@
     },
     {
         "fieldData": {
+            "title": "Trade union proposal for a reform of occupational medicine ",
+            "title_nationalLanguage": "Predlog za sistemsko spremembo medicine del",
+            "d_startDate": "06/16/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "SI-2020-25/1098",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/21/2020",
+            "descriptionBackgroundInfo": "Since the outbreak of COVID-19, the Confederation of Free Trade Unions of Slovenia (Zveza svobodnih sindikatov Slovenije, ZSSS) drew attention to the lack of health and safety measures at work and reported cases where workers kept working close to each other with no safety equipment. Only the trade union campaign forced the competent institutions to take necessary measures for the protection of workers. In June 2020, ZSSS analysed the reasons for the failure of the system and proposed a systemic reform of occupational medicine.",
+            "descriptionContentOfMeasure": "Although most of the production and service workers continued to work since the outbreak of COVID-19, many had no safety equipment on disposal and there were no instructions on safety measures. Experts on occupational medicine, the external support service for employers, were often not available for advising about necessary safety measures at the workplace and undertook actions only after ZSSS\u2019 public campaign. But when they have begun to cooperate, they were only giving general instructions without having inspected the working places to check themselves. In June 2020, ZSSS analysed the reasons for the failure of the system.\r\rAccording to ZSSS analysis, the main reason for its failure was the profit-driven character of occupational medicine. The main financial source for occupational doctors is periodic medical exams for workers paid by employers directly. Existentially dependent on employers, occupational doctors cannot provide independent service in a number of areas, such as occupational diseases, and also failed to properly react during the time of the epidemic. \r\rOn the grounds of internal analysis, the presidency of ZSSS (a body which consists of 21 representative unions) concluded that occupational medicine should be transformed into a public service working for the benefit and protection of workers. ZSSS announced a campaign for the reform, starting with the presentation of the Economic and Social Council.",
+            "descriptionUseOfMeasure": "ZSSS survey revealed that five per cent of respondents only confirmed the presence of an occupational medicine expert in the company. These experts visited workplaces, checked safety measures by themselves and proposed adaptations. Eleven per cent of respondents said that occupational medicine doctors were available via email or phone. They have begun to cooperate on the initiative of employers. ",
+            "descriptionInvolvementOfSocialPartners": "The Confederation of Free Trade Unions of Slovenia (Zveza svobodnih sindikatov Slovenije, ZSSS) proposed a systemic reform of occupational medicine",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-25_1098.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1378",
+                    "sources::title": "ZSSS, 'Predsedstvo ZSSS predlaga sistemsko spremembo vloge medicine dela', 16 June 202",
+                    "sources::url": "https://www.zsss.si/sistemska-spre-medicine-dela-166",
+                    "sources::d_date": "06/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1379",
+                    "sources::title": "ZSSS, 'Intervju s strokovno slu\u017ebo za varnost in zdravje pri delu', 5 June 202",
+                    "sources::url": "https://www.zsss.si/vzd-medicina-dela-naj-postane-56",
+                    "sources::d_date": "06/05/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1380",
+                    "sources::title": "ZSSS, 'Analiza delovanja medicine dela v \u010dasu epidemije', 9 June 202",
+                    "sources::url": "https://www.zsss.si/sistemska-spre-medicine-dela-166",
+                    "sources::d_date": "06/09/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1008",
+        "modId": "17"
+    },
+    {
+        "fieldData": {
             "title": "Re-establishment of tripartite negotiation on the third and forth emergency laws",
             "title_nationalLanguage": "Obnova tripartitnega socialnega dialoga",
             "d_startDate": "04/20/2020",
@@ -58897,6 +58421,79 @@
             "regions": []
         },
         "recordId": "1011",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Initiative from employers for reforming teleworking arrangements",
+            "title_nationalLanguage": "Pobuda za reformo dela od dom",
+            "d_startDate": "06/11/2020",
+            "d_endDate": "",
+            "calc_country": "Slovenia",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "SI-2020-24/1102",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/11/2020",
+            "calc_lastUpdate": "09/21/2020",
+            "descriptionBackgroundInfo": "The COVID-19 pandemic has increased the number of workers working at home. According to the Labour Inspectorate, about 2,000 companies reported on workers who worked at home in the past. Since the outbreak of the epidemic, the number has increased to 10,000 companies (involving about 100,000 employees) (Chamber of Commerce and Industry of Slovenia - GZS, 11 June 2020). Teleworking will become a more frequent form of work in the future. During the epidemic, when employers had to send workers to work from home, they experienced the rigidity and ambiguities of the current regulation in this respect  (MDDSZ, Instructions, 22 June 2020). Employer organisations are now proposing certain reforms on that topic. ",
+            "descriptionContentOfMeasure": "Employer organisations addressed the initiative for simplifying the regulation concerning the work at home to social partners and the government in particular (for instance, the Association of Employers Slovenia \u2013 ZDS, 15 May 2020). On 11 June, Chamber of Commerce and Industry of Slovenia (GZS) organised an informative webinar in which speakers (representatives of the employer organisation, ministry of labour, labour inspectorate, and private business) presented the state of the art and proposals of how to adapt regulations to new needs and necessities. \r\rFor now, if a worker starts to work at home:\r \r* the employer must conclude a new employment contract (because the place of work has changed);\r* he must inform the Labour Inspectorate;\r* he must pay compensation to the worker for the material costs (maximum five per cent of the average national salary);\r* he is fully responsible for the health and safety of workers. \r\rThe proposal presented at the webinar entails that the law would differentiate between the situation when the worker habitually works at home, and when the worker only occasionally works at home. In the first case, the current legislation would still apply; in the second situation, the employer would only have an obligation to set up rules on health and safety at work, but the worker would be responsible for taking them in the account. \r\rRules on health and safety at work usually encompass requirements on the working environment (lightening, noise, temperature), job post (separate mouse, keyboard and screen at a certain height), flexible office chair on five wheels, determination of working time and rest periods",
+            "descriptionUseOfMeasure": "The proposal explicitly suggests the necessity of legal changes. It is interesting to add that half of all 26 collective agreements include a general clause about work from home. A quarter of them stipulates that the employer and employee can draw an annex to the employment contract on this \u2013 a controversial clause as the webinar has shown. Employer organisation GZS expects that more collective agreements are going to include clauses about work from home. GZS, for instance, supports the idea that the \u2018right to switch off\u2019 is included in collective agreements.",
+            "descriptionInvolvementOfSocialPartners": "Employer organisations addressed the initiative for simplifying the regulation concerning work from home.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-24_1102.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1386",
+                    "sources::title": "Association of Employers Slovenia \u2013 ZDS, ZDS na Ekonomsko socialnem svetu o PKP3 in preklicu epidemije, 15 May 202",
+                    "sources::url": "https://www.zds.si/sl/o-zds/novice/zds-na-ekonomsko-socialnem-svetu-o-pkp3-in-preklicu-epidemije",
+                    "sources::d_date": "05/15/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1387",
+                    "sources::title": "The Ministry of Labour, Family, Social Affairs, and Equal Opportunities (MDDSZ),  Opravljanje dela na domu z vidika delovnega prava in varnosti in zdravja pri del",
+                    "sources::url": "https://www.gov.si/assets/ministrstva/MDDSZ/Koronavirus/18-06-2020-Delo-na-domu-pravna-ureditev-in-VZD.doc",
+                    "sources::d_date": "06/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1388",
+                    "sources::title": "Chamber of Commerce and Industry of Slovenia \u2013 GZS, Delo od doma pod drobnogledom (webinar",
+                    "sources::url": "https://www.gzs.si/koronavirus/Novice/ArticleId/75896/delo-od-doma-pod-drobnogledo",
+                    "sources::d_date": "06/11/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1012",
         "modId": "15"
     },
     {
