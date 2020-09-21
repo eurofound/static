@@ -47298,364 +47298,8 @@
     },
     {
         "fieldData": {
-            "title": "Electricity bill refund",
-            "title_nationalLanguage": "Rifu\u017cjoni tal-kont tal-elettriku",
-            "d_startDate": "06/08/2020",
-            "d_endDate": "09/30/2020",
-            "calc_country": "Malta",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "MT-2020-24/939",
-            "dateType": "Temporary",
-            "calc_creationDay": "07/07/2020",
-            "calc_lastUpdate": "07/14/2020",
-            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced that organisations which were eligible for the wage subsidy were now also eligible to apply for an electricity bill refund. ",
-            "descriptionContentOfMeasure": "During the first months of resuming operations (July, August and September 2020) businesses eligible for the Wage Supplement \"will be assisted on 50% of a commercial rate account up to an amount of \u20ac1,500 per applicant.\" The measure focuses on operating costs, and thus the amount does not include the payment for the electricity meter. \r\rThe total cost of this measure is expected to reach just over \u20ac30 million.\r\rCurrently no further information is available on this measure. The Malta Enterprise, which is likely to administer the measure has stated that further information, guidelines and applications will be made available soon. \r\r",
-            "descriptionUseOfMeasure": "No information are available. ",
-            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. The Malta Hotels and Restaurants Association (MHRA) had been vocal about the need for electricity subsidies during this period. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published. ",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_939.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Other initiatives or policies",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "119",
-                    "sources::title": "Malta Enterprise - Annex A",
-                    "sources::url": "",
-                    "sources::d_date": "05/27/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "120",
-                    "sources::title": "Malta Enterprise - Annex B",
-                    "sources::url": "",
-                    "sources::d_date": "03/27/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "1053",
-                    "sources::title": "Electricity bill refund ",
-                    "sources::url": "",
-                    "sources::d_date": "06/08/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "37",
-                    "sectors::code": "C10",
-                    "sectors::name": "Manufacture of food products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "38",
-                    "sectors::code": "C11",
-                    "sectors::name": "Manufacture of beverages",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "39",
-                    "sectors::code": "C12",
-                    "sectors::name": "Manufacture of tobacco products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "40",
-                    "sectors::code": "C13",
-                    "sectors::name": "Manufacture of textiles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "41",
-                    "sectors::code": "C14",
-                    "sectors::name": "Manufacture of wearing apparel",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "42",
-                    "sectors::code": "C15",
-                    "sectors::name": "Manufacture of leather and related products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "43",
-                    "sectors::code": "C16",
-                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "44",
-                    "sectors::code": "C17",
-                    "sectors::name": "Manufacture of paper and paper products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "45",
-                    "sectors::code": "C18",
-                    "sectors::name": "Printing and reproduction of recorded media",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "46",
-                    "sectors::code": "C19",
-                    "sectors::name": "Manufacture of coke and refined petroleum products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "47",
-                    "sectors::code": "C20",
-                    "sectors::name": "Manufacture of chemicals and chemical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "48",
-                    "sectors::code": "C21",
-                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "49",
-                    "sectors::code": "C22",
-                    "sectors::name": "Manufacture of rubber and plastic products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "50",
-                    "sectors::code": "C23",
-                    "sectors::name": "Manufacture of other non-metallic mineral products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "51",
-                    "sectors::code": "C24",
-                    "sectors::name": "Manufacture of basic metals",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "52",
-                    "sectors::code": "C25",
-                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "53",
-                    "sectors::code": "C26",
-                    "sectors::name": "Manufacture of computer, electronic and optical products",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "54",
-                    "sectors::code": "C27",
-                    "sectors::name": "Manufacture of electrical equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "55",
-                    "sectors::code": "C28",
-                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "56",
-                    "sectors::code": "C29",
-                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "57",
-                    "sectors::code": "C30",
-                    "sectors::name": "Manufacture of other transport equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "58",
-                    "sectors::code": "C31",
-                    "sectors::name": "Manufacture of furniture",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "59",
-                    "sectors::code": "C32",
-                    "sectors::name": "Other manufacturing",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "60",
-                    "sectors::code": "C33",
-                    "sectors::name": "Repair and installation of machinery and equipment",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "73",
-                    "sectors::code": "G45",
-                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "74",
-                    "sectors::code": "G46",
-                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "75",
-                    "sectors::code": "G47",
-                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "77",
-                    "sectors::code": "H49",
-                    "sectors::name": "Land transport and transport via pipelines",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "80",
-                    "sectors::code": "H52",
-                    "sectors::name": "Warehousing and support activities for transportation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "86",
-                    "sectors::code": "J58",
-                    "sectors::name": "Publishing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "87",
-                    "sectors::code": "J59",
-                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "88",
-                    "sectors::code": "J60",
-                    "sectors::name": "Programming and broadcasting activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "103",
-                    "sectors::code": "M73",
-                    "sectors::name": "Advertising and market research",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "104",
-                    "sectors::code": "M74",
-                    "sectors::name": "Other professional, scientific and technical activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "107",
-                    "sectors::code": "N77",
-                    "sectors::name": "Rental and leasing activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "108",
-                    "sectors::code": "N78",
-                    "sectors::name": "Employment activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "109",
-                    "sectors::code": "N79",
-                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "110",
-                    "sectors::code": "N80",
-                    "sectors::name": "Security and investigation activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "111",
-                    "sectors::code": "N81",
-                    "sectors::name": "Services to buildings and landscape activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "112",
-                    "sectors::code": "N82",
-                    "sectors::name": "Office administrative, office support and other business support activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "116",
-                    "sectors::code": "P85",
-                    "sectors::name": "Education",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "122",
-                    "sectors::code": "R90",
-                    "sectors::name": "Creative, arts and entertainment activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "125",
-                    "sectors::code": "R93",
-                    "sectors::name": "Sports activities and amusement and recreation activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "129",
-                    "sectors::code": "S96",
-                    "sectors::name": "Other personal service activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "849",
-        "modId": "28"
-    },
-    {
-        "fieldData": {
-            "title": "COVID-19 Restart Grant",
-            "title_nationalLanguage": "",
+            "title": "Grant for restarting small businesses introduced",
+            "title_nationalLanguage": "COVID-19 Restart Grant",
             "d_startDate": "05/22/2020",
             "d_endDate": "08/31/2020",
             "calc_country": "Ireland",
@@ -47751,7 +47395,7 @@
             "regions": []
         },
         "recordId": "850",
-        "modId": "14"
+        "modId": "15"
     },
     {
         "fieldData": {
@@ -54745,7 +54389,7 @@
     },
     {
         "fieldData": {
-            "title": "Pandemic Stabilisation and Recovery Fund",
+            "title": "Pandemic stabilisation and recovery fund",
             "title_nationalLanguage": "",
             "d_startDate": "05/02/2020",
             "d_endDate": "",
@@ -54818,12 +54462,12 @@
             "regions": []
         },
         "recordId": "958",
-        "modId": "15"
+        "modId": "16"
     },
     {
         "fieldData": {
-            "title": "Strategic Banking Corporation of Ireland (SBCI) Future Growth Loan Scheme",
-            "title_nationalLanguage": "",
+            "title": "Strategic Banking Corporation of Ireland (SBCI) issue new loan scheme",
+            "title_nationalLanguage": "SBCI Future Growth Loan ",
             "d_startDate": "07/30/2020",
             "d_endDate": "",
             "calc_country": "Ireland",
@@ -54898,7 +54542,7 @@
             "regions": []
         },
         "recordId": "959",
-        "modId": "13"
+        "modId": "14"
     },
     {
         "fieldData": {
@@ -59077,5 +58721,81 @@
         },
         "recordId": "1065",
         "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Social partners protest against government's attempt to breach their autonomy",
+            "title_nationalLanguage": "Protest organizacji pracodawc\u00f3w i zwi\u0105zk\u00f3w zawodowych Rady Dialogu Spo\u0142ecznego i autonomi\u0119 organizacji partner\u00f3w spo\u0142ecznych",
+            "d_startDate": "03/28/2020",
+            "d_endDate": "",
+            "calc_country": "Poland",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "PL-2020-13/1158",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/18/2020",
+            "calc_lastUpdate": "09/21/2020",
+            "descriptionBackgroundInfo": "In the anti-crisis legislation known as the Anti-crisis Shield, the government included regulations allegedly violating the autonomy of the Social Dialogue Council and of social partners themselves. The controversial provisions introduced amendments to the Social Dialogue Council Act (Article 46 of the Anti-crisis Shield). All national level social partners protested against the new regulations in a joint protest signed by all eight representative organisations. ",
+            "descriptionContentOfMeasure": "By virtue the Article 46 of which the Prime Minister would gain the right to dismiss any member of the central level tripartite body if he/she commits an act of  __\u201cmisappropriation of the Council's activities, leading to the inability to conduct transparent, substantive and regular dialogue between employees 'and employers' organizations and the government\u201d.__\r\rIn the position, the signatories argue that __\"Independence and autonomy of trade union organisations and employer organizations is the foundation of social dialogue, guaranteed not only by national legislation, but also by international law, including the Constitution of the International Labor Organisation and the Treaties of the European Union. Giving such right to the government body - the Prime Minister - is an attack on independence of trade unions and employer organisations\".__",
+            "descriptionUseOfMeasure": "The protest by all national level social partners against the new regulations met with understanding reaction of the President of Poland who signed the Special Act but at the same time requested the Constitutional Court to review legality of the controversial clauses. That means they are suspended for the time being.",
+            "descriptionInvolvementOfSocialPartners": "All national-level social partners signed the protest. It was their own joint initiative. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PL-2020-13_1158.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "797",
+                    "sources::title": "The Act of 31 March 2020 amending the Act on the System of Development Institutions",
+                    "sources::url": "http://prawo.sejm.gov.pl/isap.nsf/download.xsp/WDU20200000569/O/D20200569.pdf",
+                    "sources::d_date": "03/31/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1464",
+                    "sources::title": "Protest organizacji pracodawc\u00f3w i zwi\u0105zk\u00f3w zawodowych w sprawie zamachu\rna niezale\u017cno\u015b\u0107 Rady Dialogu Spo\u0142ecznego i autonomi\u0119 organizacji partner\u00f3w spo\u0142ecznych",
+                    "sources::url": "https://pracodawcyrp.pl/upload/files/2020/05/2020-03-28-protest-rds.pdf",
+                    "sources::d_date": "03/28/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1068",
+        "modId": "19"
     }
 ]
