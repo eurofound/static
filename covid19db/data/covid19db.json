@@ -18903,119 +18903,6 @@
     },
     {
         "fieldData": {
-            "title": "COVID-19: Unemployed can take seasonal work in agriculture without loss of benefits",
-            "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19: \u0414\u043e\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b\u043d\u043e \u043f\u043e\u0434\u043f\u043e\u043c\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0431\u0435\u0437\u0440\u0430\u0431\u043e\u0442\u043d\u0438\u0442\u0435 \u0438 \u0430\u0433\u0440\u0430\u0440\u043d\u0438\u044f \u0441\u0435\u043a\u0442\u043e\u0440",
-            "d_startDate": "04/05/2020",
-            "d_endDate": "",
-            "calc_country": "Bulgaria",
-            "calc_minorCategory": "Income protection beyond short-time work",
-            "calc_subMinorCategory": "Income support for unemployed",
-            "calc_identifier": "BG-2020-15/496",
-            "dateType": "Open ended",
-            "calc_creationDay": "04/12/2020",
-            "calc_lastUpdate": "05/01/2020",
-            "descriptionBackgroundInfo": "A new opportunity for registered unemployed individuals to sign temporary labour contracts with agriculture producers without losing their unemployment benefits has been approved by the Bulgarian government. The new amendment gives a legal right to an unemployed person to receive unemployment benefits from the state and at the same time work at a rural stop and take a salary from there.\r\rAccording to unofficial information, the Ministry of Agriculture is also discussing the possibility of workers in enterprises that have been introduced to reduced working hours due to the coronavirus crisis and are being compensated under the 60/40 scheme, to be able to start additional work in agriculture.",
-            "descriptionContentOfMeasure": "People receiving unemployment or social assistance benefits can earn additional income from seasonal work in agriculture without losing their entitlement to state support. Those who are currently on unpaid leave can also sign a second employment contract without permission from their primary employer. These are the two approved measures that, at the threshold of the active season in agriculture, should divert employees to this sector.\r\rAmendments to the Emergency Legislation adopted in April 2020 introduce the possibility for farmers to conclude temporary employment contracts similar to one-day contracts to hire employees for activities such as harvesting. The key change in this case is that the conclusion of such contracts would not affect the receipt of unemployment benefits or social benefits by employees, which in previous years was a serious obstacle to securing seasonal workers on the field.\r\rCurrently, there is also no limit to the length of time that employees can work under the second employment contract while on unpaid leave. ",
-            "descriptionUseOfMeasure": "The measure can benefit all registered unemployed, who as of 10.04.2020 are approx. 300,000 people. Of these, only 30% are entitled to unemployment benefits",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-15_496.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "391",
-                    "sources::title": "\u0417\u0435\u043c\u0435\u0434\u0435\u043b\u0446\u0438\u0442\u0435 \u0449\u0435 \u043c\u043e\u0433\u0430\u0442 \u0434\u0430 \u043d\u0430\u0435\u043c\u0430\u0442 \u0431\u0435\u0437\u0440\u0430\u0431\u043e\u0442\u043d\u0438 \u043f\u0440\u0438 \u043e\u0431\u043b\u0435\u043a\u0447\u0435\u043d\u0438 \u0443\u0441\u043b\u043e\u0432\u0438",
-                    "sources::url": "https://www.capital.bg/biznes/zemedelie/2020/04/07/4051589_zemedelcite_shte_mogat_da_naemat_bezrabotni_pri",
-                    "sources::d_date": "04/07/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "599",
-                    "sources::title": "\u0417\u0430\u043a\u043e\u043d \u0437\u0430 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0438 \u0434\u043e\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435 \u043d\u0430 \u0417\u0430\u043a\u043e\u043d\u0430 \u0437\u0430 \u043c\u0435\u0440\u043a\u0438\u0442\u0435 \u0438 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f\u0442\u0430 \u043f\u043e \u0432\u0440\u0435\u043c\u0435 \u043d\u0430 \u0438\u0437\u0432\u044a\u043d\u0440\u0435\u0434\u043d\u043e\u0442\u043e \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435, \u043e\u0431\u044f\u0432\u0435\u043d\u043e \u0441 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043d\u0430 \u041d\u0430\u0440\u043e\u0434\u043d\u043e\u0442\u043e \u0441\u044a\u0431\u0440\u0430\u043d\u0438\u0435 \u043e\u0442 13 \u043c\u0430\u0440\u0442 2020 \u0433",
-                    "sources::url": "https://parliament.bg/bg/laws/ID/157400",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "725",
-                    "sources::title": "Farmers can conclude short-term seasonal farm work for more than a day",
-                    "sources::url": "http://www.gli.government.bg/page.php?c=47&d=4944",
-                    "sources::d_date": "04/15/2020",
-                    "modId": "1"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "2",
-                    "actors::name": "Social partners jointly",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "35",
-                    "targetGroups::name": "Unemployed",
-                    "modId": "15"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "3",
-                    "funding::name": "Employer",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "8",
-                    "funding::name": "Regional funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "27",
-                    "sectors::code": "A1",
-                    "sectors::name": "Crop and animal production, hunting and related service activities",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "28",
-                    "sectors::code": "A2",
-                    "sectors::name": "Forestry and logging",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "29",
-                    "sectors::code": "A3",
-                    "sectors::name": "Fishing and aquaculture",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "387",
-        "modId": "90"
-    },
-    {
-        "fieldData": {
             "title": "COVID-19: Increase in liquidity of the banking system",
             "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19: \u0423\u0432\u0435\u043b\u0438\u0447\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043b\u0438\u043a\u0432\u0438\u0434\u043d\u043e\u0441\u0442\u0442\u0430 \u043d\u0430 \u0431\u0430\u043d\u043a\u043e\u0432\u0430\u0442\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430",
             "d_startDate": "03/13/2020",
@@ -59619,5 +59506,70 @@
         },
         "recordId": "1070",
         "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "Cash grant for companies to produce products related to COVID",
+            "title_nationalLanguage": "Investment Aid COVID Products",
+            "d_startDate": "05/12/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "MT-2020-20/1165",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/21/2020",
+            "calc_lastUpdate": "09/22/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a negative impact upon the majority of organisations in Malta. In response to this impact on the economy, the Government produced a variety of measures to aid organisations to get back on their feet. One such measure was the Investment Aid COVID Products measure which provide a cash grant to support organisations to increase or initiate production of COVID-19 relevant products. ",
+            "descriptionContentOfMeasure": "Administered by the Malta Enterprise, the measure provided organisations with a cash grant (and the possibility of an additional tax grant) not exceeding 80% of the eligible costs to support organisations to carry out investment projects to increase or initiate production of COVID-19 relevant products or to diversify existing production to be able to produce COVID-19 relevant products. \r\rCosts need to have been incurred after 1 February 2020 and investments need to be completed within a period of six months. The grant can be increased by an additional 15% if the project is completed within two months or if the organisation is carrying out the project in collaboration with another organisation established in another Member State which is also providing funding. \r\rAmongst the supported investments are: \r\r* assets procured to develop, manufacture and provide COVID-19 relevant products; wage costs of individuals engaged in the development of tools, processes and solutions for the manufacturing of relevant products; wage costs for those developing data collecting and processing tools supporting issues related to COVID-19; \r* costs incurred for trial runs of the new (or diversified) production facilities such as cost of materials required for trial runs of production facilities and cost of data sets acquired to test data processing and collection solutions.\r",
+            "descriptionUseOfMeasure": "This incentive has a cash budget of \u20ac10,000,000 and a fiscal budget to be awarded as tax credit\rof \u20ac1,500,000. The overall budget is hence of \u20ac11,500,000.",
+            "descriptionInvolvementOfSocialPartners": "The measure was announced by the Government and did not result in any public comments by employer associations or unions. The measure was approved by the European Commission. Malta notified to the Commission under the Temporary Framework a scheme to support investments in the production of coronavirus-relevant product ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-20_1165.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1475",
+                    "sources::title": "Investment Aid for the production of COVID-19 relevant products",
+                    "sources::url": "http://maltaenterprise.com/sites/default/files/Investment%20Aid%20for%20the%20production%20of%20COVID-19%20relevant%20products%20Incentive%20Guidelines%20FINAL.pdf",
+                    "sources::d_date": "05/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1075",
+        "modId": "11"
     }
 ]
