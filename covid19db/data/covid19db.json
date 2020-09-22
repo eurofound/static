@@ -2384,6 +2384,412 @@
     },
     {
         "fieldData": {
+            "title": "COVID-19 wage supplement ",
+            "title_nationalLanguage": "None",
+            "d_startDate": "03/24/2020",
+            "d_endDate": "10/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "MT-2020-13/264",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "09/22/2020",
+            "descriptionBackgroundInfo": "This measure provides employees with a basic wage cover in view of the disruption caused by the COVID pandemic to certain industries. Funds are forwarded to employers who are in turn obliged to forward these to their employees. Full time employees in specific sectors will receive \u20ac800 a month from the government through their employers. As part of the agreement, employers in these sectors will continue providing their workers with a further \u20ac400 a month. Employers who were too highly impacted by the pandemic and cannot afford the further \u20ac400 must register with the Department of industrial relations. ",
+            "descriptionContentOfMeasure": "Full time employees working in organisations that operate in sectors severely hit by the COVID-19 pandemic, or on order of the Superintendent of Public Health had to suspend their operations are entitled up to five days salary based on a monthly wage of \u20ac800. This is also applicable to self-employed individuals. Part-time employees are eligible for \u20ac500 a month. The sectors that can apply for this supplement are under constant review and are listed on the Malta Enterprise website (Annex A). \r\rIn other sectors also thought to have been hit by the pandemic but to a lesser degree, the list of which are also available on the Malta Enterprise website (Annex B), full time and part-time employees are entitled to the equivalent of one days' salary per week, set at \u20ac160 per month and \u20ac100 per month, respectively. Those in Gozo are entitled to two days' salary per week; \u20ac320 per month for full-time and \u20ac200 per month for part-time employees.  \r\rFull-time self-employed in sectors thought to have been hit but to a lesser degree who have employees will receive \u20ac320 per month, part-time self employed \u20ac200 per month. Full-time self-employed based in Gozo in these same sectors will also be entitled to \u20ac320 per month but will rise to  \u20ac480 if they employ staff, and the employees will be entitled to two days salary. Part-time self-employed in Gozo will be entitled to \u20ac200, rising to \u20ac300 if they employ staff. The employees will receive two days salary. \r\rIn July 2020, the sectors in Annex A were reviewed and reduced. Those sectors previously supported by this scheme but not included in the updated Annex A will from July 2020 receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C. It was also announced in July 2020 that pensioners and students who were registered as employed with JobsPlus since the 9th of March, may now also be considered for the Wage supplement. These were previously ineligible.",
+            "descriptionUseOfMeasure": "By the end of May it was announced that \u20ac55 million had been disbursed, saving 93,580 jobs. A futher \u20ac25 million was expected to be distributed by the beginning of June. \r\rBy mid-September 2020, the Malta Enterprise CEO announced that \u20ac200 million had been spent on this measure. Furthermore, around 85% of those who benefitted from the measure were micro, small and medium enterprises. \r\rA September 2020 study by the Malta Employers Association which was conducted amongst its members found that the COVID-19 wage supplement was rated as the most effective financial measure with 62% rating it as effective. \r",
+            "descriptionInvolvementOfSocialPartners": "Social partners initially aired their COVID-19 related concerns both publicly and directly with the government. This led the government to announce a series of packages, with the current measure forming part of the third package. The measures that formed part of this third package were the result of tripartite negotiations between Malta's largest trade unions, employer associations, the government and the Central Bank. It was unanimously approved by the Malta Council for Economic and Social Development (MCESD). The measure is administered by the Government via the Malta Enterprise.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-13_264.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Tripartite agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "116",
+                    "sources::title": "Supporting businesses impacted by Covid-19",
+                    "sources::url": "http://covid19.maltaenterprise.com",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "119",
+                    "sources::title": "Malta Enterprise - Annex A",
+                    "sources::url": "",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "120",
+                    "sources::title": "Malta Enterprise - Annex B",
+                    "sources::url": "",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1020",
+                    "sources::title": "Malta Enterprise - Annex B updated June - September ",
+                    "sources::url": "",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1021",
+                    "sources::title": "Malta Enterprise - Annex A updated June - September ",
+                    "sources::url": "",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1022",
+                    "sources::title": "Malta Enterprise - Annex C updated June - September ",
+                    "sources::url": "",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1463",
+                    "sources::title": "Malta Employers Association - COVID-19 survey September 2020",
+                    "sources::url": "https://www.maltaemployers.com/loadfile/f92fd886-9cb2-48bb-9268-741dc469b5e3",
+                    "sources::d_date": "09/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "103",
+                    "sectors::code": "M73",
+                    "sectors::name": "Advertising and market research",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "104",
+                    "sectors::code": "M74",
+                    "sectors::name": "Other professional, scientific and technical activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "107",
+                    "sectors::code": "N77",
+                    "sectors::name": "Rental and leasing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "108",
+                    "sectors::code": "N78",
+                    "sectors::name": "Employment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "110",
+                    "sectors::code": "N80",
+                    "sectors::name": "Security and investigation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "111",
+                    "sectors::code": "N81",
+                    "sectors::name": "Services to buildings and landscape activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "112",
+                    "sectors::code": "N82",
+                    "sectors::name": "Office administrative, office support and other business support activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "129",
+                    "sectors::code": "S96",
+                    "sectors::name": "Other personal service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "100",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "From July 2020, the sectors that were listed under Annex A, and therefore those obtain the largest wage supplement, were reduced. These now include those involved with tourist accommodation, travel agencies, language schools, event organisation and air transport. \r\rWith reference to those in Annex B, it was announced that these would continue receiving their supplement until September. Furthermore, From July 2020, 'personal services and other related activities' will benefit from the Annex B supplement. \r\rFrom July 2020, sectors previously supported by this scheme but not included in the updated Annex A will receive a wage supplement of \u20ac600 for full time workers and up to \u20ac375 for part time workers, termed Annex C.\r\rFinally, It was also announced that from July 2020, pensioners and students who were registered as employed with JobsPlus since the 9 March, may now also be considered for the Wage supplement. These were previously ineligible. ",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "147",
+        "modId": "142"
+    },
+    {
+        "fieldData": {
             "title": "Termination of employment during trial period for financial and production-related reasons",
             "title_nationalLanguage": "Ty\u00f6sopimuksen purkaminen koeajalla taloudellisen tai tuotannollisen perusteen vuoksi ",
             "d_startDate": "04/01/2020",
@@ -3001,6 +3407,70 @@
         },
         "recordId": "158",
         "modId": "111"
+    },
+    {
+        "fieldData": {
+            "title": "Quarantine leave - Grants for employers",
+            "title_nationalLanguage": "None",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Paid sick leave",
+            "calc_identifier": "MT-2020-12/276",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/04/2020",
+            "calc_lastUpdate": "09/22/2020",
+            "descriptionBackgroundInfo": "As part of the national policy to tackle COVID-19, individuals diagnosed with this disease, or individuals who had been in contact with individuals diagnosed with this disease were to quarantine themselves for two weeks. In response, the government provided employers with such employees a lump sum. \r\rIt is worth noting that this measure came a few days after the government updated the law by publishing the \u201cMinimum Special Leave Entitlements (Amendment) Regulations, 2020\u201d. These Regulations amend the \u201cMinimum Special Leave Entitlement Regulations\u201d (S.L.452.101): this introduced quarantine leave for all employees, which was to be granted without loss of wages, when the employees is legally obliged to quarantine on order by the Superintendent of Public Health.",
+            "descriptionContentOfMeasure": "Employers who have a member of staff (including themselves) on mandatory quarantine leave in line with the directives of the Superintendent of Public Health are entitled to a one-off lump sum of \u20ac350. The grant also applies when members of staff have to quarantine themselves as they may have contacted individuals at risk of infection e.g., those living in the same house or in the same workplace. \r\rThe measure only covers grants for full-time employees. Applications are to be made via an online form to the Malta Enterprise who may request further information and documentation to determine eligibility. ",
+            "descriptionUseOfMeasure": "By the end of May, \u20ac885,500 had been dispensed, covering 2,530 employees. By September it was announced that 3,500 individuals had benefitted from this measure. \r\r",
+            "descriptionInvolvementOfSocialPartners": "Initially a lack of clarity existed regarding if employees who required to quarantine themselves were to be paid by their employer. Trade unions argued in favour of this, whilst employer associations felt that this was not their role. These representations were made publicly as well as directly with government. Once Government amended the law on special leave, employer associations continued to argue that employers should not foot the bill for this special leave, whilst also opposing the amended special leave legal notice. In view of this, the government announced the grant for employers. Employers however still argued that whilst the grant was beneficial they were opposed to the legal notice as well as the manner in which it was introduced, which was outside of the usual channels of social dialogue. Social partner involvement was thus limited. ",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-12_276.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "125",
+                    "sources::title": "Quarantine leave",
+                    "sources::url": "https://covid19.maltaenterprise.com/quarantine-leave/",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "159",
+        "modId": "122"
     },
     {
         "fieldData": {
@@ -56871,6 +57341,83 @@
     },
     {
         "fieldData": {
+            "title": "SMEs memorandum on saving businesses, maintaining jobs and ensuring social cohesion.",
+            "title_nationalLanguage": "\u03a5\u03c0\u03cc\u03bc\u03bd\u03b7\u03bc\u03b1 MME \u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b9\u03ac\u03c3\u03c9\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd, \u03c4\u03c9\u03bd \u03b8\u03ad\u03c3\u03b5\u03c9\u03bd \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b7\u03c2 \u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ae\u03c2 \u03c3\u03c5\u03bd\u03bf\u03c7\u03ae\u03c2.",
+            "d_startDate": "05/27/2020",
+            "d_endDate": "",
+            "calc_country": "Greece",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GR-2020-22/1090",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/10/2020",
+            "calc_lastUpdate": "09/22/2020",
+            "descriptionBackgroundInfo": "On 27 May 2020, the Small Enterprises\u2019 Institute of the Hellenic Confederation of Professionals, Craftsmen & Merchants (IME GSEVEE) published a memorandum on \"policy axes for saving businesses, maintaining jobs and ensuring social cohesion during the COVID-19 crisis\". \r\rThe memorandum was based on the results of a previous GSEVEE survey on the impact of the COVID-19 on SMEs (April 2020). So, almost 80% of SMEs face lack of liquidity and one in seven companies may cease its operations in the next period. \r\rAccording to the research and recognizing that the outbreak of the pandemic has created a new, multi-layered crisis and serious complications in economic and social functioning, the policy text of GSEVEE, addressed to the government and the political parties, develops the main policy axes on which interventions must be made, so that the difficult return to economic and social normality can be achieved with the least losses.",
+            "descriptionContentOfMeasure": "IME GSEVEE conducted a survey (April 2020) on the impact of the health crisis on small and micro enterprises, that consist of the 99% of companies in Greece and offer 80% of jobs in the private sector. On the basis of the survey, two elements were identified as more important in the operation of SMEs. The first concerns the lack of liquidity for almost 80% of small and micro-enterprises. The second concerns  the viability of the companies. The survey showed that one in seven companies may cease its operations in the next period and it is estimated that 250,000 jobs (self-employed, employers and workers) will be lost in the next period.\rIn this context and  in order to halt the most adverse effects of the health crisis, GSEVEE has compiled the eight main policy axes and interventions to address the effects of pandemic on small and micro-enterprises: \r\r1. financing, liquidity, investments \r2. halting the swelling of private debt \r3. tax issues \r4. employment, unemployment, social security \r5. addressing the digital gap \r6. promotion of business clusters \r7. strengthening the national health system \r8. training, retraining of enterprises and workers.",
+            "descriptionUseOfMeasure": "This initiative of GSEVEE includes proposal to the government and to the political parties to protect the SMEs and workers and mitigate the consequences of COVID-19.",
+            "descriptionInvolvementOfSocialPartners": "This initiative of GSEVEE includes proposal to  the government and to the political parties to protect the SMEs and workers and mitigate the consequences of COVID-19.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-22_1090.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1367",
+                    "sources::title": "\u0386\u03be\u03bf\u03bd\u03b5\u03c2 \u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b9\u03ac\u03c3\u03c9\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd, \u03c4\u03b7 \u03b4\u03b9\u03b1\u03c4\u03ae\u03c1\u03b7\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b8\u03ad\u03c3\u03b5\u03c9\u03bd \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b7 \u03b4\u03b9\u03b1\u03c3\u03c6\u03ac\u03bb\u03b9\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ae\u03c2 \u03c3\u03c5\u03bd\u03bf\u03c7\u03ae\u03c2 \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf \u03c4\u03bf\u03c5 Covid-1",
+                    "sources::url": "https://www.taxheaven.gr/news/49078/ime-gsebee-axones-protasewn-politikhs-gia-th-diaswsh-twn-epixeirhsewn-kai-twn-oesewn-ergasias-kai-th-diathrhsh-ths-koinwnikhs-synoxh",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1433",
+                    "sources::title": "\u0388\u03ba\u03c4\u03b1\u03ba\u03c4\u03b7 \u03ad\u03c1\u03b5\u03c5\u03bd\u03b1 \u0399\u039c\u0395 \u0393\u03a3\u0395\u0392\u0395\u0395 \u03b3\u03b9\u03b1 \u03c4\u03b9\u03c2 \u03b5\u03c0\u03b9\u03c0\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03c4\u03b7\u03c2 \u03c5\u03b3\u03b5\u03b9\u03bf\u03bd\u03bf\u03bc\u03b9\u03ba\u03ae\u03c2 \u03ba\u03c1\u03af\u03c3\u03b7\u03c2 \u03c3\u03c4\u03b9\u03c2 \u03bc\u03b9\u03ba\u03c1\u03ad\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03bf\u03bb\u03cd \u03bc\u03b9\u03ba\u03c1\u03ad\u03c2 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03b9\u03c2 (\u03c0\u03c1\u03ce\u03c4\u03bf \u03bc\u03b5\u03c1\u03bf\u03c2)",
+                    "sources::url": "https://www.gsevee.gr/deltiatupou/1114-2020-05-07-08-41-3",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "2"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1000",
+        "modId": "42"
+    },
+    {
+        "fieldData": {
             "title": "European Commission unveils vaccine strategy",
             "title_nationalLanguage": "",
             "d_startDate": "06/17/2020",
@@ -58572,6 +59119,80 @@
         },
         "recordId": "1056",
         "modId": "20"
+    },
+    {
+        "fieldData": {
+            "title": "Social partners-run insurance funds research on how COVID-19 affects the work environment, health and leadership",
+            "title_nationalLanguage": "Ny forskning om hur covid-19 p\u00e5verkar arbetsmilj\u00f6, h\u00e4lsa och ledarskap",
+            "d_startDate": "06/15/2020",
+            "d_endDate": "10/01/2020",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "SE-2020-25/1151",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/17/2020",
+            "calc_lastUpdate": "09/22/2020",
+            "descriptionBackgroundInfo": "AFA Insurance is owned by the social partners. The Confederation of Swedish Enterprise, Swedish Trade Union Confederation (LO) and the Council for Negotiation and Cooperation (PTK). AFA provides insurance for employees in the private sector as well as the public sector, i.e. municipalities and regions. The operations within AFA Insurance are run on a non-profit basis, which means that dividends are not paid to the owners. The AFA insurances are determined in collective agreements or other agreements between the social partners.\r\rAFA has a large research and development unit which conducts research on issues work environment and health issues. Within the framework of AFA Insurance's research areas work environment and health, the social partners are now investing in research that will investigate how the ongoing spread of COVID-19 affects working life and health from different perspectives. ",
+            "descriptionContentOfMeasure": "So far 18 projects have been granted research funding to find out more about the effects of COVID-19 on work environment and health. AFA Insurance accepts applications within the framework of the COVID-19 call until 1 October 2020.\r\rOnly academics conducting research on research institutes and universities are eligible for the grant. The projects accepted to this day have received between SEK 1 and 5 million in grant (\u20ac100,000-500,000). \r\rAn example of a project that have received funding is a project at the Swedish Road and Transport Research Institute. It is about how bus drivers' work environment and health have been affected by the COVID-19 pandemic. The project has received about SEK 3.2 million (\u20ac320,000). The project includes regional public transport authorities and bus operators to provide a broader picture of drivers' work situation and experiences during the pandemic.\r\rAFA Insurance invests approximately SEK 150 million (\u20ac15 million) annually in research and development aimed at preventing ill health and occupational injuries in both private business and municipalities and regions. ",
+            "descriptionUseOfMeasure": "18 projects have been granted research funding to find out more about the effects of COVID-19 on work environment and health.",
+            "descriptionInvolvementOfSocialPartners": "Within the framework of AFA Insurance's research areas work environment and health, the social partners are now investing in research that will investigate how the ongoing spread of COVID-19 affects working life and health from different perspectives. 18 projects are now being granted research funding to find out more about the effects of COVID-19 in these areas.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-25_1151.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1455",
+                    "sources::title": "AFA Insurance",
+                    "sources::url": "https://www.afaforsakring.se/nyhetsrum/pressmeddelanden/2020/08/finansiering-av-ytterligare-forskningom-hur-covid-19-paverkar-arbetsmiljo-halsa-och-ledarskap/",
+                    "sources::d_date": "09/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1061",
+        "modId": "22"
     },
     {
         "fieldData": {
