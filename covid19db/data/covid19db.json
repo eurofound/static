@@ -18844,6 +18844,155 @@
     },
     {
         "fieldData": {
+            "title": "COVID-19: Income support for workers",
+            "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19 \u043c\u044f\u0440\u043a\u0430: \u041f\u043e\u0434\u043f\u043e\u043c\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0440\u0430\u0431\u043e\u0442\u0435\u0449\u0438\u0442\u0435 \u0432 \u0440\u0435\u0430\u043b\u043d\u0438\u044f \u0441\u0435\u043a\u0442\u043e\u0440",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Bulgaria",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BG-2020-11/494",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "Key tax and spending measures have been implemented under the revised 2020 state budget, allowing for a budget deficit of BGN 3.5 billion (\u20ac1.75 billion) and increased ceiling on newly incurred public debt of up to BGN 10 billion (approx. \u20ac5 billion) for 2020. \r\rBy doing so, the Bulgarian government is able to implement a measure that will cover 60% of the wages of employees in affected sectors that would otherwise have been laid off, including the social security contributions that are to be paid by the employers (over 1.2% of 2019 GDP). \r\rThe application procedure is made as convenient and fast as possible - electronically in front of the labour offices or through a licensed postal operator. Employers can initially apply until 30 September 2020, and the measure is to be extended again indefinitely.\r\rThe programme focuses more on the labour market and maintaining employment than on directly supporting business. In this sense, this measure can be considered both economic and social.",
+            "descriptionContentOfMeasure": "The Bulgarian government adopted the Emergency and Measures Act to compensate businesses affected by the pandemic. The programme covers companies, whose activities have been prohibited by restrictive measures related to COVID-19 and companies, whose turnover decreased by 20% compared to the same period in 2019.\r\rThe list of industries that were *not* included in the first wave of the programme (13 March - 30 June 2020) include: agriculture, financial and insurance activities, government, education, human health and social work, households as employers, activities of extraterritorial organisations and services.\r\rA requirement for benefiting employers is that they shall not dismiss employees for whom they received wage compensations, after the end of the state of emergency, for an additional period equal to that for which they were compensated. Employers will be able to establish part-time work for the whole enterprise or units of it and at the same time receive compensation in proportion to the reduced working hours.\r",
+            "descriptionUseOfMeasure": "More than 80% of employees can benefit from the measures and most of the employers in the country. Until mid-April 2020, over 800 companies have benefited from the measure.\r\rAccording to the Employment Agency, the measure known as _'60/40'_ covers 5.4% of the country's workforce. In addition, the measure contributed to keeping unemployment at just over 8% in June. Regionally, the most favourable effect was in the districts of Gabrovo and the capital Sofia, and the weakest - in Vidin and Sofia region. \r\rAs of 30 June 2020, 10,000 employers' applications for a total of 177,000 employees have been approved and submitted for payment.\r\rThe NSSI data on the compensations paid under measure 60/40 shows that the average amount of assistance per employee varies, in March it was BGN 308 (\u20ac154), in April it increased to BGN 515 (\u20ac255) and it dropped again to an average of BGN 400 (\u20ac200) in May 2020.",
+            "descriptionInvolvementOfSocialPartners": "During the negotiations, the social partners were active in drafting the measure. The measure was discussed in detail within the National Council for Tripartite Cooperation (including government representatives, representatives of Bulgarian Industrial Association, Bulgarian Confederation of Independent Unions and others). It was supported by all social partners. \r\rTrade unions have played a key role in contributing to the development of the measure in specific sectors most affected by the crisis, such as tourism and transport. These industries received additional funding. ",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Negotiated",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_494.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "388",
+                    "sources::title": "International Monetary Fund",
+                    "sources::url": "https://www.imf.org/en/Topics/imf-and-covid19/Policy-Responses-to-COVID-19",
+                    "sources::d_date": "04/12/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "390",
+                    "sources::title": "873 \u043c\u043e\u043b\u0431\u0438 \u0441\u0430 \u043f\u043e\u0434\u0430\u0434\u0435\u043d\u0438 \u043f\u043e \u043c\u044f\u0440\u043a\u0430\u0442\u0430 60/40",
+                    "sources::url": "https://btvnovinite.bg/bulgaria/873-molbi-sa-podadeni-po-mjarkata-60-40.htm",
+                    "sources::d_date": "04/08/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "601",
+                    "sources::title": "\u0417\u0418\u0414 \u043d\u0430 \u0417\u0414\u0411\u0420\u0411 \u0437\u0430 2020 \u0433., \u043f\u0440\u0438\u0435\u0442 \u043e\u0442 \u041d\u0421 \u043d\u0430 06.04.2020 \u0433.",
+                    "sources::url": "https://parliament.bg/bg/laws/ID/157391",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "766",
+                    "sources::title": "companies are applying for the measure 60/40",
+                    "sources::url": "https://news.bnt.bg/news/ot-utre-firmite-kandidatstvat-po-myarkata-60-40-1046377news.html",
+                    "sources::d_date": "03/30/2019",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1202",
+                    "sources::title": "\u041c\u042f\u0420\u041a\u0410 \u0417\u0410 \u0417\u0410\u041f\u0410\u0417\u0412\u0410\u041d\u0415 \u041d\u0410 \u0417\u0410\u0415\u0422\u041e\u0421\u0422\u0422\u0410 \u0412 \u0421\u0415\u041a\u0422\u041e\u0420\u0418\u0422\u0415 \"\u0422\u0420\u0410\u041d\u0421\u041f\u041e\u0420\u0422\" \u0418 \"\u0422\u0423\u0420\u0418\u0417\u042a\u041c\"",
+                    "sources::url": "https://coronavirus.bg/bg/450 ",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1421",
+                    "sources::title": "\u041c\u044f\u0440\u043a\u0430\u0442\u0430 60/40 \u0449\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0430 \u0434\u043e 30 \u0441\u0435\u043f\u0442\u0435\u043c\u0432\u0440\u0438 \u0437\u0430 \u0432\u0441\u0438\u0447\u043a\u0438 \u0444\u0438\u0440\u043c\u0438 \u0441 20% \u0441\u043f\u0430\u0434",
+                    "sources::url": "https://www.capital.bg/politika_i_ikonomika/ikonomika/2020/05/30/4072996_miarkata_6040_shte_deistva_do_30_septemvri_za_vsichki/",
+                    "sources::d_date": "05/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1422",
+                    "sources::title": "\u041f\u041c\u0421 151/2020 - \u041f\u0440\u043e\u0446\u0435\u0434\u0443\u0440\u0430 \u043f\u043e \u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442\u0441\u0442\u0432\u0430\u043d\u0435",
+                    "sources::url": "https://www.az.government.bg/pages/pms-151/",
+                    "sources::d_date": "05/30/2018",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "2",
+                    "occupations::name": "Administrative and commercial managers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "13",
+                    "occupations::name": "Business and administration associate professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "8",
+                    "occupations::name": "Business and administration professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1",
+                    "occupations::name": "Chief executives, senior officials and legislators",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "268",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "The programme was amended in June 2020. The amendments included:\r\r1. Prolonging the application period with three months. Initially the programme was planned to last until end of June 2020. Now it has been extended to 30 September 2020.\r\r2. Extension of eligibility criteria. During the second wave of the programme (1 July - 30 September 2020), the measure focuses on the hospitality industry, in particular on seasonal workers. In comparison to the first wave, all workers in healthcare, who do not have a contract with the National Health Insurance Fund, may apply for compensations, including dentists. Nurseries, kindergartens and training centres may apply as well.\r\r3. Additional funds. The programme foresees additional funding for tourism and transport sectors amounting BGN 290 (\u20ac145) per employee monthly. Increasing state's contributions to 80% of workers' wages. The industry specific programme is thus now being popular as measure _'80/20'._",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "385",
+        "modId": "134"
+    },
+    {
+        "fieldData": {
             "title": "COVID-19 measure: Business tax relief",
             "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19 \u043c\u044f\u0440\u043a\u0430: \u0414\u0430\u043d\u044a\u0447\u043d\u0438 \u043e\u0431\u043b\u0435\u043a\u0447\u0435\u043d\u0438\u044f \u0437\u0430 \u0431\u0438\u0437\u043d\u0435\u0441\u0430",
             "d_startDate": "04/13/2020",
@@ -18900,6 +19049,158 @@
         },
         "recordId": "386",
         "modId": "87"
+    },
+    {
+        "fieldData": {
+            "title": "COVID-19: Unemployed can take seasonal work in agriculture without loss of benefits",
+            "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19: \u0414\u043e\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b\u043d\u043e \u043f\u043e\u0434\u043f\u043e\u043c\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0431\u0435\u0437\u0440\u0430\u0431\u043e\u0442\u043d\u0438\u0442\u0435 \u0438 \u0430\u0433\u0440\u0430\u0440\u043d\u0438\u044f \u0441\u0435\u043a\u0442\u043e\u0440",
+            "d_startDate": "04/05/2020",
+            "d_endDate": "10/31/2020",
+            "calc_country": "Bulgaria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "BG-2020-15/496",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "A new opportunity for registered unemployed individuals to sign temporary labour contracts with agriculture producers without losing their unemployment benefits has been approved by the Bulgarian government. The new amendment gives a legal right to an unemployed person to receive unemployment benefits from the state and at the same time work at a rural stop and take a salary from there.\r\rAccording to unofficial information, the Ministry of Agriculture is also discussing the possibility of workers in enterprises that have been introduced to reduced working hours due to the coronavirus crisis and are being compensated under the _60/40 scheme_, to be able to start additional work in agriculture.",
+            "descriptionContentOfMeasure": "People receiving unemployment or social assistance benefits can earn additional income from seasonal work in agriculture without losing their entitlement to state support. Those who are currently on unpaid leave can also sign a second employment contract without permission from their primary employer. These are the two approved measures that, at the threshold of the active season in agriculture, should divert employees to this sector.\r\rAmendments to the Emergency Legislation adopted in April 2020 introduce the possibility for farmers to conclude temporary employment contracts similar to one-day contracts to hire employees for activities such as harvesting. The key change in this case is that the conclusion of such contracts would not affect the receipt of unemployment benefits or social benefits by employees, which in previous years was a serious obstacle to securing seasonal workers on the field.\r\rCurrently, there is also no limit to the length of time that employees can work under the second employment contract while on unpaid leave. ",
+            "descriptionUseOfMeasure": "The Bulgarian employment agency, operating for the Ministry of Labour and Social Policy, estimated that of nearly 100,000 unemployed registered at the labour offices in the country since 13 March 2020 (date of introducing COVID-19 measures), 1,637 people have expressed interest in working in agriculture. They account for 1.6% of the unemployed force. In April 2020, 97 employers announced 1,304 open vacancies for agricultural workers.\r\rBetween January 2020 and June 2020, more than 73,000 one-day contracts have been registered with 564 farmers, who grow mainly vines, apples and lavender. Another 66 farmers have applied for 2,500 contracts for more than one day for 29,500 man-days to work, mainly for harvesting the rose. \r\rTo support the contracting, the employment agency, issued an online contracting portal. \r\r\r",
+            "descriptionInvolvementOfSocialPartners": "The measure was thoroughly consulted with the representatives of the workers in the agriculture sector in Bulgaria.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-15_496.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "391",
+                    "sources::title": "\u0417\u0435\u043c\u0435\u0434\u0435\u043b\u0446\u0438\u0442\u0435 \u0449\u0435 \u043c\u043e\u0433\u0430\u0442 \u0434\u0430 \u043d\u0430\u0435\u043c\u0430\u0442 \u0431\u0435\u0437\u0440\u0430\u0431\u043e\u0442\u043d\u0438 \u043f\u0440\u0438 \u043e\u0431\u043b\u0435\u043a\u0447\u0435\u043d\u0438 \u0443\u0441\u043b\u043e\u0432\u0438",
+                    "sources::url": "https://www.capital.bg/biznes/zemedelie/2020/04/07/4051589_zemedelcite_shte_mogat_da_naemat_bezrabotni_pri",
+                    "sources::d_date": "04/07/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "599",
+                    "sources::title": "\u0417\u0430\u043a\u043e\u043d \u0437\u0430 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0438 \u0434\u043e\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435 \u043d\u0430 \u0417\u0430\u043a\u043e\u043d\u0430 \u0437\u0430 \u043c\u0435\u0440\u043a\u0438\u0442\u0435 \u0438 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f\u0442\u0430 \u043f\u043e \u0432\u0440\u0435\u043c\u0435 \u043d\u0430 \u0438\u0437\u0432\u044a\u043d\u0440\u0435\u0434\u043d\u043e\u0442\u043e \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435, \u043e\u0431\u044f\u0432\u0435\u043d\u043e \u0441 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043d\u0430 \u041d\u0430\u0440\u043e\u0434\u043d\u043e\u0442\u043e \u0441\u044a\u0431\u0440\u0430\u043d\u0438\u0435 \u043e\u0442 13 \u043c\u0430\u0440\u0442 2020 \u0433",
+                    "sources::url": "https://parliament.bg/bg/laws/ID/157400",
+                    "sources::d_date": "04/06/2020",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "725",
+                    "sources::title": "Farmers can conclude short-term seasonal farm work for more than a day",
+                    "sources::url": "http://www.gli.government.bg/page.php?c=47&d=4944",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1480",
+                    "sources::title": "Seasonal workers: What is the interest in our country?",
+                    "sources::url": "https://agri.bg/novini/posledni-danni-interesat-za-sezonni-rabtnitsi-u-nas-i-evropa",
+                    "sources::d_date": "04/27/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1481",
+                    "sources::title": "Seasonal contracts: Is it easy to hire the unemployed?",
+                    "sources::url": "https://agri.bg/novini/sezonni-dogovori-trudno-li-e-da-se-naemat-bezrabotni",
+                    "sources::d_date": "05/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1482",
+                    "sources::title": "Harvest 2020: Seasonal contracts up to 120 days are now applied online",
+                    "sources::url": "https://agri.bg/novini/rekolto-2020-sezonni-dogovori-do-120-dni-veche-se-vnasyat-i-onlayn",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "8",
+                    "funding::name": "Regional funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "36",
+                    "occupations::name": "Agricultural, forestry and fishery labourers",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "27",
+                    "sectors::code": "A1",
+                    "sectors::name": "Crop and animal production, hunting and related service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "29",
+                    "sectors::code": "A3",
+                    "sectors::name": "Fishing and aquaculture",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "265",
+                    "updates::d_date": "09/22/2020",
+                    "updates::description": "During the months of the emergency situation due to the coronavirus in the period from 13 March to 13 May 2020, two types of extended one-day contracts were applied in agriculture, which were regulated by the Law on Measures and Actions during the State of Emergency.\r\rIn May 2020, the parliament amended the Health Act, allowing relaxed conditions of temporary employment contracts in agriculture in association with the coronavirus crisis to be prolonged until 31 October 2020. \r\rThe seasonal agricultural workers, that are also registered at the labour agency, will also be entitled to heating allowances if they meet all other conditions and requirements for receiving them.\r\rThe Act also states that the employment contract for seasonal employment has a normal working time for the day up to eight hours, and the parties may arrange work for four or six hours. Seasonal contracts can last up to 120 days. ",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "387",
+        "modId": "103"
     },
     {
         "fieldData": {
@@ -19056,6 +19357,116 @@
         },
         "recordId": "389",
         "modId": "82"
+    },
+    {
+        "fieldData": {
+            "title": "COVID-19: Assistance for parents taking unpaid leave due to a state of emergency",
+            "title_nationalLanguage": "\u041a\u041e\u0412\u0418\u0414 - 19: \u041f\u043e\u043c\u043e\u0449 \u0437\u0430 \u0440\u043e\u0434\u0438\u0442\u0435\u043b\u0438, \u043a\u043e\u0438\u0442\u043e \u043f\u043e\u043b\u0437\u0432\u0430\u0442 \u043d\u0435\u043f\u043b\u0430\u0442\u0435\u043d \u043e\u0442\u043f\u0443\u0441\u043a \u043f\u043e\u0440\u0430\u0434\u0438 \u0438\u0437\u0432\u044a\u043d\u0440\u0435\u0434\u043d\u043e\u0442\u043e \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438",
+            "d_startDate": "03/13/2020",
+            "d_endDate": "",
+            "calc_country": "Bulgaria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "BG-2020-11/499",
+            "dateType": "Open ended",
+            "calc_creationDay": "04/12/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "Parents of children up to 12 years of age, who due to the declared state of emergency, are taking unpaid leave of at least 20 working days for childcare at home are entitled to an additional single childcare allowance. The assistance has an allocated budget of BGN 20 million (\u20ac10 million) allocated. They could reach approximately 55,000 families, according to the Minister of Labour and Social Policy. The one-time assistance amounts 375 BGN (approx. \u20ac200).\r\rIncome tested benefit: the monthly income of a family member for the month preceding the use of unpaid leave does not exceed BGN 610 (\u20ac305) (minimum working salary for 2020). \r\r",
+            "descriptionContentOfMeasure": "The family aid, which amounts  375 BGN (approx. \u20ac200), is granted if:\r\r1. Both parents / a single parent enjoy continuous unpaid leave of at least 20 working days due to the inability to provide the employer with remote home work;\r2. Both parents / single parent do not receive: a) Social assistance benefits under the LPA (Labour Policy Assistance), b) any other income (such as from contract work);\r3. Both parents / a single parent are not entitled to paid leave, or it has already been realised;\r4. The two parents / a single parent are not included in the 60/40 compensation scheme (under Decree No. 55 of the Council of Ministers of 30 March 2020 laying down the conditions and procedure for payment of compensation to employers in order to maintain the employment of workers and emergency workers, announced by a decision of the National Assembly of 13 March 2020);\r5. Both parents / single parent have been insured in the last six months;\r6. If only one parent is on unpaid leave, the other parent shall not receive: a) unemployment benefit, temporary disability benefit or pension (excluding disability pension), b) compensation for use of parental leave up to two years;\r7. The child is not placed outside the family in accordance with the Law on Child Protection;\r8. The child attended kindergarten / day nursery / school before 13 March 2020;\r9. There is no possibility of taking care of the child from other relatives and relatives.",
+            "descriptionUseOfMeasure": "Between 13 April 2020 and 30 May 2020,  5,231 family applications were submitted. However, only nearly 2,000 families or fewer than the half who have applied for the allowance since COVID-19 outbreak, were approved for state aid. The cabinet expected about 55,000 families and single parents to benefit from it. \r\rAccording to the media, the measure does not have much coverage due to the strict conditions set for its receipt - both parents had exhausted their paid leave and had accumulated at least 20 days of unpaid leave between them, which was almost impossible in the first month of the state of emergency. The amount also barely covers the poverty line for one person of BGN 363 (\u20ac180) for 2020, although it is intended for the whole family.\r\r\r\r",
+            "descriptionInvolvementOfSocialPartners": "No information available. ",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_499.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "394",
+                    "sources::title": "\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u0438 \u0432 \u043d\u0435\u043f\u043b\u0430\u0442\u0435\u043d \u043e\u0442\u043f\u0443\u0441\u043a \u0449\u0435 \u043f\u043e\u043b\u0443\u0447\u0430\u0442 \u0435\u0434\u043d\u043e\u043a\u0440\u0430\u0442\u043d\u0430 \u043f\u043e\u043c\u043e\u0449 \u043e\u0442 375 \u043b\u0435\u0432\u0430",
+                    "sources::url": "https://www.investor.bg/biudjet-i-finansi/333/a/roditeli-v-neplaten-otpusk-shte-poluchat-ednokratna-pomosht-ot-375-leva-302289",
+                    "sources::d_date": "04/12/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "594",
+                    "sources::title": "\u0420\u043e\u0434\u0438\u0442\u0435\u043b\u0438 \u0432 \u043d\u0435\u043f\u043b\u0430\u0442\u0435\u043d \u043e\u0442\u043f\u0443\u0441\u043a\u0442 \u0449\u0435 \u043f\u043e\u043b\u0443\u0447\u0430\u0442 375 \u043b\u0432. \u0435\u0434\u043d\u043e\u043a\u0440\u0430\u0442\u043d\u0430 \u043f\u043e\u043c\u043e\u0449",
+                    "sources::url": "https://www.mlsp.government.bg/index.php?section=PRESS2&prid=1977",
+                    "sources::d_date": "04/14/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1483",
+                    "sources::title": "Nearly 2,000 parents on unpaid leave because of Covid-19 with assistance of BGN 375",
+                    "sources::url": "https://www.mediapool.bg/blizo-2000-roditeli-v-neplaten-otpusk-zaradi-covid-19-s-pomosht-ot-375-leva-news307936.html",
+                    "sources::d_date": "05/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1484",
+                    "sources::title": "More families will receive a one-time allowance of BGN 375",
+                    "sources::url": "https://nova.bg/news/view/2020/05/04/286930/%D0%BF%D0%BE%D0%B2%D0%B5%D1%87%D0%B5-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B0-%D1%89%D0%B5-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B0%D1%82-%D0%B5%D0%B4%D0%BD%D0%BE%D0%BA%D1%80%D0%B0%D1%82%D0%BD%D0%B0-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89-%D0%BE%D1%82-375-%D0%BB%D0%B5%D0%B2%D0%B0/",
+                    "sources::d_date": "05/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1485",
+                    "sources::title": "Another measure in the crisis stumbled upon strict criteria",
+                    "sources::url": "https://www.segabg.com/hot/category-bulgaria/poredna-myarka-krizata-se-spuna-strogi-kriterii",
+                    "sources::d_date": "05/13/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors)",
+                    "modId": "17"
+                },
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "70",
+                    "targetGroups::name": "Single parents in employment",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "266",
+                    "updates::d_date": "05/04/2020",
+                    "updates::description": "In May 2020, the Social Ministry included parents of students who have reached the age of 14, as well as families in which one or both parents have lost their jobs but are not entitled to unemployment benefits, in the one-time benefit programme of BGN 375 (\u20ac190) per family. \r\rThe one-time allowance will be paid to families who have not received assistance on the same grounds in 2020. Applicants must not have income from a second employment contract, rent, lease and others.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "390",
+        "modId": "93"
     },
     {
         "fieldData": {
@@ -59395,5 +59806,64 @@
         },
         "recordId": "1075",
         "modId": "11"
+    },
+    {
+        "fieldData": {
+            "title": "Export credit guarantees to support entrance to new markets",
+            "title_nationalLanguage": "Export Credit Guarantee",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "MT-2020-24/1167",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/21/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced a new series of measures. Amongst them was the 'Export Credit Guarantee', which aimed to support business as they targeted new markets. ",
+            "descriptionContentOfMeasure": "Administered by the Malta Enterprise, the measure aims to aid organisations to diversify to new markets such as African continent, Middle East, and Latin America. The aim is to build economic resilience in view of many of Malta's traditional markets currently being weaker. Whist such markets hold promise, diversifying also comes at a risk to organisations which often prevents this from occurring. Government thus committed towards \u20ac10 millions for an export credit guarantee scheme to address this situation.\r\rDespite the measure being announced in June, details and applications are yet to be published (September 2020). Thus, no further information is available. ",
+            "descriptionUseOfMeasure": "No information is available at this stage. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24 March 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_1167.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1476",
+                    "sources::title": "Export Credit Guarantee",
+                    "sources::url": "https://covid19.maltaenterprise.com/export-credit-guarantee/",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1077",
+        "modId": "8"
     }
 ]
