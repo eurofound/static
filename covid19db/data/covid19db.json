@@ -3474,6 +3474,157 @@
     },
     {
         "fieldData": {
+            "title": "Facilitating teleworking",
+            "title_nationalLanguage": "",
+            "d_startDate": "02/15/2020",
+            "d_endDate": "05/08/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "MT-2020-7/277",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/04/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "As part of the Maltese effort to reduce the transmission of COVID-19, workers were encouraged to work from home where possible. Many Maltese organisations were not in a position to carry out this transition seamlessly, with few organisations offering employees the opportunity to work from home prior to COVID-19. In order to facilitate this change of working method, the government introduced a grant to support employers to invest in technology to facilitate this change. \r",
+            "descriptionContentOfMeasure": "This call supports employers and self-employed individuals to invest in technology that enables teleworking: the aim of the call is to partially cover the costs involved in making a transition to telework. \r \rSupport is limited up to \u20ac500 per teleworking agreement and \u20ac4,000 per undertaking. The grant shall be awarded against 45% of the eligible cost. In order to be eligible, the employee should not have had an active teleworking agreement prior to the 15th of February 2020. All costs must be incurred after this date. The employee must be able to address their role via teleworking, a formal teleworking agreement must be in place, and they can connect to the work place via a VPN or equivalent solution. \r\r",
+            "descriptionUseOfMeasure": "* By the beginning of June, \u20ac300,000 had been disbursed via this scheme, whilst \u20ac376,000 has been approved.  \r* Up to the end of July, 370 businesses benefitted from this scheme with the cost amounting to \u20ac605,613. \r* In September, the CEO of the Malta Enterprise stated that in total, over 500 businesses benefitted from the scheme. No further information is available. ",
+            "descriptionInvolvementOfSocialPartners": "The measure was one of the very first to be introduced by the Maltese government. Direct and public communication had occurred between government, unions and government. Amongst the many concerns that were discussed were the costs associated with sudden number of teleworking employees. In view of these concerns, this measure was introduced through the Malta Enterprise by the Government; consultation was limited and social partners were dissatisfied with the package of measures introduced during this early phase of the pandemic.",
+            "socialPartner_form": "Bi-or tripartite social dialogue bodies",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-7_277.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "126",
+                    "sources::title": "Facilitating teleworking activities",
+                    "sources::url": "https://covid19.maltaenterprise.com/teleworking/",
+                    "sources::d_date": "03/01/2020",
+                    "modId": "5"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "204",
+                    "updates::d_date": "07/14/2020",
+                    "updates::description": "This measure has now ended.\r\r",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "160",
+        "modId": "114"
+    },
+    {
+        "fieldData": {
+            "title": "Deferral of payment of taxes",
+            "title_nationalLanguage": "None",
+            "d_startDate": "03/18/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Deferral of payments or liabilities",
+            "calc_identifier": "MT-2020-12/278",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/04/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "In order to improve liquidity following the impact of COVID-19 on enterprise, the government announced a 2-month deferral to enterprises and the self-employed to pay provisional tax, employee taxes, maternity fund payments, VAT and National Insurance Contributions on salaries. No interest or penalties are to be charged with regards to the eligible taxes. The scheme is targeted at those who have suffered a significant downturn in turnover due to COVID-19. \r",
+            "descriptionContentOfMeasure": "This measure originally applied to taxes owed until the end of April; tax forms were still expected to be submitted according to normal deadlines. The incentive was primarily aimed at companies and self-employed who suffer a significant downturn in their turnover. A sum of a reduction in 25% is quoted and it aims to target the following sectors but is not limited to them:  tourism and hospitality, entertainment, transport, and manufacturing sectors.  Enterprises will still collect National Insurance on their employees\u2019 wages, but will keep these dues for the duration of the deferral. \r\rThe eligible taxes to be deferred are those due in March and April 2020 and include: provisional tax, employee taxes, maternity fund payments and social security contributions, social security contributions of self-employed persons and VAT.\r\rEligible taxes, other than VAT, are to be settled in 4 equal monthly installments between May and August 2020. VAT is to be settled in 2 equal installments with the 2 quarterly returns that follow the deferred quarter. \r\rExcluded from this initiative are companies and self-employed persons who failed to comply with their tax obligations by 31 December 2019. Applications were to be entered by 15th April 2020\r\rIt was later announced that the period covered by this measure was extended by a further two months, to cover up until the end of June. After this period some contributions will no longer be deferred. National Insurance, income tax and maternity contributions will need to be paid from 1 July. However, other taxes due by organisation have been deferred to the end of August. Companies can pay the deferred tax by May next year, with no interest charged.\r",
+            "descriptionUseOfMeasure": "Up until the end of May 2020, 3,324 businesses had their application for tax deferral approved\ramounting to an estimated total of around \u20ac60 million being deferred. Statistics related to July and August 2020 are currently unavailable. ",
+            "descriptionInvolvementOfSocialPartners": "The measure emerged at the very beginning of COVD-19 following calls from employers' associations for support. Much of this occurred via direct consultation and also via public calls for support. The measure was ultimately developed, implemented and monitored by the government. Social partner involvement was therefore limited. ",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-12_278.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "127",
+                    "sources::title": "Tax deferral scheme",
+                    "sources::url": "",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "992",
+                    "sources::title": "Tax Deferral Scheme Update",
+                    "sources::url": "https://covid19.maltaenterprise.com/ongoing-measures/",
+                    "sources::d_date": "06/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "85",
+                    "updates::d_date": "06/08/2020",
+                    "updates::description": "The period covered by this measure was extended by a further two months, to cover up until the end of June. After this period some contributions will no longer be deferred. National Insurance, income tax and maternity contributions will need to be paid from 1 July. However, other taxes due by organisation have been deferred to the end of August. Companies can pay the deferred tax by May next year, with no interest charged.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "161",
+        "modId": "103"
+    },
+    {
+        "fieldData": {
             "title": "Outstanding tax payments postponed to October",
             "title_nationalLanguage": "\u0391\u03bd\u03b1\u03c3\u03c4\u03bf\u03bb\u03ae \u03c6\u03bf\u03c1\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03ce\u03bd \u03c5\u03c0\u03bf\u03c7\u03c1\u03b5\u03ce\u03c3\u03b5\u03c9\u03bd \u03ad\u03c9\u03c2 \u03c4\u03bf\u03bd \u039f\u03ba\u03c4\u03ce\u03b2\u03c1\u03b9\u03bf",
             "d_startDate": "03/11/2020",
@@ -4598,105 +4749,6 @@
         },
         "recordId": "177",
         "modId": "94"
-    },
-    {
-        "fieldData": {
-            "title": "Postponement of the employers' deadline for payment of compulsory social security obligations",
-            "title_nationalLanguage": "Odlo\u017eenie term\u00ednu povinn\u00fdch platieb zamestn\u00e1vate\u013eov do poistn\u00fdch fondov",
-            "d_startDate": "04/06/2020",
-            "d_endDate": "12/31/2020",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments or liabilities",
-            "calc_identifier": "SK-2020-15/295",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "06/29/2020",
-            "descriptionBackgroundInfo": "To minimize personal contacts, the government temporarily closed the most of retail and facilities providing services, except of those selling foodstuff, food for pets and health-care aids, veterinary corps, pharmacies, drugstores, posts, banks and insurance agencies, telecom operators, catering establishments, gasoline stations and tobacco and printed media shops. \r\rRestaurants, fast-foods and canteens can provide only take-away food, usually lunch menu. These measures had, hence, a wide impact on some employers, that were totally or partially prevented from work. \r\rAs a partial relief, in order to diminish temporarily the labour-related expenditures (compulsory payments to the social insurance) of those employers, the government adopted the measure by Section 293ew of the amended Act on social insurance.",
-            "descriptionContentOfMeasure": "The measures entailed the introduction of some amendments to the Social insurance act, postponing the deadline for compulsory payments of employers and self-employed to social security funds.\r \rAccording to this framework, any employer and self-employed paying compulsory contributions to health and pension insurance funds, and whose revenue from business decreased by at least 40%, are entitled to pay these contributions within 31 July 2020, rather than in March 2020. The government can prolong the deadline. The Government Order (Nariadenie vlady 76/2020) allows more options for the determination of the revenue decrease: comparison with March 2019, February 2020 and 2019 monthly average. ",
-            "descriptionUseOfMeasure": "It is assumed, that the measure can concern small and medium size as well as large employers. To reduce the pressure on the employers\u00b4 cash flow, it is possible to apply the schedule of due dates. \r\rAccording to the Institute of Social Policy (June 2020), about 28,000 employers and 22,000 self-employed used the postponing and releasing of the compulsory payments by 8 June 2020. The total value of this support to employers and self-employed made more than \u20ac90 million. ",
-            "descriptionInvolvementOfSocialPartners": "No information available.",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-15_295.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "223",
-                    "sources::title": "Z\u00e1kon \u010d. 68/2020 z 3. apr\u00edla 2020",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/68/20200406",
-                    "sources::d_date": "04/03/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "224",
-                    "sources::title": "Pr\u00e1vnu normu parlament schv\u00e1lil v piatok (3.4.). Rokoval o nej v skr\u00e1tenom legislat\u00edvnom konan\u00ed.",
-                    "sources::url": "https://www.teraz.sk/slovensko/prezidentka-podpisala-moznost-odkladu/458364-clanok.html ",
-                    "sources::d_date": "04/06/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "760",
-                    "sources::title": "Government resolution No. 76/2020 as of\u00a09 April 2020 (o sposobe urcenia poklesu cisteho obratu a prijmov z podnikania....) ",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/76/",
-                    "sources::d_date": "04/09/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "919",
-                    "sources::title": "Act No.\u00a095/2020, as of 22 April 2020",
-                    "sources::url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2020/95/",
-                    "sources::d_date": "04/25/2020",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "926",
-                    "sources::title": "Institute of Social Policy. First aid to Slovakia (In\u0161tit\u00fat soci\u00e1lnej politiky. Prv\u00e1 pomoc Slovensku:) ",
-                    "sources::url": "https://www.employment.gov.sk/files/slovensky/ministerstvo/analyticke-centrum/analyticke-komentare/isp_2020_prva_pomoc_slovensku_20200615.pdf",
-                    "sources::d_date": "06/10/2020",
-                    "modId": "2"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "11",
-                    "actors::name": "Social insurance",
-                    "modId": "1"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "52",
-                    "updates::d_date": "06/20/2020",
-                    "updates::description": "Employers, of which at least one plant/premise was closed in April 2020 by the Public Health Office longer than for 15 days, do not need to pay any contributions for April (Act No 95/2020). Also some organisations of the public administration could use this option.",
-                    "modId": "5"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "178",
-        "modId": "126"
     },
     {
         "fieldData": {
@@ -43266,87 +43318,6 @@
     },
     {
         "fieldData": {
-            "title": "Wage support for companies",
-            "title_nationalLanguage": "Podpora mzdov\u00fdch v\u00fddavkov na zamestnancov - Prv\u00e1 pomoc Opatrenie 3",
-            "d_startDate": "04/21/2020",
-            "d_endDate": "",
-            "calc_country": "Slovakia",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "SK-2020-17/871",
-            "dateType": "Temporary",
-            "calc_creationDay": "05/31/2020",
-            "calc_lastUpdate": "07/15/2020",
-            "descriptionBackgroundInfo": "To minimize the effects of the COVID-19 pandemic on the citizens, the government closed some facilities and adopted other related measures. These measures caused losses in sales of several firms and their business units. To retain employment in these firms and support self-employers, the government adopted a package of measures called the First aid for employees, employers and self-employers. One of the most important measure in the package is Measure 3.   ",
-            "descriptionContentOfMeasure": "The measure\u00a0was adopted in order to maintain employment at the employers who were not closed compulsorily by the state but experienced losses in sales due to the COVID-19 pandemic. Employers and self-employers, who experienced at least 10% losses in sales from\u00a013\u00a0to the end of March and 20%\u00a0in April and in the next months of 2020, can apply to the employment services UPSVaR for a subsidy\u00a0to replace the wage of employees in two forms: \r\r* **3A)** 80% wage replacement of employees, who can't work due to the obstacle on the side of the employer (maximum \u20ac880 per employee).\r* **3B)** a fixed sum for each employee based on the rate of sales losses. For instance, the minimum subsidy for April and the next months is \u20ac180 (20% - 39.99% losses) and the maximum is \u20ac540 for 80% and more losses. \r",
-            "descriptionUseOfMeasure": "According to the Institute of Social Policy, the largest financial support to retain employees in the firms affected by the pandemic was provided via Measure 3A and 3B. By 10 June 2020, a subsidy\u00a0was provided to more than 30,000 subjects and covered almost 588,000 employees and self-employers in March and April. The total amount of provided subsidies\u00a0was more than \u20ac154 million. The average value of the subsidy 3A and 3B increased from \u20ac268 and \u20ac186 respectively in March to \u20ac423 and \u20ac256 in April.    ",
-            "descriptionInvolvementOfSocialPartners": "According to the peak organisations of employers AZZZ SR, APZ and KOZ SR, social partners were not involved via usual tripartite consultations and neither\u00a0in cross-sector commenting procedures. Some social partners, e.g. the KOZ SR, tried to be involved and\u00a0provided comments informally\u00a0via media or exceptionally through\u00a0individual consultations with representatives of the respective state administration body.\u00a0In case of the\u00a0measure, it was the Ministry of Labour, Social Affairs and Family. \u00a0",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "Informed",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2020-17_871.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "926",
-                    "sources::title": "Institute of Social Policy. First aid to Slovakia (In\u0161tit\u00fat soci\u00e1lnej politiky. Prv\u00e1 pomoc Slovensku:) ",
-                    "sources::url": "https://www.employment.gov.sk/files/slovensky/ministerstvo/analyticke-centrum/analyticke-komentare/isp_2020_prva_pomoc_slovensku_20200615.pdf",
-                    "sources::d_date": "06/10/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "927",
-                    "sources::title": "First aid to\u00a0employees, employers and self-employers (Prva pomoc) \u00a0zamestnancom\u00a0)",
-                    "sources::url": "https://www.pomahameludom.sk/",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "5",
-                    "funding::name": "European Funds",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "781",
-        "modId": "61"
-    },
-    {
-        "fieldData": {
             "title": "Exceptional support to workers' families",
             "title_nationalLanguage": "Apoio excecional \u00e0 fam\u00edlia para trabalhadores",
             "d_startDate": "03/13/2020",
@@ -47754,6 +47725,83 @@
     },
     {
         "fieldData": {
+            "title": "In-work benefit for working parents",
+            "title_nationalLanguage": "",
+            "d_startDate": "06/06/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "MT-2020-23/935",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/06/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "Offered by the Department of Social Security, the In-Work Benefit aims to assist couples and single parents who are employed and have children under the age of 23 years, who are still dependent and living with them. The In-Work Benefit provides such individuals who have a limited income with a financial benefit. In view of the COVID-19 pandemic, this benefit will see both its threshold and rate increase. ",
+            "descriptionContentOfMeasure": "The In-Work Benefit is usually paid quarterly in January, April, July and October. In view of COVID-19, a one-time payment of \u20ac250 is being paid for the year 2020 as an In-Work supplement to a beneficiary in receipt of In-Work Benefit. \r\rApplicants must have children under the age of 23, living within the household. The usual eligibility for the In-work benefit are (during 1January 2020 till 5 June 2020): \r\r* A declared income (Year of Assessment 2019) of a single parent in gainful employment of more than \u20ac6,600 and less than \u20ac17,130 would be eligible for a maximum payable rate of up to \u20ac1,350 yearly per child. \r* A couple in gainful employment whose collective income from employment is greater than \u20ac10,000 and is less than \u20ac24,630 are eligible for a maximum payable rate of up to \u20ac1,300 yearly per child. \r* A couple of whom only one is in gainful employment and whose income from employment is greater than \u20ac6,600 and less than \u20ac17,130 are eligible for a maximum payable rate of up to \u20ac550 yearly per child \r \r\r",
+            "descriptionUseOfMeasure": "In June 2020 it was announced by government that some 3,900 families will receive a \u20ac250 top-up to their usual in-work benefit. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. The measure is administered by the Social Security Department. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-23_935.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1044",
+                    "sources::title": "In work benefit",
+                    "sources::url": "",
+                    "sources::d_date": "06/10/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "69",
+                    "targetGroups::name": "Parents in employment",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "70",
+                    "targetGroups::name": "Single parents in employment",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "271",
+                    "updates::d_date": "06/06/2020",
+                    "updates::description": "As from 6 June 2020 till 31 December 2020, the revised criteria and rate are now: \r\r* A declared income for a single parent in gainful employment earning more than \u20ac6,600 and less than \u20ac18,200 is eligible for a maximum payable rate of \u20ac1,400 yearly per child. \r* A couple in gainful employment whose collective income from employment is greater than \u20ac10,000 and is less than \u20ac26,000 are eligible for a maximum payable rate of up to \u20ac1,400 yearly per child. \r* A couple of whom only one is in gainful employment and whose income from employment is greater than \u20ac6,600 and less than \u20ac22,000 are eligible for a maximum payable rate of up to \u20ac630 yearly per child.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "845",
+        "modId": "22"
+    },
+    {
+        "fieldData": {
             "title": "Skills Development Scheme",
             "title_nationalLanguage": "Skema tal-i\u017cvillupp tal-\u0127iliet ",
             "d_startDate": "06/09/2020",
@@ -48004,6 +48052,369 @@
         },
         "recordId": "848",
         "modId": "25"
+    },
+    {
+        "fieldData": {
+            "title": "Electricity bill refund",
+            "title_nationalLanguage": "Rifu\u017cjoni tal-kont tal-elettriku",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "MT-2020-24/939",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/07/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced that organisations which were eligible for the wage subsidy were now also eligible to apply for an electricity bill refund. ",
+            "descriptionContentOfMeasure": "During the first months of resuming operations (July, August and September 2020) businesses eligible for the [COVID-19 Wage Supplement](https://static.eurofound.europa.eu/covid19db/cases/MT-2020-13_264.html) _'will be assisted on 50% of a commercial rate account up to an amount of \u20ac1,500 per applicant.'_ The measure focuses on operating costs, and thus the amount does not include the payment for the electricity meter. The total cost of this measure is expected to reach just over \u20ac30 million.\r\rFull details of this measure were published on 27 August 2020, this highlighted that the maximum grant of \u20ac1,500 was for those with a single electricity account. Those with more agreements (up to 5), as they operate from multiple sites, could receive a grant of up to \u20ac7,500. \r\r",
+            "descriptionUseOfMeasure": "No information are available. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24th march 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. The Malta Hotels and Restaurants Association (MHRA) had been vocal about the need for electricity subsidies during this period. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_939.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "119",
+                    "sources::title": "Malta Enterprise - Annex A",
+                    "sources::url": "",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "120",
+                    "sources::title": "Malta Enterprise - Annex B",
+                    "sources::url": "",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1053",
+                    "sources::title": "Electricity bill refund ",
+                    "sources::url": "",
+                    "sources::d_date": "06/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1471",
+                    "sources::title": "Rent and Electricity Refund Incentive Guidelines",
+                    "sources::url": "http://www.maltaenterprise.com/sites/default/files/Rent%20and%20Electricity%20Refund%20Incentive%20Guidelines%20%28Version%201.0%29_1.pdf",
+                    "sources::d_date": "08/27/2021",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "103",
+                    "sectors::code": "M73",
+                    "sectors::name": "Advertising and market research",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "104",
+                    "sectors::code": "M74",
+                    "sectors::name": "Other professional, scientific and technical activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "107",
+                    "sectors::code": "N77",
+                    "sectors::name": "Rental and leasing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "108",
+                    "sectors::code": "N78",
+                    "sectors::name": "Employment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "110",
+                    "sectors::code": "N80",
+                    "sectors::name": "Security and investigation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "111",
+                    "sectors::code": "N81",
+                    "sectors::name": "Services to buildings and landscape activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "112",
+                    "sectors::code": "N82",
+                    "sectors::name": "Office administrative, office support and other business support activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "129",
+                    "sectors::code": "S96",
+                    "sectors::name": "Other personal service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "849",
+        "modId": "36"
     },
     {
         "fieldData": {
@@ -51836,6 +52247,357 @@
         },
         "recordId": "900",
         "modId": "20"
+    },
+    {
+        "fieldData": {
+            "title": "Rent refund for companies",
+            "title_nationalLanguage": "Rifu\u017cjoni tal-kera",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "MT-2020-24/991",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced that organisations which were eligible for the wage subsidy were now also eligible to apply for a rent refund. ",
+            "descriptionContentOfMeasure": "On the 24 March 2020, a package of measures to save jobs and organisations was announced by the Government. The most meaningful of the measures announced was the [COVID-19 Wage Supplement](https://static.eurofound.europa.eu/covid19db/cases/MT-2020-13_264.html) by which employers in specific sectors were to receive a sum of money per employee, which was in turn to be passed on to the said employees. The amount of money received from the government depended on the sector with the Government dividing organisations into 'Annex A' and 'Annex B'. Those in Annex A received a larger wage supplement than those in Annex B. \r\r\r",
+            "descriptionUseOfMeasure": "A\u00a0budget of up to \u20ac50 million has been allocated for this scheme - no futher information are available. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24 March 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. Further information on the measure are yet to be published.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_991.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "119",
+                    "sources::title": "Malta Enterprise - Annex A",
+                    "sources::url": "",
+                    "sources::d_date": "05/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "120",
+                    "sources::title": "Malta Enterprise - Annex B",
+                    "sources::url": "",
+                    "sources::d_date": "03/27/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1471",
+                    "sources::title": "Rent and Electricity Refund Incentive Guidelines",
+                    "sources::url": "http://www.maltaenterprise.com/sites/default/files/Rent%20and%20Electricity%20Refund%20Incentive%20Guidelines%20%28Version%201.0%29_1.pdf",
+                    "sources::d_date": "08/27/2021",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "sectors::code": "C12",
+                    "sectors::name": "Manufacture of tobacco products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "46",
+                    "sectors::code": "C19",
+                    "sectors::name": "Manufacture of coke and refined petroleum products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "103",
+                    "sectors::code": "M73",
+                    "sectors::name": "Advertising and market research",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "104",
+                    "sectors::code": "M74",
+                    "sectors::name": "Other professional, scientific and technical activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "107",
+                    "sectors::code": "N77",
+                    "sectors::name": "Rental and leasing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "110",
+                    "sectors::code": "N80",
+                    "sectors::name": "Security and investigation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "111",
+                    "sectors::code": "N81",
+                    "sectors::name": "Services to buildings and landscape activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "112",
+                    "sectors::code": "N82",
+                    "sectors::name": "Office administrative, office support and other business support activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "129",
+                    "sectors::code": "S96",
+                    "sectors::name": "Other personal service activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "269",
+                    "updates::d_date": "06/01/2020",
+                    "updates::description": "On 1 June 2020, Government announced that organisations listed in Annex A and Annex B, that have been granted the Wage Supplement will now also be able to apply for a rent refund grant of up to \u20ac2,500 by submitting their lease agreements.",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "270",
+                    "updates::d_date": "08/27/2020",
+                    "updates::description": "Full details of this measure were published on 27 August 2020, this highlighted that the maximum grant of \u20ac2,500 was for those with a single premises. Those with more rental agreements (up to five) could receive a grant of up to \u20ac7,500. To be considered eligible, rent agreements must have initially been signed prior to 9 March 2020.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "901",
+        "modId": "39"
     },
     {
         "fieldData": {
@@ -59332,6 +60094,108 @@
     },
     {
         "fieldData": {
+            "title": "Extension of temporary unemployment due to force majeure for specific sectors and companies in trouble.",
+            "title_nationalLanguage": "Verruiming van de tijdelijke werkloosheid wegens overmacht voor specifieke sectoren en bedrijven in problemen.",
+            "d_startDate": "08/31/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BE-2020-36/1126",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "The measure was [originally introduced](https://static.eurofound.europa.eu/covid19db/cases/BE-2020-11_380.html) due to the strong increase in requests for temporary unemployment for the national economy as way to alleviate pressure on the institutions that were tasked with organizing and distributing unemployment benefits, both the National Employment Office (NEO) and the trade unions (that also play an important role in paying out the unemployment benefits). The use of temporary unemployment means that the employers no longer have to pay the wages of their employees (the cost is transferred to the government through the unemployment benefit), thereby enabling them to reduce their costs and enhances their ability to better cope with the period of inactivity of the business.\r\rThe measures makes the procedure shorter and more simplified for employees in order to make sure that they receive their unemployment benefit as fast as possible",
+            "descriptionContentOfMeasure": "The system will be extended further as well as adapted (starting September 2020). From that date, two systems will apply (one for companies or sectors that are considered to be very badly hit and one for companies that are less impacted but still require the measure):\r\r1. Companies that are _'particularly badly'_ affected by the corona crisis can continue to use the system of temporary unemployment due to force majeure by Corona until the end of this year. They must demonstrate that in the second quarter (April-May-June 2020), 20% of the total number of working days declared were days of temporary unemployment (force majeure due to Corona or economic unemployment). \r\r2. There are also sectors that have been recognised as _'particularly hard hit'_. The employer should do nothing for the taxi sector, the audiovisual sector, the hotel industry, entertainment companies, the socio-cultural sector, the tourist attractions sector. These are automatically recognised. \r\r3. For a number of sectors, the employer must file a declaration with the national unemployment offices and it only applies to certain activities (i.e. not automatically to all employees of the joint committee).  \r\r4. All other companies can make use of the classic systems of temporary unemployment that already existed before the corona crisis: _'temporary unemployment for reasons of force majeure'_ and _'temporary unemployment for economic reasons'_. Each system has its own criteria and formalities which may also deviate from the arrangements for the corona crisis. For this group the 'normal' rules become applicable again.\r",
+            "descriptionUseOfMeasure": "Data is not yet available; as the measure (extension) is still very recent.",
+            "descriptionInvolvementOfSocialPartners": "The social partners are involved in the measure, as the trade unions have a big responsibility in paying out unemployment benefits. On the other hand the sectoral joint committees monitor and discuss the measures further.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-36_1126.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1426",
+                    "sources::title": "Tijdelijke werkloosheid verlengd voor zwaar getroffen sectoren.",
+                    "sources::url": "https://www.tijd.be/dossiers/coronavirus/tijdelijke-werkloosheid-verlengd-voor-zwaar-getroffen-sectoren/10247396.html",
+                    "sources::d_date": "08/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1428",
+                    "sources::title": "Tijdelijke werkloosheid wegens overmacht",
+                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/tijdelijke-werkloosheid-wegens-overmacht-coronaviru",
+                    "sources::d_date": "09/08/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1036",
+        "modId": "13"
+    },
+    {
+        "fieldData": {
             "title": "Local Chamber of Industry and Commerce issue handout for companies to develop hygiene concepts",
             "title_nationalLanguage": "Handreichung zur Erarbeitung eines Hygienekonzepts",
             "d_startDate": "05/13/2020",
@@ -59804,6 +60668,86 @@
     },
     {
         "fieldData": {
+            "title": "Practical support for employers and employee representatives to ensure a healthy working life",
+            "title_nationalLanguage": "Suntarbetsliv",
+            "d_startDate": "04/01/2016",
+            "d_endDate": "",
+            "calc_country": "Sweden",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "SE-2016-14/1154",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/17/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "_Suntarbetsliv_ (healthy working life) is a bipartite project which was created as a result of the last round of collective agreement negotiations, in 2016, when the social partners asked for more focus on sustainable working conditions. The partners are all employer organisations and trade unions with members in the public sector, more specifically in the municipal and regional sector. \r\rThe purpose of _Suntarbetsliv_ is to work for sustainable working conditions and long-term good health. This is done by gathering knowledge about preventive, health-promoting and rehabilitative measures against occupational injuries and by making the knowledge available to everyone in the municipal and regional sector.",
+            "descriptionContentOfMeasure": "During the pandemic _Suntarbetsliv_ have focused on the work environment of the employees and the impact of COVID-19. The project is offering support to employers and employees in how to best tackle the pandemic, via checklists, research, tips, articles that shares knowledge etc. An example is how to conduct a risk assessment of COVID-19, where a checklist is used to examine the impact of COVID-19 on the work environment. The checklist contains questions about how the employer handles:\r\r* COVID-19 disease in and out of the workplace\r* Risk of infection\r* Communication\r* Teleworking\r* Knowledge and concerns\r\rThe checklist is produced by the non-profit organisation Prevent, which is owned jointly by the Confederation of Swedish Enterprise, Swedish Trade Union Confederation LO and the Council for Negotiation and Cooperation PTK.",
+            "descriptionUseOfMeasure": "Over one million workers and some 1,500 employees are covered by the initiative _Suntarbetsliv_. ",
+            "descriptionInvolvementOfSocialPartners": "Suntarbetsliv is a bipartite project which was created as result of the last round of collective agreement negotiations, in 2016, when the social partners asked for more focus on sustainable working conditions. The partners are all employer organisations and trade unions with members in the public sector, more specifically in the municipal and regional sector. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SE-2016-14_1154.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1456",
+                    "sources::title": "Sunt arbetsliv",
+                    "sources::url": "https://www.suntarbetsliv.se/verktyg/corona-covid-19/",
+                    "sources::d_date": "09/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "51",
+                    "targetGroups::name": "Other groups of workers",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "3",
+                    "funding::name": "Employer",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1064",
+        "modId": "23"
+    },
+    {
+        "fieldData": {
             "title": "New assistance fund to support micro-enterprises",
             "title_nationalLanguage": "Micro-Enterprise Assistance Fund",
             "d_startDate": "09/14/2020",
@@ -60267,5 +61211,348 @@
         },
         "recordId": "1077",
         "modId": "8"
+    },
+    {
+        "fieldData": {
+            "title": "Modernisation of construction equipment ",
+            "title_nationalLanguage": "Modernizzazzjoni tat-tag\u0127mir tal-kostruzzjoni",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "MT-2020-27/1168",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/21/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, government announced another package of measures. Amongst them was a measure to encourage construction companies to modernise their equipment. ",
+            "descriptionContentOfMeasure": "This measure was announced with a package of measures by government on the 8 June 2020. The aim of these measures was to regenerate Malta's economy following the initial COVID-19 quasi-lockdown phase.\r\rThis measure aimed to provide an incentive for construction companies to purchase new, more efficient and environment-friendly machinery. The aim was to lessen the negative impact of the industry on the environment, as well as improving efficiency and reducing costs. Government pledged \u20ac4 million for this purpose, where any construction- related business can receive support of up to a maximum of \u20ac200,000.\r\rDespite its announcement in June 2020, further information on the measure is yet to be published (September 2020).",
+            "descriptionUseOfMeasure": "The measure is yet to be implemented and therefore no information on its use is yet available. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24 March 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package. \r\rWith regards to this specific measure, the Malta Developers Association (MDA) had lobbied the Malta Enterprise to introduce such a measure. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-27_1168.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1477",
+                    "sources::title": "Modernisation of equipment - construction ",
+                    "sources::url": "https://covid19.maltaenterprise.com/modernisation-of-equipment/",
+                    "sources::d_date": "07/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "34",
+                    "sectors::code": "B8",
+                    "sectors::name": "Other mining and quarrying",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1078",
+        "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "Bigard group agreement prioritises measures to avoid partial unemployment",
+            "title_nationalLanguage": "Accord de groupe Bigard du 26 mars 2020 sur les mesures exceptionnelles pour faire face \u00e0 l\u2019\u00e9pid\u00e9mie de Covid-19",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "04/26/2020",
+            "calc_country": "France",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Working time flexibility",
+            "calc_identifier": "FR-2020-12/1170",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/23/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "On 26 March 2020, the management of the Bigard group signed an agreement with three representative unions \u2013 CFDT (leading union), CFE-CGC and FO \u2013 on exceptional measures for each establishment to manage working time and also to mitigate the COVID-19 crisis impact on wages. The CGT is not a signatory. This framework agreement, which covers all the French sites of the third largest European meat process manufacturer, applies to 13,000 employees. It should make it possible both to enhance, throughout the crisis, the commitment of employees, whose activity is essential, and to manage the under-activity of certain establishments. It also sets out the procedures for informing employee representative bodies throughout the crisis.",
+            "descriptionContentOfMeasure": "The agreement underlines that a significant drop in activity will affect certain services, workshops or establishments. This situation is due to the cancellation of orders, supply difficulties, or the impossibility of maintaining an activity _'due to the failure of service providers or absenteeism'_. If setting up work-study teams or internal mobility measures are not enough to address this situation of underemployment, the agreement proposes the mobilisation of 'hours and days off counters'. \r\r**Measures to avoid recourse to partial unemployment**\rAt the sites, the management can use the following four devices in the order of priority set by the group agreement. These are:\r\r* the modulation of working hours, for workers and employees, with the setting of the schedule within the lower limit of 35 hours ;\r* asking managers and supervisors to take days granted as part of agreements on the reduction of working hours;\r* the use of rest days deposited in a time-saving account;\r* the taking of paid holidays.\r\rEach system is implemented with a 24-hour notice period. The first three tools can be used within an overall limit of ten days. Paid holidays may be taken for up to five working days.\rRecourse to short-time working is envisaged as a last resort. The deployment of partial activity, whether in the form of reduced working hours or the closure of an establishment, must be validated and then monitored by senior management.\r\r**Management of essential skills**\rAccording to the agreement, it is necessary to develop the skills essential to the continuity of the group's \"vital\" activity. Indeed, the \"novel\" measures made necessary by the health crisis are disrupting personal life. In addition, the \"barrier\" measures implemented by the employer have a significant impact on the organisation of services and workshops. This valorisation of skills is primarily based on an increase in the internal professional mobility bonus paid for each day of mobility (increase of \u20ac10 per day).\r\rAnother counterpart provided for in the agreement concerns the remuneration of overtime worked from 16 March to 26 April. Employees who wish to do so, for any hours worked between 35 and 42 hours, are offered the option of benefiting from the social and tax regime for overtime and a 25% pay rise, rather than having them managed under the usual working time modulation scheme. The pay increase is increased to 50% for hours worked beyond 42 hours.\rThe agreement specifies that the succession of busy weeks must remain under control. \rManagement may refuse to allow certain essential employees to take paid leave. The taking of the fifth week's holiday can be postponed beyond 31 May 2020.\r\r**Information for employee representatives**\rThe agreement organises information for the Information and consultation bodies at the level of each establishment. It covers the implementation of each work organisation measure applied within the framework of this agreement. It is specified that recourse to short-time working is the subject of information and consultation with the establishment's social and economic committee. At group level, management will inform the trade union coordinators (the shop-steward of the representative unions at group level) at weekly telephone briefings. The exchange will enable, in particular, the monitoring of the group's activity levels and absenteeism. It provides for a 'specific focus' in the event of partial activity.",
+            "descriptionUseOfMeasure": "This framework agreement, which covers all the French sites of the third largest European meat process manufacturer, applies to 13,000 employees on national level and 28 slaughterhouses.",
+            "descriptionInvolvementOfSocialPartners": "Three of the four representative trade unions have negotiated the measures and signed the agreement.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/FR-2020-12_1170.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "354",
+                    "sources::title": "D\u00e9cret n\u00b0 2020-325 du 25 mars 2020 relatif \u00e0 l'activit\u00e9 partielle",
+                    "sources::url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755956",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "584",
+                    "sources::title": "Ordonnance no 2020-323 du 25 mars 2020 portant mesures d\u2019urgence en mati\u00e8re de cong\u00e9s pay\u00e9s, de dur\u00e9e du travail et de jours de repos",
+                    "sources::url": "https://www.legifrance.gouv.fr/jo_pdf.do?id=JORFTEXT000041755940",
+                    "sources::d_date": "03/25/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1490",
+                    "sources::title": "Accord de groupe Bigard du 26 mars 2020 sur les mesures exceptionnelles pour faire face \u00e0 l\u2019\u00e9pid\u00e9mie de Covid-19",
+                    "sources::url": "",
+                    "sources::d_date": "03/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "2",
+                    "actors::name": "Social partners jointly",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1080",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Malta Enterprise administers business re-engineering consultancy",
+            "title_nationalLanguage": "",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Change of production/innovation",
+            "calc_identifier": "MT-2020-27/1171",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/23/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, government announced another package of measures. Amongst the new measures announced, was a business re-engineering consultancy administered by the Malta Enterprise. ",
+            "descriptionContentOfMeasure": "Whilst announced in June, details of this measure remain limited (September 2020). \r\rIn view of the COVID-19 pandemic, government acknowledged that organisations will have to modify the way that they operate. Via the Malta Enterprise, Government first offered a measure which subsidised the purchase of technological equipment for the purpose of fostering teleworking. This measure has now ended. This new measure acknowledged that some organisations, especially micro and small enterprises might require assistance in drafting new business plans and in exploring technological options. In view of this, Malta Enterprise is providing a maximum of \u20ac5,000 per business to be used to undertake reengineering exercises with approved companies. A total budget of \u20ac2.5 million has been allocated to this measure. It is envisaged that the measure will aid in fostering a digital economy.",
+            "descriptionUseOfMeasure": "No information is available. ",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24 March 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. The current measure formed part of this package.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-27_1171.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1491",
+                    "sources::title": "Malta Enterprise - Business Re-engineering Consultancy",
+                    "sources::url": "https://covid19.maltaenterprise.com/business-re-engineering-consultancy/",
+                    "sources::d_date": "09/23/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1081",
+        "modId": "11"
+    },
+    {
+        "fieldData": {
+            "title": "Measures to support the construction and property industries ",
+            "title_nationalLanguage": "Mi\u017curi li jappo\u0121\u0121jaw l-industriji tal-kostruzzjoni u tal-proprjet\u00e0",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "03/31/2021",
+            "calc_country": "Malta",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "MT-2020-24/1173",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/23/2020",
+            "calc_lastUpdate": "09/23/2020",
+            "descriptionBackgroundInfo": "COVID-19 had a marked negative financial impact on several sectors in Malta. By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed and announced by the Government on 24 March 2020. Amongst the measures in this package, wage subsidies were offered to sectors which were worst hit. During a 'mini budget' announced on the 8 June 2020, which aimed to regenerate Malta's economy, Government announced another package of measures. Some of these measures aimed at supporting the property market, and in so doing also supported the construction industry, as the sale of properties slumped during the first few months of COVID-19.",
+            "descriptionContentOfMeasure": "In order to stimulate the property market, the Government introduced the following measures:\r\r* **Reduction of stamp duty:** The stamp duty rate on property purchases of less than \u20ac400,000 was reduced from 5% to 1.5% on contracts to be signed between June 9 and March 31 of next year.\r* **Reduction in sales tax:** Tax for those selling property under development and tax on those contracts made after 1 June  up to 31 March 31, 2021 will be reduced from 8% to 5%.\r* **First time buyers scheme:** Those who bought property before the scheme was introduced in 2013 were not eligible, these will now be eligible for the scheme. The scheme allows buyers purchasing their first property to be exempt from paying stamp duty on the first \u20ac175,000 of the property\u2019s price.\r* **Home Deposit Scheme:** aimed at assisting those who are unable to afford a home loan deposit, a government loan covering the 10% deposit (or up to \u20ac17,500) payable upon signing a promise-of-sale agreement is being offered. This measure is limited to the first 300 applicants and is means tested depending on martial status, income and capital assets. ",
+            "descriptionUseOfMeasure": "The Malta Developers Association (MDA)  announced that according to its data, June, July and August 2020 were record months for property sales since 2017. They stated 4,088 promise of sale agreements were registered with a value of \u20ac860 million.",
+            "descriptionInvolvementOfSocialPartners": "By means of a tripartite agreement, a package of measures to save jobs and organisations was agreed on 24 March 2020. This was the third but most significant package of measures announced by the Government. Following this agreement, social partners remained in direct contact with the government highlighting their proposals of what was felt was still necessary to save the Maltese economy and jobs. In the case of measures for the construction and property market, this involvement was often through proposals submitted by the Malta Developer's Association (MDA). \r\rIn view of this, on the 8 June 2020, the government announced a 'mini budget' to help the Maltese economy to recover from the effects of the COVID-19 pandemic. Essentially, this was the fourth package of measures announced by the government. With the exception of the government loan for first time buyers, the current measures formed part of this package. The loan was announced prior to COVID-19 (Budget October 2019) but was implemented in June 2020. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-24_1173.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1492",
+                    "sources::title": "Further new COVID-19 measures Malta",
+                    "sources::url": "https://covid19.maltaenterprise.com/other-new-incentives-measures/",
+                    "sources::d_date": "09/23/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "97",
+                    "sectors::code": "L68",
+                    "sectors::name": "Real estate activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1083",
+        "modId": "17"
     }
 ]
