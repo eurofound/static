@@ -14827,8 +14827,8 @@
             "calc_creationDay": "04/09/2020",
             "calc_lastUpdate": "07/21/2020",
             "descriptionBackgroundInfo": "This exceptional and temporary measure, set by Decree-Law 10-G/2020 of 26 March, aims\u00a0 \rto respond to the COVID-19 pandemic,\u00a0aiming at\u00a0maintaining employment and the mitigation of situations relation to business crisis for companies. \r\rFollowing \u00a0the period of temporary reduction of the normal working time or suspension of the employment contract provided for in the legislation under simplified conditions, businesses are entitled to\u00a0an extraordinary financial incentive to support the normalisation of the activity, in order to facilitate a gradual relaunch of work.\r\rThe Resolution of the Council of Ministers no. 41/2020, of 6 June, extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery.\r",
-            "descriptionContentOfMeasure": "Companies in crisis situation as a result of: i) a complete halt in the activity or ii) an abrupt and sharp decrease of activity of at least 40% of revenue have access to a temporary and\u00a0extraordinary financial incentive to support the normalisation of the activity. \r\rFollowing\u00a0\u00a0the period of temporary reduction of the normal working time or suspension of the employment contract provided for in the legislation under simplified conditions, the employers are entitled to this temporary and extraordinary financial incentive to support the\u00a0upturn\u00a0of the business activity. \r\rThis incentive is paid as a lump sum by the Institute of Employment and Vocational Training (Instituto do Emprego e Forma\u00e7\u00e3o Profissional, I.P. - IEFP, I.P.). \r\rThe amount to be paid is equal to the value of one national minimum wage per worker.\r\r",
-            "descriptionUseOfMeasure": "Information released by the Ministry of Labour, Solidarity and Social Security (MTSS) \u2013 April 2020 - 'COVID-19 | Informa\u00e7\u00e3o relativa a fam\u00edlias e empresas no \u00e2mbito do MTSSS' \r\r**Information on 7 April:**\rLayoff around 40,000 companies/ encompassing around 642,000 workers. In terms of sectors 24.2% are companies in the Accommodation and Food Services, 19.9% in Wholesale and Retail, 9.3% in Manufacturing Industry and 8.9% in Human Health and Social Support Activities.\r\r**Information on 6 June:**\rAccording to the information provided by the Resolution of the Council of Ministers 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme, the simplified layoff regime covered around 100,000 companies and 800,000 workers.",
+            "descriptionContentOfMeasure": "Companies in crisis situation as a result of: \r\r* a complete halt in the activity or \r* an abrupt and sharp decrease of activity of at least 40% of revenue have access to a temporary and\u00a0extraordinary financial incentive to support the normalisation of the activity. \r\rFollowing\u00a0\u00a0the period of temporary reduction of the normal working time or suspension of the employment contract provided for in the legislation under simplified conditions, the employers are entitled to this temporary and extraordinary financial incentive to support the\u00a0upturn\u00a0of the business activity. \r\rThis incentive is paid as a lump sum by the Institute of Employment and Vocational Training (Instituto do Emprego e Forma\u00e7\u00e3o Profissional, I.P. - IEFP, I.P.). \r\rThe amount to be paid is equal to the value of one national minimum wage per worker.\r",
+            "descriptionUseOfMeasure": "Information released by the Ministry of Labour, Solidarity and Social Security (MTSS) \u2013 April 2020 - 'COVID-19 | Informa\u00e7\u00e3o relativa a fam\u00edlias e empresas no \u00e2mbito do MTSSS' \r\r**Information on 7 April:**\r\rLayoff around 40,000 companies/ encompassing around 642,000 workers. In terms of sectors 24.2% are companies in the Accommodation and Food Services, 19.9% in Wholesale and Retail, 9.3% in Manufacturing Industry and 8.9% in Human Health and Social Support Activities.\r\r**Information on 6 June:**\r\rAccording to the information provided by the Resolution of the Council of Ministers 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme, the simplified layoff regime covered around 100,000 companies and 800,000 workers.",
             "descriptionInvolvementOfSocialPartners": "Tripartite consultation involving the government, the trade union confederations CGTP and UGT and the employer confederations CIP, CCP, CTP and CAP at the Standing Committee for Social Concertation.",
             "socialPartner_form": "Bi-or tripartite social dialogue bodies",
             "socialPartner_role": "Consulted",
@@ -14887,14 +14887,14 @@
                 {
                     "recordId": "181",
                     "updates::d_date": "07/13/2020",
-                    "updates::description": "The Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery (2.2.1). It introduces also a one-off measure, the Stabilisation Complement to improve income of workers under layoff (2.3). \r\rCompanies that remain closed as determined by the government continue to benefit from the simplified layoff regime; the simplified layoff, in the model currently in force, is extended until the end of July; companies that have a reduction of revenue equal to or greater than 40% may benefit, between August and December 2020, from a support mechanism for progressive recovery; companies that have benefited from the simplified layoff regime can now benefit from an extraordinary incentive to normalize business activity, choosing one of two modalities: one minimum wage (\u20ac 635) one-off or two minimum wages over six months, per job in lay-off.\r\r",
-                    "modId": "6"
+                    "updates::description": "The Resolution of the Council of Ministers no. 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme extends the extraordinary support for the maintenance of employment contracts and establishes a transitional regime replacing the regime in force of \u2018simplified layoff\u2019 by a support to progressive recovery (2.2.1). It introduces also a one-off measure, the Stabilisation Complement to improve income of workers under layoff (2.3). \r\r* Companies that remain closed as determined by the government continue to benefit from the simplified layoff regime; the simplified layoff, in the model currently in force, is extended until the end of July; \r* Companies that have a reduction of revenue equal to or greater than 40% may benefit, between August and December 2020, from a support mechanism for progressive recovery; \r* Companies that have benefited from the simplified layoff regime can now benefit from an extraordinary incentive to normalize business activity, choosing one of two modalities: one minimum wage (\u20ac635) one-off or two minimum wages over six months, per job in lay-off.\r\r",
+                    "modId": "7"
                 }
             ],
             "regions": []
         },
         "recordId": "324",
-        "modId": "90"
+        "modId": "92"
     },
     {
         "fieldData": {
@@ -36608,111 +36608,6 @@
     },
     {
         "fieldData": {
-            "title": "Temporary emergency measure for the preservation of jobs",
-            "title_nationalLanguage": "Tijdelijke Noodmaatregel Overbrugging Werkgelegenheden (NOW)",
-            "d_startDate": "04/06/2020",
-            "d_endDate": "",
-            "calc_country": "Netherlands",
-            "calc_minorCategory": "Employment protection and retention",
-            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
-            "calc_identifier": "NL-2020-15/760",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/21/2020",
-            "calc_lastUpdate": "07/22/2020",
-            "descriptionBackgroundInfo": "Temporary Emergency Measure for the Preservation of Jobs is a financial aid programme for enterprises hit by the COVID-19.\r\rThis measure has been introduced as a bunch of emergency solutions specifically to combat or cushion the effects of the COVID-19 crisis. More specifically, this measure is aimed at taking over the wage costs so that enterprise do not get bankrupted and that employees get an income. This applies to workers with permanent as well as flexible or temporary contracts. The ultimate aim is to keep the economy functioning (including the financial flow) till the pandemic is under control.\r\rThis measure is part of the package of emergency measures to deal with the corona virus. This was a package of several measures which have been taken to combat the COVID-19 and its effects announced on 17 March, 2020.",
-            "descriptionContentOfMeasure": "The aim is to help enterprises to pay the salaries of their employees so that employment as well as business viability can be maintained as much as possible.\r\rFinancial aid is made available for those enterprises that suffer a revenue loss of more than 20%.  The government subsidizes up to 90% of the wage costs of staff for a period of up to three months. This applies to workers on permanent contracts as well as flexible contracts (including zero hour \"nul uren\" contracts, or on call contracts \"oproep contracten\"). However, in return enterprises may not fire anyone (fixed and flexible employment contracts alike), for economic reasons during the period of time covered by the allowance.  \r\rIt should be noted that given the ever evolving situation, the government also considers extending this measure beyond the initially intended three months.",
-            "descriptionUseOfMeasure": "No information available.",
-            "descriptionInvolvementOfSocialPartners": "Since the outbreak of the Corona crisis, the government has had regular and close consultation with the social partners. Together the national level social partners and the government arrived at the first and second packages of emergency measures, announced March 17th and May 20th respectively.",
-            "socialPartner_form": "Direct consultation",
-            "socialPartner_role": "Consulted",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-15_760.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "695",
-                    "sources::title": "Tijdelijke Noodmaatregel Overbrugging voor Werkgelegenheid (NOW)",
-                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/overzicht-financiele-regelingen/now",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "705",
-                    "sources::title": "Tijdelijke noodmaatregel overbrugging voor behoud van werkgelegenheid",
-                    "sources::url": "https://wetten.overheid.nl/BWBR0043340/2020-04-04 ",
-                    "sources::d_date": "03/31/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "706",
-                    "sources::title": "Tijdelijke Noodmaatregel Overbrugging Werkgelegenheid (NOW) ",
-                    "sources::url": "https://www.uwv.nl/werkgevers/overige-onderwerpen/now/detail/wat-gebeurt-er-met-de-werktijdverkorting ",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "2"
-                },
-                {
-                    "recordId": "1253",
-                    "sources::title": "Wijzigingen in NOW-regeling bij noodpakket 1 en 2",
-                    "sources::url": "https://www.rijksoverheid.nl/actueel/nieuws/2020/05/20/wijzigingen-in-now-regeling-bij-noodpakket-1-en-2",
-                    "sources::d_date": "05/20/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1260",
-                    "sources::title": "Rijksoverheid, \u2018Wijzigingen in NOW Regelingen bij Noodpakket 1 en 2\u2019 ",
-                    "sources::url": "https://www.rijksoverheid.nl/actueel/nieuws/2020/05/20/wijzigingen-in-now-regeling-bij-noodpakket-1-en-2",
-                    "sources::d_date": "05/20/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                },
-                {
-                    "recordId": "8",
-                    "actors::name": "Public employment service",
-                    "modId": "0"
-                }
-            ],
-            "targetGroups": [],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [
-                {
-                    "recordId": "182",
-                    "updates::d_date": "07/13/2020",
-                    "updates::description": "Tijdelijke Noodmaatregel Overbrugging Werkgelegenheden 2.0 (NOW 2.0)\rTemporary Emergency Measure for the Preservation of Jobs 2.0 ",
-                    "modId": "1"
-                },
-                {
-                    "recordId": "183",
-                    "updates::d_date": "07/13/2020",
-                    "updates::description": "The earlier NOW has been extended by three months in this newer NOW 2.0. The reference period for the income test for eligibility has changed from January 2020 to March 2020 for the extended period of time. \r\rFurthermore, the eligibility requirement of a revenue that is decreased with at least 20% will now be tested over the span of four months starting 1 June, 1 July or 1 August. For those that endeavor to make use of the NOW a second time, the reference period for this revenue test must directly follow the period that was used for the first request. \r\rSupplementing the condition for NOW 2.0 is an effort obligation for employers to encourage their employees to take additional training or retraining. This touches upon other policies that the government is currently preparing. The cabinet is coming forward with an crisis package that is yet to be elaborated, which is intended to support people who lose their work as a result of the crisis or who will have to make the transition to other promising work. ",
-                    "modId": "2"
-                }
-            ],
-            "regions": []
-        },
-        "recordId": "670",
-        "modId": "83"
-    },
-    {
-        "fieldData": {
             "title": "Right to delay tax payments for entrepreneurs",
             "title_nationalLanguage": "Versoepeling uitstel van betaling belasting en verlaging boetes",
             "d_startDate": "03/17/2020",
@@ -51749,98 +51644,6 @@
         },
         "recordId": "894",
         "modId": "13"
-    },
-    {
-        "fieldData": {
-            "title": "Subsidy for fixed costs for SMEs",
-            "title_nationalLanguage": "Tegemoetkoming Vaste Lasten MKB (TVL)",
-            "d_startDate": "05/20/2020",
-            "d_endDate": "",
-            "calc_country": "Netherlands",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Direct subsidies (full or partial)",
-            "calc_identifier": "NL-2020-21/985",
-            "dateType": "Temporary",
-            "calc_creationDay": "07/13/2020",
-            "calc_lastUpdate": "07/22/2020",
-            "descriptionBackgroundInfo": "This measure was initiated by a member of parliament and the national government (Specifically Dijkhoff (VVD - centre right party) and Jette (D66 - liberal democrat party)), and employer organisations pointed to the fact that besides staff costs, SMEs are now starting to struggle to meet their fixed costs as well. For this reason this measure was introduced to help SMEs to bridge the crisis by helping them to pay for their fixed costs.",
-            "descriptionContentOfMeasure": "SMEs can apply for this subsidy to help them cover their fixed costs when they have had a revenue loss of at least 30%. Furthermore, sectors which currently used to fall under the TOGs measure ( (the Subsidy for Entrepreneurs in affected sectors), are eligible for this measure. Enterprises can receive anywhere from \u20ac1.000 up to \u20ac 50.000 for the period of 1 June till 30 September.\r\rSectors which fall under the TOG include the recreation sectors, the hotel, restaurant, caf\u00e9 and bar sectors (HORECA), events, carnivals, theatres and stage performance sectors. SMEs and solo self-employed in these sectors may make use of this measure.\r\rIn total the government aims to support 800,000 entrepreneurs in these sectors (some of which have already been helped by the TOG measure). The national government has set aside a budget of \u20ac1.4 billion for this measure. ",
-            "descriptionUseOfMeasure": "No data available yet.",
-            "descriptionInvolvementOfSocialPartners": "Since the outbreak of the Corona crisis, the government has had regular and close consultation with the social partners. Together the national level social partners and the government arrived at the first and second packages of emergency measures, announced 17 March and 20 May respectively.",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-21_985.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Only private sector",
-            "calc_type": "Other initiatives or policies",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1176",
-                    "sources::title": "Kamerbrief 20 mei 2020: Noodpakket 2.0",
-                    "sources::url": "https://www.rijksoverheid.nl/binaries/rijksoverheid/documenten/kamerstukken/2020/05/20/kamerbrief-noodpakket-2.0/Kamerbrief+Noodpakket+banen+en+economie+2.0.pdf",
-                    "sources::d_date": "05/20/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1245",
-                    "sources::title": "Tegemoetkoming Vaste Lasten mkb (TVL)",
-                    "sources::url": "https://www.rijksoverheid.nl/onderwerpen/coronavirus-financiele-regelingen/overzicht-financiele-regelingen/tvl",
-                    "sources::d_date": "07/21/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "31",
-                    "targetGroups::name": "Self-employed",
-                    "modId": "15"
-                },
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "16"
-                },
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "62",
-                    "targetGroups::name": "SMEs",
-                    "modId": "12"
-                },
-                {
-                    "recordId": "63",
-                    "targetGroups::name": "One person or microenterprises",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "7",
-                    "funding::name": "National funds",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "895",
-        "modId": "11"
     },
     {
         "fieldData": {
