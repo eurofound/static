@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* CSS Document */
 
 #Hero {position: relative; top: 0px; width: 100%; height: 850px; background-color: #A04C4D; background-image:url(../images/Hero.jpg); background-position: center; background-repeat: no-repeat; z-index: 1; overflow: hidden;}
@@ -1010,7 +1010,7 @@ background-color: rgba(6, 126, 177, 0.5);
 
 ol {
 
-	list-style-type:decimal-leading-zero;
+	list-style-type:decimal;
 }
 
 
