@@ -61625,5 +61625,179 @@
         },
         "recordId": "1084",
         "modId": "10"
+    },
+    {
+        "fieldData": {
+            "title": "New health and safety regulation for the schools",
+            "title_nationalLanguage": "Protocollo d\u2019intesa per garantire l\u2019avvio dell\u2019anno scolastico",
+            "d_startDate": "09/01/2020",
+            "d_endDate": "",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "IT-2020-36/1182",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/24/2020",
+            "calc_lastUpdate": "09/28/2020",
+            "descriptionBackgroundInfo": "The Ministry for Education, as according to the provisions contained in the Ministerial Decree No. 80, issued on 3 August 2020, commits itself to promote, support and monitor the implementation of a series of new measures in all the schools belonging to the national education system, to ensure a safe restart of the scholastic year 2020/21.\r\rThis protocol aims to give full application to the health and safety guidelines contained in the _'Technical document on the hypothesis of remodeling the prevention measures in the school sector'_, provided by the Technical Scientific Committee set up on purpose at the Department for Civil Protection on 28 May 2020. \r\rFinally, it delegates the definition of all the aspects concerning the organisation of work and terms and conditions of employment for the personnel in the education sector to the collective bargaining.",
+            "descriptionContentOfMeasure": "The agreement contains a set of rules to apply in all the schools, to guarantee a safe start of the scholastic year 2020/21. In particular, it introduced the following safety measures:\r\r1. Provisions relating to entry/exit procedures into the school buildings;\r2. Provisions relating to cleaning and sanitation of rooms, furnitures and equipments;\r3. Provisions relating to personal hygiene and individual protective equipments;\r4. Provisions relating to the management of common areas;\r5. Use of spaces outside the school;\r6. Psychological support for the personnel and the students;\r7. Provisions relating to the management of a symptomatic person within the school;\r8. Provisions relating to health surveillance within the scholastic building.",
+            "descriptionUseOfMeasure": "The measures apply to the whole personnel working in the education sector (NACE code 85) in Italy, which amounts to around 1,600,000 people according to the Istat (Italian National Institute of Statistics) data warehouse. Indirectly, the measures affect also the children attending the schools and their parents (for instance in case of positivity of a students in a class, restrictions apply to the whole class).",
+            "descriptionInvolvementOfSocialPartners": "The trade unions participated in the negotiation of the Protocol, as established by the legislation regulating the social dialogue in the public sector. According to the legislative framework the trade unions have the right to be informed, consulted, and to negotiate in all the matters concerning the organisation of work, along with the terms and conditions of employment. Again in compliance with the legislative setting, only the representative trade unions have been involved, namely FLC-CGIL, FSUR CISL, FED UIL SCUOLA RUA, CONFSAL SNALS, ANIEF, ANP \u2013 CIDA, DIRIGENTISCUOLADi.S.Conf",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-36_1182.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1501",
+                    "sources::title": "Ministry of Education",
+                    "sources::url": "https://www.miur.gov.it/documents/20182/2467413/Protocollo_sicurezza.pdf/292ee17f-75cd-3f43-82e0-373d69ece80f?t=1596709448986",
+                    "sources::d_date": "09/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "35",
+                    "occupations::name": "Cleaners and helpers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "occupations::name": "Teaching professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1092",
+        "modId": "30"
+    },
+    {
+        "fieldData": {
+            "title": "Principles and guidelines for the new agile work in the telecommunications supply chain",
+            "title_nationalLanguage": "Principi e Linee guida per il nuovo lavoro agile nella Filiera delle telecomunicazioni",
+            "d_startDate": "07/30/2020",
+            "d_endDate": "",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "IT-2020-31/1188",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/25/2020",
+            "calc_lastUpdate": "09/28/2020",
+            "descriptionBackgroundInfo": "The employer association Asstel and the three most representative trade unions of the telecommunication industry, Fistel-Cisl, Slc-Cgil, Uilcom-Uil, signed a collective agreement on principles and guidelines for the use of agile work. Forms of agile and remote working spread substantially during the COVID-19 emergency and social partners considered key to regulate it beyond the emergency legislation developed by the government.",
+            "descriptionContentOfMeasure": "The collective agreement (named _'Principles and Guidelines for the new agile work in the telecommunications supply chain'_) sets a number of principles and guidelines which should work as a framework for specific company level agreements. Among these are: \r\r* agile work should aim at protecting workers' health;\r* agile work might contribute to define more flexible organisational models, which might generate value for both companies and workers in the form of higher productivity and a better work-life balance;\r* workers involved in agile activities should be adequately trained, also with regard to health and safety issues;\r* in order to favour measures of organisational flexibility and work-life balance, a new organisation of working time might be adopted; \r* the _'right to disconnect'_ should be regulated;\r* the provision of adequate working instruments by the company should be regulated.",
+            "descriptionUseOfMeasure": "The agreement sets a framework for company level bargaining in companies belonging to the telecommunication sector, which comprehensively employ around 150,000 workers in Italy.",
+            "descriptionInvolvementOfSocialPartners": "The measure was negotiated by the sectoral employer organisation and most representative trade unions. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-31_1188.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only public sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1506",
+                    "sources::title": "Principles and Guidelines for the new agile work in the telecommunications supply chain (Protocollo principi e linee guida per il nuovo lavoro agile nella filiera)",
+                    "sources::url": "https://d110erj175o600.cloudfront.net/wp-content/uploads/2020/07/Protocollo-Principi-e-Linee-Guida-per-il-nuovo-lavoro-agile-Filiera-TLC-1.pdf",
+                    "sources::d_date": "07/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1098",
+        "modId": "19"
     }
 ]
