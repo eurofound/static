@@ -13029,6 +13029,103 @@
     },
     {
         "fieldData": {
+            "title": "Ordinary wage guarantees and new regulation of the exceptional wage guarantee fund",
+            "title_nationalLanguage": "Norme speciali in materia di trattamento ordinario di integrazione salariale  e nuove disposizione per la Cassa integrazione in deroga ",
+            "d_startDate": "02/23/2020",
+            "d_endDate": "08/31/2020",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "IT-2020-9/411",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/09/2020",
+            "calc_lastUpdate": "09/28/2020",
+            "descriptionBackgroundInfo": "This exceptional and temporary measure was set by Decree-Law No. 18/2020 of 17 March 2020 and is finalised to allow the utilisation of the ordinary wage guarantee fund (Cassa Integrazione Guadagni Ordinaria, CIGO) and the wage integration fund (Fondo di Integrazione Salariale, FIS) for temporary suspensions of work or reductions of working time due to the COVID-19 pandemic. Moreover, it introduces a new support instrument (Cassa Integrazione in Deroga, CID) which benefits all companies with even one employee, and it simplifies the procedures for activating this measure.",
+            "descriptionContentOfMeasure": "Employers who suspend or reduce their activity for events attributable to the COVID-19 epidemic can accede to the Ordinary Wage Guarantee Fund (CIGO) or the Wage Integration Fund (FIS) for a maximum duration of nine weeks starting from 23 February 2020 until the end of August 2020. The periods of utilisation of the CIGO and the FIS for \"COVID-19\" reasons are excluded from the calculation of the maximum duration of ordinary treatments. Moreover, companies making use of the benefit are exempted from the additional contribution that is normally imposed on companies benefiting from wage subsidies. The decree law introduces a special measure (CID) for private employers not covered by the ordinary benefits, i.e. those employing less than 5 employees. However, domestic workers are excluded from the benefit.\rThe amount of the benefit depends on the previous remuneration: for gross monthly wages below \u20ac2,159.48, the benefit amounts to \u20ac939.89; for gross monthly wages above \u20ac2,159.48, the benefit amounts to \u20ac1,129.48.\rThe maximum spending limit is set at \u20ac1,347.2 million (for CIGO and FIS) and \u20ac3,293.2 million (CID), for the year 2020; once reached, INPS will not consider further requests.",
+            "descriptionUseOfMeasure": "The number of hours authorized in August 2020 is declining (279.3 million hours), from the peak reached in May 2020, when the authorizations for the health emergency amounted to 849.2 million hours (in line with what was already authorized in April 2020, i.e. 832.4 million hours). For the sake of comparison, the annual number of authorised hours in the worst year after the financial crisis, in 2010, was 1,198.5 million).",
+            "descriptionInvolvementOfSocialPartners": "Trade unions are involved in the management of the measures as an agreement on the duration of work suspension is essential in all companies with more than 5 employees. ",
+            "socialPartner_form": "No involvement",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-9_411.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "283",
+                    "sources::title": "DECRETO-LEGGE 17 marzo 2020, n. 18",
+                    "sources::url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-03-17;18",
+                    "sources::d_date": "03/17/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1189",
+                    "sources::title": "Law Decree No. 34 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/05/19/20G00052/sg",
+                    "sources::d_date": "05/19/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1196",
+                    "sources::title": "Law Decree No. 52 of 16 June 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/06/16/20G00078/sg",
+                    "sources::d_date": "06/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "210",
+                    "updates::d_date": "07/16/2020",
+                    "updates::description": "The Law Decree No. 34 of 19 May 2020 and the Law Decree No. 52 of 15 June 2020 extended and modified wage guarantees related to the suspension or reduction of working activity as a consequence of the epidemiological emergency. The main regulatory change consists in the possibility for companies to request an additional period of nine weeks of support for workers' income until the end of the year. Moreover, Law Decree No. 34 of 19 May 2020 introduced the possibility that the National Social Security Institute (INPS) will pay in advance a part of the benefit (e.g. a sum equal to 40% of the hours authorized for the entire period) to the workers within 15 days of submitting the demand.",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "273",
+                    "updates::d_date": "08/15/2020",
+                    "updates::description": "The Law Decree No. 104 of 14 August 2020 further extended the possibility for companies to rely on wage guarantee funds for supporting the reduction or suspension of working activity due to the COVID-19 pandemic and modified the functioning of the instrument. The main changes introduced are: \r\r* the possibility to require an additional period of 18 weeks (for the period 13 July 2020 to 31 December 2020) the wage guarantee funds introduced in response to the health emergency;\r* the introduction of a mechanism for sharing the cost of the measure for those companies which experienced a reduction in revenues lower than 20%; \r* the partial exemption from Inps social security contributions paid by the employer to those companies not requiring access to the wage guarantee funds (the exemption is for a maximum period of 4 months, calculated on a taxable amount equal to double the hours of wage integration already used in the months of May and June 2020).",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "302",
+        "modId": "114"
+    },
+    {
+        "fieldData": {
             "title": "Extension period for the payment of social insurances   ",
             "title_nationalLanguage": "\u03a0\u03b1\u03c1\u03ac\u03c4\u03b1\u03c3\u03b7 \u03a0\u03c1\u03bf\u03b8\u03b5\u03c3\u03bc\u03af\u03b1\u03c2 \u039a\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03ae\u03c2 \u0395\u03b9\u03c3\u03c6\u03bf\u03c1\u03ce\u03bd \u03c3\u03c4\u03bf \u03a4\u03b1\u03bc\u03b5\u03af\u03bf \u039a\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ce\u03bd \u0391\u03c3\u03c6\u03b1\u03bb\u03af\u03c3\u03b5\u03c9\u03bd",
             "d_startDate": "03/31/2020",
@@ -60019,6 +60116,79 @@
         },
         "recordId": "1037",
         "modId": "16"
+    },
+    {
+        "fieldData": {
+            "title": "Trades Union Congress: Policy Recommendations for the post COVID-19 Economic and Social Recovery",
+            "title_nationalLanguage": "TUC (2020) A Better Recovery: Learning the lessons of the corona crisis to create a stronger, fairer economy.\rTUC (2020) Key Workers: Decent pay and secure work for key workers\rTUC (2020) A new jobs protection and upskilling plan. ",
+            "d_startDate": "05/20/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GB-2020-21/1133",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "09/28/2020",
+            "descriptionBackgroundInfo": "No regulatory background or legal reference.\r\rThe Trades Union Congress has published a number of reports, outlining its policy recommendations for the post-Covid economic and social recovery. These include the following reports: \r\r* TUC (2020) A new jobs protection and upskilling plan\r* TUC (2020) Key Workers: Decent pay and secure work for key workers\r* TUC (2020) A Better Recovery: Learning the lessons of the corona crisis to create a stronger, fairer economy\r\rThe rationale for the reports is that emerging\u00a0from the crisis successfully will require more than stemming the rates of Covid-19 infection, and ensuring that people can return to work safely, important though this is, the TUC acknowledges that the\u00a0UK is entering the deepest recession for decades and that\u00a0without government action, unemployment will rise to levels not seen for 30 years. It counters emergent calls for a return to austerity, pointing out that the previous decade of\u00a0austerity was a failure, repeatedly failing to\u00a0deliver economic growth or reduce national debt, while creating a weakened economic and social fabric, clearly exposed by the coronavirus crisis.\r\rThe TUC calls for\u00a0a fairer society and therefore, a stronger economy, in which decent wages create both security for workers and their families, and demand for the products and services of the nation's businesses. It states that this will be achieved through\u00a0everyone having a decent job, on better pay and working conditions, alongside revitalised public services and a stronger safety net. \r\rIn line with this, its report on key workers specifically calls for pay increases for key workers to be an integral part of the recovery from the coronavirus lockdown. It points out that the crisis highlighted how much society owes to healthcare staff, care workers, retail and delivery workers, public transport workers, teachers and support staff, energy workers amongst others. As a result, there is strong public support for ensuring key workers are treated fairly.\r\rThe New Jobs Protection and Upskilling plan is a partial response to the ending of the Government's furlough scheme, due to end in October. The TUC argues that government needs to do more to get people back to work, support jobs and prevent the threat of mass unemployment and that it should learn from experience across Europe. Such support should come with conditions attached and that there is now an opportunity to use this moment to upskill the workforce, prepare for the jobs of the future and build a fairer labour market that offers decent work to everyone.\r\rIts key message is that the recovery should encompass the complementary policy goals of creating a fairer labour market and the creation and promotion of decent work.",
+            "descriptionContentOfMeasure": "The reports are essentially policy recommendations to get Britain growing out of the crisis and in so doing, prevent mass\u00a0unemployment and ensure the creation of decent work. The TUC argues that the\u00a0pandemic alone did not cause this economic crisis. It was made worse by a decade of austerity and the government\u2019s failure to strengthen the UK\u2019s economy. It avers that choosing the wrong approach to recovery now risks embedding low growth, long-term unemployment and all the social ills that go alongside.\r\rIts\u00a0first report, published in May called for an 'investment for growth approach' and called for action on a number of key areas, including:\r\r* Decent work and fairer employment relationships\r* Sustainable industry with an economic stimulus for a just transition to net zero carbon\r* Reforms to social security to provide help faster and prevent poverty \r* The rebuilding of public services, with decent pay\r\rOn this last point, its later report on decent pay and work for key workers, it called on government to improve the pay of 6 million key workers by increasing the minimum wage and public sector pay, as well as enacting a ban on zero-hours contracts. \r\rIn September, the TUC published its job protection and upskilling plan, in response to the planned end of the government's furlough/job retention scheme  in October. The TUC argues that the Job Retention Scheme (JRS) has done vital work protecting jobs, supporting 9.6 million people in total,\r\rIt states that there are some tentative signs of economic recovery but that the threat of mass unemployment is still present, with the Bank of England estimating that unemployment could rise to 7.5% by the end of the year, leaving 2.5 million people out of work. Further, the National Institute of Social and Economic Research estimates that unemployment could reach ten per cent. \r\rThe TUC thus argues that there is now an opportunity to use this moment to upskill the workforce, prepare for the jobs of the future and build a fairer labour market that offers decent work to everyone. The TUC thus proposes a Jobs Retention Deal and upskilling plan, recommending that: \r\r* Government should require businesses to demonstrate they have been hit by coronavirus restrictions in order to qualify for the Jobs Retention Deal\r* Businesses hit by local lockdowns would automatically qualify for the scheme\r* The scheme should require workers to be working for a minimum proportion of their normal hours\r* The scheme should support workers who cannot work because they are in the group previously told to shield or who have caring responsibilities that mean they cannot work\r* Similar support should be put in place for the self-employed, including those who have lost out on previous support\r* Workers should continue to receive at least 80 per cent of their pay for time they are not working\r* Workers earning the national minimum wage should receive 100 per cent of their normal pay\r* Any worker working less than 50 per cent of their normal working time must be offered funded training\r* Businesses accessing the scheme must set out Fair Pay Plans\r* Businesses that access support should set out a plan for decent jobs\r* Businesses that access support should pay their Corporation Tax in the UK\r* Businesses accessing the scheme should commit to keep people in work and not pay dividends while using the scheme.\r\r\r\r",
+            "descriptionUseOfMeasure": "The report itself is publicly available on the TUC's website; no evaluation data is available with regard to how many times it has been downloaded etc. These are policy recommendations, not actual measures that have been implemented. Thus, there is no comment to be made on the scale of support provided, eligibility criteria etc.\r\rThe action plans will underpin the TUC's campaigning work around economic recovery but of course, these are just policy recommendations not implemented actions. Thus, it is impossible to state how many workers, citizens etc will be affected in future.",
+            "descriptionInvolvementOfSocialPartners": "These are initiatives by the TUC, as part of its campaigning work. It has compiled its policy recommendations based on its own research, analysis, values and perspective. This contribution was voluntarily made; it was not requested or demanded. It is not a negotiated outcome, merely a set of policy recommendations aimed at securing a particular path to economic recovery.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-21_1133.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1441",
+                    "sources::title": "TUC (2020) \rA Better Recovery \r\r Learning the lessons of the corona crisis to create a stronger, fairer economy.",
+                    "sources::url": "https://www.tuc.org.uk/ABetterRecovery",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "1511",
+                    "sources::title": "TUC (2020) A new jobs protection and upskilling plan",
+                    "sources::url": "https://www.tuc.org.uk/research-analysis/reports/new-jobs-protection-and-upskilling-plan",
+                    "sources::d_date": "09/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1512",
+                    "sources::title": "TUC (2020) Decent pay and secure work for key workers through coronavirus and beyond",
+                    "sources::url": "https://www.tuc.org.uk/research-analysis/reports/key-workers-report",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1043",
+        "modId": "17"
     },
     {
         "fieldData": {
