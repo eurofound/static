@@ -14663,6 +14663,143 @@
     },
     {
         "fieldData": {
+            "title": "Company subsidy for fixed costs",
+            "title_nationalLanguage": "Fixkostenzuschuss",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "03/15/2021",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "AT-2020-12/474",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "The subsidy for fixed costs was implemented in order to cover fixed costs. Non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the COVID-19 crisis.\r\rEligible are those companies that fully meet the following conditions:\r\r* Companies that have their management or a permanent establishment in Austria;\r* Companies that have to bear fixed costs from their operating activities in Austria;\r* Companies that were healthy before the Corona crisis;\r* Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%;\r* Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.",
+            "descriptionContentOfMeasure": "The following fixed costs of the company are eligible:\r\r* Rent of business premises\r* Insurance premiums\r* Interest expenses\r* Licence costs\r* Payments for electricity, gas and telecommunications\r* Other contractual payment obligations\r* Entrepreneur's salary within a range of \u20ac666.67 and \u20ac2,666.67 per month (calculated on the basis of the last assessed previous year (taxable profit/months of entrepreneurial activity).\r* Loss of value of perishable/seasonal goods, provided that these lose at least 50% of their value during the corona measures\r\rThe fixed cost subsidy is staggered and depends on the company's loss of sales:\r\r* loss of 40 to 60%: 25% compensation of fixed costs\r* loss of 60 to 80%: 50% compensation of fixed costs\r* loss of 80 to 100%: 75%  compensation of fixed costs\r\rThe fixed-cost subsidy does not have to be reimbursed - provided that all the provisions of the guidelines are complied with. The subsidy is limited to a maximum of \u20ac90 million per company.\r\rThree instalments are foreseen, the first could be applied for from 20 May 2020 onwards, the second from 19 August 2020 onwards and the third from 19 November onwards. The observation period lies at a maximum of three months between 16 March and 15 September 2020. Applications can be made until 31 August 2021.",
+            "descriptionUseOfMeasure": "For phase I of the fixed cost subsidy, \u20ac8 billion are earmarked; by 21 September 2020, \u20ac200 million have been paid. However, many companies, especially large ones, are still waiting for the final balance sheet figures for the entire period so that they can decide in which months they can apply for the highest subsidies.",
+            "descriptionInvolvementOfSocialPartners": "Employer organisation was consulted and is involved in the implementation.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_474.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "366",
+                    "sources::title": "Fixed cost subsidy",
+                    "sources::url": "https://www.aws.at/fixkostenzuschuss-1/?ref=topnews",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "367",
+                    "sources::title": "Fixed cost subsidy - FAQs",
+                    "sources::url": "https://www.fixkostenzuschuss.at/#faqs",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "368",
+                    "sources::title": "FAQ Corona Aid Fund",
+                    "sources::url": "https://www.wko.at/service/faq-corona-hilfs-fonds.html#heading_Zuschuesse",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "827",
+                    "sources::title": "Government provides billions of operating grants",
+                    "sources::url": "https://www.derstandard.de/story/2000117348777/regierung-stellt-milliarden-an-betriebszuschuessen-bereit",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "888",
+                    "sources::title": "Improved Corona Aid Fund brings liquidity to companies",
+                    "sources::url": "https://news.wko.at/news/oesterreich/JW-Holzinger:-Verbesserter-Corona-Hilfs-Fonds-bringt-Liqu.html",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "889",
+                    "sources::title": "Changes to the Corona Aid Fund: Fixed cost subsidy",
+                    "sources::url": "https://www.rkp.at/coronavirus/aenderungen-corona-hilfsfonds-fixkostenzuschuss/",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1542",
+                    "sources::title": "Fixed costs subsidy FAQs",
+                    "sources::url": "https://kurier.at/wirtschaft/fixkostenzuschuss-die-wichtigsten-fragen-und-antworten/401038361",
+                    "sources::d_date": "09/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1543",
+                    "sources::title": "Fixed costs subsidy II decree",
+                    "sources::url": "https://www.bmf.gv.at/presse/pressemeldungen/2020/august/fixkostenzuschuss-verlaengerung.html",
+                    "sources::d_date": "08/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "41",
+                    "updates::d_date": "05/13/2020",
+                    "updates::description": "On May 13, the new Corona Aid Fund guidelines for fixed-cost grants were published in the form of a regulation by the Austrian Ministry of Finance. Further improvements were announced on May 21, 2020. The novelties include: \r\r* Payment of an advance (first tranche) of up to 50%\r* Fixed-cost subsidy is granted from an amount of \u20ac500 upwards\r* Payments from the Hardship Fund are no longer counted.\r* Assertion of reasonable tax consultant, auditor and accountant costs up to \u20ac500 for applications with a grant amount below \u20ac12,000\r* Companies that were 'companies in difficulty' under EU state aid law on December 31, 2019 can apply for a grant of up to \u20ac200,000 under the de minimis state aid scheme, provided that no insolvency proceedings have been opened or the conditions for this have been met\r\rThe observation period stated in the 1st application cannot be changed afterwards (2nd and 3rd installment).",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "277",
+                    "updates::d_date": "09/30/2020",
+                    "updates::description": "A second phase of the fixed cost subsidy is planned, and the decree has been published, but final approval by the European Commission still has to be awaited.\r\rThe observation period of phase II can be chosen for up to three months between 16 June 2020 and 15 March 2021. Eligibility has been slightly changed: a minimum drop in sales of 30% is needed in order to qualify (in phase I, it was at 40%). The compensation rate lies at 100% of the incurred loss, with a maximum of \u20ac5 million. The application has to be made by 31 August 2021.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "365",
+        "modId": "104"
+    },
+    {
+        "fieldData": {
             "title": "Family care leave for family support introduced",
             "title_nationalLanguage": "Cong\u00e9 familial pour soutien familial",
             "d_startDate": "03/18/2020",
@@ -21337,6 +21474,78 @@
     },
     {
         "fieldData": {
+            "title": "Online application for unemployment benefit ",
+            "title_nationalLanguage": "Online Anmeldung f\u00fcr Arbeitslosengeld",
+            "d_startDate": "03/15/2020",
+            "d_endDate": "",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Income support for unemployed",
+            "calc_identifier": "AT-2020-12/576",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "With new rules and more funds for short-time work, the Austrian government is trying to keep as many people as possible in their jobs. The Public Employment Service (AMS) head Johannes Kopf still expects 'due to the developments' that 'in the coming weeks a lot of people - hopefully for only a short time - will have to register as unemployed'. AMS expects an increased number of people to become unemployed during the current pandemic. In order reduce personal contacts to a minimum, applications for unemployment benefit and emergency assistance can be made without a personal interview from home. This can be done online, or via the electronic system eAMS, or, if online is not possible, via telephone and subsequent mailing of the forms.",
+            "descriptionContentOfMeasure": "Minister of Labour Christine Aschbacher (conservative People's Party \u00d6VP) has issued a decree stating that people no longer have to come personally to the AMS service centers to apply for unemployment benefits. This should both relieve the AMS and help to limit the spread of the virus.\r\rThe preferred way to submit an application is via an eAMS account, 'then a lot of the further communication is done electronically', according to AMS head Kopf. Those who do not yet have one can get one through their _'Finanzonline'_ account or with their Citizen Card. Those who have neither access to _'Finanzonline'_ nor a citizen card can apply for an electronic AMS account by email or phone. Then, however, the processing can take a few days. If waiting is not an option, unemployed can also register as unemployed using a form on the AMS website. It is also possible to report unemployment by email. The last option is to call the AMS to have the necessary forms sent to you by post.\r\rFor those who receive unemployment benefits and the entitlement period would come to an end (thus receiving the lower emergency assistance), the 'Corona crisis period' is not calculated towards this entitlement, i.e. unemployment benefits are prolonged for the duration of the crisis.",
+            "descriptionUseOfMeasure": "Compared to February (333,987 unemployed persons), there was in increase in the number of unemployed both in March (504,345) and in April (522,253). So it can be assumed that the additional unemployed during the Corona crisis (150,000-200,000) could have made use of an online application for the unemployment benefit or have filed the application via mail, telephone or fax.",
+            "descriptionInvolvementOfSocialPartners": "The PES administrative board consists of social partner and state representatives, so it can be assumed they were informed.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Informed",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_576.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "459",
+                    "sources::title": "AMS applications possible from home",
+                    "sources::url": "https://orf.at/corona/stories/3157908/",
+                    "sources::d_date": "03/15/2020",
+                    "modId": "3"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "293",
+                    "updates::d_date": "09/23/2020",
+                    "updates::description": "The topped up emergency assistance (see content of measure), which has been increased to the amount of unemployment benefit for the 'duration of the pandemic' has been extended to 31 December 2020 (for now) - initially, it was planned until September 2020.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "467",
+        "modId": "95"
+    },
+    {
+        "fieldData": {
             "title": "Alleviations for tenants",
             "title_nationalLanguage": "Erleichterungen f\u00fcr Mieter",
             "d_startDate": "04/01/2020",
@@ -21393,6 +21602,91 @@
         },
         "recordId": "470",
         "modId": "81"
+    },
+    {
+        "fieldData": {
+            "title": "Debt moratorium for consumers and microenterprises",
+            "title_nationalLanguage": "Schuldenmoratorium f\u00fcr Verbraucher und Kleinstunternehmen",
+            "d_startDate": "04/01/2020",
+            "d_endDate": "01/31/2021",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Preventing over-indebtedness",
+            "calc_identifier": "AT-2020-14/581",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "Austria is following the example of other countries by providing relief for borrowers who suffer loss of income as a result of COVID-19.\r\rLoan agreements with consumers and microenterprises, which were entered into prior to 15 March 2020, benefit from the moratorium. Microenterprises are defined as enterprises which employ fewer than 10 persons and whose annual turnover or annual balance sheet total does not exceed \u20ac2 million (see Art 2 (3) of the Annex to European Commission Recommendation 2003/361/EC). The moratorium only covers loan agreements and not other forms of financing (e.g. payment extension of purchase price).",
+            "descriptionContentOfMeasure": "For loan agreements benefiting from the moratorium (i.e. loan agreements with consumers and with microentrepreneurs entered into prior to 15 March 2020) the following applies: \r\r* The lender's claims for repayment of capital or payment of interest due between 1 April 2020 and 30 June 2020 shall be deferred for a period of three months from the original due date.\r\r* This deferral is subject to the condition that the respective borrower (consumer or microentrepreneur) has suffered a loss of income due to the exceptional circumstances caused by the COVID-19 pandemic, which makes it unreasonable for the borrower to continue his/her debt service.\r\r* It is in particular unreasonable for the borrower to continue his/her debt service, if his or her reasonable maintenance or the reasonable maintenance of his or her dependents is at risk.\rThe provisions for deferring the due date of payments under consumer loans and loans to microenterprises largely follow those of German law. This currently results in the same ambiguities with regard to the start of the deferral and the borrower's obligation to provide evidence of income losses due to COVID-19.",
+            "descriptionUseOfMeasure": "Unknown as of now (measure just started).",
+            "descriptionInvolvementOfSocialPartners": "No involvement.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-14_581.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "462",
+                    "sources::title": "Innovations introduced by the 4. COVID-19 Act",
+                    "sources::url": "https://www.bindergroesswang.at/en/publications/newsletter/2020/the-innovations-planned-with-the-4-covid-19-act/",
+                    "sources::d_date": "04/05/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1567",
+                    "sources::title": "Credit deferrals extended",
+                    "sources::url": "https://www.ots.at/presseaussendung/OTS_20200915_OTS0176/zadi-kreditstundungen-werden-weiterverlaengert",
+                    "sources::d_date": "09/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "281",
+                    "updates::d_date": "07/09/2020",
+                    "updates::description": "The deferment period was extended from 30 June to 31 October 2020.",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "292",
+                    "updates::d_date": "09/15/2020",
+                    "updates::description": "The deferment period was once again extended from 31 October 2020 to 31 January 2021.",
+                    "modId": "1"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "472",
+        "modId": "85"
     },
     {
         "fieldData": {
@@ -24493,6 +24787,161 @@
         },
         "recordId": "521",
         "modId": "76"
+    },
+    {
+        "fieldData": {
+            "title": "Corona - Arts and culture - Overview of support measures for artists",
+            "title_nationalLanguage": "Corona Kunst und Kultur",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "AT-2020-14/631",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/15/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "'There are very specific measures for the arts and culture to cover the special features of the cultural scene. But of course artists also have access to the entire range of support. We want to prevent people from losing their jobs, their income and at all costs everyday life can no longer afford. Nobody should be left behind ' explains State Secretary for Art and Culture Ulrike Lunacek on the unprecedented situation, which is very challenging for the entire art and culture business.\r\rThe federal government's mix of measures to combat the effects of COVID-19 includes a range of support for the cultural sector. ",
+            "descriptionContentOfMeasure": "An overview of measures for artists is available on the [Federal government's page:](https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html)\r\rIn addition to the general support measures set by government (for example, the [Corona short time work scheme](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-10_229.html) or the [hardship fund for self-employed](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_212.html)), the page also lists specific funds which are only available for artists.\r\rThis includes, for instance:\r\r* COVID-19 fund for artists and intermediaries ('Kulturvermittler');\r* All artists who are not eligible to apply the hardship fund of the Austrian Chamber of Commerce can bring an application to the KSVF (Artist Social Insurance Fund) from 30 March 2020. \r\rThe support is intended to compensate for the loss of income caused by closings and cancellations. \r\rThe KSVF's COVID-19 fund is endowed with up to \u20ac5 million and is intended to ensure rapid aid. In addition to artists, cultural mediators can now apply for this grant. The amount paid out by the KSVF corresponds to that of the hardship fund. The fund consists of two phases:\r\r* in the first phase \u20ac1,000 are paid as emergency aid (until 2 July 2020), \r* in the second phase (starting on 10 July 2020), a one-time payment of \u20ac3,000 is paid (amount received from phase one is deducted)\r\rA separate service page has been set up for loss of income due to the Corona measures: KSVF service fund.\r\rIndividual funds run by copyright collecting societies (e.g. music, visual arts, film-making, etc.). Seven dedicated funds are also listed on the webpage.\r\rIn addition to the state instruments for compensating artists' loss of income, there is now also a private initiative. To help artists in the current crisis, foundations have joined together to form the \"Foundations Help Artists\" initiative and are supported by well-known people.\r\rWork grants from the City of Vienna due to COVID-19: Since the end of March, freelance artists and freelance scientists with their main residence in Vienna have been able to apply for one-time work grants of up to \u20ac3,000. In this crisis situation, there should be the opportunity to continue to pursue artistic and scientific activities (project development, reading, exhibition and lecture preparation and the like).",
+            "descriptionUseOfMeasure": "Since 10 July 2020, 1,147 persons could be supported by the KSVF's COVID-19 fund with \u20ac2.714 million , and together with the emergency aid, \u20ac4.846 million have already been paid. The initially planned \u20ac5 million from the COVID-19 Fund has been exhausted, taking into account the still open applications. ",
+            "descriptionInvolvementOfSocialPartners": "Social partner involvement is unknown.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-14_631.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "508",
+                    "sources::title": "Corona arts and culture (Corona Kunst und Kultur)",
+                    "sources::url": "https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html",
+                    "sources::d_date": "04/15/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "513",
+                    "sources::title": "AKM and OESTIG set up emergency fund for musicians",
+                    "sources::url": "https://www.ots.at/presseaussendung/OTS_20200313_OTS0040/akm-und-oestig-richten-kultur-katastrophenfonds-fuer-musikschaffende-ein",
+                    "sources::d_date": "03/13/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "620",
+                    "sources::title": "Artists social insurance fund (K\u00fcnstler-Sozialversicherungsfonds)",
+                    "sources::url": "https://www.ksvf.at/covid-19.html",
+                    "sources::d_date": "04/16/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1229",
+                    "sources::title": "Bridging funding for self-employed artists",
+                    "sources::url": "https://www.svs.at/cdscontent/?contentid=10007.859358&portal=svsportal%C2%A0",
+                    "sources::d_date": "07/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1544",
+                    "sources::title": "Come back fund for film industry",
+                    "sources::url": "https://www.aws.at/fileadmin/user_upload/Foerdermanager/ab_20206_Comeback-RL-DE.pdf",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "6",
+                    "actors::name": "Other social actors (e.g. NGOs)",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "7",
+                    "actors::name": "Local / regional government",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "6",
+                    "funding::name": "Local funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "11",
+                    "funding::name": "Other",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "10",
+                    "occupations::name": "Legal, social and cultural professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "223",
+                    "updates::d_date": "07/08/2020",
+                    "updates::description": "A further fund, the \"bridging fund for artists\" was set up in June 2020, endowed with \u20ac90 million. The fund aims to provide specific support to artists who are particularly affected by the measures to combat COVID-19, as they were the first to be affected by these measures and the restrictions will reduce their earning potential for a particularly long time. Eligible for application are self-employed artists who are compulsorily or voluntarily insured with the Social Insurance Institution of the Self-employed (SVS). A one-off payment of \u20ac6,000 is planned. Any payments already received from the [hardship fund](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_212.html)) will be deducted.\rArtists in this matter are defined as those persons who create, exercise, mediate or teach art and culture. The SVS is responsible for processing the subsidies according to this federal law. The maximum amount of aid is \u20ac6,000 in the form of a one-time payment. Funds can be applied for from 8 July 2020 onwards, until 31 December 2020.",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "279",
+                    "updates::d_date": "09/09/2020",
+                    "updates::description": "The Federal Government decided on 9 September 2020 in the Council of Ministers to increase the COVID-19 fund from \u20ac5 to \u20ac10 million.\r",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "280",
+                    "updates::d_date": "06/17/2018",
+                    "updates::description": "A 'comeback grant' is paid to independent film production companies whose productions have been interrupted or postponed due to COVID-19 from 16 March to 31 December 2020. Up to 100% of the eligible costs will be reimbursed (eligible costs include personnel costs, costs in the field of image and sound recording like rental of camera, sound recording equipment, lighting equipment and other production-related equipment, costs of motif fees, rental of studio and decoration buildings, costs in the field of equipment, travel, transport and handling costs). Up to 75% of the originally calculated production costs can be reimbursed in such a way. The maximum amount per production (i.e. film or episode) lies at \u20ac2.5 million.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "522",
+        "modId": "97"
     },
     {
         "fieldData": {
@@ -43752,6 +44201,102 @@
     },
     {
         "fieldData": {
+            "title": "Consumption cheques for employees",
+            "title_nationalLanguage": "Consumptiecheque",
+            "d_startDate": "06/08/2020",
+            "d_endDate": "06/07/2021",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "BE-2020-24/941",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/08/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "In the framework of measures taken to cushion the economic effects of the COVID-19 pandemic, the federal government has launched a new initiative in June in the form of so called 'consumption cheques'. \rThe cheques have two goals. On the one hand, they stimulate consumers to buy locally and from sectors that are struck hard by the current crisis. On the other hand, they provide employees some additional purchasing power.",
+            "descriptionContentOfMeasure": "The consumer cheque is a paper cheque that the employees can spend in Belgian sectors that were most affected during the lockdown: in particular the hospitality industry, sports clubs and the culture sector. The check is granted by the employer.\r\rThe granting of the cheque must be governed by a sectoral collective agreement. If there is no sectoral collective agreement, an enterprise collective agreement must be concluded via the local trade union delegation. If there is no trade union delegation within the company, the granting must be regulated in an individual annex to the employment contract. \r\rThe maximum amount that can be granted per employee is \u20ac300. The cheque falls outside the wage standard and may not be granted to replace existing wage benefits.\r\rThe cheque cannot be granted on an individual basis. Employers are obliged to award it to all staff members or to an objectively defined category within the staff.",
+            "descriptionUseOfMeasure": "The measure is not finalised as of today, it is still to be launched formally.",
+            "descriptionInvolvementOfSocialPartners": "No data yet available.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-24_941.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1071",
+                    "sources::title": "Consumptiecheque",
+                    "sources::url": "https://www.unizo.be/consumptiechequ",
+                    "sources::d_date": "06/30/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1072",
+                    "sources::title": "Consumptiecheque: voordelen en voorwaarden",
+                    "sources::url": "https://www.acerta.be/nl/blog/werkgevers/krijgen-jouw-medewerkers-een-consumptiechequ",
+                    "sources::d_date": "06/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1562",
+                    "sources::title": "Consumption cheques in small retailer sector + electronic vouchers",
+                    "sources::url": "https://legalworld.wolterskluwer.be/nl/nieuws/socialeye/coronavirus-consumptiecheque-ook-in-zwaar-getroffen-kleinhandelszaken-en-voortaan-ook-in-elektronisch-formaat",
+                    "sources::d_date": "08/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "290",
+                    "updates::d_date": "08/24/2020",
+                    "updates::description": "Consumption vouchers can now also be used for companies that fall under the joint committees for small retailers, if they were compulsorily closed for more than one month during the lockdown. In addition, the consumption vouchers can now be issued electronically.",
+                    "modId": "3"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "851",
+        "modId": "43"
+    },
+    {
+        "fieldData": {
             "title": "COVID-Rent support for entrepreneurs",
             "title_nationalLanguage": "COVID n\u00e1jemn\u00e9",
             "d_startDate": "06/26/2020",
@@ -44299,6 +44844,110 @@
         },
         "recordId": "860",
         "modId": "33"
+    },
+    {
+        "fieldData": {
+            "title": "Support fund for non-profit organisations",
+            "title_nationalLanguage": "NPO Unterst\u00fctzungsfonds",
+            "d_startDate": "07/08/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "AT-2020-28/951",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "Non-Profit-Organisations (NPO) are also strongly affected by the Corona crisis. The NPO Support Fund is intended to support organisations with their own legal personality if they pursue non-profit, charitable or ecclesiastical purposes in accordance with the Federal Tax Code. Political parties and organisations subject to the control of the Court of Audit are excluded. It is planned that the Minister of Finance will provide funds amounting to \u20ac700 million from the COVID-19 crisis management fund for this purpose. \r\rThe following types of organisations affected by the Corona crisis are eligible:\r\r1. Non-profit organisations such as sports, cultural and animal welfare associations\r2. Organisations which are responsible for fire brigade tasks according to state law\r3. Legally recognised churches, religious communities and institutions which have legal personality under state law on the basis of religious law provisions\r",
+            "descriptionContentOfMeasure": "The aim of the funding is to mitigate the loss of revenue caused by COVID-19 for organisations eligible under the law (i.e. NPO's) by means of grants for eligible costs. The funding consists of two areas:\r\r**Reimbursement of the eligible fixed costs**\r\rSubsidisable fixed costs (rent, insurance, water, sewerage, waste, tax consultant, energy, telco - no personnel costs) will be reimbursed up to 100% for the period from 1 April 2020 to 30 September 2020.\rExceptions: Costs incurred as a result of the Corona crisis will already be subsidised from 10 March 2020, e.g. protective equipment or disinfectants. Expenses for cancelled events must have been incurred before 10 March.\r\r **Structural security contribution**\r\rThe flat-rate contribution to structural securities is intended to cover costs that do not fall under the eligible fixed costs (see above), such as maintenance or servicing costs, and normally amounts to 7% of the income generated in 2019.\r\rThe grant is the sum of eligible costs and the structural support contribution, if this sum does not exceed \u20ac3,000.\r\rIf the sum of eligible costs and the structural support contribution is higher than \u20ac3,000, the maximum grant is the amount of the loss of income.\r\rHow is the loss of income calculated?\rNormally, the difference between the income of the first three quarters of 2019 and the income of the first three quarters of 2020.\r\rApplications can be made from 8 July 2020 until 31 December 2020. The grant is paid up to a maximum of \u20ac2.4 million per organisation. The Austrian Promotional Bank AWS is responsible for processing the applications, and reporting obligations to the National Council are planned.",
+            "descriptionUseOfMeasure": "As of 24 August 2020, the NPO-Fund has pledged a total of \u20ac107.2 million, as announced by the responsible Vice Chancellor Werner Kogler. 5,245 applications have been processed positively. So far, \u20ac17.6 million have been paid in the sports sector, \u20ac10.3 million in the arts and cultural sector and \u20ac30.2 million for churches and similar institutions. The difference to the \u20ac107 million  results from the payment modalities; they will be paid at the submission of the final invoices. A total of \u20ac700 million are available in the NPO fund.",
+            "descriptionInvolvementOfSocialPartners": "Not in social partners' domain.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-28_951.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1110",
+                    "sources::title": "20th COVID-19 Act",
+                    "sources::url": "https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2020_I_49/BGBLA_2020_I_49.html",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1111",
+                    "sources::title": "NPO-Fonds Q&As",
+                    "sources::url": "https://npo-fonds.at/faqs/",
+                    "sources::d_date": "07/09/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1563",
+                    "sources::title": "EUR 107 million for NPO Fund",
+                    "sources::url": "https://orf.at/stories/3178612/",
+                    "sources::d_date": "08/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "114",
+                    "sectors::code": "O84",
+                    "sectors::name": "Public administration and defence; compulsory social security",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "122",
+                    "sectors::code": "R90",
+                    "sectors::name": "Creative, arts and entertainment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "125",
+                    "sectors::code": "R93",
+                    "sectors::name": "Sports activities and amusement and recreation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "127",
+                    "sectors::code": "S94",
+                    "sectors::name": "Activities of membership organisations",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "861",
+        "modId": "29"
     },
     {
         "fieldData": {
