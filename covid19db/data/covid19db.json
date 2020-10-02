@@ -5766,98 +5766,6 @@
     },
     {
         "fieldData": {
-            "title": "Postponement of and exemption from payment of tourist membership fee for economic entities and private renters ",
-            "title_nationalLanguage": "Odgoda pla\u0107anja turisti\u010dke \u010dlanarine za gospodarske subjekte i privatne iznajmljiva\u010de",
-            "d_startDate": "03/19/2020",
-            "d_endDate": "12/31/2020",
-            "calc_country": "Croatia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments or liabilities",
-            "calc_identifier": "HR-2020-12/322",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/06/2020",
-            "calc_lastUpdate": "04/30/2020",
-            "descriptionBackgroundInfo": "The tourist  (membership) fee for Tourist board in Croatia is a fixed amount that pay those who rent apartments or rooms (usually 200 Euro annually per legal or natural entity, according to the number of beds, and it depends from one municipality to another). \r\rAccording to the new Tourist Board Membership Act, which came into force on January 1, 2020, private renters are obliged to calculate and report the membership fee of the Tourist Board until January 15. In 2020, the deadline was extended until the end of February given the short time adjustments to new regulations. Ordinance on the annual lump sum of membership fee for persons providing catering services in the household and on the family farm stipulates payment of fee to the tourist board was published on 5 February.\r",
-            "descriptionContentOfMeasure": "The Law on Amendments to the Tourist Act (OG 32/20) adopted in March empowered the Minister of Tourism to prescribe, by ordinance, a deferral or exemption from payment of a tourist membership fee in special circumstances.\r\rThe Ordinance on the postponement of or exemption from payment of a tourist fee (OG 36/20) stipulates that persons providing catering services in the household and on the family farms are exempt from paying a half of the annual lump sum of the tourist fee in accordance with a special regulation governing the catering industry for 2020. In addition, they are also exempted from paying in full the annual lump sum of tourist tax for extra beds for 2020. \r",
-            "descriptionUseOfMeasure": "The number of possible applicants is not yet known.  It is quite positive that during the delay or exemption from payment of the tourist tax, the competent inspectors shall not make charges for initiating misdemeanor proceedings or issuing misdemeanor orders, nor charge at the place of committing the offense for taxpayers. ",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-12_322.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "168",
-                    "sources::title": "The Ordinance on the postponement of or exemption from payment of a tourist fee (OG 36/20) stipulates that persons providing catering services in the household and on the family farms are exempt from paying a half of the annual lump sum of the tourist fee. ",
-                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_03_32_701.html",
-                    "sources::d_date": "03/19/2020",
-                    "modId": "6"
-                },
-                {
-                    "recordId": "169",
-                    "sources::title": "Pravilnik o odgodi ili osloba\u0111anju od pla\u0107anja turisti\u010dke pristojbe za osobe koje pru\u017eaju ugostiteljske usluge u doma\u0107instvu ili na obiteljskom poljoprivrednom gospodarstvu (OG 36/20). ",
-                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_03_36_764.html",
-                    "sources::d_date": "03/25/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "731",
-                    "sources::title": "Ordinance on the annual lump sum of membership - Tourist board \rproviding catering services in the household and on the family farm and on the TZ forms for\rpayment of dues to the tourist board",
-                    "sources::url": "http://www.propisi.hr/print.php?id=9659",
-                    "sources::d_date": "02/05/2020",
-                    "modId": "3"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "205",
-        "modId": "93"
-    },
-    {
-        "fieldData": {
             "title": "Temporary subsidy programme",
             "title_nationalLanguage": "Ajutine t\u00f6\u00f6tasu h\u00fcvitis",
             "d_startDate": "03/23/2020",
@@ -6221,91 +6129,6 @@
     },
     {
         "fieldData": {
-            "title": "Postponement of the payment of the concession fee on tourist land in the camps ",
-            "title_nationalLanguage": "Odgoda pla\u0107anja naknade za kori\u0161tenje koncesije na turisti\u010dkom zemlji\u0161tu u kampovima",
-            "d_startDate": "03/17/2020",
-            "d_endDate": "11/30/2020",
-            "calc_country": "Croatia",
-            "calc_minorCategory": "Supporting businesses to stay afloat",
-            "calc_subMinorCategory": "Deferral of payments or liabilities",
-            "calc_identifier": "HR-2020-12/336",
-            "dateType": "Temporary",
-            "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "04/30/2020",
-            "descriptionBackgroundInfo": "In view of the emergency situation related to the coronavirus epidemic Regulation on the procedure, manner and conditions for obtaining concession on tourist land in camps co-owned by the Republic of Croatia has been ammened on 17 March 2020. The aim is to mitigate the first financial impact on the tourism sector and to provide the time needed to analyze the damage suffered in the sector in order to take further measures for stabilising it and retaining jobs.\r\r\r\r \r\r\r",
-            "descriptionContentOfMeasure": "Due to the very low future revenues of the camps, the government decided to enable the postponement of the payment of the concession fee on tourist land in the camps by end November 2020.. The measure applies to companies performing tourism activities on the basis of a request for a concession on the co-owned part of the Republic of Croatia for the use of the camp, in accordance with Article 8, paragraph 1 of the Law on Tourist and Other Construction Land, not evaluated in the process of conversion and privatization (Official Gazette, No. 92 / 10). \r\rThe Ministry of Tourism, as the implementing body, will continue with the activities of determining the amount of the concession fee and will inform the payers of the amount of the permanent and variable part of the concession fee, whose payment has been postponed until November 30, 2020. It is estimated that 80 camps in Croatia might benefit from this measure.\r",
-            "descriptionUseOfMeasure": "Not yet known at this stage.",
-            "descriptionInvolvementOfSocialPartners": "",
-            "socialPartner_form": "No involvement",
-            "socialPartner_role": "No involvement",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-12_336.html",
-            "isOccupation": "No",
-            "isSector": "Yes",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "Entirely new measure "
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "177",
-                    "sources::title": " Uredba o dopuni Uredbe o postupku, na\u010dinu i uvjetima za dobivanje koncesije na turisti\u010dkom zemlji\u0161tu u kampovima u suvlasni\u0161tvu Republike Hrvatske",
-                    "sources::url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_03_31_674.html",
-                    "sources::d_date": "03/17/2020",
-                    "modId": "5"
-                },
-                {
-                    "recordId": "178",
-                    "sources::title": "Odgoda pla\u0107anja naknade za kori\u0161tenje koncesije na turisti\u010dkom zemlji\u0161tu u kampovima",
-                    "sources::url": "https://hrturizam.hr/odgoda-placanja-naknade-za-koristenje-koncesije-na-turistickom-zemljistu-u-kampovima/",
-                    "sources::d_date": "03/27/2020",
-                    "modId": "5"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "5",
-                    "actors::name": "Company / Companies",
-                    "modId": "5"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "60",
-                    "targetGroups::name": "Sector specific set of companies",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [
-                {
-                    "recordId": "83",
-                    "sectors::code": "I55",
-                    "sectors::name": "Accommodation",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "84",
-                    "sectors::code": "I56",
-                    "sectors::name": "Food and beverage service activities",
-                    "modId": "0"
-                }
-            ],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "220",
-        "modId": "83"
-    },
-    {
-        "fieldData": {
             "title": "Social tax payments for solo self-employed",
             "title_nationalLanguage": "FIE-de sotsiaalmaksu avansilised maksed",
             "d_startDate": "03/20/2020",
@@ -6563,7 +6386,7 @@
             "calc_identifier": "HR-2020-10/342",
             "dateType": "Temporary",
             "calc_creationDay": "04/07/2020",
-            "calc_lastUpdate": "04/30/2020",
+            "calc_lastUpdate": "10/01/2020",
             "descriptionBackgroundInfo": "At its extraordinary session on March 20, 2020 the Croatian Chamber of Commerce, decided to provisionally repeal the provisions of its Financing Decision which prescribes the obligation, amount and manner of payment of the membership fee for its members. \r\rFollowing the 19 March 2020 decision of the Civil Protection Headquarters of the Republic of Croatia on measures to limit social gatherings, work in commerce, services and the holding of sporting and cultural events due to COVID-19 outbreak, the Croatian Chamber  of Commerce\rdecided to temporarily suspend the payment of  its membership fee.\r\r\r",
             "descriptionContentOfMeasure": "The Croatian Chamber  of Commerce (CCC) Decision on the temporary suspension of the obligation to pay membership fees (OG 36/2020) stipulates temporary suspension of the membership fee to the Croatian Chamber of Commerce for the period from 1 March to 31 May 2020. Members are entrepreneurs from the various economic sectors, primarily in retail trade, preparation of food and drinks, accommodation, education, culture etc. According to the data by the Croatian Bureau of Statistics this measure could cover around 80 thousand business entities with 250 thousand employees.\rIn accordance with this Decision the Croatian Chamber of Trades and Crafts (HOK) decided that debit of the mandatory chamber contribution for the period April - June 2020 is written off.(see case n 344). \r\r",
             "descriptionUseOfMeasure": "Not yet known.",
