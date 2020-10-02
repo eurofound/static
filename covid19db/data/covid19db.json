@@ -46979,83 +46979,6 @@
     },
     {
         "fieldData": {
-            "title": "Banking moratoriums",
-            "title_nationalLanguage": "Morat\u00f3rias banc\u00e1rias",
-            "d_startDate": "03/27/2020",
-            "d_endDate": "03/31/2021",
-            "calc_country": "Portugal",
-            "calc_minorCategory": "Measures to prevent social hardship",
-            "calc_subMinorCategory": "Preventing over-indebtedness",
-            "calc_identifier": "PT-2020-13/990",
-            "dateType": "Temporary",
-            "calc_creationDay": "07/13/2020",
-            "calc_lastUpdate": "07/20/2020",
-            "descriptionBackgroundInfo": "The Decree-Law 10-J/2020, of 26 March, in force since 27 March, established extraordinary measures for the protection of bank clients in the existing context of public health emergency, creating a moratorium regime regarding the fulfilment of the obligations due for credit contracts. This moratorium in is force until 30 September 2020.\r\rThe Resolution of the Council of Ministers 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme extends the existing banking moratorium until 31 March 2021.",
-            "descriptionContentOfMeasure": "The Decree-Law 10-J/2020, in force since 27 March, established extraordinary measures for the protection of bank clients in the existing context of public health emergency, creating a moratorium regime regarding the fulfillment of the obligations due for credit contracts. This moratorium was initially in force until 30 September 2020 and was extended by the Resolution of the Council of Ministers 41/2020, of 6 June, that approved the Economic and Social Stabilization Programme, until 31 March 2021.\r\rThe Resolution of the Council of Ministers 41/2020 also:\r\r* enlarges the beneficiaries of the measure, including emigrants;\r* contemplates new eligibility factors related with loss of income, covering a larger number of people with temporary restrictions of liquidity;\r* extends the moratorium to all contracts of mortgage credit, and to consumption credit for education;\r* includes natural persons who benefited from privates moratoriums and who, as a result of the changes, become eligible for the public moratorium.\r",
-            "descriptionUseOfMeasure": "Information not available.",
-            "descriptionInvolvementOfSocialPartners": "Not applicable.",
-            "socialPartner_form": "",
-            "socialPartner_role": "",
-            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_990.html",
-            "isOccupation": "No",
-            "isSector": "No",
-            "sector_privateOrPublic": "Not specified",
-            "calc_type": "Legislations or other statutory regulations",
-            "statusOfRegulation": "New aspects included into existing measure"
-        },
-        "portalData": {
-            "sources": [
-                {
-                    "recordId": "1233",
-                    "sources::title": "Resolu\u00e7\u00e3o do Conselho de Ministros 41-2020",
-                    "sources::url": "https://dre.pt/web/guest/pesquisa/-/search/135391594/details/maximized",
-                    "sources::d_date": "06/06/2020",
-                    "modId": "0"
-                },
-                {
-                    "recordId": "1234",
-                    "sources::title": "Decreto-lei 10-J-2020",
-                    "sources::url": "https://dre.pt/home/-/dre/130779509/details/maximized",
-                    "sources::d_date": "03/26/2020",
-                    "modId": "0"
-                }
-            ],
-            "actors": [
-                {
-                    "recordId": "1",
-                    "actors::name": "National government",
-                    "modId": "3"
-                }
-            ],
-            "targetGroups": [
-                {
-                    "recordId": "55",
-                    "targetGroups::name": "Solo-self-employed",
-                    "modId": "16"
-                },
-                {
-                    "recordId": "65",
-                    "targetGroups::name": "Other businesses",
-                    "modId": "12"
-                }
-            ],
-            "funding": [
-                {
-                    "recordId": "12",
-                    "funding::name": "No special funding required",
-                    "modId": "0"
-                }
-            ],
-            "occupations": [],
-            "sectors": [],
-            "updates": [],
-            "regions": []
-        },
-        "recordId": "900",
-        "modId": "20"
-    },
-    {
-        "fieldData": {
             "title": "Rent refund for companies",
             "title_nationalLanguage": "Rifu\u017cjoni tal-kera",
             "d_startDate": "06/08/2020",
@@ -51913,10 +51836,10 @@
             "sources": [
                 {
                     "recordId": "1348",
-                    "sources::title": "Portaria n.\u00ba 207/202",
+                    "sources::title": "Portaria n.\u00ba 207/2020",
                     "sources::url": "https://dre.pt/web/guest/pesquisa/-/search/141259625/details/maximize",
                     "sources::d_date": "08/27/2020",
-                    "modId": "0"
+                    "modId": "1"
                 }
             ],
             "actors": [
