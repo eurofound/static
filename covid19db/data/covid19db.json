@@ -45821,6 +45821,83 @@
     },
     {
         "fieldData": {
+            "title": "Special protection for COVID-19 risk groups at work",
+            "title_nationalLanguage": "Besonderer Schutz von Risikogruppen",
+            "d_startDate": "05/06/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "AT-2020-19/954",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "10/02/2020",
+            "descriptionBackgroundInfo": "In the face of the Corona crisis, employers have taken numerous measures to protect employees from infections. Depending on the activity, this includes, for example, the possibilities for home office, redesigning workplaces to maintain a safe distance, installed barriers such as plexiglass walls or the use of personal protective equipment.\r\rThe third COVID-19 Law paved the way for defining specific \"risk groups\", to which further protective measures apply. Employed workers with a very high risk of developing a serious illness if becoming infected with the Corona virus are entitled to work from their home office or to a change in working conditions (meaning that the working conditions must be designed in such a way that infection with COVID-19 is almost impossible, taking into account the way to work). Ultimately, if this is not possible, a paid temporary leave of absence can be obtained with full payment by the employer, who will be reimbursed in full by the social security system for the wage costs (including ancillary wage costs).\r\rAn expert group consisting of three representatives from the Federal Ministry of Social Affairs, Health, Nursing and Consumer Protection, one representative from the Federal Ministry of Labor, Family and Youth, three representatives from the Medical Association and three representatives from the social security system held several meetings based on previous experience with COVID-19 sufferers in Austria's hospitals and the international scientific results identified the groups of people who could have a higher risk of developing a serious illness. ",
+            "descriptionContentOfMeasure": "The COVID-19 risk group regulation lists the medical reasons (indications) for belonging to the COVID-19 risk group. Based on these indications, a doctor may issue a COVID-19 risk certificate.\r\rThe main medical indications are:\r\r1. advanced chronic lung diseases that require permanent, daily, dual medication\r2. chronic heart diseases with end organ damage that require permanent therapy, such as ischemic heart diseases and heart failure\r3. active cancer with oncological pharmacotherapy (chemotherapy, biologics) and / or radiation therapy within the past six months, and metastatic cancer even without ongoing therapy\r4. diseases that need to be treated with immunosuppression\r5. advanced chronic kidney disease\r6. chronic liver diseases with organ remodeling and decompensated liver cirrhosis from Childs stage B\r7. pronounced obesity from obesity grade III with a BMI> = 40\r8. diabetes mellitus\r9. arterial hypertension with existing end organ damage, especially chronic heart or kidney failure, or uncontrollable blood pressure adjustment.\r\rThese main medical indications are further divided and described in detail in the regulation.\rIn addition, other, similarly serious diseases with functional or physical limitations can provide special protection through a COVID-19 risk certificate.\r\rMost members of the risk group were identified through their medication via their health insurance. They received letters by their social security institution after the legal provisions came into force in May. Furthermore, an individual risk analysis can be obtained by a physician (e.g. for patients with a cancer therapy who do not take any \"prescribed medication\" because they receive their treatment in the hospital or dialysis patients). The doctor carries out the risk assessment together with the patient based on the recommendations for individual risk analysis for a severe course of the disease. If there is a serious underlying illness that meets these recommendations, a COVID-19 risk certificate is issued.\r\rEmployers and those affected must jointly consider whether special protective measures are possible in the workplace. If this is not possible, home office can be used. If this is not possible either, workers belonging to the risk group are entitled to paid leave from work.\r",
+            "descriptionUseOfMeasure": "According to information from the Minister from 21 April 2020, around 90,000 workers are expected to belong to the risk group. No exact data are available and no information on how many have made use of a paid leave are available as of now.",
+            "descriptionInvolvementOfSocialPartners": "The expert group which elaborated the definition of risk groups consisted of representatives of the relevant ministries, of doctors and representatives of the umbrella association of social security institutions. The latter's board consists of social partner representatives so it can be assumed that they were included in the expert group meetings.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-19_954.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1117",
+                    "sources::title": "FAQs Risk groups",
+                    "sources::url": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Coronavirus---Haeufig-gestellte-Fragen/FAQ--Risikogruppen.html",
+                    "sources::d_date": "05/06/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1540",
+                    "sources::title": "Updated FAQ Risk groups",
+                    "sources::url": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Coronavirus---Haeufig-gestellte-Fragen/FAQ--Risikogruppen.html",
+                    "sources::d_date": "09/22/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "11",
+                    "actors::name": "Social insurance",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "71",
+                    "targetGroups::name": "The COVID-19 risk group at the workplace",
+                    "modId": "8"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "864",
+        "modId": "20"
+    },
+    {
+        "fieldData": {
             "title": "Social support for artists, authors, technicians and other arts professionals",
             "title_nationalLanguage": "Linha de apoio social aos artistas, autores, t\u00e9cnicos e outros profissionais das artes",
             "d_startDate": "07/10/2020",
