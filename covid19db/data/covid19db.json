@@ -24853,9 +24853,9 @@
                 },
                 {
                     "recordId": "280",
-                    "updates::d_date": "06/17/2018",
+                    "updates::d_date": "06/17/2020",
                     "updates::description": "A 'comeback grant' is paid to independent film production companies whose productions have been interrupted or postponed due to COVID-19 from 16 March to 31 December 2020. Up to 100% of the eligible costs will be reimbursed (eligible costs include personnel costs, costs in the field of image and sound recording like rental of camera, sound recording equipment, lighting equipment and other production-related equipment, costs of motif fees, rental of studio and decoration buildings, costs in the field of equipment, travel, transport and handling costs). Up to 75% of the originally calculated production costs can be reimbursed in such a way. The maximum amount per production (i.e. film or episode) lies at \u20ac2.5 million.",
-                    "modId": "2"
+                    "modId": "3"
                 }
             ],
             "regions": []
@@ -44695,7 +44695,7 @@
             "calc_creationDay": "07/09/2020",
             "calc_lastUpdate": "10/02/2020",
             "descriptionBackgroundInfo": "Non-Profit-Organisations (NPO) are also strongly affected by the Corona crisis. The NPO Support Fund is intended to support organisations with their own legal personality if they pursue non-profit, charitable or ecclesiastical purposes in accordance with the Federal Tax Code. Political parties and organisations subject to the control of the Court of Audit are excluded. It is planned that the Minister of Finance will provide funds amounting to \u20ac700 million from the COVID-19 crisis management fund for this purpose. \r\rThe following types of organisations affected by the Corona crisis are eligible:\r\r1. Non-profit organisations such as sports, cultural and animal welfare associations\r2. Organisations which are responsible for fire brigade tasks according to state law\r3. Legally recognised churches, religious communities and institutions which have legal personality under state law on the basis of religious law provisions\r",
-            "descriptionContentOfMeasure": "The aim of the funding is to mitigate the loss of revenue caused by COVID-19 for organisations eligible under the law (i.e. NPO's) by means of grants for eligible costs. The funding consists of two areas:\r\r**Reimbursement of the eligible fixed costs**\r\rSubsidisable fixed costs (rent, insurance, water, sewerage, waste, tax consultant, energy, telco - no personnel costs) will be reimbursed up to 100% for the period from 1 April 2020 to 30 September 2020.\rExceptions: Costs incurred as a result of the Corona crisis will already be subsidised from 10 March 2020, e.g. protective equipment or disinfectants. Expenses for cancelled events must have been incurred before 10 March.\r\r **Structural security contribution**\r\rThe flat-rate contribution to structural securities is intended to cover costs that do not fall under the eligible fixed costs (see above), such as maintenance or servicing costs, and normally amounts to 7% of the income generated in 2019.\r\rThe grant is the sum of eligible costs and the structural support contribution, if this sum does not exceed \u20ac3,000.\r\rIf the sum of eligible costs and the structural support contribution is higher than \u20ac3,000, the maximum grant is the amount of the loss of income.\r\rHow is the loss of income calculated?\rNormally, the difference between the income of the first three quarters of 2019 and the income of the first three quarters of 2020.\r\rApplications can be made from 8 July 2020 until 31 December 2020. The grant is paid up to a maximum of \u20ac2.4 million per organisation. The Austrian Promotional Bank AWS is responsible for processing the applications, and reporting obligations to the National Council are planned.",
+            "descriptionContentOfMeasure": "The aim of the funding is to mitigate the loss of revenue caused by COVID-19 for organisations eligible under the law (i.e. NPO's) by means of grants for eligible costs. The funding consists of two areas:\r\r**Reimbursement of the eligible fixed costs**\r\rSubsidisable fixed costs (rent, insurance, water, sewerage, waste, tax consultant, energy, telco - no personnel costs) will be reimbursed up to 100% for the period from 1 April 2020 to 30 September 2020.\r\rExceptions: Costs incurred as a result of the Corona crisis will already be subsidised from 10 March 2020, e.g. protective equipment or disinfectants. Expenses for cancelled events must have been incurred before 10 March.\r\r **Structural security contribution**\r\rThe flat-rate contribution to structural securities is intended to cover costs that do not fall under the eligible fixed costs (see above), such as maintenance or servicing costs, and normally amounts to 7% of the income generated in 2019.\r\rThe grant is the sum of eligible costs and the structural support contribution, if this sum does not exceed \u20ac3,000.\r\rIf the sum of eligible costs and the structural support contribution is higher than \u20ac3,000, the maximum grant is the amount of the loss of income.\r\rHow is the loss of income calculated?\rNormally, the difference between the income of the first three quarters of 2019 and the income of the first three quarters of 2020.\r\rApplications can be made from 8 July 2020 until 31 December 2020. The grant is paid up to a maximum of \u20ac2.4 million per organisation. The Austrian Promotional Bank AWS is responsible for processing the applications, and reporting obligations to the National Council are planned.",
             "descriptionUseOfMeasure": "As of 24 August 2020, the NPO-Fund has pledged a total of \u20ac107.2 million, as announced by the responsible Vice Chancellor Werner Kogler. 5,245 applications have been processed positively. So far, \u20ac17.6 million have been paid in the sports sector, \u20ac10.3 million in the arts and cultural sector and \u20ac30.2 million for churches and similar institutions. The difference to the \u20ac107 million  results from the payment modalities; they will be paid at the submission of the final invoices. A total of \u20ac700 million are available in the NPO fund.",
             "descriptionInvolvementOfSocialPartners": "Not in social partners' domain.",
             "socialPartner_form": "",
@@ -44783,7 +44783,7 @@
             "regions": []
         },
         "recordId": "861",
-        "modId": "29"
+        "modId": "30"
     },
     {
         "fieldData": {
@@ -44887,6 +44887,93 @@
         },
         "recordId": "862",
         "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Lump-sum payments for unemployed and children",
+            "title_nationalLanguage": "Einmalzahlung f\u00fcr Arbeitslose und Kinder",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "AT-2020-27/953",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/09/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "Austria has experienced record numbers in unemployment as a consequence of the Corona crisis. In their two-day coalition government meeting on 15 and 16 June, the federal government (consisting of the conservative People's Party \u00d6VP and the Green Party) announced several measures targeted towards boosting the economy, among them one-off payments for unemployed persons and for parents, both in September. The latter are to be supported at the start of the new school year.",
+            "descriptionContentOfMeasure": "Unemployed persons will receive a one-off payment of \u20ac450 in autumn. The condition is that they have received unemployment benefit or emergency unemployment assistance for at least 60 days between May and August. Furthermore, a one-off payment of \u20ac360 for each child for whom family allowance is drawn, is paid (i.e. this applies generally to all children up to the year in which they turn 19 years and beyond up to 24 years if they are enrolled in education/training, and to 25 in special cases). Both payments will be made automatically (i.e. no application needed) in September.\r\rThe measure applies to all persons having been at least 60 days unemployed between May and August 2020 and to all children for whom family allowance is drawn.",
+            "descriptionUseOfMeasure": "According to the public employment service (AMS) data, only about half (i.e. 370,000) of the estimated 740,000 unemployed and training participants who received unemployment benefit or emergency unemployment assistance between April and August, received the one-off payment of \u20ac450. The rest was not eligible as they were either unemployed for less than 60 days, or their unemployment was (partially) before the calculation period between May and August or they were first on short-time work and became unemployed only later, also not meeting the criteria.",
+            "descriptionInvolvementOfSocialPartners": "This is a unilateral government measure, the social partners were informed but not consulted.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-27_953.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1116",
+                    "sources::title": "Social Committee gives the green light for one-off payment to the unemployed and for child bonus",
+                    "sources::url": "https://www.parlament.gv.at/PAKT/PR/JAHR_2020/PK0746/index.shtml",
+                    "sources::d_date": "07/02/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1541",
+                    "sources::title": "Half of all Corona unemployed do not receive one-time payment",
+                    "sources::url": "https://www.momentum-institut.at/news/die-haelfte-der-corona-arbeitslosen-erhalten-keine-einmalzahlung",
+                    "sources::d_date": "09/09/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "8",
+                    "actors::name": "Public employment service",
+                    "modId": "0"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors)",
+                    "modId": "17"
+                },
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "863",
+        "modId": "18"
     },
     {
         "fieldData": {
@@ -52468,6 +52555,97 @@
     },
     {
         "fieldData": {
+            "title": "Agreements between Slovnaft MOL management and local trade unions ",
+            "title_nationalLanguage": "Dohody medzi mana\u017ementom podniku Slovnaft MOL a ZO OZ\u00a0ECHOZ\u00a0 ",
+            "d_startDate": "03/18/2018",
+            "d_endDate": "",
+            "calc_country": "Slovakia",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Change of work-arrangements (working time, rota schemes)",
+            "calc_identifier": "SK-2018-12/1071",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/08/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "In relation to the COVID-19 pandemic, the Slovak government adopted several measures to alleviate its impact on employers, employees as well as citizens. Many of them\u00a0were implemented through changes in the Labour Code, Act on Social insurance and other\u00a0related legislations. For instance, new rules for implementation of homeworking and different types of short-time working schemes included in the First aid package. They had an impact on the operation of companies, employment and working conditions of employees. Oil refinery Slovnaft, a.s. MOL group in Bratislava responded to their\u00a0implementation\u00a0in cooperation\u00a0with the local\u00a0trade unions.\u00a0\u00a0\u00a0\u00a0 ",
+            "descriptionContentOfMeasure": "Activities of the management and trade unions in Slovnaft company\u00a0resulted in the conclusion of different agreements between Slovnaft MOL management and local trade unions of ECHOZ, including subcontracts to existing collective agreements. Their content was aimed at keeping the sustainability of production and related service activities of the company during the corona crisis with a lower number of workers active in the company, health protection, prevention of social hardship of COVID-19 pandemic and social security of employees. \r\rParticular attention was paid\u00a0to the implementation of short-time scheme (kurzarbeit), homeworking and social support to trade union members.\u00a0Conditions under which these changes\u00a0will be realised were specified in agreements concluded between management and trade unions. For instance, the implementation of the short-time scheme with 70% wage replacement and homeworking were included in subcontract to company collective agreement. ",
+            "descriptionUseOfMeasure": "Agreements between Slovnaft MOL management in Bratislava are also applied to other business units, which are parts of Slovnaft, a. s. MOL group:\u00a0VURUP\u00a0research a laboratories and\u00a0Slovnaft Mont\u00e1\u017ee a opravy, a.s.\u00a0(assembly and repairs company). The agreements were effective since March 2020 and their implementation resulted in ensuring  the continuation of production and services, maintenance of employment in the company and sustainability of social standards of employees working there.\u00a0\u00a0 ",
+            "descriptionInvolvementOfSocialPartners": "This is a joint initiative of the management of Slovnaft, a.s. MOL Group in Bratislava and local trade union organisation of Energy-Chemical Trade Union Association (ECHOZ). ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/SK-2018-12_1071.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1347",
+                    "sources::title": "Opatrenia proti \u0161\u00edreniu koronav\u00edrusu v spolo\u010dnosti Slovnaft.",
+                    "sources::url": "https://slovnaft.sk/sk/o-nas/pre-media/tlacove-spravy/?1=1&start=10#opatrenia-proti-sireniu-koronavirusu-v-spolocnosti-slovnaft ",
+                    "sources::d_date": "03/18/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "61",
+                    "targetGroups::name": "Companies providing essential services",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3328",
+                    "regions::countryCode": "SK",
+                    "regions::level": 1,
+                    "regions::name": "SLOVENSKO",
+                    "regions::nutsCode": "SK0",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "981",
+        "modId": "27"
+    },
+    {
+        "fieldData": {
             "title": "Information on crisis packages: Measures for companies",
             "title_nationalLanguage": "Informasjon om krisepakker: Tiltak for bedrifter",
             "d_startDate": "04/01/2020",
@@ -54837,6 +55015,124 @@
     },
     {
         "fieldData": {
+            "title": "Confederation of British Industry issues business guidance",
+            "title_nationalLanguage": "Confederation of British Industry (CBI) Business Guidance",
+            "d_startDate": "03/25/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Supporting businesses to get back to normal",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GB-2020-13/1109",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "On its website, the\u00a0Confederation of British industry (CBI) has produced guidance for business on a range of issues; the guidance takes the form of 'frequently asked questions.' The issues include\u00a0government and financial support available for business; emergency legislation and regulation; employment matters; meetings, travel and events; cleaning and health in the workplace; and supply chain management. The guidance is regularly updated in accordance with official guidance.",
+            "descriptionContentOfMeasure": "The guidance is provided on the CBI's website and is thus available to all. The guidance takes the form of frequently-asked questions and covers a range of topics,\u00a0including\u00a0government and financial support available for business; emergency legislation and regulation; employment matters; meetings, travel and events; cleaning and health in the workplace; and supply chain management. \r\rWith regard to employment, the guidance covers:\r\r* how business can help\u00a0workers at risk of redundancy;\r* how business can support flexible and home-based working;\r* how business can maintain safe working practices when employees/workers cannot work from home; \r* the operation of the government's furlough scheme; \r* changes to the statutory sick pay scheme; \r* financial support for businesses paying sick pay; \r* supporting employees' mental well-being; \r* work checks for new starters; and \r* rules on visa expiry for migrant workers.\r\rThe guidance is regularly updated in accordance with official guidance and was last updated on 2 September 2020. ",
+            "descriptionUseOfMeasure": "Unknown; no\u00a0evaluation data is currently provided on number of site visits.",
+            "descriptionInvolvementOfSocialPartners": "The 'measure' is not a negotiated measure; this is unilateral action taken by the CBI to support businesses during the pandemic. The support takes the form of openly-available and regularly updated advice and guidance. This will have been compiled by the CBI but they will not be involved in actual implementation or monitoring of actions taken by businesses.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-13_1109.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1409",
+                    "sources::title": "CBI (2020) The latest coronavirus advice for business",
+                    "sources::url": "https://www.cbi.org.uk/articles/the-latest-coronavirus-guidance-for-business-1/",
+                    "sources::d_date": "09/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1019",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
+            "title": "Confederation of British Industries' online coronavirus hub",
+            "title_nationalLanguage": "CBI Coronavirus Hub",
+            "d_startDate": "03/25/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Reorientation of business activities",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "GB-2020-13/1112",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "The Confederation of British Industry (CBI) has created a 'Coronavirus Hub', which pulls together all its advice and guidance (including a series of webinars), ongoing policy recommendations made by the organisation and a summary of all its lobbying/campaigning activity since the beginning of the UK lockdown. The information is publicly available to all as the Hub is to be found on the CBI website.",
+            "descriptionContentOfMeasure": "The Hub is publicly available to everyone (although targeted at all businesses) on the CBI's website. The Hub is essentially a collation of everything that businesses need to\u00a0know about COVID-19, including advice, guidance, and the steps that businesses can and need to take. It provides daily updates ('Everything you need to know today)'; links to previous webinars; facilities for future webinar registration; an overview of the CBI's political engagements/campaigning/lobbying activity focused on the coronavirus outbreak; a facility for businesses to comment and 'get involved'; links to a number of factsheets; links to case studies of how other businesses have responded.\r\r\rAmounts spent on creating resources are unspecified.",
+            "descriptionUseOfMeasure": "Uptake unknown; no publicly-available\u00a0evaluation data provided on number of visits/site usage.",
+            "descriptionInvolvementOfSocialPartners": "The initiative has been designed and implemented by the CBI. It is a 'hub' which collates and presents all the advice and guidance provided by the body since the beginning of the UK lockdown. The CBI does survey member companies and requests input from businesses about their experiences. \r\rHowever, the Hub and its content have been compiled by the CBI on a unilateral basis, as opposed to this being a jointly produced social partner initiative.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-13_1112.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1410",
+                    "sources::title": "CBI (2020) Coronavirus Hub",
+                    "sources::url": "https://www.cbi.org.uk/coronavirus-hub/",
+                    "sources::d_date": "09/14/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "4",
+                    "funding::name": "Employers organisation",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1022",
+        "modId": "15"
+    },
+    {
+        "fieldData": {
             "title": "Employers organisations FAQs on COVID-19",
             "title_nationalLanguage": "FAQs der Arbeitgeberverb\u00e4nde zu COVID-19",
             "d_startDate": "05/31/2020",
@@ -55142,6 +55438,111 @@
         },
         "recordId": "1027",
         "modId": "12"
+    },
+    {
+        "fieldData": {
+            "title": "Teaching unions' coronavirus online information hubs",
+            "title_nationalLanguage": "Teaching Unions' Coronavirus Hubs",
+            "d_startDate": "03/25/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "GB-2020-13/1119",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/14/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "The two main teaching unions in the UK - the National Education Union (NEU) and the NASUWT, The Teachers' Union - have been very active in campaigning on school safety, and concomitantly, in the provision of advice and guidance for members, during the coronavirus crisis. This has been deemed necessary due to hub schools being kept open for the children of key workers during lockdown and subsequently, in the face of government insistence that schools re-opened at the beginning of September. The unions have been greatly concerned about staff safety and have campaigned vociferously to government about such issues. The NEU compiled a National Education Recovery Plan and wrote again to the PM on the 11 September, in order to voice concerns as to rising cases and how staff and pupils should be protected.\r\rMoreover, both\u00a0have established coronavirus hubs, in order to provide a mass of information and advice to teachers on a wide range of salient issues. NASUWT has also established a Coronavirus Help Desk.",
+            "descriptionContentOfMeasure": "Both unions have provided Coronavirus Hubs, which provides a mass of information and guidance to members and union reps on a wide range of issues. From NASUWT, their comprehensive guide\u00a0include \r\r* arrangements for remote teaching, learning and support; \r* mental health advice for teachers working from home; \r* advice on social security benefits available during the pandemic; \r* guidance on how to access the union's benevolent fund; income and social security coverage for supply teachers. \r\rThe NEU, in its dedicated portal, has provided\u00a0specific guidance to different occupations (from principals to special needs teachers). The NEU, together with other unions, has issued guidance to its workplace representatives, as well as a manual to members, and is negotiating in every school to ensure safety, student numbers, distancing, hygiene and cleaning. \r\rIn both cases, the materials are publicly available on the respective unions' websites; thus, the advice is open to all. There is no evaluation data on how many members/teachers have accessed the materials and no data on cost.",
+            "descriptionUseOfMeasure": "No evaluation data available. It would be difficult to measure as activities listed refer to campaigning, lobbying of government and the provision of advice and guidance to members.",
+            "descriptionInvolvementOfSocialPartners": "The initiatives described are those of two teaching unions; thus, they are solely responsible for the design and implementation of the advice and guidance issued to their members and their workplace representatives. Both unions have also campaigned around staff and pupil safety. They have devised recovery plans and checklists, written to government and highlighted issues in the media. They have influenced government strategy to some extent; however, this has not been done through institutionalised settings with consultation requested by government.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-13_1119.html",
+            "isOccupation": "Yes",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1431",
+                    "sources::title": "NASUWT Coronavirus Hub",
+                    "sources::url": "https://www.nasuwt.org.uk/advice/health-safety/coronavirus-guidance.html",
+                    "sources::d_date": "09/15/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1522",
+                    "sources::title": "NEU Letter to the Prime Minister",
+                    "sources::url": "https://neu.org.uk/coronavirus",
+                    "sources::d_date": "09/11/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors)",
+                    "modId": "17"
+                },
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "35",
+                    "occupations::name": "Cleaners and helpers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "occupations::name": "Teaching professionals",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [
+                {
+                    "recordId": "116",
+                    "sectors::code": "P85",
+                    "sectors::name": "Education",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1029",
+        "modId": "28"
     },
     {
         "fieldData": {
@@ -55508,6 +55909,65 @@
         },
         "recordId": "1037",
         "modId": "16"
+    },
+    {
+        "fieldData": {
+            "title": "COVID-19 coronavirus guidance for unions",
+            "title_nationalLanguage": "TUC (2020) Covid-19 Coronavirus Guidance for Unions",
+            "d_startDate": "04/03/2020",
+            "d_endDate": "",
+            "calc_country": "United Kingdom",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Well-being of workers",
+            "calc_identifier": "GB-2020-14/1130",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "In response to the pandemic and the concomitant changes to working life, the TUC has published a series of guides for member trade unions and their representatives. These have focused on how to keep workplaces and workers safe, the social security system and sick pay, as well as guidance on how to negotiate with employers and organise workplaces. These guides have been updated over the course of the pandemic.",
+            "descriptionContentOfMeasure": "Essentially, this guide for unions pointed out that trade unions must challenge employers and government over\u00a0inadequate sick pay offers, failure to provide personal protective equipment (PPE) and testing, and the urgent need to safeguard jobs in disrupted industries. The TUC also urged that\u00a0in the immediate and longer-term, it is\u00a0important that the effect of any pandemic does not disproportionately hit the most vulnerable, such as the low paid, those without permanent employment or sick pay schemes and those with dependents.\r\rThe guide covers home working, self-isolation, sickness absence and sick pay schemes, occupational health and safety i.e. workplace hygiene, personal protective equipment (PPE), personal hygiene, what employers must do; planning and organising in the workplace; and specific guidance for those on zero-hours contracts.",
+            "descriptionUseOfMeasure": "This is a guide for trade unions and workplace representatives, produced by the Trades Union Congress. It is publicly and openly available on its website. Thus, evaluation data as to numbers accessing and implementation of measures is not available. ",
+            "descriptionInvolvementOfSocialPartners": "This is a measure initiated and implemented by the Trades Union Congress; it is thus a union measure, designed by that body. Implementation would occur at workplace level by union representatives drawn from numerous unions. Thus, the TUC would not actually be directly involved in implementation or monitoring (although it may conduct survey research into responses at\u00a0a later date).\r\rSuch involvement by the TUC was not requested or demanded; it was a voluntary initiative designed to assist workers and union representatives within workplaces.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-14_1130.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Other initiatives or policies",
+            "statusOfRegulation": "Not applicable"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1438",
+                    "sources::title": "TUC (2020) Covid-19 Coronavirus Guide for Unions",
+                    "sources::url": "https://www.tuc.org.uk/sites/default/files/2020-04/COVID-19%20Guide%20for%20Reps%20edits%2016%20April.pdf",
+                    "sources::d_date": "04/16/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "10",
+                    "funding::name": "Trade union",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1040",
+        "modId": "14"
     },
     {
         "fieldData": {
@@ -57191,5 +57651,365 @@
         },
         "recordId": "1098",
         "modId": "19"
+    },
+    {
+        "fieldData": {
+            "title": "Protocol for the containment of the COVID-19 spread in the transport sector and logistics",
+            "title_nationalLanguage": "Protocollo di regolamentazione per il contenimento della diffusione del COVID-19 nel settore trasporti e logistica",
+            "d_startDate": "05/04/2020",
+            "d_endDate": "",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Occupational health and safety",
+            "calc_identifier": "IT-2020-19/1194",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/28/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "Following up the decree no. 6 issued on 23 February 2020, on 26 April 2020 the Italian Prime Minister Giuseppe Conte outlined a new plan to ease the lockdown restrictions imposed to curb the spread of the COVID-19 infections. Measures will be relaxed from 4 May 2020. Together with these measures the government negotiated a protocol agreement included as annex (no. 8) of the decree, with trade unions and employers' organisations on health and safety at work in the transport sector and logistics.",
+            "descriptionContentOfMeasure": "The protocol introduced general rules to follow at the workplace for the whole transport sector and logistics, including:\r\r* Information to workers regarding the correct use of individual protective equipment (gloves, face masks, coverall);\r* Protocol for the sanitation and the proper cleaning of the rooms and means of transport;\r* If possible, provision of disinfecting gel on all means of transport for the use of customers;\r* Suspension of all training courses and meetings;\r* Where possible, limitation to the sale of transport tickets, to reduce the number of people travelling on each mean of transport;\r* Rules for the use of shared rooms, in particular changing rooms.\r\rFurthermore, the protocol set specific rules for the different kind of transportation (aerial transport, goods road transport, public transportation on road and rail, rail sector, maritime transportation).",
+            "descriptionUseOfMeasure": "The protocol applies to all the kind of transportation, both private as well as public ones: aerial transport, goods road transport, public transportation on road and rail, rail sector, maritime transportation.",
+            "descriptionInvolvementOfSocialPartners": "The protocol was negotiated by the Ministry for Infrastructure and Transport on the government side, together with the main employers' organisations in the transport and logistics sector (Confindustria, Confetra, Confcoooperative, Conftrasporto, Confartigianato, Assoporti, Assaeroporti, CNA-FITA, AICAI, ANITA, ASSTRA, ANAV, AGENS, Confitarma, Assarmatori, Legacoop Produzione Servizi) and the largest trade unions (Filt-Cgil, Fit-Cisl and UilTrasporti). \rThe most representative social partners were involved, signing the main national collective agreement in the sector.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-19_1194.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1514",
+                    "sources::title": "Ministry for Labour and Social Policies",
+                    "sources::url": "www.lavoro.gov.it",
+                    "sources::d_date": "04/26/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "81",
+                    "sectors::code": "H53",
+                    "sectors::name": "Postal and courier activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1104",
+        "modId": "11"
+    },
+    {
+        "fieldData": {
+            "title": "Company agreements on smart-working suggest that teleworking will be here to stay",
+            "title_nationalLanguage": "Accordi aziendali sullo smart-working",
+            "d_startDate": "08/04/2020",
+            "d_endDate": "",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Protection of workers, adaptation of workplace",
+            "calc_subMinorCategory": "Teleworking arrangements, remote working",
+            "calc_identifier": "IT-2020-32/1195",
+            "dateType": "Open ended",
+            "calc_creationDay": "09/28/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "Several companies in different sectors are signing collective agreements with the trade unions to regulate the use of smart-working beyond the simplified regime adopted by the government in order to cope with the COVID-19 pandemic. These agreements suggests that the reliance on smart- or agile-working arrangements will probably remain after the end of the health emergency. ",
+            "descriptionContentOfMeasure": "Companies and trade unions in various sectors are signing company collective agreements to regulate the use of smart working. A particularly relevant case is the agreement signed by the telecommunication company TIM, the trade unions  SLC-CGIL, FISTel-CISL, UILCom-UIL, UGL Telecomunicazioni, and the coordination body of employee representatives on 4 August 2020. \r\rThe agreement defines an experimental smart-working system according to which workers at TIM can choose among two different smart-working schemes (the daily agile work, according to which workers work remotely two days a week, and the weekly agile work, according to which workers work remotely every other week). The agreement defines the voluntary character of the smart-working regime, extends its access to over 30,000 employees, and specific rights for smart-workers (among which the right to disconnect, the entitlement to tickets restaurant also when working remotely, trade union rights, the provision of adequate IT equipment by the company).\r \rSimilar company level agreements were signed also by the steel company AST (Acciai Speciali Terni) and by the banking group ING.",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "The agreement was signed by the most representative trade unions in the sector and by the company's employee representatives.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-32_1195.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Bipartite collective agreements",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1515",
+                    "sources::title": "TIM agreement on agile working",
+                    "sources::url": "http://www.fistelveneto.cisl.it/cms/files/file/384125-na200804-tim---verbale-di-accordo-nuovo-modello-lavoro-agile-sperimentale.pdf",
+                    "sources::d_date": "08/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1516",
+                    "sources::title": "ING Bank agreement on agile working",
+                    "sources::url": "https://www.firstcisl.it/milanometropoli/wp-content/uploads/sites/19/2020/08/ing-bank-Accordo-sindacale-SW-04.08.2020.pdf",
+                    "sources::d_date": "08/04/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1517",
+                    "sources::title": "Acciai Speciali Terni agreement on agile working",
+                    "sources::url": "http://www.bollettinoadapt.it/storie-di-azione-e-contrattazione-collettiva-acciai-speciali-terni-siglato-laccordo-di-sperimentazione-del-lavoro-agile-in-azienda/",
+                    "sources::d_date": "08/25/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "2923",
+                    "regions::countryCode": "IT",
+                    "regions::level": 1,
+                    "regions::name": "EXTRA-REGIO NUTS 1",
+                    "regions::nutsCode": "ITZ",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "1105",
+        "modId": "21"
+    },
+    {
+        "fieldData": {
+            "title": "Reduction of social security contributions for affected companies",
+            "title_nationalLanguage": "Esonero dal versamento dei contributi previdenziali",
+            "d_startDate": "08/15/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Italy",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "IT-2020-33/1196",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/28/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "Law Decree No. 104 of 14 August 2020 envisages several measures to reduce social security contributions in charge of employers (art. 3, 6 and 27). In particular, this reduction is granted in three cases\r\r* companies which relied on the COVID-19 wage guarantee fund in the months of May and June, and do not make use of the additional period granted by the Law Decree; \r* companies hiring workers with open-ended contracts; \r* companies located in disadvantaged areas.\r\r",
+            "descriptionContentOfMeasure": "The Law Decree introduced various temporary and selective measures to reduce employer pension contributions. A total exception is granted to: \r\r* Companies which relied on the  [COVID-19 wage guarantee fund](https://static.eurofound.europa.eu/covid19db/cases/IT-2020-9_411.html) in the months of May and June 2020 and do not further benefit of the fund. The reduction is granted for a maximum of four months and until 31 December 2020, and the amount granted is equal to an amount of hours double the hours of wage guarantee fund used; \r* Companies activating permanent contracts by 31 December 2020 (both in the case of a new hire and in the case of transformation of a previous fixed-term contract). The reduction is granted for a maximum of six months.\r\rA reduction of up to 30% of the social security contributions due for companies located in economically disadvantaged areas.",
+            "descriptionUseOfMeasure": "No information available.",
+            "descriptionInvolvementOfSocialPartners": "The measure was set unilaterally by the government, but social partners were heard by the Labour Ministry.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/IT-2020-33_1196.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1518",
+                    "sources::title": "Law Decree No. 104 of 2020",
+                    "sources::url": "https://www.gazzettaufficiale.it/eli/id/2020/08/14/20G00122/sg",
+                    "sources::d_date": "08/15/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1106",
+        "modId": "14"
+    },
+    {
+        "fieldData": {
+            "title": "Special scheme for certain categories of self-employed",
+            "title_nationalLanguage": "\u0395\u03b9\u03b4\u03b9\u03ba\u03cc \u03c3\u03c7\u03ad\u03b4\u03b9\u03bf \u03bf\u03c1\u03b9\u03c3\u03bc\u03ad\u03bd\u03c9\u03bd \u03ba\u03b1\u03c4\u03b7\u03b3\u03bf\u03c1\u03b9\u03ce\u03bd \u03b1\u03c5\u03c4\u03bf\u03c4\u03b5\u03bb\u03ce\u03bd \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd ",
+            "d_startDate": "08/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Cyprus",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "CY-2020-31/1200",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/29/2020",
+            "calc_lastUpdate": "10/04/2020",
+            "descriptionBackgroundInfo": "This is another scheme within the frame of the emergency measures taken by the government to confront the consequences of the pandemic aiming to support the self-employed with a special allowance. Law 27(1) 2020 'Emergency Measures taken by the Ministry of Labour, Welfare and Social Insurances for the Confrontation of the Pandemic of Coronavirus COVID 19' , Decrees 398 & 423.   ",
+            "descriptionContentOfMeasure": "The scheme addresses the following particular categories of the self-employed that are not employers and are registered in the social insurances\u2019 registry as self-employed:\r\r1. Photographers, \r2. Car rental owners, \r3. Tour guides and escorts, \r4. Taxi drivers, \r5. Tourist bus drivers, \r6.  Itinerant food sellers, and\r7.  Non-food itinerant sellers (excluding itinerant lottery sellers).  \r\rThe basic criterion for participation is a 40% reduction of revenue of the self-employed for the period that the self-employed is applying for support in compared with the last year\u2019s same period. The Scheme excludes the self-employed over 65 years of age that do not receive statutory pension and are not bounded, in accordance with the law, to pay contributions to the social insurances fund.\r  \rThe special allowance is determined to be 60% of the weekly insurable earnings of the beneficiary of the fourth quarter of 2019. \r\rThe maximum amount to be paid to beneficiaries is \u20ac900 for a four-week period and the minimum \u20ac300.  ",
+            "descriptionUseOfMeasure": "No information is available for the moment on the number of beneficiaries of the scheme and its effectiveness.  ",
+            "descriptionInvolvementOfSocialPartners": "Social partners \u2013 trade unions and employers\u2019 organisation \u2013 at peak level were invited by the Minister of Labour, Welfare and Social Insurable to participate in consultation process during the designing phase of the Scheme. Sectoral trade unions and smaller organisations of the employers did not participate in the consultation process. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CY-2020-31_1200.html",
+            "isOccupation": "Yes",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1529",
+                    "sources::title": "Decree 423,  Law 27(1) 2020 Emergency Measures  ",
+                    "sources::url": "https://www.mof.gov.cy/mof/gpo/gpo.nsf/All/589C785F71C93A92C22585E600472037/$file/5359%2017%209%202020%20PARARTIMA%203o%20MEROS%20I.pdf",
+                    "sources::d_date": "09/01/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1530",
+                    "sources::title": "Decree 398, Law 27(1) 2020 ",
+                    "sources::url": "https://www.mof.gov.cy/mof/gpo/gpo.nsf/All/4054E44BAFAB97E8C22585CB00474A46/$file/5348%2021%208%202020%20PARARTHMA%203o%20MEROS%20I.pdf",
+                    "sources::d_date": "08/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "32",
+                    "targetGroups::name": "Particular professions",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [
+                {
+                    "recordId": "34",
+                    "occupations::name": "Drivers and mobile plant operators",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "10",
+                    "occupations::name": "Legal, social and cultural professionals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "21",
+                    "occupations::name": "Sales workers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "39",
+                    "occupations::name": "Street and related sales and service workers",
+                    "modId": "0"
+                }
+            ],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "1110",
+        "modId": "16"
     }
 ]
