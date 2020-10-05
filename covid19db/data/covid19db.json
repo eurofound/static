@@ -1044,6 +1044,447 @@
     },
     {
         "fieldData": {
+            "title": "COVID II state guarantee programme",
+            "title_nationalLanguage": "Z\u00e1ru\u010dn\u00ed program COVID II",
+            "d_startDate": "03/30/2020",
+            "d_endDate": "06/30/2023",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-14/255",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/03/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "After the termination of COVID I interest-free state loan programme, the Czech government has introduced the COVID II state guarantee programme for SMEs which are at risk of bankruptcy due to the measures in connection with the spread of COVID-19.\r \rLoans for SME\u00b4s are provided by [commercial banks](https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/)  while the state run Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmzrb.cz) secures the loans and offers financial aid for loan interest.",
+            "descriptionContentOfMeasure": "The measure runs under the Operational Programme Enterprise and Innovation for Competitiveness (Opera\u010dn\u00ed program Podnik\u00e1n\u00ed a inovace pro konkurenceschopnost, [OPPIK](https://www.mpo.cz/en/business/grants-and-business-support/opeic-2014-2020/operational-programme-enterprise-and-innovations-for-competitiveness-2014---2020--169167/). \r\rThe loan is aimed at SME\u00b4s with trade permission in Czech Republic (except of Prague region) who have been forced due to approved anti-COVID-19 measures to shut down or limit their businesses. Business activity of the SME has to be included at the supported economic activities list, which is, however, very wide and included accommodation, logistics, manufacturing industry etc. \r\r\u010cMZRB will secure the commercial loan up to 80% with the maximum period of 3 years. SME can also apply for financial support on the loan interest up to CZK 1,000,000 (\u20ac36,298 approx.). Loan to be secured are limited to CZK 15,000,000 (\u20ac544,465). The loans are intended to cover salaries, rent, utility costs and supplier-customer invoices. \r\rThe total amount for COVID II programme is CZK 4,000,000,000 (\u20ac145,190,563).\r\rThe program is financed from the EU Structural Funds within the OPPIK and is therefore not intended for the implementation of projects in the capital city of Prague. Financial support for projects implemented in Prague can be applied for in the COVID Prague guarantee program.\r\r\r\r",
+            "descriptionUseOfMeasure": "* By 26 May 2020 1,219 companies have been supported.\r* By 21 June 2020, 2,091 companies have been supported by the total amount of CZK 12,600,000,000 (\u20ac470,061,555).\r* By 20 September 2020, 3,241 companies have been supported by the total amount of CZK 14,700,000,000 (\u20ac550,046,773).\r\rNo evaluation or information on effectiveness is available by now, however, there has been a lot of criticism of COVID I and COVID II measures. The Chamber of Commerce of the Czech Republic (Hospod\u00e1\u0159sk\u00e1 komora \u010cesk\u00e9 republiky) realised in April 2020 a survey among its members, who highlighted the tangle of bureaucracy and lack of clarity in the COVID I and COVID II. To apply, companies needed to complete complex forms forecasting the next three years, which is an impossibility in the current situation. Also the capacity of Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, \u010cMZRB), when approving the loans, was very low and the process too long.\r\r",
+            "descriptionInvolvementOfSocialPartners": "Employers organisations, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They were not involved into the management of the policy measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_255.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "101",
+                    "sources::title": "CMRZB: State guarantee programme COVID II (\u010cMRZB: Z\u00e1ru\u010dn\u00ed program COVID II)",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-ii/",
+                    "sources::d_date": "04/03/2020",
+                    "modId": "8"
+                },
+                {
+                    "recordId": "694",
+                    "sources::title": "CMRZB: Text of the call for proposals + eligibility criteria (\u010cMRZB: Text v\u00fdzvy a podm\u00ednky podpory)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/vyzva-covid-ii/",
+                    "sources::d_date": "04/21/2020",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "920",
+                    "sources::title": "MPO \u010cR: List of companies supported by COVID I (MPO \u010cR: Seznam spole\u010dnost\u00ed, kter\u00e9 obdr\u017eely podporu v programech COVID I a COVID II)",
+                    "sources::url": "https://www.mpo.cz/cz/rozcestnik/pro-media/tiskove-zpravy/prijemci-podpory-v-programech-covid-i--expanze---covid-a-covid-ii--254872/",
+                    "sources::d_date": "05/28/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "923",
+                    "sources::title": "Chamber of Commerce: Survey among Prague entrepreneurs on COVID-19 measures (HK \u010cR: \u0161et\u0159en\u00ed mezi pra\u017esk\u00fdmi podnikateli ohledn\u011b vl\u00e1dn\u00edch opat\u0159en\u00ed proti COVID-19)",
+                    "sources::url": "https://www.komora.cz/news/setreni-hospodarske-komory-jak-prazsti-podnikatele-hodnoti-vladni-programy/",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "936",
+                    "sources::title": "CMRZB: The list of lending banks (\u010cMRZB: Seznam spolupracuj\u00edc\u00edch bank)",
+                    "sources::url": "https://www.cmzrb.cz/soubor/seznam-spolupracujicich-bank-expanze-zaruky/",
+                    "sources::d_date": "06/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "937",
+                    "sources::title": "CMRZB: Number of applications finalized/in process (\u010cMRZB: po\u010det schv\u00e1len\u00fdch a vy\u0159izovan\u00fdch \u017e\u00e1dost\u00ed)",
+                    "sources::url": "https://www.cmzrb.cz/prubezny-stav-vyrizovani-zadosti-programu-covid/",
+                    "sources::d_date": "06/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "28",
+                    "sectors::code": "A2",
+                    "sectors::name": "Forestry and logging",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "34",
+                    "sectors::code": "B8",
+                    "sectors::name": "Other mining and quarrying",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "37",
+                    "sectors::code": "C10",
+                    "sectors::name": "Manufacture of food products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "38",
+                    "sectors::code": "C11",
+                    "sectors::name": "Manufacture of beverages",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "40",
+                    "sectors::code": "C13",
+                    "sectors::name": "Manufacture of textiles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "41",
+                    "sectors::code": "C14",
+                    "sectors::name": "Manufacture of wearing apparel",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "42",
+                    "sectors::code": "C15",
+                    "sectors::name": "Manufacture of leather and related products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "43",
+                    "sectors::code": "C16",
+                    "sectors::name": "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "44",
+                    "sectors::code": "C17",
+                    "sectors::name": "Manufacture of paper and paper products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "45",
+                    "sectors::code": "C18",
+                    "sectors::name": "Printing and reproduction of recorded media",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "64",
+                    "sectors::code": "E36",
+                    "sectors::name": "Water collection, treatment and supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "65",
+                    "sectors::code": "E37",
+                    "sectors::name": "Sewerage",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "66",
+                    "sectors::code": "E38",
+                    "sectors::name": "Waste collection, treatment and disposal activities; materials recovery",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "67",
+                    "sectors::code": "E39",
+                    "sectors::name": "Remediation activities and other waste management services",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "80",
+                    "sectors::code": "H52",
+                    "sectors::name": "Warehousing and support activities for transportation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "81",
+                    "sectors::code": "H53",
+                    "sectors::name": "Postal and courier activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "90",
+                    "sectors::code": "J62",
+                    "sectors::name": "Computer programming, consultancy and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "91",
+                    "sectors::code": "J63",
+                    "sectors::name": "Information service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "97",
+                    "sectors::code": "L68",
+                    "sectors::name": "Real estate activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "99",
+                    "sectors::code": "M69",
+                    "sectors::name": "Legal and accounting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "100",
+                    "sectors::code": "M70",
+                    "sectors::name": "Activities of head offices; management consultancy activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [
+                {
+                    "recordId": "22",
+                    "updates::d_date": "04/22/2020",
+                    "updates::description": "The first round of applications for the COVID Guarantee Program was closed on 3 April 2020 at 11:59 p.m. The institutions are now in contact with the applicants and evaluating their applications. The next round will be announced according to the decision of the Ministry of Industry and Trade.",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "71",
+                    "updates::d_date": "05/18/2020",
+                    "updates::description": "The programme was replaced by COVID III Guarantee Program.",
+                    "modId": "1"
+                }
+            ],
+            "regions": [
+                {
+                    "recordId": "1929",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "St\u0159edn\u00ed \u010cechy",
+                    "regions::nutsCode": "CZ02",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "1931",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Jihoz\u00e1pad",
+                    "regions::nutsCode": "CZ03",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "138",
+        "modId": "148"
+    },
+    {
+        "fieldData": {
             "title": "Shortened notice period for temporary layoffs",
             "title_nationalLanguage": "Lomautusten lyhennetty ilmoitusaika",
             "d_startDate": "04/01/2020",
@@ -14198,6 +14639,143 @@
     },
     {
         "fieldData": {
+            "title": "Company subsidy for fixed costs",
+            "title_nationalLanguage": "Fixkostenzuschuss",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "08/31/2021",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "AT-2020-12/474",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/10/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "The subsidy for fixed costs was implemented in order to cover fixed costs. Non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the COVID-19 crisis.\r\rEligible are those companies that fully meet the following conditions:\r\r* Companies that have their management or a permanent establishment in Austria;\r* Companies that have to bear fixed costs from their operating activities in Austria;\r* Companies that were healthy before the Corona crisis;\r* Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%;\r* Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.",
+            "descriptionContentOfMeasure": "The following fixed costs of the company are eligible:\r\r* Rent of business premises\r* Insurance premiums\r* Interest expenses\r* Licence costs\r* Payments for electricity, gas and telecommunications\r* Other contractual payment obligations\r* [Entrepreneur's salary](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_789.html) within a range of \u20ac666.67 and \u20ac2,666.67 per month (calculated on the basis of the last assessed previous year (taxable profit/months of entrepreneurial activity).\r* Loss of value of perishable/seasonal goods, provided that these lose at least 50% of their value during the corona measures\r\rThe fixed cost subsidy is staggered and depends on the company's loss of sales:\r\r* loss of 40 to 60%: 25% compensation of fixed costs\r* loss of 60 to 80%: 50% compensation of fixed costs\r* loss of 80 to 100%: 75%  compensation of fixed costs\r\rThe fixed-cost subsidy does not have to be reimbursed - provided that all the provisions of the guidelines are complied with. The subsidy is limited to a maximum of \u20ac90 million per company.\r\rThree instalments are foreseen, the first could be applied for from 20 May 2020 onwards, the second from 19 August 2020 onwards and the third from 19 November onwards. The observation period lies at a maximum of three months between 16 March and 15 September 2020. Applications can be made until 31 August 2021.",
+            "descriptionUseOfMeasure": "For phase I of the fixed cost subsidy, \u20ac8 billion are earmarked; by 21 September 2020, \u20ac200 million have been paid. However, many companies, especially large ones, are still waiting for the final balance sheet figures for the entire period so that they can decide in which months they can apply for the highest subsidies.",
+            "descriptionInvolvementOfSocialPartners": "Employer organisation was consulted and is involved in the implementation.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_474.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "366",
+                    "sources::title": "Fixed cost subsidy",
+                    "sources::url": "https://www.aws.at/fixkostenzuschuss-1/?ref=topnews",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "367",
+                    "sources::title": "Fixed cost subsidy - FAQs",
+                    "sources::url": "https://www.fixkostenzuschuss.at/#faqs",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "368",
+                    "sources::title": "FAQ Corona Aid Fund",
+                    "sources::url": "https://www.wko.at/service/faq-corona-hilfs-fonds.html#heading_Zuschuesse",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "827",
+                    "sources::title": "Government provides billions of operating grants",
+                    "sources::url": "https://www.derstandard.de/story/2000117348777/regierung-stellt-milliarden-an-betriebszuschuessen-bereit",
+                    "sources::d_date": "05/07/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "888",
+                    "sources::title": "Improved Corona Aid Fund brings liquidity to companies",
+                    "sources::url": "https://news.wko.at/news/oesterreich/JW-Holzinger:-Verbesserter-Corona-Hilfs-Fonds-bringt-Liqu.html",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "889",
+                    "sources::title": "Changes to the Corona Aid Fund: Fixed cost subsidy",
+                    "sources::url": "https://www.rkp.at/coronavirus/aenderungen-corona-hilfsfonds-fixkostenzuschuss/",
+                    "sources::d_date": "05/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1542",
+                    "sources::title": "Fixed costs subsidy FAQs",
+                    "sources::url": "https://kurier.at/wirtschaft/fixkostenzuschuss-die-wichtigsten-fragen-und-antworten/401038361",
+                    "sources::d_date": "09/21/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1543",
+                    "sources::title": "Fixed costs subsidy II decree",
+                    "sources::url": "https://www.bmf.gv.at/presse/pressemeldungen/2020/august/fixkostenzuschuss-verlaengerung.html",
+                    "sources::d_date": "08/24/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "41",
+                    "updates::d_date": "05/13/2020",
+                    "updates::description": "On May 13, the new Corona Aid Fund guidelines for fixed-cost grants were published in the form of a regulation by the Austrian Ministry of Finance. Further improvements were announced on May 21, 2020. The novelties include: \r\r* Payment of an advance (first tranche) of up to 50%\r* Fixed-cost subsidy is granted from an amount of \u20ac500 upwards\r* Payments from the Hardship Fund are no longer counted.\r* Assertion of reasonable tax consultant, auditor and accountant costs up to \u20ac500 for applications with a grant amount below \u20ac12,000\r* Companies that were 'companies in difficulty' under EU state aid law on December 31, 2019 can apply for a grant of up to \u20ac200,000 under the de minimis state aid scheme, provided that no insolvency proceedings have been opened or the conditions for this have been met\r\rThe observation period stated in the 1st application cannot be changed afterwards (2nd and 3rd installment).",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "277",
+                    "updates::d_date": "09/30/2020",
+                    "updates::description": "A second phase of the fixed cost subsidy is planned, and the decree has been published, but final approval by the European Commission still has to be awaited.\r\rThe observation period of phase II can be chosen for up to three months between 16 June 2020 and 15 March 2021. Eligibility has been slightly changed: a minimum drop in sales of 30% is needed in order to qualify (in phase I, it was at 40%). The compensation rate lies at 100% of the incurred loss, with a maximum of \u20ac5 million. The application has to be made by 31 August 2021.",
+                    "modId": "4"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "365",
+        "modId": "108"
+    },
+    {
+        "fieldData": {
             "title": "Family care leave for family support introduced",
             "title_nationalLanguage": "Cong\u00e9 familial pour soutien familial",
             "d_startDate": "03/18/2020",
@@ -18970,6 +19548,106 @@
     },
     {
         "fieldData": {
+            "title": "Self-isolation Vienna Energy",
+            "title_nationalLanguage": "Selbstisolierung Wien Energie",
+            "d_startDate": "03/20/2020",
+            "d_endDate": "04/16/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Ensuring business continuity and support for essential services",
+            "calc_subMinorCategory": "Other",
+            "calc_identifier": "AT-2020-12/552",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "In order to ensure the power supply despite the corona virus, the energy provider Wien Energie uses isolation stations. 53 employees of Wien Energie volunteered to isolate themselves at company locations. They are spending several weeks there, cut off from the outside world, to prevent infection with all possibilities. All workers had been medically tested before isolation. \rThese employees are to move in when no one else can. The tasks range from system control to maintenance and minor repairs. At the same time, operations at the locations continue as normal. \r\r",
+            "descriptionContentOfMeasure": "To make this isolation possible, residential containers were set up at power plants and waste incineration plants. In addition, provisional power plant controls were set up or conference rooms converted into dormitories, as Wien Energie wrote in the company blog . There is also a supply of food. In addition, they offer occupational psychological support.\rShift plans were adjusted according to emergency plans in the areas critical for the supply (e.g. power plants, waste incineration plants, control centers and waiting rooms). No workers who are not required for operations are allowed on the factory premises. As far as possible, work for other employees is to be provided in the home office. Precautions have been taken for possible quarantine cases. Certain areas of the plant, such as crane systems in the waste incineration plants, could be operated in part automatically. ",
+            "descriptionUseOfMeasure": "So far, 53 employees of Wien Energie have themselves isolated at company grounds.",
+            "descriptionInvolvementOfSocialPartners": "Company initiative.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_552.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Company practices",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "442",
+                    "sources::title": "Isolation during Corona - Cut off from the Outside World\rIsolation during Corona \u2013 Cut off from the Outside World\rIsolation during Corona \u2013 Cut off from the Outside World",
+                    "sources::url": "https://blog.wienenergie.at/2020/03/21/isolation-during-corona-cut-off-from-the-outside-world/",
+                    "sources::d_date": "03/21/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "443",
+                    "sources::title": "Wien Energie isolates employees to ensure electricity supply",
+                    "sources::url": "https://futurezone.at/digital-life/stromversorgung-wien-energie-isoliert-mitarbeiter/400787816",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1549",
+                    "sources::title": "End of isolation Vienna Energy",
+                    "sources::url": "https://industriemagazin.at/a/ende-der-isolation-wien-energie-feiert-ihre-kraftwerkmitarbeiter",
+                    "sources::d_date": "04/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                },
+                {
+                    "recordId": "12",
+                    "actors::name": "Public support service providers",
+                    "modId": "1"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "78",
+                    "targetGroups::name": "Workers in essential services",
+                    "modId": "9"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "12",
+                    "funding::name": "No special funding required",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "3065",
+                    "regions::countryCode": "AT",
+                    "regions::level": 1,
+                    "regions::name": "OST\u00d6STERREICH",
+                    "regions::nutsCode": "AT1",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "443",
+        "modId": "87"
+    },
+    {
+        "fieldData": {
             "title": "Deadlines for the payment of social and/or fiscal instalments",
             "title_nationalLanguage": "D\u00e9lais de paiement d\u2019\u00e9ch\u00e9ances sociales et/ou fiscales",
             "d_startDate": "03/15/2020",
@@ -20864,6 +21542,125 @@
     },
     {
         "fieldData": {
+            "title": "Corona family hardship fund and family crisis fund",
+            "title_nationalLanguage": "Corona-Familienh\u00e4rtefonds und Familienkrisenfonds",
+            "d_startDate": "04/15/2020",
+            "d_endDate": "",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Protection of vulnerable groups (beyond employment support)",
+            "calc_identifier": "AT-2020-16/577",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "In order to combat child poverty, the Federal Ministry of Labour, Family and Youth has decided to increase the (pre-existing) family hardship fund for families in Corona crisis times: Families in which parents (either one or both) are unemployed or in short-time work, thus encountering a loss in income, should be receiving a one-time non-repayable compensation for income loss. Also self-employed people with income losses will be eligible for this support.\r",
+            "descriptionContentOfMeasure": "Measures against child poverty are to be strengthened, the Federal Minister for Social Affairs, Health, Care and Consumer Protection, Mr. Anschober said: There are now payments to families who have been pushed into short-time work or unemployment by the current crisis. The previous family hardship compensation fund has been increased by \u20ac30 million which is now available for single payments to those affected. From 15 April 2020, parents who had been employed until 28 February and are now on short-time work or have become unemployed due to the crisis are eligible. Self-employed people with losses could also apply for payment. This applies to families with children who receive family allowance. The payment is valid for three months, but is paid once at the beginning and does not have to be paid back.\r\rThe exact amount of support depends on previous income. Federal Minister for Labour, Family and Youth, Ms. Aschbacher cited as an example of  a family with two children and \u20ac3,000 net family income, which would receive \u20ac780 for three months after the father's unemployment. The aim is to compensate for the loss of income due to unemployment or short-time work, the Minister said. \r\rThe upper limit of monthly payments lies at \u20ac1,200.\r",
+            "descriptionUseOfMeasure": "By mid-June, only about \u20ac6 million out of the \u20ac30 million available from the Corona family hardship fund had been paid due to the very high numbers of applications (over 100,000) which initially exceeded the capacities of the ministry. However, resources were increased and administrative improvements were made to avoid delays in payment. By 21 September 2020, 50,000 cases have been processed and approved. The average amount paid out is \u20ac1,250  per family, according to the Parliamentary Committee for Family and Youth.",
+            "descriptionInvolvementOfSocialPartners": "Involvement is unknown.",
+            "socialPartner_form": "Not applicable",
+            "socialPartner_role": "No involvement",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_577.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "458",
+                    "sources::title": "One-off payments for affected families",
+                    "sources::url": "https://orf.at/stories/3161232/",
+                    "sources::d_date": "04/09/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1100",
+                    "sources::title": "Richtlinien f\u00fcr den Familienkrisenfonds",
+                    "sources::url": "file://wolkenbruch/alle-user/bernadette/Downloads/Richtlinie_Familienkrisenfonds.pdf",
+                    "sources::d_date": "06/23/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1101",
+                    "sources::title": "The second part of the Family Hardship Fund flows automatically",
+                    "sources::url": "https://www.sn.at/politik/innenpolitik/zweiter-teil-von-familienhaertefonds-fliesst-automatisch-88966765",
+                    "sources::d_date": "06/16/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1548",
+                    "sources::title": "Topping up family hardship fund",
+                    "sources::url": "https://www.ots.at/presseaussendung/OTS_20200921_OTS0182/familienausschuss-einigt-sich-bei-aufstockung-des-corona-familienhaertefonds",
+                    "sources::d_date": "09/21/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "35",
+                    "targetGroups::name": "Unemployed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "38",
+                    "targetGroups::name": "Children (minors)",
+                    "modId": "17"
+                },
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "146",
+                    "updates::d_date": "07/09/2020",
+                    "updates::description": "A second phase (called __\"Family crisis fund\"__) started in July 2020, concerning families in which parents were concerned by unemployment on 28 February (receiving unemployment benefit or unemployment assistance), i.e. before the onset of the Corona crisis. Funds in this phase are not income-dependent, \u20ac50 per child for two months (i.e. \u20ac100 per child in total) are paid. Payments are conducted automatically from 13 July 2020 onwards. For this second phase, a further \u20ac30 million are available. No further means tests are applied. ",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "282",
+                    "updates::d_date": "09/21/2020",
+                    "updates::description": "On 21 September 2020, it was decided in the Parliamentary Committee for Family and Youth to increase the family hardship fund a second time (after an initial increase from \u20ac30,000 to 60,000) from \u20ac60,000 to \u20ac100,000.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "468",
+        "modId": "105"
+    },
+    {
+        "fieldData": {
             "title": "Alleviations for tenants",
             "title_nationalLanguage": "Erleichterungen f\u00fcr Mieter",
             "d_startDate": "04/01/2020",
@@ -20920,6 +21717,89 @@
         },
         "recordId": "470",
         "modId": "81"
+    },
+    {
+        "fieldData": {
+            "title": "No energy shutdown when payment difficulties occur",
+            "title_nationalLanguage": "Keine Energieabschaltung bei Zahlungsschwierigkeiten",
+            "d_startDate": "03/16/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Measures to prevent social hardship",
+            "calc_subMinorCategory": "Keeping a safe home",
+            "calc_identifier": "AT-2020-12/580",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/13/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "In the Corona crisis, not only is the fear of a breakdown in the country's power supply increasing. Many people are even more concerned with how they should pay their next electricity bill.\r\rEnergy Minister Leonore Gewessler (Green Party) and Wolfgang Urbantschitsch (Board Member of E-Control) explained why these concerns are unfounded. Even if there are payment difficulties, there will be no shutdowns on the part of the energy suppliers.",
+            "descriptionContentOfMeasure": "Until further notice, in any case until 1 May 2020, _'no one in Austria will turn off electricity, gas or heat,'_ the Minister and the E-Control board assured. This applies to the population, but also to micro and small companies. Energy minister Ms Gewessler said it was a quick and unbureaucratic consensus in the industry. _'This is a good and important contribution,'_ said the Green politician. However, this is not a legally fixed regulation. The energy suppliers would share the risk with the network operators, said the minister responsible for energy and the environment. According to Urbantschitsch, it is also possible to arrange a deferral of payments or an installment plan with the utilities, or at most a reduction of advance payments for companies, since there is a reduction in energy consumption for company closings.\r\r**Chamber of Labour AK favours legal regulation**\r\rThe major energy suppliers for electricity and gas have already announced that they will not switch off during the Corona crisis. The AK also expressly welcomes this voluntary principal. \"But all energy suppliers, including small and above all local and district heating suppliers, have to be brought on board,\" says Christa Schlager , head of the economic policy department at the AK. That seems to have succeeded with Thursday's agreement.\r\rAccording to E-Control, there were around 43,000 shutdowns in electricity and around 4,000 in gas in 2018. There are no official shutdown figures for the heating sector, but one thing is certain: In Austria around 140,000 people could not afford to keep their home sufficiently warm in 2018. This is also shown by a current study of heating types by the AK. Therefore, the AK is now calling for a legal shutdown ban for electricity, gas and heat during the duration of the Corona crisis.",
+            "descriptionUseOfMeasure": "Unknown.",
+            "descriptionInvolvementOfSocialPartners": "It seems that the Chamber of Labour was somewhat involved, even though the extent is unknown. However, their demand seems to have been taken into the sector agreement (see source).",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-12_580.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Non-binding recommendations or other texts",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "461",
+                    "sources::title": "Corona crisis: Nobody is turned off electricity, gas or heat",
+                    "sources::url": "https://kurier.at/politik/inland/live-keine-angst-vor-blackouts-ministerin-gewessler-beruhigt/400793456",
+                    "sources::d_date": "03/26/2020",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "1546",
+                    "sources::title": "Electricity shutdown further suspended",
+                    "sources::url": "https://www.ots.at/presseaussendung/OTS_20200430_OTS0048/coronavirus-strom-und-gasabschaltungen-weiterhin-ausgesetzt",
+                    "sources::d_date": "04/30/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "471",
+        "modId": "83"
     },
     {
         "fieldData": {
@@ -24119,9 +24999,9 @@
             "dateType": "Temporary",
             "calc_creationDay": "04/15/2020",
             "calc_lastUpdate": "10/02/2020",
-            "descriptionBackgroundInfo": "'There are very specific measures for the arts and culture to cover the special features of the cultural scene. But of course artists also have access to the entire range of support. We want to prevent people from losing their jobs, their income and at all costs everyday life can no longer afford. Nobody should be left behind ' explains State Secretary for Art and Culture Ulrike Lunacek on the unprecedented situation, which is very challenging for the entire art and culture business.\r\rThe federal government's mix of measures to combat the effects of COVID-19 includes a range of support for the cultural sector. ",
+            "descriptionBackgroundInfo": "_'There are very specific measures for the arts and culture to cover the special features of the cultural scene. But of course artists also have access to the entire range of support. We want to prevent people from losing their jobs, their income and at all costs everyday life can no longer afford. Nobody should be left behind.'_ explains State Secretary for Art and Culture Ulrike Lunacek on the unprecedented situation, which is very challenging for the entire art and culture business.\r\rThe federal government's mix of measures to combat the effects of COVID-19 includes a range of support for the cultural sector. ",
             "descriptionContentOfMeasure": "An overview of measures for artists is available on the [Federal government's page:](https://www.bmkoes.gv.at/Themen/Corona/Corona-Kunst-und-Kultur.html)\r\rIn addition to the general support measures set by government (for example, the [Corona short time work scheme](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-10_229.html) or the [hardship fund for self-employed](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-13_212.html)), the page also lists specific funds which are only available for artists.\r\rThis includes, for instance:\r\r* COVID-19 fund for artists and intermediaries ('Kulturvermittler');\r* All artists who are not eligible to apply the hardship fund of the Austrian Chamber of Commerce can bring an application to the KSVF (Artist Social Insurance Fund) from 30 March 2020. \r\rThe support is intended to compensate for the loss of income caused by closings and cancellations. \r\rThe KSVF's COVID-19 fund is endowed with up to \u20ac5 million and is intended to ensure rapid aid. In addition to artists, cultural mediators can now apply for this grant. The amount paid out by the KSVF corresponds to that of the hardship fund. The fund consists of two phases:\r\r* in the first phase \u20ac1,000 are paid as emergency aid (until 2 July 2020), \r* in the second phase (starting on 10 July 2020), a one-time payment of \u20ac3,000 is paid (amount received from phase one is deducted)\r\rA separate service page has been set up for loss of income due to the Corona measures: KSVF service fund.\r\rIndividual funds run by copyright collecting societies (e.g. music, visual arts, film-making, etc.). Seven dedicated funds are also listed on the webpage.\r\rIn addition to the state instruments for compensating artists' loss of income, there is now also a private initiative. To help artists in the current crisis, foundations have joined together to form the \"Foundations Help Artists\" initiative and are supported by well-known people.\r\rWork grants from the City of Vienna due to COVID-19: Since the end of March, freelance artists and freelance scientists with their main residence in Vienna have been able to apply for one-time work grants of up to \u20ac3,000. In this crisis situation, there should be the opportunity to continue to pursue artistic and scientific activities (project development, reading, exhibition and lecture preparation and the like).",
-            "descriptionUseOfMeasure": "Since 10 July 2020, 1,147 persons could be supported by the KSVF's COVID-19 fund with \u20ac2.714 million , and together with the emergency aid, \u20ac4.846 million have already been paid. The initially planned \u20ac5 million from the COVID-19 Fund has been exhausted, taking into account the still open applications. ",
+            "descriptionUseOfMeasure": "Since 10 July 2020, 1,147 persons could be supported by the KSVF's COVID-19 fund with \u20ac2.714 million, and together with the emergency aid, \u20ac4.846 million have already been paid. The initially planned \u20ac5 million from the COVID-19 Fund has been exhausted, taking into account the still open applications. ",
             "descriptionInvolvementOfSocialPartners": "Social partner involvement is unknown.",
             "socialPartner_form": "Unknown",
             "socialPartner_role": "Not applicable",
@@ -24259,7 +25139,7 @@
             "regions": []
         },
         "recordId": "522",
-        "modId": "97"
+        "modId": "98"
     },
     {
         "fieldData": {
@@ -33856,6 +34736,95 @@
     },
     {
         "fieldData": {
+            "title": "Entrepreneur's wage (part of the company subsidy for fixed costs)",
+            "title_nationalLanguage": "Fixkostenzuschuss",
+            "d_startDate": "04/15/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Austria",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Extensions of  income support to workers not covered by any kind of protection scheme",
+            "calc_identifier": "AT-2020-16/789",
+            "dateType": "Temporary",
+            "calc_creationDay": "04/25/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "For companies affected by business closures, a \u20ac15 billion COVID-19 crisis fund (\"Nothilfefonds\") is available, which consists of several measures (see the cases bank guarantees, state support for tourism), among them the subsidy for fixed costs. To cover fixed costs, non-repayable subsidies are granted to companies that suffer substantial sales losses of at least 40% due to the consequences of the corona crisis (see case [AT-2020-16/474](https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_474.html)). As part of this package, also an entrepreneurs' salary can be claimed. ",
+            "descriptionContentOfMeasure": "Eligible for the subsidy of fixed costs are those companies that fully meet the following conditions:\r \r* Companies that have their management or a permanent establishment in Austria\r* Companies that have to bear fixed costs from their operating activities in Austria\r* Companies that were healthy before the Corona crisis\r* Companies which, in the course of the Corona crisis, have suffered a loss of turnover of at least 40%\r* Enterprises which take all reasonable measures to achieve sales which help to reduce fixed costs and maintain jobs in Austria.\r\rAmong the different components of fixed costs which can be subsidized, there is included an entrepreneur's salary up to a maximum of \u20ac2,000 per month (analogous to the regulations from the hardship fund)",
+            "descriptionUseOfMeasure": "Not known yet. ",
+            "descriptionInvolvementOfSocialPartners": "The Federal Economic Chamber was consulted in the design of the measure.",
+            "socialPartner_form": "Direct consultation",
+            "socialPartner_role": "Consulted",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/AT-2020-16_789.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "367",
+                    "sources::title": "Fixed cost subsidy - FAQs",
+                    "sources::url": "https://www.fixkostenzuschuss.at/#faqs",
+                    "sources::d_date": "04/10/2020",
+                    "modId": "4"
+                },
+                {
+                    "recordId": "1093",
+                    "sources::title": "Fixed cost subsidy: planned expansion by a further six months until March 2021",
+                    "sources::url": "https://www.lbg.at/servicecenter/lbg_steuertipps_praxis/fixkostenzuschuss_geplante_ausdehnung_um_weitere_6_monate_bis_m%C3%A4rz_2021/index_ger.html",
+                    "sources::d_date": "06/17/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "31",
+                    "targetGroups::name": "Self-employed",
+                    "modId": "15"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "136",
+                    "updates::d_date": "06/16/2020",
+                    "updates::description": "On their 2-day working meeting on 15 and 16 June 2020, after which further COVID-19 support measures worth \u20ac19 billion were announced, the extension of the company subsidy for fixed costs by six months was decided. Thus, the qualifying time for the measure (phase 2) is expected to be extended to March 2021 and the threshold for loss of sales is expected to be lowered from 40% to 30%. At the time of writing (9 July), no legal regulation has been published, thus, further specifications are yet unknown.",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "699",
+        "modId": "78"
+    },
+    {
+        "fieldData": {
             "title": "SME subsidy for teleworking: Region of Styria and Chamber of Labour",
             "title_nationalLanguage": "Tele!Arbeit Offensive",
             "d_startDate": "03/01/2020",
@@ -38240,6 +39209,97 @@
     },
     {
         "fieldData": {
+            "title": "Corona parental leave",
+            "title_nationalLanguage": "Conge parental Corona",
+            "d_startDate": "05/01/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Income protection beyond short-time work",
+            "calc_subMinorCategory": "Support for parents and carers (financial or in kind)",
+            "calc_identifier": "BE-2020-18/860",
+            "dateType": "Temporary",
+            "calc_creationDay": "05/19/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "A new parental leave called the Corona parental leave has been put in place in addition to the more traditional parental leave in order to help parents take care of their children during the Corona crisis and closure of schools. The Corona parental leave can be granted for 20% or 50% of full-time working-time. This law was voted on the 2 May and is applicable retro-actively to 1 May and covers the month of May and June. The reference is the arr\u00eat\u00e9 royal n\u00b0 23 du 13.05.2020 taken under article 5, \u00a71, 5\u00b0, of the law of  27 Mars 2020 with respect to the special measures to be taken to fight the coronavirus COVID-19 (II). ",
+            "descriptionContentOfMeasure": "The Corona parental leave is oriented towards parents (biological, foster and by adoption) with children aged 12 years old or younger, or parents with children with disabilities who are 21 years old or younger. The leave can be taken for 20% or 50% of full-time work. To benefit from the 20% reduction the parent should work full-time and to benefit from the 50% reduction the parent should work at least 75% of full-time working hours. If an employed parent wishes to reduce their work by 100% or 10% they should apply for the traditional parental leave, self-employed parents however can apply for a 100% reduction of work via the Corona parental leave.\r\rParents that have worked for one month in the private sector or one day in the public sector are eligible for the Corona parental leave. Parents that are self-employed as main activity are also eligible, but not if they are benefiting from the Bridge benefit (see elsewhere in the database).\r\rThe flat-rate benefit is 25% higher than the benefit for the traditional parental leave, for example \u20ac149.60 for a 20% reduction as compared to \u20ac119.68 for the traditional parental leave for employed parents.  For the self-employed a 100% reduction is compensated by \u20ac532.24 a month, or \u20ac875 if single parent.\r",
+            "descriptionUseOfMeasure": "It is not known how many benefit or will benefit from the Corona parental leave at this stage.",
+            "descriptionInvolvementOfSocialPartners": "It is not known whether the social partners were involved, but it is to be expected that they were at least informed about the measure.",
+            "socialPartner_form": "Unknown",
+            "socialPartner_role": "Not applicable",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-18_860.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "874",
+                    "sources::title": "Corona parental leave",
+                    "sources::url": "https://www.onem.be/sites/default/files/coronavirus/FAQ_CPC_FR_20200514.pdf",
+                    "sources::d_date": "05/14/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "928",
+                    "sources::title": "Verlenging maatregelen",
+                    "sources::url": "https://www.rva.be/nl/nieuws/verlenging-maatregelen",
+                    "sources::d_date": "06/19/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "40",
+                    "targetGroups::name": "Parents",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "57",
+                    "updates::d_date": "06/19/2020",
+                    "updates::description": "The Corona Parental leave system will be prolonged until the 30 of September 2020.\r\rIn addition two changes are applied, starting on 1 July:\r\r* Single parents as well as parents that have a disabled child now have the additional option to take full-time corona parental leave as well.\r* The level of the interruption benefit for this same group of parents (single and with a disabled child) will be increased as well by 50%. \r* The benefit cannot be higher than the gross wage of the person involved.\r\r",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "241",
+                    "updates::d_date": "07/01/2020",
+                    "updates::description": "The system will be extended until the 30 September (the current duration of the measure is currently from the 1 May 2020 until the 30 September 2020).",
+                    "modId": "2"
+                },
+                {
+                    "recordId": "286",
+                    "updates::d_date": "10/01/2020",
+                    "updates::description": "The Corona parental leave will not be extended further after 30 September 2020. Parents that need to care for their children can make use of alternative measures (eg.: regular leave (paid or not paid), leave due to imperative grounds, telework, etc.). ",
+                    "modId": "2"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "770",
+        "modId": "76"
+    },
+    {
+        "fieldData": {
             "title": "Creating incentives for unemployed to work in horticulture and other essential services and flexibilisation of successive fixed-term contracts",
             "title_nationalLanguage": "Behouden van arbeidscapaciteit in horticulturele en kritieke sectoren",
             "d_startDate": "03/27/2020",
@@ -39316,6 +40376,406 @@
     },
     {
         "fieldData": {
+            "title": "COVID III state guarantee programme for self-employed and companies up to 500 employees",
+            "title_nationalLanguage": "Z\u00e1ru\u010dn\u00ed program COVID III ",
+            "d_startDate": "05/18/2020",
+            "d_endDate": "06/30/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-21/894",
+            "dateType": "Temporary",
+            "calc_creationDay": "06/29/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "The COVID III guarantee programme follows the COVID I, COVID II and COVID Prague programmes. The COVID III guarantee programme helps to self-employed and companies with up to 500 employees and affected by the coronavirus. Unlike in COVID I and COVID II, entrepreneurs would no longer apply for a guarantee with Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmrzb.cz) but negotiate directly with a commercial banks involved in the program (see Sources). This should eliminate a number of administrative and legal difficulties which were criticised in COVID I and COVID II. However, \u010cMRZB is still a managing authority. \r\rUnlike COVID I and COVID II, COVID III covers also larger companies (up to 500 employees) and is applicable nation-wide, Prague included.",
+            "descriptionContentOfMeasure": "The guarantee will apply for operating loans of up to CZK 50,000,000 (\u20ac1,869,858 approx.) that will be provided until 31 December 2020. The guaranteed loan can be used to cover operating expenses, such as wages, rents, energy payments, payment of supplier-customer invoices, acquisition of inventory, materials, etc.\r\rThe guarantee is the following: \r\r* self-employed persons and companies with up to 250 employees will be entitled to a guarantee of up to 90% of the principle of the operating loan, but at most CZK 45,000,000 (\u20ac1,682,872 approx.)\r* Companies with 251-500 employees will receive a guarantee of up to 80% of the operating loan, but at most CZK 40,000,000 (\u20ac1,495,886 approx.).\r\rThe length of the guarantee will be at most three years. \r\rThe transaction also have to the following criteria:\r* will be implemented on the territory of the Czech Republic\r* does not intend to apply for other public support \r* was not supported in the COVID Plus programme.",
+            "descriptionUseOfMeasure": "As of 28 September 2020, commercial banks involved in the programme have approved 1,927 applications with the total sum of CZK 11,700,000,000 (\u20ac432,852,386 approx.), which is 2.34% from the total budget.  ",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved into the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-21_894.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "953",
+                    "sources::title": "CMRZB: COVID III National programme/\u010cMRZB: N\u00e1rodn\u00ed program COVID III",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-iii/",
+                    "sources::d_date": "05/18/2020",
+                    "modId": "1"
+                },
+                {
+                    "recordId": "954",
+                    "sources::title": "CMRZB: List of banks involved in the programme/\u010cMRZB: Seznam spolupracuj\u00edc\u00edch bank",
+                    "sources::url": "https://www.cmzrb.cz/soubor/seznam-spolupracujicich-financnich-instituci-covid-iii/",
+                    "sources::d_date": "05/18/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1649",
+                    "sources::title": "\u010cMRZB Press release: Current state of COVID programmes applications processes/\u010cMRZB: Pr\u016fb\u011b\u017en\u00fd stav vy\u0159izov\u00e1n\u00ed \u017e\u00e1dost\u00ed COVID",
+                    "sources::url": "https://www.cmzrb.cz/prubezny-stav-vyrizovani-zadosti-programu-covid/",
+                    "sources::d_date": "09/28/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "55",
+                    "targetGroups::name": "Solo-self-employed",
+                    "modId": "16"
+                },
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "63",
+                    "targetGroups::name": "One person or microenterprises",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "64",
+                    "targetGroups::name": "Larger corporations",
+                    "modId": "14"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "47",
+                    "sectors::code": "C20",
+                    "sectors::name": "Manufacture of chemicals and chemical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "48",
+                    "sectors::code": "C21",
+                    "sectors::name": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "49",
+                    "sectors::code": "C22",
+                    "sectors::name": "Manufacture of rubber and plastic products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "50",
+                    "sectors::code": "C23",
+                    "sectors::name": "Manufacture of other non-metallic mineral products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "51",
+                    "sectors::code": "C24",
+                    "sectors::name": "Manufacture of basic metals",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "52",
+                    "sectors::code": "C25",
+                    "sectors::name": "Manufacture of fabricated metal products, except machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "53",
+                    "sectors::code": "C26",
+                    "sectors::name": "Manufacture of computer, electronic and optical products",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "54",
+                    "sectors::code": "C27",
+                    "sectors::name": "Manufacture of electrical equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "55",
+                    "sectors::code": "C28",
+                    "sectors::name": "Manufacture of machinery and equipment n.e.c.",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "56",
+                    "sectors::code": "C29",
+                    "sectors::name": "Manufacture of motor vehicles, trailers and semi-trailers",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "57",
+                    "sectors::code": "C30",
+                    "sectors::name": "Manufacture of other transport equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "58",
+                    "sectors::code": "C31",
+                    "sectors::name": "Manufacture of furniture",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "59",
+                    "sectors::code": "C32",
+                    "sectors::name": "Other manufacturing",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "60",
+                    "sectors::code": "C33",
+                    "sectors::name": "Repair and installation of machinery and equipment",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "62",
+                    "sectors::code": "D35",
+                    "sectors::name": "Electricity, gas, steam and air conditioning supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "64",
+                    "sectors::code": "E36",
+                    "sectors::name": "Water collection, treatment and supply",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "65",
+                    "sectors::code": "E37",
+                    "sectors::name": "Sewerage",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "66",
+                    "sectors::code": "E38",
+                    "sectors::name": "Waste collection, treatment and disposal activities; materials recovery",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "67",
+                    "sectors::code": "E39",
+                    "sectors::name": "Remediation activities and other waste management services",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "69",
+                    "sectors::code": "F41",
+                    "sectors::name": "Construction of buildings",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "70",
+                    "sectors::code": "F42",
+                    "sectors::name": "Civil engineering",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "71",
+                    "sectors::code": "F43",
+                    "sectors::name": "Specialised construction activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "73",
+                    "sectors::code": "G45",
+                    "sectors::name": "Wholesale and retail trade and repair of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "74",
+                    "sectors::code": "G46",
+                    "sectors::name": "Wholesale trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "75",
+                    "sectors::code": "G47",
+                    "sectors::name": "Retail trade, except of motor vehicles and motorcycles",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "77",
+                    "sectors::code": "H49",
+                    "sectors::name": "Land transport and transport via pipelines",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "78",
+                    "sectors::code": "H50",
+                    "sectors::name": "Water transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "79",
+                    "sectors::code": "H51",
+                    "sectors::name": "Air transport",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "81",
+                    "sectors::code": "H53",
+                    "sectors::name": "Postal and courier activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "84",
+                    "sectors::code": "I56",
+                    "sectors::name": "Food and beverage service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "86",
+                    "sectors::code": "J58",
+                    "sectors::name": "Publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "87",
+                    "sectors::code": "J59",
+                    "sectors::name": "Motion picture, video and television programme production, sound recording and music publishing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "88",
+                    "sectors::code": "J60",
+                    "sectors::name": "Programming and broadcasting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "89",
+                    "sectors::code": "J61",
+                    "sectors::name": "Telecommunications",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "90",
+                    "sectors::code": "J62",
+                    "sectors::name": "Computer programming, consultancy and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "91",
+                    "sectors::code": "J63",
+                    "sectors::name": "Information service activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "99",
+                    "sectors::code": "M69",
+                    "sectors::name": "Legal and accounting activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "100",
+                    "sectors::code": "M70",
+                    "sectors::name": "Activities of head offices; management consultancy activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "101",
+                    "sectors::code": "M71",
+                    "sectors::name": "Architectural and engineering activities; technical testing and analysis",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "102",
+                    "sectors::code": "M72",
+                    "sectors::name": "Scientific research and development ",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "103",
+                    "sectors::code": "M73",
+                    "sectors::name": "Advertising and market research",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "104",
+                    "sectors::code": "M74",
+                    "sectors::name": "Other professional, scientific and technical activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "105",
+                    "sectors::code": "M75",
+                    "sectors::name": "Veterinary activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "107",
+                    "sectors::code": "N77",
+                    "sectors::name": "Rental and leasing activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "108",
+                    "sectors::code": "N78",
+                    "sectors::name": "Employment activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "109",
+                    "sectors::code": "N79",
+                    "sectors::name": "Travel agency, tour operator and other reservation service and related activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "110",
+                    "sectors::code": "N80",
+                    "sectors::name": "Security and investigation activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "111",
+                    "sectors::code": "N81",
+                    "sectors::name": "Services to buildings and landscape activities",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "112",
+                    "sectors::code": "N82",
+                    "sectors::name": "Office administrative, office support and other business support activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "804",
+        "modId": "41"
+    },
+    {
+        "fieldData": {
             "title": "Special support schemes for workers and businesses  ",
             "title_nationalLanguage": "\u0395\u03b9\u03b4\u03b9\u03ba\u03ac \u03c3\u03c7\u03ad\u03b4\u03b9\u03b1 \u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7\u03c2 \u03b5\u03c1\u03b3\u03b1\u03b6\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03ba\u03b1\u03b9 \u03b5\u03c0\u03b9\u03c7\u03b5\u03b9\u03c1\u03ae\u03c3\u03b5\u03c9\u03bd",
             "d_startDate": "06/13/2020",
@@ -39985,6 +41445,109 @@
         },
         "recordId": "808",
         "modId": "31"
+    },
+    {
+        "fieldData": {
+            "title": "COVID Prague guarantee: credit guarantees for SMEs in the Prague region",
+            "title_nationalLanguage": "Z\u00e1ruka COVID Praha",
+            "d_startDate": "04/20/2020",
+            "d_endDate": "",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Access to finance",
+            "calc_identifier": "CZ-2020-17/899",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/01/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "The COVID Prague programme follows the COVID I and COVID II measures which have not included Prague region. This programme is focused on small and medium-sized businesses based in Prague only. As in case of COVID I, COVID II and COVID III programmes, the Czech-Moravian Guarantee and Development Bank (\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, [\u010cMZRB](http://www.cmzrb) will provide guarantees for loans rendered by commercial banks (see list in Sources) and contributions to interest payments.\r\r",
+            "descriptionContentOfMeasure": "The parameters of the guarantee are the same as for COVID II:\r\r* SMEs may obtain a guarantee for up to 80% of the commercial credit amount,\r* maximum amount of the credit covered by the guarantee is CZK 15,000,000 (\u20ac562,219 approx.)\r* financial contributions to interest payments is CZK 1,000,000 (\u20ac37,481 approx.). \r\rGuarantees will be provided for up to three years. The credit has to be used to reimburse operating expenses such as wages, rent, utilities, settlement of suppliers\u2019 invoices etc.\r\rThe total allocation of the programme, which is financed by Operational Programme Prague \u2013 Growth Pole of the Czech Republic (Opera\u010dn\u00ed program Praha - p\u00f3l r\u016fstu) has been set at CZK 600,000,000 (\u20ac 22,488,756 approx.). ",
+            "descriptionUseOfMeasure": "* By 29 June 2020, 254 applications out of 295 have been approved for support.\r* By 20 September 2020, 311 applications out of 390 in total have been approved for support in the total amount of CZK 1,600,000,000 (\u20ac59,813,084) and the capacity of the programme has been fulfilled. \r\r",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-17_899.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "281",
+                    "sources::title": "SP \u010cR: Measures taken by the government of the Czech Republic/SP \u010cR: Opat\u0159en\u00ed vl\u00e1dy \u010cesk\u00e9 republiky",
+                    "sources::url": "https://www.spcr.cz/en/news/13437-measures-taken-by-the-government-of-the-czech-republic",
+                    "sources::d_date": "03/20/2020",
+                    "modId": "6"
+                },
+                {
+                    "recordId": "1068",
+                    "sources::title": "CMRZBD: Call for proposals/\u010cMRZBD: V\u00fdzva",
+                    "sources::url": "https://www.cmzrb.cz/soubor/vyzva-covid-praha/",
+                    "sources::d_date": "04/20/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1069",
+                    "sources::title": "CMRZBD: COVID Prague Guarantee/\u010cMRZBD: Z\u00e1ruka COVID Praha ",
+                    "sources::url": "https://www.cmzrb.cz/podnikatele/zaruky/zaruka-covid-praha/",
+                    "sources::d_date": "04/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "62",
+                    "targetGroups::name": "SMEs",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "5",
+                    "funding::name": "European Funds",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": [
+                {
+                    "recordId": "1927",
+                    "regions::countryCode": "CZ",
+                    "regions::level": 2,
+                    "regions::name": "Praha",
+                    "regions::nutsCode": "CZ01",
+                    "modId": "5"
+                }
+            ]
+        },
+        "recordId": "809",
+        "modId": "38"
     },
     {
         "fieldData": {
@@ -43052,6 +44615,70 @@
     },
     {
         "fieldData": {
+            "title": "COVID-Rent support for entrepreneurs",
+            "title_nationalLanguage": "COVID n\u00e1jemn\u00e9",
+            "d_startDate": "06/26/2020",
+            "d_endDate": "09/30/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Supporting businesses to stay afloat",
+            "calc_subMinorCategory": "Direct subsidies (full or partial)",
+            "calc_identifier": "CZ-2020-26/942",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/08/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "COVID \u2013 Rent is a subsidy programme prepared by the Ministry of Industry and Trade of the Czech Republic (Ministerstvo pr\u016fmyslu a obchodu \u010cesk\u00e9 republiky, [MPO \u010cR](http://www.mpo.cz). This programme helps entrepreneurs who have been prohibited due to the extraordinary measures from the sale of goods and services in their establishments, and thus limited in ability to pay rent. The idea of the programme is to divide rental costs between three entities \u2013 tenants, landlords and the state. Under this programme, the state would bear 50% of costs, landlords 30% and tenants 20%.\r\rThe total amount of the programme is CZK 5,000,000,000 (\u20ac186,150,410 approx.).",
+            "descriptionContentOfMeasure": "Eligible for the subsidy is an entrepreneur:\r\r* who uses the establishment under a lease agreement entered into and effective before 13 March 2020;\r*his/her retail sale of goods or the provision of services was prohibited due to the government\u2019s emergency measures for at least a part of the period from 13 March 2020 to 30 June 2020;\r* who is not a party related to the landlord of the establishment;\r* who is not in default on the payment of its liabilities to selected state institutions, \r* who has not drawn the maximum amount of the support as determined by the European Commission\u2019s Temporary Framework per applicant (\u20ac800,000).\r\rThere are also other conditions must be fulfilled before the application for support is filed:\r* the landlord has granted a discount of at least 30% for the period from 1 April  2020 to 30 June 2020;\r* entrepreneur has paid at least 50% of the rent for the same period.\r\rThe maximum amount of the subsidy for an applicant is 50% of the rent but no more than CZK 10,000,000 (\u20ac374,812).  \r",
+            "descriptionUseOfMeasure": "As of\u00a029 September 2020, there were 15,656 applications registered with the total amount of CZK 2,231,081,710 required (\u20ac82,540,944 approx.). From these applications, 10,161 applications were approved in the total amount of CZK 1,395,022,860 (\u20ac51,610,169 approx.), however, there are still many applications in process.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-26_942.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1073",
+                    "sources::title": "MPO: State aid related to rent payment in the context of COVID-19/MPO: ",
+                    "sources::url": "https://www.mpo.cz/en/guidepost/for-the-media/press-releases/state-aid-related-to-rent-payment-in-the-context-of-covid-19--254714/",
+                    "sources::d_date": "05/20/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "852",
+        "modId": "21"
+    },
+    {
+        "fieldData": {
             "title": "The Kickstart Initiative and incentivising apprenticeships",
             "title_nationalLanguage": "The Kickstart Initiative and Incentivising Apprenticeships",
             "d_startDate": "07/08/2020",
@@ -45385,6 +47012,101 @@
         },
         "recordId": "884",
         "modId": "21"
+    },
+    {
+        "fieldData": {
+            "title": "COVID Spa: vouchers for spa treatments to support the tourism industry",
+            "title_nationalLanguage": "COVID L\u00e1zn\u011b",
+            "d_startDate": "07/01/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Czechia",
+            "calc_minorCategory": "Promoting the economic, labour market and social recovery",
+            "calc_subMinorCategory": "Support for spending, stimulus packages",
+            "calc_identifier": "CZ-2020-27/975",
+            "dateType": "Temporary",
+            "calc_creationDay": "07/13/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "The COVID Spa programme supports Czech spas, which have been badly damaged by the anti COVID-19 measures and the sharp decline in tourism sector (with the lost of 180,000\u2013200,000 clients per year in Czech spas). \r\rThus the Government of the Czech Republic will be delivering CZK 1,000,000,000 (\u20ac37,481,260 approx.) in the form of vouchers worth CZK 4,000 (\u20ac150) per person (250,000 vouchers are available in total).\r\r",
+            "descriptionContentOfMeasure": "Eligible for the vouchers for accommodation in spa are:\r\r* people over 18 years with the Czech citizenship or with the permanent residence in Czechia, who are also covered by Czech public health insurance (i.e. those who pay public health insurance),\r* those who spend at least six nights at a Czech spa and have at least five spa procedures at the spa hotel from 1 July 2020 to 31 December 2020. \r\rPeople, who are interested in getting voucher, are required to register online [via special website](https://lazne2020.cz/auth/signin). The website generates a unique code and the guest will receive a discount immediately. \r\r",
+            "descriptionUseOfMeasure": "As of 2 October 2020, 147,000 vouchers have been downloaded, from which 25% approx. have been used by tourists. [Ministry of Regional Development of the Czech Republic] (http://www.mmr.cz) has spent about CZK 1,800,000 (\u20ac66,593 approx.) on this programme.",
+            "descriptionInvolvementOfSocialPartners": "Social partners, which are members of the tripartite body (Council of economic and social agreement, Rada hospod\u00e1\u0159sk\u00e9 a soci\u00e1ln\u00ed dohody, RHSD) were informed and consulted in both formal (requested by institutional settings) and informal ways. They are not involved in the management of policy measures. ",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-27_975.html",
+            "isOccupation": "No",
+            "isSector": "Yes",
+            "sector_privateOrPublic": "Not specified",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "Entirely new measure "
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1163",
+                    "sources::title": "MMR: COVID Spa programme/MMR: COVID L\u00e1zn\u011b program",
+                    "sources::url": "https://www.mmr.cz/getmedia/2136d873-9ff9-4b3a-a3fa-7f1a414149a7/2020_COVID_lazne-Informace-pro-lazenska-zarizeni.pdf.aspx?ext=.pdf",
+                    "sources::d_date": "07/29/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1651",
+                    "sources::title": "MMR Press release: We have sent 1,8 mil. CZK to Czech spas/Tiskov\u00e1 zpr\u00e1va MMR: Prvn\u00edm osmi l\u00e1ze\u0148sk\u00fdm za\u0159\u00edzen\u00edm jsme poslali z programu COVID L\u00e1zn\u011b 1,8 milionu korun",
+                    "sources::url": "https://www.mmr.cz/cs/ostatni/web/novinky/prvnim-osmi-lazenskym-zarizenim-jsme-poslali-z-pr",
+                    "sources::d_date": "10/02/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "1",
+                    "funding::name": "Companies",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [
+                {
+                    "recordId": "83",
+                    "sectors::code": "I55",
+                    "sectors::name": "Accommodation",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "118",
+                    "sectors::code": "Q86",
+                    "sectors::name": "Human health activities",
+                    "modId": "0"
+                }
+            ],
+            "updates": [],
+            "regions": []
+        },
+        "recordId": "885",
+        "modId": "23"
     },
     {
         "fieldData": {
@@ -54699,6 +56421,122 @@
             "regions": []
         },
         "recordId": "1035",
+        "modId": "23"
+    },
+    {
+        "fieldData": {
+            "title": "Extension of temporary unemployment due to force majeure for specific sectors and companies in trouble.",
+            "title_nationalLanguage": "Verruiming van de tijdelijke werkloosheid wegens overmacht voor specifieke sectoren en bedrijven in problemen.",
+            "d_startDate": "08/31/2020",
+            "d_endDate": "12/31/2020",
+            "calc_country": "Belgium",
+            "calc_minorCategory": "Employment protection and retention",
+            "calc_subMinorCategory": "Income support for people in employment (e.g. short-time work)",
+            "calc_identifier": "BE-2020-36/1126",
+            "dateType": "Temporary",
+            "calc_creationDay": "09/15/2020",
+            "calc_lastUpdate": "10/05/2020",
+            "descriptionBackgroundInfo": "The measure was [originally introduced](https://static.eurofound.europa.eu/covid19db/cases/BE-2020-11_380.html) due to the strong increase in requests for temporary unemployment for the national economy as way to alleviate pressure on the institutions that were tasked with organizing and distributing unemployment benefits, both the National Employment Office (NEO) and the trade unions (that also play an important role in paying out the unemployment benefits). The use of temporary unemployment means that the employers no longer have to pay the wages of their employees (the cost is transferred to the government through the unemployment benefit), thereby enabling them to reduce their costs and enhances their ability to better cope with the period of inactivity of the business.\r\rThe measures makes the procedure shorter and more simplified for employees in order to make sure that they receive their unemployment benefit as fast as possible",
+            "descriptionContentOfMeasure": "The system will be extended further as well as adapted (starting September 2020). From that date, two systems will apply (one for companies or sectors that are considered to be very badly hit and one for companies that are less impacted but still require the measure):\r\r1. Companies that are _'particularly badly'_ affected by the corona crisis can continue to use the system of temporary unemployment due to force majeure by Corona until the end of this year. They must demonstrate that in the second quarter (April-June 2020), 20% of the total number of working days declared were days of temporary unemployment (force majeure due to Corona or economic unemployment). \r2. There are also sectors that have been recognised as _'particularly hard hit'_. The employer should do nothing for the taxi sector, the audiovisual sector, the hotel industry, entertainment companies, the socio-cultural sector, the tourist attractions sector. These are automatically recognised. \r3. For a number of sectors, the employer must file a declaration with the national unemployment offices and it only applies to certain activities (i.e. not automatically to all employees of the joint committee).  \r4. All other companies can make use of the classic systems of temporary unemployment that already existed before the corona crisis: _'temporary unemployment for reasons of force majeure'_ and _'temporary unemployment for economic reasons'_. Each system has its own criteria and formalities which may also deviate from the arrangements for the corona crisis. For this group the 'normal' rules become applicable again.\r\r\r",
+            "descriptionUseOfMeasure": "Data is not yet available; as the measure (extension) is still very recent.",
+            "descriptionInvolvementOfSocialPartners": "The social partners are involved in the measure, as the trade unions have a big responsibility in paying out unemployment benefits. On the other hand the sectoral joint committees monitor and discuss the measures further.",
+            "socialPartner_form": "",
+            "socialPartner_role": "",
+            "calc_githubURL": "https://static.eurofound.europa.eu/covid19db/cases/BE-2020-36_1126.html",
+            "isOccupation": "No",
+            "isSector": "No",
+            "sector_privateOrPublic": "Only private sector",
+            "calc_type": "Legislations or other statutory regulations",
+            "statusOfRegulation": "New aspects included into existing measure"
+        },
+        "portalData": {
+            "sources": [
+                {
+                    "recordId": "1426",
+                    "sources::title": "Tijdelijke werkloosheid verlengd voor zwaar getroffen sectoren.",
+                    "sources::url": "https://www.tijd.be/dossiers/coronavirus/tijdelijke-werkloosheid-verlengd-voor-zwaar-getroffen-sectoren/10247396.html",
+                    "sources::d_date": "08/26/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1428",
+                    "sources::title": "Tijdelijke werkloosheid wegens overmacht",
+                    "sources::url": "https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/tijdelijke-werkloosheid-wegens-overmacht-coronaviru",
+                    "sources::d_date": "09/08/2020",
+                    "modId": "0"
+                },
+                {
+                    "recordId": "1561",
+                    "sources::title": "Changes for employers in October",
+                    "sources::url": "https://legalworld.wolterskluwer.be/nl/nieuws/domein/sociaal-recht-en-hr/dit-verandert-er-in-oktober-voor-u-als-werkgever",
+                    "sources::d_date": "10/01/2020",
+                    "modId": "0"
+                }
+            ],
+            "actors": [
+                {
+                    "recordId": "1",
+                    "actors::name": "National government",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "3",
+                    "actors::name": "Trade unions",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "4",
+                    "actors::name": "Employers' organisations",
+                    "modId": "3"
+                },
+                {
+                    "recordId": "5",
+                    "actors::name": "Company / Companies",
+                    "modId": "5"
+                }
+            ],
+            "targetGroups": [
+                {
+                    "recordId": "30",
+                    "targetGroups::name": "Employees in standard employment",
+                    "modId": "18"
+                },
+                {
+                    "recordId": "33",
+                    "targetGroups::name": "Workers in non-standard forms of employment",
+                    "modId": "14"
+                },
+                {
+                    "recordId": "60",
+                    "targetGroups::name": "Sector specific set of companies",
+                    "modId": "12"
+                },
+                {
+                    "recordId": "65",
+                    "targetGroups::name": "Other businesses",
+                    "modId": "12"
+                }
+            ],
+            "funding": [
+                {
+                    "recordId": "7",
+                    "funding::name": "National funds",
+                    "modId": "0"
+                }
+            ],
+            "occupations": [],
+            "sectors": [],
+            "updates": [
+                {
+                    "recordId": "288",
+                    "updates::d_date": "10/01/2020",
+                    "updates::description": "Temporary unemployment due to COVID-19 already equated with working until 30 June 2020 for the purposes of determining holiday entitlements. On 24 September 2020, a royal decree was published stating that the period of temporary unemployment due to COVID-19 was from 1 July 2020 to 31 August 2020. This will also be counted as time worked for the purpose of determining holiday entitlements in 2021. ",
+                    "modId": "5"
+                }
+            ],
+            "regions": []
+        },
+        "recordId": "1036",
         "modId": "23"
     },
     {
