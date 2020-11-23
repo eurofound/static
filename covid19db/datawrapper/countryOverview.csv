@@ -1,7 +1,7 @@
 Country,Number of cases
 ":AT: <a href=""https://static.eurofound.europa.eu/covid19db/countries/AT.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Austria</a>",50
-":BE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/BE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Belgium</a>",30
-":BG: <a href=""https://static.eurofound.europa.eu/covid19db/countries/BG.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Bulgaria</a>",15
+":BE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/BE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Belgium</a>",31
+":BG: <a href=""https://static.eurofound.europa.eu/covid19db/countries/BG.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Bulgaria</a>",18
 ":HR: <a href=""https://static.eurofound.europa.eu/covid19db/countries/HR.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Croatia</a>",39
 ":CY: <a href=""https://static.eurofound.europa.eu/covid19db/countries/CY.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Cyprus</a>",24
 ":CZ: <a href=""https://static.eurofound.europa.eu/covid19db/countries/CZ.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Czechia</a>",30
@@ -10,10 +10,10 @@ Country,Number of cases
 ":EU: <a href=""https://static.eurofound.europa.eu/covid19db/countries/EU.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">European Union</a>",12
 ":FI: <a href=""https://static.eurofound.europa.eu/covid19db/countries/FI.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Finland</a>",28
 ":FR: <a href=""https://static.eurofound.europa.eu/covid19db/countries/FR.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">France</a>",40
-":DE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/DE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Germany</a>",34
+":DE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/DE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Germany</a>",39
 ":GR: <a href=""https://static.eurofound.europa.eu/covid19db/countries/GR.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Greece</a>",46
 ":HU: <a href=""https://static.eurofound.europa.eu/covid19db/countries/HU.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Hungary</a>",19
-":IE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/IE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Ireland</a>",27
+":IE: <a href=""https://static.eurofound.europa.eu/covid19db/countries/IE.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Ireland</a>",28
 ":IT: <a href=""https://static.eurofound.europa.eu/covid19db/countries/IT.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Italy</a>",36
 ":LV: <a href=""https://static.eurofound.europa.eu/covid19db/countries/LV.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Latvia</a>",18
 ":LT: <a href=""https://static.eurofound.europa.eu/covid19db/countries/LT.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Lithuania</a>",34
@@ -23,7 +23,7 @@ Country,Number of cases
 ":NO: <a href=""https://static.eurofound.europa.eu/covid19db/countries/NO.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Norway</a>",33
 ":PL: <a href=""https://static.eurofound.europa.eu/covid19db/countries/PL.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Poland</a>",16
 ":PT: <a href=""https://static.eurofound.europa.eu/covid19db/countries/PT.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Portugal</a>",42
-":RO: <a href=""https://static.eurofound.europa.eu/covid19db/countries/RO.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Romania</a>",23
+":RO: <a href=""https://static.eurofound.europa.eu/covid19db/countries/RO.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Romania</a>",25
 ":SK: <a href=""https://static.eurofound.europa.eu/covid19db/countries/SK.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Slovakia</a>",21
 ":SI: <a href=""https://static.eurofound.europa.eu/covid19db/countries/SI.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Slovenia</a>",23
 ":ES: <a href=""https://static.eurofound.europa.eu/covid19db/countries/ES.html?utm_medium=datawrapper&utm_campaign=covid-19&utm_source=countryOverview"">Spain</a>",46
