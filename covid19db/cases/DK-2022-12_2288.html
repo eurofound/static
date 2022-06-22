@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Subsidy scheme for private landlords housing Ukrainian refugees - Eurofound EU PolicyWatch
+        </title>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="19a63380-e446-40b4-a971-086be9dda91d" data-blockingmode="auto" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://static.eurofound.europa.eu/covid19db/assets/css/Eurofound-covid.css">
+        <link rel="stylesheet" href="https://static.eurofound.europa.eu/covid19db/assets/css/Eurofound.css">
+        <link rel="stylesheet" href="https://static.eurofound.europa.eu/covid19db/assets/css/Glyphicon.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0425a581bb.js"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+        <script type="text/javascript">
+$(document).ready(function () {
+    $("#more").click(function () {
+        $("#more_p").fadeOut(100, function () {
+            $("#more_p").text(($("#more_p").text() == 'View more') ? 'View less' : 'View more').fadeIn(100);
+        })
+    })
+});
+	
+</script>
+    </head>
+    <body>
+        <!--Header-->
+        <div class="container" style="height:120px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="float: left;">
+                        <a href="https://www.eurofound.europa.eu/" target="_blank" title="Eurofound website">
+                            <img src="https://static.eurofound.europa.eu/covid19db/assets/img/Eurofound-logo.svg" width="auto" height="120" alt=""/>
+                        </a>
+                        </a>
+                    </div>
+                    <div style="float: left; margin-left:25px;">
+                        <p class="small" style="line-height: 1; padding-top: 50px;">
+                            European Foundation
+                            <br>
+                            
+					for the Improvement of
+                            <br>
+                            
+					Living and Working Conditions
+                        </p>
+                    </div>
+                    <div class="tripartite" style="float: left; margin-left:25px;">
+                        <p class="small" style="line-height: 1; padding-top: 50px;">
+                            The tripartite EU agency providing knowledge to assist
+                            <br>
+                            
+					in the development of better social, employment and
+                            <br>
+                            
+					work-related policies
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header End-->
+        <!--Title Bar-->
+        <div class="container-fluid" style="background-color:#E8EBEC;">
+            <div class="container">
+                <div class="col-md-11" style="padding:40px 0px 20px 0px;">
+                    <a href="http://static.eurofound.europa.eu/covid19db/index.html">
+                        <h2 style="margin-top:0px;">
+                            EU PolicyWatch
+                        </h2>
+                    </a>
+                    <a href="http://static.eurofound.europa.eu/covid19db/index.html">
+                        <h3>
+                            Database of national-level policy measures
+                        </h3>
+                    </a>
+                    <p>
+                        Eurofound's EU PolicyWatch collates information on the responses of government and social partners to the COVID-19 crisis, the war in Ukraine, rising inflation, as well as gathering examples of company practices aimed at mitigating the social and economic impacts. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Title Bar End-->
+        <div class="container" style="margin-top: 30px;">
+            <div class="row">
+                <div class="col-md-3" style="margin-bottom: 50px;">
+                    <div class="sticky-top">
+                        <ul class="Sidenav flex-column secondary">
+                            <a href="http://static.eurofound.europa.eu/covid19db/index.html" style="color:#FFF; font-family: â€˜Source Serif Proâ€™, serif;">
+                                <li class="haschildren Sidenav-catagory-None" style="margin-bottom: 0 !important; background:#1a2f55;padding:15px 0px 15px 20px">
+                                    
+
+                    Overview
+
+                
+                                </li>
+                            </a>
+                            <ul class="list-group">
+                                <li style="display:inline;margin-bottom:0!important">
+                                    <a class="scroll list-group-item" href="https://static.eurofound.europa.eu/covid19db/ukraine.html">
+                                        
+
+                        War in Ukraine
+
+                    
+                                    </a>
+                                </li>
+                                <a class="scroll list-group-item haschildren arrow-after" href="#important">
+                                    <li style="display:inline; margin-bottom: 0 !important;">
+                                        
+
+                        Countries
+
+                    
+                                    </li>
+                                </a>
+                                <ul class="list-group">
+                                    <ul class="form-control2">
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/AT.html">
+                                                
+
+                                Austria
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/BE.html">
+                                                
+
+                                Belgium
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/BG.html">
+                                                
+
+                                Bulgaria
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/HR.html">
+                                                
+
+                                Croatia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/CY.html">
+                                                
+
+                                Cyprus
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/CZ.html">
+                                                
+
+                                Czechia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/DK.html">
+                                                
+
+                                Denmark
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/EE.html">
+                                                
+
+                                Estonia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/FI.html">
+                                                
+
+                                Finland
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/FR.html">
+                                                
+
+                                France
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/DE.html">
+                                                
+
+                                Germany
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/GR.html">
+                                                
+
+                                Greece
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/HU.html">
+                                                
+
+                                Hungary
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/IE.html">
+                                                
+
+                                Ireland
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/IT.html">
+                                                
+
+                                Italy
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/LV.html">
+                                                
+
+                                Latvia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/LT.html">
+                                                
+
+                                Lithuania
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/LU.html">
+                                                
+
+                                Luxembourg
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/MT.html">
+                                                
+
+                                Malta
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/NL.html">
+                                                
+
+                                Netherlands
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/NO.html">
+                                                
+
+                                Norway
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/PL.html">
+                                                
+
+                                Poland
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/PT.html">
+                                                
+
+                                Portugal
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/RO.html">
+                                                
+
+                                Romania
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/SK.html">
+                                                
+
+                                Slovakia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/SI.html">
+                                                
+
+                                Slovenia
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/ES.html">
+                                                
+
+                                Spain
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/SE.html">
+                                                
+
+                                Sweden
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/countries/GB.html">
+                                                
+
+                                United Kingdom
+
+                            
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                                <a class="scroll list-group-item haschildren arrow-after" href="#important">
+                                    <li style="display:inline;">
+                                        
+
+                        Types
+
+                    
+                                    </li>
+                                </a>
+                                <ul class="list-group">
+                                    <ul class="form-control2">
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/legislations_or_other_statutory_regulations.html">
+                                                
+
+                                Legislations or other statutory regulations
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/bipartite_collective_agreements.html">
+                                                
+
+                                Bipartite collective agreements
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/tripartite_agreements.html">
+                                                
+
+                                Tripartite agreements
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/non-binding_recommendations_or_other_texts.html">
+                                                
+
+                                Non-binding recommendations or other texts
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/company_practices.html">
+                                                
+
+                                Company practices
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/types/other_initiatives_or_policies.html">
+                                                
+
+                                Other initiatives or policies
+
+                            
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                                <a class="scroll list-group-item haschildren arrow-after" href="#important">
+                                    <li style="display:inline;">
+                                        
+
+                        Categories
+
+                    
+                                    </li>
+                                </a>
+                                <ul class="list-group">
+                                    <ul class="form-control2">
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Support_for_essential_services.html">
+                                                
+
+                                Ensuring business continuity and support for essential services
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Supporting_businesses_to_stay_afloat.html">
+                                                
+
+                                Supporting businesses to stay afloat
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Employment_protection_and_retention.html">
+                                                
+
+                                Employment protection and retention
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Re-orientation_of_business_activities.html">
+                                                
+
+                                Reorientation of business activities
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Protection_of_workers_adaption_of_workplace.html">
+                                                
+
+                                Protection of workers, adaptation of workplace
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Income_protection_beyond_short-time_work.html">
+                                                
+
+                                Income protection beyond short-time work
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Measures_to_prevent_social_hardship.html">
+                                                
+
+                                Measures to prevent social hardship
+
+                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://static.eurofound.europa.eu/covid19db/categories/Promoting_the_economic_labour_market_and_social_recovery.html">
+                                                
+
+                                Promoting the economic, labour market and social recovery
+
+                            
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                                <a class="scroll list-group-item haschildren arrow-after" href="#important">
+                                    <li style="display:inline;">
+                                        
+
+                        Target groups
+
+                    
+                                    </li>
+                                </a>
+                                <ul class="list-group">
+                                    <ul class="form-control2">
+                                        <li>
+                                            
+
+                            Businesses
+
+                        
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/companies_providing_essential_services.html">
+                                                    
+
+                                    Companies providing essential services
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/contractors_of_a_company.html">
+                                                    
+
+                                    Contractors of a company
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/importing_exporting_companies.html">
+                                                    
+
+                                    Importing/Exporting companies
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/larger_corporations.html">
+                                                    
+
+                                    Larger corporations
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/one_person_or_microenterprises.html">
+                                                    
+
+                                    One person or microenterprises
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/other_businesses.html">
+                                                    
+
+                                    Other businesses
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/smes.html">
+                                                    
+
+                                    SMEs
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/sector_specific_set_of_companies.html">
+                                                    
+
+                                    Sector specific set of companies
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/solo-self-employed.html">
+                                                    
+
+                                    Solo-self-employed
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/start-ups.html">
+                                                    
+
+                                    Start-ups
+
+                                
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <li>
+                                            
+
+                            Citizens
+
+                        
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/children_minors.html">
+                                                    
+
+                                    Children (minors)
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/disabled.html">
+                                                    
+
+                                    Disabled
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/migrants.html">
+                                                    
+
+                                    Migrants
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/older_citizens.html">
+                                                    
+
+                                    Older citizens
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/other_groups_of_citizens.html">
+                                                    
+
+                                    Other groups of citizens
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/parents.html">
+                                                    
+
+                                    Parents
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/pensioners.html">
+                                                    
+
+                                    Pensioners
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/people_in_care_facilities.html">
+                                                    
+
+                                    People in care facilities
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/low_income.html">
+                                                    
+
+                                    People on low incomes
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/people_on_social_benefits.html">
+                                                    
+
+                                    People on social benefits
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/refugees.html">
+                                                    
+
+                                    Refugees
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/single_parents.html">
+                                                    
+
+                                    Single parents
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/students.html">
+                                                    
+
+                                    Students
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/the_covid-19_risk_group.html">
+                                                    
+
+                                    The COVID-19 risk group
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/women.html">
+                                                    
+
+                                    Women
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/youth_18-25.html">
+                                                    
+
+                                    Youth (18-25)
+
+                                
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <li>
+                                            
+
+                            Workers
+
+                        
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/cross-border_commuters.html">
+                                                    
+
+                                    Cross-border commuters
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/disabled_workers.html">
+                                                    
+
+                                    Disabled workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/employees_in_standard_employment.html">
+                                                    
+
+                                    Employees in standard employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/female_workers.html">
+                                                    
+
+                                    Female workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/migrants_in_employment.html">
+                                                    
+
+                                    Migrants in employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/older_people_in_employment_aged_55.html">
+                                                    
+
+                                    Older people in employment (aged 55+)
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/other_groups_of_workers.html">
+                                                    
+
+                                    Other groups of workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/parents_in_employment.html">
+                                                    
+
+                                    Parents in employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/particular_professions.html">
+                                                    
+
+                                    Particular professions
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/platform_workers.html">
+                                                    
+
+                                    Platform workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/posted_workers.html">
+                                                    
+
+                                    Posted workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/refugees_in_employment.html">
+                                                    
+
+                                    Refugees in employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/seasonal_workers.html">
+                                                    
+
+                                    Seasonal workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/self-employed.html">
+                                                    
+
+                                    Self-employed
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/single_parents_in_employment.html">
+                                                    
+
+                                    Single parents in employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/the_covid-19_risk_group_at_the_workplace.html">
+                                                    
+
+                                    The COVID-19 risk group at the workplace
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/undeclared_workers.html">
+                                                    
+
+                                    Undeclared workers
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/unemployed.html">
+                                                    
+
+                                    Unemployed
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/workers_in_care_facilities.html">
+                                                    
+
+                                    Workers in care facilities
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/workers_in_essential_services.html">
+                                                    
+
+                                    Workers in essential services
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/workers_in_non-standard_forms_of_employment.html">
+                                                    
+
+                                    Workers in non-standard forms of employment
+
+                                
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/youth_18-25_in_employment.html">
+                                                    
+
+                                    Youth (18-25) in employment
+
+                                
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <li style="display:inline;">
+                                    <a class="list-group-item" href="https://static.eurofound.europa.eu/covid19db/database.html">
+                                        
+
+                        Search database
+
+                    
+                                    </a>
+                                </li>
+                                <div class="col-lg-12" style="padding:20px 0px 0px 0px;">
+                                    <nav class="Related-HeaderBox">
+                                        <p class="Sec-Nav-Header-related">
+                                            
+
+                            Related content
+
+                        
+                                        </p>
+                                    </nav>
+                                    <div class="Related-LinkBox">
+                                        <a target="_blank" href="https://www.eurofound.europa.eu/?pk_campaign=policywatch&amp;pk_source=sidebar">
+                                            <p class="Sec-Nav-link-related">
+                                                
+
+                                Eurofound website
+
+                            
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="Related-LinkBox">
+                                        <a target="_blank" href="https://www.eurofound.europa.eu/topic/stand-with-ukraine?pk_campaign=policywatch&amp;pk_source=sidebar">
+                                            <p class="Sec-Nav-link-related">
+                                                
+
+                                Topic: Stand with Ukraine
+
+                            
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="Related-LinkBox">
+                                        <a target="_blank" href="https://www.eurofound.europa.eu/topic/covid-19?pk_campaign=policywatch&amp;pk_source=sidebar">
+                                            <p class="Sec-Nav-link-related">
+                                                
+
+                                Topic: COVID-19
+
+                            
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="Related-LinkBox">
+                                        <a target="_blank" href="https://www.eurofound.europa.eu/publications/report/2020/covid-19-policy-responses-across-europe?pk_campaign=policywatch&amp;pk_source=sidebar">
+                                            <p class="Sec-Nav-link-related">
+                                                
+
+                                COVID-19: Policy responses across Europe
+
+                            
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div id="important" class="col-md-9" style="padding-top: 0px">
+                    <div style="padding:30px 20px 40px 40px; background-color:#1A2F55">
+                        <p class="text-white">
+                            Factsheet for measure 
+                            <strong>
+                                DK-2022-12/2288
+                            </strong>
+                            – measures in Denmark
+                        </p>
+                        <h1 id="setting" style="line-height:90%; margin:30px 0px;">
+                            Subsidy scheme for private landlords housing Ukrainian refugees
+                        </h1>
+                        <h2 style="font-style: italic; margin-top: 0; font-weight: light; font-size: 1.2rem; color:#fff;" title="Title in national language">
+                            Tilskudsordning for at huse Ukrainske flygtninge
+                        </h2>
+                    </div>
+                    <div class="jumbotron">
+                        <table class="table">
+                            <tr>
+                                <td style="width:35%">
+                                    Country
+                                </td>
+                                <td>
+                                    <a href="https://static.eurofound.europa.eu/covid19db/countries/DK.html" title="View all cases in this country">
+                                        Denmark
+                                    </a>
+                                    , applies nationwide
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Time period
+                                </td>
+                                <td>
+                                    Open ended, started on 17 March 2022
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Context
+                                </td>
+                                <td>
+                                    War in Ukraine
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Type
+                                </td>
+                                <td>
+                                    <a href="https://static.eurofound.europa.eu/covid19db/types/legislations_or_other_statutory_regulations.html" title="View all cases of this type">
+                                        Legislations or other statutory regulations
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Category
+                                </td>
+                                <td>
+                                    <a href="https://static.eurofound.europa.eu/covid19db/categories/Measures_to_prevent_social_hardship.html" title="View all cases in this category">
+                                        Measures to prevent social hardship
+                                    </a>
+                                    <br>
+                                    – Keeping or obtaining a safe home
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Author
+                                </td>
+                                <td>
+                                    Carsten Jørgensen (FAOS, University of Copenhagen), Anders Randrup (Oxford Research) and Eurofound
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Measure added
+                                </td>
+                                <td>
+                                    16 May 2022 (updated 20 June 2022)
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2>
+                        Background information
+                    </h2>
+                    <p>
+                        There is currently not enough adequate housing for all Ukrainian refugees. To avoid that the refugees would end up staying in an inadequate home, the government put a subsidy scheme in place which entails that Danish citizens can gain up to DKK 500 per day if they house refugees from Ukraine.
+                    </p>
+                    <h2>
+                        Content of measure
+                    </h2>
+                    <p>
+                        The Subsidy scheme allows the Municipalities to provide a grant of up to DKK 500 per day to the Danish citizens who offer to house a refugee from Ukraine. However, it is not legally mandatory for the municipalities to provide a grant, and the amount of money that the municipalities offer also differs. There is no data on how much there has been set aside in total as it differs how much the different Municipalities set aside.
+                    </p>
+                    <p>
+                        At the moment, only 36 out of the 98 Municipalities have the subsidy scheme set in place, and only a few municipalities offer the full grant of DKK 500, the amount varies across municipalities. The main goal of this measure is to provide an incentive for citizens to house refugees from Ukraine so they can get an adequate home without putting a big pressure on the financial situations of the citizens.
+                    </p>
+                    <p>
+                        The minimum standard for housing is that they have a bed/beds and that it is warm and insulated. 
+                    </p>
+                    <h2>
+                        Use of measure
+                    </h2>
+                    <p>
+                        There is no data on how many Danish citizens have offered to be host families, however 36 municipalities currently provide the grant.
+                    </p>
+                    <h2>
+                        Target groups
+                    </h2>
+                    <table class="table table-striped">
+                        <thead style="background-color:#067EB1; color:white;">
+                            <tr>
+                                <th style="width: 33%">
+                                    Workers
+                                </th>
+                                <th style="width: 33%">
+                                    Businesses
+                                </th>
+                                <th style="width: 33%">
+                                    Citizens
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Does not apply to workers
+                                </td>
+                                <td>
+                                    Does not apply to businesses
+                                </td>
+                                <td>
+                                    <a href="https://static.eurofound.europa.eu/covid19db/targetGroups/refugees.html">
+                                        Refugees
+                                    </a>
+                                    <br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>
+                        Actors and funding
+                    </h2>
+                    <table class="table table-striped">
+                        <thead style="background-color:#067EB1; color:white;">
+                            <tr>
+                                <th>
+                                    Actors
+                                </th>
+                                <th>
+                                    Funding
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    National government
+                                    <br>
+                                    Local / regional government
+                                    <br>
+                                </td>
+                                <td>
+                                    Local funds
+                                    <br>
+                                    National funds
+                                    <br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>
+                        Social partners
+                    </h2>
+                    <p>
+                        Social partners' role in 
+                        <strong>
+                            designing the measure
+                        </strong>
+                         and form of involvement:
+                    </p>
+                    <table class="table">
+                        <thead style="background-color:#067EB1; color:white;">
+                            <tr>
+                                <th style="width:20%"></th>
+                                <th style="width:40%">
+                                    Trade unions
+                                </th>
+                                <th style="width:40%">
+                                    Employers' organisations
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        Role
+                                    </strong>
+                                </td>
+                                <td>
+                                    No involvement
+                                </td>
+                                <td>
+                                    No involvement
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        Form
+                                    </strong>
+                                </td>
+                                <td>
+                                    Not applicable
+                                </td>
+                                <td>
+                                    Not applicable
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Social partners' role in the 
+                        <strong>
+                            implementation, monitoring and assessment phase:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>
+                            No involvement
+                        </li>
+                        <li>
+                            Main level of involvement: N/A
+                        </li>
+                    </ul>
+                    <h3 style="color: #4C4C4C">
+                        Involvement
+                    </h3>
+                    <p>
+                        There is no involvement of social partners in regards to this measure.
+                    </p>
+                    <h3 style="color: #4C4C4C">
+                        Views and reactions
+                    </h3>
+                    <p>
+                        There is no involvement of social partners in regards to this measure, and there has not been uttered any reactions towards this specific measure.
+                    </p>
+                    <h2>
+                        Sources
+                    </h2>
+                    <ul>
+                        <li>
+                            24 March 2022: Værtsfamilier kan få kompensation for at huse flygtninge
+                            <a target="_blank" href="https://www.berlingske.dk/danmark/vaertsfamilier-kan-faa-kompensation-for-at-huse-ukrainske-flygtninge">
+                                (www.berlingske.dk)
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col-md-12" style="display: flex; margin:40px 0px 0px 0px; padding:0px;">
+                        <div role="alert" style="width:100%; background-color: #F6F7F7; padding:20px;">
+                            <p class="citation-block-title" style="padding-top:20px;">
+                                Citation
+                            </p>
+                            <p style="padding-top:0px;">
+                                Eurofound (2022), 
+                                <em>
+                                    Subsidy scheme for private landlords housing Ukrainian refugees, measure DK-2022-12/2288 (measures in Denmark),
+                                </em>
+                                 EU PolicyWatch, Dublin, 
+                                <a href="https://static.eurofound.europa.eu/covid19db/cases/DK-2022-12_2288.html" target="_blank">
+                                    https://static.eurofound.europa.eu/covid19db/cases/DK-2022-12_2288.html
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 30px;">
+            <div class="container col-md-12" style="margin-top:15px">
+                <div class="row">
+                    <h2>
+                        Eurofound publications based on EU PolicyWatch
+                    </h2>
+                </div>
+            </div>
+            <div class="container col-md-12" style="margin-top: 15px;">
+                <div class="row" style="background-color: #e8ebec; padding: 20px 0px 0px 0px;">
+                    <div class="col-lg-6" style="display: flex; margin-bottom: 20px;">
+                        <div class="cardHorizontal">
+                            <div class="card-imageHorizontal">
+                                <a href="https://www.eurofound.europa.eu/publications/other/2022/working-life-in-the-covid-19-pandemic-2021?pk_campaign=policywatch&pk_source=footer">
+                                    <img src="https://www.eurofound.europa.eu/sites/default/files/styles/publications_detail_339x480/public/ef22048.png" width="100%" height="auto" alt="" />
+                                </a>
+                            </div>
+                            <div class="card-bodyHorizontal">
+                                <p class="date">
+                                    19 May 2022
+                                </p>
+                                <p class="dateUnderline">
+                                    &nbsp;
+                                </p>
+                                <h3 class="card-titleHorizontal">
+                                    Working life in the COVID-19 pandemic 2021
+                                </h3>
+                                <p>
+                                    This publication consists of individual country reports on working life during 2021 for 28 countries (the 27 EU Member States and Norway).
+                                </p>
+                                <a href="https://www.eurofound.europa.eu/publications/other/2022/working-life-in-the-covid-19-pandemic-2021?pk_campaign=policywatch&pk_source=footer" class="btn btn-primary" style="vertical-align: bottom;">
+                                    
+                        Publication 
+                                    <span class="glyphicon glyphicon-menu-right" style="float: right;"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                        <div class="cardHorizontal">
+                            <div class="card-imageHorizontal">
+                                <a href="https://www.eurofound.europa.eu/publications/report/2020/covid-19-policy-responses-across-europe?pk_campaign=policywatch&pk_source=footer">
+                                    <img src="https://www.eurofound.europa.eu/sites/default/files/styles/publications_detail_339x480/public/ef20064.png" width="100%" height="auto" alt="" />
+                                </a>
+                            </div>
+                            <div class="card-bodyHorizontal" style="display: flex; justify-content: space-between; flex-direction: column;">
+                                <div>
+                                    <p class="date">
+                                        24 June 2020
+                                    </p>
+                                    <p class="dateUnderline">
+                                        &nbsp;
+                                    </p>
+                                    <p class="card-titleHorizontal">
+                                        COVID-19: Policy responses across Europe
+                                    </p>
+                                    <p>
+                                        This report aims to present an overview of both large-scale government measures and collective agreements that impact on large groups of workers.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="https://www.eurofound.europa.eu/publications/report/2020/covid-19-policy-responses-across-europe?pk_campaign=policywatch&pk_source=footer" class="btn btn-primary" style="vertical-align: bottom;">
+                                        
+                            Publication 
+                                        <span class="glyphicon glyphicon-menu-right" style="float: right;"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-md-12" style="margin-top:15px">
+                <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+                    <div class="col-lg-6" style="display: flex; margin-bottom: 20px;">
+                        <div class="cardHorizontal">
+                            <div class="card-imageHorizontal">
+                                <a href="https://www.eurofound.europa.eu/publications/article/2022/covid-19-in-the-workplace-employers-responsibility-to-ensure-a-safe-workplace?pk_campaign=policywatch&pk_source=footer">
+                                    <img src="https://www.eurofound.europa.eu/sites/default/files/styles/topical-update-img/public/ef22035.png?itok=dmc1fcCJ" width="100%" height="auto" alt="">
+                                </a>
+                            </div>
+                            <div class="card-bodyHorizontal">
+                                <p class="date">
+                                    16 June 2022
+                                </p>
+                                <p class="dateUnderline">
+                                    &nbsp;
+                                </p>
+                                <h3 class="card-titleHorizontal">
+                                    COVID-19 in the workplace: Employer's responsibility to ensure a safe workplace
+                                </h3>
+                                <p>
+                                    Throughout 2021, the second year of the COVID-19 pandemic, specific occupational health and safety rules were reintroduced due to increases in infection rates.
+                                </p>
+                                <a href="https://www.eurofound.europa.eu/publications/article/2022/covid-19-in-the-workplace-employers-responsibility-to-ensure-a-safe-workplace?pk_campaign=policywatch&pk_source=footer" class="btn btn-primary" style="vertical-align:bottom;">
+                                    Article 
+                                    <span class="glyphicon glyphicon-menu-right" style="float:right;"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                        <div class="cardHorizontal">
+                            <div class="card-imageHorizontal">
+                                <a href="https://www.eurofound.europa.eu/publications/article/2022/back-to-work-after-covid-19-testing-vaccines-and-green-certificates?pk_campaign=policywatch&pk_source=footer">
+                                    <img src="https://www.eurofound.europa.eu/sites/default/files/styles/topical-update-img/public/ef22034.png" width="100%" height="auto" alt="">
+                                </a>
+                            </div>
+                            <div class="card-bodyHorizontal" style="display: flex; justify-content:space-between; flex-direction: column;">
+                                <div>
+                                    <p class="date">
+                                        16 June 2022
+                                    </p>
+                                    <p class="dateUnderline">
+                                        &nbsp;
+                                    </p>
+                                    <p class="card-titleHorizontal">
+                                        Back to work after COVID-19: Testing, vaccines and green certificates
+                                    </p>
+                                    <p>
+                                        In the second pandemic year 2021, access to one's place of work was increasingly dependent on providing proof of either having been tested, vaccinated or recovered from COVID-19 in several countries. 
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="https://www.eurofound.europa.eu/publications/article/2022/back-to-work-after-covid-19-testing-vaccines-and-green-certificates?pk_campaign=policywatch&pk_source=footer" class="btn btn-primary" style="vertical-align:bottom;">
+                                        Article 
+                                        <span class="glyphicon glyphicon-menu-right" style="float:right;"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Disclaimer-->
+        <div class="container-fluid" style="background-color:#368275; margin-top:60px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="margin: 30px 0px 20px 0px;">
+                        <div class="alert alert-success">
+                            <p class="text-white-bold">
+                                Disclaimer: This information has not been subject to the full Eurofound evaluation, editorial and publication process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Disclaimer End-->
+    </body>
+</html>
