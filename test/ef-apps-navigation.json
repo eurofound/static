@@ -1,0 +1,17 @@
+[
+ {
+   "pos": 1,
+   "name": "EU PolicyWatch",
+   "url": "https://static.eurofound.europa.eu/covid19db"
+ },
+ {
+   "pos": 2,
+   "name": "Platform Economy Database",
+   "url": "https://apps.eurofound.europa.eu/platformeconomydb"
+ },
+ {
+   "pos": 3,
+   "name": "Restructuring events database",
+   "url": "https://www.eurofound.europa.eu/observatories/emcc/erm/factsheets"
+ }
+]
