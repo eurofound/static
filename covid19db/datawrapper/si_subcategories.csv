@@ -1,32 +1,32 @@
-calc_minorCategory,calc_subMinorCategory,__KP_ID
-Employment protection and retention,"Income support for people in employment (e.g., short-time work)",43
-"Promoting the economic, labour market and social recovery","Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",43
-Reorientation of business activities,Change of production/innovation,41
-Ensuring business continuity and support for essential services,Smoothing frictions or reallocation of workers,27
-Supporting businesses to stay afloat,Access to finance,25
-Reorientation of business activities,Matching/networking,25
-Reorientation of business activities,Transfer or redeployment of workers ,12
-Supporting businesses to stay afloat,Other,11
-Employment protection and retention,Working time flexibility,9
-Supporting businesses to stay afloat,Foreign trade related measures,8
-Employment protection and retention,Other,6
-Supporting businesses to stay afloat,Direct subsidies (full or partial),6
-Income protection beyond short-time work,Income support for unemployed,6
-"Promoting the economic, labour market and social recovery","Support for spending, stimulus packages",5
-Supporting businesses to stay afloat,Rescue procedures in case of insolvency or adaptation of insolvency regulation,4
-Ensuring business continuity and support for essential services,Other,3
-Reorientation of business activities,Other,2
-Employment protection and retention,Wage flexibility ,2
-Ensuring business continuity and support for essential services,"Change of work arrangements (working time, rota schemes)",2
-Supporting businesses to stay afloat,Deferral of payments or liabilities,2
-Income protection beyond short-time work,Extensions of income support to workers not covered by any kind of protection scheme,2
-Ensuring business continuity and support for essential services,Mobilisation of a larger workforce,1
-"Promoting the economic, labour market and social recovery",Other,1
-"Promoting the economic, labour market and social recovery",Flexibilisation and security,1
-Reorientation of business activities,Creation of platforms for businesses aimed at customer,1
-Measures to prevent social hardship,Protection of vulnerable groups (beyond employment support),1
-"Protection of workers, adaptation of workplace","Teleworking arrangements, remote working",1
-"Protection of workers, adaptation of workplace",Changes of working hours or work arrangements,1
-"Protection of workers, adaptation of workplace",Changes of management approach,1
-"Protection of workers, adaptation of workplace",Changes in work organisation,1
-Measures to prevent social hardship,Other,1
+calc_subMinorCategory,calc_minorCategory,__KP_ID
+"Income support for people in employment (e.g., short-time work)",Employment protection and retention,43
+"Active labour market policies (enhancing employability, training, subsidised job creation, etc.)","Promoting the economic, labour market and social recovery",43
+Change of production/innovation,Reorientation of business activities,41
+Smoothing frictions or reallocation of workers,Ensuring business continuity and support for essential services,27
+Access to finance,Supporting businesses to stay afloat,25
+Matching/networking,Reorientation of business activities,25
+Transfer or redeployment of workers ,Reorientation of business activities,12
+Other,Supporting businesses to stay afloat,11
+Working time flexibility,Employment protection and retention,9
+Foreign trade related measures,Supporting businesses to stay afloat,8
+Other,Employment protection and retention,6
+Direct subsidies (full or partial),Supporting businesses to stay afloat,6
+Income support for unemployed,Income protection beyond short-time work,6
+"Support for spending, stimulus packages","Promoting the economic, labour market and social recovery",5
+Rescue procedures in case of insolvency or adaptation of insolvency regulation,Supporting businesses to stay afloat,4
+Other,Ensuring business continuity and support for essential services,3
+Other,Reorientation of business activities,2
+"Change of work arrangements (working time, rota schemes)",Ensuring business continuity and support for essential services,2
+Extensions of income support to workers not covered by any kind of protection scheme,Income protection beyond short-time work,2
+Deferral of payments or liabilities,Supporting businesses to stay afloat,2
+Wage flexibility ,Employment protection and retention,2
+Mobilisation of a larger workforce,Ensuring business continuity and support for essential services,1
+Changes in work organisation,"Protection of workers, adaptation of workplace",1
+Creation of platforms for businesses aimed at customer,Reorientation of business activities,1
+Other,Measures to prevent social hardship,1
+Other,"Promoting the economic, labour market and social recovery",1
+Changes of management approach,"Protection of workers, adaptation of workplace",1
+Protection of vulnerable groups (beyond employment support),Measures to prevent social hardship,1
+Flexibilisation and security,"Promoting the economic, labour market and social recovery",1
+"Teleworking arrangements, remote working","Protection of workers, adaptation of workplace",1
+Changes of working hours or work arrangements,"Protection of workers, adaptation of workplace",1
