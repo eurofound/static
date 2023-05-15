@@ -1,0 +1,892 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Restructuring events database</title>
+		<link rel="stylesheet" href="assets/css/app.css">
+		<!--Webtools-->
+		<script defer src="https://europa.eu/webtools/load.js"></script>
+	</head>
+<body>
+<div class="page">
+	<header class="header surface-c">
+		<div>
+			<div class="logo">
+				<a href="https://apps.eurofound.europa.eu/" rel="external noopener noreferrer"><span>Eurofound apps</span></a>
+			</div>
+	
+			<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+				<button class="menu-icon" type="button" data-toggle="responsive-menu">Menu</button>
+			</div>
+			
+			<div class="top-bar" id="responsive-menu">
+				<nav class="main-navigation" role="navigation" aria-label="Main navigation">
+					<ul class="menu vertical accordion-menu large-horizontal" data-accordion-menu>
+						<li>
+							<a href="index.html">Other Eurofound apps</a>
+							<ul class="menu vertical nested large-horizontal is-active">
+								<li >
+									<a href="index.html">Homepage</a>
+								</li>
+								<li class="active">
+									<a href="listing-type.html">Listing page type</a>
+								</li>
+								<li  >
+									<a href="listing-country.html">Listing page country</a>
+								</li>
+								<li  >
+									<a href="detail.html">Detail page A</a>
+								</li>
+								<li  >
+									<a href="lp-2.html">Deail page B</a>
+								</li>
+								<li >
+									<a href="restructuring-statistics.html">Restructuring statistics</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<nav class="side-navigation hide-for-large" role="navigation" aria-label="Secondary navigation">
+					<ul class="vertical menu accordion-menu" data-accordion-menu>
+						<li><a href="index.html">Overview</a></li>
+				
+								<li><a href="components/accordion.html">Accordion</a></li>
+								<li><a href="components/buttons.html">Buttons</a></li>
+								<li><a href="components/cards.html">Cards</a></li>
+								<li><a href="components/carousel.html">Carousel</a></li>
+								<li><a href="components/charts.html">Charts</a></li>
+								<li><a href="components/cookies.html">Cookies</a></li>
+								<li><a href="components/dictionary-index.html">Dictionary Index</a></li>
+								<li><a href="components/form.html">Form</a></li>
+								<li><a href="components/hero.html">Hero</a></li>
+								<li><a href="components/language-selector.html">Language selector</a></li>
+								<li><a href="components/lists.html">Lists</a></li>
+								<li><a href="components/messages.html">Messages</a></li>
+								<li><a href="components/modals.html">Modals</a></li>
+								<li><a href="components/surfaces.html">Surfaces</a></li>
+								<li><a href="components/tabs.html">Tabs</a></li>
+								<li><a href="components/tags.html">Tags</a></li>
+								<li><a href="components/teasers.html">Teasers</a></li>
+								<li><a href="components/tooltips.html">Tooltips</a></li>
+								<li><a href="components/typography.html">Typography</a></li>
+				
+						<li>
+							<a href="#">Nested navigation</a>
+							<ul class="menu vertical nested">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</nav>		</div>
+		</div>
+	</header>
+	<main>
+		<section class="site-header surface-b short" >
+			<div>
+				<div class="content">
+						<p class="title">Restructuring events database</p>
+					<p class="subtitle display-h3">Factsheets of large-scale restructuring events</p>
+					<p>The restructuring events database contains factsheets with data on large-scale restructuring events reported in the principal national media in each EU member state. It has been in existence since 2002.</p>
+					<br>
+					<a href="https://www.eurofound.europa.eu/data/minimum-wages-pilot-project" target="_blank" class="button secondary icon-left icon-info">Methodology</a>
+				</div>
+				<div class="image">
+					<img alt="Add image alt text here" src="assets/img/restructuring-events.svg">
+				</div>
+			</div>
+		</section>
+		<style>
+			.panel-types {
+				background-size: 150px;
+				background-repeat: no-repeat;
+				background-position: calc(100% - 40px) 30px;
+				margin: 30px 0;
+			}
+	
+			.panel-type-relocation {
+				background-image: url('assets/img/type-icons/relocation-white.svg');
+			}
+		</style>
+	
+		<section class="main-content">
+			<div>
+				<div class="content">
+					<div class="page-header surface-c panel panel-types panel-type-relocation">
+						<nav aria-label="You are here:" role="navigation">
+							<ul class="breadcrumbs">
+								<li><a href="#">Restructuring factsheets</a></li>
+								<li>
+									<span class="show-for-sr">Current: </span> Types of restructuring
+								</li>
+							</ul>
+						</nav>
+						<h1>Relocation</h1>
+						<p class="content">Relocation is a type of restructuring where a company moves its operations to a
+							different location. This could involve moving an entire facility, department, or team to a new
+							location, often with the goal of reducing costs, accessing new markets, or improving efficiency.
+							Relocation can impact employees, customers, and the local community.</p>
+	
+						<canvas id="myChart" style="width:100%; height: 200px"></canvas>
+					</div>
+					<hr>
+					<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+	
+					<script>
+						// Define the data for the chart
+						const data = {
+							labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
+							datasets: [{
+								label: "Data",
+								data: [100, 120, 130, 90, 120, 95],
+								fill: false,
+								borderColor: "rgb(75, 192, 192)",
+								tension: 0.1
+							}]
+						};
+	
+						// Create the chart
+						const ctx = document.getElementById("myChart").getContext("2d");
+						const myChart = new Chart(ctx, {
+							type: "line",
+							data: data,
+							options: {
+								scales: {
+									xAxes: [{
+										ticks: {
+											fontColor: "white"
+										},
+										gridLines: {
+											color: "rgba(0, 0, 0, 1)"
+										}
+									}],
+									yAxes: [{
+										ticks: {
+											fontColor: "white"
+										},
+										gridLines: {
+											color: "rgba(255, 255, 255)"
+										}
+									}]
+								}
+							}
+						});
+					</script>
+	
+					<style>
+						.listing-accordion img {
+							width: 60px
+						}
+						.tag-restructuring-increase {
+							background-color: #368275;
+						}
+						.tag-restructuring-decrease {
+							background-color: #D44627;
+						}
+					</style>
+	
+					<ul class="accordion listing-accordion" data-accordion data-multi-expand="true"
+						data-allow-all-closed="true">
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2023" data-magellan-target="year-2023">2023</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">12 restructuring cases</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th></th>
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><img src="https://static.eurofound.europa.eu/assets/flags/4-3/at.svg"
+													alt="Austria"></td>
+											<td class="small-text">Austria</td>
+											<td><a href="detail.html">State support for tourism - Access to finance</a><br>31 March
+												2020 </td>
+											<td>
+												<div class="tag small tag-restructuring-decrease">
+													<p>-12,000</p>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><img src="https://static.eurofound.europa.eu/assets/flags/4-3/be.svg"
+													alt="Belgium"></td>
+											<td class="small-text">Belgium</td>
+											<td><a href="detail.html">Bank guarantees for SMEs and one-person enterprises</a><br>31
+												March 2020</td>
+												<td>
+													<div class="tag small tag-restructuring-increase">
+														<p>+12,000</p>
+													</div>
+												</td>									</tr>
+										<tr>
+											<td><img src="https://static.eurofound.europa.eu/assets/flags/4-3/sk.svg"
+													alt="Slovakia"></td>
+											<td class="small-text">Slovakia</td>
+											<td><a href="detail.html">Company subsidy for fixed costs</a><br>10 April 2020</td>
+											<td>
+												<div class="tag small tag-restructuring-increase">
+													<p>+12,000</p>
+												</div>
+											</td>									</tr>
+										<tr>
+											<td><img src="https://static.eurofound.europa.eu/assets/flags/4-3/si.svg"
+													alt="Slovenia"></td>
+											<td class="small-text">Slovenia</td>
+											<td><a href="detail.html">Hardship fund for SMEs - Upper Austria</a><br>20 April 2020</td>
+											<td>
+												<div class="tag small tag-restructuring-increase">
+													<p>+12,000</p>
+												</div>
+											</td>									</tr>
+										<tr>
+											<td><img src="https://static.eurofound.europa.eu/assets/flags/4-3/at.svg"
+													alt="Austria"></td>
+											<td class="small-text">Austria</td>
+											<td><a href="detail.html">Support fund for non-profit organisations</a><br>09 July 2020</td>
+												<td>
+													<div class="tag small tag-restructuring-decrease">
+														<p>-122,000</p>
+													</div>
+												</td>									</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2022" data-magellan-target="year-2022">2022</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+	
+								<h3 class="h5">Bipartite collective agreements</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+	
+								<h3 class="h5">Company practices</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2021" data-magellan-target="year-2021">2021</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2020" data-magellan-target="year-2020">2020</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2019" data-magellan-target="year-2019">2019</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2018" data-magellan-target="year-2018">2018</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2017" data-magellan-target="year-2017">2017</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+						<li class="accordion-item" data-accordion-item>
+							<a href="#" class="accordion-title">
+								<div>
+									<h2 class="title" id="year-2016" data-magellan-target="year-2016">2016</h2>
+								</div>
+							</a>
+							<div class="accordion-content rich-text" data-tab-content>
+								<h3 class="h5">Legislations or other statutory regulations</h3>
+								<table class="stack">
+									<thead>
+										<tr class="show-for-sr">
+											<th>Date</th>
+											<th>Description</th>
+											<th>Tags</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">State support for tourism - Access to finance</a><br>Access to
+												finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">31 March 2020</td>
+											<td><a href="#">Bank guarantees for SMEs and one-person
+													enterprises</a><br>Access to finance</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">10 April 2020</td>
+											<td><a href="#">Company subsidy for fixed costs</a><br>Direct subsidies (full or
+												partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+										<tr>
+											<td class="small-text">20 April 2020</td>
+											<td><a href="#">Hardship fund for SMEs - Upper Austria</a><br>Direct subsidies
+												(full or partial)</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="small-text">09 July 2020</td>
+											<td><a href="#">Support fund for non-profit organisations</a><br>Direct
+												subsidies (full or partial)</td>
+											<td><div class="tag small">
+		<p class="show-for-sr">Tag</p>
+		<p>Updated</p>
+	</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+	
+					</ul>
+	
+				</div>
+	
+				<aside class="table-of-contents" id="sticky-toc">
+					<div class="sticky-container" data-sticky-container>
+						<div class="sticky" data-sticky data-sticky-on="large" data-top-anchor="sticky-toc:top"
+							data-btm-anchor="sticky-toc:bottom">
+							<nav role="navigation" aria-label="Table of contents">
+								<h2 class="title">Restructuring events by year:</h2>
+								<ul class="vertical menu" data-magellan>
+									<li><a href="#year-2023">2023</a></li>
+									<li><a href="#year-2022">2022</a></li>
+									<li><a href="#year-2021">2021</a></li>
+									<li><a href="#year-2020">2020</a></li>
+									<li><a href="#year-2019">2019</a></li>
+									<li><a href="#year-2018">2018</a></li>
+									<li><a href="#year-2017">2017</a></li>
+									<li><a href="#year-2016">2016</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</aside>
+	
+			</div>
+		</section>
+	</main>
+	
+	<footer class="footer surface-d">
+		<div>
+			<div class="footer-top">
+				<div class="logo">
+					<a href="https://www.eurofound.europa.eu/"><span>Eurofound</span></a>
+				</div>
+				<p class="moto"><a href="https://apps.eurofound.europa.eu">Eurofound apps</a></p>
+				<div class="small-list 
+				horizontal bullets rich-text">
+					<h2 class="heading show-for-sr">Quick links</h2>
+					<ul>
+						<li><a href="#">Link1</a></li>
+						<li><a href="#">Link2</a></li>
+						<li><a href="#">Link3</a></li>
+						<li><a href="#">Link4</a></li>
+					</ul>
+				</div>		</div>
+			<!--
+			<p class="disclaimer small-text">
+				Disclaimer: This information has not been subject to the full Eurofound evaluation, editorial and publication process.
+			</p>
+			-->
+			<!--
+			<p class="copyright small-text">
+				© 2023 Eurofound
+			</p>
+			-->
+		</div>
+	</footer></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

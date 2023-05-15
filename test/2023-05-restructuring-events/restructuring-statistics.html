@@ -1,0 +1,458 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Restructuring events database</title>
+		<link rel="stylesheet" href="assets/css/app.css">
+		<!--Webtools-->
+		<script defer src="https://europa.eu/webtools/load.js"></script>
+	</head>
+<body>
+<div class="page">
+	<header class="header surface-c">
+		<div>
+			<div class="logo">
+				<a href="https://apps.eurofound.europa.eu/" rel="external noopener noreferrer"><span>Eurofound apps</span></a>
+			</div>
+	
+			<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+				<button class="menu-icon" type="button" data-toggle="responsive-menu">Menu</button>
+			</div>
+			
+			<div class="top-bar" id="responsive-menu">
+				<nav class="main-navigation" role="navigation" aria-label="Main navigation">
+					<ul class="menu vertical accordion-menu large-horizontal" data-accordion-menu>
+						<li>
+							<a href="index.html">Other Eurofound apps</a>
+							<ul class="menu vertical nested large-horizontal is-active">
+								<li >
+									<a href="index.html">Homepage</a>
+								</li>
+								<li >
+									<a href="listing-type.html">Listing page type</a>
+								</li>
+								<li  >
+									<a href="listing-country.html">Listing page country</a>
+								</li>
+								<li  >
+									<a href="detail.html">Detail page A</a>
+								</li>
+								<li  >
+									<a href="lp-2.html">Deail page B</a>
+								</li>
+								<li class="active">
+									<a href="restructuring-statistics.html">Restructuring statistics</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<nav class="side-navigation hide-for-large" role="navigation" aria-label="Secondary navigation">
+					<ul class="vertical menu accordion-menu" data-accordion-menu>
+						<li><a href="index.html">Overview</a></li>
+				
+								<li><a href="components/accordion.html">Accordion</a></li>
+								<li><a href="components/buttons.html">Buttons</a></li>
+								<li><a href="components/cards.html">Cards</a></li>
+								<li><a href="components/carousel.html">Carousel</a></li>
+								<li><a href="components/charts.html">Charts</a></li>
+								<li><a href="components/cookies.html">Cookies</a></li>
+								<li><a href="components/dictionary-index.html">Dictionary Index</a></li>
+								<li><a href="components/form.html">Form</a></li>
+								<li><a href="components/hero.html">Hero</a></li>
+								<li><a href="components/language-selector.html">Language selector</a></li>
+								<li><a href="components/lists.html">Lists</a></li>
+								<li><a href="components/messages.html">Messages</a></li>
+								<li><a href="components/modals.html">Modals</a></li>
+								<li><a href="components/surfaces.html">Surfaces</a></li>
+								<li><a href="components/tabs.html">Tabs</a></li>
+								<li><a href="components/tags.html">Tags</a></li>
+								<li><a href="components/teasers.html">Teasers</a></li>
+								<li><a href="components/tooltips.html">Tooltips</a></li>
+								<li><a href="components/typography.html">Typography</a></li>
+				
+						<li>
+							<a href="#">Nested navigation</a>
+							<ul class="menu vertical nested">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</nav>		</div>
+		</div>
+	</header>
+	<main>
+		<section class="site-header surface-b short" >
+			<div>
+				<div class="content">
+						<p class="title">Restructuring events database</p>
+					<p class="subtitle display-h3">Factsheets of large-scale restructuring events</p>
+					<p>The restructuring events database contains factsheets with data on large-scale restructuring events reported in the principal national media in each EU member state. It has been in existence since 2002.</p>
+					<br>
+					<a href="https://www.eurofound.europa.eu/data/minimum-wages-pilot-project" target="_blank" class="button secondary icon-left icon-info">Methodology</a>
+				</div>
+				<div class="image">
+					<img alt="Add image alt text here" src="assets/img/restructuring-events.svg">
+				</div>
+			</div>
+		</section>	<section class="main-content">
+			<div>
+				<div class="content">
+					<h1>Restructuring calculator</h1>
+	
+					<p>You can use this tool to explore summary data from the restructuring events database (factsheets) by country, by sector and by restructuring type. Please note the following:</p>
+	<ul class="bullet-list">
+	<li>World and EU cases are excluded from the tables in order to avoid double-counting; relevant cases are submitted by national correspondents for the restructuring impacts in individual member states. Such large transnational cases account for about 5% of total observations.</li>
+	<li>Some minor adjustments are made for the small number of cases which involve both announced Job gains and Job losses. The lowest of the two figures is considered null.</li>
+	<li>The full dataset can be made available for non-commercial research purposes. If interested, please <a href="https://forms.office.com/r/b1Jk2G6xT8" target="_blank">submit a request to access the ERM dataset</a>.</li>
+	<li>In light of the UK’s withdrawal from the European Union on 31 January 2020, it should be noted that data published on the Eurofound website may include the 28 EU Member States, as the UK was covered in earlier research. This will be progressively amended to reflect the current composition of the 27 EU Member States.</li>
+	</ul>
+	
+					<div class="panel surface-c">
+						<form method="get" class="form search-form">
+							
+							<div class="grid-x grid-margin-x">
+						
+								<div class="cell">
+									<div class="expanded button-group">
+										<a class="button">Country</a>
+										<a class="button">Sector</a>
+										<a class="button">Restructuring type</a>
+									  </div>
+								</div>
+						
+						
+								<div class="cell medium-6 xlarge-3">
+									<label class="field field-type-select ">
+										<span class="label ">Sector</span>
+											<select class="multy-select" name=Sector multiple="multiple" >
+											<option value="option-1">Option 1</option>
+											<option value="option-2">Option 2</option>
+											<option value="option-3">Option 3</option>
+											<option value="option-4">Option 4</option>
+											<option value="option-5">Option 5</option>
+											<option value="option-6">Option 6</option>
+											<option value="option-7">Option 7</option>
+											<option value="option-8">Option 8</option>
+											<option value="option-9">Option 9</option>
+											<option value="option-10">Option 10</option>
+										</select>
+									</label>		</div>
+						
+								<div class="cell medium-6 xlarge-3">
+									<label class="field field-type-select  ">
+										<span class="label ">Restructuring type</span>
+										<span class="input">
+											<select name=Restructuring type >
+												<option value="option-1">Option 1</option>
+												<option value="option-2">Option 2</option>
+												<option value="option-3">Option 3</option>
+											</select>
+										</span>
+									</label>		</div>
+						
+						
+								<div class="cell">
+									<div class="field field-type-slider inline-label">
+										<span class="label">Year</span>
+										<div class="slider-wrapper">
+											<div class="slider" data-slider data-start=2002 data-initial-start=2013 data-end=2022  data-initial-end=2018>
+												<span class="slider-handle" data-slider-handle role="slider" aria-label="Slider start handle" tabindex="1">
+													<label class="slider-label">
+														<span class="label show-for-sr">Start</span>
+														<input class="slider-value">
+													</label>
+												</span>
+												<span class="slider-fill" data-slider-fill></span>
+												<span class="slider-handle" data-slider-handle role="slider" aria-label="Slider end handle" tabindex="1">
+													<label class="slider-label">
+														<span class="label show-for-sr">End</span>
+														<input class="slider-value">
+													</label>
+												</span>
+											</div>
+											<div class="range">
+												<span>2002 </span>
+												<span>2022</span>
+											</div>
+										</div>
+									</div>		</div>
+						
+								<div class="cell">
+									<div class="actions">
+										<button class="button secondary" type="submit">Apply</button>
+										<input class="button outlined secondary" type="reset" value="Reset"></input>
+									</div>		</div>
+						
+							</div>
+						</form>				</div>
+	
+					<div class="results-section" style="margin-top: 15px">
+						<table>
+							<thead>
+							  <tr>
+								<th>Country</th>
+								<th>Cases of job loss</th>
+								<th>Total of job loss</th>
+								<th>Median job loss</th>
+								<th>Job loss percentage</th>
+							  </tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Austria</td>
+									<td>352</td>
+									<td>206560</td>
+									<td>159</td>
+									<td>2.64</td>
+								  </tr>
+							  <tr>
+								<td>Belgium</td>
+								<td>653</td>
+								<td>206560</td>
+								<td>159</td>
+								<td>2.64</td>
+							  </tr>
+							  <tr>
+								<td>Bulgaria</td>
+								<td>60</td>
+								<td>28591</td>
+								<td>226</td>
+								<td>0.37</td>
+							  </tr>
+							  <tr>
+								<td>Croatia</td>
+								<td>72</td>
+								<td>21246</td>
+								<td>200</td>
+								<td>0.27</td>
+							  </tr>
+							  <tr>
+								<td>Cyprus</td>
+								<td>27</td>
+								<td>10307</td>
+								<td>265</td>
+								<td>0.13</td>
+							  </tr>
+							  <tr>
+								<td>Czech Republic</td>
+								<td>442</td>
+								<td>202829</td>
+								<td>200</td>
+								<td>2.59</td>
+							  </tr>
+							  <tr>
+								<td>Denmark</td>
+								<td>400</td>
+								<td>106471</td>
+								<td>178.5</td>
+								<td>1.36</td>
+							  </tr>
+							  <tr>
+								<td>Estonia</td>
+								<td>119</td>
+								<td>23151</td>
+								<td>146</td>
+								<td>0.3</td>
+							  </tr>
+							  <tr>
+								<td>Finland</td>
+								<td>645</td>
+								<td>146581</td>
+								<td>150</td>
+								<td>1.87</td>
+							  </tr>
+							  <tr>
+								<td>France</td>
+								<td>1976</td>
+								<td>1024000</td>
+								<td>190</td>
+								<td>13.08</td>
+							  </tr>
+							  <tr>
+								<td>Germany</td>
+								<td>1825</td>
+								<td>1267938</td>
+								<td>280</td>
+								<td>16.19</td>
+							  </tr>
+							  <tr>
+								<td>Greece</td>
+								<td>165</td>
+								<td>121200</td>
+								<td>270</td>
+								<td>1.55</td>
+							  </tr>
+							  <tr>
+								<td>Hungary</td>
+								<td>347</td>
+								<td>163788</td>
+								<td>250</td>
+								<td>2.09</td>
+							  </tr>
+							  <tr>
+								<td>Ireland</td>
+								<td>435</td>
+								<td>118988</td>
+								<td>173</td>
+								<td>1.52</td>
+							  </tr>
+							  <tr>
+								<td>Italy</td>
+								<td>814</td>
+								<td>416462</td>
+								<td>225.5</td>
+								<td>5.32</td>
+							  </tr>
+							  <tr>
+								<td>Latvia</td>
+								<td>55</td>
+								<td>18557</td>
+								<td>238</td>
+								<td>0.24</td>
+							  </tr>
+							  <tr>
+								<td>Lithuania</td>
+								<td>177</td>
+								<td>45247</td>
+								<td>151</td>
+								<td>0.58</td>
+							  </tr>
+							  <tr>
+								<td>Luxembourg</td>
+								<td>45</td>
+								<td>9121</td>
+								<td>175</td>
+								<td>0.12</td>
+							  </tr>
+							  <tr>
+								<td>Malta</td>
+								<td>22</td>
+								<td>6480</td>
+								<td>160</td>
+								<td>0.08</td>
+							  </tr>
+							  <tr>
+								<td>Netherlands</td>
+								<td>833</td>
+								<td>377334</td>
+								<td>200</td>
+								<td>4.82</td>
+							  </tr>
+							  <tr>
+								<td>Norway</td>
+								<td>261</td>
+								<td>55202</td>
+								<td>150</td>
+								<td>0.7</td>
+							  </tr>
+							  <tr>
+								<td>Poland</td>
+								<td>836</td>
+								<td>554170</td>
+								<td>254</td>
+								<td>7.08</td>
+							  </tr>
+							  <tr>
+								<td>Portugal</td>
+								<td>276</td>
+								<td>90165</td>
+								<td>200</td>
+								<td>1.15</td>
+							  </tr>
+							  <tr>
+								<td>Romania</td>
+								<td>360</td>
+								<td>298941</td>
+								<td>367.5</td>
+								<td>3.82</td>
+							  </tr>
+							  <tr>
+								<td>Slovakia</td>
+								<td>228</td>
+								<td>74927</td>
+								<td>200</td>
+								<td>0.96</td>
+							  </tr>
+							  <tr>
+								<td>Slovenia</td>
+								<td>290</td>
+								<td>69721</td>
+								<td>155</td>
+								<td>0.89</td>
+							  </tr>
+							  <tr>
+								<td>Spain</td>
+								<td>816</td>
+								<td>374498</td>
+								<td>224.5</td>
+								<td>4.78</td>
+							  </tr>
+							  <tr>
+								<td>Sweden</td>
+								<td>893</td>
+								<td>257257</td>
+								<td>150</td>
+								<td>3.29</td>
+							  </tr>
+							  <tr>
+								<td>United Kingdom</td>
+								<td>2762</td>
+								<td>1632063</td>
+								<td>280</td>
+								<td>20.84</td>
+							  </tr>
+							  <tr>
+								<td>TOTAL</td>
+								<td>16186</td>
+								<td>7831190</td>
+								<td></td>
+								<td>100.00</td>
+							  </tr>
+							</tbody>
+							</table>
+					</div>
+	
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<footer class="footer surface-d">
+		<div>
+			<div class="footer-top">
+				<div class="logo">
+					<a href="https://www.eurofound.europa.eu/"><span>Eurofound</span></a>
+				</div>
+				<p class="moto"><a href="https://apps.eurofound.europa.eu">Eurofound apps</a></p>
+				<div class="small-list 
+				horizontal bullets rich-text">
+					<h2 class="heading show-for-sr">Quick links</h2>
+					<ul>
+						<li><a href="#">Link1</a></li>
+						<li><a href="#">Link2</a></li>
+						<li><a href="#">Link3</a></li>
+						<li><a href="#">Link4</a></li>
+					</ul>
+				</div>		</div>
+			<!--
+			<p class="disclaimer small-text">
+				Disclaimer: This information has not been subject to the full Eurofound evaluation, editorial and publication process.
+			</p>
+			-->
+			<!--
+			<p class="copyright small-text">
+				© 2023 Eurofound
+			</p>
+			-->
+		</div>
+	</footer></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
