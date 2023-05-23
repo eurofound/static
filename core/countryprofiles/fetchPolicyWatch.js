@@ -1,3 +1,12 @@
+// Define the PapaParse library dynamically
+const script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js';
+script.onload = function() {
+  // Call the fetchCSVData function after PapaParse is loaded
+  fetchCSVData(country);
+};
+document.head.appendChild(script);
+
 let currentPage = 1;
 const rowsPerPage = 10;
 let filteredData = [];
@@ -10,6 +19,7 @@ async function fetchCSVData(country) {
   filteredData = parsedData.filter(row => row.Country === country);
   displayData();
 }
+
 
 function displayData() {
   const tableBody = document.getElementById("tableBody");
