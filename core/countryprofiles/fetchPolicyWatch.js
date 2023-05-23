@@ -47,7 +47,11 @@ function displayData() {
     tr.appendChild(categoryCell);
 
     const urlCell = document.createElement("td");
-    urlCell.textContent = '<a href="https://static.eurofound.europa.eu/covid19db/" class="btn btn-primary">View</a>';
+    const link = document.createElement("a");
+    link.href = "https://static.eurofound.europa.eu/covid19db/";
+    link.className = "btn btn-primary";
+    link.textContent = "View";
+    urlCell.appendChild(link);
     tr.appendChild(urlCell);
 
     policyWatchTableBody.appendChild(tr);
