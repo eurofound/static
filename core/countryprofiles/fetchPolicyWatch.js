@@ -24,8 +24,8 @@ async function fetchCSVData(country) {
 }
 
 function displayData() {
-  const tableBody = document.getElementById("tableBody");
-  tableBody.innerHTML = "";
+  const policyWatchTableBody = document.getElementById("policyWatchTableBody");
+  policyWatchTableBody.innerHTML = "";
 
   const start = (currentPage - 1) * rowsPerPage;
   const end = Math.min(start + rowsPerPage, filteredData.length);
@@ -38,11 +38,19 @@ function displayData() {
     titleCell.textContent = row.Title;
     tr.appendChild(titleCell);
 
-    const identifierCell = document.createElement("td");
-    identifierCell.textContent = row.Identifier;
-    tr.appendChild(identifierCell);
+    const dateCell = document.createElement("td");
+    dateCell.textContent = row["Start date"];
+    tr.appendChild(dateCell);
 
-    tableBody.appendChild(tr);
+    const categoryCell = document.createElement("td");
+    categoryCell.textContent = row.Subcategory;
+    tr.appendChild(categoryCell);
+
+    const urlCell = document.createElement("td");
+    urlCell.textContent = '<a href="https://static.eurofound.europa.eu/covid19db/" class="btn btn-primary">View</a>';
+    tr.appendChild(urlCell);
+
+    policyWatchTableBody.appendChild(tr);
   }
   
   updatePaginationButtons();
