@@ -1,17 +1,20 @@
-// Define the PapaParse library dynamically
-const script = document.createElement('script');
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js';
-script.onload = function() {
-  // Call the fetchCSVData function after PapaParse is loaded
-  fetchCSVData(country);
-};
-document.head.appendChild(script);
-
 let currentPage = 1;
 const rowsPerPage = 10;
 let filteredData = [];
 
+// Function to load the PapaParse library dynamically
+function loadPapaParse(callback) {
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js';
+  script.onload = callback;
+  document.head.appendChild(script);
+}
+
 async function fetchCSVData(country) {
+  await new Promise((resolve) => {
+    loadPapaParse(resolve);
+  });
+
   const response = await fetch('https://static.eurofound.europa.eu/covid19db/data/covid19db.csv');
   const csvData = await response.text();
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
@@ -19,7 +22,6 @@ async function fetchCSVData(country) {
   filteredData = parsedData.filter(row => row.Country === country);
   displayData();
 }
-
 
 function displayData() {
   const tableBody = document.getElementById("tableBody");
