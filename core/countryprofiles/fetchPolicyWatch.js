@@ -20,7 +20,19 @@ async function fetchCSVData(country) {
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
 
   filteredData = parsedData.filter(row => row.Country === country);
+  saveFilteredDataToSessionStorage(); // Save filteredData to session storage
   displayData();
+}
+
+function saveFilteredDataToSessionStorage() {
+  sessionStorage.setItem('filteredData', JSON.stringify(filteredData));
+}
+
+function loadFilteredDataFromSessionStorage() {
+  const filteredDataJSON = sessionStorage.getItem('filteredData');
+  if (filteredDataJSON) {
+    filteredData = JSON.parse(filteredDataJSON);
+  }
 }
 
 function displayData() {
@@ -84,18 +96,19 @@ function nextPage() {
 
 function searchFunction() {
   const input = document.getElementById("searchInput");
-const searchValue = input.value.toLowerCase();
-if (searchValue) {
-filteredData = filteredData.filter(row => {
-  return row.Title.toLowerCase().includes(searchValue) || row.Identifier.toLowerCase().includes(searchValue);
-});
-} else {
-fetchCSVData(); // Re-fetch data if the search value is empty
+  const searchValue = input.value.toLowerCase();
+  if (searchValue) {
+    filteredData = filteredData.filter(row => {
+      return row.Title.toLowerCase().includes(searchValue) || row.Identifier.toLowerCase().includes(searchValue);
+    });
+  } else {
+    loadFilteredDataFromSessionStorage(); // Load filteredData from session storage
+  }
+
+  currentPage = 1; // Reset current page
+  displayData(); // Update table with the filtered data
 }
 
-currentPage = 1; // Reset current page
-displayData(); // Update table with the filtered data
-}
-
-// Fetch and display data on page load
-fetchCSVData();
+// Load filteredData from session storage on page load
+loadFilteredDataFromSessionStorage();
+displayData();
