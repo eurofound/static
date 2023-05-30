@@ -26,10 +26,10 @@
 				<nav class="main-navigation" role="navigation" aria-label="Main navigation">
 					<ul class="menu vertical accordion-menu large-horizontal" data-accordion-menu>
 						<li>
-							<a href="index.html">Other Eurofound apps</a>
+							<a href="homepage.html">Other Eurofound apps</a>
 							<ul class="menu vertical nested large-horizontal is-active">
 								<li >
-									<a href="index.html">Homepage</a>
+									<a href="homepage.html">Homepage</a>
 								</li>
 								<li >
 									<a href="listing-type.html">Listing page type</a>
@@ -38,10 +38,10 @@
 									<a href="listing-country.html">Listing page country</a>
 								</li>
 								<li  >
-									<a href="detail.html">Detail page A</a>
+									<a href="detail-a.html">Detail page A</a>
 								</li>
 								<li  >
-									<a href="lp-2.html">Deail page B</a>
+									<a href="detail-b.html">Deail page B</a>
 								</li>
 								<li >
 									<a href="restructuring-statistics.html">Restructuring statistics</a>
@@ -128,54 +128,11 @@
 							</ul>
 						</nav>
 						<h1>Poland</h1>
-						<p class="content">Eurofound has in total identified 2,200 restructuring cases in Poland.</p>
+						<p class="content">Eurofound has in total identified 248 restructuring cases in Poland.</p>
 	
-						<canvas id="myChart" style="width:100%; height: 200px"></canvas>
 					</div>
 					<hr>
-					<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	
-	
-					<script>
-						// Define the data for the chart
-						const data = {
-							labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
-							datasets: [{
-								label: "Data",
-								data: [100, 120, 130, 90, 120, 95],
-								fill: false,
-								borderColor: "rgb(75, 192, 192)",
-								tension: 0.1
-							}]
-						};
-	
-						// Create the chart
-						const ctx = document.getElementById("myChart").getContext("2d");
-						const myChart = new Chart(ctx, {
-							type: "line",
-							data: data,
-							options: {
-								scales: {
-									xAxes: [{
-										ticks: {
-											fontColor: "white"
-										},
-										gridLines: {
-											color: "rgba(0, 0, 0, 1)"
-										}
-									}],
-									yAxes: [{
-										ticks: {
-											fontColor: "white"
-										},
-										gridLines: {
-											color: "rgba(255, 255, 255)"
-										}
-									}]
-								}
-							}
-						});
-					</script>
+				
 	
 					<style>
 						.listing-accordion img {
