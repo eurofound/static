@@ -1,0 +1,140 @@
+<style type="text/css">
+.tile {
+    height: 200px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tile:hover {
+    opacity: 0.8;
+  }
+  
+  .tile.active {
+    opacity: 1 !important;
+  }
+  
+  .tile { padding: 0!important }
+  
+  .tile-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6); 
+    color: #fff!important;
+    width: 100%;
+    padding: 10px;
+  }
+  </style>
+  <div class="efd-paragraph efd-paragraph--type--oe-banner efd-paragraph--view-mode--default">
+  <div class="row bg-lighter text-dark bcl-banner hero full-width" style="background-size: cover; background-image:url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/digitalisation-artboard.png'); min-height:400px">
+  <div class="container">
+  <div class="bcl-banner__content">
+  <div class="display-6 mb-3 bcl-heading">wf</div>
+  
+  <p class="mb-4">wf</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="container-fluid" style="margin-top:20px;">
+  <h2>Select a topic</h2>
+  
+  <div class="row" style="margin-bottom: 15px">
+  <div class="col-sm-4">
+  <div class="tile" id="tile1" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_slide/public/2023-06/adobestock_598384469.jpeg')">
+  <div class="tile-title">Title 1</div>
+  </div>
+  </div>
+  
+  <div class="col-sm-4">
+  <div class="tile" id="tile2" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_slide/public/2023-06/adobestock_598384469.jpeg')">
+  <div class="tile-title">Title 2</div>
+  </div>
+  </div>
+  
+  <div class="col-sm-4">
+  <div class="tile" id="tile3" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_full_content_image/public/2021-10/covid-19_topic_image06102021_0_3.png?itok=0YUaBOak')">
+  <div class="tile-title">Title 3</div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="col-sm-4">
+  <div class="tile" id="tile4" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_full_content_image/public/2021-10/covid-19_topic_image06102021_0_3.png?itok=0YUaBOak')">
+  <div class="tile-title">Title 4</div>
+  </div>
+  </div>
+  
+  <div class="col-sm-4">
+  <div class="tile" id="tile5" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-05/ef23037.png')">
+  <div class="tile-title">Title 5</div>
+  </div>
+  </div>
+  
+  <div class="col-sm-4">
+  <div class="tile" id="tile6" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-05/ef23037.png')">
+  <div class="tile-title">Title 6</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="container-fluid" id="content-section" style="background:#E8EBEC; padding: 15px; margin-top:20px">
+  <h2 id="content-title">&nbsp;</h2>
+  
+  <p id="content-text">&nbsp;</p>
+  </div>
+  <script>// Initial content
+  const content = {
+    tile1: {title: "Title 1", text: "Text for tile 1"},
+    tile2: {title: "Title 2", text: "Text for tile 2"},
+    tile3: {title: "Title 3", text: "Text for tile 3"},
+    tile4: {title: "Title 4", text: "Text for tile 4"},
+    tile5: {title: "Title 5", text: "Text for tile 5"},
+    tile6: {title: "Title 6", text: "Text for tile 6"},
+  };
+  
+  // Set content for initial or deep linked tile
+  function setContent(tileId) {
+    document.getElementById('content-title').innerText = content[tileId].title;
+    document.getElementById('content-text').innerText = content[tileId].text;
+  
+    // Clear active class
+    document.querySelectorAll('.tile').forEach(el => el.classList.remove('active'));
+  
+    // Set active class for current tile
+    document.getElementById(tileId).classList.add('active');
+  }
+  
+  // Handle tile click
+  document.querySelectorAll('.tile').forEach(el => {
+    el.addEventListener('click', function() {
+      window.location.hash = this.id;
+    });
+  });
+  
+  // Set content when hash changes
+  window.addEventListener('hashchange', function() {
+    setContent(window.location.hash.substring(1));
+  }, false);
+  
+  // Set initial content
+  if (window.location.hash) {
+    // If deep linked, set content to the linked tile
+    setContent(window.location.hash.substring(1));
+  } else {
+    // Default to tile1
+    setContent('tile1');
+  }
+  // Handle tile click
+  document.querySelectorAll('.tile').forEach(el => {
+    el.addEventListener('click', function() {
+      window.location.hash = this.id;
+  
+      // Scroll to content section
+      document.getElementById('content-section').scrollIntoView({behavior: 'smooth'});
+    });
+  });
+  
+  </script>
