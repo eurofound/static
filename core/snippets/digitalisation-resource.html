@@ -1,20 +1,21 @@
-<style type="text/css">
-.tile {
-    height: 200px;
+<style type="text/css">.tile {
+    height: 250px;
     cursor: pointer;
     position: relative;
+    background-size: cover;
+    border: 5px solid #4C4C4C;
   }
   
   .tile:hover {
     opacity: 0.8;
+    border: 5px solid #368275;
   }
   
   .tile.active {
     opacity: 1 !important;
+    border: 5px solid #368275 !important;
   }
-  
-  .tile { padding: 0!important }
-  
+    
   .tile-title {
     position: absolute;
     bottom: 0;
@@ -23,61 +24,59 @@
     width: 100%;
     padding: 10px;
   }
-  </style>
+</style>
+<div class="container-fluid" style="margin-top:20px;">
+<h2>Select a topic</h2>
 
-  
-  <div class="container-fluid" style="margin-top:20px;">
-  <h2>Select a topic</h2>
-  
-  <div class="row" style="margin-bottom: 15px">
-  <div class="col-sm-4">
-  <div class="tile" id="tile1" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_slide/public/2023-06/adobestock_598384469.jpeg')">
-  <div class="tile-title">Title 1</div>
-  </div>
-  </div>
-  
-  <div class="col-sm-4">
-  <div class="tile" id="tile2" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_slide/public/2023-06/adobestock_598384469.jpeg')">
-  <div class="tile-title">Title 2</div>
-  </div>
-  </div>
-  
-  <div class="col-sm-4">
-  <div class="tile" id="tile3" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_full_content_image/public/2021-10/covid-19_topic_image06102021_0_3.png?itok=0YUaBOak')">
-  <div class="tile-title">Title 3</div>
-  </div>
-  </div>
-  </div>
-  
-  <div class="row">
-  <div class="col-sm-4">
-  <div class="tile" id="tile4" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/styles/ef_full_content_image/public/2021-10/covid-19_topic_image06102021_0_3.png?itok=0YUaBOak')">
-  <div class="tile-title">Title 4</div>
-  </div>
-  </div>
-  
-  <div class="col-sm-4">
-  <div class="tile" id="tile5" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-05/ef23037.png')">
-  <div class="tile-title">Title 5</div>
-  </div>
-  </div>
-  
-  <div class="col-sm-4">
-  <div class="tile" id="tile6" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-05/ef23037.png')">
-  <div class="tile-title">Title 6</div>
-  </div>
-  </div>
-  </div>
-  </div>
-  
-  <div class="container-fluid" id="content-section" style="background:#E8EBEC; padding: 15px; margin-top:20px">
-  <h2 id="content-title">&nbsp;</h2>
-  
-  <p id="content-text">&nbsp;</p>
-  </div>
-  <script>// Initial content
+<div class="row" style="margin-bottom: 15px">
+<div class="col-sm-4">
+<div class="tile" id="tile1" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/monitoring.png')">
+<div class="tile-title">Digital technologies bringing employee monitoring to a new level</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="tile" id="tile2" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/socialdialogue.png')">
+<div class="tile-title">Strengthenin social dialogue to deal with the digital transformation of work</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="tile" id="tile3" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/platform.png')">
+<div class="tile-title">Platform work: A test bed for algorithmic management</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-4">
+<div class="tile" id="tile4" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/digitalisation-1.png')">
+<div class="tile-title">Title 4</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="tile" id="tile5" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/digitalisation-1.png')">
+<div class="tile-title">Title 5</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="tile" id="tile6" style="background-image: url('https://eurofound8.acc.fpfis.tech.ec.europa.eu/sites/default/files/2023-06/digitalisation-1.png')">
+<div class="tile-title">Title 6</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid" id="content-section" style="background:#E8EBEC; padding: 15px; margin-top:20px">
+<h2 id="content-title">&nbsp;</h2>
+
+<p id="content-text">&nbsp;</p>
+</div>
+<script>// Initial content
   const content = {
-    tile1: {title: "Title 1", text: "Text for tile 1"},
+    tile1: {title: "Digital technologies bringing employee monitoring to a new level ", text: "Text for tile 1"},
     tile2: {title: "Title 2", text: "Text for tile 2"},
     tile3: {title: "Title 3", text: "Text for tile 3"},
     tile4: {title: "Title 4", text: "Text for tile 4"},
