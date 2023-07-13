@@ -1,4 +1,4 @@
-﻿Country,Organisation,Board Member,Status,Group
+﻿Member State,Organisation,Board Member,Status,Group
 :at: Austria,Federation of Austrian Industries (IV),Tobias Sonnweber,Member,Employer
 :at: Austria,Austrian Association for Public and Social Economy (VOWG),Josef Wirth,Alternate,Employer
 :at: Austria,"Federal Ministry of Labour, Social Affairs, Health Care & Consumer Protection (BMSGP)",Harald Fugger,Member,Government
@@ -18,7 +18,7 @@
 :bg: Bulgaria,Confederation of Independent Trade Unions in Bulgaria (CITUB),Todor Kapitanov,Member,Trade Union
 :bg: Bulgaria,Confederation of Labour Podkrepa,Vesselin Mitov,Alternate,Trade Union
 :cy: Cyprus,Cyprus Employers and Industrialists Federation (OEB),Polyvios Polyviou,Member,Employer
-:cy: Cyprus,Cyprus Employers and Industrialists Federation (OEB),Georges HADJIKALLIS,Alternate,Employer
+:cy: Cyprus,Cyprus Employers and Industrialists Federation (OEB),Georges Hadjikallis,Alternate,Employer
 :cy: Cyprus,"Ministry of Labour, Welfare and Social Insurance",Orestis Messios,Member,Government
 :cy: Cyprus,"Ministry of Labour, Welfare and Social Insurance",Panayiotis Savva,Alternate,Government
 :cy: Cyprus,Cyprus Workers Confederation (SEK),Panikos Argyrides,Member,Trade Union
@@ -26,8 +26,8 @@
 :cz: Czechia,Confederation of Industry of Czech Republic (SPCR),Vladimira Drbalova,Member,Employer
 :cz: Czechia,Association of Small & Medium-sized Enterprises and Crafts of Czech Republic (AMSP CR),Pavla Brecková,Alternate,Employer
 :cz: Czechia,Ministry of Labour and Social Affairs,Vlastimil Vána,Member,Government
-:cz: Czechia,Ministry of Labour and Social Affairs,Ondřej KRÝSL,Alternate,Government
-:cz: Czechia,Czech-Moravian Confederation of Trade Unions (CMKOS),Jiří VAŇÁSEK,Member,Trade Union
+:cz: Czechia,Ministry of Labour and Social Affairs,Ondřej Krýsl,Alternate,Government
+:cz: Czechia,Czech-Moravian Confederation of Trade Unions (CMKOS),Jiří Vaňásek,Member,Trade Union
 :cz: Czechia,Czech-Moravian Confederation of Trade Unions (CMKOS),Jana Maláčová,Alternate,Trade Union
 :de: Germany,Employers & Business Association of Mobility & Transport Service Providers (AGV MOVE),Matthias Rohrmann,Member,Employer
 :de: Germany,Employers Association of Insurance Companies (AGV),Sebastian Hopfner,Alternate,Employer
@@ -39,25 +39,25 @@
 :dk: Denmark,Confederation of Danish Employers (DA),Maja Kluger Dionigi,Alternate,Employer
 :dk: Denmark,Ministry of Employment,Lærke Thorø Borch Sloth,Alternate,Government
 :dk: Denmark,Danish Trade Union Confederation (FH),Maria Bjerre,Member,Trade Union
-:dk: Denmark,Akademikerne,Käthe MUNK RYOM,Alternate,Trade Union
-:ee: Estonia,Estonian Employers Confederation,Kristi SÕBER,Member,Employer
+:dk: Denmark,Akademikerne,Käthe Munk Ryom,Alternate,Trade Union
+:ee: Estonia,Estonian Employers Confederation,Kristi Sõber,Member,Employer
 :ee: Estonia,Estonian Employers Federation,Raul Eamets,Alternate,Employer
 :ee: Estonia,Ministry of Social Affairs,Marian Juurik,Member,Government
 :ee: Estonia,Ministry of Social Affairs,Marion Pajumets,Alternate,Government
 :ee: Estonia,Estonian Trade Union Confederation (EAKL),Jaan-Hendrik Toomel,Member,Trade Union
-:ee: Estonia,Estonian Employees Union Confederation (TALO),Madis IGANÕMM,Alternate,Trade Union
+:ee: Estonia,Estonian Employees Union Confederation (TALO),Madis Iganõmm,Alternate,Trade Union
 :es: Spain,Association of Self-Employed workers (ATA),Celia Ferrero Romero,Member,Employer
 :es: Spain,Spanish Confederation of SMEs,Miguel Canales Gutiérrez,Alternate,Employer
-:es: Spain,Ministry of Labour & Social Economy,Marina GRIÑÓN MONTES,Member,Government
+:es: Spain,Ministry of Labour & Social Economy,Marina Griñón Montes,Member,Government
 :es: Spain,Ministry of Labour & Social Economy,Gloria Ortega González,Alternate,Government
 :es: Spain,General Union of Workers (UGT),Antonio Miguel Luna Pavón,Member,Trade Union
 :es: Spain,Federation of Workers' Commissions (CCOO),Fernando Rocha Sanchez,Alternate,Trade Union
 :fi: Finland,Confederation of Finnish Industries (EK),Katja Miettinen,Member,Employer
-:fi: Finland,Confederation of Finnish Industries (EK),Suvi LAHTI-LEEVE,Alternate,Employer
+:fi: Finland,Confederation of Finnish Industries (EK),Suvi Lahti-Leeve,Alternate,Employer
 :fi: Finland,Ministry of Economic Affairs & Employment,Antti Narhinen,Member,Government
 :fi: Finland,Ministry of Economic Affairs & Employment,Maija Lyly-Yrjänäinen,Alternate,Government
 :fi: Finland,Central Organisation of Finnish Trade Unions (SAK),Juha Antila,Member,Trade Union
-:fi: Finland,Finnish Confederation of Professionals (STTK),Seppo NEVALAINEN,Alternate,Trade Union
+:fi: Finland,Finnish Confederation of Professionals (STTK),Seppo Nevalainen,Alternate,Trade Union
 :fr: France,Union of the Social and United Economy (UDES),Sebastien Darrigrand,Member,Employer
 :fr: France,Movement of Enterprises of France (MEDEF),Anne Vauchez,Alternate,Employer
 :fr: France,"Ministry of Labour, Full Employment & Integration",Nathalie Vaysse,Member,Government
@@ -70,10 +70,10 @@
 :gr: Greece,Ministry of Labour & Social Affairs,Georgios Gourzoulidis,Alternate,Government
 :gr: Greece,General Confederation of Labour (GSEE),Ioannis Poupkos,Member,Trade Union
 :gr: Greece,General Confederation of Labour (GSEE),Panagiotis Kordatos,Alternate,Trade Union
-:hr: Croatia,Croation Employers' Association (HUP),Nuša ŽUNEC,Member,Employer
-:hr: Croatia,Croatian Employers' Association (HUP),Dario ĆORIĆ,Alternate,Employer
-:hr: Croatia,"Ministry of Labour, Pension System, Family & Social Policy",Iva MUSIĆ OREŠKOVIĆ,Member,Government
-:hr: Croatia,"Ministry of Labour, Pension System, Family & Social Policy",Inja OGRIZOVIĆ DŽAMONJA,Alternate,Government
+:hr: Croatia,Croation Employers' Association (HUP),Nuša Žunec,Member,Employer
+:hr: Croatia,Croatian Employers' Association (HUP),Dario Ćorić,Alternate,Employer
+:hr: Croatia,"Ministry of Labour, Pension System, Family & Social Policy",Iva Musić Orešković,Member,Government
+:hr: Croatia,"Ministry of Labour, Pension System, Family & Social Policy",Inja Ogrizović Džamonja,Alternate,Government
 :hr: Croatia,Independent Trade Unions of Croatia (NHS),Marija Hanzevacki,Member,Trade Union
 :hr: Croatia,Union of Autonomous Trade Unions of Croatia (SSSH),Dijana Sobota,Alternate,Trade Union
 :hu: Hungary,BusinessHungary (MGYOSZ),Adrienn Balint,Member,Employer
@@ -96,7 +96,7 @@
 :it: Italy,Italian Labour Union (UIL),Rossella Benedetti,Alternate,Trade Union
 :lt: Lithuania,Lithuanian Business Confederation,Ineta Rizgelé,Member,Employer
 :lt: Lithuania,Lithuanian Investors Forum,Monika Gabalyté,Alternate,Employer
-:lt: Lithuania,Ministry of Social Security & Labour,Donata ŠLEKYTĖ,Member,Government
+:lt: Lithuania,Ministry of Social Security & Labour,Donata Šlekytė,Member,Government
 :lt: Lithuania,Ministry of Social Security & Labour,Rita Skrebiškienė,Alternate,Government
 :lt: Lithuania,Lithuanian Trade Union Solidarumas (LPSS),Daiva Kvedaraitė,Member,Trade Union
 :lt: Lithuania,Lithuanian Trade Union Confederation (LPSK),Sigita Mykolaityté,Alternate,Trade Union
@@ -112,7 +112,7 @@
 :lv: Latvia,Ministry of Welfare,Ineta Vjakse,Alternate,Government
 :lv: Latvia,Free Trade Union Confederation of Latvia (LBAS),Linda Romele,Member,Trade Union
 :lv: Latvia,Free Trade Union Confederation of Latvia (LBAS),Mārtiņš Svirskis,Alternate,Trade Union
-:mt: Malta,Malta Employers Association,Joseph (Joe) Farrugia,Member,Employer
+:mt: Malta,Malta Employers Association,Joe Farrugia,Member,Employer
 :mt: Malta,"Malta Chamber of Commerce, Enterprise & Industry",Kevin Mizzi,Alternate,Employer
 :mt: Malta,Department for Industrial & Employment Relations,Diane Vella Muscat,Member,Government
 :mt: Malta,Department for Industrial & Employment Relations (DIER),Christopher Galea,Alternate,Government
@@ -135,13 +135,13 @@
 :pt: Portugal,"Ministry of Labour, Solidarity & Social Security",Cristina Rodrigues,Member,Government
 :pt: Portugal,"Ministry of Labour, Solidarity & Social Security",Ricardo Bernardes,Alternate,Government
 :pt: Portugal,General Workers Union (UGT),Vanda Teresa Rogado Madeira,Member,Trade Union
-:pt: Portugal,General Confederation of Portuguese Workers (CGTP),Hugo Filipe RODRIGUES DIONÍSIO,Alternate,Trade Union
+:pt: Portugal,General Confederation of Portuguese Workers (CGTP),Hugo Filipe Rodrigues Dionísio,Alternate,Trade Union
 :ro: Romania,Concordia Employers Confederation,Adelina Dabu,Member,Employer
 :ro: Romania,Concordia Employers Confederation,Radu Burnete,Alternate,Employer
-:ro: Romania,"Directorate of Employment Policies, Skills & Professional Mobility",Bianca Diana MIHĂIȚĂ,Member,Government
+:ro: Romania,"Directorate of Employment Policies, Skills & Professional Mobility",Bianca Diana Mihăiță,Member,Government
 :ro: Romania,"Ministry of Labour, Family, Social Protection & Elderly",Ioana Dumitrescu,Alternate,Government
 :ro: Romania,Democratic Trade Union Confederation (CSDR),Sabin Rusu,Member,Trade Union
-:ro: Romania,National Trade Union Confederation - Cartel ALFA,Mihaela DÂRLE,Alternate,Trade Union
+:ro: Romania,National Trade Union Confederation - Cartel ALFA,Mihaela Dârle,Alternate,Trade Union
 :se: Sweden,Confederation of Swedish Enterprise,Patrik Karlsson,Member,Employer
 :se: Sweden,Confederation of Swedish Enterprise,Anna Bergsten,Alternate,Employer
 :se: Sweden,Ministry of Employment,Aurora Lewén,Member,Government
@@ -149,24 +149,27 @@
 :se: Sweden,Swedish Confederation for Professional Employees (TCO),Hakan Gustavsson,Member,Trade Union
 :se: Sweden,Swedish Trade Union Confederation (LO-S),Carola Löfstrand,Alternate,Trade Union
 :si: Slovenia,Association of Employers  of Slovenia (ZDS),Miroslav Smrekar,Member,Employer
-:si: Slovenia,Association of Employers in Craft & Small Business of Slovenia (ZDOPS),Nataša CVETEK,Alternate,Employer
+:si: Slovenia,Association of Employers in Craft & Small Business of Slovenia (ZDOPS),Nataša Cvetek,Alternate,Employer
 :si: Slovenia,"Ministry of Labour, Family, Social Affairs & Equal Opportunities",Vladka Komel,Member,Government
 :si: Slovenia,"Ministry of Labour, Family, Social Affairs & Equal Opportunities",Andraz Bobovnik,Alternate,Government
 :si: Slovenia,Association of Free Trade Unions of Slovenia (ZSSS),Maja Konjar,Member,Trade Union
 :si: Slovenia,Association of Free Trade Unions of Slovenia (ZSSS),Matija Drmota,Alternate,Trade Union
-:sk: Slovakia,National Union of Employers (RUZ),Alexandra ŠARINOVÁ,Member,Employer
-:sk: Slovakia,National Union of Employers (RUZ),Katarína MARENČÁK,Alternate,Employer
+:sk: Slovakia,National Union of Employers (RUZ),Alexandra Šarinová,Member,Employer
+:sk: Slovakia,National Union of Employers (RUZ),Katarína Marenčák,Alternate,Employer
 :sk: Slovakia,"Ministry of Labour, Social Affairs & Family",Silvia Gregorcová,Member,Government
 :sk: Slovakia,"Ministry of Labour, Social Affairs & Family",Ján Gabura,Alternate,Government
 :sk: Slovakia,Confederation of Trade Unions of the Slovak Republic (KOZ),Miroslav Hajnoš,Member,Trade Union
-No country,BusinessEurope,Anna Kwiatkiewicz,Member,Employer
-No country,,Andra Dusu,Member,European Commission
-No country,"DG Employment, Social Affairs & Inclusion",Barbara Kauffmann,Member,European Commission
-No country,DG Research & Innovation,Harald Hartung,Member,European Commission
-No country,DG Health and Food Safety,Veronique Wasbauer,Member,European Commission
-No country,"DG Employment, Social Affairs & Inclusion",Imad Kanjou Auge,Alternate,European Commission
-No country,DG Research & Innovation,Maria del Pilar Gonzalez Pantaleon,Alternate,European Commission
-No country,DG Health & Food Safety,Stefan Schreck,Alternate,European Commission
-No country,European Parliament,Veronica Lope Fontagné,Member,Observer
-No country,European Trade Union Institute (ETUI),Aline Hoffmann,Member,Trade Union
-No country,European Trade Union Confederation (ETUC),Teja Jarc,Member,Trade Union
+N/A,Confederation of Norwegian Enterprise (NHO),Torstein Ulserød,Observer,Employer
+N/A,BusinessEurope,Anna Kwiatkiewicz,Coordinator,Employer
+N/A,"DG Employment, Social Affairs & Inclusion",Barbara Kauffmann,Member,European Commission
+N/A,DG Research & Innovation,Harald Hartung,Member,European Commission
+N/A,DG Health and Food Safety,Veronique Wasbauer,Member,European Commission
+N/A,"DG Employment, Social Affairs & Inclusion",Imad Kanjou Auge,Alternate,European Commission
+N/A,DG Research & Innovation,Maria del Pilar Gonzalez Pantaleon,Alternate,European Commission
+N/A,DG Health & Food Safety,Stefan Schreck,Alternate,European Commission
+N/A,Ministry of Labour & Social Affairs (Norway),Anna Skarberg,"Observer, EFTA/EEA",Government
+N/A,Ministry of Labour & Social Affairs (Norway),Kristin Stanwick Bårnås,"Observer, EFTA/EEA",Government
+N/A,European Parliament,Veronica Lope Fontagné,Member,Observer
+N/A,Norwegian Confederation of Trade Unions (NO),Liv Sannes,"Observer, EFTA/EEA",Trade Union
+N/A,European Trade Union Institute (ETUI),Aline Hoffmann,Deputy Coordinator,Trade Union
+N/A,European Trade Union Confederation (ETUC),Tea Jarc,Coordinator,Trade Union
