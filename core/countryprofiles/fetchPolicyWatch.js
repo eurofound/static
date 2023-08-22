@@ -1,114 +1,89 @@
-let currentPage = 1;
-const rowsPerPage = 10;
-let filteredData = [];
+// fetchPolicyWatch.js
 
-// Function to load the PapaParse library dynamically
-function loadPapaParse(callback) {
-  const script = document.createElement('script');
-  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js';
-  script.onload = callback;
-  document.head.appendChild(script);
-}
+// Load PapaParse synchronously
+document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>');
+
+let itemsPerPage = 10; // Define itemsPerPage globally
 
 async function fetchCSVData(country) {
-  await new Promise((resolve) => {
-    loadPapaParse(resolve);
-  });
+    try {
+        const response = await fetch('https://static.eurofound.europa.eu/covid19db/data/policywatch-website.csv');
+        const csvData = await response.text();
 
-  const response = await fetch('https://static.eurofound.europa.eu/covid19db/data/covid19db.csv');
-  const csvData = await response.text();
-  const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
-
-  filteredData = parsedData.filter(row => row.Country === country);
-  saveFilteredDataToSessionStorage(); // Save filteredData to session storage
-  displayData();
+        Papa.parse(csvData, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => parseComplete(results, country) // Use a separate function for the complete callback
+        });
+    } catch (error) {
+        console.error("Error fetching CSV data:", error);
+    }
 }
 
-function saveFilteredDataToSessionStorage() {
-  sessionStorage.setItem('filteredData', JSON.stringify(filteredData));
+function parseComplete(results, country) {
+    if (results.data && results.data.length > 0) {
+        filteredData = results.data.filter(data => !country || data.calc_country === country);
+        filteredData.sort((a, b) => new Date(b.calc_lastUpdate) - new Date(a.calc_lastUpdate)); // Sort by date, newest to oldest
+        currentPage = 1; // Reset currentPage when fetching new data
+        updateTable(currentPage);
+    }
 }
 
-function loadFilteredDataFromSessionStorage() {
-  const filteredDataJSON = sessionStorage.getItem('filteredData');
-  if (filteredDataJSON) {
-    filteredData = JSON.parse(filteredDataJSON);
-  }
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
 }
 
-function displayData() {
-  const policyWatchTableBody = document.getElementById("policyWatchTableBody");
-  policyWatchTableBody.innerHTML = "";
-
-  const start = (currentPage - 1) * rowsPerPage;
-  const end = Math.min(start + rowsPerPage, filteredData.length);
-
-  for (let i = start; i < end; i++) {
-    const row = filteredData[i];
-    const tr = document.createElement("tr");
-
-    const titleCell = document.createElement("td");
-    titleCell.textContent = row.Title;
-    tr.appendChild(titleCell);
-
-    const dateCell = document.createElement("td");
-    dateCell.textContent = row["Start date"];
-    tr.appendChild(dateCell);
-
-    const categoryCell = document.createElement("td");
-    categoryCell.textContent = row.Subcategory;
-    tr.appendChild(categoryCell);
-
-    const urlCell = document.createElement("td");
-    const link = document.createElement("a");
-    link.href = "https://static.eurofound.europa.eu/covid19db/";
-    link.className = "btn btn-primary";
-    link.textContent = "View";
-    urlCell.appendChild(link);
-    tr.appendChild(urlCell);
-
-    policyWatchTableBody.appendChild(tr);
-  }
-  
-  updatePaginationButtons();
+function scrollToTableTop() {
+    const tableBody = document.getElementById('policyWatchTableBody');
+    tableBody.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function updatePaginationButtons() {
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+let currentPage = 1;
+let filteredData = []; // Define filteredData globally
 
-  prevBtn.disabled = currentPage === 1;
-  nextBtn.disabled = currentPage * rowsPerPage >= filteredData.length;
+function updateTable(currentPage) {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const dataToShow = filteredData.slice(startIndex, endIndex);
+
+    const tableBody = document.getElementById('policyWatchTableBody'); // Define tableBody here
+    const prevBtn = document.getElementById('prevBtn'); // Define prevBtn here
+    const nextBtn = document.getElementById('nextBtn'); // Define nextBtn here
+
+    tableBody.innerHTML = '';
+    for (const data of dataToShow) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${data.title}</td>
+            <td>${formatDate(data.calc_lastUpdate)}</td>
+            <td>${data.calc_subMinorCategory}</td>
+            <td><a href="${data.calc_githubURL}" target="_blank" title="Open EU PolicyWatch" class="btn btn-secondary">View</a></td>
+        `;
+        tableBody.appendChild(row);
+    }
+
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = endIndex >= filteredData.length;
+
+    scrollToTableTop();
 }
 
 function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
-    displayData();
-  }
+    if (currentPage > 1) {
+        currentPage--;
+        updateTable(currentPage);
+    }
 }
 
 function nextPage() {
-  if (currentPage * rowsPerPage < filteredData.length) {
-    currentPage++;
-    displayData();
-  }
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        updateTable(currentPage);
+    }
 }
-
-function searchFunction() {
-  const input = document.getElementById("searchInput");
-  const searchValue = input.value.toLowerCase();
-  if (searchValue) {
-    filteredData = filteredData.filter(row => {
-      return row.Title.toLowerCase().includes(searchValue) || row.Identifier.toLowerCase().includes(searchValue);
-    });
-  } else {
-    loadFilteredDataFromSessionStorage(); // Load filteredData from session storage
-  }
-
-  currentPage = 1; // Reset current page
-  displayData(); // Update table with the filtered data
-}
-
-// Load filteredData from session storage on page load
-loadFilteredDataFromSessionStorage();
-displayData();
