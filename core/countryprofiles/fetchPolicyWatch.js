@@ -55,23 +55,38 @@ function updateTable(currentPage) {
     const prevBtn = document.getElementById('prevBtn'); // Define prevBtn here
     const nextBtn = document.getElementById('nextBtn'); // Define nextBtn here
 
-    tableBody.innerHTML = '';
-    for (const data of dataToShow) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${data.title}</td>
-            <td>${formatDate(data.calc_lastUpdate)}</td>
-            <td>${data.calc_subMinorCategory}</td>
-            <td><a href="${data.calc_githubURL}" target="_blank" title="Open EU PolicyWatch" class="btn btn-secondary">View</a></td>
+    if (dataToShow.length === 0) {
+        tableBody.innerHTML = `
+            <tr>
+                <td colspan="4">
+                    There are no results. Click <a href="https://static.eurofound.europa.eu/covid19db/">here</a> to access EU PolicyWatch.
+                </td>
+            </tr>
         `;
-        tableBody.appendChild(row);
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+    } else {
+        tableBody.innerHTML = '';
+        for (const data of dataToShow) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${data.title}</td>
+                <td>${formatDate(data.calc_lastUpdate)}</td>
+                <td>${data.calc_subMinorCategory}</td>
+                <td><a href="${data.calc_githubURL}">View</a></td>
+            `;
+            tableBody.appendChild(row);
+        }
+
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = endIndex >= filteredData.length;
+
+        if (currentPage > 1) {
+            scrollToTableTop();
+        }
     }
-
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = endIndex >= filteredData.length;
-
-    scrollToTableTop();
 }
+
 
 function prevPage() {
     if (currentPage > 1) {
