@@ -73,7 +73,7 @@ function updateTable(currentPage) {
                 <td>${data.title}</td>
                 <td>${formatDate(data.calc_lastUpdate)}</td>
                 <td>${data.calc_subMinorCategory}</td>
-                <td><a href="${data.calc_githubURL}">View</a></td>
+                <td><a href="${data.calc_githubURL}" class="btn btn-secondary">View</a></td>
             `;
             tableBody.appendChild(row);
         }
