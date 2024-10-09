@@ -1,34 +1,28 @@
-calc_minorCategory,calc_subMinorCategory,__KP_ID
-"Promoting the economic, labour market and social recovery into a green future","Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",53
-Employment protection and retention,"Income support for people in employment (e.g., short-time work)",46
-Reorientation of business activities,Change of production/Innovation,44
-Supporting businesses to stay afloat,Access to finance,27
-Reorientation of business activities,Matching/networking,27
-Ensuring business continuity and support for essential services,Smoothing frictions or reallocation of workers,25
-Reorientation of business activities,Transfer or redeployment of workers ,13
-Employment protection and retention,Working time flexibility,10
-Supporting businesses to stay afloat,Measures related to foreign trade,9
-Income protection beyond short-time work,Income support for unemployed,7
-Supporting businesses to stay afloat,Other,6
-"Promoting the economic, labour market and social recovery into a green future","Support for spending, stimulus packages",5
-Supporting businesses to stay afloat,Direct subsidies (full or partial) or damage compensation,5
-Supporting businesses to stay afloat,Rescue procedures in case of insolvency or adaptation of insolvency regulation,4
-"Promoting the economic, labour market and social recovery into a green future",Flexibilisation and security,3
-Reorientation of business activities,Creation of platforms for businesses aimed at customer,2
-Income protection beyond short-time work,Extensions of income support to workers not covered by any kind of protection scheme,2
-Employment protection and retention,Wage flexibility ,2
-Ensuring business continuity and support for essential services,"Change of work arrangements (working time, rota schemes)",2
-"Protection of workers, adaptation of workplace",Changes in work organisation,2
-"Protection of workers, adaptation of workplace",Changes of management approach,2
-"Protection of workers, adaptation of workplace",Changes of working hours or work arrangements,2
-Supporting businesses to stay afloat,Deferral of payments or liabilities,2
-Ensuring business continuity and support for essential services,Other,2
-Ensuring business continuity and support for essential services,Mobilisation of a larger workforce,1
-"Promoting the economic, labour market and social recovery into a green future",Other,1
-Reorientation of business activities,Other,1
-Measures to prevent social hardship,Protection of vulnerable groups (beyond employment support),1
-"Promoting the economic, labour market and social recovery into a green future",Strategic plans and programmes,1
-"Protection of workers, adaptation of workplace","Teleworking arrangements, remote working",1
-"Promoting the economic, labour market and social recovery into a green future",Increasing income in general,1
-Employment protection and retention,Other,1
-"Promoting the economic, labour market and social recovery into a green future",Support for energy bills,1
+calc_subMinorCategory,calc_minorCategory,__KP_ID
+"Active labour market policies (enhancing employability, training, subsidised job creation, etc.)","Promoting the economic, labour market and social recovery into a green future",32
+"Income support for people in employment (e.g., short-time work)",Employment protection and retention,21
+Change of production/Innovation,Reorientation of business activities,21
+Smoothing frictions or reallocation of workers,Ensuring business continuity and support for essential services,19
+Matching/networking,Reorientation of business activities,15
+Access to finance,Supporting businesses to stay afloat,13
+Transfer or redeployment of workers ,Reorientation of business activities,6
+Working time flexibility,Employment protection and retention,6
+Direct subsidies (full or partial) or damage compensation,Supporting businesses to stay afloat,4
+Flexibilisation and security,"Promoting the economic, labour market and social recovery into a green future",3
+Income support for unemployed,Income protection beyond short-time work,3
+Other,Supporting businesses to stay afloat,3
+Measures related to foreign trade,Supporting businesses to stay afloat,2
+Changes of management approach,"Protection of workers, adaptation of workplace",2
+Wage flexibility ,Employment protection and retention,2
+"Support for spending, stimulus packages","Promoting the economic, labour market and social recovery into a green future",2
+Support for energy bills,"Promoting the economic, labour market and social recovery into a green future",1
+"Change of work arrangements (working time, rota schemes)",Ensuring business continuity and support for essential services,1
+"Teleworking arrangements, remote working","Protection of workers, adaptation of workplace",1
+"Support for other basic items (e.g., food, housing, public transport, medicines)","Promoting the economic, labour market and social recovery into a green future",1
+Rescue procedures in case of insolvency or adaptation of insolvency regulation,Supporting businesses to stay afloat,1
+Strategic plans and programmes,"Promoting the economic, labour market and social recovery into a green future",1
+Changes in work organisation,"Protection of workers, adaptation of workplace",1
+Extensions of income support to workers not covered by any kind of protection scheme,Income protection beyond short-time work,1
+Protection of vulnerable groups (beyond employment support),Measures to prevent social hardship,1
+Other,Ensuring business continuity and support for essential services,1
+Other,Employment protection and retention,1
