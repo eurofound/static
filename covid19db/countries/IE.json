@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/02/2020",
+            "title": "Supports for companies impacted by local COVID-19 restrictions",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-33_1426.html"
+        },
+        {
+            "date": "11/27/2020",
+            "title": "Government announces extra funds for carers and people with disabilities",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-1_1274.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "Return to Work Safely Protocol",
+            "category": "Occupational health and safety",
+            "type": "Tripartite agreements",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-19_1016.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "New policy on 'blended working' in the civil service published",
+            "category": "Teleworking arrangements, remote working",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-29_2025.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "COVID-19 online retail scheme",
+            "category": "Creation of platforms for businesses aimed at customer",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-18_796.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "Restrictions on evictions and rent freezes for landlords",
+            "category": "Keeping or obtaining a safe home",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-13_819.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "Strategic Banking Corporation of Ireland (SBCI) issue new loan scheme",
+            "category": "Access to finance",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-31_1049.html"
+        },
+        {
+            "date": "11/15/2021",
+            "title": "Grant for restarting small businesses introduced",
+            "category": "Measures to support a gradual relaunch of work",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2020-21_940.html"
+        },
+        {
+            "date": "11/11/2022",
+            "title": "Enterprise Ireland Mentor Network",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2008-1_2531.html"
+        },
+        {
+            "date": "10/23/2024",
+            "title": "Local Enterprise Offices (LEOs)",
+            "category": "Change of production/Innovation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2014-1_2649.html"
+        }
+    ]
+}

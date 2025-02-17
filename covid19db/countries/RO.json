@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/18/2024",
+            "title": "Preparing teachers to address needs of Ukrainian children",
+            "category": "Access to childcare and education",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2022-27_2893.html"
+        },
+        {
+            "date": "12/18/2024",
+            "title": "Granting support and humanitarian assistance to foreign citizens or stateless persons in special situations",
+            "category": "Keeping or obtaining a safe home",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-18_3214.html"
+        },
+        {
+            "date": "12/18/2024",
+            "title": "Informing beneficiaries of temporary protection on access to the labour market",
+            "category": "Smoothing frictions or reallocation of workers",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2022-27_2874.html"
+        },
+        {
+            "date": "12/18/2024",
+            "title": "Access to basic education for beneficiaries of temporary protection",
+            "category": "Access to childcare and education",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2021-31_2890.html"
+        },
+        {
+            "date": "12/17/2024",
+            "title": "The green house program ",
+            "category": "Retrofitting buildings",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-1_3527.html"
+        },
+        {
+            "date": "12/17/2024",
+            "title": "Support of SMEs in sustainable growth and job creation",
+            "category": "Financing the green transition",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-51_3526.html"
+        },
+        {
+            "date": "12/17/2024",
+            "title": "Food vouchers for vulnerable citizens",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2027-53_2245.html"
+        },
+        {
+            "date": "12/11/2023",
+            "title": "Vouchers for the purchase of solar panels and energy-storing",
+            "category": "Retrofitting buildings",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-1_3386.html"
+        },
+        {
+            "date": "12/02/2020",
+            "title": "Staggered work schedule for companies who can't apply telework",
+            "category": "Changes in work organisation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2020-45_1433.html"
+        },
+        {
+            "date": "12/02/2020",
+            "title": "Support for employers - teleworking",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2020-33_1429.html"
+        }
+    ]
+}

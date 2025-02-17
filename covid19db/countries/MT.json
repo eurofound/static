@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/04/2024",
+            "title": "Investment Aid for Energy Efficiency Projects",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2019-9_2717.html"
+        },
+        {
+            "date": "11/27/2024",
+            "title": "Prices of selected food items to be reduced by 15%",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "type": "Company practices",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2024-5_3463.html"
+        },
+        {
+            "date": "11/27/2024",
+            "title": "Purchase of Electric Vehicles Scheme",
+            "category": "Sustainable mobility",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2022-1_3312.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Schemes to enhance digitalisation amongst enterprises ",
+            "category": "Support for spending, stimulus packages",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2022-27_3033.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Provision of cancer treatment for Ukrainian refugees ",
+            "category": "Access to healthcare",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2022-12_2748.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Ukraine Community Crisis Centre Malta ",
+            "category": "Other humanitarian measures",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2022-10_2750.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Investment aid for energy efficiency projects in businesses",
+            "category": "Support for spending, stimulus packages",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2018-20_2752.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Energy audits in small and medium sized enterprises",
+            "category": "Support for spending, stimulus packages",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2021-18_2754.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Malta Development Bank COVID-19 Guarantee Scheme",
+            "category": "Access to finance",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2020-14_931.html"
+        },
+        {
+            "date": "11/26/2024",
+            "title": "Free public transport in Malta ",
+            "category": "Sustainable mobility",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/MT-2022-40_3309.html"
+        }
+    ]
+}

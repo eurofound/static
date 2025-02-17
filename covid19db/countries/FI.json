@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "11/15/2024",
+            "title": "'Change Security' model",
+            "category": "Transfer or redeployment of workers ",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2005-27_2494.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "State guarantee for farmers due to exceptional weather conditions",
+            "category": "Access to finance",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2023-41_3299.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Business Finland",
+            "category": "Change of production/Innovation",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2018-1_2718.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Talent Boost",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2017-17_2692.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Joint purchase training",
+            "category": "Matching/networking",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-1991-1_2670.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Pay Security Act (866/1998)",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-1998-48_2606.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Temporary layoff",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2001-4_2544.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Team Finland - Services supporting the internationalisation of businesses",
+            "category": "Smoothing frictions or reallocation of workers",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2013-5_2536.html"
+        },
+        {
+            "date": "11/15/2024",
+            "title": "Enterprise Finland",
+            "category": "Creation of platforms for businesses aimed at customer",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2002-14_2529.html"
+        },
+        {
+            "date": "10/22/2020",
+            "title": "Regional crisis support for employees affected by the COVID-19 crisis",
+            "category": "Well-being of workers",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2020-21_1293.html"
+        }
+    ]
+}

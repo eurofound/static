@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/04/2024",
+            "title": "Tax incentives for technology investment",
+            "category": "Change of production/Innovation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2015-39_2591.html"
+        },
+        {
+            "date": "12/04/2024",
+            "title": "Lessening the effects of extreme weather conditions",
+            "category": "Other humanitarian measures",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2019-7_3329.html"
+        },
+        {
+            "date": "12/04/2024",
+            "title": "Financial aid for unemployed persons with disabilities",
+            "category": "Income support for unemployed",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2022-8_2980.html"
+        },
+        {
+            "date": "12/01/2021",
+            "title": "Chamber of Commerce temporarily suspends membership fee",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-10_342.html"
+        },
+        {
+            "date": "12/01/2021",
+            "title": "Tourism company Valamar sets up the employment retention programme 'Pause, Restart'",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Company practices",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-14_518.html"
+        },
+        {
+            "date": "11/18/2021",
+            "title": "New joint delivery service by Konzum and Uber",
+            "category": "Change of production/Innovation",
+            "type": "Company practices",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-43_1302.html"
+        },
+        {
+            "date": "11/18/2021",
+            "title": "Seafarers proclaimed key workers and obtain exemption payment of personal income tax",
+            "category": "Remuneration and rewards for workers in essential services",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2021-4_1747.html"
+        },
+        {
+            "date": "11/18/2021",
+            "title": "Support for preservation of jobs in workshops for disabled and integrative units for employment of persons with disabilities affected by COVID-19",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-27_1060.html"
+        },
+        {
+            "date": "11/18/2021",
+            "title": "Measures for tourism and hospitality",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Bipartite collective agreements",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-24_1045.html"
+        },
+        {
+            "date": "11/18/2021",
+            "title": "Foreclosure procedures on pecuniary assets of natural persons are temporarily halted",
+            "category": "Preventing over-indebtedness",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HR-2020-16_1012.html"
+        }
+    ]
+}

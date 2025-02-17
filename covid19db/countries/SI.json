@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/15/2020",
+            "title": "Deferred payment of taxes and social contributions",
+            "category": "Deferral of payments or liabilities",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2020-49_1488.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "SID Green",
+            "category": "Financing the green transition",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-32_3512.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Support for food",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-36_3070.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Measures to mitigate rising energy costs",
+            "category": "Support for energy bills",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-36_2839.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Setting prices for certain petroleum products",
+            "category": "Support for fuel expenses",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-25_2840.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Wage compensations for temporary layoff and short-time work",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-1_3065.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Partial reimbursements of the costs of price increases for electricity, natural gas and steam",
+            "category": "Support for energy bills",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-1_3066.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Emergency Intervention Addressing High Energy Prices",
+            "category": "Change of production/Innovation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-49_3068.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Public sector collective agreement to tackle rising prices",
+            "category": "Increasing income in general",
+            "type": "Bipartite collective agreements",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-44_3069.html"
+        },
+        {
+            "date": "12/11/2024",
+            "title": "Aid for agriculture and fisheries",
+            "category": "Access to finance",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-27_2843.html"
+        }
+    ]
+}

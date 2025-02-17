@@ -1,0 +1,75 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "12/06/2022",
+            "title": "Export Hub Bulgaria",
+            "category": "Matching/networking",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2019-49_2988.html"
+        },
+        {
+            "date": "12/01/2020",
+            "title": "United against COVID-19: Campaign to fund projects for vulnerable people",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-14_1458.html"
+        },
+        {
+            "date": "11/07/2023",
+            "title": "Renewable energy sources and local energy storage facilities for enterprises",
+            "category": "Support for spending, stimulus packages",
+            "type": "Other initiatives or policies",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2023-7_3071.html"
+        },
+        {
+            "date": "11/07/2022",
+            "title": "Extension of working time",
+            "category": "Working time flexibility",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2021-1_2640.html"
+        },
+        {
+            "date": "11/07/2022",
+            "title": "Law for guaranteeing workers' and employees' receivables in the event of employer's insolvency",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2004-19_2635.html"
+        },
+        {
+            "date": "11/07/2022",
+            "title": "National Innovation Fund (NIF): Strengthen technological capacity",
+            "category": "Change of production/Innovation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2005-1_2567.html"
+        },
+        {
+            "date": "11/07/2022",
+            "title": "Support for enhancement of employees and enterprise adaptability to changing economic conditions",
+            "category": "Change of production/Innovation",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-6_2723.html"
+        },
+        {
+            "date": "11/07/2022",
+            "title": "Enhancement of employees\u2019 adaptability and strengthening the collective",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2019-36_2722.html"
+        },
+        {
+            "date": "11/04/2022",
+            "title": "Competence assessment system \u2013 MyCompetence",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2009-43_2721.html"
+        },
+        {
+            "date": "10/28/2022",
+            "title": "COVID - 19: Income support for workers",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "type": "Legislations or other statutory regulations",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_2708.html"
+        }
+    ]
+}
