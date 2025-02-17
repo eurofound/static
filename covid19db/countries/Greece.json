@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "23 January 2025",
+            "title": "Photovoltaic panels on rooftop",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-18_3545.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Price reductions on supermarket products",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2024-9_3481.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Green taxis",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-2_3480.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Changing devices for businesses",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2024-6_3475.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Public Transport - Electromobility",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-4_3469.html"
+        },
+        {
+            "date": "05 December 2024",
+            "title": "Household Basket\r",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2022-45_3091.html"
+        },
+        {
+            "date": "15 November 2024",
+            "title": "Short-term Export Credit Insurance Scheme",
+            "category": "Measures related to foreign trade",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-12_2538.html"
+        },
+        {
+            "date": "15 November 2024",
+            "title": "LAEK, Special Fund for the Employment and Vocational Training",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-1996-17_2564.html"
+        },
+        {
+            "date": "15 November 2024",
+            "title": "Wage guarantee in case of insolvency",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2018-7_2633.html"
+        },
+        {
+            "date": "15 November 2024",
+            "title": "Organisation of working time",
+            "category": "Working time flexibility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2020-11_2634.html"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "06 January 2025",
+            "title": "Deferral of mortgage payments",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-12_368.html"
+        },
+        {
+            "date": "06 January 2025",
+            "title": "Increase of the tax-exempt amount of income for workers earning below the annual minimum wage",
+            "category": "Extensions of income support to workers not covered by any kind of protection scheme",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-27_918.html"
+        },
+        {
+            "date": "06 January 2025",
+            "title": "Wage Guarantee Fund",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2000-41_2586.html"
+        },
+        {
+            "date": "06 January 2025",
+            "title": "Social initiative \"Let\u2019s Overcome It Together\"",
+            "category": "Smoothing frictions or reallocation of workers",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-46_1454.html"
+        },
+        {
+            "date": "06 January 2025",
+            "title": "Online platform \"There is no quarantine on the Internet\"",
+            "category": "Creation of platforms for businesses aimed at customer",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-12_382.html"
+        },
+        {
+            "date": "06 January 2025",
+            "title": "One-off entry allowance for foreign recruits",
+            "category": "Flexibilisation and security",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2022-32_2904.html"
+        },
+        {
+            "date": "16 December 2024",
+            "title": "Food cards for Ukrainian refugees",
+            "category": "Provision of services in kind (e.g. food vouchers)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2022-13_2359.html"
+        },
+        {
+            "date": "02 October 2024",
+            "title": "Soft loans to provide liquidity in the most affected sectors",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-16_2716.html"
+        },
+        {
+            "date": "02 October 2024",
+            "title": "The State Aid Fund for Business",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2020-41_2974.html"
+        },
+        {
+            "date": "26 April 2024",
+            "title": "Support for business creation",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LT-2023-49_3485.html"
+        }
+    ]
+}

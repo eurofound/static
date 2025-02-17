@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "13 January 2025",
+            "title": "Subsidy for social services to assist people from Ukraine",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2022-10_2241.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "Solidarity subsidy for people accommodating Ukrainian refugees",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2022-16_2224.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "Subsidy for replacement of household and public space heating (boiler subsidy)",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-1_3349.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "Cap of electricity and gas prices",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2023-1_3129.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "State allowance for energy and waived taxes for renewable energies",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2022-40_2788.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "Extraordinary subsidy to support families from Ukraine",
+            "category": "Access to childcare and education",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2022-23_2803.html"
+        },
+        {
+            "date": "13 January 2025",
+            "title": "One-time child benefit",
+            "category": "Increasing income in general",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2022-32_2801.html"
+        },
+        {
+            "date": "10 January 2025",
+            "title": "Care allowance in case of emergency measures during the epidemic",
+            "category": "Support for parents and carers (financial or in kind)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-45_2117.html"
+        },
+        {
+            "date": "12 November 2024",
+            "title": "Energy Loan",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-23_2690.html"
+        },
+        {
+            "date": "02 October 2024",
+            "title": "Program Czech Rise Up \u2013 Smart solutions to combat COVID-19",
+            "category": "Change of production/Innovation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-14_2711.html"
+        }
+    ]
+}

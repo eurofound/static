@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "09 January 2025",
+            "title": "Public transport incentive",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2021-44_3506.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Electricity price brake",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-49_2901.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Home office regulation",
+            "category": "Teleworking arrangements, remote working",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2021-14_1742.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Increased commuter allowance",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-19_2437.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Inclusion of Ukrainian refugees in largest Austrian social health insurance",
+            "category": "Access to healthcare",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-12_2439.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Access to the labour market for refugees from Ukraine",
+            "category": "Mobilisation of a larger workforce",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-11_2440.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Education measures for Ukrainian refugees",
+            "category": "Access to childcare and education",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-12_2441.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Succession bourse",
+            "category": "Matching/networking",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2009-1_2526.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Go international!",
+            "category": "Measures related to foreign trade",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2003-1_2565.html"
+        },
+        {
+            "date": "09 January 2025",
+            "title": "Insolvency Income Fund",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-1977-23_2603.html"
+        }
+    ]
+}

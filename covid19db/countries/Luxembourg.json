@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "11 February 2025",
+            "title": "Accreditation of prior and experiential learning",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2010-3_2493.html"
+        },
+        {
+            "date": "11 February 2025",
+            "title": "Observatory of continuous vocational training",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-1992-49_2492.html"
+        },
+        {
+            "date": "11 February 2025",
+            "title": "The skills of tomorrow",
+            "category": "Smoothing frictions or reallocation of workers",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2002-41_2491.html"
+        },
+        {
+            "date": "11 February 2025",
+            "title": "Partial unemployment",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2006-31_2463.html"
+        },
+        {
+            "date": "11 February 2025",
+            "title": "Transfer loan",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2011-36_2573.html"
+        },
+        {
+            "date": "11 February 2025",
+            "title": "Digital Skills Bridge",
+            "category": "Smoothing frictions or reallocation of workers",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2018-18_2694.html"
+        },
+        {
+            "date": "31 January 2025",
+            "title": "Decarbonising road transport",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-16_3442.html"
+        },
+        {
+            "date": "31 January 2025",
+            "title": "Decarbonising vehicle",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2019-34_3436.html"
+        },
+        {
+            "date": "26 April 2024",
+            "title": "Temporary protection for refugees from Ukraine implemented",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-9_2347.html"
+        },
+        {
+            "date": "26 April 2024",
+            "title": "Call for projects by the Asylum, Migration and Integration Fund (AMIF)",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-20_2278.html"
+        }
+    ]
+}

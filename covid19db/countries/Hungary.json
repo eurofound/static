@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "23 January 2025",
+            "title": "Electric heating for households in need",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-6_3500.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Solar panel programme for residents",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2021-50_2811.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Education and childcare for Ukrainian refugee children",
+            "category": "Access to childcare and education",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-10_2442.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Healthcare services for Ukrainian refugees",
+            "category": "Access to healthcare",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-9_2444.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Government information page and support for charities for Ukraine",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-12_2445.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Budapest Helps: Assistance measures for refugees",
+            "category": "Provision of services in kind (e.g. food vouchers)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-10_2446.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Temporary protection status for Ukrainian refugees",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-9_2399.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Energy price protection policy for households",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-32_2778.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Utility price cap for microcompanies",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-32_2781.html"
+        },
+        {
+            "date": "23 January 2025",
+            "title": "Budapest utility bill subsidy for low income households",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-40_2782.html"
+        }
+    ]
+}

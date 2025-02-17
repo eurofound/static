@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "29 January 2025",
+            "title": "Measures to ensure liquidity",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-1_3508.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "SID Green",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-32_3512.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Loans for companies affected by the war in Ukraine ",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-15_3232.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Measures to mitigate rising energy costs",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-36_2839.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Aid for agriculture and fisheries",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-27_2843.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Wage compensations for temporary layoff and short-time work",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-1_3065.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Partial reimbursements of the costs of price increases for electricity, natural gas and steam",
+            "category": "Support for energy bills",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-1_3066.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Emergency Intervention Addressing High Energy Prices",
+            "category": "Change of production/Innovation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-49_3068.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Public sector collective agreement to tackle rising prices",
+            "category": "Increasing income in general",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-44_3069.html"
+        },
+        {
+            "date": "11 December 2024",
+            "title": "Support for food",
+            "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-36_3070.html"
+        }
+    ]
+}
