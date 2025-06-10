@@ -2,6 +2,30 @@
     "status": "success",
     "data": [
         {
+            "date": "06 June 2025",
+            "title": "Bilateral Agreements for Labour Migration",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2018-1_3851.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Employment Conditions for Third-Country Nationals in Bulgaria",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2016-27_3847.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Advisory Council for the European Green Deal",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-27_3667.html"
+        },
+        {
+            "date": "27 February 2025",
+            "title": "COVID - 19: Income support for workers",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_2708.html"
+        },
+        {
             "date": "24 October 2024",
             "title": "Micro-credit Guarantee Fund",
             "category": "Access to finance",
@@ -33,33 +57,9 @@
         },
         {
             "date": "26 April 2024",
-            "title": "'Hot lunch' program for people in need",
-            "category": "Provision of services in kind (e.g. food vouchers)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2021-1_1739.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "VAT decrease for bread, heating and gas",
-            "category": "Support for energy bills",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-28_2762.html"
-        },
-        {
-            "date": "26 April 2024",
             "title": "New system for registration of temporary protection for Ukrainian refugees",
             "category": "Protection of vulnerable groups (beyond employment support)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-12_2159.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "One-off assistance to persons displaced from Ukraine",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-9_2179.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "Access to the Bulgarian labour market for citizens of Ukraine",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-9_2281.html"
         }
     ]
 }

@@ -2,16 +2,52 @@
     "status": "success",
     "data": [
         {
-            "date": "11 February 2025",
-            "title": "Accreditation of prior and experiential learning",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2010-3_2493.html"
+            "date": "06 June 2025",
+            "title": "Talents attraction",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-25_3867.html"
         },
         {
-            "date": "11 February 2025",
-            "title": "Observatory of continuous vocational training",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-1992-49_2492.html"
+            "date": "06 June 2025",
+            "title": "Law of May 10, 2022 - Health insurance",
+            "category": "Return policies for migrant workers ",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-10_3816.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Grand-ducal regulation of may 12, 2022",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-1_3811.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Law of August 27, 2024",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-37_3786.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Law of April 21, 2023 - Conditions of entry and residence for third-country nationals",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-19_3777.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Law of June 4, 2024 on the labour shortages",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-27_3766.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Law on the free movement of person",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-35_3760.html"
+        },
+        {
+            "date": "06 June 2025",
+            "title": "Recovery and resilience plan",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2021-18_3704.html"
         },
         {
             "date": "11 February 2025",
@@ -21,45 +57,9 @@
         },
         {
             "date": "11 February 2025",
-            "title": "Partial unemployment",
-            "category": "Income support for people in employment (e.g., short-time work)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2006-31_2463.html"
-        },
-        {
-            "date": "11 February 2025",
-            "title": "Transfer loan",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2011-36_2573.html"
-        },
-        {
-            "date": "11 February 2025",
-            "title": "Digital Skills Bridge",
-            "category": "Smoothing frictions or reallocation of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2018-18_2694.html"
-        },
-        {
-            "date": "31 January 2025",
-            "title": "Decarbonising road transport",
-            "category": "Sustainable mobility",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-16_3442.html"
-        },
-        {
-            "date": "31 January 2025",
-            "title": "Decarbonising vehicle",
-            "category": "Sustainable mobility",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2019-34_3436.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "Temporary protection for refugees from Ukraine implemented",
-            "category": "Protection of vulnerable groups (beyond employment support)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-9_2347.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "Call for projects by the Asylum, Migration and Integration Fund (AMIF)",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-20_2278.html"
+            "title": "Accreditation of prior and experiential learning",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2010-3_2493.html"
         }
     ]
 }

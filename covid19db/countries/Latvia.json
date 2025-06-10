@@ -2,6 +2,54 @@
     "status": "success",
     "data": [
         {
+            "date": "09 June 2025",
+            "title": "Involvement of organizations in the creation of the support measure \"Abandonment of the use of peat in energy\"",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-17_3702.html"
+        },
+        {
+            "date": "09 June 2025",
+            "title": "Involvement of organizations in the creation of the support measure \u201cUpgrading the skills of employees and supporting them in obtaining qualifications, supporting workforce training in accordance with the demand of companies\u201d",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-48_3701.html"
+        },
+        {
+            "date": "09 June 2025",
+            "title": "Involvement of organizations in the creation of the support measure \"Research development for the sustainable use of natural resources in the context of environmental and climate goals\"",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-33_3700.html"
+        },
+        {
+            "date": "04 June 2025",
+            "title": "Change in the rules for determining remuneration for foreign workers",
+            "category": "Mobilisation of a larger workforce",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-5_3882.html"
+        },
+        {
+            "date": "28 May 2025",
+            "title": "Business support competition for remigration",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-1_3886.html"
+        },
+        {
+            "date": "28 May 2025",
+            "title": "Stricter legislation for employers who violate immigration regulation",
+            "category": "Mobilisation of a larger workforce",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2024-23_3885.html"
+        },
+        {
+            "date": "28 May 2025",
+            "title": "Stricter rules for employers to demonstrate that they have attempted to recruit local workers",
+            "category": "Labour market testing policies ",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2025-1_3884.html"
+        },
+        {
+            "date": "28 May 2025",
+            "title": "Easing of the requirement to submit documents proving education or experience for attracting foreign employees to work in Latvia.",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2023-51_3880.html"
+        },
+        {
             "date": "13 January 2025",
             "title": "Support program for the use of renewable energy resources in households",
             "category": "Financing the green transition",
@@ -9,57 +57,9 @@
         },
         {
             "date": "10 January 2025",
-            "title": "Support for replacement of wood burning heating systems",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2023-21_3421.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Initial accommodation and meals for Ukrainian refugees",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-11_2415.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Financial support for free accommodation for Ukrainian civilians",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-19_2414.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Postponement of tax payments (re-introduced)",
-            "category": "Deferral of payments or liabilities",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2021-42_2142.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "State support for parents for the renovation of a private house and improvement of energy efficiency",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-18_2934.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Installation of electricity production equipment (including solar) for families",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-18_2935.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Social services and social assistance for Ukrainian civilians",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-10_3149.html"
-        },
-        {
-            "date": "10 January 2025",
             "title": "Scholarships and grants for research or academic work",
             "category": "Access to childcare and education",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-9_3253.html"
-        },
-        {
-            "date": "10 January 2025",
-            "title": "Support from a social mentor to help Ukrainian refugees",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LV-2022-18_3254.html"
         }
     ]
 }

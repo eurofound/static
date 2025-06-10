@@ -1,0 +1,65 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "05 January 2023",
+            "title": "Enterprise Finance Guarantee scheme (EFG)",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2009-1_2705.html"
+        },
+        {
+            "date": "05 January 2023",
+            "title": "Women in Innovation Awards",
+            "category": "Changes of management approach",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2016-19_2700.html"
+        },
+        {
+            "date": "05 January 2023",
+            "title": "Intellectual Property Attach\u00e9 Network",
+            "category": "Change of production/Innovation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2011-1_2667.html"
+        },
+        {
+            "date": "04 January 2023",
+            "title": "PACE- Partnership Action for Continuing Employment",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2009-1_2618.html"
+        },
+        {
+            "date": "04 January 2023",
+            "title": "Insolvency Service",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-1990-1_2604.html"
+        },
+        {
+            "date": "04 January 2023",
+            "title": "Union Learning Fund (ULF)",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-1998-1_2467.html"
+        },
+        {
+            "date": "04 January 2023",
+            "title": "Rapid Response Service (RRS)",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2002-14_2466.html"
+        },
+        {
+            "date": "03 January 2023",
+            "title": "Union learning representatives (ULRs)",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2003-1_2513.html"
+        },
+        {
+            "date": "03 January 2023",
+            "title": "Sector Skills Councils",
+            "category": "Smoothing frictions or reallocation of workers",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2002-36_2512.html"
+        },
+        {
+            "date": "11 May 2021",
+            "title": "Nationwide's job guarantee during the pandemic",
+            "category": "Teleworking arrangements, remote working",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GB-2020-12_1787.html"
+        }
+    ]
+}
