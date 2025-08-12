@@ -1,7 +1,7 @@
 ﻿Member State,Organisation,Board Member,Status,Group
 :at: Austria,Federation of Austrian Industries (IV),Tobias Sonnweber <a href='https://static.eurofound.europa.eu/board-members/SONNWEBER_AT_E_M.pdf'>(DOI & CV)</a>,Member,Employer
 :at: Austria,Austrian Association for Public and Social Economy (VOWG),Josef Wirth <a href='https://static.eurofound.europa.eu/board-members/WIRTH_AT_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
-:at: Austria,BMSGPK,Laurin Cerha-Marcher,Member,Government
+:at: Austria,BMSGPK,Laurin Cerha-Marcher <a href='https://static.eurofound.europa.eu/board-members/CERHA-MARCHER_AT_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :at: Austria,"Federal Ministry of Labour, Social Affairs, Health Care & Consumer Protection (BMSGP)",Petra Pencs <a href='https://static.eurofound.europa.eu/board-members/PENCS_AT_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :at: Austria,Austrian Trade Unions Federation (OGB),Dinah Djalinous-Glatz <a href='https://static.eurofound.europa.eu/board-members/DJALINOUS-GLATZ_AT_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :at: Austria,Austrian Federal Chamber of Labour,Adi Buxbaum <a href='https://static.eurofound.europa.eu/board-members/BUXBAUM_AT_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
@@ -9,7 +9,7 @@
 :be: Belgium,Organisation for the Self-Employed and SMEs (UNIZO),Phillipe Van Walleghem,Alternate,Employer
 :be: Belgium,"Federal Public Service Employment, Labour & Social Dialogue",Yves Bolsee <a href='https://static.eurofound.europa.eu/board-members/BOLSEE_BE_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :be: Belgium,"Federal Public Service Employment, Labour & Social Dialogue",Alain Piette <a href='https://static.eurofound.europa.eu/board-members/PIETTE_BE_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
-:be: Belgium,Confederation of Christian Trade Unions (ACV-CSC),Stijn Gryp <a href='https://static.eurofound.europa.eu/board-members/GRYP_BE_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
+:be: Belgium,Confederation of Christian Trade Unions - ACV-CSC,Maarten Hermans,Member,Trade Union
 :be: Belgium,General Federation of Belgian Labour (ABVV-FGTB),Caroline Verdoot <a href='https://static.eurofound.europa.eu/board-members/VERDOOT_BE_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
 :bg: Bulgaria,Bulgarian Industrial Association (BIA),Dimiter Brankov <a href='https://static.eurofound.europa.eu/board-members/BRANKOV_BG_E_M.pdf'>(DOI & CV)</a>,Member,Employer
 :bg: Bulgaria,Bulgarian Industrial Capital Association (BICA),Teodor Dechev,Alternate,Employer
@@ -36,13 +36,12 @@
 :de: Germany,German Trade Union Confederation (DGB),Tanja Bergrath,Member,Trade Union
 :de: Germany,German Trade Union Confederation (DGB),Livia Hentschel,Alternate,Trade Union
 :dk: Denmark,Confederation of Danish Employers (DA),Christiane Mißlbeck-Winberg <a href='https://static.eurofound.europa.eu/board-members/MISSLBECK-WINBERG_DA_E_M.pdf'>(DOI & CV)</a>,Member,Employer
-:dk: Denmark,Confederation of Danish Employers (DA),Maja Kluger Dionigi <a href='https://static.eurofound.europa.eu/board-members/DIONIGI_DA_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
 :dk: Denmark,Danish Ministry of Employment,Lærke Thorø Borch Sloth <a href='https://static.eurofound.europa.eu/board-members/THORO_BORCH_SLOTH_DA_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :dk: Denmark,Danish Trade Union Confederation (FH),Maria Bjerre <a href='https://static.eurofound.europa.eu/board-members/BJERRE_DA_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :dk: Denmark,Akademikerne,Käthe Munk Ryom,Alternate,Trade Union
 :ee: Estonia,Estonian Employers Confederation,Kristi Sõber <a href='https://static.eurofound.europa.eu/board-members/SOBER_EE_E_M.pdf'>(DOI & CV)</a>,Member,Employer
 :ee: Estonia,,Meelis Kitsing,Alternate,Employer
-:ee: Estonia,,Ingel Kadarik,Member,Government
+:ee: Estonia,,Ingel Kadarik <a href='https://static.eurofound.europa.eu/board-members/KADARIK_EE_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :ee: Estonia,,Deisi Pohlak,Alternate,Government
 :ee: Estonia,Estonian Trade Union Confederation (EAKL),Jaan-Hendrik Toomel <a href='https://static.eurofound.europa.eu/board-members/TOOMEL_EE_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :ee: Estonia,Estonian Employees Union Confederation (TALO),Madis Iganõmm,Alternate,Trade Union
@@ -50,6 +49,7 @@
 :es: Spain,Spanish Confederation of SMEs,Miguel Canales Gutiérrez,Alternate,Employer
 :es: Spain,Ministry of Labour & Social Economy,Marina Griñón Montes <a href='https://static.eurofound.europa.eu/board-members/GRINON_ES_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :es: Spain,Ministry of Labour & Social Economy,Gloria Ortega González <a href='https://static.eurofound.europa.eu/board-members/ORTEGA_ES_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
+:es: Spain,,Laurentina Diaz Gil,Alternate,Government
 :es: Spain,General Union of Workers (UGT),Antonio Miguel Luna Pavon <a href='https://static.eurofound.europa.eu/board-members/LUNA_PAVON_ES_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :es: Spain,Federation of Workers' Commissions (CCOO),Fernando Rocha <a href='https://static.eurofound.europa.eu/board-members/ROCHA_ES_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
 :fi: Finland,Confederation of Finnish Industries (EK),Katja Miettinen <a href='https://static.eurofound.europa.eu/board-members/MIETTINEN_FI_E_M.pdf'>(DOI & CV)</a>,Member,Employer
@@ -69,6 +69,7 @@
 :gr: Greece,Ministry of Labour & Social Affairs,Triantafyllia Totou <a href='https://static.eurofound.europa.eu/board-members/TOTOU_EL_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :gr: Greece,Ministry of Labour & Social Affairs,Georgios Gourzoulidis <a href='https://static.eurofound.europa.eu/board-members/GOURZOULIDIS_EL_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :gr: Greece,General Confederation of Labour (GSEE),Ioannis Poupkos <a href='https://static.eurofound.europa.eu/board-members/POUPKOS_EL_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
+:gr: Greece,,Vasileios Zavogiannis,Alternate,Trade Union
 :hr: Croatia,Croation Employers' Association (HUP),Nuša Žunec <a href='https://static.eurofound.europa.eu/board-members/ZUNEC_HR_E_M.pdf'>(DOI & CV)</a>,Member,Employer
 :hr: Croatia,Croatian Employers' Association (HUP),Dario Ćorić <a href='https://static.eurofound.europa.eu/board-members/CORIC_HR_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
 :hr: Croatia,"Ministry of Labour, Pension System, Family & Social Policy",Iva Musić Orešković <a href='https://static.eurofound.europa.eu/board-members/MUSIC_ORESKOVIC_HU_G_M.pdf'>(DOI & CV)</a>,Member,Government
@@ -76,14 +77,12 @@
 :hr: Croatia,Independent Trade Unions of Croatia (NHS),Marija Hanzevacki <a href='https://static.eurofound.europa.eu/board-members/HANZEVACKI_HR_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :hr: Croatia,Union of Autonomous Trade Unions of Croatia (SSSH),Dijana Sobota <a href='https://static.eurofound.europa.eu/board-members/SOBOTA_HR_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
 :hu: Hungary,BusinessHungary (MGYOSZ),Adrienn Bálint <a href='https://static.eurofound.europa.eu/board-members/BALINT_HU_E_M.pdf'>(DOI & CV)</a>,Member,Employer
-:hu: Hungary,BusinessHungary (MGYOSZ),Andrea Magyar <a href='https://static.eurofound.europa.eu/board-members/MAGYAR_HU_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
 :hu: Hungary,Ministry for Economic Development,Krisztina Pelei <a href='https://static.eurofound.europa.eu/board-members/PELEI_HU_G_M.pdf'>(DOI & CV)</a>,Member,Government
-:hu: Hungary,Ministry of the Interior,Vera Judit Ács <a href='https://static.eurofound.europa.eu/board-members/ACS_HU_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :hu: Hungary,Hungarian Trade Union Confederation (MSZSZ),Szabolcs Beőthy-Fehér <a href='https://static.eurofound.europa.eu/board-members/BEOTHY-FEHER_HU_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :hu: Hungary,Forum for the Cooperation of Trade Unions (SZEF),Viktória Szűcs <a href='https://static.eurofound.europa.eu/board-members/SZUCS_HU_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
 :ie: Ireland,Irish Business & Employers Confederation (IBEC),Maeve McElwee,Member,Employer
 :ie: Ireland,Irish Business & Employers Confederation (IBEC),Pauline O'Hare <a href='https://static.eurofound.europa.eu/board-members/O'HARE_IE_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
-:ie: Ireland,"Department of Enterprise, Trade & Employment, Ireland",Diarmaid Smyth,Member,Government
+:ie: Ireland,"Department of Enterprise, Trade & Employment, Ireland",Diarmaid Smyth <a href='https://static.eurofound.europa.eu/board-members/SMYTH_IE_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :ie: Ireland,Department of Social Protection (Ireland),Kieran Lea,Alternate,Government
 :ie: Ireland,Irish Congress of Trade Unions (ICTU),David Joyce,Member,Trade Union
 :ie: Ireland,Irish Congress of Trade Unions (ICTU),Ger Gibbons <a href='https://static.eurofound.europa.eu/board-members/GIBBONS_IE_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
@@ -99,8 +98,8 @@
 :lt: Lithuania,Ministry of Social Security & Labour,Rita Skrebiškienė <a href='https://static.eurofound.europa.eu/board-members/SKREBISKIENE_LT_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :lt: Lithuania,Lithuanian Trade Union Solidarumas (LPSS),Daiva Kvedaraitė <a href='https://static.eurofound.europa.eu/board-members/KVEDARAITE_LT_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :lt: Lithuania,Lithuanian Trade Union Confederation (LPSK),Sigita Mykolaityté <a href='https://static.eurofound.europa.eu/board-members/MYKOLAITYTE_LT_W_A.pdf'>(DOI & CV)</a>,Alternate,Trade Union
-:lu: Luxembourg,FEDIL - The voicve of Luxembourg Industry,Philippe Heck,Member,Employer
 :lu: Luxembourg,Fedil - The voice of Luxembourg's Industry,Marc Kieffer,Alternate,Employer
+:lu: Luxembourg,FEDIL - The voicve of Luxembourg Industry,Philippe Heck,Member,Government
 :lu: Luxembourg,"Ministry of Labour, Employment & the Social and Solidarity Economy",Tom Oswald <a href='https://static.eurofound.europa.eu/board-members/OSWALD_LU_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :lu: Luxembourg,"Ministry of Labour, Employment & the Social and Solidarity Economy",Bob Greis <a href='https://static.eurofound.europa.eu/board-members/GREIS_LU_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :lu: Luxembourg,Luxembourg Independent Trade Union Confederation (OGB-L),Veronique Eischen,Member,Trade Union
@@ -117,13 +116,13 @@
 :mt: Malta,Department for Industrial & Employment Relations (DIER),Christopher Galea <a href='https://static.eurofound.europa.eu/board-members/GALEA_MT_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :mt: Malta,General Workers Union (GWU),Josef Bugeja <a href='https://static.eurofound.europa.eu/board-members/BUGEJA_MT_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :mt: Malta,Malta Union of Midwives and Nurses (MUMN),Paul Pace,Alternate,Trade Union
-:nl: Netherlands,The Confederation of Netherlands Industry & Employers (VNO-NCW),Guusje Dolsma,Member,Employer
+:nl: Netherlands,,Jurre de Haan,Member,Employer
 :nl: Netherlands,Association of Netherlands Municipalities (VNG),Nurcan Yilmaz <a href='https://static.eurofound.europa.eu/board-members/YILMAZ_NL_E_A.pdf'>(DOI & CV)</a>,Alternate,Employer
 :nl: Netherlands,Ministry of Social Affairs & Employment,Wilm Geurts <a href='https://static.eurofound.europa.eu/board-members/GEURTS_NL_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :nl: Netherlands,,Iris De Graaff,Alternate,Government
 :nl: Netherlands,Netherlands Trade Union Confederation FNV,Elmar Smid <a href='https://static.eurofound.europa.eu/board-members/SMID_NL_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 :pl: Poland,Polish Confederation Lewiatan,Andrzej Rudka <a href='https://static.eurofound.europa.eu/board-members/RUDKA_PL_E_M.pdf'>(DOI & CV)</a>,Member,Employer
-:pl: Poland,,Szymon Witkowski,Alternate,Employer
+:pl: Poland,Pracodawcy RP,Tomasz Golis,Alternate,Employer
 :pl: Poland,Ministry of Family & Social Policy,Jerzy Ciechański <a href='https://static.eurofound.europa.eu/board-members/CIECHANSKI_PL_G_M.pdf'>(DOI & CV)</a>,Member,Government
 :pl: Poland,Ministry of Family & Social Policy,Magdalena Zawadzka <a href='https://static.eurofound.europa.eu/board-members/ZAWADZKA_PL_G_A.pdf'>(DOI & CV)</a>,Alternate,Government
 :pl: Poland,Independent and Self-Governing Trade Union Solidarity (NSZZ Solidarnosc),Katarzyna Bartkiewicz <a href='https://static.eurofound.europa.eu/board-members/BARTKIEWICZ_PL_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
@@ -157,7 +156,6 @@
 :sk: Slovakia,"Ministry of Labour, Social Affairs & Family",Ján Gabura,Alternate,Government
 :sk: Slovakia,Confederation of Trade Unions of the Slovak Republic (KOZ),Miroslav Hajnoš <a href='https://static.eurofound.europa.eu/board-members/HAJNOS_SK_W_M.pdf'>(DOI & CV)</a>,Member,Trade Union
 N/A,BusinessEurope,Anna Kwiatkiewicz <a href='https://static.eurofound.europa.eu/board-members/KWIATKIEWICZ_E_COORD.pdf'>(DOI & CV)</a>,Member,Employer
-N/A,"DG Employment, Social Affairs & Inclusion",Barbara Kauffmann,Member,European Commission
 N/A,DG Research & Innovation,Henriette Van Eijl,Member,European Commission
 N/A,DG Health and Food Safety,Veronique Wasbauer <a href='https://static.eurofound.europa.eu/board-members/WASBAUER_DG_HEALTH_M.pdf'>(DOI & CV)</a>,Member,European Commission
 N/A,"DG Employment, Social Affairs & Inclusion",Imad Kanjou Auge <a href='https://static.eurofound.europa.eu/board-members/KANJOU_AUGE_DG_EMP_A.pdf'>(DOI & CV)</a>,Alternate,European Commission
@@ -165,6 +163,7 @@ N/A,DG Research & Innovation,Maria del Pilar Gonzalez Pantaleon,Alternate,Europe
 N/A,DG Health & Food Safety,Stefan Schreck <a href='https://static.eurofound.europa.eu/board-members/SCHRECK_DG_HEALTH_A.pdf'>(DOI & CV)</a>,Alternate,European Commission
 N/A,Ministry of Labour & Social Affairs (Norway),Anna Skarberg <a href='https://static.eurofound.europa.eu/board-members/SKARBERG_EFTA_G.pdf'>(DOI & CV)</a>,Observer,Government
 N/A,Ministry of Labour & Social Affairs (Norway),Kristin Stanwick Bårnås <a href='https://static.eurofound.europa.eu/board-members/BARNAS_EFTA_G_M.pdf'>(DOI & CV)</a>,Observer,Government
+N/A,,Christina Larsen,Alternate,Government
 N/A,Norwegian Confederation of Trade Unions (NO),Liv Sannes <a href='https://static.eurofound.europa.eu/board-members/SANNES_EFTA_W.pdf'>(DOI & CV)</a>,Observer,Trade Union
 N/A,European Trade Union Institute (ETUI),Aline Hoffmann <a href='https://static.eurofound.europa.eu/board-members/HOFFMANN_W_COORD.pdf'>(DOI & CV)</a>,Member,Trade Union
 N/A,European Trade Union Confederation (ETUC),Tea Jarc <a href='https://static.eurofound.europa.eu/board-members/JARC_W_COORD.pdf'>(DOI & CV)</a>,Member,Trade Union
