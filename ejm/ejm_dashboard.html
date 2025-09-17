@@ -12,6 +12,9 @@
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 
+  <!-- Flags CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css">
+
   <script>
     Highcharts.setOptions({
       chart: { animation: { duration: 300 } },
@@ -36,7 +39,6 @@
     h1 { margin: 0 0 1rem; font-size: 22px; font-weight: 700; color: #222; }
     label { display: block; margin: .85rem 0 .35rem; font-weight: 600; }
     select, button { font: inherit; }
-    select { width: 100%; padding: .5rem; border: 1px solid #cfd8e3; border-radius: 6px; background: #fff; }
 
     fieldset { border: none; background: transparent; padding: .25rem 0; margin: 0 0 .9rem; }
     fieldset legend { font-weight: 700; padding: 0 .4rem; color: #374151; }
@@ -46,6 +48,7 @@
     .radio-list input { margin-right: .5rem; }
 
     #controls { display: grid; grid-template-columns: 230px 1fr; gap: 1.5rem; }
+
     /* chart wrapper so we can position toggles */
     .chart-wrap{ position:relative; }
     #container { width: 100%; height: 560px; margin-top: .5rem; }
@@ -65,23 +68,37 @@
     .note { margin: .5rem 0 .5rem; font-size: 12px; color: #374151; }
     .hidden { display: none; }
 
-    /* Radar/Bar toggle buttons (top-right on chart) */
-   .chart-toggles{                         /* your existing styles */
-  position:absolute;
-  top:-32px; right:0;
-  display:flex; gap:6px; z-index:10;
-}
-.chart-toggles.hidden {                 /* <- force-hide when toggled */
-  display: none !important;
-}
-
+    /* Radar/Bar toggles (top-right, above title) */
+    .chart-toggles{
+      position:absolute; top:-32px; right:0; display:flex; gap:6px; z-index:10;
+    }
+    .chart-toggles.hidden { display: none !important; }
     .chart-toggles .tbtn{
-      width:34px; height:34px; border:1px solid #e5e7eb; border-radius:50%;
+      width:30px; height:30px; border:1px solid #e5e7eb; border-radius:50%;
       background:#fff; display:flex; align-items:center; justify-content:center;
       cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.05);
     }
     .chart-toggles .tbtn.active{ background:#e7effa; border-color:#b6c3d7; }
-    .chart-toggles svg{ color:#374151; }
+    .chart-toggles svg{ width:16px; height:16px; color:#374151; }
+
+    /* ---------- Flag dropdown UI ---------- */
+    .flag-select{ position:relative; }
+    .flag-select .btn{
+      display:flex; align-items:center; gap:.6rem;
+      width:100%; padding:.5rem .6rem; background:#fff;
+      border:1px solid #cfd8e3; border-radius:6px; cursor:pointer;
+    }
+    .flag-select .list{
+      position:absolute; left:0; right:0; z-index:20; margin-top:.3rem;
+      max-height:300px; overflow:auto; background:#fff;
+      border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.08);
+    }
+    .flag-select .item{
+      display:flex; align-items:center; gap:.6rem;
+      padding:.5rem .6rem; cursor:pointer;
+    }
+    .flag-select .item:hover{ background:#f3f4f6; }
+    .flag-select .fi{ font-size:18px; line-height:1; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,.06) inset; }
   </style>
 
   <script>
@@ -102,7 +119,7 @@
         gridLineColor:'#e5e7eb', gridLineWidth:1,
         labels: {
           style:{ color:'#6b7280', fontSize:'12px', fontWeight:400 },
-          formatter(){ return fmtVal(this.value); } // use our rule below
+          formatter(){ return fmtVal(this.value); }
         }
       },
       legend: {
@@ -117,13 +134,14 @@
 </head>
 <body>
 
-
-
 <div id="controls">
   <!-- LEFT -->
   <div>
     <label>Select country
-      <select id="countrySel"></select>
+      <!-- visible flag dropdown -->
+      <div id="countryUI" class="flag-select"></div>
+      <!-- hidden native select kept for existing logic -->
+      <select id="countrySel" style="display:none"></select>
     </label>
 
     <fieldset>
@@ -152,14 +170,14 @@
       <!-- toggles only visible for Total employment -->
       <div id="chartToggles" class="chart-toggles hidden" aria-label="Chart view">
         <button id="btnBar" class="tbtn active" type="button" title="Bar chart" aria-label="Bar chart">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3"  y="10" width="4" height="10" rx="1"></rect>
             <rect x="10" y="6"  width="4" height="14" rx="1"></rect>
             <rect x="17" y="3"  width="4" height="17" rx="1"></rect>
           </svg>
         </button>
         <button id="btnRadar" class="tbtn" type="button" title="Radar chart" aria-label="Radar chart">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <polygon points="12,3 20,8 17,19 7,19 4,8" fill="none" stroke="currentColor" stroke-width="1.5"/>
             <circle cx="12" cy="12" r="2" />
           </svg>
@@ -234,7 +252,7 @@ const _img = new Image(); _img.onload = () => { if (_img.naturalWidth) logoAspec
 const _wm  = new Image(); _wm.onload  = () => { if (_wm.naturalWidth)   wmAspect   = _wm.naturalHeight   / _wm.naturalWidth;   }; _wm.src  = wmURL;
 
 function placeLogo(chart){
-  const w = 62; // smaller manual width (adjust if needed)
+  const w = 62; // adjust to taste
   const h = Math.max(1, Math.round(w*logoAspect));
   const x = chart.chartWidth  - w - 10;
   const y = chart.chartHeight - h - 8;
@@ -286,19 +304,15 @@ function toDatasetKey(name){ if (name==='European Union') return 'EU_ANY'; retur
 /* Number formatting rules */
 function fmtVal(v){
   const abs = Math.abs(v);
-  // M only at >= 1,000,000, always 2 significant digits overall
   if (abs >= 1_000_000){
-    // two significant digits: 1.1M, 12M, 990M, etc.
     const digits = Number((abs/1e6).toPrecision(2));
     return (v<0?'-':'') + (digits % 1 === 0 ? digits.toFixed(0) : digits.toString()) + 'M';
   }
-  // 10,000 – 999,999 => 2 sig digits in K, cap at 999K
   if (abs >= 10_000){
     let k = Number((abs/1e3).toPrecision(2));
     if (k >= 1000) k = 999;
     return (v<0?'-':'') + (k % 1 === 0 ? k.toFixed(0) : k.toString()) + 'K';
   }
-  // 1,000 – 9,999 => one decimal, e.g., 1.2K
   if (abs >= 1_000){
     return (v<0?'-':'') + (abs/1e3).toFixed(1) + 'K';
   }
@@ -313,23 +327,65 @@ function formatTooltip3(v){
 }
 
 /* Export filenames */
-function safeFile(s){
-  return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g, '-').replace(/\s+/g, ' ').trim();
-}
-function exportName(kind){ // 'img' | 'data'
-  const yr = displayPeriod(selPeriod);
-  return safeFile(`EJM_${kind} ${selCountryName} ${selMetric} ${yr}`);
-}
+function safeFile(s){ return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g, '-').replace(/\s+/g, ' ').trim(); }
+function exportName(kind){ const yr = displayPeriod(selPeriod); return safeFile(`EJM_${kind} ${selCountryName} ${selMetric} ${yr}`); }
 
+/* Radar toggle visibility */
 function updateToggleVisibility(){
   const show = /^total employment$/i.test((selMetric || '').trim());
   tgWrap.classList.toggle('hidden', !show);
-  if (!show && selChart === 'radar') selChart = 'bar';  // snap back to bars
+  if (!show && selChart === 'radar') selChart = 'bar';
   btnBar.classList.toggle('active', selChart === 'bar');
   btnRad.classList.toggle('active', selChart === 'radar');
 }
 
+/* ---------- Flags helpers & builder ---------- */
+const ISO_FIX_FOR_FLAGS = { EL:'GR' }; // Greece code for flag library
+function nameToFlagCode(name){
+  if (name === 'European Union') return 'eu';
+  let code = NAME_TO_ISO2[name] || '';
+  code = ISO_FIX_FOR_FLAGS[code] || code;
+  return (code || '').toLowerCase();
+}
+// Build visible dropdown & sync with hidden <select id="countrySel">
+function buildFlagCountryDropdown(countries){
+  const ui = document.getElementById('countryUI');
+  ui.innerHTML = `
+    <button type="button" class="btn" id="flagBtn">
+      <span class="fi" id="flagCurr"></span><span id="labelCurr"></span>
+    </button>
+    <div class="list" id="flagList" hidden></div>
+  `;
+  const list = ui.querySelector('#flagList');
+  list.innerHTML = countries.map(name=>{
+    const code = nameToFlagCode(name);
+    return `<div class="item" data-name="${name}">
+              <span class="fi fi-${code}"></span><span>${name}</span>
+            </div>`;
+  }).join('');
 
+  const btn = ui.querySelector('#flagBtn');
+  const flagCurr = ui.querySelector('#flagCurr');
+  const labelCurr = ui.querySelector('#labelCurr');
+
+  function setSelected(name){
+    flagCurr.className = `fi fi-${nameToFlagCode(name)}`;
+    labelCurr.textContent = name;
+  }
+  setSelected(selCountryName);
+
+  btn.onclick = ()=>{ list.hidden = !list.hidden; };
+  list.onclick = e=>{
+    const item = e.target.closest('.item'); if(!item) return;
+    const name = item.dataset.name;
+    setSelected(name);
+    list.hidden = true;
+    // mirror selection to hidden <select> and trigger existing onchange
+    cSel.value = name;
+    cSel.onchange();
+  };
+  document.addEventListener('click', (e)=>{ if(!ui.contains(e.target)) list.hidden = true; });
+}
 
 /* UI */
 function initUI(){
@@ -339,10 +395,13 @@ function initUI(){
     ...(allNames.includes('European Union') ? ['European Union'] : []),
     ...sortAlpha(allNames.filter(n=>n!=='European Union'))
   ];
+  // hidden select to keep rest of code working
   cSel.innerHTML = countries.map(n=>`<option>${n}</option>`).join('');
   selCountryName = countries[0] || 'European Union';
   cSel.value = selCountryName;
   cSel.onchange = ()=>{ selCountryName=cSel.value; buildYears(true); draw(); };
+  // visible flag dropdown
+  buildFlagCountryDropdown(countries);
 
   // Metric buttons
   const metrics = sortAlpha(uniq(rows.map(r=>r[FIELD_METRIC]))).filter(Boolean);
@@ -352,7 +411,7 @@ function initUI(){
     const v=e.target?.dataset?.v; if(!v) return;
     selMetric=v;
     metricPills.querySelectorAll('button').forEach(b=>b.classList.toggle('active', b.dataset.v===selMetric));
-    updateToggleVisibility();     // <-- show/hide radar toggle
+    updateToggleVisibility();
     buildYears(true); draw();
   };
 
@@ -533,16 +592,12 @@ function draw(){
 }
 </script>
 
-  <script>
+<script>
+/* External message hooks for host page buttons */
 window.addEventListener("message", (event) => {
-
   if (event.data === "download-png" && chart) {
-    chart.exportChartLocal({
-      type: "image/png",
-      filename: exportName("img")
-    });
+    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
   }
-
   if (event.data === "download-csv" && chart) {
     const csv = chart.getCSV();
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
