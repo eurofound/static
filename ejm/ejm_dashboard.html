@@ -33,104 +33,120 @@
   <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root { --pad: 1rem; font-size: 14px; }
-    body { font-family: 'Inter', Arial, sans-serif; margin: var(--pad); max-width: 1180px; }
-    h1 { margin: 0 0 1rem; font-size: 22px; font-weight: 700; color: #222; }
-    label { display: block; margin: .85rem 0 .35rem; font-weight: 600; }
-    select, button { font: inherit; }
+<style>
+  :root { --pad: 1rem; font-size: 14px; }
+  body { font-family: 'Inter', Arial, sans-serif; margin: var(--pad); max-width: 1180px; }
+  h1 { margin: 0 0 1rem; font-size: 22px; font-weight: 700; color: #222; }
+  label { display: block; margin: .85rem 0 .35rem; font-weight: 600; }
+  select, button { font: inherit; }
 
-    fieldset { border: none; background: transparent; padding: .25rem 0; margin: 0 0 .9rem; }
-    fieldset legend { font-weight: 700; padding: 0 .4rem; color: #374151; }
+  fieldset { border: none; background: transparent; padding: .25rem 0; margin: 0 0 .9rem; }
+  fieldset legend { font-weight: 700; padding: 0 .4rem; color: #374151; }
 
-    .radio-list { display: block; }
-    .radio-list label { display: block; margin: .25rem 0; cursor: pointer; }
-    .radio-list input { margin-right: .5rem; }
+  .radio-list { display: block; }
+  .radio-list label { display: block; margin: .25rem 0; cursor: pointer; }
+  .radio-list input { margin-right: .5rem; }
 
-    #controls { display: grid; grid-template-columns: 230px 1fr; gap: 1.5rem; }
+  #controls { display: grid; grid-template-columns: 230px 1fr; gap: 1.5rem; }
 
-    /* chart wrapper so we can position toggles */
-    .chart-wrap{ position:relative; }
-    #container { width: 100%; height: 560px; margin-top: .5rem; }
+  /* chart wrapper */
+  .chart-wrap{ position:relative; }
+  #container { width: 100%; height: 560px; margin-top: .5rem; }
 
-    .dl-row { margin-top: .6rem; }
-    .dl-row button { padding: .45rem .8rem; border: 1px solid #cfd8e3; border-radius: 8px; background: #fff; cursor: pointer; }
+  .dl-row { margin-top: .6rem; }
+  .dl-row button { padding: .45rem .8rem; border: 1px solid #cfd8e3; border-radius: 8px; background: #fff; cursor: pointer; }
 
-    /* Pills (metric + year) */
-    .pill-row { margin: 0 0 .75rem; }
-    .pill {
-      display: inline-block; margin: .35rem .5rem .35rem 0; padding: .38rem .8rem;
-      border: 1px solid #cbd5e1; border-radius: 999px; background: #fff; cursor: pointer;
-    }
-    .pill.active { background: #e7effa; border-color: #b6c3d7; font-weight: 600; }
+  /* Pills (metric + year) */
+  .pill-row { margin: 0; }  /* we control spacing via row containers */
+  .pill {
+    display: inline-block; margin: .35rem .5rem .35rem 0; padding: .38rem .8rem;
+    border: 1px solid #cbd5e1; border-radius: 999px; background: #fff; cursor: pointer;
+  }
+  .pill.active { background: #e7effa; border-color: #b6c3d7; font-weight: 600; }
 
-    /* Explanatory note */
-    .note { margin: .5rem 0 .5rem; font-size: 12px; color: #374151; }
-    .hidden { display: none; }
+  /* Explanatory note */
+  .note { margin: .5rem 0 .5rem; font-size: 12px; color: #374151; }
+  .hidden { display: none; }
 
-    /* Radar/Bar toggles (top-right, above title) */
-    .chart-toggles{
-      position:absolute; top:-32px; right:0; display:flex; gap:6px; z-index:10;
-    }
-    .chart-toggles.hidden { display: none !important; }
-    .chart-toggles .tbtn{
-      width:30px; height:30px; border:1px solid #e5e7eb; border-radius:50%;
-      background:#fff; display:flex; align-items:center; justify-content:center;
-      cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.05);
-    }
-    .chart-toggles .tbtn.active{ background:#e7effa; border-color:#b6c3d7; }
-    .chart-toggles svg{ width:16px; height:16px; color:#374151; }
+  /* ---- NEW: compact centered row under chart for metric pills + icons ---- */
+  .metric-row{
+    display:flex;
+    justify-content:center;   /* center whole group under chart */
+    align-items:center;
+    gap:.6rem;                 /* space between pills group and icons */
+    flex-wrap:wrap;
+    margin:.25rem 0 0;         /* tight gap under chart */
+  }
+  #metricPills{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.6rem;
+    flex-wrap:wrap;
+    margin:0;                  /* no extra white space */
+  }
 
-    /* ---------- Flag dropdown UI ---------- */
-    .flag-select{ position:relative; }
-    .flag-select .btn{
-      display:flex; align-items:center; gap:.6rem;
-      width:100%; padding:.5rem .6rem; background:#fff;
-      border:1px solid #cfd8e3; border-radius:6px; cursor:pointer;
-    }
-    .flag-select .list{
-      position:absolute; left:0; right:0; z-index:20; margin-top:.3rem;
-      max-height:300px; overflow:auto; background:#fff;
-      border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.08);
-    }
-    .flag-select .item{
-      display:flex; align-items:center; gap:.6rem;
-      padding:.5rem .6rem; cursor:pointer;
-    }
-    .flag-select .item:hover{ background:#f3f4f6; }
-    .flag-select .fi{ font-size:18px; line-height:1; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,.06) inset; }
-  </style>
+  /* Radar/Bar toggles now inline (not absolute) */
+  .chart-toggles{ display:flex; gap:6px; }
+  .chart-toggles.hidden{ display:none !important; }
+  .chart-toggles .tbtn{
+    width:30px; height:30px; border:1px solid #e5e7eb; border-radius:50%;
+    background:#fff; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.05);
+  }
+  .chart-toggles .tbtn.active{ background:#e7effa; border-color:#b6c3d7; }
+  .chart-toggles svg{ width:16px; height:16px; color:#374151; }
 
-  <script>
-    /* Colors (legend/series order) */
-    const EJM_COLORS = { blue: '#0A6AA6', orange: '#A55E00', red: '#B01E34', green: '#3C6F3C', purple: '#59419A' };
-    const EJM_PALETTE = [EJM_COLORS.blue, EJM_COLORS.orange, EJM_COLORS.red, EJM_COLORS.green, EJM_COLORS.purple];
-    const ejmColor = i => EJM_PALETTE[i % EJM_PALETTE.length];
+  /* ---------- Flag dropdown UI ---------- */
+  .flag-select{ position:relative; }
+  .flag-select .btn{
+    display:flex; align-items:center; gap:.6rem;
+    width:100%; padding:.5rem .6rem; background:#fff;
+    border:1px solid #cfd8e3; border-radius:6px; cursor:pointer;
+  }
+  .flag-select .list{
+    position:absolute; left:0; right:0; z-index:20; margin-top:.3rem;
+    max-height:300px; overflow:auto; background:#fff;
+    border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.08);
+  }
+  .flag-select .item{
+    display:flex; align-items:center; gap:.6rem;
+    padding:.5rem .6rem; cursor:pointer;
+  }
+  .flag-select .item:hover{ background:#f3f4f6; }
+  .flag-select .fi{ font-size:18px; line-height:1; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,.06) inset; }
+</style>
 
-    Highcharts.setOptions({
-      colors: EJM_PALETTE.slice(),
-      chart:  { style: { fontFamily: 'Inter, Arial, sans-serif' } },
-      title:  { style: { fontSize: '18px', fontWeight: '700', color:'#111827' } },
-      xAxis: {
-        lineWidth: .8, lineColor:'#111', tickLength: 0,
-        labels: { style:{ color:'#374151', fontSize:'12px', fontWeight:400 } }
-      },
-      yAxis: {
-        gridLineColor:'#e5e7eb', gridLineWidth:1,
-        labels: {
-          style:{ color:'#6b7280', fontSize:'12px', fontWeight:400 },
-          formatter(){ return fmtVal(this.value); }
-        }
-      },
-      legend: {
-        align: 'center', verticalAlign: 'top', layout: 'horizontal',
-        symbolRadius: 2,
-        itemStyle: { fontSize: '12px', color: '#1f2937', fontWeight:400 },
-        itemHoverStyle: { color: '#111827' }
-      },
-      credits: { enabled:false }
-    });
-  </script>
+<script>
+  /* Colors (legend/series order) */
+  const EJM_COLORS = { blue: '#0A6AA6', orange: '#A55E00', red: '#B01E34', green: '#3C6F3C', purple: '#59419A' };
+  const EJM_PALETTE = [EJM_COLORS.blue, EJM_COLORS.orange, EJM_COLORS.red, EJM_COLORS.green, EJM_COLORS.purple];
+  const ejmColor = i => EJM_PALETTE[i % EJM_PALETTE.length];
+
+  Highcharts.setOptions({
+    colors: EJM_PALETTE.slice(),
+    chart:  { style: { fontFamily: 'Inter, Arial, sans-serif' } },
+    title:  { style: { fontSize: '18px', fontWeight: '700', color:'#111827' } },
+    xAxis: {
+      lineWidth: .8, lineColor:'#111', tickLength: 0,
+      labels: { style:{ color:'#374151', fontSize:'12px', fontWeight:400 } }
+    },
+    yAxis: {
+      gridLineColor:'#e5e7eb', gridLineWidth:1,
+      labels: {
+        style:{ color:'#6b7280', fontSize:'12px', fontWeight:400 },
+        formatter(){ return fmtVal(this.value); }
+      }
+    },
+    legend: {
+      align: 'center', verticalAlign: 'top', layout: 'horizontal',
+      symbolRadius: 2,
+      itemStyle: { fontSize: '12px', color: '#1f2937', fontWeight:400 },
+      itemHoverStyle: { color: '#111827' }
+    },
+    credits: { enabled:false }
+  });
+</script>
 </head>
 <body>
 
@@ -162,24 +178,27 @@
 
   <!-- RIGHT -->
   <div>
-    <div class="pill-row" id="metricPills"></div>
-
     <div class="chart-wrap">
       <div id="container"></div>
+    </div>
+
+    <!-- Centered row under the chart: metric pills + radar/bar icons -->
+    <div id="metricRow" class="metric-row">
+      <div id="metricPills" class="pill-row"></div>
 
       <!-- toggles only visible for Total employment -->
       <div id="chartToggles" class="chart-toggles hidden" aria-label="Chart view">
         <button id="btnBar" class="tbtn active" type="button" title="Bar chart" aria-label="Bar chart">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <rect x="3"  y="10" width="4" height="10" rx="1"></rect>
             <rect x="10" y="6"  width="4" height="14" rx="1"></rect>
             <rect x="17" y="3"  width="4" height="17" rx="1"></rect>
           </svg>
         </button>
         <button id="btnRadar" class="tbtn" type="button" title="Radar chart" aria-label="Radar chart">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polygon points="12,3 20,8 17,19 7,19 4,8" fill="none" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="12" cy="12" r="2" />
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <polygon points="12,3 20,8 17,19 7,19 4,8" fill="none" stroke="currentColor" stroke-width="1.5"></polygon>
+            <circle cx="12" cy="12" r="2"></circle>
           </svg>
         </button>
       </div>
@@ -194,6 +213,7 @@
     </div>
   </div>
 </div>
+
 
 <script>
 /* CONSTANTS */
