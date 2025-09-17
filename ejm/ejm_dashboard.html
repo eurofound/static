@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>European Jobs Monitor – Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Highcharts & modules -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+
+  <script>
+    Highcharts.setOptions({
+      chart: { animation: { duration: 300 } },
+      plotOptions: { series: { animation: { duration: 300 } } }
+    });
+  </script>
+
+  <script>
+  // …
+  function criterionPhrase () {
+    return `${selCriterion.toLowerCase()} quintile`;
+  }
+  </script>
+
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Flag icons (SVG) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css"/>
+
+  <style>
+    :root { --pad: 1rem; font-size: 14px; }
+    body { font-family: 'Inter', Arial, sans-serif; margin: var(--pad); max-width: 1180px; }
+    h1 { margin: 0 0 1rem; font-size: 22px; font-weight: 700; color: #222; }
+    label { display: block; margin: .85rem 0 .35rem; font-weight: 600; }
+    select, button { font: inherit; }
+    select { width: 100%; padding: .5rem; border: 1px solid #cfd8e3; border-radius: 6px; background: #fff; }
+
+    fieldset { border: none; background: transparent; padding: .25rem 0; margin: 0 0 .9rem; }
+    fieldset legend { font-weight: 700; padding: 0 .4rem; color: #374151; }
+
+    .radio-list { display: block; }
+    .radio-list label { display: block; margin: .25rem 0; cursor: pointer; }
+    .radio-list input { margin-right: .5rem; }
+
+    #controls { display: grid; grid-template-columns: 230px 1fr; gap: 1.5rem; }
+    #container { width: 100%; height: 560px; margin-top: .5rem; }
+    .dl-row { margin-top: .6rem; }
+    .dl-row button { padding: .45rem .8rem; border: 1px solid #cfd8e3; border-radius: 8px; background: #fff; cursor: pointer; }
+
+    /* Pills (metric + year) */
+    .pill-row { margin: 0 0 .75rem; }
+    .pill {
+      display: inline-block; margin: .35rem .5rem .35rem 0; padding: .38rem .8rem;
+      border: 1px solid #cbd5e1; border-radius: 999px; background: #fff; cursor: pointer;
+    }
+    .pill.active { background: #e7effa; border-color: #b6c3d7; font-weight: 600; }
+
+    /* Note under chart */
+    .note { margin: .5rem 0 .5rem; font-size: 12px; color: #374151; }
+    .hidden { display: none; }
+
+    /* SVG-flag dropdown */
+    .flag-select{ position:relative; }
+    .flag-select .btn{
+      display:flex; align-items:center; gap:.6rem;
+      width:100%; padding:.5rem .6rem; background:#fff;
+      border:1px solid #cfd8e3; border-radius:6px; cursor:pointer;
+    }
+    .flag-select .list{
+      position:absolute; left:0; right:0; z-index:20; margin-top:.3rem;
+      max-height:300px; overflow:auto; background:#fff;
+      border:1px solid #e5e7eb; border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+    }
+    .flag-select .item{
+      display:flex; align-items:center; gap:.6rem;
+      padding:.5rem .6rem; cursor:pointer;
+    }
+    .flag-select .item:hover{ background:#f3f4f6; }
+    .flag-select .fi{ font-size:18px; line-height:1; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,.06) inset; }
+  </style>
+
+  <script>
+    /* Colors (legend/series order) */
+    const EJM_COLORS = { blue: '#0A6AA6', orange: '#A55E00', red: '#B01E34', green: '#3C6F3C', purple: '#59419A' };
+    const EJM_PALETTE = [EJM_COLORS.blue, EJM_COLORS.orange, EJM_COLORS.red, EJM_COLORS.green, EJM_COLORS.purple];
+    const ejmColor = i => EJM_PALETTE[i % EJM_PALETTE.length];
+
+    Highcharts.setOptions({
+      colors: EJM_PALETTE.slice(),
+      chart:  { style: { fontFamily: 'Inter, Arial, sans-serif' } },
+      title:  { style: { fontSize: '18px', fontWeight: '700', color:'#111827' } },
+      xAxis: {
+        lineWidth: .8, lineColor:'#111', tickLength: 0,
+        labels: { style:{ color:'#374151', fontSize:'12px', fontWeight:400 } }
+      },
+      yAxis: {
+        gridLineColor:'#e5e7eb', gridLineWidth:1,
+        labels: {
+          style:{ color:'#6b7280', fontSize:'12px', fontWeight:400 },
+          formatter(){
+            const v=this.value;
+            if (Math.abs(v)>=1e6) return (v/1e6).toFixed(1)+'M';
+            if (Math.abs(v)>=1e3) return (v/1e3).toFixed(0)+'K';
+            return v;
+          }
+        }
+      },
+      legend: {
+        align: 'center', verticalAlign: 'top', layout: 'horizontal',
+        symbolRadius: 2,
+        itemStyle: { fontSize: '12px', color: '#1f2937', fontWeight:400 },
+        itemHoverStyle: { color: '#111827' }
+      },
+      credits: { enabled:false }
+    });
+  </script>
+</head>
+<body>
+
+<h1>Employment change and job-wage quintiles</h1>
+
+<div id="controls">
+  <!-- LEFT -->
+  <div>
+    <label>Select country
+      <!-- custom SVG-flag dropdown + hidden native select -->
+      <div id="countryUI" class="flag-select"></div>
+      <select id="countrySel" style="display:none"></select>
+    </label>
+
+    <fieldset>
+      <legend>Year</legend>
+      <div id="yearPills" class="pill-row"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Filter by</legend>
+      <div id="filterList" class="radio-list"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Job quality criterion</legend>
+      <div id="critList" class="radio-list"></div>
+    </fieldset>
+  </div>
+
+  <!-- RIGHT -->
+  <div>
+    <div class="pill-row" id="metricPills"></div>
+    <div id="container"></div>
+    <div id="coreNote" class="note hidden">
+      NOTE: “core” workers are full time dependent employees with a permanent contract whilst non-core are any combination of part-time, self-employed or temporary workers.
+    </div>
+    <div class="dl-row">
+      <button id="dlCSV" disabled>Download CSV</button>
+      <button id="dlPNG" disabled>Download PNG</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* CONSTANTS */
+const CSV_URL         = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/EJM2022update_FINAL_EDIT.csv";
+const FIELD_COUNTRY   = 'Country';
+const FIELD_METRIC    = 'Metric';
+const FIELD_PERIOD    = 'Year';
+const FIELD_LEVEL1_A  = 'Level 1';
+const FIELD_LEVEL1_B  = 'Level 1 ';
+const FIELD_CATEGORY  = 'Category';
+const FIELD_CRITERION = 'Calc Type';
+const FIELD_QUINTILE  = 'Quintile';
+const FIELD_VALUE     = 'Value';
+const QUINTILE_ORDER  = ['Low','Mid-low','Mid','Mid-high','High'];
+
+const EU_ALIASES = new Set(["EU","EU27","EU-27","EU28","EU-28","European Union","European union","EU 27","EU 28"]);
+const ISO2_TO_NAME = {
+  "AT":"Austria","BE":"Belgium","BG":"Bulgaria","HR":"Croatia","CY":"Cyprus","CZ":"Czechia",
+  "DK":"Denmark","EE":"Estonia","FI":"Finland","FR":"France","DE":"Germany","EL":"Greece","GR":"Greece",
+  "HU":"Hungary","IE":"Ireland","IT":"Italy","LV":"Latvia","LT":"Lithuania","LU":"Luxembourg",
+  "MT":"Malta","NL":"Netherlands","PL":"Poland","PT":"Portugal","RO":"Romania","SK":"Slovakia",
+  "SI":"Slovenia","ES":"Spain","SE":"Sweden","IS":"Iceland","NO":"Norway","CH":"Switzerland",
+  "AL":"Albania","ME":"Montenegro","MK":"North Macedonia","RS":"Serbia","TR":"Türkiye","XK":"Kosovo",
+  "GB":"United Kingdom","UK":"United Kingdom"
+};
+const NAME_TO_ISO2 = Object.fromEntries(Object.entries(ISO2_TO_NAME).map(([k,v])=>[v,k]));
+
+/* DOM */
+const cSel       = document.getElementById('countrySel');
+const countryUI  = document.getElementById('countryUI');
+const yearPills  = document.getElementById('yearPills');
+const filterWrap = document.getElementById('filterList');
+const critWrap   = document.getElementById('critList');
+const metricPills= document.getElementById('metricPills');
+const btnCSV     = document.getElementById('dlCSV');
+const btnPNG     = document.getElementById('dlPNG');
+const coreNote   = document.getElementById('coreNote');
+
+/* STATE */
+let rows = [];
+let selCountryName = 'European Union';
+let selPeriod = null, selFilterGroup = 'All', selCriterion, selMetric;
+let chart;
+
+/* Logos */
+const logoURL  = './logo.svg';   // small branding, bottom-right
+const wmURL    = './logo1.svg';  // watermark (B/W), faint in plot background
+let logoAspect = 0.33;
+let wmAspect   = 0.33;
+
+const _img = new Image(); _img.onload = () => { if (_img.naturalWidth) logoAspect = _img.naturalHeight / _img.naturalWidth; }; _img.src = logoURL;
+const _wm  = new Image(); _wm.onload  = () => { if (_wm.naturalWidth)   wmAspect   = _wm.naturalHeight   / _wm.naturalWidth;   }; _wm.src  = wmURL;
+
+function placeLogo(chart){
+  const w = 62, h = Math.max(1, Math.round(w*logoAspect));
+  const x = chart.chartWidth  - w - 10;
+  const y = chart.chartHeight - h - 8;
+  if (chart.customLogo) chart.customLogo.destroy();
+  chart.customLogo = chart.renderer.image(logoURL, x, y, w, h)
+    .css({opacity:.95, pointerEvents:'none'}).add();
+}
+function placeWatermark(chart){
+  const pad = 1.55; // cover ~85% of plot area
+  let w = Math.round(chart.plotWidth * pad);
+  let h = Math.round(w * wmAspect);
+  if (h > chart.plotHeight * pad){
+    h = Math.round(chart.plotHeight * pad);
+    w = Math.round(h / wmAspect);
+  }
+  const x = chart.plotLeft + Math.round((chart.plotWidth  - w)/2);
+  const y = chart.plotTop  + Math.round((chart.plotHeight - h)/2);
+
+  if (chart.watermark) chart.watermark.destroy();
+  chart.watermark = chart.renderer.image(wmURL, x, y, w, h)
+    .attr({ zIndex: 0 })
+    .css({ opacity: .04, pointerEvents:'none' })
+    .add();
+}
+
+/* LOAD */
+Papa.parse(CSV_URL, {
+  download:true, header:true, dynamicTyping:false,
+  complete:({data})=>{
+    rows = data.filter(r=>r && r[FIELD_COUNTRY]);
+    initUI(); draw();
+  }
+});
+
+/* HELPERS */
+const lvl1 = r => (r[FIELD_LEVEL1_A] ?? r[FIELD_LEVEL1_B] ?? '').trim();
+const uniq = a => [...new Set(a)];
+const sortAlpha = a => a.slice().sort((x,y)=>x.localeCompare(y));
+
+function displayPeriod(p){
+  const m = (p||'').match(/(\d{4})\D+(\d{4})/);
+  return m ? `${m[1]} \u2013 ${m[2]}` : p;
+}
+function startYear(p){ const m=(p||'').match(/(\d{4})/); return m?+m[1]:-Infinity; }
+function endYear(p){ const m=(p||'').match(/(\d{4})\D+(\d{4})/); return m?+m[2]:startYear(p); }
+function sortYearsDesc(list){ return list.slice().sort((a,b)=> (endYear(b)-endYear(a)) || (startYear(b)-startYear(a))); }
+function datasetUsesCodes(){
+  const sample = rows[0]?.[FIELD_COUNTRY] || '';
+  return sample.length <= 3 || ISO2_TO_NAME[sample];
+}
+
+function safeFile(s){
+  // Remove illegal filename chars and tidy whitespace
+  return s
+    .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '-') // windows-illegal
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function exportName(kind){ // kind: 'img' or 'data'
+  const yr = displayPeriod(selPeriod); // e.g., "2019 – 2022"
+  // Keep spaces as requested (e.g., "EJM_img European Union Employment 2019 – 2022")
+  return safeFile(`EJM_${kind} ${selCountryName} ${selMetric} ${yr}`);
+}
+
+function toDisplayName(v){
+  if (!v) return v;
+  if (EU_ALIASES.has(v)) return 'European Union';
+  if (v.length>2 && !ISO2_TO_NAME[v]) return v;
+  return ISO2_TO_NAME[v] || v;
+}
+function toDatasetKey(name){
+  if (name==='European Union') return 'EU_ANY';
+  return datasetUsesCodes() ? (NAME_TO_ISO2[name] || name) : name;
+}
+function fmtVal(v){
+  const abs = Math.abs(v);
+
+  if (abs >= 1e6) {
+    // 1,000,000+  → M   (1.1M … 9.9M with 1 decimal; ≥10M no decimal)
+    return (abs < 10e6 ? (v/1e6).toFixed(1) : Math.round(v/1e6)) + 'M';
+  }
+
+  if (abs >= 1e3) {
+    // 1,000–9,999 → 1 decimal K (1.2K)
+    if (abs < 1e4) return (v/1e3).toFixed(1) + 'K';
+    // 10,000–999,999 → integer K (12K, 999K)
+    return Math.round(v/1e3) + 'K';
+  }
+
+  // < 1,000 → integer
+  return String(Math.round(v));
+}
+
+/* SVG-flag dropdown */
+const ISO_FIX_FOR_FLAGS = { 'EL':'GR' }; // library expects 'gr' for Greece
+function nameToFlagCode(name){
+  if (name==='European Union') return 'eu';
+  let code = NAME_TO_ISO2[name] || '';
+  code = ISO_FIX_FOR_FLAGS[code] || code;
+  return (code || '').toLowerCase();
+}
+function buildFlagCountryDropdown(countries){
+  countryUI.innerHTML = `
+    <button type="button" class="btn" id="flagBtn">
+      <span class="fi" id="flagCurr"></span><span id="labelCurr"></span>
+    </button>
+    <div class="list" id="flagList" hidden></div>
+  `;
+  const list = countryUI.querySelector('#flagList');
+  list.innerHTML = countries.map(name=>{
+    const code = nameToFlagCode(name);
+    return `<div class="item" data-name="${name}">
+              <span class="fi fi-${code}"></span><span>${name}</span>
+            </div>`;
+  }).join('');
+
+  const btn = countryUI.querySelector('#flagBtn');
+  const flagCurr = countryUI.querySelector('#flagCurr');
+  const labelCurr = countryUI.querySelector('#labelCurr');
+
+  function setSelected(name){
+    const code = nameToFlagCode(name);
+    flagCurr.className = `fi fi-${code}`;
+    labelCurr.textContent = name;
+  }
+  setSelected(selCountryName);
+
+  btn.onclick = ()=>{ list.hidden = !list.hidden; };
+  list.onclick = e=>{
+    const item = e.target.closest('.item'); if(!item) return;
+    const name = item.dataset.name;
+    setSelected(name);
+    list.hidden = true;
+    cSel.value = name;   // mirror to hidden select
+    cSel.onchange();     // trigger existing handler
+  };
+  document.addEventListener('click', (e)=>{ if(!countryUI.contains(e.target)) list.hidden = true; });
+}
+
+/* UI */
+function initUI(){
+  // Countries (EU first, UK removed)
+  const allNames = uniq(rows.map(r => toDisplayName(r[FIELD_COUNTRY]))).filter(n=>n && n!=='United Kingdom');
+  const countries = [
+    ...(allNames.includes('European Union') ? ['European Union'] : []),
+    ...sortAlpha(allNames.filter(n=>n!=='European Union'))
+  ];
+  // hidden <select> (kept for logic)
+  cSel.innerHTML = countries.map(n=>`<option>${n}</option>`).join('');
+  selCountryName = countries[0] || 'European Union';
+  cSel.value = selCountryName;
+  cSel.onchange = ()=>{ selCountryName=cSel.value; buildYears(true); draw(); };
+  // SVG-flag UI
+  buildFlagCountryDropdown(countries);
+
+  // Metric buttons
+  const metrics = sortAlpha(uniq(rows.map(r=>r[FIELD_METRIC]))).filter(Boolean);
+  metricPills.innerHTML = metrics.map((m,i)=>`<button class="pill ${i===0?'active':''}" data-v="${m}">${m}</button>`).join('');
+  selMetric = metrics[0];
+  metricPills.onclick = e=>{
+    const v=e.target?.dataset?.v; if(!v) return;
+    selMetric=v;
+    metricPills.querySelectorAll('button').forEach(b=>b.classList.toggle('active', b.dataset.v===selMetric));
+    buildYears(true); draw();
+  };
+
+  // Criterion (ordered)
+  const critOrder=['Job-wage','Education','Broad job quality'];
+  const critsAvail=uniq(rows.map(r=>r[FIELD_CRITERION])).filter(Boolean);
+  const crits=critOrder.filter(c=>critsAvail.includes(c));
+  critWrap.innerHTML = crits.map((c,i)=>`<label><input type="radio" name="crit" value="${c}" ${i===0?'checked':''}>${c}</label>`).join('');
+  selCriterion=crits[0];
+  critWrap.onchange = e=>{ selCriterion=e.target.value; buildYears(true); draw(); };
+
+  // Filter-by (ordered, single All)
+  const order=['All','Age','Sector','Gender','Contractual status','Employment status','Working hours','Core/non-core'];
+  const avail=uniq(rows.map(r=>lvl1(r))).filter(Boolean);
+  const groups=order.filter(f=>f==='All'||avail.includes(f));
+  filterWrap.innerHTML = groups.map((g,i)=>`<label><input type="radio" name="f" value="${g}" ${i===0?'checked':''}>${g}</label>`).join('');
+  selFilterGroup=groups[0]||'All';
+  filterWrap.onchange = e=>{ selFilterGroup=e.target.value; draw(); };
+
+  // Years
+  buildYears(false);
+}
+
+function buildYears(preserve){
+  const key = toDatasetKey(selCountryName);
+  const yearsRaw = uniq(
+    rows.filter(r=>{
+      const ok = key==='EU_ANY' ? EU_ALIASES.has(r[FIELD_COUNTRY]) : r[FIELD_COUNTRY]===key;
+      return ok && r[FIELD_METRIC]===selMetric && r[FIELD_CRITERION]===selCriterion;
+    }).map(r=>r[FIELD_PERIOD])
+  );
+  const years = sortYearsDesc(yearsRaw);
+  if (!(preserve && selPeriod && years.includes(selPeriod))) selPeriod = years[0] || null;
+
+  yearPills.innerHTML = years.map(y=>`<button class="pill ${y===selPeriod?'active':''}" data-v="${y}">${displayPeriod(y)}</button>`).join('');
+  yearPills.onclick = e=>{
+    const v=e.target?.dataset?.v; if(!v) return;
+    selPeriod=v;
+    yearPills.querySelectorAll('button').forEach(b=>b.classList.toggle('active', b.dataset.v===selPeriod));
+    draw();
+  };
+}
+function formatTooltip3(v){
+  const sign = v < 0 ? '-' : '';
+  const abs  = Math.abs(v);
+  if (abs >= 1_000_000) {
+    // e.g. 3.423M (three decimals), trim trailing zeros if any
+    return sign + (abs / 1e6).toFixed(3).replace(/\.?0+$/,'') + 'M';
+  }
+  if (abs >= 1_000) {
+    // e.g. 224.2K (one decimal), trim trailing .0
+    return sign + (abs / 1e3).toFixed(1).replace(/\.0$/,'') + 'K';
+  }
+  return sign + Math.round(abs).toString();
+}
+
+/* DRAW */
+function draw(){
+  if(!selPeriod) return;
+
+  const key = toDatasetKey(selCountryName);
+  const data = rows.filter(r=>{
+    const ok = key==='EU_ANY' ? EU_ALIASES.has(r[FIELD_COUNTRY]) : r[FIELD_COUNTRY]===key;
+    return ok && r[FIELD_METRIC]===selMetric && r[FIELD_CRITERION]===selCriterion && r[FIELD_PERIOD]===selPeriod;
+  });
+
+  const isAll = selFilterGroup==='All';
+  const legendCats = isAll ? ['All'] :
+    sortAlpha(uniq(data.filter(r=>lvl1(r)===selFilterGroup).map(r=>r[FIELD_CATEGORY])));
+
+  const series = legendCats.map((cat,i)=>{
+    const vals = isAll
+      ? QUINTILE_ORDER.map(q=>{
+          const row = data.find(r=>lvl1(r).toLowerCase()==='all' && (r[FIELD_CATEGORY]||'').trim().toLowerCase()==='all' && r[FIELD_QUINTILE]===q);
+          return row? +row[FIELD_VALUE] : 0;
+        })
+      : QUINTILE_ORDER.map(q=>{
+          const row = data.find(r=>lvl1(r)===selFilterGroup && r[FIELD_CATEGORY]===cat && r[FIELD_QUINTILE]===q);
+          return row? +row[FIELD_VALUE] : 0;
+        });
+    return { name:cat, data:vals, color:ejmColor(i) };
+  });
+
+  // Data labels
+  const fewSeries = series.length <= 2, insideMinH=16, insideMinW=26;
+  const dl = [
+    { enabled:true, inside:true, verticalAlign:'top',    align:'center', y:4,  padding:0, crop:true,  overflow:'none', allowOverlap:false,
+      style:{ color:'#fff', fontSize:'10px', fontWeight:400, textOutline:'none' },
+      formatter(){ if(!fewSeries) return ''; const sh=this.point?.shapeArgs; if(!sh||this.y<=0||sh.width<insideMinW||Math.abs(sh.height)<insideMinH) return ''; return fmtVal(this.y); } },
+    { enabled:true, inside:true, verticalAlign:'bottom', align:'center', y:-4, padding:0, crop:true,  overflow:'none', allowOverlap:false,
+      style:{ color:'#fff', fontSize:'10px', fontWeight:400, textOutline:'none' },
+      formatter(){ if(!fewSeries) return ''; const sh=this.point?.shapeArgs; if(!sh||this.y>=0||sh.width<insideMinW||Math.abs(sh.height)<insideMinH) return ''; return fmtVal(this.y); } },
+    { enabled:true, inside:false, align:'center', verticalAlign:'bottom', y:-2, crop:false, overflow:'none', allowOverlap:false,
+      style:{ color:'#111', fontSize:'10px', fontWeight:400, textOutline:'none' },
+      formatter(){ const sh=this.point?.shapeArgs; if(!sh||this.y<=0) return ''; const thin=sh.width<insideMinW||Math.abs(sh.height)<insideMinH; if(fewSeries&&!thin) return ''; return fmtVal(this.y); } },
+    { enabled:true, inside:false, align:'center', verticalAlign:'top',    y:12,  crop:false, overflow:'none', allowOverlap:false,
+      style:{ color:'#111', fontSize:'10px', fontWeight:400, textOutline:'none' },
+      formatter(){ const sh=this.point?.shapeArgs; if(!sh||this.y>=0) return ''; const thin=sh.width<insideMinW||Math.abs(sh.height)<insideMinH; if(fewSeries&&!thin) return ''; return fmtVal(this.y); } }
+  ];
+  series.forEach(s=>s.dataLabels = dl);
+
+  if (chart) chart.destroy();
+  chart = Highcharts.chart('container',{
+    chart:{
+      type:'column',
+      spacingBottom:50,
+      events:{ load(){ placeWatermark(this); placeLogo(this); }, redraw(){ placeWatermark(this); placeLogo(this); } }
+    },
+    title:{ text:`${selMetric} by ${criterionPhrase()} in ${selCountryName} (${displayPeriod(selPeriod)})` },
+    xAxis:{ categories:QUINTILE_ORDER, title:{ text:'Quintile' } },
+    yAxis:{ title:{ text:selMetric } },
+    tooltip:{
+      useHTML:true,
+      formatter(){
+        const lines=[];
+        lines.push(`<div style="text-align:center"><b>${selCountryName}</b></div>`);
+        const col = this.y >= 0 ? '#14532d' : '#7f1d1d'; // dark green / dark red
+        lines.push(`${selMetric}: <b style="color:${col}">${formatTooltip3(this.y)}</b> jobs`);
+        if (selFilterGroup!=='All') lines.push(`${selFilterGroup}: <b>${this.series.name}</b>`);
+        lines.push(`${this.key} quintile`);
+        return `<div style="padding:6px 8px">${lines.join('<br>')}</div>`;
+      }
+    },
+    legend:{ align:'center', verticalAlign:'top', layout:'horizontal' },
+   exporting:{
+  enabled:true,
+  fallbackToExportServer:false,
+  libURL:'https://code.highcharts.com/11.4.0/lib/',
+  filename: exportName('img')   // <-- add this line
+},
+
+    series
+  });
+
+  coreNote.classList.toggle('hidden', selFilterGroup !== 'Core/non-core');
+
+// Export buttons
+btnCSV.disabled = btnPNG.disabled = false;
+
+btnPNG.onclick = ()=>{
+  chart.exportChartLocal({
+    type:'image/png',
+    filename: exportName('img')
+  });
+};
+
+btnCSV.onclick = ()=>{
+  const csv = chart.getCSV();
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = exportName('data') + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+};
+
+}
+</script>
+</body>
+</html>
