@@ -626,6 +626,15 @@ window.addEventListener("message", (event) => {
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
   }
 });
+
+/* Expose the current height */
+  function sendHeight() {
+  const height = document.documentElement.scrollHeight;
+  window.parent.postMessage({ type: "resize", height }, "*");
+}
+
+window.addEventListener("load", sendHeight);
+window.addEventListener("resize", sendHeight);
 </script>
 
 </body>
