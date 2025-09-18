@@ -626,24 +626,6 @@ window.addEventListener("message", (event) => {
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
   }
 });
-
-/* Expose the current height */
-function sendHeight() {
-  const height = document.body.scrollHeight;
-  window.parent.postMessage({ type: "resize", height }, "*");
-}
-
-window.addEventListener("load", sendHeight);
-window.addEventListener("resize", sendHeight);
-
-Highcharts.addEvent(Highcharts.Chart, "load", sendHeight);
-Highcharts.addEvent(Highcharts.Chart, "redraw", sendHeight);
-
-window.addEventListener("message", (event) => {
-  if (event.data === "request-height") {
-    sendHeight();
-  }
-});
 </script>
 
 </body>
