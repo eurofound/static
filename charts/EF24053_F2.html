@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>EU Working Time – SVG + Downloads</title>
+<title>EU Working Time – SVG + Highcharts-style Exports</title>
 <style>
   :root{
     --blue:#0d5675;
@@ -39,11 +39,9 @@
 </head>
 <body>
 <div class="wrap">
-  <!-- Chart -->
+  <!-- Chart (UNCHANGED) -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
-    <!-- background -->
     <rect x="0" y="0" width="1020" height="760" fill="#ffffff"/>
-    <!-- bottom axis & grid (x-scale: 30..40 mapped to 250..950, 700px wide; bar area y:110..640) -->
     <g class="axis">
       <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
       <text x="250" y="662" text-anchor="middle">30</text>
@@ -61,68 +59,55 @@
       <text x="600" y="698" text-anchor="middle" class="axis-title">Hours per week</text>
     </g>
 
-    <!-- bars; width = (value-30)*70 ; height 28; step 42 -->
-    <!-- Germany 35.3 -> width 371.0 ; end x = 621.0 -->
+    <!-- Bars -->
     <text class="label" x="240" y="127" text-anchor="end">Germany</text>
     <rect class="bar-eu14" x="250" y="113" width="371.0" height="28"></rect>
     <text class="value-in" x="611" y="132" text-anchor="end">35.3</text>
 
-    <!-- France 36.0 -> 420 ; end 670 -->
     <text class="label" x="240" y="169" text-anchor="end">France</text>
     <rect class="bar-eu14" x="250" y="155" width="420" height="28"></rect>
     <text class="value-in" x="660" y="174" text-anchor="end">36.0</text>
 
-    <!-- Denmark 37.0 -> 490 ; end 740 -->
     <text class="label" x="240" y="211" text-anchor="end">Denmark</text>
     <rect class="bar-eu14" x="250" y="197" width="490" height="28"></rect>
     <text class="value-in" x="730" y="216" text-anchor="end">37.0</text>
 
-    <!-- Norway 37.5 -> 525 ; end 775 -->
     <text class="label" x="240" y="253" text-anchor="end">Norway</text>
     <rect class="bar-nor" x="250" y="239" width="525" height="28"></rect>
     <text class="value-in" x="765" y="258" text-anchor="end">37.5</text>
 
-    <!-- Finland 37.5 -> 525 ; end 775 -->
     <text class="label" x="240" y="295" text-anchor="end">Finland</text>
     <rect class="bar-eu14" x="250" y="281" width="525" height="28"></rect>
     <text class="value-in" x="765" y="300" text-anchor="end">37.5</text>
 
-    <!-- Czech Republic 37.7 -> 539 ; end 789 -->
     <text class="label" x="240" y="337" text-anchor="end">Czech Republic</text>
     <rect class="bar-eu13" x="250" y="323" width="539" height="28"></rect>
     <text class="value-in" x="779" y="342" text-anchor="end">37.7</text>
 
-    <!-- Belgium 37.8 -> 546 ; end 796 -->
     <text class="label" x="240" y="379" text-anchor="end">Belgium</text>
     <rect class="bar-eu14" x="250" y="365" width="546" height="28"></rect>
     <text class="value-in" x="786" y="384" text-anchor="end">37.8</text>
 
-    <!-- Netherlands 38.0 -> 560 ; end 810 -->
     <text class="label" x="240" y="421" text-anchor="end">Netherlands</text>
     <rect class="bar-eu14" x="250" y="407" width="560" height="28"></rect>
     <text class="value-in" x="800" y="426" text-anchor="end">38.0</text>
 
-    <!-- Cyprus 38.0 -> 560 ; end 810 -->
     <text class="label" x="240" y="463" text-anchor="end">Cyprus</text>
     <rect class="bar-eu13" x="250" y="449" width="560" height="28"></rect>
     <text class="value-in" x="800" y="468" text-anchor="end">38.0</text>
 
-    <!-- Spain 38.1 -> 567 ; end 817 -->
     <text class="label" x="240" y="505" text-anchor="end">Spain</text>
     <rect class="bar-eu14" x="250" y="491" width="567" height="28"></rect>
     <text class="value-in" x="807" y="510" text-anchor="end">38.1</text>
 
-    <!-- Austria 38.5 -> 595 ; end 845 -->
     <text class="label" x="240" y="547" text-anchor="end">Austria</text>
     <rect class="bar-eu14" x="250" y="533" width="595" height="28"></rect>
     <text class="value-in" x="835" y="552" text-anchor="end">38.5</text>
 
-    <!-- Group 40.0 -> 700 ; end 950 -->
     <text class="label" x="240" y="589" text-anchor="end">Greece, Italy, Luxembourg, Portugal, Sweden</text>
     <rect class="bar-eu14" x="250" y="575" width="700" height="28"></rect>
     <text class="value-in" x="940" y="594" text-anchor="end">40.0</text>
 
-    <!-- Group 40.0 -> 700 ; end 950 -->
     <text class="label" x="240" y="631" text-anchor="end">Croatia, Malta, Slovakia, Slovenia</text>
     <rect class="bar-eu13" x="250" y="617" width="700" height="28"></rect>
     <text class="value-in" x="940" y="636" text-anchor="end">40.0</text>
@@ -132,7 +117,7 @@
     <line x1="817" y1="110" x2="817" y2="640" class="vline27"/>
     <line x1="929" y1="110" x2="929" y2="640" class="vline13"/>
 
-    <!-- spaced line labels with hours (placed high to avoid clipping) -->
+    <!-- line labels -->
     <g font-size="13">
       <text x="775" y="40" text-anchor="middle" class="note15">EU15, 37.5 hours</text>
       <text x="817" y="62" text-anchor="middle" class="note27">EU27, 38.1 hours</text>
@@ -140,16 +125,16 @@
     </g>
   </svg>
 
-  <!-- Actions -->
+  <!-- Actions (IDs aligned with EJM-style hooks) -->
   <div class="actions">
-    <button class="btn" id="btnCsv">Download data (CSV)</button>
-    <button class="btn" id="btnPng">Download image (PNG)</button>
+    <button class="btn" id="dlCSV">Download data (CSV)</button>
+    <button class="btn" id="dlPNG">Download image (PNG)</button>
   </div>
 </div>
 
 <script>
-/* ---------- CSV download ---------- */
-const csvRows = [
+/* ====== DATA for CSV ====== */
+const CSV_ROWS = [
   ["Country or group","Hours per week"],
   ["Germany","35.3"],
   ["France","36.0"],
@@ -168,45 +153,74 @@ const csvRows = [
   ["EU27 average","38.1"],
   ["EU13 average","39.7"]
 ];
-const csvData = csvRows.map(r => r.map(v => /[",\n]/.test(v) ? `"${v.replace(/"/g,'""')}"` : v).join(",")).join("\n");
 
-document.getElementById("btnCsv").addEventListener("click", () => {
-  const blob = new Blob([csvData], {type:"text/csv;charset=utf-8"});
-  const url = URL.createObjectURL(blob);
-  const a = Object.assign(document.createElement("a"), {href:url, download:"working_time_data.csv"});
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(url);
-});
+/* ====== FILENAME helper (mirrors your EJM style) ====== */
+function safeFile(s){ return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim(); }
+function exportName(kind){ return safeFile(`Working_time_${kind}`); }
 
-/* ---------- PNG download from SVG ---------- */
-document.getElementById("btnPng").addEventListener("click", () => {
-  const svg = document.getElementById("chart");
-  const serializer = new XMLSerializer();
-  const src = serializer.serializeToString(svg);
+/* ====== Highcharts-like shim so external hooks work unchanged ====== */
+window.chart = {
+  getCSV(){
+    const csv = CSV_ROWS.map(row =>
+      row.map(v => /[",\n]/.test(v) ? `"${v.replace(/"/g,'""')}"` : v).join(',')
+    ).join('\n');
+    return csv;
+  },
+  exportChartLocal({type='image/png', filename='chart'} = {}){
+    // clone SVG and inline page <style> rules to preserve colours
+    const srcSvg = document.getElementById('chart');
+    const svgClone = srcSvg.cloneNode(true);
+    const cssText = Array.from(document.querySelectorAll('style'))
+      .map(s => s.textContent).join('\n');
+    const style = document.createElement('style');
+    style.textContent = cssText;
+    svgClone.insertBefore(style, svgClone.firstChild);
 
-  const canvas = document.createElement("canvas");
-  const vb = svg.viewBox.baseVal;
-  canvas.width = vb.width; canvas.height = vb.height;
+    const serializer = new XMLSerializer();
+    const svgStr = serializer.serializeToString(svgClone);
 
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+    // draw to canvas then save
+    const vb = srcSvg.viewBox.baseVal;
+    const canvas = document.createElement('canvas');
+    canvas.width = vb.width; canvas.height = vb.height;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    const img = new Image();
+    img.onload = function(){
+      ctx.drawImage(img,0,0);
+      canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = (filename || 'chart') + (type === 'image/png' ? '.png' : '');
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); },0);
+      });
+    };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
+  }
+};
 
-  const img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
-    canvas.toBlob((blob)=>{
-      const url = URL.createObjectURL(blob);
-      const a = Object.assign(document.createElement("a"), {href:url, download:"working_time_chart.png"});
-      document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
-    });
-  };
-  img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(src);
-});
-</script>
-<script>
-/* External message hooks for host page buttons */
+/* ====== Buttons wired like your EJM dashboard ====== */
+const btnCSV = document.getElementById('dlCSV');
+const btnPNG = document.getElementById('dlPNG');
+
+btnCSV.onclick = () => {
+  const csv = chart.getCSV();
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = exportName('data') + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+};
+
+btnPNG.onclick = () => chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
+
+/* ====== External postMessage hooks (unchanged API) ====== */
 window.addEventListener("message", (event) => {
   if (event.data === "download-png" && chart) {
     chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
@@ -223,6 +237,5 @@ window.addEventListener("message", (event) => {
   }
 });
 </script>
-
 </body>
 </html>
