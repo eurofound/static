@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Average Weekly Hours Worked</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+<style>
+body { font-family:"Inter",Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; padding:0; }
+#container { width:100%; height:700px; }
+</style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+const data = [
+  {name:"Portugal, Belgium", y:35, color:"#004c70"},
+  {name:"France", y:35.2, color:"#004c70"},
+  {name:"Netherlands", y:36, color:"#004c70"},
+  {name:"Cyprus", y:37, color:"#4c9e38"},
+  {name:"Spain, Greece, Finland, Denmark", y:37, color:"#004c70"},
+  {name:"Italy", y:37.5, color:"#004c70"},
+  {name:"Norway", y:37.5, color:"#cccccc"},
+  {name:"Sweden, Austria", y:38.5, color:"#004c70"},
+  {name:"Germany", y:38.9, color:"#004c70"},
+  {name:"Czech Republic", y:39.5, color:"#4c9e38"},
+  {name:"Luxembourg", y:40, color:"#004c70"},
+  {name:"Croatia, Malta, Romania, Slovenia", y:40, color:"#4c9e38"}
+];
+
+const hc = Highcharts.chart('container',{
+  chart:{ type:'bar', spacingRight:50 },
+  title:{ text:'' },
+  xAxis:{ categories:data.map(d=>d.name), title:{ text:null }, labels:{ style:{ fontSize:'13px' } } },
+  yAxis:{
+    min:30, max:40, tickInterval:2, title:{ text:null },
+    plotLines:[
+      {value:37.1, color:'#004c70', dashStyle:'Dash', width:2, zIndex:5,
+       label:{text:'EU14, 37.1', align:'left', style:{color:'#004c70'}}},
+      {value:37.8, color:'#2b7dbc', dashStyle:'Dash', width:2, zIndex:5,
+       label:{text:'EU27, 37.8', align:'left', style:{color:'#2b7dbc'}}},
+      {value:39.3, color:'#4c9e38', dashStyle:'Dash', width:2, zIndex:5,
+       label:{text:'EU13, 39.3', align:'left', style:{color:'#4c9e38'}}}
+    ]
+  },
+  legend:{ enabled:false },
+  tooltip:{ valueSuffix:' h' },
+  plotOptions:{
+    series:{
+      dataLabels:{ enabled:true, format:'{point.y}', style:{fontWeight:'bold', color:'#fff', textOutline:'0px'} }
+    }
+  },
+  series:[{ data:data }],
+  exporting:{ buttons:{ contextButton:{ enabled:false } }, fallbackToExportServer:false,
+    libURL:'https://code.highcharts.com/11.4.0/lib/' }
+});
+
+// Logo placement
+const logoURL = './logo.svg';
+let logoAspect = 0.33;
+(new Image()).onload = function(){ if(this.naturalWidth) logoAspect = this.naturalHeight/this.naturalWidth; };
+function placeLogo(chart){
+  const w = 62, h = Math.max(1, Math.round(w*logoAspect));
+  const x = chart.chartWidth - w - 10;
+  const y = chart.chartHeight - h - 8;
+  if(chart.customLogo) chart.customLogo.destroy();
+  chart.customLogo = chart.renderer.image(logoURL,x,y,w,h)
+    .css({opacity:.95, pointerEvents:'none'}).add();
+}
+Highcharts.addEvent(hc,'load',function(){placeLogo(this)});
+Highcharts.addEvent(hc,'redraw',function(){placeLogo(this)});
+
+// Shim for CSV/PNG
+window.chart = {
+  getCSV(){ return hc.getCSV(); },
+  exportChartLocal(o){ hc.exportChartLocal(o); }
+};
+window.addEventListener("message",(e)=>{
+  function exportName(kind){ return `Export_${kind}`; }
+  if(e.data==="download-png" && window.chart){
+    chart.exportChartLocal({type:"image/png", filename: exportName("img")});
+  }
+  if(e.data==="download-csv" && window.chart){
+    const csv = chart.getCSV();
+    const blob = new Blob([csv],{type:"text/csv;charset=utf-8;"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName("data")+".csv";
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},0);
+  }
+});
+</script>
+</body>
+</html>
