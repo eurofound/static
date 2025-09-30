@@ -1,131 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="utf-8" />
-<title>EU Working Time – SVG</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>EU Working Time – SVG + Downloads</title>
 <style>
+  :root{
+    --blue:#0d5675;
+    --green:#3aa654;
+    --line15:#1f7fbf;
+    --line27:#3bb3ff;
+    --line13:#3aa654;
+    --axis:#7a7a7a;
+    --grid:#e6e6e6;
+  }
   body{margin:0;background:#f5f7f8;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
-  .wrap{width:1020px;margin:18px auto;background:#fff;border:1px solid #e6e6e6;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  .wrap{width:1020px;max-width:100%;margin:18px auto;background:#fff;border:1px solid #e6e6e6;box-shadow:0 1px 2px rgba(0,0,0,.06)}
   svg{display:block;width:100%;height:auto}
   .label{font-size:15px;fill:#4a4a4a}
   .value-in{font-size:14px;fill:#ffffff;font-weight:700}
-  .axis text{font-size:12px;fill:#7a7a7a}
+  .axis text{font-size:12px;fill:var(--axis)}
   .axis-title{font-size:20px;fill:#6a6a6a}
-  .grid{stroke:#e6e6e6;stroke-width:1}
+  .grid{stroke:var(--grid);stroke-width:1}
   .tick{stroke:#e2e2e2;stroke-width:1}
-  .vline15{stroke:#1f7fbf;stroke-width:3;stroke-dasharray:6 6}
-  .vline27{stroke:#3bb3ff;stroke-width:3;stroke-dasharray:6 6}
-  .vline13{stroke:#3aa654;stroke-width:3;stroke-dasharray:6 6}
-  .note15{fill:#1f7fbf}
-  .note27{fill:#3bb3ff}
-  .note13{fill:#3aa654}
-  .bar-eu14{fill:#0d5675}
-  .bar-eu13{fill:#3aa654}
+  .vline15{stroke:var(--line15);stroke-width:3;stroke-dasharray:6 6}
+  .vline27{stroke:var(--line27);stroke-width:3;stroke-dasharray:6 6}
+  .vline13{stroke:var(--line13);stroke-width:3;stroke-dasharray:6 6}
+  .note15{fill:var(--line15)}
+  .note27{fill:var(--line27)}
+  .note13{fill:var(--line13)}
+  .bar-eu14{fill:var(--blue)}
+  .bar-eu13{fill:var(--green)}
   .bar-nor{fill:#cfcfcf}
+  .actions{display:flex;gap:10px;align-items:center;justify-content:center;padding:14px 16px 18px}
+  .btn{appearance:none;border:1px solid #d6d6d6;background:#f7f7f9;border-radius:8px;padding:10px 14px;font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;cursor:pointer}
+  .btn:hover{background:#eef2f6}
 </style>
-
+</head>
+<body>
 <div class="wrap">
-<svg viewBox="0 0 1020 760" aria-label="Horizontal bar chart with EU averages">
-  <!-- margins: left 250, right 70; x-scale 30..40 => 700px -->
-  <rect x="0" y="0" width="1020" height="760" fill="#ffffff"/>
+  <!-- Chart -->
+  <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
+    <!-- background -->
+    <rect x="0" y="0" width="1020" height="760" fill="#ffffff"/>
+    <!-- bottom axis & grid (x-scale: 30..40 mapped to 250..950, 700px wide; bar area y:110..640) -->
+    <g class="axis">
+      <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
+      <text x="250" y="662" text-anchor="middle">30</text>
+      <line x1="320" y1="110" x2="320" y2="640" class="tick"/><text x="320" y="662" text-anchor="middle">31</text>
+      <line x1="390" y1="110" x2="390" y2="640" class="tick"/><text x="390" y="662" text-anchor="middle">32</text>
+      <line x1="460" y1="110" x2="460" y2="640" class="tick"/><text x="460" y="662" text-anchor="middle">33</text>
+      <line x1="530" y1="110" x2="530" y2="640" class="tick"/><text x="530" y="662" text-anchor="middle">34</text>
+      <line x1="600" y1="110" x2="600" y2="640" class="tick"/><text x="600" y="662" text-anchor="middle">35</text>
+      <line x1="670" y1="110" x2="670" y2="640" class="tick"/><text x="670" y="662" text-anchor="middle">36</text>
+      <line x1="740" y1="110" x2="740" y2="640" class="tick"/><text x="740" y="662" text-anchor="middle">37</text>
+      <line x1="810" y1="110" x2="810" y2="640" class="tick"/><text x="810" y="662" text-anchor="middle">38</text>
+      <line x1="880" y1="110" x2="880" y2="640" class="tick"/><text x="880" y="662" text-anchor="middle">39</text>
+      <line x1="950" y1="110" x2="950" y2="640" class="grid"/>
+      <text x="950" y="662" text-anchor="middle">40</text>
+      <text x="600" y="698" text-anchor="middle" class="axis-title">Hours per week</text>
+    </g>
 
-  <!-- bottom axis & grid -->
-  <g class="axis">
-    <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
-    <text x="250" y="662" text-anchor="middle">30</text>
-    <line x1="320" y1="110" x2="320" y2="640" class="tick"/><text x="320" y="662" text-anchor="middle">31</text>
-    <line x1="390" y1="110" x2="390" y2="640" class="tick"/><text x="390" y="662" text-anchor="middle">32</text>
-    <line x1="460" y1="110" x2="460" y2="640" class="tick"/><text x="460" y="662" text-anchor="middle">33</text>
-    <line x1="530" y1="110" x2="530" y2="640" class="tick"/><text x="530" y="662" text-anchor="middle">34</text>
-    <line x1="600" y1="110" x2="600" y2="640" class="tick"/><text x="600" y="662" text-anchor="middle">35</text>
-    <line x1="670" y1="110" x2="670" y2="640" class="tick"/><text x="670" y="662" text-anchor="middle">36</text>
-    <line x1="740" y1="110" x2="740" y2="640" class="tick"/><text x="740" y="662" text-anchor="middle">37</text>
-    <line x1="810" y1="110" x2="810" y2="640" class="tick"/><text x="810" y="662" text-anchor="middle">38</text>
-    <line x1="880" y1="110" x2="880" y2="640" class="tick"/><text x="880" y="662" text-anchor="middle">39</text>
-    <line x1="950" y1="110" x2="950" y2="640" class="grid"/>
-    <text x="950" y="662" text-anchor="middle">40</text>
-    <text x="600" y="698" text-anchor="middle" class="axis-title">Hours per week</text>
-  </g>
+    <!-- bars; width = (value-30)*70 ; height 28; step 42 -->
+    <!-- Germany 35.3 -> width 371.0 ; end x = 621.0 -->
+    <text class="label" x="240" y="127" text-anchor="end">Germany</text>
+    <rect class="bar-eu14" x="250" y="113" width="371.0" height="28"></rect>
+    <text class="value-in" x="611" y="132" text-anchor="end">35.3</text>
 
-  <!-- bars; width = (value-30)*70 ; height 28; step 42 -->
-  <!-- Germany 35.3 -> width 371.0 ; end x = 621.0 -->
-  <text class="label" x="240" y="127" text-anchor="end">Germany</text>
-  <rect class="bar-eu14" x="250" y="113" width="371.0" height="28"></rect>
-  <text class="value-in" x="611" y="132" text-anchor="end">35.3</text>
+    <!-- France 36.0 -> 420 ; end 670 -->
+    <text class="label" x="240" y="169" text-anchor="end">France</text>
+    <rect class="bar-eu14" x="250" y="155" width="420" height="28"></rect>
+    <text class="value-in" x="660" y="174" text-anchor="end">36.0</text>
 
-  <!-- France 36.0 -> 420 ; end 670 -->
-  <text class="label" x="240" y="169" text-anchor="end">France</text>
-  <rect class="bar-eu14" x="250" y="155" width="420" height="28"></rect>
-  <text class="value-in" x="660" y="174" text-anchor="end">36.0</text>
+    <!-- Denmark 37.0 -> 490 ; end 740 -->
+    <text class="label" x="240" y="211" text-anchor="end">Denmark</text>
+    <rect class="bar-eu14" x="250" y="197" width="490" height="28"></rect>
+    <text class="value-in" x="730" y="216" text-anchor="end">37.0</text>
 
-  <!-- Denmark 37.0 -> 490 ; end 740 -->
-  <text class="label" x="240" y="211" text-anchor="end">Denmark</text>
-  <rect class="bar-eu14" x="250" y="197" width="490" height="28"></rect>
-  <text class="value-in" x="730" y="216" text-anchor="end">37.0</text>
+    <!-- Norway 37.5 -> 525 ; end 775 -->
+    <text class="label" x="240" y="253" text-anchor="end">Norway</text>
+    <rect class="bar-nor" x="250" y="239" width="525" height="28"></rect>
+    <text class="value-in" x="765" y="258" text-anchor="end">37.5</text>
 
-  <!-- Norway 37.5 -> 525 ; end 775 -->
-  <text class="label" x="240" y="253" text-anchor="end">Norway</text>
-  <rect class="bar-nor" x="250" y="239" width="525" height="28"></rect>
-  <text class="value-in" x="765" y="258" text-anchor="end">37.5</text>
+    <!-- Finland 37.5 -> 525 ; end 775 -->
+    <text class="label" x="240" y="295" text-anchor="end">Finland</text>
+    <rect class="bar-eu14" x="250" y="281" width="525" height="28"></rect>
+    <text class="value-in" x="765" y="300" text-anchor="end">37.5</text>
 
-  <!-- Finland 37.5 -> 525 ; end 775 -->
-  <text class="label" x="240" y="295" text-anchor="end">Finland</text>
-  <rect class="bar-eu14" x="250" y="281" width="525" height="28"></rect>
-  <text class="value-in" x="765" y="300" text-anchor="end">37.5</text>
+    <!-- Czech Republic 37.7 -> 539 ; end 789 -->
+    <text class="label" x="240" y="337" text-anchor="end">Czech Republic</text>
+    <rect class="bar-eu13" x="250" y="323" width="539" height="28"></rect>
+    <text class="value-in" x="779" y="342" text-anchor="end">37.7</text>
 
-  <!-- Czech Republic 37.7 -> 539 ; end 789 -->
-  <text class="label" x="240" y="337" text-anchor="end">Czech Republic</text>
-  <rect class="bar-eu13" x="250" y="323" width="539" height="28"></rect>
-  <text class="value-in" x="779" y="342" text-anchor="end">37.7</text>
+    <!-- Belgium 37.8 -> 546 ; end 796 -->
+    <text class="label" x="240" y="379" text-anchor="end">Belgium</text>
+    <rect class="bar-eu14" x="250" y="365" width="546" height="28"></rect>
+    <text class="value-in" x="786" y="384" text-anchor="end">37.8</text>
 
-  <!-- Belgium 37.8 -> 546 ; end 796 -->
-  <text class="label" x="240" y="379" text-anchor="end">Belgium</text>
-  <rect class="bar-eu14" x="250" y="365" width="546" height="28"></rect>
-  <text class="value-in" x="786" y="384" text-anchor="end">37.8</text>
+    <!-- Netherlands 38.0 -> 560 ; end 810 -->
+    <text class="label" x="240" y="421" text-anchor="end">Netherlands</text>
+    <rect class="bar-eu14" x="250" y="407" width="560" height="28"></rect>
+    <text class="value-in" x="800" y="426" text-anchor="end">38.0</text>
 
-  <!-- Netherlands 38.0 -> 560 ; end 810 -->
-  <text class="label" x="240" y="421" text-anchor="end">Netherlands</text>
-  <rect class="bar-eu14" x="250" y="407" width="560" height="28"></rect>
-  <text class="value-in" x="800" y="426" text-anchor="end">38.0</text>
+    <!-- Cyprus 38.0 -> 560 ; end 810 -->
+    <text class="label" x="240" y="463" text-anchor="end">Cyprus</text>
+    <rect class="bar-eu13" x="250" y="449" width="560" height="28"></rect>
+    <text class="value-in" x="800" y="468" text-anchor="end">38.0</text>
 
-  <!-- Cyprus 38.0 -> 560 ; end 810 -->
-  <text class="label" x="240" y="463" text-anchor="end">Cyprus</text>
-  <rect class="bar-eu13" x="250" y="449" width="560" height="28"></rect>
-  <text class="value-in" x="800" y="468" text-anchor="end">38.0</text>
+    <!-- Spain 38.1 -> 567 ; end 817 -->
+    <text class="label" x="240" y="505" text-anchor="end">Spain</text>
+    <rect class="bar-eu14" x="250" y="491" width="567" height="28"></rect>
+    <text class="value-in" x="807" y="510" text-anchor="end">38.1</text>
 
-  <!-- Spain 38.1 -> 567 ; end 817 -->
-  <text class="label" x="240" y="505" text-anchor="end">Spain</text>
-  <rect class="bar-eu14" x="250" y="491" width="567" height="28"></rect>
-  <text class="value-in" x="807" y="510" text-anchor="end">38.1</text>
+    <!-- Austria 38.5 -> 595 ; end 845 -->
+    <text class="label" x="240" y="547" text-anchor="end">Austria</text>
+    <rect class="bar-eu14" x="250" y="533" width="595" height="28"></rect>
+    <text class="value-in" x="835" y="552" text-anchor="end">38.5</text>
 
-  <!-- Austria 38.5 -> 595 ; end 845 -->
-  <text class="label" x="240" y="547" text-anchor="end">Austria</text>
-  <rect class="bar-eu14" x="250" y="533" width="595" height="28"></rect>
-  <text class="value-in" x="835" y="552" text-anchor="end">38.5</text>
+    <!-- Group 40.0 -> 700 ; end 950 -->
+    <text class="label" x="240" y="589" text-anchor="end">Greece, Italy, Luxembourg, Portugal, Sweden</text>
+    <rect class="bar-eu14" x="250" y="575" width="700" height="28"></rect>
+    <text class="value-in" x="940" y="594" text-anchor="end">40.0</text>
 
-  <!-- GILPS group 40.0 -> 700 ; end 950 -->
-  <text class="label" x="240" y="589" text-anchor="end">Greece, Italy, Luxembourg, Portugal, Sweden</text>
-  <rect class="bar-eu14" x="250" y="575" width="700" height="28"></rect>
-  <text class="value-in" x="940" y="594" text-anchor="end">40.0</text>
+    <!-- Group 40.0 -> 700 ; end 950 -->
+    <text class="label" x="240" y="631" text-anchor="end">Croatia, Malta, Slovakia, Slovenia</text>
+    <rect class="bar-eu13" x="250" y="617" width="700" height="28"></rect>
+    <text class="value-in" x="940" y="636" text-anchor="end">40.0</text>
 
-  <!-- CMS SLO group 40.0 -> 700 ; end 950 -->
-  <text class="label" x="240" y="631" text-anchor="end">Croatia, Malta, Slovakia, Slovenia</text>
-  <rect class="bar-eu13" x="250" y="617" width="700" height="28"></rect>
-  <text class="value-in" x="940" y="636" text-anchor="end">40.0</text>
+    <!-- dashed reference lines OVER bars -->
+    <line x1="775" y1="110" x2="775" y2="640" class="vline15"/>
+    <line x1="817" y1="110" x2="817" y2="640" class="vline27"/>
+    <line x1="929" y1="110" x2="929" y2="640" class="vline13"/>
 
-  <!-- dashed reference lines OVER bars -->
-  <!-- EU15 37.5 -> x=775 -->
-  <line x1="775" y1="110" x2="775" y2="640" class="vline15"/>
-  <!-- EU27 38.1 -> x=817 -->
-  <line x1="817" y1="110" x2="817" y2="640" class="vline27"/>
-  <!-- EU13 39.7 -> x=929 -->
-  <line x1="929" y1="110" x2="929" y2="640" class="vline13"/>
+    <!-- spaced line labels with hours (placed high to avoid clipping) -->
+    <g font-size="13">
+      <text x="775" y="40" text-anchor="middle" class="note15">EU15, 37.5 hours</text>
+      <text x="817" y="62" text-anchor="middle" class="note27">EU27, 38.1 hours</text>
+      <text x="929" y="84" text-anchor="middle" class="note13">EU13, 39.7 hours</text>
+    </g>
+  </svg>
 
-  <!-- spaced line labels with hours -->
-  <g font-size="13">
-    <text x="775" y="36" text-anchor="middle" class="note15">EU15, 37.5 hours</text>
-    <text x="817" y="58" text-anchor="middle" class="note27">EU27, 38.1 hours</text>
-    <text x="929" y="80" text-anchor="middle" class="note13">EU13, 39.7 hours</text>
-  </g>
-</svg>
+  <!-- Actions -->
+  <div class="actions">
+    <button class="btn" id="btnCsv">Download data (CSV)</button>
+    <button class="btn" id="btnPng">Download image (PNG)</button>
+  </div>
 </div>
+
+<script>
+/* ---------- CSV download ---------- */
+const csvRows = [
+  ["Country or group","Hours per week"],
+  ["Germany","35.3"],
+  ["France","36.0"],
+  ["Denmark","37.0"],
+  ["Norway","37.5"],
+  ["Finland","37.5"],
+  ["Czech Republic","37.7"],
+  ["Belgium","37.8"],
+  ["Netherlands","38.0"],
+  ["Cyprus","38.0"],
+  ["Spain","38.1"],
+  ["Austria","38.5"],
+  ["Greece, Italy, Luxembourg, Portugal, Sweden","40.0"],
+  ["Croatia, Malta, Slovakia, Slovenia","40.0"],
+  ["EU15 average","37.5"],
+  ["EU27 average","38.1"],
+  ["EU13 average","39.7"]
+];
+const csvData = csvRows.map(r => r.map(v => /[",\n]/.test(v) ? `"${v.replace(/"/g,'""')}"` : v).join(",")).join("\n");
+
+document.getElementById("btnCsv").addEventListener("click", () => {
+  const blob = new Blob([csvData], {type:"text/csv;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = Object.assign(document.createElement("a"), {href:url, download:"working_time_data.csv"});
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+});
+
+/* ---------- PNG download from SVG ---------- */
+document.getElementById("btnPng").addEventListener("click", () => {
+  const svg = document.getElementById("chart");
+  const serializer = new XMLSerializer();
+  const src = serializer.serializeToString(svg);
+
+  const canvas = document.createElement("canvas");
+  const vb = svg.viewBox.baseVal;
+  canvas.width = vb.width; canvas.height = vb.height;
+
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  const img = new Image();
+  img.onload = function(){
+    ctx.drawImage(img,0,0);
+    canvas.toBlob((blob)=>{
+      const url = URL.createObjectURL(blob);
+      const a = Object.assign(document.createElement("a"), {href:url, download:"working_time_chart.png"});
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    });
+  };
+  img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(src);
+});
+</script>
+<script>
+/* External message hooks for host page buttons */
+window.addEventListener("message", (event) => {
+  if (event.data === "download-png" && chart) {
+    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
+  }
+  if (event.data === "download-csv" && chart) {
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName("data") + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  }
+});
+</script>
+
+</body>
 </html>
