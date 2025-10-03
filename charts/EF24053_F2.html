@@ -15,11 +15,12 @@
     --grid:#e6e6e6;
   }
   body{margin:0;background:#f5f7f8;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
-  .wrap{width:1020px;max-width:100%;margin:18px auto;background:#fff;border:1px solid #e6e6e6;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  /* removed border & shadow to avoid any visible frame */
+  .wrap{width:1020px;max-width:100%;margin:18px auto;background:#fff}
   .panel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eee}
   .panel label{font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#333}
   .panel input[type="text"]{flex:1;max-width:720px;padding:8px 10px;border:1px solid #d6d6d6;border-radius:8px;font:14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  svg{display:block;width:100%;height:auto}
+  svg{display:block;width:100%;height:auto;outline:none}
   .label{font-size:15px;fill:#4a4a4a}
   .value-in{font-size:14px;fill:#ffffff;font-weight:700}
   .axis text{font-size:12px;fill:var(--axis)}
@@ -35,24 +36,20 @@
   .bar-eu14{fill:var(--blue)}
   .bar-eu13{fill:var(--green)}
   .bar-nor{fill:#cfcfcf}
-  .actions{display:none;}  /* hide buttons as requested */
-  /* Title should NOT display on screen, but must appear in exported image */
-  .export-only{display:none}
+  .actions{display:none;}  /* hide export buttons */
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- Simple panel for CHART TITLE input -->
+  <!-- Title input (used for filenames and export overlay title) -->
+  <div class="panel">
+    <label for="chartTitle">Chart title</label>
+    <input id="chartTitle" type="text" placeholder="Enter chart title…" value="Average usual weekly working hours in the EU">
+  </div>
 
-
-  <!-- Chart -->
+  <!-- Chart (no on-page title node; export will inject one dynamically) -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
-    <rect x="0" y="0" width="1020" height="760" fill="#ffffff"/>
-
-    <!-- Title (hidden on page; shown only in export) -->
-    <text id="titleText" x="510" y="44" text-anchor="middle" class="export-only" style="font-size:22px; font-weight:700; fill:#2e2e2e">
-      <!-- filled dynamically -->
-    </text>
+    <!-- removed outer white rect to eliminate any hairline frame; export will still be white via canvas fill -->
 
     <g class="axis">
       <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
@@ -168,15 +165,9 @@ const CSV_ROWS = [
 
 /* ====== Title plumbing ====== */
 const titleInput = document.getElementById('chartTitle');
-const titleNode  = document.getElementById('titleText');
 function getChartTitle(){
   return (titleInput?.value || '').trim();
 }
-function setTitleOnSvg(){
-  if (titleNode) titleNode.textContent = getChartTitle();
-}
-if (titleInput) titleInput.addEventListener('input', setTitleOnSvg);
-setTitleOnSvg();
 
 /* ====== FILENAME helper (uses first 20 chars of title) ====== */
 function safeFile(s){
@@ -203,22 +194,32 @@ window.chart = {
     const srcSvg = document.getElementById('chart');
     if (!srcSvg) return;
 
-    // Clone SVG and inline styles
+    // Clone SVG
     const svgClone = srcSvg.cloneNode(true);
+
+    // Inject styles (and ensure any export-only rules take effect)
     const cssText = Array.from(document.querySelectorAll('style'))
       .map(s => s.textContent).join('\n');
     const style = document.createElement('style');
     style.textContent = cssText + '\n.export-only{display:block !important}';
-    svgClone.insertBefore(style, svgClone.firstChild);
+    svgClone.appendChild(style); // append last so it wins the cascade
 
-    // Ensure title is present and visible in the exported image
-    const cloneTitle = svgClone.querySelector('#titleText');
-    if (cloneTitle){
-      cloneTitle.textContent = getChartTitle();
-      cloneTitle.setAttribute('display','inline');
-      cloneTitle.style.display = 'block';
+    // --- Inject a title node (export only), regardless of what's on the page ---
+    const titleText = getChartTitle();
+    if (titleText){
+      const NS = 'http://www.w3.org/2000/svg';
+      const t = document.createElementNS(NS,'text');
+      t.setAttribute('x','510');
+      t.setAttribute('y','44');
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('class','export-only');
+      t.setAttribute('style','font-size:22px;font-weight:700;fill:#2e2e2e');
+      t.textContent = titleText;
+      // Place as the first visual element so it's on top but before axes if needed
+      svgClone.insertBefore(t, svgClone.firstChild);
     }
 
+    // Serialize and paint onto a white canvas
     const serializer = new XMLSerializer();
     const svgStr = serializer.serializeToString(svgClone);
 
@@ -277,8 +278,6 @@ window.triggerExportPNG = doPNGDownload; // optional same-origin helper
 window.addEventListener('message', (event) => {
   const d = event.data;
 
-  // Extract a command string from multiple shapes:
-  // "download-png" | {type:'download-csv'} | {action:'png'} | {data:{cmd:'csv'}} etc.
   function extractCmd(x){
     if (!x) return null;
     if (typeof x === 'string') return x;
@@ -301,6 +300,5 @@ window.addEventListener('message', (event) => {
   }
 });
 </script>
-
 </body>
 </html>
