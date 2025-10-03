@@ -16,6 +16,9 @@
   }
   body{margin:0;background:#f5f7f8;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
   .wrap{width:1020px;max-width:100%;margin:18px auto;background:#fff;border:1px solid #e6e6e6;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  .panel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eee}
+  .panel label{font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#333}
+  .panel input[type="text"]{flex:1;max-width:720px;padding:8px 10px;border:1px solid #d6d6d6;border-radius:8px;font:14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
   svg{display:block;width:100%;height:auto}
   .label{font-size:15px;fill:#4a4a4a}
   .value-in{font-size:14px;fill:#ffffff;font-weight:700}
@@ -32,16 +35,25 @@
   .bar-eu14{fill:var(--blue)}
   .bar-eu13{fill:var(--green)}
   .bar-nor{fill:#cfcfcf}
-  .actions{display:flex;gap:10px;align-items:center;justify-content:center;padding:14px 16px 18px}
-  .btn{appearance:none;border:1px solid #d6d6d6;background:#f7f7f9;border-radius:8px;padding:10px 14px;font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;cursor:pointer}
-  .btn:hover{background:#eef2f6}
+  .actions{display:none;}  /* hide buttons as requested */
+  /* Title should NOT display on screen, but must appear in exported image */
+  .export-only{display:none}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- Chart (UNCHANGED) -->
+  <!-- Simple panel for CHART TITLE input -->
+
+
+  <!-- Chart -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
     <rect x="0" y="0" width="1020" height="760" fill="#ffffff"/>
+
+    <!-- Title (hidden on page; shown only in export) -->
+    <text id="titleText" x="510" y="44" text-anchor="middle" class="export-only" style="font-size:22px; font-weight:700; fill:#2e2e2e">
+      <!-- filled dynamically -->
+    </text>
+
     <g class="axis">
       <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
       <text x="250" y="662" text-anchor="middle">30</text>
@@ -125,7 +137,7 @@
     </g>
   </svg>
 
-  <!-- Actions (IDs aligned with EJM-style hooks) -->
+  <!-- Actions kept in DOM but hidden (functionality intact) -->
   <div class="actions">
     <button class="btn" id="dlCSV">Download data (CSV)</button>
     <button class="btn" id="dlPNG">Download image (PNG)</button>
@@ -154,32 +166,56 @@ const CSV_ROWS = [
   ["EU13 average","39.7"]
 ];
 
-/* ====== FILENAME helper (mirrors your EJM style) ====== */
-function safeFile(s){ return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim(); }
-function exportName(kind){ return safeFile(`Working_time_${kind}`); }
+/* ====== Title plumbing ====== */
+const titleInput = document.getElementById('chartTitle');
+const titleNode  = document.getElementById('titleText');
+function getChartTitle(){
+  return (titleInput.value || '').trim();
+}
+function setTitleOnSvg(){
+  titleNode.textContent = getChartTitle();
+}
+titleInput.addEventListener('input', setTitleOnSvg);
+setTitleOnSvg();
 
-/* ====== Highcharts-like shim so external hooks work unchanged ====== */
+/* ====== FILENAME helper (uses first 20 chars of title) ====== */
+function safeFile(s){ return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim(); }
+function exportName(kind){
+  const base = getChartTitle() || 'Working time';
+  const first20 = base.slice(0,20);
+  return safeFile(`${first20}_${kind}`);
+}
+
+/* ====== Highcharts-like shim ====== */
 window.chart = {
   getCSV(){
     const csv = CSV_ROWS.map(row =>
-      row.map(v => /[",\n]/.test(v) ? `"${v.replace(/"/g,'""')}"` : v).join(',')
+      row.map(v => /[",\n]/.test(v) ? `"${String(v).replace(/"/g,'""')}"` : v).join(',')
     ).join('\n');
     return csv;
   },
   exportChartLocal({type='image/png', filename='chart'} = {}){
-    // clone SVG and inline page <style> rules to preserve colours
     const srcSvg = document.getElementById('chart');
     const svgClone = srcSvg.cloneNode(true);
+
+    /* Inline page CSS so PNG respects styles */
     const cssText = Array.from(document.querySelectorAll('style'))
       .map(s => s.textContent).join('\n');
     const style = document.createElement('style');
-    style.textContent = cssText;
+    style.textContent = cssText + '\n.export-only{display:block !important}';
     svgClone.insertBefore(style, svgClone.firstChild);
+
+    /* Ensure the cloned title text is updated and visible */
+    const cloneTitle = svgClone.querySelector('#titleText');
+    if (cloneTitle){
+      cloneTitle.textContent = getChartTitle();
+      cloneTitle.setAttribute('display','inline');
+      cloneTitle.style.display = 'block';
+    }
 
     const serializer = new XMLSerializer();
     const svgStr = serializer.serializeToString(svgClone);
 
-    // draw to canvas then save
     const vb = srcSvg.viewBox.baseVal;
     const canvas = document.createElement('canvas');
     canvas.width = vb.width; canvas.height = vb.height;
@@ -203,11 +239,11 @@ window.chart = {
   }
 };
 
-/* ====== Buttons wired like your EJM dashboard ====== */
+/* ====== Hidden buttons still work if triggered manually ====== */
 const btnCSV = document.getElementById('dlCSV');
 const btnPNG = document.getElementById('dlPNG');
 
-btnCSV.onclick = () => {
+if (btnCSV) btnCSV.onclick = () => {
   const csv = chart.getCSV();
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   const a = document.createElement('a');
@@ -218,9 +254,10 @@ btnCSV.onclick = () => {
   setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
 };
 
-btnPNG.onclick = () => chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
+if (btnPNG) btnPNG.onclick = () =>
+  chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
 
-/* ====== External postMessage hooks (unchanged API) ====== */
+/* ====== External postMessage hooks remain unchanged ====== */
 window.addEventListener("message", (event) => {
   if (event.data === "download-png" && chart) {
     chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
