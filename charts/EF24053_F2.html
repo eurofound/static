@@ -15,25 +15,19 @@
     --grid:#e6e6e6;
   }
 
-  /* eliminate any visible frame */
+  /* No frames, borders, or shadows anywhere */
   html,body{height:100%}
-  body{margin:0;background:#ffffff;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
-
-  /* wrapper has no border/shadow/background frame */
+  body{margin:0;background:#ffffff;font-family:Segoe UI, Roboto, "Roboto Fallback", Helvetica, Arial, sans-serif}
   .wrap{width:1020px;max-width:100%;margin:0 auto;background:transparent}
-
-  /* title field (no borders that create “frame” lines) */
   .panel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px}
-  .panel label{font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#333}
+  .panel label{font:600 14px/1.2 system-ui,Segoe UI,Roboto,"Roboto Fallback",Helvetica,Arial,sans-serif;color:#333}
   .panel input[type="text"]{
     flex:1;max-width:720px;padding:8px 10px;
-    border:1px solid #d6d6d6;border-radius:8px;
-    font:14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    background:#fff
+    border:1px solid #d6d6d6;border-radius:8px;background:#fff;
+    font:14px/1.2 system-ui,Segoe UI,Roboto,"Roboto Fallback",Helvetica,Arial,sans-serif
   }
 
   svg{display:block;width:100%;height:auto;outline:none}
-
   .label{font-size:15px;fill:#4a4a4a}
   .value-in{font-size:14px;fill:#ffffff;font-weight:700}
   .axis text{font-size:12px;fill:var(--axis)}
@@ -50,21 +44,21 @@
   .bar-eu13{fill:var(--green)}
   .bar-nor{fill:#cfcfcf}
 
-  /* hide on-page export buttons but keep functionality */
+  /* Hide on-page export buttons, keep functionality */
   .actions{display:none}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- Title input (used for filenames + export overlay title; NOT shown on chart) -->
+  <!-- Title input (for filenames + export overlay only; NOT shown on chart) -->
   <div class="panel">
     <label for="chartTitle">Chart title</label>
     <input id="chartTitle" type="text" placeholder="Enter chart title…" value="Average usual weekly working hours in the EU">
   </div>
 
-  <!-- Chart (no on-page title node; export injects one dynamically) -->
+  <!-- Chart (no on-page title node; export builds its own wrapper/title) -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
-    <!-- no outer rect (prevents any halo/frame) -->
+    <!-- no outer rect -->
     <g class="axis">
       <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
       <text x="250" y="662" text-anchor="middle">30</text>
@@ -176,7 +170,7 @@ const CSV_ROWS = [
   ["EU13 average","39.7"]
 ];
 
-/* ====== Title (used only for filenames + export overlay) ====== */
+/* ====== Title source (input only; never drawn on page) ====== */
 const titleInput = document.getElementById('chartTitle');
 function getChartTitle(){ return (titleInput?.value || '').trim(); }
 
@@ -189,7 +183,7 @@ function exportName(kind){
   return safeFile(`${base.slice(0,20)}_${kind}`);
 }
 
-/* ====== Highcharts-like shim ====== */
+/* ====== Highcharts-like shim with export wrapper ====== */
 window.chart = {
   getCSV(){
     return CSV_ROWS.map(row =>
@@ -200,32 +194,55 @@ window.chart = {
     const srcSvg = document.getElementById('chart');
     if (!srcSvg) return;
 
-    const svgClone = srcSvg.cloneNode(true);
+    const vb = srcSvg.viewBox.baseVal;
+    const PAD_TOP = 64; // space for title above chart
 
-    /* Inline CSS & ensure export-only rules can show injected title */
+    // Clone original chart SVG content
+    const chartClone = srcSvg.cloneNode(true);
+
+    // Build a fresh wrapper SVG with extra top room
+    const NS = 'http://www.w3.org/2000/svg';
+    const wrapper = document.createElementNS(NS,'svg');
+    wrapper.setAttribute('xmlns','http://www.w3.org/2000/svg');
+    wrapper.setAttribute('viewBox', `0 0 ${vb.width} ${vb.height + PAD_TOP}`);
+    wrapper.setAttribute('width', vb.width);
+    wrapper.setAttribute('height', vb.height + PAD_TOP);
+
+    // Inline CSS so styles survive
     const cssText = Array.from(document.querySelectorAll('style')).map(s=>s.textContent).join('\n');
-    const style = document.createElement('style');
-    style.textContent = cssText + '\n.export-only{display:block !important}';
-    svgClone.appendChild(style);
+    const style = document.createElementNS(NS,'style');
+    style.textContent = cssText;
+    wrapper.appendChild(style);
 
-    /* Inject title for export only */
+    // Title at the very top (never clipped), above everything
     const titleText = getChartTitle();
     if (titleText){
-      const NS='http://www.w3.org/2000/svg';
-      const t = document.createElementNS(NS,'text');
-      t.setAttribute('x','510');
-      t.setAttribute('y','44');
-      t.setAttribute('text-anchor','middle');
-      t.setAttribute('class','export-only');
-      t.setAttribute('style','font-size:22px;font-weight:700;fill:#2e2e2e');
-      t.textContent = titleText;
-      svgClone.insertBefore(t, svgClone.firstChild);
+      const titleNode = document.createElementNS(NS,'text');
+      titleNode.setAttribute('x', String(vb.width/2));
+      titleNode.setAttribute('y', '28'); // top padding area
+      titleNode.setAttribute('text-anchor','middle');
+      titleNode.setAttribute('style','font-size:22px;font-weight:700;fill:#2e2e2e;font-family:Roboto,"Roboto Fallback",sans-serif');
+      titleNode.textContent = titleText;
+      wrapper.appendChild(titleNode);
     }
 
-    /* Serialize → paint on a white canvas (no frame) */
-    const vb = srcSvg.viewBox.baseVal;
+    // Shift the chart content down by PAD_TOP
+    const g = document.createElementNS(NS,'g');
+    g.setAttribute('transform', `translate(0,${PAD_TOP})`);
+
+    // Move children of chartClone into g (excluding its own <style> tags to avoid duplicates)
+    Array.from(chartClone.childNodes).forEach(node=>{
+      if (node.nodeName.toLowerCase() === 'style') return;
+      g.appendChild(node.cloneNode(true));
+    });
+    wrapper.appendChild(g);
+
+    // Serialize wrapper and paint to white canvas
+    const serializer = new XMLSerializer();
+    const svgStr = serializer.serializeToString(wrapper);
+
     const canvas = document.createElement('canvas');
-    canvas.width = vb.width; canvas.height = vb.height;
+    canvas.width = vb.width; canvas.height = vb.height + PAD_TOP;
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -243,7 +260,7 @@ window.chart = {
         setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); },0);
       });
     };
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(svgClone));
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
   }
 };
 
