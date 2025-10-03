@@ -170,16 +170,21 @@ const CSV_ROWS = [
 const titleInput = document.getElementById('chartTitle');
 const titleNode  = document.getElementById('titleText');
 function getChartTitle(){
-  return (titleInput.value || '').trim();
+  return (titleInput?.value || '').trim();
 }
 function setTitleOnSvg(){
-  titleNode.textContent = getChartTitle();
+  if (titleNode) titleNode.textContent = getChartTitle();
 }
-titleInput.addEventListener('input', setTitleOnSvg);
+if (titleInput) titleInput.addEventListener('input', setTitleOnSvg);
 setTitleOnSvg();
 
 /* ====== FILENAME helper (uses first 20 chars of title) ====== */
-function safeFile(s){ return s.replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim(); }
+function safeFile(s){
+  return String(s)
+    .replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-')
+    .replace(/\s+/g,' ')
+    .trim();
+}
 function exportName(kind){
   const base = getChartTitle() || 'Working time';
   const first20 = base.slice(0,20);
@@ -190,22 +195,23 @@ function exportName(kind){
 window.chart = {
   getCSV(){
     const csv = CSV_ROWS.map(row =>
-      row.map(v => /[",\n]/.test(v) ? `"${String(v).replace(/"/g,'""')}"` : v).join(',')
+      row.map(v => /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g,'""')}"` : v).join(',')
     ).join('\n');
     return csv;
   },
   exportChartLocal({type='image/png', filename='chart'} = {}){
     const srcSvg = document.getElementById('chart');
-    const svgClone = srcSvg.cloneNode(true);
+    if (!srcSvg) return;
 
-    /* Inline page CSS so PNG respects styles */
+    // Clone SVG and inline styles
+    const svgClone = srcSvg.cloneNode(true);
     const cssText = Array.from(document.querySelectorAll('style'))
       .map(s => s.textContent).join('\n');
     const style = document.createElement('style');
     style.textContent = cssText + '\n.export-only{display:block !important}';
     svgClone.insertBefore(style, svgClone.firstChild);
 
-    /* Ensure the cloned title text is updated and visible */
+    // Ensure title is present and visible in the exported image
     const cloneTitle = svgClone.querySelector('#titleText');
     if (cloneTitle){
       cloneTitle.textContent = getChartTitle();
@@ -219,9 +225,12 @@ window.chart = {
     const vb = srcSvg.viewBox.baseVal;
     const canvas = document.createElement('canvas');
     canvas.width = vb.width; canvas.height = vb.height;
+
     const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0,0,canvas.width,canvas.height);
+
     const img = new Image();
     img.onload = function(){
       ctx.drawImage(img,0,0);
@@ -243,7 +252,7 @@ window.chart = {
 const btnCSV = document.getElementById('dlCSV');
 const btnPNG = document.getElementById('dlPNG');
 
-if (btnCSV) btnCSV.onclick = () => {
+function doCSVDownload(){
   const csv = chart.getCSV();
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   const a = document.createElement('a');
@@ -252,27 +261,46 @@ if (btnCSV) btnCSV.onclick = () => {
   document.body.appendChild(a);
   a.click();
   setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-};
+}
 
-if (btnPNG) btnPNG.onclick = () =>
+function doPNGDownload(){
   chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
+}
 
-/* ====== External postMessage hooks remain unchanged ====== */
-window.addEventListener("message", (event) => {
-  if (event.data === "download-png" && chart) {
-    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
+if (btnCSV) btnCSV.onclick = doCSVDownload;
+if (btnPNG) btnPNG.onclick = doPNGDownload;
+
+/* ====== External postMessage hooks (robust to different payload shapes) ====== */
+window.triggerExportCSV = doCSVDownload; // optional same-origin helper
+window.triggerExportPNG = doPNGDownload; // optional same-origin helper
+
+window.addEventListener('message', (event) => {
+  const d = event.data;
+
+  // Extract a command string from multiple shapes:
+  // "download-png" | {type:'download-csv'} | {action:'png'} | {data:{cmd:'csv'}} etc.
+  function extractCmd(x){
+    if (!x) return null;
+    if (typeof x === 'string') return x;
+    if (typeof x === 'object'){
+      return x.type || x.action || x.cmd || x.command || x.event || x.name ||
+             (x.data && (x.data.type || x.data.action || x.data.cmd || x.data.command)) ||
+             null;
+    }
+    return null;
   }
-  if (event.data === "download-csv" && chart) {
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName("data") + ".csv";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+
+  let cmd = extractCmd(d);
+  if (!cmd) return;
+  cmd = String(cmd).toLowerCase();
+
+  if (cmd === 'download-png' || cmd === 'png' || cmd === 'image' || cmd === 'export-png'){
+    doPNGDownload();
+  } else if (cmd === 'download-csv' || cmd === 'csv' || cmd === 'data' || cmd === 'export-csv'){
+    doCSVDownload();
   }
 });
 </script>
+
 </body>
 </html>
