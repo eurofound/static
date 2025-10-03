@@ -38,103 +38,88 @@
 </head>
 <body>
 <div class="wrap">
-  <!-- Chart only (no visible title UI) -->
+  <!-- Chart (left margin widened from 250->300 to avoid label clipping) -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Collectively agreed weekly working hours in the chemicals sector, selected countries, 2024">
-    <!-- axes -->
     <g class="axis">
-      <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
-      <text x="250" y="662" text-anchor="middle">30</text>
-      <line x1="320" y1="110" x2="320" y2="640" class="tick"/><text x="320" y="662" text-anchor="middle">31</text>
-      <line x1="390" y1="110" x2="390" y2="640" class="tick"/><text x="390" y="662" text-anchor="middle">32</text>
-      <line x1="460" y1="110" x2="460" y2="640" class="tick"/><text x="460" y="662" text-anchor="middle">33</text>
-      <line x1="530" y1="110" x2="530" y2="640" class="tick"/><text x="530" y="662" text-anchor="middle">34</text>
-      <line x1="600" y1="110" x2="600" y2="640" class="tick"/><text x="600" y="662" text-anchor="middle">35</text>
-      <line x1="670" y1="110" x2="670" y2="640" class="tick"/><text x="670" y="662" text-anchor="middle">36</text>
-      <line x1="740" y1="110" x2="740" y2="640" class="tick"/><text x="740" y="662" text-anchor="middle">37</text>
-      <line x1="810" y1="110" x2="810" y2="640" class="tick"/><text x="810" y="662" text-anchor="middle">38</text>
-      <line x1="880" y1="110" x2="880" y2="640" class="tick"/><text x="880" y="662" text-anchor="middle">39</text>
-      <line x1="950" y1="110" x2="950" y2="640" class="grid"/>
-      <text x="950" y="662" text-anchor="middle">40</text>
+      <line x1="300" y1="110" x2="300" y2="640" class="grid"/>
+      <text x="300" y="662" text-anchor="middle">30</text>
+      <line x1="370" y1="110" x2="370" y2="640" class="tick"/><text x="370" y="662" text-anchor="middle">31</text>
+      <line x1="440" y1="110" x2="440" y2="640" class="tick"/><text x="440" y="662" text-anchor="middle">32</text>
+      <line x1="510" y1="110" x2="510" y2="640" class="tick"/><text x="510" y="662" text-anchor="middle">33</text>
+      <line x1="580" y1="110" x2="580" y2="640" class="tick"/><text x="580" y="662" text-anchor="middle">34</text>
+      <line x1="650" y1="110" x2="650" y2="640" class="tick"/><text x="650" y="662" text-anchor="middle">35</text>
+      <line x1="720" y1="110" x2="720" y2="640" class="tick"/><text x="720" y="662" text-anchor="middle">36</text>
+      <line x1="790" y1="110" x2="790" y2="640" class="tick"/><text x="790" y="662" text-anchor="middle">37</text>
+      <line x1="860" y1="110" x2="860" y2="640" class="tick"/><text x="860" y="662" text-anchor="middle">38</text>
+      <line x1="930" y1="110" x2="930" y2="640" class="tick"/><text x="930" y="662" text-anchor="middle">39</text>
+      <line x1="1000" y1="110" x2="1000" y2="640" class="grid"/>
+      <text x="1000" y="662" text-anchor="middle">40</text>
       <text x="600" y="698" text-anchor="middle" class="axis-title">Hours per week</text>
     </g>
 
     <!-- Bars (ascending) -->
-    <!-- helper scale: x0=250; pxPerHr=70; width=(value-30)*70; valueX=250+width-10 -->
-    <!-- France 35.5 -->
-    <text class="label" x="240" y="127" text-anchor="end">France</text>
-    <rect class="bar-eu14" x="250" y="113" width="385" height="28"></rect>
-    <text class="value-in" x="635" y="132" text-anchor="end">35.5</text>
+    <!-- Labels moved from x=240->290; bar x from 250->300; value x +50 -->
+    <text class="label" x="290" y="127" text-anchor="end">France</text>
+    <rect class="bar-eu14" x="300" y="113" width="385" height="28"></rect>
+    <text class="value-in" x="685" y="132" text-anchor="end">35.5</text>
 
-    <!-- Denmark 37 -->
-    <text class="label" x="240" y="169" text-anchor="end">Denmark</text>
-    <rect class="bar-eu14" x="250" y="155" width="490" height="28"></rect>
-    <text class="value-in" x="730" y="174" text-anchor="end">37</text>
+    <text class="label" x="290" y="169" text-anchor="end">Denmark</text>
+    <rect class="bar-eu14" x="300" y="155" width="490" height="28"></rect>
+    <text class="value-in" x="780" y="174" text-anchor="end">37</text>
 
-    <!-- Cyprus 37 (EU13) -->
-    <text class="label" x="240" y="211" text-anchor="end">Cyprus</text>
-    <rect class="bar-eu13" x="250" y="197" width="490" height="28"></rect>
-    <text class="value-in" x="730" y="216" text-anchor="end">37</text>
+    <text class="label" x="290" y="211" text-anchor="end">Cyprus</text>
+    <rect class="bar-eu13" x="300" y="197" width="490" height="28"></rect>
+    <text class="value-in" x="780" y="216" text-anchor="end">37</text>
 
-    <!-- Slovakia 37.5 (EU13) -->
-    <text class="label" x="240" y="253" text-anchor="end">Slovakia</text>
-    <rect class="bar-eu13" x="250" y="239" width="525" height="28"></rect>
-    <text class="value-in" x="765" y="258" text-anchor="end">37.5</text>
+    <text class="label" x="290" y="253" text-anchor="end">Slovakia</text>
+    <rect class="bar-eu13" x="300" y="239" width="525" height="28"></rect>
+    <text class="value-in" x="815" y="258" text-anchor="end">37.5</text>
 
-    <!-- Norway 37.5 (grey) -->
-    <text class="label" x="240" y="295" text-anchor="end">Norway</text>
-    <rect class="bar-nor" x="250" y="281" width="525" height="28"></rect>
-    <text class="value-in" x="765" y="300" text-anchor="end">37.5</text>
+    <text class="label" x="290" y="295" text-anchor="end">Norway</text>
+    <rect class="bar-nor" x="300" y="281" width="525" height="28"></rect>
+    <text class="value-in" x="815" y="300" text-anchor="end">37.5</text>
 
-    <!-- Finland, Italy 37.5 (EU14) -->
-    <text class="label" x="240" y="337" text-anchor="end">Finland, Italy</text>
-    <rect class="bar-eu14" x="250" y="323" width="525" height="28"></rect>
-    <text class="value-in" x="765" y="342" text-anchor="end">37.5</text>
+    <text class="label" x="290" y="337" text-anchor="end">Finland, Italy</text>
+    <rect class="bar-eu14" x="300" y="323" width="525" height="28"></rect>
+    <text class="value-in" x="815" y="342" text-anchor="end">37.5</text>
 
-    <!-- Germany 37.6 (EU14) -->
-    <text class="label" x="240" y="379" text-anchor="end">Germany</text>
-    <rect class="bar-eu14" x="250" y="365" width="532" height="28"></rect>
-    <text class="value-in" x="772" y="384" text-anchor="end">37.6</text>
+    <text class="label" x="290" y="379" text-anchor="end">Germany</text>
+    <rect class="bar-eu14" x="300" y="365" width="532" height="28"></rect>
+    <text class="value-in" x="822" y="384" text-anchor="end">37.6</text>
 
-    <!-- Czech Republic 37.6 (EU13) -->
-    <text class="label" x="240" y="421" text-anchor="end">Czech Republic</text>
-    <rect class="bar-eu13" x="250" y="407" width="532" height="28"></rect>
-    <text class="value-in" x="772" y="426" text-anchor="end">37.6</text>
+    <text class="label" x="290" y="421" text-anchor="end">Czech Republic</text>
+    <rect class="bar-eu13" x="300" y="407" width="532" height="28"></rect>
+    <text class="value-in" x="822" y="426" text-anchor="end">37.6</text>
 
-    <!-- Austria, Belgium 38 (EU14) -->
-    <text class="label" x="240" y="463" text-anchor="end">Austria, Belgium</text>
-    <rect class="bar-eu14" x="250" y="449" width="560" height="28"></rect>
-    <text class="value-in" x="800" y="468" text-anchor="end">38</text>
+    <text class="label" x="290" y="463" text-anchor="end">Austria, Belgium</text>
+    <rect class="bar-eu14" x="300" y="449" width="560" height="28"></rect>
+    <text class="value-in" x="850" y="468" text-anchor="end">38</text>
 
-    <!-- Spain 38.3 (EU14) -->
-    <text class="label" x="240" y="505" text-anchor="end">Spain</text>
-    <rect class="bar-eu14" x="250" y="491" width="581" height="28"></rect>
-    <text class="value-in" x="821" y="510" text-anchor="end">38.3</text>
+    <text class="label" x="290" y="505" text-anchor="end">Spain</text>
+    <rect class="bar-eu14" x="300" y="491" width="581" height="28"></rect>
+    <text class="value-in" x="871" y="510" text-anchor="end">38.3</text>
 
-    <!-- Portugal 39.7 (EU14) -->
-    <text class="label" x="240" y="547" text-anchor="end">Portugal</text>
-    <rect class="bar-eu14" x="250" y="533" width="679" height="28"></rect>
-    <text class="value-in" x="919" y="552" text-anchor="end">39.7</text>
+    <text class="label" x="290" y="547" text-anchor="end">Portugal</text>
+    <rect class="bar-eu14" x="300" y="533" width="679" height="28"></rect>
+    <text class="value-in" x="969" y="552" text-anchor="end">39.7</text>
 
-    <!-- Greece, Luxembourg, Netherlands, Sweden 40 (EU14) -->
-    <text class="label" x="240" y="589" text-anchor="end">Greece, Luxembourg, Netherlands, Sweden</text>
-    <rect class="bar-eu14" x="250" y="575" width="700" height="28"></rect>
-    <text class="value-in" x="940" y="594" text-anchor="end">40</text>
+    <text class="label" x="290" y="589" text-anchor="end">Greece, Luxembourg, Netherlands, Sweden</text>
+    <rect class="bar-eu14" x="300" y="575" width="700" height="28"></rect>
+    <text class="value-in" x="990" y="594" text-anchor="end">40</text>
 
-    <!-- Croatia, Malta 40 (EU13) -->
-    <text class="label" x="240" y="631" text-anchor="end">Croatia, Malta</text>
-    <rect class="bar-eu13" x="250" y="617" width="700" height="28"></rect>
-    <text class="value-in" x="940" y="636" text-anchor="end">40</text>
+    <text class="label" x="290" y="631" text-anchor="end">Croatia, Malta</text>
+    <rect class="bar-eu13" x="300" y="617" width="700" height="28"></rect>
+    <text class="value-in" x="990" y="636" text-anchor="end">40</text>
 
-    <!-- dashed reference lines (EU14 37.7; EU27 38.2; EU13 39.6) -->
-    <line x1="789" y1="110" x2="789" y2="640" class="vline14"/>
-    <line x1="824" y1="110" x2="824" y2="640" class="vline27"/>
-    <line x1="922" y1="110" x2="922" y2="640" class="vline13"/>
+    <!-- reference lines shifted +50px -->
+    <line x1="839" y1="110" x2="839" y2="640" class="vline14"/>
+    <line x1="874" y1="110" x2="874" y2="640" class="vline27"/>
+    <line x1="972" y1="110" x2="972" y2="640" class="vline13"/>
 
-    <!-- line labels -->
     <g font-size="13">
-      <text x="789" y="40" text-anchor="middle" class="note14">EU14, 37.7</text>
-      <text x="824" y="62" text-anchor="middle" class="note27">EU27, 38.2</text>
-      <text x="922" y="84" text-anchor="middle" class="note13">EU13, 39.6</text>
+      <text x="839" y="40" text-anchor="middle" class="note14">EU14, 37.7</text>
+      <text x="874" y="62" text-anchor="middle" class="note27">EU27, 38.2</text>
+      <text x="972" y="84" text-anchor="middle" class="note13">EU13, 39.6</text>
     </g>
   </svg>
 
@@ -145,7 +130,6 @@
 </div>
 
 <script>
-/* ====== CSV (for export) ====== */
 const CSV_ROWS = [
   ["Country","Hours"],
   ["France","35.5"],
@@ -166,7 +150,6 @@ const CSV_ROWS = [
   ["EU13","39.6"]
 ];
 
-/* ====== Title (no visible controls) ====== */
 let _chartTitle = 'Collectively agreed weekly working hours in the chemicals sector, selected countries, 2024';
 function setChartTitle(v){ _chartTitle = String(v||'').trim(); }
 window.setChartTitle = setChartTitle;
@@ -175,14 +158,12 @@ try{
   if (p.has('title')) setChartTitle(p.get('title'));
 }catch{}
 
-/* ====== Filename helper (first 20 chars of title) ====== */
 function safeFile(s){return String(s).replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim();}
 function exportName(kind){
   const base = _chartTitle || 'Working time';
   return safeFile(`${base.slice(0,20)}_${kind}`);
 }
 
-/* ====== Highcharts-like shim with wrapper export ====== */
 window.chart = {
   getCSV(){
     return CSV_ROWS.map(row =>
@@ -252,7 +233,6 @@ window.chart = {
   }
 };
 
-/* ====== Hidden buttons still work ====== */
 const btnCSV = document.getElementById('dlCSV');
 const btnPNG = document.getElementById('dlPNG');
 function doCSVDownload(){
@@ -269,7 +249,6 @@ function doPNGDownload(){ chart.exportChartLocal({ type:'image/png', filename: e
 if (btnCSV) btnCSV.onclick = doCSVDownload;
 if (btnPNG) btnPNG.onclick = doPNGDownload;
 
-/* ====== Robust postMessage hooks ====== */
 window.triggerExportCSV = doCSVDownload;
 window.triggerExportPNG = doPNGDownload;
 window.addEventListener('message',(event)=>{
