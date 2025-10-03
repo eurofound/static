@@ -40,94 +40,107 @@
 <body>
 <div class="wrap">
   <!-- Chart only (no visible title node) -->
-  <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Collectively agreed weekly working hours in the retail sector, selected countries, 2024">
+  <svg id="chart" viewBox="0 0 1020 820" role="img" aria-label="Collectively agreed weekly working hours in the retail sector, selected countries, 2024">
+    <!-- Left margin widened: axis starts at x=300 -->
     <g class="axis">
-      <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
-      <text x="250" y="662" text-anchor="middle">30</text>
-      <line x1="320" y1="110" x2="320" y2="640" class="tick"/><text x="320" y="662" text-anchor="middle">31</text>
-      <line x1="390" y1="110" x2="390" y2="640" class="tick"/><text x="390" y="662" text-anchor="middle">32</text>
-      <line x1="460" y1="110" x2="460" y2="640" class="tick"/><text x="460" y="662" text-anchor="middle">33</text>
-      <line x1="530" y1="110" x2="530" y2="640" class="tick"/><text x="530" y="662" text-anchor="middle">34</text>
-      <line x1="600" y1="110" x2="600" y2="640" class="tick"/><text x="600" y="662" text-anchor="middle">35</text>
-      <line x1="670" y1="110" x2="670" y2="640" class="tick"/><text x="670" y="662" text-anchor="middle">36</text>
-      <line x1="740" y1="110" x2="740" y2="640" class="tick"/><text x="740" y="662" text-anchor="middle">37</text>
-      <line x1="810" y1="110" x2="810" y2="640" class="tick"/><text x="810" y="662" text-anchor="middle">38</text>
-      <line x1="880" y1="110" x2="880" y2="640" class="tick"/><text x="880" y="662" text-anchor="middle">39</text>
-      <line x1="950" y1="110" x2="950" y2="640" class="grid"/>
-      <text x="950" y="662" text-anchor="middle">40</text>
-      <text x="600" y="698" text-anchor="middle" class="axis-title">Hours per week</text>
+      <line x1="300" y1="110" x2="300" y2="640" class="grid"/>
+      <text x="300" y="705" text-anchor="middle">30</text>
+
+      <line x1="370" y1="110" x2="370" y2="640" class="tick"/><text x="370" y="705" text-anchor="middle">31</text>
+      <line x1="440" y1="110" x2="440" y2="640" class="tick"/><text x="440" y="705" text-anchor="middle">32</text>
+      <line x1="510" y1="110" x2="510" y2="640" class="tick"/><text x="510" y="705" text-anchor="middle">33</text>
+      <line x1="580" y1="110" x2="580" y2="640" class="tick"/><text x="580" y="705" text-anchor="middle">34</text>
+      <line x1="650" y1="110" x2="650" y2="640" class="tick"/><text x="650" y="705" text-anchor="middle">35</text>
+      <line x1="720" y1="110" x2="720" y2="640" class="tick"/><text x="720" y="705" text-anchor="middle">36</text>
+      <line x1="790" y1="110" x2="790" y2="640" class="tick"/><text x="790" y="705" text-anchor="middle">37</text>
+      <line x1="860" y1="110" x2="860" y2="640" class="tick"/><text x="860" y="705" text-anchor="middle">38</text>
+      <line x1="930" y1="110" x2="930" y2="640" class="tick"/><text x="930" y="705" text-anchor="middle">39</text>
+      <line x1="1000" y1="110" x2="1000" y2="640" class="grid"/>
+      <text x="1000" y="662" text-anchor="middle">40</text>
+
+      <text x="600" y="725" text-anchor="middle" class="axis-title">Hours per week</text>
     </g>
 
-    <!-- Bars (ascending). width = (value-30)*70 -->
-    <!-- France 35.79 -->
-    <text class="label" x="240" y="127" text-anchor="end">France</text>
-    <rect class="bar-eu14" x="250" y="113" width="405" height="28"></rect>
-    <text class="value-in" x="645" y="132" text-anchor="end">35.79</text>
+    <!-- Bars (ascending) — width = (value-30)*70; values anchored end at x = 300 + width - 10 -->
+    <!-- France 35.9 -->
+    <text class="label" x="290" y="127" text-anchor="end">France</text>
+    <rect class="bar-eu14" x="300" y="113" width="413" height="28"></rect>
+    <text class="value-in" x="703" y="132" text-anchor="end">35.9</text>
 
     <!-- Belgium 36.7 -->
-    <text class="label" x="240" y="169" text-anchor="end">Belgium</text>
-    <rect class="bar-eu14" x="250" y="155" width="469" height="28"></rect>
-    <text class="value-in" x="709" y="174" text-anchor="end">36.7</text>
+    <text class="label" x="290" y="169" text-anchor="end">Belgium</text>
+    <rect class="bar-eu14" x="300" y="155" width="469" height="28"></rect>
+    <text class="value-in" x="759" y="174" text-anchor="end">36.7</text>
 
     <!-- Denmark 37 -->
-    <text class="label" x="240" y="211" text-anchor="end">Denmark</text>
-    <rect class="bar-eu14" x="250" y="197" width="490" height="28"></rect>
-    <text class="value-in" x="730" y="216" text-anchor="end">37</text>
+    <text class="label" x="290" y="211" text-anchor="end">Denmark</text>
+    <rect class="bar-eu14" x="300" y="197" width="490" height="28"></rect>
+    <text class="value-in" x="780" y="216" text-anchor="end">37</text>
 
-    <!-- Finland, Norway 37.5 -->
-    <text class="label" x="240" y="253" text-anchor="end">Finland, Norway</text>
-    <rect class="bar-eu14" x="250" y="239" width="525" height="28"></rect>
-    <text class="value-in" x="765" y="258" text-anchor="end">37.5</text>
+    <!-- Norway 37.5 (grey) -->
+    <text class="label" x="290" y="253" text-anchor="end">Norway</text>
+    <rect class="bar-nor" x="300" y="239" width="525" height="28"></rect>
+    <text class="value-in" x="815" y="258" text-anchor="end">37.5</text>
 
-    <!-- Cyprus, Netherlands 38 -->
-    <text class="label" x="240" y="295" text-anchor="end">Cyprus, Netherlands</text>
-    <rect class="bar-eu14" x="250" y="281" width="560" height="28"></rect>
-    <text class="value-in" x="800" y="300" text-anchor="end">38</text>
+    <!-- Finland 37.5 -->
+    <text class="label" x="290" y="295" text-anchor="end">Finland</text>
+    <rect class="bar-eu14" x="300" y="281" width="525" height="28"></rect>
+    <text class="value-in" x="815" y="300" text-anchor="end">37.5</text>
 
-    <!-- Germany 38.1 -->
-    <text class="label" x="240" y="337" text-anchor="end">Germany</text>
-    <rect class="bar-eu14" x="250" y="323" width="567" height="28"></rect>
-    <text class="value-in" x="807" y="342" text-anchor="end">38.1</text>
+    <!-- Germany 37.6 -->
+    <text class="label" x="290" y="337" text-anchor="end">Germany</text>
+    <rect class="bar-eu14" x="300" y="323" width="532" height="28"></rect>
+    <text class="value-in" x="822" y="342" text-anchor="end">37.6</text>
+
+    <!-- Netherlands 38 -->
+    <text class="label" x="290" y="379" text-anchor="end">Netherlands</text>
+    <rect class="bar-eu14" x="300" y="365" width="560" height="28"></rect>
+    <text class="value-in" x="850" y="384" text-anchor="end">38</text>
+
+    <!-- Cyprus 38 (EU13) -->
+    <text class="label" x="290" y="421" text-anchor="end">Cyprus</text>
+    <rect class="bar-eu13" x="300" y="407" width="560" height="28"></rect>
+    <text class="value-in" x="850" y="426" text-anchor="end">38</text>
 
     <!-- Sweden 38.25 -->
-    <text class="label" x="240" y="379" text-anchor="end">Sweden</text>
-    <rect class="bar-eu14" x="250" y="365" width="578" height="28"></rect>
-    <text class="value-in" x="818" y="384" text-anchor="end">38.25</text>
+    <text class="label" x="290" y="463" text-anchor="end">Sweden</text>
+    <rect class="bar-eu14" x="300" y="449" width="578" height="28"></rect>
+    <text class="value-in" x="868" y="468" text-anchor="end">38.25</text>
 
     <!-- Austria 38.5 -->
-    <text class="label" x="240" y="421" text-anchor="end">Austria</text>
-    <rect class="bar-eu14" x="250" y="407" width="595" height="28"></rect>
-    <text class="value-in" x="835" y="426" text-anchor="end">38.5</text>
+    <text class="label" x="290" y="505" text-anchor="end">Austria</text>
+    <rect class="bar-eu14" x="300" y="491" width="595" height="28"></rect>
+    <text class="value-in" x="885" y="510" text-anchor="end">38.5</text>
 
-    <!-- Spain 38.6 -->
-    <text class="label" x="240" y="463" text-anchor="end">Spain</text>
-    <rect class="bar-eu14" x="250" y="449" width="602" height="28"></rect>
-    <text class="value-in" x="842" y="468" text-anchor="end">38.6</text>
-
-    <!-- Czechia 39.6 (EU13) -->
-    <text class="label" x="240" y="505" text-anchor="end">Czechia</text>
-    <rect class="bar-eu13" x="250" y="491" width="672" height="28"></rect>
-    <text class="value-in" x="912" y="510" text-anchor="end">39.6</text>
+    <!-- Spain 39.1 -->
+    <text class="label" x="290" y="547" text-anchor="end">Spain</text>
+    <rect class="bar-eu14" x="300" y="533" width="637" height="28"></rect>
+    <text class="value-in" x="927" y="552" text-anchor="end">39.1</text>
 
     <!-- Portugal 39.9 -->
-    <text class="label" x="240" y="547" text-anchor="end">Portugal</text>
-    <rect class="bar-eu14" x="250" y="533" width="693" height="28"></rect>
-    <text class="value-in" x="933" y="552" text-anchor="end">39.9</text>
+    <text class="label" x="290" y="589" text-anchor="end">Portugal</text>
+    <rect class="bar-eu14" x="300" y="575" width="693" height="28"></rect>
+    <text class="value-in" x="983" y="594" text-anchor="end">39.9</text>
 
-    <!-- Croatia, Greece, Italy, Luxembourg, Malta 40 (mixed; draw as EU14) -->
-    <text class="label" x="240" y="589" text-anchor="end">Croatia, Greece, Italy, Luxembourg, Malta</text>
-    <rect class="bar-eu14" x="250" y="575" width="700" height="28"></rect>
-    <text class="value-in" x="940" y="594" text-anchor="end">40</text>
+    <!-- Greece, Italy, Luxembourg 40 (EU14) -->
+    <text class="label" x="290" y="631" text-anchor="end">Greece, Italy, Luxembourg</text>
+    <rect class="bar-eu14" x="300" y="617" width="700" height="28"></rect>
+    <text class="value-in" x="990" y="636" text-anchor="end">40</text>
+
+    <!-- Croatia, Czechia, Malta, Slovakia, Slovenia 40 (EU13) -->
+    <text class="label" x="290" y="673" text-anchor="end">Croatia, Czechia, Malta, Slovakia, Slovenia</text>
+    <rect class="bar-eu13" x="300" y="659" width="700" height="28"></rect>
+    <text class="value-in" x="990" y="678" text-anchor="end">40</text>
 
     <!-- Reference lines: EU14 38.1; EU27 38.6; EU13 40.0 -->
-    <line x1="817" y1="110" x2="817" y2="640" class="vline14"/>
-    <line x1="852" y1="110" x2="852" y2="640" class="vline27"/>
-    <line x1="950" y1="110" x2="950" y2="640" class="vline13"/>
+    <line x1="867" y1="110" x2="867" y2="640" class="vline14"/>
+    <line x1="902" y1="110" x2="902" y2="640" class="vline27"/>
+    <line x1="1000" y1="110" x2="1000" y2="640" class="vline13"/>
 
     <g font-size="13">
-      <text x="817" y="40" text-anchor="middle" class="note14">EU14, 38.1</text>
-      <text x="852" y="62" text-anchor="middle" class="note27">EU27, 38.6</text>
-      <text x="950" y="84" text-anchor="middle" class="note13">EU13, 40.0</text>
+      <text x="867" y="40" text-anchor="middle" class="note14">EU14, 38.1</text>
+      <text x="902" y="62" text-anchor="middle" class="note27">EU27, 38.6</text>
+      <text x="1000" y="84" text-anchor="middle" class="note13">EU13, 40.0</text>
     </g>
   </svg>
 
@@ -138,24 +151,26 @@
 </div>
 
 <script>
-/* ====== CSV for export ====== */
+/* ====== CSV (export) ====== */
 const CSV_ROWS = [
   ["Country","Hours"],
-  ["France","35.79"],
+  ["France","35.9"],
   ["Belgium","36.7"],
   ["Denmark","37"],
-  ["Finland, Norway","37.5"],
-  ["Cyprus, Netherlands","38"],
-  ["Germany","38.1"],
+  ["Norway","37.5"],
+  ["Finland","37.5"],
+  ["Germany","37.6"],
+  ["Netherlands","38"],
+  ["Cyprus","38"],
   ["Sweden","38.25"],
   ["Austria","38.5"],
-  ["Spain","38.6"],
-  ["Czechia","39.6"],
+  ["Spain","39.1"],
   ["Portugal","39.9"],
-  ["Croatia, Greece, Italy, Luxembourg, Malta","40"],
-  ["EU14","38.1"],
+  ["Greece, Italy, Luxembourg","40"],
+  ["Croatia, Czechia, Malta, Slovakia, Slovenia","40"],
   ["EU27","38.6"],
-  ["EU13","40.0"]
+  ["EU13","40.0"],
+  ["EU14","38.1"]
 ];
 
 /* ====== Title (export-only) ====== */
