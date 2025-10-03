@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>EU Working Time – SVG + Highcharts-style Exports</title>
+<title>EU Working Time – SVG Exports</title>
 <style>
   :root{
     --blue:#0d5675;
@@ -14,13 +14,26 @@
     --axis:#7a7a7a;
     --grid:#e6e6e6;
   }
-  body{margin:0;background:#f5f7f8;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
-  /* removed border & shadow to avoid any visible frame */
-  .wrap{width:1020px;max-width:100%;margin:18px auto;background:#fff}
-  .panel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eee}
+
+  /* eliminate any visible frame */
+  html,body{height:100%}
+  body{margin:0;background:#ffffff;font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+
+  /* wrapper has no border/shadow/background frame */
+  .wrap{width:1020px;max-width:100%;margin:0 auto;background:transparent}
+
+  /* title field (no borders that create “frame” lines) */
+  .panel{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px}
   .panel label{font:600 14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#333}
-  .panel input[type="text"]{flex:1;max-width:720px;padding:8px 10px;border:1px solid #d6d6d6;border-radius:8px;font:14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .panel input[type="text"]{
+    flex:1;max-width:720px;padding:8px 10px;
+    border:1px solid #d6d6d6;border-radius:8px;
+    font:14px/1.2 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background:#fff
+  }
+
   svg{display:block;width:100%;height:auto;outline:none}
+
   .label{font-size:15px;fill:#4a4a4a}
   .value-in{font-size:14px;fill:#ffffff;font-weight:700}
   .axis text{font-size:12px;fill:var(--axis)}
@@ -36,21 +49,22 @@
   .bar-eu14{fill:var(--blue)}
   .bar-eu13{fill:var(--green)}
   .bar-nor{fill:#cfcfcf}
-  .actions{display:none;}  /* hide export buttons */
+
+  /* hide on-page export buttons but keep functionality */
+  .actions{display:none}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- Title input (used for filenames and export overlay title) -->
+  <!-- Title input (used for filenames + export overlay title; NOT shown on chart) -->
   <div class="panel">
     <label for="chartTitle">Chart title</label>
     <input id="chartTitle" type="text" placeholder="Enter chart title…" value="Average usual weekly working hours in the EU">
   </div>
 
-  <!-- Chart (no on-page title node; export will inject one dynamically) -->
+  <!-- Chart (no on-page title node; export injects one dynamically) -->
   <svg id="chart" viewBox="0 0 1020 760" role="img" aria-label="Average usual weekly working hours, horizontal bars with EU reference lines">
-    <!-- removed outer white rect to eliminate any hairline frame; export will still be white via canvas fill -->
-
+    <!-- no outer rect (prevents any halo/frame) -->
     <g class="axis">
       <line x1="250" y1="110" x2="250" y2="640" class="grid"/>
       <text x="250" y="662" text-anchor="middle">30</text>
@@ -134,7 +148,6 @@
     </g>
   </svg>
 
-  <!-- Actions kept in DOM but hidden (functionality intact) -->
   <div class="actions">
     <button class="btn" id="dlCSV">Download data (CSV)</button>
     <button class="btn" id="dlPNG">Download image (PNG)</button>
@@ -163,51 +176,42 @@ const CSV_ROWS = [
   ["EU13 average","39.7"]
 ];
 
-/* ====== Title plumbing ====== */
+/* ====== Title (used only for filenames + export overlay) ====== */
 const titleInput = document.getElementById('chartTitle');
-function getChartTitle(){
-  return (titleInput?.value || '').trim();
-}
+function getChartTitle(){ return (titleInput?.value || '').trim(); }
 
-/* ====== FILENAME helper (uses first 20 chars of title) ====== */
+/* ====== Filename helper (first 20 chars of title) ====== */
 function safeFile(s){
-  return String(s)
-    .replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-')
-    .replace(/\s+/g,' ')
-    .trim();
+  return String(s).replace(/[<>:"/\\|?*\u0000-\u001F]/g,'-').replace(/\s+/g,' ').trim();
 }
 function exportName(kind){
   const base = getChartTitle() || 'Working time';
-  const first20 = base.slice(0,20);
-  return safeFile(`${first20}_${kind}`);
+  return safeFile(`${base.slice(0,20)}_${kind}`);
 }
 
 /* ====== Highcharts-like shim ====== */
 window.chart = {
   getCSV(){
-    const csv = CSV_ROWS.map(row =>
+    return CSV_ROWS.map(row =>
       row.map(v => /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g,'""')}"` : v).join(',')
     ).join('\n');
-    return csv;
   },
   exportChartLocal({type='image/png', filename='chart'} = {}){
     const srcSvg = document.getElementById('chart');
     if (!srcSvg) return;
 
-    // Clone SVG
     const svgClone = srcSvg.cloneNode(true);
 
-    // Inject styles (and ensure any export-only rules take effect)
-    const cssText = Array.from(document.querySelectorAll('style'))
-      .map(s => s.textContent).join('\n');
+    /* Inline CSS & ensure export-only rules can show injected title */
+    const cssText = Array.from(document.querySelectorAll('style')).map(s=>s.textContent).join('\n');
     const style = document.createElement('style');
     style.textContent = cssText + '\n.export-only{display:block !important}';
-    svgClone.appendChild(style); // append last so it wins the cascade
+    svgClone.appendChild(style);
 
-    // --- Inject a title node (export only), regardless of what's on the page ---
+    /* Inject title for export only */
     const titleText = getChartTitle();
     if (titleText){
-      const NS = 'http://www.w3.org/2000/svg';
+      const NS='http://www.w3.org/2000/svg';
       const t = document.createElementNS(NS,'text');
       t.setAttribute('x','510');
       t.setAttribute('y','44');
@@ -215,20 +219,14 @@ window.chart = {
       t.setAttribute('class','export-only');
       t.setAttribute('style','font-size:22px;font-weight:700;fill:#2e2e2e');
       t.textContent = titleText;
-      // Place as the first visual element so it's on top but before axes if needed
       svgClone.insertBefore(t, svgClone.firstChild);
     }
 
-    // Serialize and paint onto a white canvas
-    const serializer = new XMLSerializer();
-    const svgStr = serializer.serializeToString(svgClone);
-
+    /* Serialize → paint on a white canvas (no frame) */
     const vb = srcSvg.viewBox.baseVal;
     const canvas = document.createElement('canvas');
     canvas.width = vb.width; canvas.height = vb.height;
-
     const ctx = canvas.getContext('2d');
-    ctx.imageSmoothingEnabled = true;
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
@@ -245,14 +243,13 @@ window.chart = {
         setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); },0);
       });
     };
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(svgClone));
   }
 };
 
-/* ====== Hidden buttons still work if triggered manually ====== */
+/* ====== Hidden buttons (manual triggers still work) ====== */
 const btnCSV = document.getElementById('dlCSV');
 const btnPNG = document.getElementById('dlPNG');
-
 function doCSVDownload(){
   const csv = chart.getCSV();
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -261,43 +258,24 @@ function doCSVDownload(){
   a.download = exportName('data') + '.csv';
   document.body.appendChild(a);
   a.click();
-  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },0);
 }
-
-function doPNGDownload(){
-  chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
-}
-
+function doPNGDownload(){ chart.exportChartLocal({ type:'image/png', filename: exportName('img') }); }
 if (btnCSV) btnCSV.onclick = doCSVDownload;
 if (btnPNG) btnPNG.onclick = doPNGDownload;
 
-/* ====== External postMessage hooks (robust to different payload shapes) ====== */
-window.triggerExportCSV = doCSVDownload; // optional same-origin helper
-window.triggerExportPNG = doPNGDownload; // optional same-origin helper
-
-window.addEventListener('message', (event) => {
+/* ====== Robust postMessage hooks ====== */
+window.triggerExportCSV = doCSVDownload;
+window.triggerExportPNG = doPNGDownload;
+window.addEventListener('message',(event)=>{
   const d = event.data;
-
-  function extractCmd(x){
-    if (!x) return null;
-    if (typeof x === 'string') return x;
-    if (typeof x === 'object'){
-      return x.type || x.action || x.cmd || x.command || x.event || x.name ||
-             (x.data && (x.data.type || x.data.action || x.data.cmd || x.data.command)) ||
-             null;
-    }
-    return null;
-  }
-
-  let cmd = extractCmd(d);
+  const cmd = (typeof d==='string' ? d :
+               d && typeof d==='object' ? (d.type||d.action||d.cmd||d.command||d.event||d.name||
+               (d.data && (d.data.type||d.data.action||d.data.cmd||d.data.command))) : null);
   if (!cmd) return;
-  cmd = String(cmd).toLowerCase();
-
-  if (cmd === 'download-png' || cmd === 'png' || cmd === 'image' || cmd === 'export-png'){
-    doPNGDownload();
-  } else if (cmd === 'download-csv' || cmd === 'csv' || cmd === 'data' || cmd === 'export-csv'){
-    doCSVDownload();
-  }
+  const c = String(cmd).toLowerCase();
+  if (['download-png','png','image','export-png'].includes(c)) return doPNGDownload();
+  if (['download-csv','csv','data','export-csv'].includes(c)) return doCSVDownload();
 });
 </script>
 </body>
