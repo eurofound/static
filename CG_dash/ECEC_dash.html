@@ -28,9 +28,13 @@
   .pill.active{background:#e7effa; border-color:#b6c3d7}
   .row{display:flex; flex-wrap:wrap; align-items:center}
 
-  /* layout */
-  .wrap{display:grid; grid-template-columns:260px 1fr; gap:16px; align-items:start}
-  @media (max-width:900px){ .wrap{grid-template-columns:1fr} }
+  /* layout (cap overall height if desired, comment out if not needed) */
++ .wrap{
++   display:grid;
++   grid-template-columns:260px 1fr;
++   gap:16px;
++   align-items:start;
++ }
 
   .block{margin:0px 0 6px}
   .hdr{font-weight:700; color:#324a3f; margin:0 0 8px 2px}
@@ -38,7 +42,7 @@
 
   /* chart */
   .chart-panel{position:relative}
-  #chart{width:100%; height:560px}
+  #chart{width:100%; height:420px} /* reduced to fit within 650px cap */
 
   /* tabs */
   .bottom-bar{display:flex; gap:10px; justify-content:center; align-items:center; margin-top:8px; flex-wrap:wrap}
@@ -142,7 +146,6 @@ Highcharts.setOptions({
 const clampPct = v => Math.max(0, Math.min(100, v));
 const fmtPct0  = v => Highcharts.numberFormat(clampPct(v), 0) + '%';
 
-
 /* ========= utils ========= */
 const toNum = v => (v==null||v==='') ? NaN : +String(v).replace(/[, ]/g,'');
 const uniq = a => [...new Set(a)];
@@ -174,21 +177,12 @@ function placeLogo(hc){
 }
 function removeLogo(hc){ if(hc && hc._brand){ hc._brand.destroy(); hc._brand=null; } }
 
-// ===== data load (Title-aware) =====
+/* ========= data load (Title-aware) ========= */
 Papa.parse(CSV_URL,{
-  download:true,
-  header:true,
-  dynamicTyping:false,
-  skipEmptyLines:true,
+  download:true, header:true, dynamicTyping:false, skipEmptyLines:true,
   complete: ({ data }) => {
-    // 1) Normalise keys from CSV (trim headers & cell strings)
-    rows = data.map(r => {
-      const o = {};
-      for (const k of Object.keys(r)) o[safe(k)] = typeof r[k] === 'string' ? safe(r[k]) : r[k];
-      return o;
-    });
+    rows = data.map(r => { const o={}; for (const k of Object.keys(r)) o[safe(k)] = typeof r[k]==='string' ? safe(r[k]) : r[k]; return o; });
 
-    // 2) Map columns (your file: Title, Country, Year, Breakdown, Value, Flag, ID)
     const keys = Object.keys(rows[0] || {});
     const find = t => keys.find(k => String(k).trim().toLowerCase() === t.toLowerCase());
     H = {
@@ -201,7 +195,6 @@ Papa.parse(CSV_URL,{
       ID:        find('ID')
     };
 
-    // 3) Coerce numeric fields & store safe flag code
     rows = rows.map(r => ({
       ...r,
       [H.Year]: +r[H.Year],
@@ -209,21 +202,14 @@ Papa.parse(CSV_URL,{
       _flag: H.Flag ? String(r[H.Flag] || '').trim().toLowerCase() : ''
     }));
 
-    // 4) Filter to the current HTML <title>
     const pageTitle = document.title.trim().toLowerCase();
-    if (H.Title) {
-      rows = rows.filter(r => String(r[H.Title] || '').trim().toLowerCase() === pageTitle);
-    }
+    if (H.Title) rows = rows.filter(r => String(r[H.Title] || '').trim().toLowerCase() === pageTitle);
 
-    // 5) Graceful exit if nothing matches
     if (!rows.length) {
-      el.chart.innerHTML = `<div style="padding:20px;color:#6b7280">
-        No data for “${document.title}”. Check Title in CSV vs &lt;title&gt;.
-      </div>`;
+      el.chart.innerHTML = `<div style="padding:20px;color:#6b7280">No data for “${document.title}”. Check Title in CSV vs &lt;title&gt;.</div>`;
       return;
     }
 
-    // 6) Proceed as usual
     buildIdButtons();
     refreshBreakdown();
     setDefaults();
@@ -347,7 +333,7 @@ function flagSVG(code){
   return `<svg class="fi" viewBox="0 0 24 16"><rect width="24" height="16" fill="${p[0]}"/><rect y="5.33" width="24" height="5.34" fill="${p[1]}"/><rect y="10.67" width="24" height="5.33" fill="${p[2]}"/></svg>`;
 }
 
-/* ========= export (external buttons #btnPNG / #btnCSV) ========= */
+/* ========= export (external buttons #btnPNG / #btnCSV and parent postMessage) ========= */
 function exportName(){
   const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
   return `${state.id}__${state.breakdown}__${tail}`.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
@@ -355,18 +341,40 @@ function exportName(){
 function wireExports(){
   const btnPNG = document.getElementById('btnPNG');
   const btnCSV = document.getElementById('btnCSV');
-  if(!chart || !btnPNG || !btnCSV) return;
+  if(chart && btnPNG && btnCSV){
+    btnPNG.disabled = btnCSV.disabled = false;
 
-  btnPNG.disabled = btnCSV.disabled = false;
+    btnPNG.onclick = ()=>{
+      const hadLogo = !!chart._brand;
+      if(hadLogo) removeLogo(chart); // prevent CORS-taint
+      chart.exportChartLocal({ type:'image/png', filename: exportName() });
+      if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
+    };
 
-  btnPNG.onclick = ()=>{
+    btnCSV.onclick = ()=>{
+      const csv = chart.getCSV();
+      const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = exportName() + '.csv';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+    };
+  }
+}
+
+// ALSO support parent-page triggers via postMessage (for iframes)
+window.addEventListener('message', (e)=>{
+  const msg = e.data || {};
+  if(!chart) return;
+  if(msg.type === 'export-png'){
     const hadLogo = !!chart._brand;
-    if(hadLogo) removeLogo(chart);             // avoid CORS taint
+    if(hadLogo) removeLogo(chart);
     chart.exportChartLocal({ type:'image/png', filename: exportName() });
     if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
-  };
-
-  btnCSV.onclick = ()=>{
+  }
+  if(msg.type === 'export-csv'){
     const csv = chart.getCSV();
     const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
     const a = document.createElement('a');
@@ -375,10 +383,9 @@ function wireExports(){
     document.body.appendChild(a);
     a.click();
     setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  };
-}
+  }
+});
 
-/* ========= draw ========= */
 /* ========= draw ========= */
 function draw(){
   if(chart) chart.destroy();
@@ -389,30 +396,25 @@ function draw(){
     return;
   }
 
-  // local helper: clamp to 0–100 and format as integer %
-  const pct0 = v => Highcharts.numberFormat(Math.max(0, Math.min(100, v)), 0) + '%';
+  const seriesLine = state.countries.map((c,i)=>{
+    const pts = subset({country:c}).sort((a,b)=>a[H.Year]-b[H.Year]);
+    const mapVal  = new Map(pts.map(r=>[r[H.Year], r[H.Value]]));
+    const mapFlag = new Map(pts.map(r=>[r[H.Year], r._flag]));
+    const data = years.map((y, idx)=>{
+      const v = mapVal.get(y);
+      if(v==null || isNaN(v)) return null;
+      return { x: idx, y: v, flag: (mapFlag.get(y) || '') };
+    });
+    const idxs = data.map((p,i)=>p?i:null).filter(i=>i!=null);
+    if(idxs.length){
+      data[idxs[0]].marker = {enabled:true, radius:3};
+      data[idxs[idxs.length-1]].marker = {enabled:true, radius:3};
+    }
+    return { name:c, data, color: LINE_PALETTE[i % LINE_PALETTE.length] };
+  });
 
   if(state.tab==='line'){
-    const series = state.countries.map((c,i)=>{
-      const pts = subset({country:c}).sort((a,b)=>a[H.Year]-b[H.Year]);
-      const mapVal  = new Map(pts.map(r=>[r[H.Year], r[H.Value]]));
-      const mapFlag = new Map(pts.map(r=>[r[H.Year], r._flag]));
-      const data = years.map((y, idx)=>{
-        const v = mapVal.get(y);
-        if(v==null || isNaN(v)) return null;
-        return { x: idx, y: v, flag: (mapFlag.get(y) || '') };
-      });
-
-      // emphasize first/last real points
-      const idxs = data.map((p,i)=>p?i:null).filter(i=>i!=null);
-      if(idxs.length){
-        data[idxs[0]].marker = {enabled:true, radius:3};
-        data[idxs[idxs.length-1]].marker = {enabled:true, radius:3};
-      }
-      return { name:c, data, color: LINE_PALETTE[i % LINE_PALETTE.length] };
-    });
-
-    const vals = series.flatMap(s=>s.data).map(p=>p && p.y).filter(v=>v!=null);
+    const vals = seriesLine.flatMap(s=>s.data).map(p=>p && p.y).filter(v=>v!=null);
     const isPct = pctRange(vals);
 
     chart = Highcharts.chart('chart',{
@@ -421,28 +423,19 @@ function draw(){
       title:{ text: state.id },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
       xAxis:{ categories: years, tickmarkPlacement:'on', lineColor:'#dadde1' },
-
-      // ONLY the line chart y-axis is altered to whole-number % and max 100 when percentage-like
       yAxis:{
         title:{ text:null },
         gridLineColor:'#f0f2f5',
         max: isPct ? 100 : null,
-        labels:{
-          formatter(){
-            return isPct ? pct0(this.value) : Highcharts.numberFormat(this.value, 1);
-          }
-        }
+        labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value, 1); } }
       },
-
       legend:{ enabled:true },
       tooltip:{
         shared:true,
-        // keep your original tooltip formatting (decimals unchanged)
         formatter:function(){
           const ix = (this.points && this.points.length && typeof this.points[0].point.x==='number')
             ? this.points[0].point.x : (typeof this.x==='number' ? this.x : 0);
           const year = this.points?.[0]?.series?.xAxis?.categories?.[ix] ?? years[ix] ?? this.x;
-
           let html = `<b>${year}</b>`;
           this.points.forEach(p=>{
             const v = isPct ? (Highcharts.numberFormat(p.y,1)+'%') : Highcharts.numberFormat(p.y,1);
@@ -455,16 +448,13 @@ function draw(){
         }
       },
       plotOptions:{ series:{ marker:{ enabled:false }, lineWidth:3 } },
-      series
+      series: seriesLine
     });
 
   }else if(state.tab==='bar'){
     const yrRows = subset({year:state.year});
     const byC = {}, flagByC = {};
-    for(const r of yrRows){
-      const c=r[H.Country]; if(/^#?N\/A$/i.test(c)) continue;
-      byC[c]=r[H.Value]; flagByC[c]=r._flag;
-    }
+    for(const r of yrRows){ const c=r[H.Country]; if(/^#?N\/A$/i.test(c)) continue; byC[c]=r[H.Value]; flagByC[c]=r._flag; }
     const cats = Object.keys(byC).filter(k=>Number.isFinite(byC[k])).sort((a,b)=>byC[b]-byC[a]);
     const data = cats.map(c=>({ y:byC[c], color: EU.has(c) ? C.eu : C.blue, name:c, flag:(flagByC[c]||'') }));
     const isPct = pctRange(data.map(d=>d.y));
@@ -504,21 +494,19 @@ function draw(){
     const isPct = pctRange(values);
     let minVal = values.length ? Math.min(...values) : 0;
     let maxVal = values.length ? Math.max(...values) : 1;
-    let cMin = Math.max(0, minVal * 0.9);         // 10% below lowest value
-    let cMax = Math.min(100, maxVal);              // cap at 100 for % scales
-    if(cMax <= cMin){ cMax = Math.min(100, cMin + 1); } // guard
+    let cMin = Math.max(0, minVal * 0.9);
+    let cMax = Math.min(100, maxVal);
+    if(cMax <= cMin){ cMax = Math.min(100, cMin + 1); }
 
     chart = Highcharts.mapChart('chart',{
       chart:{ map: Highcharts.maps['custom/europe'], spacing:[10,10,40,10], backgroundColor:'transparent', animation:false },
       mapView:{ animation:false },
       title:{ text:`${state.id} (${state.year})` },
       subtitle:{ text:`Breakdown: ${state.breakdown}` },
-
-      // ONLY the legend labels are changed to whole-number %; scale capped at 100 when %.
       colorAxis:{
         min:cMin, max:cMax, tickAmount:6,
         stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
-        labels:{ formatter(){ return isPct ? pct0(this.value) : Highcharts.numberFormat(this.value,1); } }
+        labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value,1); } }
       },
       legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,
                backgroundColor:'#fff', borderWidth:0, title:{text:isPct?'%':''} },
