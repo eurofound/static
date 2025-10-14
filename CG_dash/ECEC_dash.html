@@ -20,7 +20,7 @@
 <style>
   :root{ --ink:#111827; --muted:#6b7280; --b:#e5e7eb; --blue:#0A6AA6; --red:#B01E34; --green:#3C6F3C; --purple:#59419A; --eu:#063d67; }
   html,body{margin:0}
-  body{font:14px/1.45 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink); padding:18px}
+  body{font:13px/1.45 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink); padding:18px}
 
   /* 20% smaller pills */
   .pill{display:inline-block; padding:.35rem .72rem; border-radius:999px; cursor:pointer; user-select:none;
@@ -32,7 +32,7 @@
   .wrap{display:grid; grid-template-columns:260px 1fr; gap:16px; align-items:start}
   @media (max-width:900px){ .wrap{grid-template-columns:1fr} }
 
-  .block{margin:10px 0 20px}
+  .block{margin:0px 0 6px}
   .hdr{font-weight:700; color:#324a3f; margin:0 0 8px 2px}
   .hidden{display:none!important}
 
@@ -137,6 +137,11 @@ Highcharts.setOptions({
   exporting:{fallbackToExportServer:false, libURL:'https://code.highcharts.com/11.4.0/lib/'},
   credits:{enabled:false}
 });
+
+// helpers for percent formatting (clamp 0–100 and show no decimals)
+const clampPct = v => Math.max(0, Math.min(100, v));
+const fmtPct0  = v => Highcharts.numberFormat(clampPct(v), 0) + '%';
+
 
 /* ========= utils ========= */
 const toNum = v => (v==null||v==='') ? NaN : +String(v).replace(/[, ]/g,'');
@@ -374,11 +379,18 @@ function wireExports(){
 }
 
 /* ========= draw ========= */
+/* ========= draw ========= */
 function draw(){
   if(chart) chart.destroy();
   el.tabs.forEach(b=>b.classList.toggle('active', b.dataset.t===state.tab));
   const years = availableYears();
-  if(!years.length){ el.chart.innerHTML='<div style="padding:20px;color:#6b7280">No data for this selection.</div>'; return; }
+  if(!years.length){
+    el.chart.innerHTML='<div style="padding:20px;color:#6b7280">No data for this selection.</div>';
+    return;
+  }
+
+  // local helper: clamp to 0–100 and format as integer %
+  const pct0 = v => Highcharts.numberFormat(Math.max(0, Math.min(100, v)), 0) + '%';
 
   if(state.tab==='line'){
     const series = state.countries.map((c,i)=>{
@@ -399,6 +411,7 @@ function draw(){
       }
       return { name:c, data, color: LINE_PALETTE[i % LINE_PALETTE.length] };
     });
+
     const vals = series.flatMap(s=>s.data).map(p=>p && p.y).filter(v=>v!=null);
     const isPct = pctRange(vals);
 
@@ -408,11 +421,23 @@ function draw(){
       title:{ text: state.id },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
       xAxis:{ categories: years, tickmarkPlacement:'on', lineColor:'#dadde1' },
-      yAxis:{ title:{ text:null }, gridLineColor:'#f0f2f5',
-        labels:{ formatter(){ return isPct ? (Highcharts.numberFormat(this.value,1)+'%') : Highcharts.numberFormat(this.value,1); } } },
+
+      // ONLY the line chart y-axis is altered to whole-number % and max 100 when percentage-like
+      yAxis:{
+        title:{ text:null },
+        gridLineColor:'#f0f2f5',
+        max: isPct ? 100 : null,
+        labels:{
+          formatter(){
+            return isPct ? pct0(this.value) : Highcharts.numberFormat(this.value, 1);
+          }
+        }
+      },
+
       legend:{ enabled:true },
       tooltip:{
         shared:true,
+        // keep your original tooltip formatting (decimals unchanged)
         formatter:function(){
           const ix = (this.points && this.points.length && typeof this.points[0].point.x==='number')
             ? this.points[0].point.x : (typeof this.x==='number' ? this.x : 0);
@@ -479,17 +504,22 @@ function draw(){
     const isPct = pctRange(values);
     let minVal = values.length ? Math.min(...values) : 0;
     let maxVal = values.length ? Math.max(...values) : 1;
-    let cMin = Math.max(0, minVal * 0.9);   // 10% below lowest value
-    let cMax = maxVal;
-    if(cMax <= cMin){ cMax = cMin + 1; }    // guard
+    let cMin = Math.max(0, minVal * 0.9);         // 10% below lowest value
+    let cMax = Math.min(100, maxVal);              // cap at 100 for % scales
+    if(cMax <= cMin){ cMax = Math.min(100, cMin + 1); } // guard
 
     chart = Highcharts.mapChart('chart',{
       chart:{ map: Highcharts.maps['custom/europe'], spacing:[10,10,40,10], backgroundColor:'transparent', animation:false },
       mapView:{ animation:false },
       title:{ text:`${state.id} (${state.year})` },
       subtitle:{ text:`Breakdown: ${state.breakdown}` },
-      colorAxis:{ min:cMin, max:cMax, tickAmount:6, stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
-        labels:{ formatter(){ return isPct ? (Highcharts.numberFormat(this.value,1)+'%') : Highcharts.numberFormat(this.value,1); } } },
+
+      // ONLY the legend labels are changed to whole-number %; scale capped at 100 when %.
+      colorAxis:{
+        min:cMin, max:cMax, tickAmount:6,
+        stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
+        labels:{ formatter(){ return isPct ? pct0(this.value) : Highcharts.numberFormat(this.value,1); } }
+      },
       legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,
                backgroundColor:'#fff', borderWidth:0, title:{text:isPct?'%':''} },
       mapNavigation:{ enabled:true },
