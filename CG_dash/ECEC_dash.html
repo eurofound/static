@@ -33,7 +33,6 @@
   .wrap{display:grid; grid-template-columns:260px 1fr; gap:16px; align-items:start}
   @media (max-width:900px){ .wrap{grid-template-columns:1fr} }
 
-  /* sidebar */
   .block{margin:10px 0 20px}
   .hdr{font-weight:700; color:#324a3f; margin:0 0 8px 2px}
   .muted{color:var(--muted)}
@@ -43,15 +42,16 @@
   .chart-panel{position:relative}
   #chart{width:100%; height:560px}
 
-  /* bottom controls */
+  /* bottom controls (we hide the in-frame export buttons entirely) */
   .bottom-bar{display:flex; gap:10px; justify-content:center; align-items:center; margin-top:8px; flex-wrap:wrap}
   .tab{display:inline-flex; align-items:center; gap:8px; padding:.55rem 1.0rem; border:1px solid var(--b);
        border-radius:12px; background:#fff; cursor:pointer; font-weight:600}
   .tab svg{width:16px; height:16px}
   .tab.active{background:#111; color:#fff; border-color:#111}
   .btn{padding:.45rem .8rem; border:1px solid #cfd8e3; border-radius:8px; background:#fff; cursor:pointer}
+  .bottom-bar .btn{display:none !important;} /* hide built-in download buttons */
 
-  /* Countries dropdown: search + clear */
+  /* country dropdown */
   .flag-dd{position:relative; width:260px}
   .flag-btn{width:100%; display:flex; align-items:center; justify-content:space-between; gap:.6rem;
             padding:.55rem .7rem; border:1px solid #cfd8e3; border-radius:14px; background:#fff; cursor:pointer}
@@ -73,6 +73,12 @@
 </style>
 </head>
 <body>
+
+<!-- External export buttons (enabled after first draw) -->
+<div style="margin:6px 0 14px; display:flex; gap:10px;">
+  <button id="btnPNG" class="btn" disabled>Export PNG</button>
+  <button id="btnCSV" class="btn" disabled>Download CSV</button>
+</div>
 
 <div class="wrap">
   <!-- LEFT: sidebar -->
@@ -109,6 +115,7 @@
       </button>
 
       <span style="flex:1"></span>
+      <!-- hidden by CSS: kept for structure -->
       <button class="btn" id="dlCSV">Download CSV</button>
       <button class="btn" id="dlPNG">Download PNG</button>
     </div>
@@ -124,6 +131,15 @@ const EU = new Set(['EU','EU27','EU-27','EU28','EU-28','European Union','EU 27',
 const C = { blue:'#0A6AA6', red:'#B01E34', green:'#3C6F3C', purple:'#59419A', blueL:'#3b86bd', redL:'#c64d5c', greenL:'#5a8a5a', purpleL:'#7a61ad', eu:'#063d67' };
 const LINE_PALETTE = [C.blue, C.red, C.green, C.purple, C.blueL, C.redL, C.greenL, C.purpleL];
 
+// Flag mapping (id -> full text)
+const FLAG_TEXT = {
+  b: 'break in time series',
+  d: 'definition differs (see metadata)',
+  e: 'estimated',
+  p: 'provisional',
+  n: 'not significant'
+};
+
 Highcharts.setOptions({
   chart:{animation:{duration:150}, style:{fontFamily:'Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial'}},
   plotOptions:{series:{animation:{duration:150}}},
@@ -136,7 +152,6 @@ const uniq = a => [...new Set(a)];
 const sortAlpha = a => a.slice().sort((x,y)=>String(x).localeCompare(String(y)));
 const safe = s => String(s||'').trim();
 const pctRange = arr => { const v=arr.filter(x=>Number.isFinite(x)); if(!v.length) return false; const mi=Math.min(...v), ma=Math.max(...v); return mi>=0 && ma<=100; };
-const filename = k => `${k}`;
 
 /* ===== state & DOM ===== */
 let rows=[], H={}, chart=null;
@@ -147,11 +162,36 @@ const el = {
   idRow: $('#idRow'), breakRow: $('#breakRow'),
   sideHdr: $('#sidePrimaryHdr'), sideCtrls: $('#sidePrimaryCtrls'),
   chart: $('#chart'),
-  tabs: [$('#tLine'), $('#tBar'), $('#tMap')],
-  dlCSV: $('#dlCSV'), dlPNG: $('#dlPNG')
+  tabs: [$('#tLine'), $('#tBar'), $('#tMap')]
 };
 
-/* tiny flag svg */
+// External buttons (enabled after first draw)
+const btnPNG = document.getElementById('btnPNG');
+const btnCSV = document.getElementById('btnCSV');
+if(btnPNG && btnCSV){ btnPNG.disabled = btnCSV.disabled = true; }
+
+/* ===== misc helpers ===== */
+function filenameBase(){
+  const tail = (state.tab==='bar' || state.tab==='map') ? state.year : 'trend';
+  return `${state.id}__${state.breakdown}__${tail}`.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
+}
+function wireExports(){
+  if(!chart || !btnPNG || !btnCSV) return;
+  btnPNG.disabled = btnCSV.disabled = false;
+  btnPNG.onclick = ()=> chart.exportChartLocal({ type:'image/png', filename: filenameBase() });
+  btnCSV.onclick = ()=>{
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filenameBase() + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  };
+}
+
+/* tiny flag svg for the country list */
 function flagSVG(code){
   const pal = { AT:'#ED2939,#FFFFFF,#ED2939', BE:'#000000,#FFD90C,#ED2939', BG:'#00966E,#FFFFFF,#D62612',
     HR:'#FF0000,#FFFFFF,#171796', CY:'#FFFFFF,#D57800,#107A3B', CZ:'#FFFFFF,#11457E,#D7141A', DK:'#C60C30,#FFFFFF,#C60C30',
@@ -170,12 +210,20 @@ Papa.parse(CSV_URL,{
   download:true, header:true, dynamicTyping:false, skipEmptyLines:true,
   complete: ({data})=>{
     rows = data.map(r=>{ const o={}; for(const k of Object.keys(r)) o[safe(k)] = typeof r[k]==='string' ? safe(r[k]) : r[k]; return o; });
-    // discover column names
+    // discover column names incl. Flag
     const keys = Object.keys(rows[0]||{}), find = t => keys.find(k=>safe(k).toLowerCase()===t.toLowerCase());
-    H = { ID:find('ID'), Country:find('Country'), Year:find('Year'), Breakdown:find('Breakdown'), Value:find('Value') };
-    rows = rows.map(r=>({...r, [H.Year]:+r[H.Year], [H.Value]:toNum(r[H.Value])}));
+    H = {
+      ID:find('ID'), Country:find('Country'), Year:find('Year'),
+      Breakdown:find('Breakdown'), Value:find('Value'),
+      Flag:find('Flag') || find('flag') || find('Flags')
+    };
+    rows = rows.map(r=>({
+      ...r,
+      [H.Year]: +r[H.Year],
+      [H.Value]: toNum(r[H.Value]),
+      [H.Flag]: (r[H.Flag]||'').trim().toLowerCase()
+    }));
 
-    // ORDER: ID → Breakdown → defaults → draw
     buildIdButtons();
     refreshBreakdown();
     setDefaults();
@@ -191,31 +239,28 @@ function updateActive(container, activeVal){
 function buildIdButtons(){
   const ids = sortAlpha(uniq(rows.map(r=>r[H.ID]).filter(Boolean)));
   state.id = ids[0] || null;
-  el.idRow.innerHTML = pillsHTML(ids, state.id);
-  el.idRow.onclick = e=>{
+  document.getElementById('idRow').innerHTML = pillsHTML(ids, state.id);
+  document.getElementById('idRow').onclick = e=>{
     const v=e.target?.dataset?.v; if(!v) return;
     state.id = decodeURIComponent(v);
-    updateActive(el.idRow, state.id);
-    refreshBreakdown();
-    setDefaults();
-    draw();
+    updateActive(document.getElementById('idRow'), state.id);
+    refreshBreakdown(); setDefaults(); draw();
   };
 }
 function refreshBreakdown(){
   const list = sortAlpha(uniq(rows.filter(r=>r[H.ID]===state.id).map(r=>r[H.Breakdown]).filter(Boolean)));
   state.breakdown = list.includes('Total') ? 'Total' : (list[0]||'');
-  el.breakRow.innerHTML = pillsHTML(list, state.breakdown);
-  updateActive(el.breakRow, state.breakdown);
-  el.breakRow.onclick = e=>{
+  document.getElementById('breakRow').innerHTML = pillsHTML(list, state.breakdown);
+  updateActive(document.getElementById('breakRow'), state.breakdown);
+  document.getElementById('breakRow').onclick = e=>{
     const v=e.target?.dataset?.v; if(!v) return;
     state.breakdown = decodeURIComponent(v);
-    updateActive(el.breakRow, state.breakdown);
-    setDefaults();
-    draw();
+    updateActive(document.getElementById('breakRow'), state.breakdown);
+    setDefaults(); draw();
   };
 }
 
-/* ===== data helpers ===== */
+/* ===== helpers ===== */
 function availableYears(){
   const yrs = uniq(rows.filter(r=>r[H.ID]===state.id && r[H.Breakdown]===state.breakdown)
                         .map(r=>r[H.Year]).filter(y=>Number.isFinite(y)));
@@ -230,7 +275,7 @@ function subset({country=null, year=null}={}){
   );
 }
 
-/* ===== defaults ===== */
+/* ===== defaults & sidebar ===== */
 function setDefaults(){
   const slice = rows.filter(r=>r[H.ID]===state.id && r[H.Breakdown]===state.breakdown && Number.isFinite(r[H.Value]));
   const csAll = sortAlpha(uniq(slice.map(r=>r[H.Country]).filter(Boolean)));
@@ -243,13 +288,12 @@ function setDefaults(){
   if(yrs.length){ state.year = yrs[yrs.length-1]; }
   rebuildSide();
 }
-
-/* ===== sidebar controls (countries or year) ===== */
 function rebuildSide(){
-  el.sideHdr.innerHTML = '';
-  el.sideCtrls.innerHTML = '';
+  const hdr = document.getElementById('sidePrimaryHdr');
+  const ctr = document.getElementById('sidePrimaryCtrls');
+  hdr.innerHTML = ''; ctr.innerHTML = '';
   if(state.tab==='line'){
-    el.sideHdr.innerHTML = `<div class="hdr">Countries</div>`;
+    hdr.innerHTML = `<div class="hdr">Countries</div>`;
     const sel = document.createElement('div'); sel.className='flag-dd';
     sel.innerHTML = `
       <button class="flag-btn" id="cBtn"><span id="cCap">${state.countries.length} selected</span><span class="muted">▾</span></button>
@@ -262,11 +306,9 @@ function rebuildSide(){
         </div>
         <div id="cItems"></div>
       </div>`;
-    el.sideCtrls.appendChild(sel);
+    ctr.appendChild(sel);
 
     const listBox = $('#cList'), itemsBox = $('#cItems'), btn = $('#cBtn'), cap = $('#cCap'), search = $('#cSearch'), clearBtn = $('#cClear');
-
-    // Build full list (EU pinned first)
     const slice = rows.filter(r=>r[H.ID]===state.id && r[H.Breakdown]===state.breakdown && Number.isFinite(r[H.Value]));
     const allCountries = uniq(slice.map(r=>r[H.Country]).filter(Boolean));
     const euName = allCountries.find(c=>EU.has(c));
@@ -287,25 +329,11 @@ function rebuildSide(){
     };
     render();
 
-    // Open/close
     const closeAll = e => { if(!sel.contains(e.target)) listBox.classList.add('hidden'); };
     btn.onclick = ()=> listBox.classList.toggle('hidden');
     document.addEventListener('click', closeAll);
-
-    // Filter typing
     search.addEventListener('input', ()=>render(search.value));
-
-    // Clear selection (and search)
-    clearBtn.onclick = (e)=>{
-      e.stopPropagation();
-      state.countries = [];
-      cap.textContent = '0 selected';
-      search.value = '';
-      render('');
-      draw();
-    };
-
-    // Toggle selection
+    clearBtn.onclick = (e)=>{ e.stopPropagation(); state.countries = []; cap.textContent='0 selected'; search.value=''; render(''); draw(); };
     itemsBox.onclick = e=>{
       const t = e.target.closest('.flag-item'); if(!t) return;
       const c = decodeURIComponent(t.dataset.c);
@@ -317,17 +345,17 @@ function rebuildSide(){
     };
 
   }else{
-    el.sideHdr.innerHTML = `<div class="hdr">Year</div>`;
-    const yrs = availableYears().sort((a,b)=>b-a); // descending
+    hdr.innerHTML = `<div class="hdr">Year</div>`;
+    const yrs = availableYears().sort((a,b)=>b-a);
     const s = document.createElement('select');
     s.style.cssText='width:220px;padding:.55rem .6rem;border:1px solid #cfd8e3;border-radius:8px;background:#fff';
     s.innerHTML = yrs.map(y=>`<option ${y===state.year?'selected':''}>${y}</option>`).join('');
     s.onchange = ()=>{ state.year = +s.value; draw(); };
-    el.sideCtrls.appendChild(s);
+    ctr.appendChild(s);
   }
 }
 
-/* ===== helpers ===== */
+/* ===== branding ===== */
 function placeLogo(hc){
   try{
     const w=70, h=Math.round(w*0.35), x=hc.chartWidth-w-6, y=hc.chartHeight-h-6;
@@ -339,7 +367,7 @@ function placeLogo(hc){
 /* ===== draw ===== */
 function draw(){
   if(chart) chart.destroy();
-  el.tabs.forEach(b=>b.classList.toggle('active', b.dataset.t===state.tab));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.t===state.tab));
 
   const years = availableYears();
   if(!years.length){
@@ -350,18 +378,25 @@ function draw(){
   if(state.tab==='line'){
     const series = state.countries.map((c,i)=>{
       const pts = subset({country:c}).sort((a,b)=>a[H.Year]-b[H.Year]);
-      const map = new Map(pts.map(r=>[r[H.Year], r[H.Value]]));
-      const values = years.map(y => (map.has(y)? map.get(y) : null));
-      const firstIdx = values.findIndex(v=>v!=null);
+      const mapVal  = new Map(pts.map(r=>[r[H.Year], r[H.Value]]));
+      const mapFlag = new Map(pts.map(r=>[r[H.Year], r[H.Flag]]));
+      const values = years.map(y=>{
+        const v = mapVal.get(y);
+        if(v==null || isNaN(v)) return null;
+        const f = mapFlag.get(y);
+        return { y:v, flag:f||null };
+      });
+      const firstIdx = values.findIndex(p=>p!==null);
       let lastIdx = -1; for(let k=values.length-1;k>=0;--k){ if(values[k]!=null){ lastIdx=k; break; } }
-      const data = values.map((v,idx)=>{
-        if(v==null) return null;
-        if(idx===firstIdx || idx===lastIdx) return { y:v, marker:{enabled:true, radius:3} };
-        return v;
+      const data = values.map((p,idx)=>{
+        if(p==null) return null;
+        const o={...p};
+        if(idx===firstIdx || idx===lastIdx) o.marker={enabled:true, radius:3};
+        return o;
       });
       return { name:c, data, color: LINE_PALETTE[i % LINE_PALETTE.length] };
     });
-    const vals = series.flatMap(s=>s.data).map(p=>p && typeof p==='object' ? p.y : p).filter(v=>v!=null);
+    const vals = series.flatMap(s=>s.data).map(p=>p && p.y).filter(v=>v!=null);
     const isPct = pctRange(vals);
 
     chart = Highcharts.chart('chart',{
@@ -373,7 +408,21 @@ function draw(){
       yAxis:{ title:{ text:null }, gridLineColor:'#f0f2f5',
         labels:{ formatter(){ return isPct ? (Highcharts.numberFormat(this.value,1)+'%') : Highcharts.numberFormat(this.value,1); } } },
       legend:{ enabled:true },
-      tooltip:{ shared:true, valueSuffix: isPct ? '%' : '', valueDecimals:isPct?1:1 },
+      tooltip:{
+        shared:true,
+        formatter:function(){
+          const year = this.x;
+          let html = `<b>${year}</b>`;
+          this.points.forEach(p=>{
+            const v = isPct ? (Highcharts.numberFormat(p.y,1)+'%') : Highcharts.numberFormat(p.y,1);
+            const fKey = p.point && p.point.flag;
+            const fTxt = fKey ? (FLAG_TEXT[fKey] || fKey) : null;
+            const flagHT = fTxt ? ` <span style="color:#6b7280">(${Highcharts.escapeHTML(fTxt)})</span>` : '';
+            html += `<br><span style="color:${p.color}">\u25CF</span> ${p.series.name}: <b>${v}</b>${flagHT}`;
+          });
+          return html;
+        }
+      },
       plotOptions:{ series:{ marker:{ enabled:false }, lineWidth:3 } },
       series: series.map(s=>({
         ...s,
@@ -390,11 +439,17 @@ function draw(){
       }))
     });
 
+    wireExports();
+
   }else if(state.tab==='bar'){
     const yrRows = subset({year:state.year});
-    const byC = {}; for(const r of yrRows){ const c=r[H.Country]; if(/^#?N\/A$/i.test(c)) continue; byC[c]=r[H.Value]; }
+    const byC = {}, flagByC = {};
+    for(const r of yrRows){
+      const c=r[H.Country]; if(/^#?N\/A$/i.test(c)) continue;
+      byC[c]=r[H.Value]; flagByC[c]=r[H.Flag];
+    }
     const cats = Object.keys(byC).filter(k=>Number.isFinite(byC[k])).sort((a,b)=>byC[b]-byC[a]);
-    const data = cats.map(c=>({ y:byC[c], color: EU.has(c) ? C.eu : C.blue, name:c, dataLabels:{color:'#fff'} }));
+    const data = cats.map(c=>({ y:byC[c], color: EU.has(c) ? C.eu : C.blue, name:c, flag:(flagByC[c]||null) }));
     const isPct = pctRange(data.map(d=>d.y));
 
     chart = Highcharts.chart('chart',{
@@ -406,84 +461,59 @@ function draw(){
       yAxis:{ title:{ text:null }, gridLineColor:'#f0f2f5',
         labels:{ formatter(){ return isPct ? (Highcharts.numberFormat(this.value,1)+'%') : Highcharts.numberFormat(this.value,1); } } },
       legend:{ enabled:false },
-      tooltip:{ pointFormatter:function(){ const v=isPct?(Highcharts.numberFormat(this.y,1)+'%'):Highcharts.numberFormat(this.y,1); return `<span style="color:${this.color}">\u25CF</span> ${this.category}: <b>${v}</b>`; } },
+      tooltip:{
+        pointFormatter:function(){
+          const v=isPct?(Highcharts.numberFormat(this.y,1)+'%'):Highcharts.numberFormat(this.y,1);
+          const fTxt = this.flag ? (FLAG_TEXT[this.flag] || this.flag) : null;
+          const flagHT = fTxt ? ` <span style="color:#6b7280">(${Highcharts.escapeHTML(fTxt)})</span>` : '';
+          return `<span style="color:${this.color}">\u25CF</span> ${this.category}: <b>${v}</b>${flagHT}`;
+        }
+      },
       plotOptions:{ series:{ pointPadding:0.12, groupPadding:0.04, borderWidth:0,
         dataLabels:{ enabled:true, inside:true, align:'right', style:{ color:'#fff', textOutline:'none', fontSize:'11px' },
           formatter(){ return isPct ? (Highcharts.numberFormat(this.y,1)+'%') : Highcharts.numberFormat(this.y,1);} } } },
       series:[{ name:state.id, data }]
     });
 
+    wireExports();
+
   }else{ // map
     const yrRows = subset({year:state.year});
     const data = [];
-    for(const r of yrRows){ const k=HC_KEY[r[H.Country]], v=+r[H.Value]; if(k && isFinite(v)) data.push({ 'hc-key':k, value:v, name:r[H.Country] }); }
+    for(const r of yrRows){
+      const k=HC_KEY[r[H.Country]], v=+r[H.Value];
+      if(k && isFinite(v)) data.push({ 'hc-key':k, value:v, name:r[H.Country], flag:(r[H.Flag]||null) });
+    }
     const values = data.map(d=>d.value);
     const isPct = pctRange(values);
     const max = values.length? Math.max(...values) : 1;
-    const min = Math.max(0, max * 0.9);  // rule: 0 or 10% below max, whichever is larger
+    const min = Math.max(0, max * 0.9);
 
     chart = Highcharts.mapChart('chart',{
-      chart:{ map: Highcharts.maps['custom/europe'], spacing:[10,10,40,10], backgroundColor:'transparent', animation:false }, // instant load
-      mapView:{ animation:false }, // no zoom transition
+      chart:{ map: Highcharts.maps['custom/europe'], spacing:[10,10,40,10], backgroundColor:'transparent', animation:false },
+      mapView:{ animation:false },
       title:{ text:`${state.id} (${state.year})` },
       subtitle:{ text:`Breakdown: ${state.breakdown}` },
       colorAxis:{ min, max, tickAmount:6, stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
         labels:{ formatter(){ return isPct ? (Highcharts.numberFormat(this.value,1)+'%') : Highcharts.numberFormat(this.value,1); } } },
-      legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,  // moved 20px right
+      legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,
                backgroundColor:'#fff', borderWidth:0, title:{text:isPct?'%':''} },
       mapNavigation:{ enabled:true },
-      tooltip:{ pointFormatter:function(){ const v=isPct?(Highcharts.numberFormat(this.value,1)+'%'):Highcharts.numberFormat(this.value,1); return `<b>${this.name}</b><br>${v}`; } },
+      tooltip:{ pointFormatter:function(){
+        const v=isPct?(Highcharts.numberFormat(this.value,1)+'%'):Highcharts.numberFormat(this.value,1);
+        const fTxt = this.flag ? (FLAG_TEXT[this.flag] || this.flag) : null;
+        const flagHT = fTxt ? ` <span style="color:#6b7280">(${Highcharts.escapeHTML(fTxt)})</span>` : '';
+        return `<b>${this.name}</b><br>${v}${flagHT}`;
+      }},
       series:[{ name:state.id, data, joinBy:'hc-key', nullColor:'#f1f3f5', states:{hover:{color:'#a4edba'}}, borderColor:'#fff', borderWidth:0.6 }]
     });
+
+    wireExports();
   }
-
-  // downloads
-  el.dlCSV.onclick = ()=>{ const csv=chart.getCSV(); const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename('children_data')+'.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),0); };
-  el.dlPNG.onclick = ()=> chart.exportChartLocal({type:'image/png', filename: filename('children_img')});
-}
-// Export buttons
-// External buttons
-const btnPNG = document.getElementById('btnPNG');
-const btnCSV = document.getElementById('btnCSV');
-
-// Build a nice filename: id__breakdown__year (for bar/map) or id__breakdown__trend
-function exportName(kind){
-  const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
-  const base = `${state.id}__${state.breakdown}__${tail}`;
-  return base.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
 }
 
-// Attach handlers to the current chart instance
-function wireExports(){
-  if(!chart || !btnPNG || !btnCSV){ return; }
-
-  btnPNG.disabled = btnCSV.disabled = false;
-
-  btnPNG.onclick = ()=>{
-    chart.exportChartLocal({
-      type: 'image/png',
-      filename: exportName('img')
-    });
-  };
-
-  btnCSV.onclick = ()=>{
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName('data') + '.csv';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  };
-}
-
-// Optional: disable while loading / before first draw
-if(btnPNG && btnCSV){ btnPNG.disabled = btnCSV.disabled = true; }
-
-
-/* tab switching */
-el.tabs.forEach(b=>b.addEventListener('click',()=>{ state.tab=b.dataset.t; rebuildSide(); draw(); }));
+/* tabs */
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ state.tab=b.dataset.t; rebuildSide(); draw(); }));
 </script>
 </body>
 </html>
