@@ -441,6 +441,46 @@ function draw(){
   el.dlCSV.onclick = ()=>{ const csv=chart.getCSV(); const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename('children_data')+'.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),0); };
   el.dlPNG.onclick = ()=> chart.exportChartLocal({type:'image/png', filename: filename('children_img')});
 }
+// Export buttons
+// External buttons
+const btnPNG = document.getElementById('btnPNG');
+const btnCSV = document.getElementById('btnCSV');
+
+// Build a nice filename: id__breakdown__year (for bar/map) or id__breakdown__trend
+function exportName(kind){
+  const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
+  const base = `${state.id}__${state.breakdown}__${tail}`;
+  return base.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
+}
+
+// Attach handlers to the current chart instance
+function wireExports(){
+  if(!chart || !btnPNG || !btnCSV){ return; }
+
+  btnPNG.disabled = btnCSV.disabled = false;
+
+  btnPNG.onclick = ()=>{
+    chart.exportChartLocal({
+      type: 'image/png',
+      filename: exportName('img')
+    });
+  };
+
+  btnCSV.onclick = ()=>{
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName('data') + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  };
+}
+
+// Optional: disable while loading / before first draw
+if(btnPNG && btnCSV){ btnPNG.disabled = btnCSV.disabled = true; }
+
 
 /* tab switching */
 el.tabs.forEach(b=>b.addEventListener('click',()=>{ state.tab=b.dataset.t; rebuildSide(); draw(); }));
