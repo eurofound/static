@@ -423,12 +423,23 @@ function draw(){
       title:{ text: state.id },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
       xAxis:{ categories: years, tickmarkPlacement:'on', lineColor:'#dadde1' },
-      yAxis:{
-        title:{ text:null },
-        gridLineColor:'#f0f2f5',
-        max: isPct ? 100 : null,
-        labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value, 1); } }
-      },
+yAxis: {
+  title: { text: null },
+  gridLineColor: '#f0f2f5',
+  // Let Highcharts auto-scale, but never go above 100 when values look like %
+  ceiling: isPct ? 100 : undefined,   // <-- key change
+  // (optional) keep the axis from dipping below 0 for % series
+  softMin: isPct ? 0 : undefined,
+  labels: {
+    formatter() {
+      // whole-number % for percentage-like series; otherwise keep 1 decimal
+      return isPct
+        ? Highcharts.numberFormat(Math.max(0, Math.min(100, this.value)), 0) + '%'
+        : Highcharts.numberFormat(this.value, 1);
+    }
+  }
+}
+,
       legend:{ enabled:true },
       tooltip:{
         shared:true,
