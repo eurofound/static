@@ -336,56 +336,68 @@ function flagSVG(code){
 /* ========= export (external buttons #btnPNG / #btnCSV and parent postMessage) ========= */
 function exportName(){
   const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
-  return `${state.id}__${state.breakdown}__${tail}`.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
+  return `${state.id}__${state.breakdown}__${tail}`
+    .toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
 }
-function wireExports(){
+
+function doPNGDownload(){
+  if (!chart) return;
+  const hadLogo = !!chart._brand;   // prevent canvas taint from cross-origin logo
+  if (hadLogo) removeLogo(chart);
+  chart.exportChartLocal({
+    type: 'image/png',
+    filename: exportName()
+  });
+  if (hadLogo) setTimeout(()=>placeLogo(chart), 0);
+}
+
+function doCSVDownload(){
+  if (!chart) return;
+  const csv = chart.getCSV();
+  const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = exportName() + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+}
+
+// 1) Wire to optional in-page buttons (if your host injects them)
+(function attachInternalButtons(){
   const btnPNG = document.getElementById('btnPNG');
   const btnCSV = document.getElementById('btnCSV');
-  if(chart && btnPNG && btnCSV){
-    btnPNG.disabled = btnCSV.disabled = false;
+  if (btnPNG) { btnPNG.disabled = false; btnPNG.onclick = doPNGDownload; }
+  if (btnCSV) { btnCSV.disabled = false; btnCSV.onclick = doCSVDownload; }
+})();
 
-    btnPNG.onclick = ()=>{
-      const hadLogo = !!chart._brand;
-      if(hadLogo) removeLogo(chart); // prevent CORS-taint
-      chart.exportChartLocal({ type:'image/png', filename: exportName() });
-      if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
-    };
+// 2) Expose global functions like in the EJM example
+window.triggerExportPNG = doPNGDownload;
+window.triggerExportCSV = doCSVDownload;
 
-    btnCSV.onclick = ()=>{
-      const csv = chart.getCSV();
-      const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = exportName() + '.csv';
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-    };
-  }
-}
+// 3) Robust postMessage listener (same vocabulary as EJM)
+window.addEventListener('message', (event) => {
+  const d = event.data;
+  // accept a variety of shapes/keys
+  const cmd = (typeof d === 'string') ? d :
+    (d && typeof d === 'object') ?
+      (d.type || d.action || d.cmd || d.command || d.event || d.name ||
+       (d.data && (d.data.type || d.data.action || d.data.cmd || d.data.command))) : null;
+  if (!cmd) return;
+  const c = String(cmd).toLowerCase();
 
-// ALSO support parent-page triggers via postMessage (for iframes)
-window.addEventListener('message', (e)=>{
-  const msg = e.data || {};
-  if(!chart) return;
-  if(msg.type === 'export-png'){
-    const hadLogo = !!chart._brand;
-    if(hadLogo) removeLogo(chart);
-    chart.exportChartLocal({ type:'image/png', filename: exportName() });
-    if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
-  }
-  if(msg.type === 'export-csv'){
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName() + '.csv';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  }
+  if (['download-png','png','image','export-png'].includes(c)) { doPNGDownload(); return; }
+  if (['download-csv','csv','data','export-csv'].includes(c)) { doCSVDownload(); return; }
 });
 
+// 4) Ensure offline exporting is configured (already in your setOptions, but safe to repeat)
+Highcharts.setOptions({
+  exporting: {
+    enabled: true,
+    fallbackToExportServer: false,
+    libURL: 'https://code.highcharts.com/11.4.0/lib/'
+  }
+});
 /* ========= draw ========= */
 function draw(){
   if(chart) chart.destroy();
@@ -423,12 +435,23 @@ function draw(){
       title:{ text: state.id },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
       xAxis:{ categories: years, tickmarkPlacement:'on', lineColor:'#dadde1' },
-      yAxis:{
-        title:{ text:null },
-        gridLineColor:'#f0f2f5',
-        max: isPct ? 100 : null,
-        labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value, 1); } }
-      },
+yAxis: {
+  title: { text: null },
+  gridLineColor: '#f0f2f5',
+  // Let Highcharts auto-scale, but never go above 100 when values look like %
+  ceiling: isPct ? 100 : undefined,   // <-- key change
+  // (optional) keep the axis from dipping below 0 for % series
+  softMin: isPct ? 0 : undefined,
+  labels: {
+    formatter() {
+      // whole-number % for percentage-like series; otherwise keep 1 decimal
+      return isPct
+        ? Highcharts.numberFormat(Math.max(0, Math.min(100, this.value)), 0) + '%'
+        : Highcharts.numberFormat(this.value, 1);
+    }
+  }
+}
+,
       legend:{ enabled:true },
       tooltip:{
         shared:true,
