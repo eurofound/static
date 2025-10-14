@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Children outcomes dashboard</title>
+<title>Early childhood education and care</title>
 
 <!-- Highcharts -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -115,7 +115,7 @@
 
 <script>
 /* ========= config ========= */
-const CSV_URL = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/CG_dash/CG_ECEC_data.csv';
+const CSV_URL = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/CG_dash/CG_data.csv';
 const LOGO_URL = './logo.svg';
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
 const EU = new Set(['EU','EU27','EU-27','EU28','EU-28','European Union','EU 27','EU 28']);
@@ -169,36 +169,56 @@ function placeLogo(hc){
 }
 function removeLogo(hc){ if(hc && hc._brand){ hc._brand.destroy(); hc._brand=null; } }
 
-/* ========= data load ========= */
+// ===== data load (Title-aware) =====
 Papa.parse(CSV_URL,{
-  download:true, header:true, dynamicTyping:false, skipEmptyLines:true,
-  complete: ({data})=>{
-    // Normalize keys exactly as in your file (Country, Year, Breakdown, Value, Flag, ID)
-    rows = data.map(r=>{
-      const o={};
-      for(const k of Object.keys(r)) o[safe(k)] = typeof r[k]==='string' ? safe(r[k]) : r[k];
+  download:true,
+  header:true,
+  dynamicTyping:false,
+  skipEmptyLines:true,
+  complete: ({ data }) => {
+    // 1) Normalise keys from CSV (trim headers & cell strings)
+    rows = data.map(r => {
+      const o = {};
+      for (const k of Object.keys(r)) o[safe(k)] = typeof r[k] === 'string' ? safe(r[k]) : r[k];
       return o;
     });
 
-    // Column map with fallbacks (case-insensitive)
-    const keys = Object.keys(rows[0]||{}), find = t => keys.find(k=>safe(k).toLowerCase()===t.toLowerCase());
+    // 2) Map columns (your file: Title, Country, Year, Breakdown, Value, Flag, ID)
+    const keys = Object.keys(rows[0] || {});
+    const find = t => keys.find(k => String(k).trim().toLowerCase() === t.toLowerCase());
     H = {
-      Country : find('Country'),
-      Year    : find('Year'),
+      Title:     find('Title'),
+      Country:   find('Country'),
+      Year:      find('Year'),
       Breakdown: find('Breakdown'),
-      Value   : find('Value'),
-      Flag    : find('Flag'),   // may be empty string in many rows
-      ID      : find('ID')
+      Value:     find('Value'),
+      Flag:      find('Flag'),
+      ID:        find('ID')
     };
 
-    // Coerce numeric & tidy flags (guard when column is missing)
-    rows = rows.map(r=>({
+    // 3) Coerce numeric fields & store safe flag code
+    rows = rows.map(r => ({
       ...r,
       [H.Year]: +r[H.Year],
       [H.Value]: toNum(r[H.Value]),
-      _flag: H.Flag ? String(r[H.Flag]||'').trim().toLowerCase() : ''  // store separately to avoid computed-undefined
+      _flag: H.Flag ? String(r[H.Flag] || '').trim().toLowerCase() : ''
     }));
 
+    // 4) Filter to the current HTML <title>
+    const pageTitle = document.title.trim().toLowerCase();
+    if (H.Title) {
+      rows = rows.filter(r => String(r[H.Title] || '').trim().toLowerCase() === pageTitle);
+    }
+
+    // 5) Graceful exit if nothing matches
+    if (!rows.length) {
+      el.chart.innerHTML = `<div style="padding:20px;color:#6b7280">
+        No data for “${document.title}”. Check Title in CSV vs &lt;title&gt;.
+      </div>`;
+      return;
+    }
+
+    // 6) Proceed as usual
     buildIdButtons();
     refreshBreakdown();
     setDefaults();
