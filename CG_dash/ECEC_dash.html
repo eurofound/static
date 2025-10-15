@@ -333,31 +333,59 @@ function flagSVG(code){
   return `<svg class="fi" viewBox="0 0 24 16"><rect width="24" height="16" fill="${p[0]}"/><rect y="5.33" width="24" height="5.34" fill="${p[1]}"/><rect y="10.67" width="24" height="5.33" fill="${p[2]}"/></svg>`;
 }
 
+/* ========= export (external buttons #btnPNG / #btnCSV and parent postMessage) ========= */
+function exportName(){
+  const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
+  return `${state.id}__${state.breakdown}__${tail}`.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
+}
+function wireExports(){
+  const btnPNG = document.getElementById('btnPNG');
+  const btnCSV = document.getElementById('btnCSV');
+  if(chart && btnPNG && btnCSV){
+    btnPNG.disabled = btnCSV.disabled = false;
 
+    btnPNG.onclick = ()=>{
+      const hadLogo = !!chart._brand;
+      if(hadLogo) removeLogo(chart); // prevent CORS-taint
+      chart.exportChartLocal({ type:'image/png', filename: exportName() });
+      if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
+    };
 
-// 3) Robust postMessage listener (same vocabulary as EJM)
-window.addEventListener('message', (event) => {
-  const d = event.data;
-  // accept a variety of shapes/keys
-  const cmd = (typeof d === 'string') ? d :
-    (d && typeof d === 'object') ?
-      (d.type || d.action || d.cmd || d.command || d.event || d.name ||
-       (d.data && (d.data.type || d.data.action || d.data.cmd || d.data.command))) : null;
-  if (!cmd) return;
-  const c = String(cmd).toLowerCase();
+    btnCSV.onclick = ()=>{
+      const csv = chart.getCSV();
+      const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = exportName() + '.csv';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+    };
+  }
+}
 
-  if (['download-png','png','image','export-png'].includes(c)) { doPNGDownload(); return; }
-  if (['download-csv','csv','data','export-csv'].includes(c)) { doCSVDownload(); return; }
-});
-
-// 4) Ensure offline exporting is configured (already in your setOptions, but safe to repeat)
-Highcharts.setOptions({
-  exporting: {
-    enabled: true,
-    fallbackToExportServer: false,
-    libURL: 'https://code.highcharts.com/11.4.0/lib/'
+// ALSO support parent-page triggers via postMessage (for iframes)
+window.addEventListener('message', (e)=>{
+  const msg = e.data || {};
+  if(!chart) return;
+  if(msg.type === 'export-png'){
+    const hadLogo = !!chart._brand;
+    if(hadLogo) removeLogo(chart);
+    chart.exportChartLocal({ type:'image/png', filename: exportName() });
+    if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
+  }
+  if(msg.type === 'export-csv'){
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName() + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
   }
 });
+
 /* ========= draw ========= */
 function draw(){
   if(chart) chart.destroy();
@@ -411,7 +439,6 @@ yAxis: {
     }
   }
 }
-
 ,
       legend:{ enabled:true },
       tooltip:{
@@ -504,43 +531,12 @@ yAxis: {
       series:[{ name:state.id, data, joinBy:'hc-key', nullColor:'#f1f3f5', states:{hover:{color:'#a4edba'}}, borderColor:'#fff', borderWidth:0.6 }]
     });
 
-  btnCSV.disabled = btnPNG.disabled = false;
-  btnCSV.onclick = ()=>{
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName('data') + '.csv';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  };
-  btnPNG.onclick = ()=> chart.exportChartLocal({ type:'image/png', filename: exportName('img') });
-}
+    wireExports();
   }
 }
 
 /* tabs */
 el.tabs.forEach(b=>b.addEventListener('click',()=>{ state.tab=b.dataset.t; rebuildSide(); draw(); }));
 </script>
-  <script>
-/* External message hooks for host page buttons */
-window.addEventListener("message", (event) => {
-  if (event.data === "download-png" && chart) {
-    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
-  }
-  if (event.data === "download-csv" && chart) {
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName("data") + ".csv";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  }
-});
-</script>
-  
 </body>
 </html>
