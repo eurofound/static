@@ -2,6 +2,24 @@
     "status": "success",
     "data": [
         {
+            "date": "19 September 2025",
+            "title": "Preparation of the Social Climate Plan of the Republic of Bulgaria",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-15_3970.html"
+        },
+        {
+            "date": "19 September 2025",
+            "title": "Supporting businesses in coal regions\r",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-5_3966.html"
+        },
+        {
+            "date": "19 September 2025",
+            "title": "National Programme for Energy Efficiency of Multi-family Residential Buildings ",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2015-6_3470.html"
+        },
+        {
             "date": "06 June 2025",
             "title": "Bilateral Agreements for Labour Migration",
             "category": "Income support for people in employment (e.g., short-time work)",
@@ -42,24 +60,6 @@
             "title": "Energy Efficiency and Renewable Sources Fund",
             "category": "Access to finance",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2015-20_2710.html"
-        },
-        {
-            "date": "02 October 2024",
-            "title": "National Export Portal",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2010-17_2647.html"
-        },
-        {
-            "date": "16 September 2024",
-            "title": "Assistance for accommodation and food for persons from Ukraine",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-14_2279.html"
-        },
-        {
-            "date": "26 April 2024",
-            "title": "New system for registration of temporary protection for Ukrainian refugees",
-            "category": "Protection of vulnerable groups (beyond employment support)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-12_2159.html"
         }
     ]
 }

@@ -2,22 +2,52 @@
     "status": "success",
     "data": [
         {
-            "date": "09 June 2025",
-            "title": "DKK 636 million to green transition ",
+            "date": "02 October 2025",
+            "title": "Energy Island Bornholm - a part of the Climate Agreement from 2020",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-17_3592.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-26_3923.html"
         },
         {
-            "date": "09 June 2025",
+            "date": "02 October 2025",
+            "title": "The governments' 2030 plan ",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-39_3593.html"
+        },
+        {
+            "date": "02 October 2025",
             "title": "The Green Tripartite ",
             "category": "Financing the green transition",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-47_3588.html"
         },
         {
+            "date": "02 October 2025",
+            "title": "Accelerating the Green Transition - with Jobs and Security for Workers.",
+            "category": "Income support for people in employment (e.g., short-time work)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-48_3590.html"
+        },
+        {
+            "date": "02 October 2025",
+            "title": "DKK 636 million to green transition ",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-17_3592.html"
+        },
+        {
+            "date": "02 October 2025",
+            "title": "Pool for green continuing education and learning ",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-27_3015.html"
+        },
+        {
+            "date": "09 September 2025",
+            "title": "The Bridge to the Future ",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-23_3595.html"
+        },
+        {
             "date": "29 April 2025",
-            "title": "Amendment to the Immigration Act aimed at enhancing international recruitment",
+            "title": "National initiative to recruit and retain non-EU healthcare staff",
             "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-13_3732.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-27_3730.html"
         },
         {
             "date": "29 April 2025",
@@ -27,39 +57,9 @@
         },
         {
             "date": "29 April 2025",
-            "title": "National initiative to recruit and retain non-EU healthcare staff",
+            "title": "Amendment to the Immigration Act aimed at enhancing international recruitment",
             "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-27_3730.html"
-        },
-        {
-            "date": "16 April 2025",
-            "title": "Aarhus\u2019 international workforce strategy: Goals and initiatives for 2025-2030",
-            "category": "Well-being of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2025-4_3747.html"
-        },
-        {
-            "date": "16 April 2025",
-            "title": "Expansion of the Integration Basic Education (IGU) scheme in Denmark",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-1_3736.html"
-        },
-        {
-            "date": "16 April 2025",
-            "title": "Denmark simplifies labour migration to strengthen recruitment and mobility",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-27_3741.html"
-        },
-        {
-            "date": "16 April 2025",
-            "title": "Improving Conditions for International Citizens in Copenhagen",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-9_3745.html"
-        },
-        {
-            "date": "19 December 2024",
-            "title": "Temporary residence permit for displaced people from Ukraine ",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-13_2283.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-13_3732.html"
         }
     ]
 }

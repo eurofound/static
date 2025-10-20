@@ -2,28 +2,40 @@
     "status": "success",
     "data": [
         {
+            "date": "27 August 2025",
+            "title": "Flood risk construction activities",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-11_3426.html"
+        },
+        {
+            "date": "31 July 2025",
+            "title": "'Start Smart' programme for upskilling entrepreneurs with AI",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-14_3799.html"
+        },
+        {
+            "date": "31 July 2025",
+            "title": "Employability Programme for Refugees",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-22_3775.html"
+        },
+        {
+            "date": "31 July 2025",
+            "title": "Entrepreneurship programme 'Boost' for refugees ",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3774.html"
+        },
+        {
+            "date": "31 July 2025",
+            "title": "Entrepreneurship programme \u2018Empowering Women\u2019 for migrant women",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-40_3773.html"
+        },
+        {
             "date": "09 June 2025",
             "title": "Employment Programme 2024-2029",
             "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-1_3821.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Plans to increase immigration quota",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3806.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Change to the Aliens Act regarding temporary agency work ",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-13_3776.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Research group for monitoring social transition of Ida-Viru",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-42_3678.html"
         },
         {
             "date": "09 June 2025",
@@ -33,33 +45,21 @@
         },
         {
             "date": "09 June 2025",
+            "title": "Environment and Responsible Entrepreneurship Working Group",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3659.html"
+        },
+        {
+            "date": "09 June 2025",
             "title": "Just transition forum",
             "category": "Other",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-46_3671.html"
         },
         {
             "date": "09 June 2025",
-            "title": "Environment and Responsible Entrepreneurship Working Group",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3659.html"
-        },
-        {
-            "date": "09 January 2025",
-            "title": "New employment programme 2021-2023",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2021-1_1635.html"
-        },
-        {
-            "date": "09 January 2025",
-            "title": "Supporting the employment of a beneficiary of international protection",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2022-23_2881.html"
-        },
-        {
-            "date": "09 January 2025",
-            "title": "Internationalisation activities of the Estonian Business and Innovation Agency",
-            "category": "Measures related to foreign trade",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-1994-22_2580.html"
+            "title": "Research group for monitoring social transition of Ida-Viru",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-42_3678.html"
         }
     ]
 }

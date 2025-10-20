@@ -2,34 +2,46 @@
     "status": "success",
     "data": [
         {
-            "date": "05 June 2025",
-            "title": "Seasonal quota ordinance",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-51_3866.html"
+            "date": "26 September 2025",
+            "title": "Photovoltaics funding",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-1_3503.html"
         },
         {
-            "date": "05 June 2025",
-            "title": "Skilled Worker Agreement",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-43_3865.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Red-White-Red Card Plus for displaced persons from Ukraine",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-40_3862.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "International Skilled Worker Offensive",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2025-8_3832.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Red-White-Red-Card",
+            "date": "23 September 2025",
+            "title": "Work Foundation in the environmental field",
             "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-40_3827.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-14_3128.html"
+        },
+        {
+            "date": "23 September 2025",
+            "title": "Renovation bonus and 'out of oil and gas' promotion campaign",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2009-1_3433.html"
+        },
+        {
+            "date": "22 September 2025",
+            "title": "E-Mobility Funding 2024",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-9_3504.html"
+        },
+        {
+            "date": "22 September 2025",
+            "title": "Public transport incentive",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2021-44_3506.html"
+        },
+        {
+            "date": "19 September 2025",
+            "title": "Climate bonus and inflation bonus",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-36_2854.html"
+        },
+        {
+            "date": "25 June 2025",
+            "title": "Union Federation Climate office",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-46_3692.html"
         },
         {
             "date": "05 June 2025",
@@ -44,22 +56,10 @@
             "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-22_3688.html"
         },
         {
-            "date": "09 January 2025",
-            "title": "Succession bourse",
-            "category": "Matching/networking",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2009-1_2526.html"
-        },
-        {
-            "date": "09 January 2025",
-            "title": "Go international!",
-            "category": "Measures related to foreign trade",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2003-1_2565.html"
-        },
-        {
-            "date": "09 January 2025",
-            "title": "Home office regulation",
-            "category": "Teleworking arrangements, remote working",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2021-14_1742.html"
+            "date": "05 June 2025",
+            "title": "Seasonal quota ordinance",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-51_3866.html"
         }
     ]
 }
