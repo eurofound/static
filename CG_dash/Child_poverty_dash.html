@@ -8,10 +8,12 @@
 <!-- Highcharts -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
+
+<!-- ✅ Export modules needed for external hooks -->
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
-<script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
 
 <!-- PapaParse -->
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
@@ -28,13 +30,13 @@
   .pill.active{background:#e7effa; border-color:#b6c3d7}
   .row{display:flex; flex-wrap:wrap; align-items:center}
 
-  /* layout (cap overall height if desired, comment out if not needed) */
-+ .wrap{
-+   display:grid;
-+   grid-template-columns:260px 1fr;
-+   gap:16px;
-+   align-items:start;
-+ }
+  /* layout */
+  .wrap{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:16px;
+    align-items:start;
+  }
 
   .block{margin:0px 0 6px}
   .hdr{font-weight:700; color:#324a3f; margin:0 0 8px 2px}
@@ -42,7 +44,7 @@
 
   /* chart */
   .chart-panel{position:relative}
-  #chart{width:100%; height:420px} /* reduced to fit within 650px cap */
+  #chart{width:100%; height:420px}
 
   /* tabs */
   .bottom-bar{display:flex; gap:10px; justify-content:center; align-items:center; margin-top:8px; flex-wrap:wrap}
@@ -50,9 +52,6 @@
        border-radius:12px; background:#fff; cursor:pointer; font-weight:600}
   .tab svg{width:16px; height:16px}
   .tab.active{background:#111; color:#fff; border-color:#111}
-
-  /* hide in-frame export buttons (we use external hooks) */
-  .bottom-bar #dlCSV, .bottom-bar #dlPNG{ display:none !important; }
 
   /* country dropdown */
   .flag-dd{position:relative; width:260px}
@@ -108,11 +107,7 @@
         <svg viewBox="0 0 24 24" fill="none"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z" stroke="currentColor" stroke-width="2"/><path d="M9 3v15m6-12v15" stroke="currentColor" stroke-width="2"/></svg>
         Map
       </button>
-
       <span style="flex:1"></span>
-      <!-- hidden (external buttons control export) -->
-      <button class="btn" id="dlCSV">Download CSV</button>
-      <button class="btn" id="dlPNG">Download PNG</button>
     </div>
   </div>
 </div>
@@ -138,8 +133,9 @@ const FLAG_TEXT = {
 Highcharts.setOptions({
   chart:{animation:{duration:150}, style:{fontFamily:'Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial'}},
   plotOptions:{series:{animation:{duration:150}}},
-  exporting:{fallbackToExportServer:false, libURL:'https://code.highcharts.com/11.4.0/lib/'},
-  credits:{enabled:false}
+  credits:{enabled:false},
+  /* ✅ Global exporting opts: hide UI but allow programmatic export */
+  exporting:{ enabled:false, fallbackToExportServer:false, libURL:'https://code.highcharts.com/11.4.0/lib/' }
 });
 
 // helpers for percent formatting (clamp 0–100 and show no decimals)
@@ -328,63 +324,10 @@ function rebuildSide(){
 
 /* ========= flags & tiny flag SVG ========= */
 function flagSVG(code){
-  const pal={AT:'#ED2939,#FFFFFF,#ED2939',BE:'#000000,#FFD90C,#ED2939',BG:'#00966E,#FFFFFF,#D62612',HR:'#FF0000,#FFFFFF,#171796',CY:'#FFFFFF,#D57800,#107A3B',CZ:'#FFFFFF,#11457E,#D7141A',DK:'#C60C30,#FFFFFF,#C60C30',EE:'#4891D9,#000000,#FFFFFF',FI:'#FFFFFF,#003580,#FFFFFF',FR:'#0055A4,#FFFFFF,#EF4135',DE:'#000000,#DD0000,#FFCE00',GR:'#0D5EAF,#FFFFFF,#0D5EAF',HU:'#CE2939,#FFFFFF,#477050',IE:'#169B62,#FFFFFF,#FF883E',IT:'#009246,#FFFFFF,#CE2B37',LV:'#9E3039,#FFFFFF,#9E3039',LT:'#FDB913,#006A44,#C1272D',LU:'#00A1DE,#FFFFFF,#ED2939',NL:'#AE1C28,#FFFFFF,#21468B',PL:'#FFFFFF,#DC143C',PT:'#006600,#FF0000,#FFE600',RO:'#002B7F,#FCD116,#CE1126',SK:'#0B4EA2,#FFFFFF,#EE1C25',SI:'#0B4EA2,#FFFFFF,#EE1C25',ES:'#AA151B,#F1BF00,#AA151B',SE:'#006AA7,#FECC00',CH:'#D52B1E,#FFFFFF',IS:'#02529C,#FFFFFF,#DC1E35',NO:'#BA0C2F,#FFF,#00205B',GB:'#012169,#C8102E,#FFFFFF',IEU:'#003399,#003399,#003399'};
+  const pal={AT:'#ED2939,#FFFFFF,#ED2939',BE:'#000000,#FFD90C,#ED2939',BG:'#00966E,#FFFFFF,#D62612',HR:'#FF0000,#FFFFFF,#171796',CY:'#FFFFFF,#D57800,#107A3B',CZ:'#FFFFFF,#11457E,#D7141A',DK:'#C60C30,#FFFFFF,#C60C30',EE:'#4891D9,#000000,#FFFFFF',FI:'#FFFFFF,#003580,#FFFFFF',FR:'#0055A4,#FFFFFF,#EF4135',DE:'#000000,#DD0000,#FFCE00',GR:'#0D5EAF,#FFFFFF,#0D5EAF',HU:'#CE2939,#FFFFFF,#477050',IE:'#169B62,#FFFFFF,#FF883E',IT:'#009246,#FFFFFF,#CE2B37',LV:'#9E3039,#FFFFFF,#9E3039',LT:'#FDB913,#006A44,#C1272D',LU:'#00A1DE,#FFFFFF,#ED2939',NL:'#AE1C28,#FFFFFF,#21468B',PL:'#FFFFFF,#DC143C',PT:'#006600,#FF0000,#FFE600',RO:'#002B7F,#FCD116,#CE1126',SK:'#0B4EA2,#FFFFFF,#EE1C25',SI:'#0B4EA2,#FFFFFF,#EE1C25',ES:'#AA151B,#F1BF00,#AA151B',SE:'#006AA7,#FECC00',CH:'#D52B1E,#FFFFFF',IS:'#02529C,#FFFFFF,#DC1D35',NO:'#BA0C2F,#FFF,#00205B',GB:'#012169,#C8102E,#FFFFFF',IEU:'#003399,#003399,#003399'};
   const p=(pal[(code||'').toUpperCase()]||'#ccc,#ccc,#ccc').split(',');
   return `<svg class="fi" viewBox="0 0 24 16"><rect width="24" height="16" fill="${p[0]}"/><rect y="5.33" width="24" height="5.34" fill="${p[1]}"/><rect y="10.67" width="24" height="5.33" fill="${p[2]}"/></svg>`;
 }
-
-/* ========= export (external buttons #btnPNG / #btnCSV and parent postMessage) ========= */
-function exportName(){
-  const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
-  return `${state.id}__${state.breakdown}__${tail}`.toLowerCase().replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');
-}
-function wireExports(){
-  const btnPNG = document.getElementById('btnPNG');
-  const btnCSV = document.getElementById('btnCSV');
-  if(chart && btnPNG && btnCSV){
-    btnPNG.disabled = btnCSV.disabled = false;
-
-    btnPNG.onclick = ()=>{
-      const hadLogo = !!chart._brand;
-      if(hadLogo) removeLogo(chart); // prevent CORS-taint
-      chart.exportChartLocal({ type:'image/png', filename: exportName() });
-      if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
-    };
-
-    btnCSV.onclick = ()=>{
-      const csv = chart.getCSV();
-      const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = exportName() + '.csv';
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-    };
-  }
-}
-
-// ALSO support parent-page triggers via postMessage (for iframes)
-window.addEventListener('message', (e)=>{
-  const msg = e.data || {};
-  if(!chart) return;
-  if(msg.type === 'export-png'){
-    const hadLogo = !!chart._brand;
-    if(hadLogo) removeLogo(chart);
-    chart.exportChartLocal({ type:'image/png', filename: exportName() });
-    if(hadLogo) setTimeout(()=>placeLogo(chart), 0);
-  }
-  if(msg.type === 'export-csv'){
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName() + '.csv';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  }
-});
 
 /* ========= draw ========= */
 function draw(){
@@ -419,27 +362,23 @@ function draw(){
 
     chart = Highcharts.chart('chart',{
       chart:{ type:'line', spacing:[10,10,40,10], backgroundColor:'transparent',
-        events:{ load(){placeLogo(this); wireExports();}, redraw(){placeLogo(this);} } },
+        events:{ load(){placeLogo(this);}, redraw(){placeLogo(this);} } },
       title:{ text: state.id },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
       xAxis:{ categories: years, tickmarkPlacement:'on', lineColor:'#dadde1' },
-yAxis: {
-  title: { text: null },
-  gridLineColor: '#f0f2f5',
-  // Let Highcharts auto-scale, but never go above 100 when values look like %
-  ceiling: isPct ? 100 : undefined,   // <-- key change
-  // (optional) keep the axis from dipping below 0 for % series
-  softMin: isPct ? 0 : undefined,
-  labels: {
-    formatter() {
-      // whole-number % for percentage-like series; otherwise keep 1 decimal
-      return isPct
-        ? Highcharts.numberFormat(Math.max(0, Math.min(100, this.value)), 0) + '%'
-        : Highcharts.numberFormat(this.value, 1);
-    }
-  }
-}
-,
+      yAxis: {
+        title: { text: null },
+        gridLineColor: '#f0f2f5',
+        ceiling: isPct ? 100 : undefined,
+        softMin: isPct ? 0 : undefined,
+        labels: {
+          formatter() {
+            return isPct
+              ? Highcharts.numberFormat(Math.max(0, Math.min(100, this.value)), 0) + '%'
+              : Highcharts.numberFormat(this.value, 1);
+          }
+        }
+      },
       legend:{ enabled:true },
       tooltip:{
         shared:true,
@@ -472,7 +411,7 @@ yAxis: {
 
     chart = Highcharts.chart('chart',{
       chart:{ type:'bar', spacing:[10,10,40,80], backgroundColor:'transparent',
-        events:{ load(){placeLogo(this); wireExports();}, redraw(){placeLogo(this);} } },
+        events:{ load(){placeLogo(this);}, redraw(){placeLogo(this);} } },
       title:{ text:`${state.id} (${state.year})` },
       subtitle:{ text:`Breakdown: ${state.breakdown}` },
       xAxis:{ categories: cats, lineColor:'#dadde1', labels:{ style:{ fontSize:'11px' } } },
@@ -530,13 +469,41 @@ yAxis: {
       }},
       series:[{ name:state.id, data, joinBy:'hc-key', nullColor:'#f1f3f5', states:{hover:{color:'#a4edba'}}, borderColor:'#fff', borderWidth:0.6 }]
     });
-
-    wireExports();
   }
 }
 
 /* tabs */
 el.tabs.forEach(b=>b.addEventListener('click',()=>{ state.tab=b.dataset.t; rebuildSide(); draw(); }));
+
+/* ======= ✅ External download hooks ======= */
+
+/* Optional: simple filename helper */
+function exportName(kind){
+  const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
+  return `${(state.id||'chart')}__${state.breakdown||'all'}__${tail}__${kind}`.toLowerCase().replace(/[^\w]+/g,'_');
+}
+
+window.addEventListener('message', (event) => {
+  if (!chart) return;
+
+  if (event.data === 'download-png') {
+    const hadLogo = !!chart._brand;
+    if (hadLogo) removeLogo(chart); // avoid CORS-taint from external image
+    chart.exportChartLocal({ type: 'image/png', filename: exportName('img') });
+    if (hadLogo) setTimeout(()=>placeLogo(chart), 0);
+  }
+
+  if (event.data === 'download-csv') {
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName('data') + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  }
+});
 </script>
 </body>
 </html>
