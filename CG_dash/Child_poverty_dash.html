@@ -30,13 +30,13 @@
   .pill.active{background:#e7effa; border-color:#b6c3d7}
   .row{display:flex; flex-wrap:wrap; align-items:center}
 
-  /* layout */
-  .wrap{
-    display:grid;
-    grid-template-columns:260px 1fr;
-    gap:16px;
-    align-items:start;
-  }
+  /* layout (cap overall height if desired, comment out if not needed) */
++ .wrap{
++   display:grid;
++   grid-template-columns:260px 1fr;
++   gap:16px;
++   align-items:start;
++ }
 
   .block{margin:0px 0 6px}
   .hdr{font-weight:700; color:#324a3f; margin:0 0 8px 2px}
@@ -44,7 +44,7 @@
 
   /* chart */
   .chart-panel{position:relative}
-  #chart{width:100%; height:420px}
+  #chart{width:100%; height:420px} /* reduced to fit within 650px cap */
 
   /* tabs */
   .bottom-bar{display:flex; gap:10px; justify-content:center; align-items:center; margin-top:8px; flex-wrap:wrap}
@@ -52,6 +52,9 @@
        border-radius:12px; background:#fff; cursor:pointer; font-weight:600}
   .tab svg{width:16px; height:16px}
   .tab.active{background:#111; color:#fff; border-color:#111}
+
+  /* hide in-frame export buttons (we use external hooks) */
+  .bottom-bar #dlCSV, .bottom-bar #dlPNG{ display:none !important; }
 
   /* country dropdown */
   .flag-dd{position:relative; width:260px}
