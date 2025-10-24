@@ -162,15 +162,28 @@ const el = {
   chart: $('#chart'),
   tabs: [$('#tLine'), $('#tBar'), $('#tMap')]
 };
+// Preload logo to get its true aspect ratio
+let logoAspect = 1; // h/w
+(() => {
+  const img = new Image();
+  img.onload = () => { if (img.naturalWidth) logoAspect = img.naturalHeight / img.naturalWidth; };
+  img.src = LOGO_URL;
+})();
 
 /* ========= logo helpers ========= */
 function placeLogo(hc){
   try{
-    const w=70, h=Math.round(w*0.35), x=hc.chartWidth-w-6, y=hc.chartHeight-h-6;
-    if(hc._brand) hc._brand.destroy();
-    hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h).css({opacity:.95, pointerEvents:'none'}).add();
+    const w = 70;                         // pick the width you like
+    const h = Math.round(w * logoAspect); // keep original aspect
+    const x = hc.chartWidth  - w - 6;
+    const y = hc.chartHeight - h - 6;
+    if (hc._brand) hc._brand.destroy();
+    hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h)
+      .css({opacity:.95, pointerEvents:'none'})
+      .add();
   }catch(e){}
 }
+
 function removeLogo(hc){ if(hc && hc._brand){ hc._brand.destroy(); hc._brand=null; } }
 
 /* ========= data load (Title-aware) ========= */
@@ -251,11 +264,31 @@ function setDefaults(){
   const slice = rows.filter(r=>r[H.ID]===state.id && r[H.Breakdown]===state.breakdown && Number.isFinite(r[H.Value]));
   const csAll = sortAlpha(uniq(slice.map(r=>r[H.Country]).filter(Boolean)));
   const eu = csAll.find(c=>EU.has(c)) || null;
+
+  // keep any already-selected countries that still exist
   state.countries = state.countries.filter(c=>csAll.includes(c));
-  if(state.countries.length===0){ state.countries = [eu, ...csAll.filter(c=>c!==eu)].slice(0,4).filter(Boolean); }
-  const yrs = availableYears(); if(yrs.length){ state.year = yrs[yrs.length-1]; }
+  if(state.countries.length===0){
+    state.countries = [eu, ...csAll.filter(c=>c!==eu)].slice(0,4).filter(Boolean);
+  }
+
+  // 🔒 preserve year across indicator changes (bar & map)
+  const yrs = availableYears();
+  if (yrs.length){
+    if (state.year == null){
+      state.year = yrs[yrs.length - 1]; // first load only
+    } else if (!yrs.includes(state.year)){
+      // pick the nearest year to the one user had selected
+      let nearest = yrs[0];
+      for (const y of yrs){
+        if (Math.abs(y - state.year) < Math.abs(nearest - state.year)) nearest = y;
+      }
+      state.year = nearest;
+    }
+  }
+
   rebuildSide();
 }
+
 
 function rebuildSide(){
   el.sideHdr.innerHTML = ''; el.sideCtrls.innerHTML = '';
@@ -434,42 +467,54 @@ function draw(){
     });
 
   }else{ // map
-    const yrRows = subset({year:state.year});
-    const data = [];
-    for(const r of yrRows){
-      const k=HC_KEY[r[H.Country]], v=+r[H.Value];
-      if(k && isFinite(v)) data.push({ 'hc-key':k, value:v, name:r[H.Country], flag:(r._flag||'') });
-    }
-    const values = data.map(d=>d.value);
-    const isPct = pctRange(values);
-    let minVal = values.length ? Math.min(...values) : 0;
-    let maxVal = values.length ? Math.max(...values) : 1;
-    let cMin = Math.max(0, minVal * 0.9);
-    let cMax = Math.min(100, maxVal);
-    if(cMax <= cMin){ cMax = Math.min(100, cMin + 1); }
-
-    chart = Highcharts.mapChart('chart',{
-      chart:{ map: Highcharts.maps['custom/europe'], spacing:[10,10,40,10], backgroundColor:'transparent', animation:false },
-      mapView:{ animation:false },
-      title:{ text:`${state.id} (${state.year})` },
-      subtitle:{ text:`Breakdown: ${state.breakdown}` },
-      colorAxis:{
-        min:cMin, max:cMax, tickAmount:6,
-        stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
-        labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value,1); } }
-      },
-      legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,
-               backgroundColor:'#fff', borderWidth:0, title:{text:isPct?'%':''} },
-      mapNavigation:{ enabled:true },
-      tooltip:{ formatter:function(){
-        const v=isPct?(Highcharts.numberFormat(this.point.value,1)+'%'):Highcharts.numberFormat(this.point.value,1);
-        const fTxt = FLAG_TEXT[this.point.flag] || '';
-        const flagHT = fTxt ? ` ${Highcharts.escapeHTML(fTxt)}` : '';
-        return `<b>${state.year}</b><br>${this.point.name}: <b>${v}</b>${flagHT}`;
-      }},
-      series:[{ name:state.id, data, joinBy:'hc-key', nullColor:'#f1f3f5', states:{hover:{color:'#a4edba'}}, borderColor:'#fff', borderWidth:0.6 }]
-    });
+  const yrRows = subset({year:state.year});
+  const data = [];
+  for(const r of yrRows){
+    const k=HC_KEY[r[H.Country]], v=+r[H.Value];
+    if(k && isFinite(v)) data.push({ 'hc-key':k, value:v, name:r[H.Country], flag:(r._flag||'') });
   }
+  const values = data.map(d=>d.value);
+  const isPct = pctRange(values);
+  let minVal = values.length ? Math.min(...values) : 0;
+  let maxVal = values.length ? Math.max(...values) : 1;
+  let cMin = Math.max(0, minVal * 0.9);
+  let cMax = Math.min(100, maxVal);
+  if(cMax <= cMin){ cMax = Math.min(100, cMin + 1); }
+
+  chart = Highcharts.mapChart('chart',{
+    chart:{
+      map: Highcharts.maps['custom/europe'],
+      spacing:[10,10,40,10],
+      backgroundColor:'transparent',
+      animation: false                 // ⬇️ disable chart animation (map only)
+    },
+    mapView:{
+      animation: false                 // ⬇️ disable zoom/pan tween
+    },
+    plotOptions:{
+      series:{ animation: false }      // ⬇️ disable series transitions on map
+    },
+    title:{ text:`${state.id} (${state.year})` },
+    subtitle:{ text:`Breakdown: ${state.breakdown}` },
+    colorAxis:{
+      min:cMin, max:cMax, tickAmount:6,
+      stops:[[0,'#355582'],[0.5,'#9ca2a9'],[1,'#005F2F']],
+      labels:{ formatter(){ return isPct ? fmtPct0(this.value) : Highcharts.numberFormat(this.value,1); } }
+    },
+    legend:{ layout:'vertical', floating:true, align:'left', verticalAlign:'top', x:30, y:20,
+             backgroundColor:'#fff', borderWidth:0, title:{text:isPct?'%':''} },
+    mapNavigation:{ enabled:true },
+    tooltip:{ formatter:function(){
+      const v=isPct?(Highcharts.numberFormat(this.point.value,1)+'%'):Highcharts.numberFormat(this.point.value,1);
+      const fTxt = FLAG_TEXT[this.point.flag] || '';
+      const flagHT = fTxt ? ` ${Highcharts.escapeHTML(fTxt)}` : '';
+      return `<b>${state.year}</b><br>${this.point.name}: <b>${v}</b>${flagHT}`;
+    }},
+    series:[{ name:state.id, data, joinBy:'hc-key', nullColor:'#f1f3f5',
+              states:{hover:{color:'#a4edba'}}, borderColor:'#fff', borderWidth:0.6 }]
+  });
+}
+
 }
 
 /* tabs */
@@ -487,10 +532,13 @@ window.addEventListener('message', (event) => {
   if (!chart) return;
 
   if (event.data === 'download-png') {
-    const hadLogo = !!chart._brand;
-    if (hadLogo) removeLogo(chart); // avoid CORS-taint from external image
-    chart.exportChartLocal({ type: 'image/png', filename: exportName('img') });
-    if (hadLogo) setTimeout(()=>placeLogo(chart), 0);
+    chart.exportChartLocal({
+      type: 'image/png',
+      filename: exportName('img'),
+      chartOptions: {
+        chart: { backgroundColor: '#ffffff', plotBackgroundColor: '#ffffff' }
+      }
+    });
   }
 
   if (event.data === 'download-csv') {
@@ -504,6 +552,7 @@ window.addEventListener('message', (event) => {
     setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
   }
 });
+
 </script>
 </body>
 </html>
