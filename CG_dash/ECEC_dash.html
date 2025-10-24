@@ -135,7 +135,14 @@ Highcharts.setOptions({
   plotOptions:{series:{animation:{duration:150}}},
   credits:{enabled:false},
   /* ✅ Global exporting opts: hide UI but allow programmatic export */
-  exporting:{ enabled:false, fallbackToExportServer:false, libURL:'https://code.highcharts.com/11.4.0/lib/' }
+  
+   exporting: {
+    enabled: false,                         // keep UI hidden
+    fallbackToExportServer: false,
+    libURL: 'https://code.highcharts.com/11.4.0/lib/',
+    // ⬇️ only applied during export, not on screen
+    chartOptions: {
+      chart: { backgroundColor: '#ffffff', plotBackgroundColor: '#ffffff' }}}
 });
 
 // helpers for percent formatting (clamp 0–100 and show no decimals)
