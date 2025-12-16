@@ -9,6 +9,10 @@
   <script src="https://code.highcharts.com/highcharts-more.js"></script>
   <script src="https://code.highcharts.com/maps/modules/map.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+
   <script src="https://unpkg.com/topojson-client@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
@@ -49,13 +53,29 @@
     .map-grid.split, .radar-grid.split { grid-template-columns: 1fr 1fr; }
     .chart-card { border: none; overflow: hidden; position: relative; background: transparent; }
     
-    #map-overlay-controls { position: absolute; top: 0px; right: 0px; z-index: 100; display: none; flex-direction: column; gap: 0; }
+    /* MODIFIED: Map Controls (Moved to Left) */
+    #map-overlay-controls { 
+        position: absolute; 
+        top: 10px; 
+        left: 10px; /* Moved to Left */
+        z-index: 100; 
+        display: none; 
+        flex-direction: column; 
+        gap: 0; 
+    }
     .rocker-container { display: flex; flex-direction: column; background: transparent; gap: 6px; }
-    .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.85); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); backdrop-filter: blur(4px); }
-    .rocker-opt.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.95); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); backdrop-filter: blur(4px); }
+    .rocker-opt.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
     
-    footer { margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 16px; color: #6b7280; font-size: 13px; }
+    footer { margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
+    .footer-left { display: flex; align-items: center; gap: 16px; }
+    .footer-right { display: flex; gap: 8px; }
     footer img { height: 24px; opacity: 0.9; }
+
+    .export-btn { padding: 0.45rem 1rem; border: 1px solid #cfd8e3; border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; font-weight: 600; color: #374151; display: flex; align-items: center; gap: 6px; transition: all 0.2s; }
+    .export-btn:hover { background: #f3f4f6; border-color: #b6c3d7; }
+    .export-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
     #loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #6b7280; }
   </style>
 </head>
@@ -95,7 +115,22 @@
     <div id="r2-container" class="single-chart-view" style="display: none;"></div>
   </div>
 
-  <footer><img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo"><div>Calculations based on EU SILC microdata for 2023</div></footer>
+  <footer>
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo">
+        <div>Calculations based on EU SILC microdata for 2023</div>
+    </div>
+    <div class="footer-right">
+        <button id="dlPNG" class="export-btn" title="Download Image">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Image
+        </button>
+        <button id="dlCSV" class="export-btn" title="Download Data">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Data
+        </button>
+    </div>
+  </footer>
 </div>
 
 <script>
@@ -103,21 +138,37 @@ const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
 
 Highcharts.setOptions({
-  colors: PALETTE_5, chart: { style: { fontFamily: 'Inter, Arial, sans-serif' }, backgroundColor: null, animation: { duration: 500 } },
+  colors: PALETTE_5, 
+  chart: { style: { fontFamily: 'Inter, Arial, sans-serif' }, backgroundColor: null, animation: { duration: 500 } },
   title: { style: { fontSize: '16px', fontWeight: '700', color: '#111827' } },
   plotOptions: { series: { animation: { duration: 500 } } },
   tooltip: { useHTML: true, backgroundColor: 'rgba(255,255,255,1)', borderRadius: 8, shadow: { opacity: 0.1 }, borderWidth: 0, padding: 0, followPointer: false },
-  credits: { enabled: false }
+  credits: { enabled: false },
+  
+  // GLOBAL EXPORT CONFIG: White Background + Title enabled
+  exporting: {
+      enabled: true, 
+      buttons: { contextButton: { menuItems: ["viewFullscreen", "separator", "downloadPNG", "downloadJPEG", "downloadPDF", "downloadSVG", "separator", "downloadCSV", "downloadXLS"] } },
+      libURL: 'https://code.highcharts.com/lib/',
+      chartOptions: {
+          chart: {
+              backgroundColor: '#FFFFFF' // Force white background
+          },
+          title: {
+              style: { display: 'block' } // Ensure title is shown
+          }
+      }
+  }
 });
 
 /* --- PRELOAD RESOURCES --- */
 window.nutsNames = {};
 window.nationalTopology = null;
 window.nutsTopology = null;
+window.activeChart = null; 
 
 async function preloadResources() {
     try {
-        // 1. Regional Map (NUTS)
         const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
         const respReg = await fetch(regionalUrl);
         const topoReg = await respReg.json();
@@ -130,11 +181,9 @@ async function preloadResources() {
             if(id && name) window.nutsNames[id] = name;
         });
 
-        // 2. National Map (UPDATED to your master.geojson)
         const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
         const respNat = await fetch(nationalUrl);
         window.nationalTopology = await respNat.json();
-
     } catch(e) { console.warn("Failed to load maps", e); }
 }
 
@@ -158,33 +207,19 @@ function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
     html += getMiniBarHTML(mainLabel, mainValue, mainColor, true);
 
     if (state.mapViewMode === 'national') {
-        // Updated to use the ID from the new master file
         const countryCode = point['hc-key'] || point.properties.id || point.id; 
         const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
-        
-        const nutsData = rawData.filter(d => 
-            d['Indicator name'] === state.indicator &&
-            String(d['Top category']).toLowerCase().includes('nuts') &&
-            (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))
-        ).sort((a,b) => b['Value'] - a['Value']);
-
+        const nutsData = rawData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase().includes('nuts') && (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))).sort((a,b) => b['Value'] - a['Value']);
         if (nutsData.length > 0) {
              html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">Regional Breakdown:</div>`;
-             nutsData.forEach(d => {
-                 const name = window.nutsNames[d['Category']] || d['Category'];
-                 html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false);
-             });
+             nutsData.forEach(d => { const name = window.nutsNames[d['Category']] || d['Category']; html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false); });
         }
     } else {
         const nutsId = point.id;
         if(nutsId && nutsId.length >= 2) {
             const countryCode = nutsId.substring(0, 2);
             const lookupCode = (countryCode === 'EL') ? 'GR' : countryCode; 
-            const natData = rawData.find(d => 
-                 d['Indicator name'] === state.indicator &&
-                 !String(d['Top category']).toLowerCase().includes('nuts') &&
-                 (d['Country Code'] === countryCode || d['Country Code'] === lookupCode)
-            );
+            const natData = rawData.find(d => d['Indicator name'] === state.indicator && !String(d['Top category']).toLowerCase().includes('nuts') && (d['Country Code'] === countryCode || d['Country Code'] === lookupCode));
             if (natData) {
                  html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">National Average:</div>`;
                  html += getMiniBarHTML(natData['Country Name'], natData['Value'], PALETTE_5[2], false);
@@ -198,15 +233,11 @@ function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
 function getTooltipHTML(point) {
   let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
   let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
-  
   const color = point.color || (point.series ? point.series.color : '#333');
-
   if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
-  
   if (typeof val === 'number') val = val.toFixed(1);
   let subLabel = point.series ? point.series.name : ''; 
   if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
-
   return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}%</div></div>`;
 }
 
@@ -243,7 +274,6 @@ Papa.parse(CSV_URL, {
   complete: function(results) {
     rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
           d['Value'] = d['Value'] * 100; 
-          // Normalize Greece
           if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
           return d; 
       });
@@ -256,126 +286,55 @@ async function init() {
   await preloadResources(); 
   els.loader.style.display = 'none';
   els.cat.removeAttribute('disabled');
-
   const topics = [...new Set(rawData.map(d => d['Topic']))].sort();
   state.topic = topics[0];
   els.topics.innerHTML = topics.map(t => `<button class="topic-btn ${t === state.topic ? 'active' : ''}" onclick="setTopic('${t}')">${t}</button>`).join('');
-
   updateIndicators();
-  
   const allCountries = [...new Set(rawData.map(d => d['Country Name']))].sort();
   state.barCountries = [...allCountries]; 
   populateCheckboxList(els.barCountryList, allCountries, state.barCountries, 'barCountry');
   setupDropdown(els.barCountryToggle, els.barCountryList);
-
   state.radarCountries = [allCountries[0]]; 
   if(allCountries.length > 1) state.radarCountries.push(allCountries[1]); 
   populateCheckboxList(els.radarCountryList, allCountries, state.radarCountries, 'radarCountry');
   setupDropdown(els.radarCountryToggle, els.radarCountryList);
-
   state.cpCountry = allCountries[0];
   els.cpCountrySel.innerHTML = allCountries.map(c => `<option>${c}</option>`).join('');
   els.cpCountrySel.onchange = (e) => { state.cpCountry = e.target.value; updateChart(); };
-  
   state.r2Countries = allCountries.slice(0, 3);
   populateCheckboxList(els.r2CountryList, allCountries, state.r2Countries, 'r2Country');
   setupDropdown(els.r2CountryToggle, els.r2CountryList);
-  
   buildGlobalIndicatorList();
   setupDropdown(els.globalIndToggle, els.globalIndList);
-
   buildNestedCategoryDropdown();
   setupDropdown(els.mapCatToggle, els.mapCatList);
-  
   setMapView('national');
-  updateChart();
-}
-
-function buildGlobalIndicatorList() {
-    const map = new Map();
-    rawData.forEach(d => {
-        const top = d['Topic']; const ind = d['Indicator name'];
-        if(!map.has(top)) map.set(top, new Set());
-        map.get(top).add(ind);
-    });
-    let html = `<label class="select-all-row"><input type="checkbox" id="all-cpInd" onchange="toggleAll('cpInd', this.checked)"> (Un)Select All</label>`;
-    Array.from(map.keys()).sort().forEach(top => {
-        html += `<div class="group-header">${top}</div>`;
-        Array.from(map.get(top)).sort().forEach(ind => {
-            const checked = state.globalIndicators.includes(ind) ? 'checked' : '';
-            html += `<label><input type="checkbox" value="${ind}" ${checked} onchange="updateSelection('globalInd', this)"> ${ind}</label>`;
-        });
-    });
-    els.globalIndList.innerHTML = html;
-    if(state.globalIndicators.length === 0) {
-        const firstTopic = Array.from(map.keys())[0];
-        const firstInds = Array.from(map.get(firstTopic)).slice(0,5);
-        state.globalIndicators = firstInds;
-        firstInds.forEach(i => { const cb = els.globalIndList.querySelector(`input[value="${i}"]`); if(cb) cb.checked = true; });
-        updateButtonLabel(els.globalIndToggle, state.globalIndicators, 100, "Indicators"); 
-    }
-}
-
-function setTopic(t) {
-  state.topic = t;
-  document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b.textContent === t));
-  updateIndicators();
-}
-
-function updateIndicators() {
-  const topicData = rawData.filter(d => d['Topic'] === state.topic);
-  const indicators = [...new Set(topicData.map(d => d['Indicator name']))].sort();
-  state.indicator = indicators[0];
-  els.ind.innerHTML = indicators.map(i => `<option>${i}</option>`).join('');
-  els.ind.onchange = (e) => { state.indicator = e.target.value; updateCategories(); };
-  updateCategories();
-}
-
-function updateCategories() {
-  const indData = rawData.filter(d => d['Indicator name'] === state.indicator);
-  const topCats = [...new Set(indData.map(d => d['Top category']))]
-    .filter(c => !String(c || "").toLowerCase().includes('nuts region'))
-    .sort((a, b) => { if (a === 'All') return -1; if (b === 'All') return 1; return String(a).localeCompare(String(b)); });
   
-  if (topCats.length === 0) { els.cat.innerHTML = '<option disabled>No Categories</option>'; state.topCat = null; return; }
-  state.topCat = topCats.includes('All') ? 'All' : topCats[0];
-  els.cat.innerHTML = topCats.map(c => `<option>${c}</option>`).join('');
-  els.cat.value = state.topCat;
-  els.cat.onchange = (e) => { state.topCat = e.target.value; updateDeepCategories(); updateChart(); };
-  updateDeepCategories(); 
+  // Bind Export Buttons
+  document.getElementById('dlPNG').addEventListener('click', () => {
+      if (window.activeChart) window.activeChart.exportChartLocal({ type: 'image/png' });
+  });
+  document.getElementById('dlCSV').addEventListener('click', () => {
+      if (window.activeChart) window.activeChart.downloadCSV();
+  });
+
   updateChart();
 }
 
-function updateDeepCategories() {
-  const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
-  const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts'));
-  state.mapCategories = [cats[0]];
-  populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat');
-  updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected");
-}
-
-function buildNestedCategoryDropdown() {
-  const map = new Map();
-  rawData.forEach(d => {
-    const top = d['Top category']; const cat = d['Category'];
-    const topStr = String(top || "").toLowerCase(); const catStr = String(cat || "").toLowerCase();
-    if(topStr.includes('nuts') || catStr.includes('nuts')) return;
-    if(!map.has(top)) map.set(top, new Set());
-    map.get(top).add(cat);
-  });
-  const sortedTop = Array.from(map.keys()).sort((a,b) => (a==='All'?-1:b==='All'?1:String(a).localeCompare(String(b))));
-  let html = '';
-  let firstVal = map.has('All') ? 'All' : (sortedTop.length > 0 ? sortedTop[0] : '');
-  sortedTop.forEach(top => {
-    html += `<optgroup label="${top}">`;
-    const cats = Array.from(map.get(top)).sort();
-    cats.forEach(c => { html += `<option value="${c}">${c}</option>`; });
-    html += `</optgroup>`;
-  });
-  els.cpCatSel.innerHTML = html;
-  if(firstVal) { state.cpCategory = firstVal; els.cpCatSel.value = firstVal; }
-  els.cpCatSel.onchange = (e) => { state.cpCategory = e.target.value; updateChart(); };
-}
+function buildGlobalIndicatorList() { const map = new Map(); rawData.forEach(d => { const top = d['Topic']; const ind = d['Indicator name']; if(!map.has(top)) map.set(top, new Set()); map.get(top).add(ind); }); let html = `<label class="select-all-row"><input type="checkbox" id="all-cpInd" onchange="toggleAll('cpInd', this.checked)"> (Un)Select All</label>`; Array.from(map.keys()).sort().forEach(top => { html += `<div class="group-header">${top}</div>`; Array.from(map.get(top)).sort().forEach(ind => { const checked = state.globalIndicators.includes(ind) ? 'checked' : ''; html += `<label><input type="checkbox" value="${ind}" ${checked} onchange="updateSelection('globalInd', this)"> ${ind}</label>`; }); }); els.globalIndList.innerHTML = html; if(state.globalIndicators.length === 0) { const firstTopic = Array.from(map.keys())[0]; const firstInds = Array.from(map.get(firstTopic)).slice(0,5); state.globalIndicators = firstInds; firstInds.forEach(i => { const cb = els.globalIndList.querySelector(`input[value="${i}"]`); if(cb) cb.checked = true; }); updateButtonLabel(els.globalIndToggle, state.globalIndicators, 100, "Indicators"); } }
+function setTopic(t) { state.topic = t; document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b.textContent === t)); updateIndicators(); }
+function updateIndicators() { const topicData = rawData.filter(d => d['Topic'] === state.topic); const indicators = [...new Set(topicData.map(d => d['Indicator name']))].sort(); state.indicator = indicators[0]; els.ind.innerHTML = indicators.map(i => `<option>${i}</option>`).join(''); els.ind.onchange = (e) => { state.indicator = e.target.value; updateCategories(); }; updateCategories(); }
+function updateCategories() { const indData = rawData.filter(d => d['Indicator name'] === state.indicator); const topCats = [...new Set(indData.map(d => d['Top category']))].filter(c => !String(c || "").toLowerCase().includes('nuts region')).sort((a, b) => { if (a === 'All') return -1; if (b === 'All') return 1; return String(a).localeCompare(String(b)); }); if (topCats.length === 0) { els.cat.innerHTML = '<option disabled>No Categories</option>'; state.topCat = null; return; } state.topCat = topCats.includes('All') ? 'All' : topCats[0]; els.cat.innerHTML = topCats.map(c => `<option>${c}</option>`).join(''); els.cat.value = state.topCat; els.cat.onchange = (e) => { state.topCat = e.target.value; updateDeepCategories(); updateChart(); }; updateDeepCategories(); updateChart(); }
+function updateDeepCategories() { const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat); const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts')); state.mapCategories = [cats[0]]; populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat'); updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected"); }
+function buildNestedCategoryDropdown() { const map = new Map(); rawData.forEach(d => { const top = d['Top category']; const cat = d['Category']; const topStr = String(top || "").toLowerCase(); const catStr = String(cat || "").toLowerCase(); if(topStr.includes('nuts') || catStr.includes('nuts')) return; if(!map.has(top)) map.set(top, new Set()); map.get(top).add(cat); }); const sortedTop = Array.from(map.keys()).sort((a,b) => (a==='All'?-1:b==='All'?1:String(a).localeCompare(String(b)))); let html = ''; let firstVal = map.has('All') ? 'All' : (sortedTop.length > 0 ? sortedTop[0] : ''); sortedTop.forEach(top => { html += `<optgroup label="${top}">`; const cats = Array.from(map.get(top)).sort(); cats.forEach(c => { html += `<option value="${c}">${c}</option>`; }); html += `</optgroup>`; }); els.cpCatSel.innerHTML = html; if(firstVal) { state.cpCategory = firstVal; els.cpCatSel.value = firstVal; } els.cpCatSel.onchange = (e) => { state.cpCategory = e.target.value; updateChart(); }; }
+function setMapView(mode) { state.mapViewMode = mode; els.viewNat.classList.toggle('active', mode === 'national'); els.viewNuts.classList.toggle('active', mode === 'nuts'); if (mode === 'nuts') { els.stdControls2.style.display = 'none'; els.mapControls.style.display = 'none'; } else { els.stdControls2.style.display = 'block'; els.mapControls.style.display = 'block'; } if (currentTab === 'map') updateChart(); }
+function populateCheckboxList(container, allItems, selectedItems, type) { let html = ''; if (type === 'barCountry' || type === 'cpInd') html += `<label class="select-all-row"><input type="checkbox" id="all-${type}" ${selectedItems.length === allItems.length ? 'checked' : ''} onchange="toggleAll('${type}', this.checked)"> (Un)Select All</label>`; html += allItems.map(c => `<label><input type="checkbox" value="${c}" ${selectedItems.includes(c)?'checked':''} onchange="updateSelection('${type}', this)"> ${c}</label>`).join(''); container.innerHTML = html; }
+function setupDropdown(btn, list) { btn.onclick = (e) => { e.stopPropagation(); document.querySelectorAll('.checkbox-list').forEach(l => { if(l!==list) l.classList.remove('visible'); }); list.classList.toggle('visible'); }; }
+document.addEventListener('click', (e) => { if (!e.target.closest('.dropdown-wrapper')) document.querySelectorAll('.checkbox-list').forEach(l => l.classList.remove('visible')); });
+function toggleAll(type, isChecked) { let container; if(type==='barCountry') container = els.barCountryList; else if(type==='cpInd') container = els.globalIndList; if(container) container.querySelectorAll('input[type="checkbox"]:not([id^="all"])').forEach(cb => cb.checked = isChecked); updateSelectionLogic(type); }
+function updateSelection(type, checkbox) { let container = null; if (type === 'mapCat') container = els.mapCatList; else if (type === 'radarCountry') container = els.radarCountryList; else if (type === 'globalInd') container = els.globalIndList; else if (type === 'r2Country') container = els.r2CountryList; if (!container) { updateSelectionLogic(type); return; } let currentList = []; if (type === 'mapCat') currentList = state.mapCategories; else if (type === 'radarCountry') currentList = state.radarCountries; else if (type === 'globalInd') currentList = state.globalIndicators; else if (type === 'r2Country') currentList = state.r2Countries; const max = (type === 'globalInd') ? 10 : (type === 'r2Country' ? 5 : 2); const val = checkbox.value; if (checkbox.checked) { currentList.push(val); if (currentList.length > max) { const removed = currentList.shift(); const removedCb = container.querySelector(`input[value="${removed}"]`); if (removedCb) removedCb.checked = false; } } else { currentList = currentList.filter(item => item !== val); } if (type === 'mapCat') state.mapCategories = currentList; else if (type === 'radarCountry') state.radarCountries = currentList; else if (type === 'globalInd') state.globalIndicators = currentList; else if (type === 'r2Country') state.r2Countries = currentList; updateSelectionLogic(type, true); }
+function updateSelectionLogic(type, skipRead = false) { let container, btn; if (type === 'barCountry') { container = els.barCountryList; btn = els.barCountryToggle; } else if (type === 'mapCat') { container = els.mapCatList; btn = els.mapCatToggle; } else if (type === 'radarCountry') { container = els.radarCountryList; btn = els.radarCountryToggle; } else if (type === 'globalInd') { container = els.globalIndList; btn = els.globalIndToggle; } else if (type === 'r2Country') { container = els.r2CountryList; btn = els.r2CountryToggle; } if (!skipRead) { const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:not([id^="all"])')).filter(cb => cb.checked).map(cb => cb.value); if (type === 'barCountry') state.barCountries = checked; if (type === 'mapCat') state.mapCategories = checked; if (type === 'radarCountry') state.radarCountries = checked; if (type === 'globalInd') state.globalIndicators = checked; if (type === 'r2Country') state.r2Countries = checked; } const list = (type==='barCountry') ? state.barCountries : (type==='mapCat') ? state.mapCategories : (type==='radarCountry') ? state.radarCountries : (type==='globalInd') ? state.globalIndicators : state.r2Countries; updateButtonLabel(btn, list, container.querySelectorAll('input:not([id^="all"])').length, type === 'globalInd' ? "Indicators" : "Selected"); const allCb = container.querySelector('input[id^="all"]'); if(allCb) allCb.checked = (list.length === container.querySelectorAll('input:not([id^="all"])').length); updateChart(); }
+function updateButtonLabel(btn, checked, total, suffix) { if (checked.length === total && total > 0 && suffix !== 'Selected') btn.querySelector('span').textContent = `All ${suffix}`; else if (checked.length === 0) btn.querySelector('span').textContent = `Select...`; else btn.querySelector('span').textContent = `${checked.length} ${suffix}`; }
 
 function switchTab(tab) {
   currentTab = tab;
@@ -403,60 +362,6 @@ function switchTab(tab) {
   updateChart();
 }
 
-function setMapView(mode) {
-    state.mapViewMode = mode;
-    els.viewNat.classList.toggle('active', mode === 'national');
-    els.viewNuts.classList.toggle('active', mode === 'nuts');
-    if (mode === 'nuts') { els.stdControls2.style.display = 'none'; els.mapControls.style.display = 'none'; } 
-    else { els.stdControls2.style.display = 'block'; els.mapControls.style.display = 'block'; }
-    if (currentTab === 'map') updateChart();
-}
-
-function populateCheckboxList(container, allItems, selectedItems, type) {
-  let html = '';
-  if (type === 'barCountry' || type === 'cpInd') html += `<label class="select-all-row"><input type="checkbox" id="all-${type}" ${selectedItems.length === allItems.length ? 'checked' : ''} onchange="toggleAll('${type}', this.checked)"> (Un)Select All</label>`;
-  html += allItems.map(c => `<label><input type="checkbox" value="${c}" ${selectedItems.includes(c)?'checked':''} onchange="updateSelection('${type}', this)"> ${c}</label>`).join('');
-  container.innerHTML = html;
-}
-function setupDropdown(btn, list) {
-  btn.onclick = (e) => { e.stopPropagation(); document.querySelectorAll('.checkbox-list').forEach(l => { if(l!==list) l.classList.remove('visible'); }); list.classList.toggle('visible'); };
-}
-document.addEventListener('click', (e) => { if (!e.target.closest('.dropdown-wrapper')) document.querySelectorAll('.checkbox-list').forEach(l => l.classList.remove('visible')); });
-
-function toggleAll(type, isChecked) {
-  let container; if(type==='barCountry') container = els.barCountryList; else if(type==='cpInd') container = els.globalIndList;
-  if(container) container.querySelectorAll('input[type="checkbox"]:not([id^="all"])').forEach(cb => cb.checked = isChecked);
-  updateSelectionLogic(type);
-}
-function updateSelection(type, checkbox) {
-  let container = null;
-  if (type === 'mapCat') container = els.mapCatList; else if (type === 'radarCountry') container = els.radarCountryList; else if (type === 'globalInd') container = els.globalIndList; else if (type === 'r2Country') container = els.r2CountryList;
-  if (!container) { updateSelectionLogic(type); return; }
-  let currentList = [];
-  if (type === 'mapCat') currentList = state.mapCategories; else if (type === 'radarCountry') currentList = state.radarCountries; else if (type === 'globalInd') currentList = state.globalIndicators; else if (type === 'r2Country') currentList = state.r2Countries;
-  const max = (type === 'globalInd') ? 10 : (type === 'r2Country' ? 5 : 2);
-  const val = checkbox.value;
-  if (checkbox.checked) { currentList.push(val); if (currentList.length > max) { const removed = currentList.shift(); const removedCb = container.querySelector(`input[value="${removed}"]`); if (removedCb) removedCb.checked = false; } } 
-  else { currentList = currentList.filter(item => item !== val); }
-  if (type === 'mapCat') state.mapCategories = currentList; else if (type === 'radarCountry') state.radarCountries = currentList; else if (type === 'globalInd') state.globalIndicators = currentList; else if (type === 'r2Country') state.r2Countries = currentList;
-  updateSelectionLogic(type, true); 
-}
-function updateSelectionLogic(type, skipRead = false) {
-  let container, btn;
-  if (type === 'barCountry') { container = els.barCountryList; btn = els.barCountryToggle; } else if (type === 'mapCat') { container = els.mapCatList; btn = els.mapCatToggle; } else if (type === 'radarCountry') { container = els.radarCountryList; btn = els.radarCountryToggle; } else if (type === 'globalInd') { container = els.globalIndList; btn = els.globalIndToggle; } else if (type === 'r2Country') { container = els.r2CountryList; btn = els.r2CountryToggle; }
-  if (!skipRead) {
-      const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:not([id^="all"])')).filter(cb => cb.checked).map(cb => cb.value);
-      if (type === 'barCountry') state.barCountries = checked; if (type === 'mapCat') state.mapCategories = checked; if (type === 'radarCountry') state.radarCountries = checked; if (type === 'globalInd') state.globalIndicators = checked; if (type === 'r2Country') state.r2Countries = checked;
-  }
-  const list = (type==='barCountry') ? state.barCountries : (type==='mapCat') ? state.mapCategories : (type==='radarCountry') ? state.radarCountries : (type==='globalInd') ? state.globalIndicators : state.r2Countries;
-  updateButtonLabel(btn, list, container.querySelectorAll('input:not([id^="all"])').length, type === 'globalInd' ? "Indicators" : "Selected");
-  const allCb = container.querySelector('input[id^="all"]'); if(allCb) allCb.checked = (list.length === container.querySelectorAll('input:not([id^="all"])').length);
-  updateChart();
-}
-function updateButtonLabel(btn, checked, total, suffix) {
-  if (checked.length === total && total > 0 && suffix !== 'Selected') btn.querySelector('span').textContent = `All ${suffix}`; else if (checked.length === 0) btn.querySelector('span').textContent = `Select...`; else btn.querySelector('span').textContent = `${checked.length} ${suffix}`;
-}
-
 function updateChart() {
   if (currentTab === 'country') return renderCountryProfile(); if (currentTab === 'radar2') return renderRadar2();
   if (currentTab === 'map') { renderMap(rawData); return; }
@@ -471,80 +376,50 @@ function renderBar(data) {
   const series = categories.map((cat, i) => ({
     name: cat, data: displayCountries.map(c => { const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; }), color: PALETTE_5[i % PALETTE_5.length] 
   }));
-  Highcharts.chart('bar-container', {
+  window.activeChart = Highcharts.chart('bar-container', {
     chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, xAxis: { categories: displayCountries, title: { text: null } }, yAxis: { title: { text: '%' }, labels: { format: '{value}%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
-    plotOptions: { bar: { pointPadding: 0.05, groupPadding: 0.05, dataLabels: { enabled: true, inside: true, align: 'right', formatter: function() { return this.y.toFixed(1); } } } }, series: series
+    plotOptions: { bar: { pointPadding: 0.05, groupPadding: 0.05, dataLabels: { enabled: true, inside: true, align: 'right', formatter: function() { return this.y.toFixed(1); } } } }, series: series,
+    exporting: { filename: `Housing_${state.indicator}_Bar` }
   });
 }
 
 async function renderMap(allData) {
   els.mapContainer.innerHTML = ''; els.mapContainer.className = 'map-grid';
-  
   if (state.mapViewMode === 'national') {
       const data = allData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
       const selectedCats = state.mapCategories;
       if (selectedCats.length === 0) { els.mapContainer.innerHTML = '<p style="text-align:center; padding:2rem;">Please select a category.</p>'; return; }
       els.mapContainer.className = selectedCats.length > 1 ? 'map-grid split' : 'map-grid';
-      
       selectedCats.forEach((cat, index) => {
         const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-${index}`; els.mapContainer.appendChild(div);
-        
-        // --- UPDATED MAP LOADING LOGIC ---
         if(!window.nationalTopology) return;
-        
-        let geojson;
-        // Check if it is already GeoJSON (FeatureCollection) or TopoJSON
-        if (window.nationalTopology.type === 'FeatureCollection') {
-            geojson = window.nationalTopology;
-        } else {
-            // Fallback for Eurostat TopoJSON (old method)
-            geojson = topojson.feature(window.nationalTopology, window.nationalTopology.objects.nutsrg);
-        }
-        
+        let geojson; if (window.nationalTopology.type === 'FeatureCollection') geojson = window.nationalTopology; else geojson = topojson.feature(window.nationalTopology, window.nationalTopology.objects.nutsrg);
         const mapData = data.filter(d => d['Category'] === cat).map(d => ({ 'id': d['Country Code'], value: d['Value'], name: d['Country Name'] }));
-
-        Highcharts.mapChart(div.id, {
-          chart: { map: geojson, animation: false }, 
-          title: { text: cat, style: { color: PALETTE_5[0] } }, 
-          
-          // --- UPDATED PROJECTION ---
-          // Since the new file is EPSG:4326 (Lat/Lon), we use WebMercator
-          mapView: { projection: { name: 'WebMercator' }, zoom: 3.35, center: [10, 55] },
-
-          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, 
-          plotOptions: { series: { animation: false } },
-          tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
-          series: [{ 
-              data: mapData, 
-              joinBy: 'id', // Matches the 'id' field in your GeoJSON
-              name: cat, 
-              states: { hover: { color: '#D68434' } }, 
-              dataLabels: { enabled: false } 
-          }]
+        
+        // MODIFIED: Updated Map View Settings
+        const chart = Highcharts.mapChart(div.id, {
+          chart: { map: geojson, animation: false }, title: { text: cat, style: { color: PALETTE_5[0] } }, 
+          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }, 
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: mapData, joinBy: 'id', name: cat, states: { hover: { color: '#D68434' } }, dataLabels: { enabled: false } }], exporting: { filename: `Housing_${state.indicator}_Map_${cat}` }
         });
+        if(index === 0) window.activeChart = chart; 
       });
   } else {
       const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-nuts`; div.style.height = '600px'; els.mapContainer.appendChild(div);
-      
       if(!window.nutsTopology) return;
       let geojson = topojson.feature(window.nutsTopology, window.nutsTopology.objects.nutsrg);
       geojson.features = geojson.features.filter(feature => feature.id !== 'NO0B');
-      
       const nutsDataRows = allData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase() === 'nuts region');
       if(nutsDataRows.length === 0) { div.innerHTML = `<p style="padding:40px; text-align:center;">No NUTS data.</p>`; return; }
       const valueMap = new Map(); nutsDataRows.forEach(d => { if(d['Category']) valueMap.set(d['Category'], d['Value']); });
       const chartData = [];
-      geojson.features.forEach(feature => {
-         const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return;
-         let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null);
-         chartData.push({ id: mapId, value: matchValue, properties: feature.properties });
-      });
-      Highcharts.mapChart(div.id, {
+      geojson.features.forEach(feature => { const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return; let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null); chartData.push({ id: mapId, value: matchValue, properties: feature.properties }); });
+      
+      // MODIFIED: Updated Map View Settings
+      window.activeChart = Highcharts.mapChart(div.id, {
           chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
           mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }, 
-          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, 
-          plotOptions: { series: { animation: false } },
-          tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }]
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], exporting: { filename: `Housing_${state.indicator}_RegionalMap` }
       });
   }
 }
@@ -556,9 +431,10 @@ function renderRadar(data) {
   state.radarCountries.forEach((country, index) => {
     const card = document.createElement('div'); card.className = 'chart-card'; card.id = `radar-${index}`; els.radarContainer.appendChild(card);
     const countryData = categories.map(cat => { const row = data.find(d => d['Country Name'] === country && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; });
-    Highcharts.chart(card.id, {
-      chart: { polar: true, type: 'area' }, title: { text: country }, pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }]
+    const chart = Highcharts.chart(card.id, {
+      chart: { polar: true, type: 'area' }, title: { text: country }, pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }], exporting: { filename: `Housing_${state.indicator}_Radar_${country}` }
     });
+    if(index === 0) window.activeChart = chart;
   });
 }
 
@@ -568,14 +444,12 @@ function renderCountryProfile() {
   const category = state.cpCategory || 'All';
   const relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
   const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
-  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); } 
+  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); window.activeChart = cpChart; } 
   else {
     cpChart = Highcharts.chart('cp-container', {
-      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` },
-      xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
-      plotOptions: { bar: { dataLabels: { enabled: true, format: '{y:.1f}%' } } }, legend: { enabled: false },
-      series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }]
+      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, plotOptions: { bar: { dataLabels: { enabled: true, format: '{y:.1f}%' } } }, legend: { enabled: false }, series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }], exporting: { filename: `Housing_Profile_${state.cpCountry}` }
     });
+    window.activeChart = cpChart;
   }
 }
 
@@ -586,10 +460,8 @@ function renderRadar2() {
     const data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'] } : null; });
     return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
   });
-  Highcharts.chart('r2-container', {
-    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, 
-    tooltip: { shared: true, pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.1f}%</b><br/>' }, 
-    series: series
+  window.activeChart = Highcharts.chart('r2-container', {
+    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { shared: true, pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.1f}%</b><br/>' }, series: series, exporting: { filename: `Housing_MultiRadar_Comparison` }
   });
 }
 </script>
