@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* 1. FIXED: White Background */
+    /* White Background */
     :root { --primary: #0B7189; --secondary: #D68434; --bg: #ffffff; --text: #1f2937; }
     body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--text); }
     
@@ -131,8 +131,9 @@
 <script>
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
-const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjNS4xLS44IDkuNi00IDkuNi05LjkgMC01LjktNC41LTktOS42LTkuOXoiLz48cGF0aCBmaWxsPSIjMDA5N0I3IiBkPSJNMjAuNiA2NS45aC0zLjJjLS44LTMuOC0zLjItNy4yLTYuNy04LjktMy41LTEuOC03LjYtMS44LTExLjEgMC0zLjUgMS43LTUuOSA1LjEtNi43IDguOWgtMy4yYy44LTUuMSA0LTkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOS05LjZoLTMuMmMtOCAzLjgtMy4yIDcuMi02LjcgOC45LTMuNSAxLjgtNy42IDEuOC0xMS4xIDAtMy41LTEuNy01LjktNS4xLTYuNy04LjloLTMuMmMuOCA1LjEgNCA5LjYgOS45IDkuNiA1LjggMCA5IDQuNSA5LjkgOS42eiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik01MS4xIDEyLjl2My4yYy0zLjguOC03LjIgMy4yLTguOSA2LjctMS44IDMuNS0xLjggNy42IDAgMTEuMSAxLjcgMy41IDUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNC05LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjkgOS42LTUuOCAwLTkgNC41LTkuOSA5LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloMy4yYy0uOCA1LjEtNCA5LjYtOS45IDkuNi01LjggMC05LTQuNS05LjktOS42eiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik02MiA0Ny40VjE4LjdoLTguOHYtNi4zSDkxVjQ3LjRoLTguOFYyNWgtMTMuNnYyMi40SDYyeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xMjAuMyA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNDcuOCA0Ny40aC03Ljd2LTMuOGMtMiAzLjEtNS4xIDQuNy04LjcgNC43LTcuNiAwLTEyLjMtNS45LTEyLjMtMTMuOCAwLTguNCA1LjEtMTQuNSAxMi42LTE0LjUgMy42IDAgNi42IDEuNCA4LjQgMy45di05aDcuM3YzMi41em0tOC0xMy4xYzAtNS0yLjUtOC40LTYuMy04LjQtNCAwLTYuMyAzLjQtNi4zIDguNCAwIDUuMyAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMSA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNjguMSA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0yMTIuMiA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC44LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC44LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
+const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNC05LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0yMC42IDY1LjloLTMuMmMtLjgtMy44LTMuMi03LjItNi43LTguOS0zLjUtMS44LTcuNi0xLjgtMTEuMSAwLTMuNSAxLjctNS45LTUuMS02LjctOC45aC0zLjJjLjgtNS4xIDQtOS42IDkuOS05LjYgNS44IDAgOS00LjUgOS45LTkuNmgzLjJjLS44IDMuOC0zLjIgNy4yLTYuNyA4LjktMy41IDEuOC03LjYgMS44LTExLjEgMC0zLjUtMS43LTUuOS01LjktNi43LTguOWgtMy4yYy44IDUuMSA0IDkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOSA5LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTUxLjEgMTIuOXYzLjJjLTMuOC44LTcuMiAzLjItOC45IDYuNy0xLjggMy41LTEuOCA3LjYgMCAxMS4xIDEuNyAzLjUgNS4xIDUuOSA4LjkgNi43djMuMmMtNS4xLS44LTkuNi00LTkuNi05LjlIDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjlMOS42LTUuOCAwLTktNC41LTkuOS05LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTYyIDQ3LjRWMTguN2gtOC44di02LjNIOTFWNDcuNGgtOC44VjI1aC0xMy42djIyLjRINjJ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTEyMC4zIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMi01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE0Ny44IDQ3LjRoLTcuM3YtMy44Yy0yIDMuMS01LjEgNC43LTguNyA0LjctNy42IDAtMTIuMy01LjktMTIuMy0xMy44IDAtOC40IDUuMS0xNC41MTIuNi0xNC41IDMuNSAwIDYuNiAxLjQgOC40IDMuOXYtOWg3LjN2MzIuNXptLTgtMTMuMWMwLTUtMi41LTguNC02LjMtOC40LTQgMC02LjMgMy40LTYuMyA4LjQgMCA1LjMgMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjEgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJTE2OC4xIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMi01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIxMi4yIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMi01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE3Ny43IDQ3LjRWMTguN2g3LjJ2My41YzEuOS0yLjcgNC45LTQuMSA4LjMtNC4xIDYuOSAwIDExLjggNS4yIDExLjggMTMuOCAwIDguMS00LjcgMTMuOC0xMS42IDEzLjgtMy42IDAtNi43LTEuNS04LjctNC40djYuMWgtN3ptNy42LTE0LjdjMC01IDIuNC04LjQgNi4yLTguNCAzLjYgMCA2LjEgMy4zIDYuMSA4LjQgMCA0LjgtMi4zIDguMS02LjEgOC4xLTMuNyAwLTYuMi0zLjMtNi4yLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMjI4IDQ3LjRWMTguN2g3LjJ2My41YzEuOS0yLjcgNC45LTQuMSA4LjMtNC4xIDYuOSAwIDExLjggNS4yIDExLjggMTMuOCAwIDguMS00LjcgMTMuOC0xMS42IDEzLjgtMy42IDAtNi43LTEuNS04LjctNC40djYuMWgtN3ptNy42LTE0LjdjMC01IDIuNC04LjQgNi4yLTguNCAzLjYgMCA2LjEgMy4zIDYuMSA4LjQgMCA0LjgtMi4zIDguMS02LjEgOC4xLTMuNyAwLTYuMi0zLjMtNi4yLTguMXoiLz48L3N2Zz4=';
 
+// --- 1. CONFIGURATION ---
 Highcharts.setOptions({
   colors: PALETTE_5, 
   chart: { style: { fontFamily: 'Inter, Arial, sans-serif' }, backgroundColor: null, animation: { duration: 500 } },
@@ -141,95 +142,76 @@ Highcharts.setOptions({
   tooltip: { useHTML: true, backgroundColor: 'rgba(255,255,255,1)', borderRadius: 8, shadow: { opacity: 0.1 }, borderWidth: 0, padding: 0, followPointer: false },
   credits: { enabled: false },
   
-  // 4. GLOBAL EXPORT CONFIG: Logo and Source on Bottom Line, Fixed Map Zoom
+  // EXPORT CONFIG
   exporting: {
       enabled: true, 
       buttons: { contextButton: { enabled: false } }, 
       libURL: 'https://code.highcharts.com/lib/',
       chartOptions: {
-          chart: { 
-            backgroundColor: '#FFFFFF',
-            marginBottom: 60, // Space at bottom for logo/source
-            events: {
-                load: function () {
-                    const chart = this;
-                    const logoWidth = 80;
-                    const logoHeight = 20;
-                    const text = 'Source: Calculations based on EU SILC microdata for 2023';
-                    
-                    // Add Logo at the bottom left
-                    chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - logoHeight - 15, logoWidth, logoHeight).add();
-                    
-                    // Add Source Text on the same line, with separation
-                    chart.renderer.text(text, 10 + logoWidth + 20, chart.chartHeight - 20)
-                        .css({ color: '#666', fontSize: '11px' })
-                        .add();
-                }
-            }
-          },
-          title: { style: { display: 'block' } },
-          // STRICT ZOOM FOR ALL MAP EXPORTS
-          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
+          chart: { backgroundColor: '#FFFFFF' },
+          title: { style: { display: 'block' } }
       }
   }
 });
 
-/* --- MASTER EXPORT FUNCTIONS --- */
-
-// 1. IMAGE EXPORT (Handles Single and Dual)
+/* --- 2. MASTER IMAGE EXPORT FUNCTION --- */
 function triggerExportImage() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
 
+    // Separate Single chart vs Dual chart logic
     if (charts.length === 1) {
-        // Single Chart
-        charts[0].exportChartLocal({ type: 'image/png' });
+        charts[0].exportChartLocal({
+            type: 'image/png',
+            chartOptions: {
+                chart: { 
+                    backgroundColor: '#FFFFFF', marginBottom: 60,
+                    events: {
+                        load: function() {
+                            const chart = this;
+                            chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - 35, 80, 20).add();
+                            chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 110, chart.chartHeight - 20)
+                                .css({ color: '#666', fontSize: '11px' }).add();
+                        }
+                    }
+                },
+                // ZOOM FIX: Forces Single Map to zoom out
+                mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
+            }
+        });
     } else {
-        // Dual Chart (Manual Merge)
-        const exportOptions = Highcharts.merge(Highcharts.getOptions().exporting, { type: 'image/png' });
+        // --- DUAL CHART EXPORT (Sequential Downloads for reliability) ---
+        // Browser security often blocks multiple rapid downloads. We use a delay.
         
-        // Get SVG 1
-        let svg1 = charts[0].getSVGForExport(exportOptions, { chart: { width: 600, height: 400 } });
-        svg1 = svg1.replace('<svg', '<g transform="translate(0,0)"');
-        svg1 = svg1.replace('</svg>', '</g>');
-        
-        // Get SVG 2
-        let svg2 = charts[1].getSVGForExport(exportOptions, { chart: { width: 600, height: 400 } });
-        svg2 = svg2.replace('<svg', '<g transform="translate(600,0)"');
-        svg2 = svg2.replace('</svg>', '</g>');
-
-        const width = 1200;
-        const height = 400;
-        const combinedSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">${svg1}${svg2}</svg>`;
-
-        // Convert to PNG via Canvas
-        const img = new Image();
-        const blob = new Blob([combinedSVG], { type: "image/svg+xml;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-
-        img.onload = function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = '#FFFFFF'; // White Background
-            ctx.fillRect(0, 0, width, height);
-            ctx.drawImage(img, 0, 0);
-            
-            const pngUrl = canvas.toDataURL("image/png");
-            const downloadLink = document.createElement("a");
-            downloadLink.href = pngUrl;
-            downloadLink.download = "Housing_Combined.png";
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-            URL.revokeObjectURL(url);
+        const exportOptions = {
+            type: 'image/png',
+            chartOptions: {
+                chart: { 
+                    backgroundColor: '#FFFFFF', marginBottom: 60,
+                    events: {
+                        load: function() {
+                            const chart = this;
+                            chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - 35, 80, 20).add();
+                            chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 110, chart.chartHeight - 20)
+                                .css({ color: '#666', fontSize: '11px' }).add();
+                        }
+                    }
+                },
+                mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
+            }
         };
-        img.src = url;
+
+        // Export Chart 1
+        charts[0].exportChartLocal(exportOptions);
+        
+        // Export Chart 2 (Small delay to allow first download)
+        setTimeout(() => {
+            charts[1].exportChartLocal(exportOptions);
+        }, 1500);
     }
 }
 
-// 2. DATA EXPORT (Handles Single and Dual)
+/* --- 3. MASTER DATA EXPORT FUNCTION --- */
 function triggerExportData() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
@@ -237,39 +219,19 @@ function triggerExportData() {
     if (charts.length === 1) {
         charts[0].downloadCSV();
     } else {
-        let csv1 = charts[0].getCSV().split('\n');
-        let csv2 = charts[1].getCSV().split('\n');
-        
-        let header1 = csv1[0].split(',');
-        let header2 = csv2[0].split(',');
-        
-        // Combined Header: Category, Chart1 Series, Chart2 Series
-        let combined = [`Category,${header1[1].replace(/"/g, '')},${header2[1].replace(/"/g, '')}`];
-        
-        for(let i=1; i<csv1.length; i++) {
-            if(!csv1[i]) continue;
-            let row1 = csv1[i].split(',');
-            let row2 = csv2[i] ? csv2[i].split(',') : ['',''];
-            combined.push(`${row1[0]},${row1[1]},${row2[1]}`);
-        }
-        
-        const blob = new Blob([combined.join('\n')], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.setAttribute("href", url);
-        link.setAttribute("download", "Housing_Combined_Data.csv");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Download 1
+        charts[0].downloadCSV();
+        // Download 2
+        setTimeout(() => {
+            charts[1].downloadCSV();
+        }, 1000);
     }
 }
 
 /* --- WEBHOOKS & LISTENERS --- */
-// 1. Footer Buttons
 document.getElementById('dlPNG').addEventListener('click', triggerExportImage);
 document.getElementById('dlCSV').addEventListener('click', triggerExportData);
 
-// 2. CMS Webhooks (Window Message)
 window.addEventListener("message", (event) => {
     if (event.data === "download-png") triggerExportImage();
     if (event.data === "download-csv") triggerExportData();
