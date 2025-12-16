@@ -19,7 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root { --primary: #0B7189; --secondary: #D68434; --bg: #f9fafb; --text: #1f2937; }
+    /* 1. FIXED: White Background */
+    :root { --primary: #0B7189; --secondary: #D68434; --bg: #ffffff; --text: #1f2937; }
     body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--text); }
     
     .dashboard { max-width: 1400px; margin: 0 auto; background: transparent; display: flex; flex-direction: column; }
@@ -53,15 +54,9 @@
     .map-grid.split, .radar-grid.split { grid-template-columns: 1fr 1fr; }
     .chart-card { border: none; overflow: hidden; position: relative; background: transparent; }
     
-    /* MODIFIED: Map Controls (Moved to Left) */
     #map-overlay-controls { 
-        position: absolute; 
-        top: 10px; 
-        left: 10px; /* Moved to Left */
-        z-index: 100; 
-        display: none; 
-        flex-direction: column; 
-        gap: 0; 
+        position: absolute; top: 10px; left: 10px; z-index: 100; 
+        display: none; flex-direction: column; gap: 0; 
     }
     .rocker-container { display: flex; flex-direction: column; background: transparent; gap: 6px; }
     .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.95); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); backdrop-filter: blur(4px); }
@@ -136,6 +131,7 @@
 <script>
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
+const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjNS4xLS44IDkuNi00IDkuNi05LjkgMC01LjktNC41LTktOS42LTkuOXoiLz48cGF0aCBmaWxsPSIjMDA5N0I3IiBkPSJNMjAuNiA2NS45aC0zLjJjLS44LTMuOC0zLjItNy4yLTYuNy04LjktMy41LTEuOC03LjYtMS44LTExLjEgMC0zLjUgMS43LTUuOSA1LjEtNi43IDguOWgtMy4yYy44LTUuMSA0LTkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOS05LjZoLTMuMmMtOCAzLjgtMy4yIDcuMi02LjcgOC45LTMuNSAxLjgtNy42IDEuOC0xMS4xIDAtMy41LTEuNy01LjktNS4xLTYuNy04LjloLTMuMmMuOCA1LjEgNCA5LjYgOS45IDkuNiA1LjggMCA5IDQuNSA5LjkgOS42eiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik01MS4xIDEyLjl2My4yYy0zLjguOC03LjIgMy4yLTguOSA2LjctMS44IDMuNS0xLjggNy42IDAgMTEuMSAxLjcgMy41IDUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNC05LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjkgOS42LTUuOCAwLTkgNC41LTkuOSA5LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloMy4yYy0uOCA1LjEtNCA5LjYtOS45IDkuNi01LjggMC05LTQuNS05LjktOS42eiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik02MiA0Ny40VjE4LjdoLTguOHYtNi4zSDkxVjQ3LjRoLTguOFYyNWgtMTMuNnYyMi40SDYyeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xMjAuMyA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNDcuOCA0Ny40aC03Ljd2LTMuOGMtMiAzLjEtNS4xIDQuNy04LjcgNC43LTcuNiAwLTEyLjMtNS45LTEyLjMtMTMuOCAwLTguNCA1LjEtMTQuNSAxMi42LTE0LjUgMy42IDAgNi42IDEuNCA4LjQgMy45di05aDcuM3YzMi41em0tOC0xMy4xYzAtNS0yLjUtOC40LTYuMy04LjQtNCAwLTYuMyAzLjQtNi4zIDguNCAwIDUuMyAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMSA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNjguMSA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0yMTIuMiA0Ny40aC03Ljd2LTMuOGMtMi4yIDMuMS01LjMgNC43LTkuMSA0LjctNyAwLTEyLjItNS0xMi4yLTEzLjggMC05LjQgNS40LTE0LjUgMTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC44LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC44LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
 
 Highcharts.setOptions({
   colors: PALETTE_5, 
@@ -145,27 +141,146 @@ Highcharts.setOptions({
   tooltip: { useHTML: true, backgroundColor: 'rgba(255,255,255,1)', borderRadius: 8, shadow: { opacity: 0.1 }, borderWidth: 0, padding: 0, followPointer: false },
   credits: { enabled: false },
   
-  // GLOBAL EXPORT CONFIG: White Background + Title enabled
+  // 4. GLOBAL EXPORT CONFIG: Logo and Source on Bottom Line, Fixed Map Zoom
   exporting: {
       enabled: true, 
-      buttons: { contextButton: { menuItems: ["viewFullscreen", "separator", "downloadPNG", "downloadJPEG", "downloadPDF", "downloadSVG", "separator", "downloadCSV", "downloadXLS"] } },
+      buttons: { contextButton: { enabled: false } }, 
       libURL: 'https://code.highcharts.com/lib/',
       chartOptions: {
-          chart: {
-              backgroundColor: '#FFFFFF' // Force white background
+          chart: { 
+            backgroundColor: '#FFFFFF',
+            marginBottom: 60, // Space at bottom for logo/source
+            events: {
+                load: function () {
+                    const chart = this;
+                    const logoWidth = 80;
+                    const logoHeight = 20;
+                    const text = 'Source: Calculations based on EU SILC microdata for 2023';
+                    
+                    // Add Logo at the bottom left
+                    chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - logoHeight - 15, logoWidth, logoHeight).add();
+                    
+                    // Add Source Text on the same line, with separation
+                    chart.renderer.text(text, 10 + logoWidth + 20, chart.chartHeight - 20)
+                        .css({ color: '#666', fontSize: '11px' })
+                        .add();
+                }
+            }
           },
-          title: {
-              style: { display: 'block' } // Ensure title is shown
-          }
+          title: { style: { display: 'block' } },
+          // STRICT ZOOM FOR ALL MAP EXPORTS
+          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
       }
   }
 });
+
+/* --- MASTER EXPORT FUNCTIONS --- */
+
+// 1. IMAGE EXPORT (Handles Single and Dual)
+function triggerExportImage() {
+    const charts = window.activeCharts;
+    if (!charts || charts.length === 0) return;
+
+    if (charts.length === 1) {
+        // Single Chart
+        charts[0].exportChartLocal({ type: 'image/png' });
+    } else {
+        // Dual Chart (Manual Merge)
+        const exportOptions = Highcharts.merge(Highcharts.getOptions().exporting, { type: 'image/png' });
+        
+        // Get SVG 1
+        let svg1 = charts[0].getSVGForExport(exportOptions, { chart: { width: 600, height: 400 } });
+        svg1 = svg1.replace('<svg', '<g transform="translate(0,0)"');
+        svg1 = svg1.replace('</svg>', '</g>');
+        
+        // Get SVG 2
+        let svg2 = charts[1].getSVGForExport(exportOptions, { chart: { width: 600, height: 400 } });
+        svg2 = svg2.replace('<svg', '<g transform="translate(600,0)"');
+        svg2 = svg2.replace('</svg>', '</g>');
+
+        const width = 1200;
+        const height = 400;
+        const combinedSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">${svg1}${svg2}</svg>`;
+
+        // Convert to PNG via Canvas
+        const img = new Image();
+        const blob = new Blob([combinedSVG], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF'; // White Background
+            ctx.fillRect(0, 0, width, height);
+            ctx.drawImage(img, 0, 0);
+            
+            const pngUrl = canvas.toDataURL("image/png");
+            const downloadLink = document.createElement("a");
+            downloadLink.href = pngUrl;
+            downloadLink.download = "Housing_Combined.png";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            URL.revokeObjectURL(url);
+        };
+        img.src = url;
+    }
+}
+
+// 2. DATA EXPORT (Handles Single and Dual)
+function triggerExportData() {
+    const charts = window.activeCharts;
+    if (!charts || charts.length === 0) return;
+
+    if (charts.length === 1) {
+        charts[0].downloadCSV();
+    } else {
+        let csv1 = charts[0].getCSV().split('\n');
+        let csv2 = charts[1].getCSV().split('\n');
+        
+        let header1 = csv1[0].split(',');
+        let header2 = csv2[0].split(',');
+        
+        // Combined Header: Category, Chart1 Series, Chart2 Series
+        let combined = [`Category,${header1[1].replace(/"/g, '')},${header2[1].replace(/"/g, '')}`];
+        
+        for(let i=1; i<csv1.length; i++) {
+            if(!csv1[i]) continue;
+            let row1 = csv1[i].split(',');
+            let row2 = csv2[i] ? csv2[i].split(',') : ['',''];
+            combined.push(`${row1[0]},${row1[1]},${row2[1]}`);
+        }
+        
+        const blob = new Blob([combined.join('\n')], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", "Housing_Combined_Data.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+
+/* --- WEBHOOKS & LISTENERS --- */
+// 1. Footer Buttons
+document.getElementById('dlPNG').addEventListener('click', triggerExportImage);
+document.getElementById('dlCSV').addEventListener('click', triggerExportData);
+
+// 2. CMS Webhooks (Window Message)
+window.addEventListener("message", (event) => {
+    if (event.data === "download-png") triggerExportImage();
+    if (event.data === "download-csv") triggerExportData();
+});
+
 
 /* --- PRELOAD RESOURCES --- */
 window.nutsNames = {};
 window.nationalTopology = null;
 window.nutsTopology = null;
-window.activeChart = null; 
+window.activeCharts = []; 
 
 async function preloadResources() {
     try {
@@ -309,15 +424,6 @@ async function init() {
   buildNestedCategoryDropdown();
   setupDropdown(els.mapCatToggle, els.mapCatList);
   setMapView('national');
-  
-  // Bind Export Buttons
-  document.getElementById('dlPNG').addEventListener('click', () => {
-      if (window.activeChart) window.activeChart.exportChartLocal({ type: 'image/png' });
-  });
-  document.getElementById('dlCSV').addEventListener('click', () => {
-      if (window.activeChart) window.activeChart.downloadCSV();
-  });
-
   updateChart();
 }
 
@@ -363,6 +469,7 @@ function switchTab(tab) {
 }
 
 function updateChart() {
+  window.activeCharts = []; // Reset active charts
   if (currentTab === 'country') return renderCountryProfile(); if (currentTab === 'radar2') return renderRadar2();
   if (currentTab === 'map') { renderMap(rawData); return; }
   const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
@@ -376,11 +483,12 @@ function renderBar(data) {
   const series = categories.map((cat, i) => ({
     name: cat, data: displayCountries.map(c => { const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; }), color: PALETTE_5[i % PALETTE_5.length] 
   }));
-  window.activeChart = Highcharts.chart('bar-container', {
+  const chart = Highcharts.chart('bar-container', {
     chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, xAxis: { categories: displayCountries, title: { text: null } }, yAxis: { title: { text: '%' }, labels: { format: '{value}%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
     plotOptions: { bar: { pointPadding: 0.05, groupPadding: 0.05, dataLabels: { enabled: true, inside: true, align: 'right', formatter: function() { return this.y.toFixed(1); } } } }, series: series,
     exporting: { filename: `Housing_${state.indicator}_Bar` }
   });
+  window.activeCharts.push(chart);
 }
 
 async function renderMap(allData) {
@@ -396,13 +504,18 @@ async function renderMap(allData) {
         let geojson; if (window.nationalTopology.type === 'FeatureCollection') geojson = window.nationalTopology; else geojson = topojson.feature(window.nationalTopology, window.nationalTopology.objects.nutsrg);
         const mapData = data.filter(d => d['Category'] === cat).map(d => ({ 'id': d['Country Code'], value: d['Value'], name: d['Country Name'] }));
         
-        // MODIFIED: Updated Map View Settings
+        // 3. FIXED: Zoom locked in export options
         const chart = Highcharts.mapChart(div.id, {
-          chart: { map: geojson, animation: false }, title: { text: cat, style: { color: PALETTE_5[0] } }, 
+          chart: { map: geojson, animation: false }, 
+          title: { text: `${state.indicator} by ${cat}`, style: { color: PALETTE_5[0], fontSize: '13px' } }, 
           mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }, 
-          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: mapData, joinBy: 'id', name: cat, states: { hover: { color: '#D68434' } }, dataLabels: { enabled: false } }], exporting: { filename: `Housing_${state.indicator}_Map_${cat}` }
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: mapData, joinBy: 'id', name: cat, states: { hover: { color: '#D68434' } }, dataLabels: { enabled: false } }], 
+          exporting: { 
+              filename: `Housing_${state.indicator}_Map_${cat}`,
+              chartOptions: { mapView: { center: [10, 55], zoom: 3.35 } } 
+          }
         });
-        if(index === 0) window.activeChart = chart; 
+        window.activeCharts.push(chart);
       });
   } else {
       const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-nuts`; div.style.height = '600px'; els.mapContainer.appendChild(div);
@@ -415,12 +528,16 @@ async function renderMap(allData) {
       const chartData = [];
       geojson.features.forEach(feature => { const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return; let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null); chartData.push({ id: mapId, value: matchValue, properties: feature.properties }); });
       
-      // MODIFIED: Updated Map View Settings
-      window.activeChart = Highcharts.mapChart(div.id, {
+      const chart = Highcharts.mapChart(div.id, {
           chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
           mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }, 
-          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], exporting: { filename: `Housing_${state.indicator}_RegionalMap` }
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], 
+          exporting: { 
+              filename: `Housing_${state.indicator}_RegionalMap`,
+              chartOptions: { mapView: { center: [10, 55], zoom: 3.35 } } 
+          }
       });
+      window.activeCharts.push(chart);
   }
 }
 
@@ -431,10 +548,15 @@ function renderRadar(data) {
   state.radarCountries.forEach((country, index) => {
     const card = document.createElement('div'); card.className = 'chart-card'; card.id = `radar-${index}`; els.radarContainer.appendChild(card);
     const countryData = categories.map(cat => { const row = data.find(d => d['Country Name'] === country && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; });
+    
+    // UPDATED: Titles logic
     const chart = Highcharts.chart(card.id, {
-      chart: { polar: true, type: 'area' }, title: { text: country }, pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }], exporting: { filename: `Housing_${state.indicator}_Radar_${country}` }
+      chart: { polar: true, type: 'area' }, 
+      title: { text: state.indicator, style: { fontWeight: 'bold', fontSize: '14px' } }, 
+      subtitle: { text: country, style: { fontSize: '13px', color: '#666' } },
+      pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }], exporting: { filename: `Housing_${state.indicator}_Radar_${country}` }
     });
-    if(index === 0) window.activeChart = chart;
+    window.activeCharts.push(chart);
   });
 }
 
@@ -444,12 +566,12 @@ function renderCountryProfile() {
   const category = state.cpCategory || 'All';
   const relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
   const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
-  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); window.activeChart = cpChart; } 
+  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); window.activeCharts.push(cpChart); } 
   else {
     cpChart = Highcharts.chart('cp-container', {
       chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, plotOptions: { bar: { dataLabels: { enabled: true, format: '{y:.1f}%' } } }, legend: { enabled: false }, series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }], exporting: { filename: `Housing_Profile_${state.cpCountry}` }
     });
-    window.activeChart = cpChart;
+    window.activeCharts.push(cpChart);
   }
 }
 
@@ -460,29 +582,11 @@ function renderRadar2() {
     const data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'] } : null; });
     return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
   });
-  window.activeChart = Highcharts.chart('r2-container', {
+  const chart = Highcharts.chart('r2-container', {
     chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { shared: true, pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.1f}%</b><br/>' }, series: series, exporting: { filename: `Housing_MultiRadar_Comparison` }
   });
+  window.activeCharts.push(chart);
 }
 </script>
-  <script>
-/* External message hooks for host page buttons */
-window.addEventListener("message", (event) => {
-  if (event.data === "download-png" && chart) {
-    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
-  }
-  if (event.data === "download-csv" && chart) {
-    const csv = chart.getCSV();
-    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = exportName("data") + ".csv";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
-  }
-});
-</script>
-  
 </body>
 </html>
