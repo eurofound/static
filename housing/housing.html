@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Housing Indicators Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --primary: #0B7189; --secondary: #D68434; --bg: #f9fafb; --text: #1f2937; }
+    body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--text); }
+    
+    .dashboard { max-width: 1400px; margin: 0 auto; background: transparent; display: flex; flex-direction: column; }
+    
+    .controls { padding: 0 0 1.5rem 0; display: grid; gap: 1.5rem; background: transparent; border-bottom: 1px solid #e5e7eb; position: relative; z-index: 1000; }
+    
+    .topic-scroll { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; }
+    .topic-btn { white-space: nowrap; padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-weight: 600; font-size: 13px; color: #4b5563; transition: all 0.2s; }
+    .topic-btn.active { border-color: var(--primary); color: #fff; background: var(--primary); }
+
+    .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    label { display: block; font-size: 12px; font-weight: 600; color: #6b7280; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    select { width: 100%; padding: 0.6rem; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; background-color: #fff; cursor: pointer; }
+    
+    .dropdown-wrapper { position: relative; }
+    .checkbox-list { max-height: 300px; overflow-y: auto; border: 1px solid #d1d5db; border-radius: 6px; padding: 0.5rem; background: #fff; display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; font-size: 13px; }
+    .checkbox-list.visible { display: grid; }
+    .checkbox-list label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .checkbox-list .select-all-row { grid-column: 1 / -1; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 5px; font-weight: 600; color: var(--primary); }
+    .checkbox-list .group-header { grid-column: 1 / -1; background: #f3f4f6; padding: 4px 8px; font-weight: 700; color: #4b5563; font-size: 11px; margin-top: 4px; border-radius: 4px; }
+
+    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; background: transparent; padding: 0; gap: 2rem; overflow-x: auto; margin-bottom: 1rem; }
+    .tab { padding: 1rem 0.5rem; cursor: pointer; border-bottom: 3px solid transparent; color: #9ca3af; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; white-space: nowrap; }
+    .tab:hover { color: #4b5563; }
+    .tab.active { border-bottom-color: var(--primary); color: var(--primary); }
+    .tab svg { width: 20px; height: 20px; fill: currentColor; }
+
+    #chart-main { padding: 1rem 0; flex-grow: 1; position: relative; min-height: 600px; z-index: 1; }
+    .single-chart-view { height: 600px; width: 100%; }
+    .map-grid, .radar-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; height: 600px; }
+    .map-grid.split, .radar-grid.split { grid-template-columns: 1fr 1fr; }
+    .chart-card { border: none; overflow: hidden; position: relative; background: transparent; }
+    
+    #map-overlay-controls { position: absolute; top: 0px; right: 0px; z-index: 100; display: none; flex-direction: column; gap: 0; }
+    .rocker-container { display: flex; flex-direction: column; background: transparent; gap: 6px; }
+    .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.85); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); backdrop-filter: blur(4px); }
+    .rocker-opt.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    
+    footer { margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 16px; color: #6b7280; font-size: 13px; }
+    footer img { height: 24px; opacity: 0.9; }
+    #loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #6b7280; }
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="controls">
+    <div id="topic-wrapper"><label>TOPIC</label><div id="topic-container" class="topic-scroll"></div></div>
+    <div class="filters">
+      <div id="std-controls-1"><label>INDICATOR</label><select id="indicator-sel"></select></div>
+      <div id="std-controls-2"><label>3. Breakdown Category</label><select id="category-sel"></select></div>
+      <div id="cp-cat-wrapper" style="display: none;"><label>Breakdown (Sub-Category)</label><select id="cp-cat-sel"></select></div>
+      <div id="cp-controls-country" style="display: none;"><label>Select Country</label><select id="cp-country-sel"></select></div>
+      <div id="map-controls" style="display:none;"><label>Select Category (Max 2)</label><div class="dropdown-wrapper"><button id="map-toggle-cats" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select...</span><span>▾</span></button><div id="map-cat-list" class="checkbox-list"></div></div></div>
+      <div id="bar-controls"><label>Filter Countries</label><div class="dropdown-wrapper"><button id="bar-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>All Countries</span><span>▾</span></button><div id="bar-country-list" class="checkbox-list"></div></div></div>
+      <div id="radar-controls" style="display: none;"><label>Compare Countries (Max 2)</label><div class="dropdown-wrapper"><button id="radar-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Countries...</span><span>▾</span></button><div id="radar-country-list" class="checkbox-list"></div></div></div>
+      <div id="global-ind-wrapper" style="display: none;"><label>Select Indicators (Max 10)</label><div class="dropdown-wrapper"><button id="global-toggle-inds" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Indicators...</span><span>▾</span></button><div id="global-ind-list" class="checkbox-list"></div></div></div>
+      <div id="r2-controls-country" style="display: none;"><label>Select Countries (Max 5)</label><div class="dropdown-wrapper"><button id="r2-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Countries...</span><span>▾</span></button><div id="r2-country-list" class="checkbox-list"></div></div></div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('bar')" title="Bar Chart"><svg viewBox="0 0 24 24"><path d="M4 20h16v2H4zm2-14h3v12H6zm5-4h3v16h-3zm5 7h3v9h-3z"/></svg><span>Bar</span></div>
+    <div class="tab" onclick="switchTab('map')" title="Map"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>Map</span></div>
+    <div class="tab" onclick="switchTab('radar')" title="Radar Chart"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l4 15h12l4-15L12 2zm0 2.8l6.8 3.4-1.6 6h-10.4l-1.6-6L12 4.8zM12 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg><span>Radar</span></div>
+    <div class="tab" onclick="switchTab('country')" title="Country Profile"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Country</span></div>
+    <div class="tab" onclick="switchTab('radar2')" title="Multi-Indicator Radar"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l4 15h12l4-15L12 2zm0 2.8l6.8 3.4-1.6 6h-10.4l-1.6-6L12 4.8z"/></svg><span>Radar 2</span></div>
+  </div>
+
+  <div id="chart-main">
+    <div id="map-overlay-controls"><div class="rocker-container"><div id="view-nat" class="rocker-opt active" onclick="setMapView('national')">National</div><div id="view-nuts" class="rocker-opt" onclick="setMapView('nuts')">NUTS Regions</div></div></div>
+    <div id="loader">Loading data...</div>
+    <div id="bar-container" class="single-chart-view"></div>
+    <div id="map-container" class="map-grid" style="display: none;"></div>
+    <div id="radar-container" class="radar-grid" style="display: none;"></div>
+    <div id="cp-container" class="single-chart-view" style="display: none;"></div>
+    <div id="r2-container" class="single-chart-view" style="display: none;"></div>
+  </div>
+
+  <footer><img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo"><div>Calculations based on EU SILC microdata for 2023</div></footer>
+</div>
+
+<script>
+const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
+const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
+
+Highcharts.setOptions({
+  colors: PALETTE_5, chart: { style: { fontFamily: 'Inter, Arial, sans-serif' }, backgroundColor: null, animation: { duration: 500 } },
+  title: { style: { fontSize: '16px', fontWeight: '700', color: '#111827' } },
+  plotOptions: { series: { animation: { duration: 500 } } },
+  tooltip: { useHTML: true, backgroundColor: 'rgba(255,255,255,1)', borderRadius: 8, shadow: { opacity: 0.1 }, borderWidth: 0, padding: 0, followPointer: false },
+  credits: { enabled: false }
+});
+
+/* --- PRELOAD RESOURCES --- */
+window.nutsNames = {};
+window.nationalTopology = null;
+window.nutsTopology = null;
+
+async function preloadResources() {
+    try {
+        // 1. Regional Map (NUTS)
+        const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
+        const respReg = await fetch(regionalUrl);
+        const topoReg = await respReg.json();
+        window.nutsTopology = topoReg;
+        
+        topojson.feature(topoReg, topoReg.objects.nutsrg).features.forEach(f => {
+            const p = f.properties;
+            const id = p.id || p.NUTS_ID;
+            const name = p.na || p.NUTS_NAME || p.name;
+            if(id && name) window.nutsNames[id] = name;
+        });
+
+        // 2. National Map (UPDATED to your master.geojson)
+        const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
+        const respNat = await fetch(nationalUrl);
+        window.nationalTopology = await respNat.json();
+
+    } catch(e) { console.warn("Failed to load maps", e); }
+}
+
+/* --- TOOLTIP LOGIC --- */
+function getMiniBarHTML(label, value, color, isMain) {
+   const width = Math.min(Math.max(value, 0), 100); 
+   const weight = isMain ? '700' : '400';
+   const bgColor = isMain ? '#e5e7eb' : '#f3f4f6';
+   return `<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; color: #374151;">
+        <div style="flex: 1; text-align: right; font-weight: ${weight}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px;" title="${label}">${label}</div>
+        <div style="flex: 0 0 80px; height: 12px; background: ${bgColor}; border-radius: 3px; overflow: hidden; position: relative;">
+             <div style="width: ${width}%; height: 100%; background: ${color};"></div>
+        </div>
+        <div style="flex: 0 0 30px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}%</div>
+      </div>`;
+}
+
+function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
+    let html = `<div style="padding: 12px; min-width: 280px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;">`;
+    html += `<div style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><div style="font-size: 14px; font-weight: 700; color: #111827;">${mainLabel}</div><div style="font-size: 12px; color: #6b7280;">${state.indicator}</div></div>`;
+    html += getMiniBarHTML(mainLabel, mainValue, mainColor, true);
+
+    if (state.mapViewMode === 'national') {
+        // Updated to use the ID from the new master file
+        const countryCode = point['hc-key'] || point.properties.id || point.id; 
+        const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
+        
+        const nutsData = rawData.filter(d => 
+            d['Indicator name'] === state.indicator &&
+            String(d['Top category']).toLowerCase().includes('nuts') &&
+            (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))
+        ).sort((a,b) => b['Value'] - a['Value']);
+
+        if (nutsData.length > 0) {
+             html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">Regional Breakdown:</div>`;
+             nutsData.forEach(d => {
+                 const name = window.nutsNames[d['Category']] || d['Category'];
+                 html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false);
+             });
+        }
+    } else {
+        const nutsId = point.id;
+        if(nutsId && nutsId.length >= 2) {
+            const countryCode = nutsId.substring(0, 2);
+            const lookupCode = (countryCode === 'EL') ? 'GR' : countryCode; 
+            const natData = rawData.find(d => 
+                 d['Indicator name'] === state.indicator &&
+                 !String(d['Top category']).toLowerCase().includes('nuts') &&
+                 (d['Country Code'] === countryCode || d['Country Code'] === lookupCode)
+            );
+            if (natData) {
+                 html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">National Average:</div>`;
+                 html += getMiniBarHTML(natData['Country Name'], natData['Value'], PALETTE_5[2], false);
+            }
+        }
+    }
+    html += `</div>`;
+    return html;
+}
+
+function getTooltipHTML(point) {
+  let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
+  let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
+  
+  const color = point.color || (point.series ? point.series.color : '#333');
+
+  if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
+  
+  if (typeof val === 'number') val = val.toFixed(1);
+  let subLabel = point.series ? point.series.name : ''; 
+  if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
+
+  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}%</div></div>`;
+}
+
+/* --- STATE --- */
+const CSV_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/Master_Indicator_Data.csv";
+let rawData = [];
+let currentTab = 'bar';
+let cpChart = null;
+
+let state = {
+  topic: null, indicator: null, topCat: null,
+  barCountries: [], mapCategories: [], radarCountries: [],
+  cpCountry: null, globalIndicators: [], cpCategory: 'All', 
+  r2Countries: [], mapViewMode: 'national'
+};
+
+const els = {
+  topicWrapper: document.getElementById('topic-wrapper'), topics: document.getElementById('topic-container'),
+  stdControls1: document.getElementById('std-controls-1'), ind: document.getElementById('indicator-sel'),
+  stdControls2: document.getElementById('std-controls-2'), cat: document.getElementById('category-sel'),
+  cpCatWrapper: document.getElementById('cp-cat-wrapper'), cpCatSel: document.getElementById('cp-cat-sel'),
+  globalIndWrapper: document.getElementById('global-ind-wrapper'), globalIndList: document.getElementById('global-ind-list'), globalIndToggle: document.getElementById('global-toggle-inds'),
+  barContainer: document.getElementById('bar-container'), barControls: document.getElementById('bar-controls'), barCountryList: document.getElementById('bar-country-list'), barCountryToggle: document.getElementById('bar-toggle-countries'),
+  mapContainer: document.getElementById('map-container'), mapControls: document.getElementById('map-controls'), mapCatList: document.getElementById('map-cat-list'), mapCatToggle: document.getElementById('map-toggle-cats'), mapOverlay: document.getElementById('map-overlay-controls'),
+  viewNat: document.getElementById('view-nat'), viewNuts: document.getElementById('view-nuts'),
+  radarContainer: document.getElementById('radar-container'), radarControls: document.getElementById('radar-controls'), radarCountryList: document.getElementById('radar-country-list'), radarCountryToggle: document.getElementById('radar-toggle-countries'),
+  cpContainer: document.getElementById('cp-container'), cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
+  r2Container: document.getElementById('r2-container'), r2ControlsCountry: document.getElementById('r2-controls-country'), r2CountryList: document.getElementById('r2-country-list'), r2CountryToggle: document.getElementById('r2-toggle-countries'),
+  loader: document.getElementById('loader')
+};
+
+Papa.parse(CSV_URL, {
+  download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+  complete: function(results) {
+    rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
+          d['Value'] = d['Value'] * 100; 
+          // Normalize Greece
+          if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
+          return d; 
+      });
+    init();
+  },
+  error: (err) => { els.loader.textContent = "Error loading data."; }
+});
+
+async function init() {
+  await preloadResources(); 
+  els.loader.style.display = 'none';
+  els.cat.removeAttribute('disabled');
+
+  const topics = [...new Set(rawData.map(d => d['Topic']))].sort();
+  state.topic = topics[0];
+  els.topics.innerHTML = topics.map(t => `<button class="topic-btn ${t === state.topic ? 'active' : ''}" onclick="setTopic('${t}')">${t}</button>`).join('');
+
+  updateIndicators();
+  
+  const allCountries = [...new Set(rawData.map(d => d['Country Name']))].sort();
+  state.barCountries = [...allCountries]; 
+  populateCheckboxList(els.barCountryList, allCountries, state.barCountries, 'barCountry');
+  setupDropdown(els.barCountryToggle, els.barCountryList);
+
+  state.radarCountries = [allCountries[0]]; 
+  if(allCountries.length > 1) state.radarCountries.push(allCountries[1]); 
+  populateCheckboxList(els.radarCountryList, allCountries, state.radarCountries, 'radarCountry');
+  setupDropdown(els.radarCountryToggle, els.radarCountryList);
+
+  state.cpCountry = allCountries[0];
+  els.cpCountrySel.innerHTML = allCountries.map(c => `<option>${c}</option>`).join('');
+  els.cpCountrySel.onchange = (e) => { state.cpCountry = e.target.value; updateChart(); };
+  
+  state.r2Countries = allCountries.slice(0, 3);
+  populateCheckboxList(els.r2CountryList, allCountries, state.r2Countries, 'r2Country');
+  setupDropdown(els.r2CountryToggle, els.r2CountryList);
+  
+  buildGlobalIndicatorList();
+  setupDropdown(els.globalIndToggle, els.globalIndList);
+
+  buildNestedCategoryDropdown();
+  setupDropdown(els.mapCatToggle, els.mapCatList);
+  
+  setMapView('national');
+  updateChart();
+}
+
+function buildGlobalIndicatorList() {
+    const map = new Map();
+    rawData.forEach(d => {
+        const top = d['Topic']; const ind = d['Indicator name'];
+        if(!map.has(top)) map.set(top, new Set());
+        map.get(top).add(ind);
+    });
+    let html = `<label class="select-all-row"><input type="checkbox" id="all-cpInd" onchange="toggleAll('cpInd', this.checked)"> (Un)Select All</label>`;
+    Array.from(map.keys()).sort().forEach(top => {
+        html += `<div class="group-header">${top}</div>`;
+        Array.from(map.get(top)).sort().forEach(ind => {
+            const checked = state.globalIndicators.includes(ind) ? 'checked' : '';
+            html += `<label><input type="checkbox" value="${ind}" ${checked} onchange="updateSelection('globalInd', this)"> ${ind}</label>`;
+        });
+    });
+    els.globalIndList.innerHTML = html;
+    if(state.globalIndicators.length === 0) {
+        const firstTopic = Array.from(map.keys())[0];
+        const firstInds = Array.from(map.get(firstTopic)).slice(0,5);
+        state.globalIndicators = firstInds;
+        firstInds.forEach(i => { const cb = els.globalIndList.querySelector(`input[value="${i}"]`); if(cb) cb.checked = true; });
+        updateButtonLabel(els.globalIndToggle, state.globalIndicators, 100, "Indicators"); 
+    }
+}
+
+function setTopic(t) {
+  state.topic = t;
+  document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b.textContent === t));
+  updateIndicators();
+}
+
+function updateIndicators() {
+  const topicData = rawData.filter(d => d['Topic'] === state.topic);
+  const indicators = [...new Set(topicData.map(d => d['Indicator name']))].sort();
+  state.indicator = indicators[0];
+  els.ind.innerHTML = indicators.map(i => `<option>${i}</option>`).join('');
+  els.ind.onchange = (e) => { state.indicator = e.target.value; updateCategories(); };
+  updateCategories();
+}
+
+function updateCategories() {
+  const indData = rawData.filter(d => d['Indicator name'] === state.indicator);
+  const topCats = [...new Set(indData.map(d => d['Top category']))]
+    .filter(c => !String(c || "").toLowerCase().includes('nuts region'))
+    .sort((a, b) => { if (a === 'All') return -1; if (b === 'All') return 1; return String(a).localeCompare(String(b)); });
+  
+  if (topCats.length === 0) { els.cat.innerHTML = '<option disabled>No Categories</option>'; state.topCat = null; return; }
+  state.topCat = topCats.includes('All') ? 'All' : topCats[0];
+  els.cat.innerHTML = topCats.map(c => `<option>${c}</option>`).join('');
+  els.cat.value = state.topCat;
+  els.cat.onchange = (e) => { state.topCat = e.target.value; updateDeepCategories(); updateChart(); };
+  updateDeepCategories(); 
+  updateChart();
+}
+
+function updateDeepCategories() {
+  const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+  const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts'));
+  state.mapCategories = [cats[0]];
+  populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat');
+  updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected");
+}
+
+function buildNestedCategoryDropdown() {
+  const map = new Map();
+  rawData.forEach(d => {
+    const top = d['Top category']; const cat = d['Category'];
+    const topStr = String(top || "").toLowerCase(); const catStr = String(cat || "").toLowerCase();
+    if(topStr.includes('nuts') || catStr.includes('nuts')) return;
+    if(!map.has(top)) map.set(top, new Set());
+    map.get(top).add(cat);
+  });
+  const sortedTop = Array.from(map.keys()).sort((a,b) => (a==='All'?-1:b==='All'?1:String(a).localeCompare(String(b))));
+  let html = '';
+  let firstVal = map.has('All') ? 'All' : (sortedTop.length > 0 ? sortedTop[0] : '');
+  sortedTop.forEach(top => {
+    html += `<optgroup label="${top}">`;
+    const cats = Array.from(map.get(top)).sort();
+    cats.forEach(c => { html += `<option value="${c}">${c}</option>`; });
+    html += `</optgroup>`;
+  });
+  els.cpCatSel.innerHTML = html;
+  if(firstVal) { state.cpCategory = firstVal; els.cpCatSel.value = firstVal; }
+  els.cpCatSel.onchange = (e) => { state.cpCategory = e.target.value; updateChart(); };
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const containers = [els.barContainer, els.mapContainer, els.radarContainer, els.cpContainer, els.r2Container];
+  containers.forEach(el => el.style.display = 'none');
+  const controls = [els.topicWrapper, els.stdControls1, els.stdControls2, els.barControls, els.mapControls, els.radarControls, els.cpControlsCountry, els.globalIndWrapper, els.cpCatWrapper, els.r2ControlsCountry, els.mapOverlay];
+  controls.forEach(el => el.style.display = 'none');
+
+  if (tab === 'bar') {
+    els.barContainer.style.display = 'block'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.barControls.style.display = 'block';
+  } else if (tab === 'map') {
+    els.mapContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.mapOverlay.style.display = 'flex'; setMapView(state.mapViewMode);
+  } else if (tab === 'radar') {
+    els.radarContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.radarControls.style.display = 'block';
+    const opts = Array.from(els.cat.options);
+    const ageOpt = opts.find(o => o.value.toLowerCase().includes('age category'));
+    if (ageOpt) { state.topCat = ageOpt.value; els.cat.value = ageOpt.value; updateDeepCategories(); }
+  } else if (tab === 'country') {
+    els.cpContainer.style.display = 'block'; els.cpControlsCountry.style.display = 'block'; els.globalIndWrapper.style.display = 'block'; els.cpCatWrapper.style.display = 'block'; 
+  } else if (tab === 'radar2') {
+    els.r2Container.style.display = 'block'; els.r2ControlsCountry.style.display = 'block'; els.globalIndWrapper.style.display = 'block'; els.cpCatWrapper.style.display = 'block'; 
+  }
+  updateChart();
+}
+
+function setMapView(mode) {
+    state.mapViewMode = mode;
+    els.viewNat.classList.toggle('active', mode === 'national');
+    els.viewNuts.classList.toggle('active', mode === 'nuts');
+    if (mode === 'nuts') { els.stdControls2.style.display = 'none'; els.mapControls.style.display = 'none'; } 
+    else { els.stdControls2.style.display = 'block'; els.mapControls.style.display = 'block'; }
+    if (currentTab === 'map') updateChart();
+}
+
+function populateCheckboxList(container, allItems, selectedItems, type) {
+  let html = '';
+  if (type === 'barCountry' || type === 'cpInd') html += `<label class="select-all-row"><input type="checkbox" id="all-${type}" ${selectedItems.length === allItems.length ? 'checked' : ''} onchange="toggleAll('${type}', this.checked)"> (Un)Select All</label>`;
+  html += allItems.map(c => `<label><input type="checkbox" value="${c}" ${selectedItems.includes(c)?'checked':''} onchange="updateSelection('${type}', this)"> ${c}</label>`).join('');
+  container.innerHTML = html;
+}
+function setupDropdown(btn, list) {
+  btn.onclick = (e) => { e.stopPropagation(); document.querySelectorAll('.checkbox-list').forEach(l => { if(l!==list) l.classList.remove('visible'); }); list.classList.toggle('visible'); };
+}
+document.addEventListener('click', (e) => { if (!e.target.closest('.dropdown-wrapper')) document.querySelectorAll('.checkbox-list').forEach(l => l.classList.remove('visible')); });
+
+function toggleAll(type, isChecked) {
+  let container; if(type==='barCountry') container = els.barCountryList; else if(type==='cpInd') container = els.globalIndList;
+  if(container) container.querySelectorAll('input[type="checkbox"]:not([id^="all"])').forEach(cb => cb.checked = isChecked);
+  updateSelectionLogic(type);
+}
+function updateSelection(type, checkbox) {
+  let container = null;
+  if (type === 'mapCat') container = els.mapCatList; else if (type === 'radarCountry') container = els.radarCountryList; else if (type === 'globalInd') container = els.globalIndList; else if (type === 'r2Country') container = els.r2CountryList;
+  if (!container) { updateSelectionLogic(type); return; }
+  let currentList = [];
+  if (type === 'mapCat') currentList = state.mapCategories; else if (type === 'radarCountry') currentList = state.radarCountries; else if (type === 'globalInd') currentList = state.globalIndicators; else if (type === 'r2Country') currentList = state.r2Countries;
+  const max = (type === 'globalInd') ? 10 : (type === 'r2Country' ? 5 : 2);
+  const val = checkbox.value;
+  if (checkbox.checked) { currentList.push(val); if (currentList.length > max) { const removed = currentList.shift(); const removedCb = container.querySelector(`input[value="${removed}"]`); if (removedCb) removedCb.checked = false; } } 
+  else { currentList = currentList.filter(item => item !== val); }
+  if (type === 'mapCat') state.mapCategories = currentList; else if (type === 'radarCountry') state.radarCountries = currentList; else if (type === 'globalInd') state.globalIndicators = currentList; else if (type === 'r2Country') state.r2Countries = currentList;
+  updateSelectionLogic(type, true); 
+}
+function updateSelectionLogic(type, skipRead = false) {
+  let container, btn;
+  if (type === 'barCountry') { container = els.barCountryList; btn = els.barCountryToggle; } else if (type === 'mapCat') { container = els.mapCatList; btn = els.mapCatToggle; } else if (type === 'radarCountry') { container = els.radarCountryList; btn = els.radarCountryToggle; } else if (type === 'globalInd') { container = els.globalIndList; btn = els.globalIndToggle; } else if (type === 'r2Country') { container = els.r2CountryList; btn = els.r2CountryToggle; }
+  if (!skipRead) {
+      const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:not([id^="all"])')).filter(cb => cb.checked).map(cb => cb.value);
+      if (type === 'barCountry') state.barCountries = checked; if (type === 'mapCat') state.mapCategories = checked; if (type === 'radarCountry') state.radarCountries = checked; if (type === 'globalInd') state.globalIndicators = checked; if (type === 'r2Country') state.r2Countries = checked;
+  }
+  const list = (type==='barCountry') ? state.barCountries : (type==='mapCat') ? state.mapCategories : (type==='radarCountry') ? state.radarCountries : (type==='globalInd') ? state.globalIndicators : state.r2Countries;
+  updateButtonLabel(btn, list, container.querySelectorAll('input:not([id^="all"])').length, type === 'globalInd' ? "Indicators" : "Selected");
+  const allCb = container.querySelector('input[id^="all"]'); if(allCb) allCb.checked = (list.length === container.querySelectorAll('input:not([id^="all"])').length);
+  updateChart();
+}
+function updateButtonLabel(btn, checked, total, suffix) {
+  if (checked.length === total && total > 0 && suffix !== 'Selected') btn.querySelector('span').textContent = `All ${suffix}`; else if (checked.length === 0) btn.querySelector('span').textContent = `Select...`; else btn.querySelector('span').textContent = `${checked.length} ${suffix}`;
+}
+
+function updateChart() {
+  if (currentTab === 'country') return renderCountryProfile(); if (currentTab === 'radar2') return renderRadar2();
+  if (currentTab === 'map') { renderMap(rawData); return; }
+  const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+  if (currentTab === 'bar') renderBar(data); else if (currentTab === 'radar') renderRadar(data);
+}
+
+function renderBar(data) {
+  const categories = [...new Set(data.map(d => d['Category']))];
+  const availableCountries = [...new Set(data.map(d => d['Country Name']))].sort();
+  const displayCountries = availableCountries.filter(c => state.barCountries.includes(c));
+  const series = categories.map((cat, i) => ({
+    name: cat, data: displayCountries.map(c => { const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; }), color: PALETTE_5[i % PALETTE_5.length] 
+  }));
+  Highcharts.chart('bar-container', {
+    chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, xAxis: { categories: displayCountries, title: { text: null } }, yAxis: { title: { text: '%' }, labels: { format: '{value}%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+    plotOptions: { bar: { pointPadding: 0.05, groupPadding: 0.05, dataLabels: { enabled: true, inside: true, align: 'right', formatter: function() { return this.y.toFixed(1); } } } }, series: series
+  });
+}
+
+async function renderMap(allData) {
+  els.mapContainer.innerHTML = ''; els.mapContainer.className = 'map-grid';
+  
+  if (state.mapViewMode === 'national') {
+      const data = allData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+      const selectedCats = state.mapCategories;
+      if (selectedCats.length === 0) { els.mapContainer.innerHTML = '<p style="text-align:center; padding:2rem;">Please select a category.</p>'; return; }
+      els.mapContainer.className = selectedCats.length > 1 ? 'map-grid split' : 'map-grid';
+      
+      selectedCats.forEach((cat, index) => {
+        const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-${index}`; els.mapContainer.appendChild(div);
+        
+        // --- UPDATED MAP LOADING LOGIC ---
+        if(!window.nationalTopology) return;
+        
+        let geojson;
+        // Check if it is already GeoJSON (FeatureCollection) or TopoJSON
+        if (window.nationalTopology.type === 'FeatureCollection') {
+            geojson = window.nationalTopology;
+        } else {
+            // Fallback for Eurostat TopoJSON (old method)
+            geojson = topojson.feature(window.nationalTopology, window.nationalTopology.objects.nutsrg);
+        }
+        
+        const mapData = data.filter(d => d['Category'] === cat).map(d => ({ 'id': d['Country Code'], value: d['Value'], name: d['Country Name'] }));
+
+        Highcharts.mapChart(div.id, {
+          chart: { map: geojson, animation: false }, 
+          title: { text: cat, style: { color: PALETTE_5[0] } }, 
+          
+          // --- UPDATED PROJECTION ---
+          // Since the new file is EPSG:4326 (Lat/Lon), we use WebMercator
+          mapView: { projection: { name: 'WebMercator' }, zoom: 3.35, center: [10, 55] },
+
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, 
+          plotOptions: { series: { animation: false } },
+          tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+          series: [{ 
+              data: mapData, 
+              joinBy: 'id', // Matches the 'id' field in your GeoJSON
+              name: cat, 
+              states: { hover: { color: '#D68434' } }, 
+              dataLabels: { enabled: false } 
+          }]
+        });
+      });
+  } else {
+      const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-nuts`; div.style.height = '600px'; els.mapContainer.appendChild(div);
+      
+      if(!window.nutsTopology) return;
+      let geojson = topojson.feature(window.nutsTopology, window.nutsTopology.objects.nutsrg);
+      geojson.features = geojson.features.filter(feature => feature.id !== 'NO0B');
+      
+      const nutsDataRows = allData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase() === 'nuts region');
+      if(nutsDataRows.length === 0) { div.innerHTML = `<p style="padding:40px; text-align:center;">No NUTS data.</p>`; return; }
+      const valueMap = new Map(); nutsDataRows.forEach(d => { if(d['Category']) valueMap.set(d['Category'], d['Value']); });
+      const chartData = [];
+      geojson.features.forEach(feature => {
+         const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return;
+         let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null);
+         chartData.push({ id: mapId, value: matchValue, properties: feature.properties });
+      });
+      Highcharts.mapChart(div.id, {
+          chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
+          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }, 
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, 
+          plotOptions: { series: { animation: false } },
+          tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }]
+      });
+  }
+}
+
+function renderRadar(data) {
+  els.radarContainer.innerHTML = ''; const categories = [...new Set(data.map(d => d['Category']))];
+  if (state.radarCountries.length === 0) { els.radarContainer.innerHTML = '<p>Select a country.</p>'; return; }
+  els.radarContainer.className = state.radarCountries.length > 1 ? 'radar-grid split' : 'radar-grid';
+  state.radarCountries.forEach((country, index) => {
+    const card = document.createElement('div'); card.className = 'chart-card'; card.id = `radar-${index}`; els.radarContainer.appendChild(card);
+    const countryData = categories.map(cat => { const row = data.find(d => d['Country Name'] === country && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; });
+    Highcharts.chart(card.id, {
+      chart: { polar: true, type: 'area' }, title: { text: country }, pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }]
+    });
+  });
+}
+
+function renderCountryProfile() {
+  if (state.globalIndicators.length === 0) { if(cpChart) cpChart.destroy(); return; }
+  const indicators = state.globalIndicators;
+  const category = state.cpCategory || 'All';
+  const relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
+  const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
+  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); } 
+  else {
+    cpChart = Highcharts.chart('cp-container', {
+      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` },
+      xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+      plotOptions: { bar: { dataLabels: { enabled: true, format: '{y:.1f}%' } } }, legend: { enabled: false },
+      series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }]
+    });
+  }
+}
+
+function renderRadar2() {
+  if (state.globalIndicators.length === 0 || state.r2Countries.length === 0) { Highcharts.chart('r2-container', { title: { text: 'Select Data' } }); return; }
+  const indicators = state.globalIndicators; const category = state.cpCategory || 'All';
+  const series = state.r2Countries.map((country, i) => {
+    const data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'] } : null; });
+    return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
+  });
+  Highcharts.chart('r2-container', {
+    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, 
+    tooltip: { shared: true, pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.1f}%</b><br/>' }, 
+    series: series
+  });
+}
+</script>
+</body>
+</html>
