@@ -549,10 +549,8 @@ function renderRadar2() {
   });
   window.activeCharts.push(chart);
 }
-</script>
-  /* ======= ✅ External download hooks ======= */
 
-/* Optional: simple filename helper */
+
 function exportName(kind){
   const tail = (state.tab === 'bar' || state.tab === 'map') ? state.year : 'trend';
   return `${(state.id||'chart')}__${state.breakdown||'all'}__${tail}__${kind}`.toLowerCase().replace(/[^\w]+/g,'_');
