@@ -675,7 +675,22 @@
         container.innerHTML = html;
         updateFooterSources(visibleItems);
     }
-
+/* External message hooks for host page buttons */
+window.addEventListener("message", (event) => {
+  if (event.data === "download-png" && chart) {
+    chart.exportChartLocal({ type: "image/png", filename: exportName("img") });
+  }
+  if (event.data === "download-csv" && chart) {
+    const csv = chart.getCSV();
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = exportName("data") + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  }
+});
     // Chart Tooltip Logic
     window.showTooltip = function(e, year, price, rent) {
         const tt = document.getElementById('chartTooltip');
