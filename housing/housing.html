@@ -10,7 +10,6 @@
   <script src="https://code.highcharts.com/maps/modules/map.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 
   <script src="https://unpkg.com/topojson-client@3"></script>
@@ -19,12 +18,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root { --primary: #0B7189; --secondary: #D68434; --bg: #ffffff; --text: #1f2937; }
+    :root { --primary: #0B7189; --secondary: #D68434; --bg: #ffffff; --text: #1f2937; --warn: #b91c1c; }
     body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--text); }
     
-    .dashboard { max-width: 1400px; margin: 0 auto; background: transparent; display: flex; flex-direction: column; }
+    .dashboard { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; }
     
-    .controls { padding: 0 0 1.5rem 0; display: grid; gap: 1.5rem; background: transparent; border-bottom: 1px solid #e5e7eb; position: relative; z-index: 1000; }
+    /* Controls Area */
+    .controls { padding: 0 0 1.5rem 0; display: grid; gap: 1.5rem; border-bottom: 1px solid #e5e7eb; position: relative; z-index: 1000; }
     
     .topic-scroll { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; }
     .topic-btn { white-space: nowrap; padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-weight: 600; font-size: 13px; color: #4b5563; transition: all 0.2s; }
@@ -34,6 +34,7 @@
     label { display: block; font-size: 12px; font-weight: 600; color: #6b7280; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
     select { width: 100%; padding: 0.6rem; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; background-color: #fff; cursor: pointer; }
     
+    /* Custom Dropdowns */
     .dropdown-wrapper { position: relative; }
     .checkbox-list { max-height: 300px; overflow-y: auto; border: 1px solid #d1d5db; border-radius: 6px; padding: 0.5rem; background: #fff; display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; font-size: 13px; }
     .checkbox-list.visible { display: grid; }
@@ -41,26 +42,37 @@
     .checkbox-list .select-all-row { grid-column: 1 / -1; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 5px; font-weight: 600; color: var(--primary); }
     .checkbox-list .group-header { grid-column: 1 / -1; background: #f3f4f6; padding: 4px 8px; font-weight: 700; color: #4b5563; font-size: 11px; margin-top: 4px; border-radius: 4px; }
 
-    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; background: transparent; padding: 0; gap: 2rem; overflow-x: auto; margin-bottom: 1rem; }
+    /* Navigation Tabs */
+    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; gap: 2rem; overflow-x: auto; margin-bottom: 1rem; }
     .tab { padding: 1rem 0.5rem; cursor: pointer; border-bottom: 3px solid transparent; color: #9ca3af; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; white-space: nowrap; }
     .tab:hover { color: #4b5563; }
     .tab.active { border-bottom-color: var(--primary); color: var(--primary); }
     .tab svg { width: 20px; height: 20px; fill: currentColor; }
 
+    /* Charts Area */
     #chart-main { padding: 1rem 0; flex-grow: 1; position: relative; min-height: 600px; z-index: 1; }
     .single-chart-view { height: 600px; width: 100%; }
     .map-grid, .radar-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; height: 600px; }
     .map-grid.split, .radar-grid.split { grid-template-columns: 1fr 1fr; }
     .chart-card { border: none; overflow: hidden; position: relative; background: transparent; }
     
+    /* Map Overlay Buttons */
     #map-overlay-controls { 
         position: absolute; top: 40px; left: 10px; z-index: 100; 
         display: none; flex-direction: column; gap: 0; 
     }
-    .rocker-container { display: flex; flex-direction: column; background: transparent; gap: 6px; }
+    .rocker-container { display: flex; flex-direction: column; gap: 6px; }
     .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.95); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); backdrop-filter: blur(4px); }
     .rocker-opt.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
     
+    /* Low Data Warning */
+    #low-data-warning {
+        display: none; align-items: center; gap: 8px; font-size: 12px; color: var(--warn); 
+        background: #fef2f2; padding: 8px 12px; border-radius: 6px; border: 1px solid #fecaca; 
+        margin-bottom: 10px; max-width: fit-content;
+    }
+
+    /* Footer */
     footer { margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
     .footer-left { display: flex; align-items: center; gap: 16px; }
     .footer-right { display: flex; gap: 8px; }
@@ -99,6 +111,11 @@
     <div class="tab" onclick="switchTab('radar2')" title="Multi-Indicator Radar"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l4 15h12l4-15L12 2zm0 2.8l6.8 3.4-1.6 6h-10.4l-1.6-6L12 4.8z"/></svg><span>Radar comparison</span></div>
   </div>
 
+  <div id="low-data-warning">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+    <span>Note: Some data points were excluded due to low sample size (Count &lt; 50).</span>
+  </div>
+
   <div id="chart-main">
     <div id="map-overlay-controls"><div class="rocker-container"><div id="view-nat" class="rocker-opt active" onclick="setMapView('national')">National</div><div id="view-nuts" class="rocker-opt" onclick="setMapView('nuts')">NUTS Regions</div></div></div>
     <div id="loader">Loading data...</div>
@@ -130,14 +147,7 @@
 <script>
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
-const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNCA5LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0yMC42IDY1LjloLTMuMmMtLjgtMy44LTMuMi03LjItNi43LTguOS0zLjUtMS44LTcuNi0xLjgtMTEuMSAwLTMuNSAxLjctNS45LTUuMS02LjctOC45aC0zLjJjLjgtNS4xIDQtOS42IDkuOS05LjYgNS44IDAgOS00LjUgOS45LTkuNmgzLjJjLS44IDMuOC0zLjIgNy4yLTYuNyA4LjktMy41IDEuOC03LjYgMS44LTExLjEgMC0zLjUtMS43LTUuOS01LjktNi43LTguOWgtMy4yYy44IDUuMSA0IDkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOSA5LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTUxLjEgMTIuOXYzLjJjLTMuOC44LTcuMiAzLjItOC45IDYuNy0xLjggMy41LTEuOCA3LjYgMCAxMS4xIDEuNyAzLjUgNS4xIDUuOSA4LjkgNi43djMuMmMtNS4xLS44LTkuNi00LTkuNi05LjlIDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjlMOS42LTUuOCAwLTktNC41LTkuOS05LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloLTMuMmMtLjggNS4xLTQgOS42LTkuOSA5LjYtNS44IDAtOS00LjUtOS45LTkuNnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNNjIgNDcuNFYxOC43aC04Ljh2LTYuM0g5MVY0Ny40aC04LjhWMjVoLTEzLjZ2MjIuNEg2MnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSTTEyMC4zIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMi01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE0Ny44IDQ3LjRoLTcuM3YtMy44Yy0yIDMuMS01LjEgNC43LTguNyA0LjctNy42IDAtMTIuMy01LjktMTIuMy0xMy44IDAtOC40IDUuMS0xNC41MTIuNi0xNC41IDMuNiAwIDYuNiAxLjQgOC40IDMuOXYtOWg3LjN2MzIuNXptLTgtMTMuMWMwLTUtMi41LTguNC02LjMtOC40LTQgMC02LjMgMy40LTYuMyA4LjQgMCA1LjMgMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjEgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMTY4LjEgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41IDEyLjctMTQuNSAzLjUgMCA2LjYgMS40IDguNiAzLjl2LTMuOGg3Ljd2MjcuM3ptLTguMy0xMy4xYzAtNS4xLTIuNS04LjQtNi4zLTguNC0zLjggMC02LjMgMy4zLTYuMyA4LjQgMCA0LjggMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjMgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMjEyLjIgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41MTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC44LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
-
-// --- COMMON CHART CONFIG ---
-const COMMON_BAR_LABELS = {
-    enabled: true, align: 'right', inside: false, crop: false, overflow: 'justify',
-    formatter: function() { return this.y.toFixed(1); },
-    style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
-};
+const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNCA5LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0yMC42IDY1LjloLTMuMmMtLjgtMy44LTMuMi03LjItNi43LTguOS0zLjUtMS44LTcuNi0xLjgtMTEuMSAwLTMuNSAxLjctNS45LTUuMS02LjctOC45aC0zLjJjLjgtNS4xIDQtOS42IDkuOS05LjYgNS44IDAgOS00LjUgOS45LTkuNmgzLjJjLS44IDMuOC0zLjIgNy4yLTYuNyA4LjktMy41IDEuOC03LjYgMS44LTExLjEgMC0zLjUtMS43LTUuOS01LjktNi43LTguOWgtMy4yYy44IDUuMSA0IDkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOSA5LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTUxLjEgMTIuOXYzLjJjLTMuOC44LTcuMiAzLjItOC45IDYuNy0xLjggMy41LTEuOCA3LjYgMCAxMS4xIDEuNyAzLjUgNS4xIDUuOSA4LjkgNi43djMuMmMtNS4xLS44LTkuNi00LTkuNi05LjlIDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjlMOS42LTUuOCAwLTktNC41LTkuOS05LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloLTMuMmMtLjggNS4xLTQgOS42LTkuOSA5LjYtNS44IDAtOS00LjUtOS45LTkuNnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNNjIgNDcuNFYxOC43aC04Ljh2LTYuM0g5MVY0Ny40aC04LjhWMjVoLTEzLjZ2MjIuNEg2MnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSTTEyMC4zIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMy01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE0Ny44IDQ3LjRoLTcuM3YtMy44Yy0yIDMuMS01LjEgNC43LTguNyA0LjctNy42IDAtMTIuMy01LjktMTIuMy0xMy44IDAtOC40IDUuMS0xNC41MTIuNi0xNC41IDMuNiAwIDYuNiAxLjQgOC40IDMuOXYtOWg3LjN2MzIuNXptLTgtMTMuMWMwLTUtMi41LTguNC02LjMtOC40LTQgMC02LjMgMy40LTYuMyA4LjQgMCA1LjMgMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjEgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMTY4LjEgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41IDEyLjctMTQuNSAzLjUgMCA2LjYgMS40IDguNiAzLjl2LTMuOGg3Ljd2MjcuM3ptLTguMy0xMy4xYzAtNS4xLTIuNS04LjQtNi4zLTguNC0zLjggMC02LjMgMy4zLTYuMyA4LjQgMCA0LjggMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjMgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMjEyLjIgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41MTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
 
 Highcharts.setOptions({
   colors: PALETTE_5, 
@@ -157,227 +167,13 @@ Highcharts.setOptions({
   }
 });
 
-// --- 2. MASTER IMAGE EXPORT (Manual SVG Composition) ---
-function triggerExportImage() {
-    const charts = window.activeCharts;
-    if (!charts || charts.length === 0) return;
-
-    // Standard export options
-    // 4. FIXED: Zoom locked to 3.4 for all maps
-    const exportOptions = {
-        chart: { width: 600, height: 450, backgroundColor: '#FFFFFF' },
-        mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }
-    };
-    const globalOpts = Highcharts.getOptions().exporting;
-
-    // Get SVGs
-    let svg1 = charts[0].getSVGForExport(globalOpts, exportOptions);
-    svg1 = svg1.replace(/^<svg[^>]*>|<\/svg>$/g, ''); // Strip wrapper
-
-    let svg2 = '';
-    let width = 600;
-    
-    // Dual Chart Logic
-    if (charts.length > 1) {
-        svg2 = charts[1].getSVGForExport(globalOpts, exportOptions);
-        svg2 = svg2.replace(/^<svg[^>]*>|<\/svg>$/g, '');
-        width = 1200;
-    }
-
-    const height = 500; // Footer space
-
-    // Construct Master SVG
-    const combinedSVG = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">
-            <rect width="100%" height="100%" fill="#FFFFFF"/>
-            
-            <g transform="translate(0,0)">
-                <svg width="600" height="450">${svg1}</svg>
-            </g>
-            
-            ${charts.length > 1 ? `<g transform="translate(600,0)"><svg width="600" height="450">${svg2}</svg></g>` : ''}
-            
-            <g transform="translate(20, ${height - 40})">
-                <image href="${LOGO_BASE64}" x="0" y="0" width="100" height="25" />
-                <text x="120" y="18" style="font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #666;">Source: Calculations based on EU SILC microdata for 2023</text>
-            </g>
-        </svg>`;
-
-    // Render -> PNG
-    const img = new Image();
-    const blob = new Blob([combinedSVG], { type: "image/svg+xml;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-
-    img.onload = function() {
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, width, height);
-        ctx.drawImage(img, 0, 0);
-        
-        const pngUrl = canvas.toDataURL("image/png");
-        const downloadLink = document.createElement("a");
-        downloadLink.href = pngUrl;
-        downloadLink.download = "Housing_Dashboard_Export.png";
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        URL.revokeObjectURL(url);
-    };
-    img.src = url;
-}
-
-// --- 3. MASTER DATA EXPORT ---
-function triggerExportData() {
-    const charts = window.activeCharts;
-    if (!charts || charts.length === 0) return;
-
-    if (charts.length === 1) {
-        const csv = charts[0].getCSV();
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = exportName('data') + '.csv';
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
-    } else {
-        // Simple dual csv export strategy: Just append
-        let csv1 = charts[0].getCSV().split('\n');
-        let csv2 = charts[1].getCSV().split('\n');
-        let header1 = csv1[0].split(',');
-        let header2 = csv2[0].split(',');
-        let combined = [`Category,${header1[1].replace(/"/g, '')},${header2[1].replace(/"/g, '')}`];
-        for(let i=1; i<csv1.length; i++) {
-            if(!csv1[i]) continue;
-            let row1 = csv1[i].split(',');
-            let row2 = csv2[i] ? csv2[i].split(',') : ['',''];
-            combined.push(`${row1[0]},${row1[1]},${row2[1] || ''}`);
-        }
-        const blob = new Blob([combined.join('\n')], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.setAttribute("href", url);
-        link.setAttribute("download", exportName('data') + '.csv');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-}
-
-// --- 5. EXPORT HOOKS (From User Request) ---
-// Note: Adjusted slightly to use dashboard state variables for filename
-function exportName(kind){
-  // Generate safe filename based on current dashboard state
-  const tail = state.year || 'trend';
-  const breakdown = state.topCat || 'all';
-  const id = state.indicator || 'chart';
-  return `${id}__${breakdown}__${tail}__${kind}`.toLowerCase().replace(/[^\w]+/g,'_');
-}
-
-window.addEventListener('message', (event) => {
-  // Check active charts global
-  if (!window.activeCharts || window.activeCharts.length === 0) return;
-
-  if (event.data === 'download-png') {
-    // Call our robust manual SVG builder
-    triggerExportImage();
-  }
-
-  if (event.data === 'download-csv') {
-    // Call our robust CSV builder
-    triggerExportData();
-  }
-});
-
-/* --- FOOTER BUTTONS (Internal) --- */
-document.getElementById('dlPNG').addEventListener('click', triggerExportImage);
-document.getElementById('dlCSV').addEventListener('click', triggerExportData);
-
-
-/* --- PRELOAD RESOURCES --- */
+/* --- DATA PRELOAD & CACHING --- */
 window.nutsNames = {};
 window.nationalTopology = null;
 window.nutsTopology = null;
 window.activeCharts = []; 
+window.tooltipCache = {}; // Cache for fast tooltip lookup
 
-async function preloadResources() {
-    try {
-        const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
-        const respReg = await fetch(regionalUrl);
-        const topoReg = await respReg.json();
-        window.nutsTopology = topoReg;
-        
-        topojson.feature(topoReg, topoReg.objects.nutsrg).features.forEach(f => {
-            const p = f.properties;
-            const id = p.id || p.NUTS_ID;
-            const name = p.na || p.NUTS_NAME || p.name;
-            if(id && name) window.nutsNames[id] = name;
-        });
-
-        const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
-        const respNat = await fetch(nationalUrl);
-        window.nationalTopology = await respNat.json();
-    } catch(e) { console.warn("Failed to load maps", e); }
-}
-
-/* --- TOOLTIP LOGIC --- */
-function getMiniBarHTML(label, value, color, isMain) {
-   const width = Math.min(Math.max(value, 0), 100); 
-   const weight = isMain ? '700' : '400';
-   const bgColor = isMain ? '#e5e7eb' : '#f3f4f6';
-   return `<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; color: #374151;">
-        <div style="flex: 1; text-align: right; font-weight: ${weight}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px;" title="${label}">${label}</div>
-        <div style="flex: 0 0 80px; height: 12px; background: ${bgColor}; border-radius: 3px; overflow: hidden; position: relative;">
-             <div style="width: ${width}%; height: 100%; background: ${color};"></div>
-        </div>
-        <div style="flex: 0 0 30px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}%</div>
-      </div>`;
-}
-
-function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
-    let html = `<div style="padding: 12px; min-width: 280px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;">`;
-    html += `<div style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><div style="font-size: 14px; font-weight: 700; color: #111827;">${mainLabel}</div><div style="font-size: 12px; color: #6b7280;">${state.indicator}</div></div>`;
-    html += getMiniBarHTML(mainLabel, mainValue, mainColor, true);
-
-    if (state.mapViewMode === 'national') {
-        const countryCode = point['hc-key'] || point.properties.id || point.id; 
-        const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
-        const nutsData = rawData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase().includes('nuts') && (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))).sort((a,b) => b['Value'] - a['Value']);
-        if (nutsData.length > 0) {
-             html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">Regional breakdown (All):</div>`;
-             nutsData.forEach(d => { const name = window.nutsNames[d['Category']] || d['Category']; html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false); });
-        }
-    } else {
-        const nutsId = point.id;
-        if(nutsId && nutsId.length >= 2) {
-            const countryCode = nutsId.substring(0, 2);
-            const lookupCode = (countryCode === 'EL') ? 'GR' : countryCode; 
-            const natData = rawData.find(d => d['Indicator name'] === state.indicator && !String(d['Top category']).toLowerCase().includes('nuts') && (d['Country Code'] === countryCode || d['Country Code'] === lookupCode));
-            if (natData) {
-                 html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">National Average:</div>`;
-                 html += getMiniBarHTML(natData['Country Name'], natData['Value'], PALETTE_5[2], false);
-            }
-        }
-    }
-    html += `</div>`;
-    return html;
-}
-
-function getTooltipHTML(point) {
-  let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
-  let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
-  const color = point.color || (point.series ? point.series.color : '#333');
-  if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
-  if (typeof val === 'number') val = val.toFixed(1);
-  let subLabel = point.series ? point.series.name : ''; 
-  if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
-  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}%</div></div>`;
-}
-
-/* --- STATE --- */
 const CSV_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/Master_Indicator_Data.csv";
 let rawData = [];
 let currentTab = 'bar';
@@ -402,7 +198,8 @@ const els = {
   radarContainer: document.getElementById('radar-container'), radarControls: document.getElementById('radar-controls'), radarCountryList: document.getElementById('radar-country-list'), radarCountryToggle: document.getElementById('radar-toggle-countries'),
   cpContainer: document.getElementById('cp-container'), cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
   r2Container: document.getElementById('r2-container'), r2ControlsCountry: document.getElementById('r2-controls-country'), r2CountryList: document.getElementById('r2-country-list'), r2CountryToggle: document.getElementById('r2-toggle-countries'),
-  loader: document.getElementById('loader')
+  loader: document.getElementById('loader'),
+  lowDataWarning: document.getElementById('low-data-warning')
 };
 
 Papa.parse(CSV_URL, {
@@ -413,10 +210,107 @@ Papa.parse(CSV_URL, {
           if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
           return d; 
       });
+    buildTooltipCache(); // Index data for performance
     init();
   },
   error: (err) => { els.loader.textContent = "Error loading data."; }
 });
+
+function buildTooltipCache() {
+    // Structure: Cache[Indicator][TopCategory] -> Array or Map for fast lookup
+    // For specific comparison map lookups, we index by Indicator -> Category -> Country
+    window.tooltipCache = {};
+    rawData.forEach(d => {
+        const ind = d['Indicator name'];
+        if (!window.tooltipCache[ind]) window.tooltipCache[ind] = [];
+        window.tooltipCache[ind].push(d);
+    });
+}
+
+async function preloadResources() {
+    try {
+        const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
+        const respReg = await fetch(regionalUrl);
+        const topoReg = await respReg.json();
+        window.nutsTopology = topoReg;
+        
+        topojson.feature(topoReg, topoReg.objects.nutsrg).features.forEach(f => {
+            const p = f.properties;
+            const id = p.id || p.NUTS_ID;
+            const name = p.na || p.NUTS_NAME || p.name;
+            if(id && name) window.nutsNames[id] = name;
+        });
+
+        const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
+        const respNat = await fetch(nationalUrl);
+        window.nationalTopology = await respNat.json();
+    } catch(e) { console.warn("Failed to load maps", e); }
+}
+
+/* --- TOOLTIP LOGIC (OPTIMIZED) --- */
+function getMiniBarHTML(label, value, color, isMain) {
+   const width = Math.min(Math.max(value, 0), 100); 
+   const weight = isMain ? '700' : '400';
+   const bgColor = isMain ? '#e5e7eb' : '#f3f4f6';
+   return `<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; color: #374151;">
+        <div style="flex: 1; text-align: right; font-weight: ${weight}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px;" title="${label}">${label}</div>
+        <div style="flex: 0 0 80px; height: 12px; background: ${bgColor}; border-radius: 3px; overflow: hidden; position: relative;">
+             <div style="width: ${width}%; height: 100%; background: ${color};"></div>
+        </div>
+        <div style="flex: 0 0 30px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}%</div>
+      </div>`;
+}
+
+function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
+    let html = `<div style="padding: 12px; min-width: 280px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;">`;
+    html += `<div style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><div style="font-size: 14px; font-weight: 700; color: #111827;">${mainLabel}</div><div style="font-size: 12px; color: #6b7280;">${state.indicator}</div></div>`;
+    html += getMiniBarHTML(mainLabel, mainValue, mainColor, true);
+
+    const indData = window.tooltipCache[state.indicator] || [];
+
+    if (state.mapViewMode === 'national') {
+        const countryCode = point['hc-key'] || point.properties.id || point.id; 
+        const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
+        // Filter from cached array instead of full rawData
+        const nutsData = indData.filter(d => String(d['Top category']).toLowerCase().includes('nuts') && (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))).sort((a,b) => b['Value'] - a['Value']);
+        
+        if (nutsData.length > 0) {
+             html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">Regional breakdown (All):</div>`;
+             nutsData.forEach(d => { const name = window.nutsNames[d['Category']] || d['Category']; html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false); });
+        }
+    } else {
+        const nutsId = point.id;
+        if(nutsId && nutsId.length >= 2) {
+            const countryCode = nutsId.substring(0, 2);
+            const lookupCode = (countryCode === 'EL') ? 'GR' : countryCode; 
+            const natData = indData.find(d => !String(d['Top category']).toLowerCase().includes('nuts') && (d['Country Code'] === countryCode || d['Country Code'] === lookupCode));
+            if (natData) {
+                 html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">National Average:</div>`;
+                 html += getMiniBarHTML(natData['Country Name'], natData['Value'], PALETTE_5[2], false);
+            }
+        }
+    }
+    html += `</div>`;
+    return html;
+}
+
+function getTooltipHTML(point) {
+  let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
+  // Logic fix: Ensure the label matches the visual point
+  let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
+  const color = point.color || (point.series ? point.series.color : '#333');
+  
+  // Use Comparison Tooltip only for Map view
+  if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
+  
+  if (typeof val === 'number') val = val.toFixed(1);
+  
+  // Correctly fetch series name (critical for Country Profile tooltip fix)
+  let subLabel = point.series ? point.series.name : ''; 
+  if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
+  
+  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}%</div></div>`;
+}
 
 async function init() {
   await preloadResources(); 
@@ -452,7 +346,22 @@ function buildGlobalIndicatorList() { const map = new Map(); rawData.forEach(d =
 function setTopic(t) { state.topic = t; document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b.textContent === t)); updateIndicators(); }
 function updateIndicators() { const topicData = rawData.filter(d => d['Topic'] === state.topic); const indicators = [...new Set(topicData.map(d => d['Indicator name']))].sort(); state.indicator = indicators[0]; els.ind.innerHTML = indicators.map(i => `<option>${i}</option>`).join(''); els.ind.onchange = (e) => { state.indicator = e.target.value; updateCategories(); }; updateCategories(); }
 function updateCategories() { const indData = rawData.filter(d => d['Indicator name'] === state.indicator); const topCats = [...new Set(indData.map(d => d['Top category']))].filter(c => !String(c || "").toLowerCase().includes('nuts region')).sort((a, b) => { if (a === 'All') return -1; if (b === 'All') return 1; return String(a).localeCompare(String(b)); }); if (topCats.length === 0) { els.cat.innerHTML = '<option disabled>No Categories</option>'; state.topCat = null; return; } state.topCat = topCats.includes('All') ? 'All' : topCats[0]; els.cat.innerHTML = topCats.map(c => `<option>${c}</option>`).join(''); els.cat.value = state.topCat; els.cat.onchange = (e) => { state.topCat = e.target.value; updateDeepCategories(); updateChart(); }; updateDeepCategories(); updateChart(); }
-function updateDeepCategories() { const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat); const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts')); state.mapCategories = [cats[0]]; populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat'); updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected"); }
+
+function updateDeepCategories() { 
+    const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat); 
+    const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts')); 
+    
+    // HARMONY FIX: If in Bar mode, select ALL by default. If Map mode, select 1.
+    if (currentTab === 'bar') {
+        state.mapCategories = [...cats];
+    } else {
+        state.mapCategories = [cats[0]]; 
+    }
+    
+    populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat'); 
+    updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected"); 
+}
+
 function buildNestedCategoryDropdown() { const map = new Map(); rawData.forEach(d => { const top = d['Top category']; const cat = d['Category']; const topStr = String(top || "").toLowerCase(); const catStr = String(cat || "").toLowerCase(); if(topStr.includes('nuts') || catStr.includes('nuts')) return; if(!map.has(top)) map.set(top, new Set()); map.get(top).add(cat); }); const sortedTop = Array.from(map.keys()).sort((a,b) => (a==='All'?-1:b==='All'?1:String(a).localeCompare(String(b)))); let html = ''; let firstVal = map.has('All') ? 'All' : (sortedTop.length > 0 ? sortedTop[0] : ''); sortedTop.forEach(top => { html += `<optgroup label="${top}">`; const cats = Array.from(map.get(top)).sort(); cats.forEach(c => { html += `<option value="${c}">${c}</option>`; }); html += `</optgroup>`; }); els.cpCatSel.innerHTML = html; if(firstVal) { state.cpCategory = firstVal; els.cpCatSel.value = firstVal; } els.cpCatSel.onchange = (e) => { state.cpCategory = e.target.value; updateChart(); }; }
 function setMapView(mode) { state.mapViewMode = mode; els.viewNat.classList.toggle('active', mode === 'national'); els.viewNuts.classList.toggle('active', mode === 'nuts'); if (mode === 'nuts') { els.stdControls2.style.display = 'none'; els.mapControls.style.display = 'none'; } else { els.stdControls2.style.display = 'block'; els.mapControls.style.display = 'block'; } if (currentTab === 'map') updateChart(); }
 function populateCheckboxList(container, allItems, selectedItems, type) { let html = ''; if (type === 'barCountry' || type === 'cpInd') html += `<label class="select-all-row"><input type="checkbox" id="all-${type}" ${selectedItems.length === allItems.length ? 'checked' : ''} onchange="toggleAll('${type}', this.checked)"> (Un)Select All</label>`; html += allItems.map(c => `<label><input type="checkbox" value="${c}" ${selectedItems.includes(c)?'checked':''} onchange="updateSelection('${type}', this)"> ${c}</label>`).join(''); container.innerHTML = html; }
@@ -474,6 +383,8 @@ function switchTab(tab) {
 
   if (tab === 'bar') {
     els.barContainer.style.display = 'block'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.barControls.style.display = 'block';
+    // Show Category Select if more than 1 option exists
+    if(els.mapCatList.querySelectorAll('input').length > 1) els.mapControls.style.display = 'block';
   } else if (tab === 'map') {
     els.mapContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.mapOverlay.style.display = 'flex'; setMapView(state.mapViewMode);
   } else if (tab === 'radar') {
@@ -489,21 +400,60 @@ function switchTab(tab) {
   updateChart();
 }
 
+/* --- FILTER DATA & COUNT CHECK --- */
+function filterDataAndCheckCounts(data) {
+    const originalCount = data.length;
+    // Check if 'Count' column exists and filter. If not, return data as is.
+    const filtered = data.filter(d => {
+        // If Count is missing or null, assume it's valid (defensive)
+        if (d['Count'] === undefined || d['Count'] === null) return true;
+        return d['Count'] >= 50;
+    });
+
+    // Show warning if we dropped any points
+    if (filtered.length < originalCount) {
+        els.lowDataWarning.style.display = 'flex';
+    } else {
+        els.lowDataWarning.style.display = 'none';
+    }
+    return filtered;
+}
+
 function updateChart() {
   window.activeCharts = []; // Reset active charts
-  if (currentTab === 'country') return renderCountryProfile(); if (currentTab === 'radar2') return renderRadar2();
-  if (currentTab === 'map') { renderMap(rawData); return; }
-  const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
-  if (currentTab === 'bar') renderBar(data); else if (currentTab === 'radar') renderRadar(data);
+  els.lowDataWarning.style.display = 'none'; // Reset warning
+
+  if (currentTab === 'country') return renderCountryProfile(); 
+  if (currentTab === 'radar2') return renderRadar2();
+  
+  if (currentTab === 'map') { 
+      // Map processes filtering internally to handle NUTS
+      renderMap(rawData); 
+      return; 
+  }
+
+  let data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+  data = filterDataAndCheckCounts(data);
+
+  if (currentTab === 'bar') renderBar(data); 
+  else if (currentTab === 'radar') renderRadar(data);
 }
 
 function renderBar(data) {
-  const categories = [...new Set(data.map(d => d['Category']))];
+  // HARMONY FIX: Use the selected categories from the Dropdown state
+  const selectedCategories = state.mapCategories;
   const availableCountries = [...new Set(data.map(d => d['Country Name']))].sort();
   const displayCountries = availableCountries.filter(c => state.barCountries.includes(c));
-  const series = categories.map((cat, i) => ({
-    name: cat, data: displayCountries.map(c => { const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; }), color: PALETTE_5[i % PALETTE_5.length] 
+  
+  const series = selectedCategories.map((cat, i) => ({
+    name: cat, 
+    data: displayCountries.map(c => { 
+        const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); 
+        return row ? { y: row['Value'], categoryName: cat } : null; 
+    }), 
+    color: PALETTE_5[i % PALETTE_5.length] 
   }));
+
   const chart = Highcharts.chart('bar-container', {
     chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, xAxis: { categories: displayCountries, title: { text: null } }, yAxis: { title: { text: '%' }, labels: { format: '{value}%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
     plotOptions: { 
@@ -512,8 +462,8 @@ function renderBar(data) {
             groupPadding: 0.05, 
             dataLabels: { 
                 enabled: true, 
-                align: 'right', // Anchor to right side of bar
-                inside: false, // Let Highcharts decide placement
+                align: 'right', 
+                inside: false, 
                 crop: false, 
                 overflow: 'justify',
                 formatter: function() { return this.y.toFixed(1); },
@@ -537,7 +487,9 @@ function renderBar(data) {
 async function renderMap(allData) {
   els.mapContainer.innerHTML = ''; els.mapContainer.className = 'map-grid';
   if (state.mapViewMode === 'national') {
-      const data = allData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+      let data = allData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+      data = filterDataAndCheckCounts(data);
+
       const selectedCats = state.mapCategories;
       if (selectedCats.length === 0) { els.mapContainer.innerHTML = '<p style="text-align:center; padding:2rem;">Please select a category.</p>'; return; }
       els.mapContainer.className = selectedCats.length > 1 ? 'map-grid split' : 'map-grid';
@@ -561,7 +513,10 @@ async function renderMap(allData) {
       if(!window.nutsTopology) return;
       let geojson = topojson.feature(window.nutsTopology, window.nutsTopology.objects.nutsrg);
       geojson.features = geojson.features.filter(feature => feature.id !== 'NO0B');
-      const nutsDataRows = allData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase() === 'nuts region');
+      
+      let nutsDataRows = allData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase() === 'nuts region');
+      nutsDataRows = filterDataAndCheckCounts(nutsDataRows);
+
       if(nutsDataRows.length === 0) { div.innerHTML = `<p style="padding:40px; text-align:center;">No NUTS data.</p>`; return; }
       const valueMap = new Map(); nutsDataRows.forEach(d => { if(d['Category']) valueMap.set(d['Category'], d['Value']); });
       const chartData = [];
@@ -599,14 +554,23 @@ function renderCountryProfile() {
   if (state.globalIndicators.length === 0) { if(cpChart) cpChart.destroy(); return; }
   const indicators = state.globalIndicators;
   const category = state.cpCategory || 'All';
-  const relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
+  let relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
+  
+  // Apply Filter to Profile Data
+  relevantData = filterDataAndCheckCounts(relevantData);
+  
   const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
-  if (cpChart) { cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); cpChart.xAxis[0].setCategories(indicators); cpChart.series[0].setData(seriesData); window.activeCharts.push(cpChart); } 
+  
+  if (cpChart) { 
+      // AUSTRIA FIX: Explicitly update the series Name so the tooltip reflects the new country
+      cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); 
+      cpChart.xAxis[0].setCategories(indicators); 
+      cpChart.series[0].update({ name: state.cpCountry, data: seriesData }); 
+      window.activeCharts.push(cpChart); 
+  } 
   else {
     cpChart = Highcharts.chart('cp-container', {
       chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
-      
-      // FIXED: Applied matching label style to Country Overview
       plotOptions: { 
           bar: { 
             pointPadding: 0.05, 
@@ -639,7 +603,11 @@ function renderRadar2() {
   if (state.globalIndicators.length === 0 || state.r2Countries.length === 0) { Highcharts.chart('r2-container', { title: { text: 'Select Data' } }); return; }
   const indicators = state.globalIndicators; const category = state.cpCategory || 'All';
   const series = state.r2Countries.map((country, i) => {
-    const data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'] } : null; });
+    let data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'], count: row['Count'] } : null; });
+    
+    // Filter out low counts manually by setting to null
+    data = data.map(d => (d && d.count !== undefined && d.count < 50) ? null : d);
+    
     return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
   });
   const chart = Highcharts.chart('r2-container', {
@@ -648,12 +616,11 @@ function renderRadar2() {
   window.activeCharts.push(chart);
 }
 
-// --- 2. MASTER IMAGE EXPORT FUNCTION (Standard Single File) ---
+/* --- EXPORT FUNCTIONALITY (CONSOLIDATED) --- */
 function triggerExportImage() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
 
-    // Use standard export for single charts, robust sequential for dual
     if (charts.length === 1) {
         charts[0].exportChartLocal({
             type: 'image/png',
@@ -669,58 +636,89 @@ function triggerExportImage() {
                         }
                     }
                 },
-                // ZOOM FIX: Forces Single Map to zoom out (Europe View)
                 mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
             }
         });
     } else {
-        // --- DUAL CHART EXPORT (Sequential) ---
+        // Manual SVG Stitching for Split Views
         const exportOptions = {
-            type: 'image/png',
-            chartOptions: {
-                chart: { 
-                    backgroundColor: '#FFFFFF', marginBottom: 60,
-                    events: {
-                        load: function() {
-                            const chart = this;
-                            chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - 35, 80, 20).add();
-                            chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 110, chart.chartHeight - 20)
-                                .css({ color: '#666', fontSize: '11px' }).add();
-                        }
-                    }
-                },
-                mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
-            }
+            chart: { width: 600, height: 450, backgroundColor: '#FFFFFF' },
+            mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }
         };
+        const globalOpts = Highcharts.getOptions().exporting;
 
-        // Export Chart 1
-        charts[0].exportChartLocal(exportOptions);
+        let svg1 = charts[0].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
+        let svg2 = charts[1].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
         
-        // Export Chart 2 (Small delay)
-        setTimeout(() => {
-            charts[1].exportChartLocal(exportOptions);
-        }, 1500);
+        const width = 1200, height = 500;
+        const combinedSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">
+                <rect width="100%" height="100%" fill="#FFFFFF"/>
+                <g transform="translate(0,0)"><svg width="600" height="450">${svg1}</svg></g>
+                <g transform="translate(600,0)"><svg width="600" height="450">${svg2}</svg></g>
+                <g transform="translate(20, ${height - 40})">
+                    <image href="${LOGO_BASE64}" x="0" y="0" width="100" height="25" />
+                    <text x="120" y="18" style="font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #666;">Source: Calculations based on EU SILC microdata for 2023</text>
+                </g>
+            </svg>`;
+
+        const img = new Image();
+        const blob = new Blob([combinedSVG], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, width, height);
+            ctx.drawImage(img, 0, 0);
+            const a = document.createElement("a");
+            a.href = canvas.toDataURL("image/png");
+            a.download = "Housing_Dashboard_Combined.png";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        };
+        img.src = url;
     }
 }
 
-/* --- 3. MASTER DATA EXPORT FUNCTION --- */
 function triggerExportData() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
 
     if (charts.length === 1) {
-        charts[0].downloadCSV();
+        const csv = charts[0].getCSV();
+        downloadBlob(csv, 'housing_data.csv');
     } else {
-        // Download 1
-        charts[0].downloadCSV();
-        // Download 2
-        setTimeout(() => {
-            charts[1].downloadCSV();
-        }, 1000);
+        let csv1 = charts[0].getCSV().split('\n');
+        let csv2 = charts[1].getCSV().split('\n');
+        let header1 = csv1[0].split(',');
+        let header2 = csv2[0].split(',');
+        let combined = [`Category,${header1[1].replace(/"/g, '')},${header2[1].replace(/"/g, '')}`];
+        for(let i=1; i<csv1.length; i++) {
+            if(!csv1[i]) continue;
+            let row1 = csv1[i].split(',');
+            let row2 = csv2[i] ? csv2[i].split(',') : ['',''];
+            combined.push(`${row1[0]},${row1[1]},${row2[1] || ''}`);
+        }
+        downloadBlob(combined.join('\n'), 'housing_comparison_data.csv');
     }
 }
 
-/* --- WEBHOOKS & LISTENERS --- */
+function downloadBlob(content, filename) {
+    const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 document.getElementById('dlPNG').addEventListener('click', triggerExportImage);
 document.getElementById('dlCSV').addEventListener('click', triggerExportData);
 
