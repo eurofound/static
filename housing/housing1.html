@@ -10,7 +10,7 @@
     <style>
         :root { --primary: #0B7189; --secondary: #1F2937; --bg: #f8fafc; --white: #ffffff; --border: #e2e8f0; --orange: #ea580c; --green: #047857; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--secondary); margin: 0; padding: 30px; }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; }
         
         .header-card { background: var(--white); border-radius: 8px; padding: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid var(--border); }
         .app-title { margin: 0 0 25px 0; color: var(--primary); font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
@@ -18,6 +18,7 @@
         .ctrl-group { flex: 1; position: relative; }
         .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
         
+        /* Country Dropdown */
         .custom-select-wrapper { position: relative; user-select: none; width: 100%; }
         .custom-select { position: relative; display: flex; flex-direction: column; }
         .custom-select__trigger { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 15px; font-weight: 400; color: #333; background: #fff; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
@@ -28,6 +29,11 @@
         .arrow { width: 10px; height: 10px; border-right: 2px solid #999; border-bottom: 2px solid #999; transform: rotate(45deg); margin-top: -4px; transition: 0.2s; }
         .open .arrow { transform: rotate(-135deg); margin-top: 2px; }
 
+        /* Search Tags */
+        .search-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+        .tag { background: #e0f2fe; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .tag-remove { cursor: pointer; font-weight: bold; font-size: 14px; opacity: 0.6; }
+        .tag-remove:hover { opacity: 1; }
         .search-box { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box; outline: none; }
         
         .tabs { display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
@@ -35,17 +41,17 @@
         .tab:hover { color: var(--primary); background: #f0f9ff; }
         .tab.active { background: var(--primary); color: white; }
 
-        .compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .compare-card { border: 2px solid var(--primary); }
-
         .card { background: var(--white); border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%; }
         .card-header { background: #f8fafc; padding: 15px 20px; font-weight: 700; border-bottom: 1px solid var(--border); color: #334155; font-size: 15px; }
         .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 15px; }
 
+        /* General Housing System Grid (1x3 top, full width bottom) */
+        .ghs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
+        .span-full { grid-column: 1 / -1; }
+
         /* Exclusion Grid */
         .exclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        
-        /* VISUALS */
+
         .demo-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
         .demo-label { color: #64748b; font-size: 14px; }
         .demo-val { font-size: 18px; font-weight: 700; color: var(--primary); }
@@ -75,7 +81,6 @@
         .legend-item { display: flex; align-items: center; gap: 5px; }
         .dot { width: 8px; height: 8px; border-radius: 50%; }
         
-        /* Tooltip */
         .chart-tooltip { position: absolute; background: rgba(0,0,0,0.85); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100; transform: translate(-50%, -120%); white-space: nowrap; }
 
         .hero-stat { text-align: center; padding: 40px 20px; }
@@ -87,10 +92,13 @@
         .hbar-track { flex: 1; height: 24px; background: #f1f5f9; border-radius: 4px; position: relative; overflow: hidden; }
         .hbar-fill { height: 100%; background: var(--primary); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: white; font-size: 12px; font-weight: 600; }
 
-        .ghs-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 20px; align-items: start; }
-        .ghs-bottom { display: grid; grid-template-columns: 1.2fr 2fr; gap: 20px; margin-top: 20px; }
         .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
         .empty-state { text-align: center; padding: 60px; color: #94a3b8; font-style: italic; }
+
+        /* FOOTER */
+        .footer-note { margin-top: auto; padding-top: 30px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .footer-logo { height: 35px; }
+        .footer-text { font-size: 12px; color: #94a3b8; }
     </style>
 </head>
 <body>
@@ -110,10 +118,10 @@
                         <div class="custom-options" id="country-options"></div>
                     </div>
                 </div>
-                <input type="hidden" id="countrySelect">
             </div>
             <div class="ctrl-group">
                 <label>Search Indicators</label>
+                <div class="search-tags" id="searchTags"></div>
                 <input type="text" id="searchBox" class="search-box" list="searchList" placeholder="Search for any policy, rule or statistic...">
                 <datalist id="searchList"></datalist>
             </div>
@@ -123,19 +131,16 @@
     <div class="tabs" id="tabContainer"></div>
 
     <div id="subControls" style="display:none; margin-bottom:20px;">
-        <div style="display:flex; justify-content:space-between; align-items:end;">
-            <div>
-                <label style="font-size:11px; font-weight:700; color:#64748b; margin-bottom:5px; display:block;">SELECT TOPIC:</label>
-                <select id="affordabilitySelect" class="search-box" style="width: auto; min-width: 300px;"></select>
-            </div>
-            <div id="compareWrapper" style="display:none;">
-                <label style="font-size:11px; font-weight:700; color:#64748b; margin-bottom:5px; display:block;">COMPARE WITH:</label>
-                <input type="text" id="compareBox" class="search-box" list="searchList" placeholder="Add second indicator..." style="width: 250px;">
-            </div>
-        </div>
+        <label style="font-size:11px; font-weight:700; color:#64748b; margin-bottom:5px; display:block;">SELECT TOPIC:</label>
+        <select id="affordabilitySelect" class="search-box" style="width: auto; min-width: 300px;"></select>
     </div>
 
     <div id="content"></div>
+
+    <div class="footer-note">
+        <img src="https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/logo.svg" alt="Eurofound" class="footer-logo">
+        <span class="footer-text">Source: Eurostat / National Sources | 2025</span>
+    </div>
 </div>
 
 <script>
@@ -148,8 +153,7 @@
         country: COUNTRIES[0] || null,
         section: "Affordability",
         subIndicator: null,
-        compareIndicator: null,
-        filterTitle: null // Used for narrowing down policy lists
+        searchTags: [] // List of indicator objects from Search Index
     };
 
     function formatNumber(num) {
@@ -169,10 +173,9 @@
             btn.onclick = () => {
                 state.section = s;
                 state.subIndicator = null;
-                state.compareIndicator = null;
-                state.filterTitle = null;
+                state.searchTags = []; // Clear search on tab switch
+                updateSearchTagsUI();
                 document.getElementById('searchBox').value = '';
-                document.getElementById('compareBox').value = '';
                 updateTabs();
                 render();
             };
@@ -194,7 +197,9 @@
                 state.country = c;
                 triggerSpan.innerHTML = div.innerHTML;
                 wrapper.classList.remove('open');
-                filterSearchOptions(c); // Update search options based on data availability
+                state.searchTags = []; // Clear search on country change
+                updateSearchTagsUI();
+                filterSearchOptions(c); 
                 render();
             };
             optionsContainer.appendChild(div);
@@ -210,8 +215,7 @@
              if(first) first.click();
         }
 
-        document.getElementById('searchBox').oninput = (e) => handleSearch(e.target.value, false);
-        document.getElementById('compareBox').oninput = (e) => handleSearch(e.target.value, true);
+        document.getElementById('searchBox').onchange = (e) => handleSearch(e.target.value);
 
         // SUB-CONTROLS
         const subSel = document.getElementById('affordabilitySelect');
@@ -224,34 +228,40 @@
         });
         subSel.onchange = (e) => { 
             state.subIndicator = e.target.value; 
-            state.filterTitle = null; 
             render(); 
         };
         if(affInds.length > 0) state.subIndicator = affInds[0];
         
+        // FORCE UI UPDATE ON LOAD
+        updateTabs();
         render();
     }
 
     // Filter Search Dropdown based on Available Data for Country
     function filterSearchOptions(country) {
         const dl = document.getElementById('searchList');
-        dl.innerHTML = ''; // Clear existing
+        dl.innerHTML = ''; 
         const countryData = DB[country];
         if(!countryData) return;
 
-        // Get unique labels from search index
         const validOptions = new Set();
-        
         SEARCH_INDEX.forEach(item => {
-            // Check if this section/parent exists in the country's data
             if (countryData[item.section]) {
                 const sectionData = countryData[item.section];
                 
-                // If it's a parent or virtual type, does the key exist?
-                if (sectionData[item.parent]) {
-                    // For sub-indicators, we assume they are valid if the parent file exists
-                    // (Checking every sub-item content is expensive, checking parent file is fast)
-                    validOptions.add(item.label);
+                // If it's a sub-indicator (policy rule), check if content exists
+                if (item.type === 'sub') {
+                     // The parent file must exist
+                     const parentData = sectionData[item.parent];
+                     if(parentData && parentData.content) {
+                         // Check if this specific rule title is in the data
+                         // Note: parentData.content is an Array of items
+                         const hasItem = parentData.content.some(x => x.title === item.label);
+                         if(hasItem) validOptions.add(item.label);
+                     }
+                } else {
+                    // Parent / Virtual types
+                    if (sectionData[item.parent]) validOptions.add(item.label);
                 }
             }
         });
@@ -267,24 +277,45 @@
         document.querySelectorAll('.tab').forEach(t => {
             t.classList.toggle('active', t.textContent === state.section);
         });
+        
+        // Show Sub-controls ONLY if Affordability is active AND we are not in search mode
+        const isSearchMode = state.searchTags.length > 0;
+        const showDropdown = (state.section === "Affordability" && !isSearchMode);
+        
+        document.getElementById('subControls').style.display = showDropdown ? 'block' : 'none';
     }
 
-    function handleSearch(term, isCompare) {
+    function handleSearch(term) {
+        if(!term) return;
         const match = SEARCH_INDEX.find(i => i.label.toLowerCase() === term.toLowerCase());
         if (match) {
-            if (isCompare) {
-                state.compareIndicator = match;
-                render();
-            } else {
-                state.section = match.section;
-                state.subIndicator = match.parent; 
-                state.filterTitle = (match.type === "sub") ? match.label : null;
-                
-                updateTabs();
-                if (state.section === "Affordability") document.getElementById('affordabilitySelect').value = match.parent;
+            // Avoid duplicates
+            if(!state.searchTags.some(t => t.label === match.label)) {
+                state.searchTags.push(match);
+                updateSearchTagsUI();
+                updateTabs(); // Hide dropdowns if search is active
                 render();
             }
+            document.getElementById('searchBox').value = ''; // Clear input
         }
+    }
+
+    function removeTag(label) {
+        state.searchTags = state.searchTags.filter(t => t.label !== label);
+        updateSearchTagsUI();
+        updateTabs();
+        render();
+    }
+
+    function updateSearchTagsUI() {
+        const container = document.getElementById('searchTags');
+        container.innerHTML = '';
+        state.searchTags.forEach(tag => {
+            const el = document.createElement('div');
+            el.className = 'tag';
+            el.innerHTML = `${tag.label} <span class="tag-remove" onclick="removeTag('${tag.label}')">&times;</span>`;
+            container.appendChild(el);
+        });
     }
 
     // --- RENDERERS ---
@@ -308,7 +339,7 @@
         const range = max - min;
         const width = 600;
         const height = 300;
-        const padding = { top: 20, right: 30, bottom: 50, left: 50 };
+        const padding = { top: 20, right: 30, bottom: 40, left: 40 };
         const chartW = width - padding.left - padding.right;
         const chartH = height - padding.top - padding.bottom;
 
@@ -355,13 +386,6 @@
                 onmouseout="hideTooltip()" style="cursor:pointer;" />`;
         });
 
-        // Logo & Source
-        const logoUrl = "https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/logo.svg";
-        const extraHtml = `
-            <image href="${logoUrl}" x="${padding.left}" y="${height-40}" height="30" width="100" />
-            <text x="${width-padding.right}" y="${height-10}" text-anchor="end" font-size="10" fill="#cbd5e1">Source: Eurostat / National Sources</text>
-        `;
-
         return `
         <div class="line-legend">
             <div class="legend-item"><div class="dot" style="background:#0B7189;"></div> House Prices</div>
@@ -373,7 +397,6 @@
                 ${xLabelsHtml}
                 <path d="${makePath(prices)}" fill="none" stroke="#0B7189" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
                 <path d="${makePath(rents)}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-                ${extraHtml}
                 ${hoverHtml}
             </svg>
             <div id="chartTooltip" class="chart-tooltip"></div>
@@ -501,7 +524,6 @@
         if(key === "Stock & Demographics") return `<div class="card"><div class="card-header">Stock & Demographics</div><div class="card-body">${renderStock(data)}</div></div>`;
         if(key === "Short-term Regulations") return renderPolicy(data['Short-term Regulations']?.content, filterTitle);
         
-        // Generic fallback
         const item = data[key];
         if(!item) return '';
         return renderGeneric(key, item.type, item.content, filterTitle);
@@ -510,51 +532,54 @@
     function render() {
         if(!state.country) return;
         const container = document.getElementById('content');
-        const compareWrapper = document.getElementById('compareWrapper');
         
-        // Data source
-        const data = DB[state.country][state.section];
-        
-        // Show compare input if something is selected
-        compareWrapper.style.display = (state.subIndicator) ? 'block' : 'none';
-
-        if (!data) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
+        const countryData = DB[state.country];
+        if (!countryData) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
 
         let html = '';
 
-        // If General Housing, default to Grid unless searched
-        if (state.section === "General Housing System" && !state.subIndicator && !state.compareIndicator) {
+        // 1. SEARCH MODE (Overrides Tabs)
+        if (state.searchTags.length > 0) {
+            container.className = ''; // Standard block flow
+            state.searchTags.forEach(tag => {
+                const secData = countryData[tag.section];
+                if(secData) {
+                    // Check if it's the specific indicator or parent
+                    const parentKey = tag.parent;
+                    const filter = (tag.type === 'sub') ? tag.label : null;
+                    html += renderComponent(parentKey, secData, filter);
+                }
+            });
+            container.innerHTML = html || '<div class="empty-state">No matching data found.</div>';
+            return;
+        }
+
+        // 2. TAB MODE
+        const data = countryData[state.section];
+        if (!data) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
+
+        // General Housing: 3-col Grid, Bottom item spans full width
+        if (state.section === "General Housing System") {
             const trend = renderComponent("Market Trends", data);
             const stock = renderComponent("Stock & Demographics", data);
             const spending = renderSpending(data['Public Spending']?.content) ? `<div class="card"><div class="card-header">Public Spending (% GDP)</div><div class="card-body">${renderSpending(data['Public Spending']?.content)}</div></div>` : '';
-            const reg = `<div><div class="panel-label" style="font-size:14px; margin-bottom:10px;">SHORT-TERM & VACANCY REGULATIONS</div>${renderPolicy(data['Short-term Regulations']?.content)}</div>`;
             
-            html = `<div class="ghs-grid">${trend}${stock}${spending}</div><div class="ghs-bottom">${reg}<div></div></div>`;
+            // The "Last Tile" (Regulations) must span full width
+            const regContent = data['Short-term Regulations']?.content;
+            const reg = regContent ? `<div class="span-full"><div class="panel-label" style="font-size:14px; margin-bottom:10px;">SHORT-TERM & VACANCY REGULATIONS</div>${renderPolicy(regContent)}</div>` : '';
+            
+            html = `<div class="ghs-grid">${trend}${stock}${spending}${reg}</div>`;
+            container.className = ''; 
         } 
+        else if (state.section === "Exclusion") {
+            container.className = 'exclusion-grid';
+            Object.entries(data).forEach(([k,v]) => html += renderGeneric(k, v.type, v.content));
+        }
         else {
-            // Single View or Compare View
-            const mainContent = renderComponent(state.subIndicator || Object.keys(data)[0], data, state.filterTitle);
-            
-            if (state.compareIndicator) {
-                // Compare Mode
-                const data2 = DB[state.country][state.compareIndicator.section]; // Could be different section!
-                let compContent = '';
-                if(data2) {
-                    compContent = renderComponent(state.compareIndicator.parent, data2, (state.compareIndicator.type === 'sub' ? state.compareIndicator.label : null));
-                }
-                html = `<div class="compare-row"><div class="compare-card">${mainContent}</div><div class="compare-card">${compContent}</div></div>`;
-            } else {
-                // Standard Single
-                if(state.section === "Affordability" || state.subIndicator) {
-                    container.className = 'single-view';
-                    html = mainContent;
-                } else {
-                    // Fallback grid for Exclusion
-                    // CHANGED: Use exclusion-grid class here for 3 columns horizontal
-                    container.className = 'exclusion-grid';
-                    Object.entries(data).forEach(([k,v]) => html += renderGeneric(k, v.type, v.content));
-                }
-            }
+            // Affordability: Single Item
+            const key = state.subIndicator || Object.keys(data)[0];
+            container.className = '';
+            html = renderComponent(key, data, null);
         }
         
         container.innerHTML = html;
@@ -581,3 +606,4 @@
 </script>
 </body>
 </html>
+
