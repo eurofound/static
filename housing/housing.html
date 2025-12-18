@@ -72,11 +72,17 @@
         margin-bottom: 10px; max-width: fit-content;
     }
 
-    /* Footer */
-    footer { margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
-    .footer-left { display: flex; align-items: center; gap: 16px; }
+    /* Footer & Notes */
+    footer { margin-top: 0.0rem; padding-top: rem; border-top: 0px solid #e5e7eb; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
+    .footer-left { display: flex; align-items: flex-start; gap: 16px; max-width: 80%; }
+    .footer-text-col { display: flex; flex-direction: column; gap: 4px; }
+    footer img { height: 32px; opacity: 0.9; margin-top: 2px; }
+
+    /* Note styling */
+    .chart-note { font-size: 13px; line-height: 1.4; color: #4b5563; }
+    .source-text { font-size: 12px; color: #9ca3af; margin-top: 2px; }
+
     .footer-right { display: flex; gap: 8px; }
-    footer img { height: 24px; opacity: 0.9; }
 
     .export-btn { padding: 0.45rem 1rem; border: 1px solid #cfd8e3; border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; font-weight: 600; color: #374151; display: flex; align-items: center; gap: 6px; transition: all 0.2s; }
     .export-btn:hover { background: #f3f4f6; border-color: #b6c3d7; }
@@ -129,7 +135,10 @@
   <footer>
     <div class="footer-left">
         <img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo">
-        <div>Calculations based on EU SILC microdata for 2023</div>
+        <div class="footer-text-col">
+            <div id="indicator-note" class="chart-note" style="display:none;"></div>
+            <div class="source-text"><b>Source:</b> Calculations based on EU SILC microdata for 2023</div>
+        </div>
     </div>
     <div class="footer-right">
         <button id="dlPNG" class="export-btn" title="Download Image">
@@ -148,6 +157,12 @@
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
 const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNCA5LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0yMC42IDY1LjloLTMuMmMtLjgtMy44LTMuMi03LjItNi43LTguOS0zLjUtMS44LTcuNi0xLjgtMTEuMSAwLTMuNSAxLjctNS45LTUuMS02LjctOC45aC0zLjJjLjgtNS4xIDQtOS42IDkuOS05LjYgNS44IDAgOS00LjUgOS45LTkuNmgzLjJjLS44IDMuOC0zLjIgNy4yLTYuNyA4LjktMy41IDEuOC03LjYgMS44LTExLjEgMC0zLjUtMS43LTUuOS01LjktNi43LTguOWgtMy4yYy44IDUuMSA0IDkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOSA5LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTUxLjEgMTIuOXYzLjJjLTMuOC44LTcuMiAzLjItOC45IDYuNy0xLjggMy41LTEuOCA3LjYgMCAxMS4xIDEuNyAzLjUgNS4xIDUuOSA4LjkgNi43djMuMmMtNS4xLS44LTkuNi00LTkuNi05LjlIDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjlMOS42LTUuOCAwLTktNC41LTkuOS05LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloLTMuMmMtLjggNS4xLTQgOS42LTkuOSA5LjYtNS44IDAtOS00LjUtOS45LTkuNnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNNjIgNDcuNFYxOC43aC04Ljh2LTYuM0g5MVY0Ny40aC04LjhWMjVoLTEzLjZ2MjIuNEg2MnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSTTEyMC4zIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMy01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE0Ny44IDQ3LjRoLTcuM3YtMy44Yy0yIDMuMS01LjEgNC43LTguNyA0LjctNy42IDAtMTIuMy01LjktMTIuMy0xMy44IDAtOC40IDUuMS0xNC41MTIuNi0xNC41IDMuNiAwIDYuNiAxLjQgOC40IDMuOXYtOWg3LjN2MzIuNXptLTgtMTMuMWMwLTUtMi41LTguNC02LjMtOC40LTQgMC02LjMgMy40LTYuMyA4LjQgMCA1LjMgMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjEgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMTY4LjEgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41IDEyLjctMTQuNSAzLjUgMCA2LjYgMS40IDguNiAzLjl2LTMuOGg3Ljd2MjcuM3ptLTguMy0xMy4xYzAtNS4xLTIuNS04LjQtNi4zLTguNC0zLjggMC02LjMgMy4zLTYuMyA4LjQgMCA0LjggMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjMgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMjEyLjIgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41MTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
+
+/* --- NOTES DEFINITIONS --- */
+const INDICATOR_NOTES = {
+    "30/40 definition of housing affordability stress": "This is the percentage of households spending 30% or more of their disposable income on housing who are also in the bottom 40% of the national income distribution",
+    "Housing cost overburden rate (>40% of income)": "We assume that that the ratio of housing cost to income that underlies this variable is bounded between zero and 100"
+};
 
 Highcharts.setOptions({
   colors: PALETTE_5, 
@@ -172,9 +187,9 @@ window.nutsNames = {};
 window.nationalTopology = null;
 window.nutsTopology = null;
 window.activeCharts = []; 
-window.tooltipCache = {}; // Cache for fast tooltip lookup
-
-const CSV_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/Master_Indicator_Data.csv";
+window.tooltipCache = {}; 
+// REPLACE THIS LINE:
+const CSV_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/Master_Indicator_Data.csv";
 let rawData = [];
 let currentTab = 'bar';
 let cpChart = null;
@@ -199,7 +214,8 @@ const els = {
   cpContainer: document.getElementById('cp-container'), cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
   r2Container: document.getElementById('r2-container'), r2ControlsCountry: document.getElementById('r2-controls-country'), r2CountryList: document.getElementById('r2-country-list'), r2CountryToggle: document.getElementById('r2-toggle-countries'),
   loader: document.getElementById('loader'),
-  lowDataWarning: document.getElementById('low-data-warning')
+  lowDataWarning: document.getElementById('low-data-warning'),
+  indicatorNote: document.getElementById('indicator-note')
 };
 
 Papa.parse(CSV_URL, {
@@ -208,17 +224,19 @@ Papa.parse(CSV_URL, {
     rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
           d['Value'] = d['Value'] * 100; 
           if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
+          // DATA CLEANING: Fix "Permancy  of main job" double spaces logic
+          if (d['Top category']) {
+              d['Top category'] = d['Top category'].replace(/\s+/g, ' ').trim();
+          }
           return d; 
       });
-    buildTooltipCache(); // Index data for performance
+    buildTooltipCache(); 
     init();
   },
   error: (err) => { els.loader.textContent = "Error loading data."; }
 });
 
 function buildTooltipCache() {
-    // Structure: Cache[Indicator][TopCategory] -> Array or Map for fast lookup
-    // For specific comparison map lookups, we index by Indicator -> Category -> Country
     window.tooltipCache = {};
     rawData.forEach(d => {
         const ind = d['Indicator name'];
@@ -247,7 +265,6 @@ async function preloadResources() {
     } catch(e) { console.warn("Failed to load maps", e); }
 }
 
-/* --- TOOLTIP LOGIC (OPTIMIZED) --- */
 function getMiniBarHTML(label, value, color, isMain) {
    const width = Math.min(Math.max(value, 0), 100); 
    const weight = isMain ? '700' : '400';
@@ -271,7 +288,6 @@ function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
     if (state.mapViewMode === 'national') {
         const countryCode = point['hc-key'] || point.properties.id || point.id; 
         const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
-        // Filter from cached array instead of full rawData
         const nutsData = indData.filter(d => String(d['Top category']).toLowerCase().includes('nuts') && (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))).sort((a,b) => b['Value'] - a['Value']);
         
         if (nutsData.length > 0) {
@@ -296,16 +312,13 @@ function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
 
 function getTooltipHTML(point) {
   let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
-  // Logic fix: Ensure the label matches the visual point
   let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
   const color = point.color || (point.series ? point.series.color : '#333');
   
-  // Use Comparison Tooltip only for Map view
   if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
   
   if (typeof val === 'number') val = val.toFixed(1);
   
-  // Correctly fetch series name (critical for Country Profile tooltip fix)
   let subLabel = point.series ? point.series.name : ''; 
   if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
   
@@ -351,7 +364,6 @@ function updateDeepCategories() {
     const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat); 
     const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts')); 
     
-    // HARMONY FIX: If in Bar mode, select ALL by default. If Map mode, select 1.
     if (currentTab === 'bar') {
         state.mapCategories = [...cats];
     } else {
@@ -383,7 +395,6 @@ function switchTab(tab) {
 
   if (tab === 'bar') {
     els.barContainer.style.display = 'block'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.barControls.style.display = 'block';
-    // Show Category Select if more than 1 option exists
     if(els.mapCatList.querySelectorAll('input').length > 1) els.mapControls.style.display = 'block';
   } else if (tab === 'map') {
     els.mapContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.mapOverlay.style.display = 'flex'; setMapView(state.mapViewMode);
@@ -400,17 +411,13 @@ function switchTab(tab) {
   updateChart();
 }
 
-/* --- FILTER DATA & COUNT CHECK --- */
 function filterDataAndCheckCounts(data) {
     const originalCount = data.length;
-    // Check if 'Count' column exists and filter. If not, return data as is.
     const filtered = data.filter(d => {
-        // If Count is missing or null, assume it's valid (defensive)
         if (d['Count'] === undefined || d['Count'] === null) return true;
         return d['Count'] >= 50;
     });
 
-    // Show warning if we dropped any points
     if (filtered.length < originalCount) {
         els.lowDataWarning.style.display = 'flex';
     } else {
@@ -420,14 +427,21 @@ function filterDataAndCheckCounts(data) {
 }
 
 function updateChart() {
-  window.activeCharts = []; // Reset active charts
-  els.lowDataWarning.style.display = 'none'; // Reset warning
+  window.activeCharts = []; 
+  els.lowDataWarning.style.display = 'none'; 
+
+  // UPDATE NOTE
+  if (state.indicator && INDICATOR_NOTES[state.indicator]) {
+      els.indicatorNote.innerHTML = `<b>Notes:</b> ${INDICATOR_NOTES[state.indicator]}`;
+      els.indicatorNote.style.display = 'block';
+  } else {
+      els.indicatorNote.style.display = 'none';
+  }
 
   if (currentTab === 'country') return renderCountryProfile(); 
   if (currentTab === 'radar2') return renderRadar2();
   
   if (currentTab === 'map') { 
-      // Map processes filtering internally to handle NUTS
       renderMap(rawData); 
       return; 
   }
@@ -440,7 +454,6 @@ function updateChart() {
 }
 
 function renderBar(data) {
-  // HARMONY FIX: Use the selected categories from the Dropdown state
   const selectedCategories = state.mapCategories;
   const availableCountries = [...new Set(data.map(d => d['Country Name']))].sort();
   const displayCountries = availableCountries.filter(c => state.barCountries.includes(c));
@@ -523,10 +536,10 @@ async function renderMap(allData) {
       geojson.features.forEach(feature => { const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return; let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null); chartData.push({ id: mapId, value: matchValue, properties: feature.properties }); });
       
       const chart = Highcharts.mapChart(div.id, {
-          chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
-          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }, 
-          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], 
-          exporting: { filename: `Housing_${state.indicator}_RegionalMap` }
+        chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
+        mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }, 
+        mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], 
+        exporting: { filename: `Housing_${state.indicator}_RegionalMap` }
       });
       window.activeCharts.push(chart);
   }
@@ -556,13 +569,11 @@ function renderCountryProfile() {
   const category = state.cpCategory || 'All';
   let relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
   
-  // Apply Filter to Profile Data
   relevantData = filterDataAndCheckCounts(relevantData);
   
   const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
   
   if (cpChart) { 
-      // AUSTRIA FIX: Explicitly update the series Name so the tooltip reflects the new country
       cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); 
       cpChart.xAxis[0].setCategories(indicators); 
       cpChart.series[0].update({ name: state.cpCountry, data: seriesData }); 
@@ -605,7 +616,6 @@ function renderRadar2() {
   const series = state.r2Countries.map((country, i) => {
     let data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'], count: row['Count'] } : null; });
     
-    // Filter out low counts manually by setting to null
     data = data.map(d => (d && d.count !== undefined && d.count < 50) ? null : d);
     
     return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
@@ -616,23 +626,38 @@ function renderRadar2() {
   window.activeCharts.push(chart);
 }
 
-/* --- EXPORT FUNCTIONALITY (CONSOLIDATED) --- */
 function triggerExportImage() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
+
+    // Get note text if visible
+    const noteEl = document.getElementById('indicator-note');
+    const hasNote = noteEl && noteEl.style.display !== 'none';
+    const noteText = hasNote ? noteEl.innerText : '';
 
     if (charts.length === 1) {
         charts[0].exportChartLocal({
             type: 'image/png',
             chartOptions: {
                 chart: { 
-                    backgroundColor: '#FFFFFF', marginBottom: 60,
+                    backgroundColor: '#FFFFFF', marginBottom: 80, // Increased margin for notes
                     events: {
                         load: function() {
                             const chart = this;
-                            chart.renderer.image(LOGO_BASE64, 10, chart.chartHeight - 35, 80, 20).add();
-                            chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 110, chart.chartHeight - 20)
-                                .css({ color: '#666', fontSize: '11px' }).add();
+                            const h = chart.chartHeight;
+                            
+                            chart.renderer.image(LOGO_BASE64, 10, h - 55, 80, 20).add();
+                            
+                            if (hasNote) {
+                                chart.renderer.text(noteText, 100, h - 45)
+                                    .css({ color: '#4b5563', fontSize: '10px', width: '500px', whiteSpace: 'normal' }).add();
+                                    
+                                chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 100, h - 25)
+                                    .css({ color: '#666', fontSize: '10px', fontWeight: 'bold' }).add();
+                            } else {
+                                chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 100, h - 35)
+                                    .css({ color: '#666', fontSize: '11px', fontWeight: 'bold' }).add();
+                            }
                         }
                     }
                 },
@@ -640,7 +665,6 @@ function triggerExportImage() {
             }
         });
     } else {
-        // Manual SVG Stitching for Split Views
         const exportOptions = {
             chart: { width: 600, height: 450, backgroundColor: '#FFFFFF' },
             mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }
@@ -650,15 +674,16 @@ function triggerExportImage() {
         let svg1 = charts[0].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
         let svg2 = charts[1].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
         
-        const width = 1200, height = 500;
+        const width = 1200, height = 550; // Increased height for footer
         const combinedSVG = `
             <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">
                 <rect width="100%" height="100%" fill="#FFFFFF"/>
                 <g transform="translate(0,0)"><svg width="600" height="450">${svg1}</svg></g>
                 <g transform="translate(600,0)"><svg width="600" height="450">${svg2}</svg></g>
-                <g transform="translate(20, ${height - 40})">
+                <g transform="translate(20, ${height - 60})">
                     <image href="${LOGO_BASE64}" x="0" y="0" width="100" height="25" />
-                    <text x="120" y="18" style="font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #666;">Source: Calculations based on EU SILC microdata for 2023</text>
+                    ${hasNote ? `<text x="120" y="10" style="font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #4b5563;">${noteText}</text>` : ''}
+                    <text x="120" y="${hasNote ? 28 : 18}" style="font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #666; font-weight: bold;">Source: Calculations based on EU SILC microdata for 2023</text>
                 </g>
             </svg>`;
 
