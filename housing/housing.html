@@ -11,6 +11,7 @@
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
   <script src="https://unpkg.com/topojson-client@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
@@ -156,9 +157,8 @@
 <script>
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
-const LOGO_BASE64 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODMuNSA2NSI+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTI4My41IDQ5LjFjMC0uMSAwLS4zLS4xLS40bC0uMS0uMWMtMi0zLjUtNS42LTguMy05LjgtMTIuNy0yLjItMi4zLTQuNi00LjctNy4yLTcuMSAxLjYtLjYgMy0xLjYgNC4xLTIuOSAyLjItMi41IDIuNy02LjIgMS4zLTkuNC0uMi0uNC0uMy0uOC0uNS0xLjItLjItLjQtLjItLjgtLjItMS4yVjE0YzAtLjEgMC0uMy4x-.4l.1-.1c2-3.5 5.6-8.3 9.8-12.7.8-.8 1.6-1.7 2.3-2.5H269c-.8.8-1.6 1.6-2.3 2.5-5.3 5.5-9.9 11.6-11.9 16.3-.3.8-.7 1.6-1 2.4-1.7-.6-3.5-.9-5.3-.9h-14.6c-8.3 0-15.2 6.1-16.5 14.1-.1.9-.2 1.8-.2 2.7 0 .9.1 1.8.2 2.7 1.3 8 8.2 14.1 16.5 14.1h14.6c2.7 0 5.3-.7 7.6-1.9 3.3 5.6 8.8 12.6 15.3 19.3.8.8 1.6 1.7 2.3 2.5h14.2c-.7-.8-1.5-1.7-2.3-2.5-5.2-5.4-9.7-11.4-11.9-16-.3-.8-.6-1.6-.9-2.4.5-.4 1.1-.8 1.6-1.3zm-50.9-9c0-.5.1-.9.2-1.4.6-4.2 4.2-7.4 8.5-7.4h14.6c.9 0 1.9.1 2.8.4.4.1.7.3 1.1.5v15.8c-.4.2-.7.3-1.1.5-.9.3-1.8.4-2.8.4h-14.6c-4.3 0-7.9-3.2-8.5-7.4-.1-.4-.2-.9-.2-1.4zIi8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTAgMTIuOXYzLjJjMy44LjggNy4yIDMuMiA4LjkgNi43IDEuOCAzLjUgMS44IDcuNiAwIDExLjEtMS43IDMuNS01LjEgNS45LTguOSA2Ljd2My4yYzUuMS0uOCA5LjYtNCA5LjYtOS45IDAtNS44LTQuNS05LTkuNi05Ljl2LTMuMmMzLjguOCA3LjIgMy4yIDguOSA2LjcgMS44IDMuNSAxLjggNy42IDAgMTEuMS0xLjcgMy41LTUuMSA1LjktOC45IDYuN3YzLjJjLTUuMS0uOC05LjYtNCA5LjYtOS45IDAtNS44IDQuNS05IDkuNi05Ljl2eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0yMC42IDY1LjloLTMuMmMtLjgtMy44LTMuMi03LjItNi43LTguOS0zLjUtMS44LTcuNi0xLjgtMTEuMSAwLTMuNSAxLjctNS45LTUuMS02LjctOC45aC0zLjJjLjgtNS4xIDQtOS42IDkuOS05LjYgNS44IDAgOS00LjUgOS45LTkuNmgzLjJjLS44IDMuOC0zLjIgNy4yLTYuNyA4LjktMy41IDEuOC03LjYgMS44LTExLjEgMC0zLjUtMS43LTUuOS01LjktNi43LTguOWgtMy4yYy44IDUuMSA0IDkuNiA5LjktOS42IDUuOCAwIDktNC41IDkuOSA5LjZ6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTUxLjEgMTIuOXYzLjJjLTMuOC44LTcuMiAzLjItOC45IDYuNy0xLjggMy41LTEuOCA3LjYgMCAxMS4xIDEuNyAzLjUgNS4xIDUuOSA4LjkgNi43djMuMmMtNS4xLS44LTkuNi00LTkuNi05LjlIDAtNS44IDQuNS05IDkuNi05Ljl2LTMuMmMtMy44LjgtNy4yIDMuMi04LjkgNi43LTEuOCAzLjUtMS44IDcuNiAwIDExLjEtMS43IDMuNSA1LjEgNS45IDguOSA2Ljd2My4yYy01LjEtLjgtOS42LTQgOS42LTkuOSAwLTUuOSA0LjUtOSA5LjYtOS45eiIvPjxwYXRoIGZpbGw9IiMwMDk3QjciIGQ9Ik0zMC41IDBoMy4yYy44IDMuOCAzLjIgNy4yIDYuNyA4LjkgMy41IDEuOCA3LjYgMS44IDExLjEgMCAzLjUtMS43IDUuOS01LjEgNi43LTguOWgzLjJjLS44IDUuMS00IDkuNi05LjlMOS42LTUuOCAwLTktNC41LTkuOS05LjZoLTMuMmMuOC0zLjggMy4yLTcuMiA2LjctOC45IDMuNS0xLjggNy42LTEuOCAxMS4xIDAtMy41IDEuNyA1LjktNS4xIDYuNy04LjloLTMuMmMtLjggNS4xLTQgOS42LTkuOSA5LjYtNS44IDAtOS00LjUtOS45LTkuNnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNNjIgNDcuNFYxOC43aC04Ljh2LTYuM0g5MVY0Ny40aC04LjhWMjVoLTEzLjZ2MjIuNEg2MnoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSTTEyMC4zIDQ3LjRoLTcuN3YtMy44Yy0yLjIgMy4xLTUuMyA0LjctOS4xIDQuNy03IDAtMTIuMy01LTEyLjItMTMuOCAwLTkuNCA1LjQtMTQuNSAxMi43LTE0LjUgMy41IDAgNi42IDEuNCA4LjYgMy45di0zLjhoNy43djI3LjN6bS04LjMtMTMuMWMwLTUuMS0yLjUtOC40LTYuMy04LjQtMy44IDAtNi4zIDMuMy02LjMgOC40IDAgNC44IDIuNSA4LjEgNi4zIDguMSAzLjggMCA2LjMtMy4zIDYuMy04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTE0Ny44IDQ3LjRoLTcuM3YtMy44Yy0yIDMuMS01LjEgNC43LTguNyA0LjctNy42IDAtMTIuMy01LjktMTIuMy0xMy44IDAtOC40IDUuMS0xNC41MTIuNi0xNC41IDMuNiAwIDYuNiAxLjQgOC40IDMuOXYtOWg3LjN2MzIuNXptLTgtMTMuMWMwLTUtMi41LTguNC02LjMtOC40LTQgMC02LjMgMy40LTYuMyA4LjQgMCA1LjMgMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjEgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMTY4LjEgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41IDEyLjctMTQuNSAzLjUgMCA2LjYgMS40IDguNiAzLjl2LTMuOGg3Ljd2MjcuM3ptLTguMy0xMy4xYzAtNS4xLTIuNS04LjQtNi4zLTguNC0zLjggMC02LjMgMy4zLTYuMyA4LjQgMCA0LjggMi41IDguMSA2LjMgOC4xIDMuOCAwIDYuMy0zLjMgNi4zLTguMXoiLz48cGF0aCBmaWxsPSIjMDA1Mjc3IiBkPSJNMjEyLjIgNDcuNGgtNy43di0zLjhjLTIuMiAzLjEtNS4zIDQuNy05LjEgNC43LTcgMC0xMi4yLTUtMTIuMi0xMy44IDAtOS40IDUuNC0xNC41MTIuNy0xNC41IDMuNSAwIDYuNiAxLjQgOC42IDMuOXYtMy44aDcuN3YyNy4zem0tOC4zLTEzLjFjMC01LjEtMi41LTguNC02LjMtOC40LTMuOCAwLTYuMyAzLjMtNi4zIDguNCAwIDQuOCAyLjUgOC4xIDYuMyA4LjEgMy44IDAgNi4zLTMuMyA2LjMtOC4xeiIvPjxwYXRoIGZpbGw9IiMwMDUyNzciIGQ9Ik0xNzcuNyA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PHBhdGggZmlsbD0iIzAwNTI3NyIgZD0iTTIyOCA0Ny40VjE4LjdoNy4ydjMuNWMxLjktMi43IDQuOS00LjEgOC4zLTQuMSA2LjkgMCAxMS44IDUuMiAxMS44IDEzLjggMCA4LjEtNC43IDEzLjgtMTEuNiAxMy44LTMuNiAwLTYuNy0xLjUtOC43LTQuNHY2LjFoLTd6bTcuNi0xNC43YzAtNSAyLjQtOC40IDYuMi04LjQgMy42IDAgNi4xIDMuMyA2LjEgOC40IDAgNC48LTIuMyA4LjEtNi4xIDguMS0zLjcgMC02LjItMy4zLTYuMi04LjF6Ii8+PC9zdmc+';
+const LOGO_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg";
 
-/* --- NOTES DEFINITIONS --- */
 const INDICATOR_NOTES = {
     "30/40 definition of housing affordability stress": "This is the percentage of households spending 30% or more of their disposable income on housing who are also in the bottom 40% of the national income distribution",
     "Housing cost overburden rate (>40% of income)": "We assume that that the ratio of housing cost to income that underlies this variable is bounded between zero and 100"
@@ -188,7 +188,6 @@ window.nationalTopology = null;
 window.nutsTopology = null;
 window.activeCharts = []; 
 window.tooltipCache = {}; 
-// REPLACE THIS LINE:
 const CSV_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/Master_Indicator_Data.csv";
 let rawData = [];
 let currentTab = 'bar';
@@ -206,12 +205,13 @@ const els = {
   stdControls1: document.getElementById('std-controls-1'), ind: document.getElementById('indicator-sel'),
   stdControls2: document.getElementById('std-controls-2'), cat: document.getElementById('category-sel'),
   cpCatWrapper: document.getElementById('cp-cat-wrapper'), cpCatSel: document.getElementById('cp-cat-sel'),
+  cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
   globalIndWrapper: document.getElementById('global-ind-wrapper'), globalIndList: document.getElementById('global-ind-list'), globalIndToggle: document.getElementById('global-toggle-inds'),
   barContainer: document.getElementById('bar-container'), barControls: document.getElementById('bar-controls'), barCountryList: document.getElementById('bar-country-list'), barCountryToggle: document.getElementById('bar-toggle-countries'),
   mapContainer: document.getElementById('map-container'), mapControls: document.getElementById('map-controls'), mapCatList: document.getElementById('map-cat-list'), mapCatToggle: document.getElementById('map-toggle-cats'), mapOverlay: document.getElementById('map-overlay-controls'),
   viewNat: document.getElementById('view-nat'), viewNuts: document.getElementById('view-nuts'),
   radarContainer: document.getElementById('radar-container'), radarControls: document.getElementById('radar-controls'), radarCountryList: document.getElementById('radar-country-list'), radarCountryToggle: document.getElementById('radar-toggle-countries'),
-  cpContainer: document.getElementById('cp-container'), cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
+  cpContainer: document.getElementById('cp-container'),
   r2Container: document.getElementById('r2-container'), r2ControlsCountry: document.getElementById('r2-controls-country'), r2CountryList: document.getElementById('r2-country-list'), r2CountryToggle: document.getElementById('r2-toggle-countries'),
   loader: document.getElementById('loader'),
   lowDataWarning: document.getElementById('low-data-warning'),
@@ -224,7 +224,6 @@ Papa.parse(CSV_URL, {
     rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
           d['Value'] = d['Value'] * 100; 
           if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
-          // DATA CLEANING: Fix "Permancy  of main job" double spaces logic
           if (d['Top category']) {
               d['Top category'] = d['Top category'].replace(/\s+/g, ' ').trim();
           }
@@ -626,111 +625,170 @@ function renderRadar2() {
   window.activeCharts.push(chart);
 }
 
-function triggerExportImage() {
+// --- FIXED IMAGE EXPORT ---
+async function triggerExportImage() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
 
-    // Get note text if visible
-    const noteEl = document.getElementById('indicator-note');
-    const hasNote = noteEl && noteEl.style.display !== 'none';
-    const noteText = hasNote ? noteEl.innerText : '';
-
-    if (charts.length === 1) {
-        charts[0].exportChartLocal({
-            type: 'image/png',
-            chartOptions: {
-                chart: { 
-                    backgroundColor: '#FFFFFF', marginBottom: 80, // Increased margin for notes
-                    events: {
-                        load: function() {
-                            const chart = this;
-                            const h = chart.chartHeight;
-                            
-                            chart.renderer.image(LOGO_BASE64, 10, h - 55, 80, 20).add();
-                            
-                            if (hasNote) {
-                                chart.renderer.text(noteText, 100, h - 45)
-                                    .css({ color: '#4b5563', fontSize: '10px', width: '500px', whiteSpace: 'normal' }).add();
-                                    
-                                chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 100, h - 25)
-                                    .css({ color: '#666', fontSize: '10px', fontWeight: 'bold' }).add();
-                            } else {
-                                chart.renderer.text('Source: Calculations based on EU SILC microdata for 2023', 100, h - 35)
-                                    .css({ color: '#666', fontSize: '11px', fontWeight: 'bold' }).add();
-                            }
-                        }
-                    }
-                },
-                mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.35 }
-            }
-        });
-    } else {
-        const exportOptions = {
-            chart: { width: 600, height: 450, backgroundColor: '#FFFFFF' },
-            mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }
-        };
-        const globalOpts = Highcharts.getOptions().exporting;
-
-        let svg1 = charts[0].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
-        let svg2 = charts[1].getSVGForExport(globalOpts, exportOptions).replace(/^<svg[^>]*>|<\/svg>$/g, '');
-        
-        const width = 1200, height = 550; // Increased height for footer
-        const combinedSVG = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" version="1.1">
-                <rect width="100%" height="100%" fill="#FFFFFF"/>
-                <g transform="translate(0,0)"><svg width="600" height="450">${svg1}</svg></g>
-                <g transform="translate(600,0)"><svg width="600" height="450">${svg2}</svg></g>
-                <g transform="translate(20, ${height - 60})">
-                    <image href="${LOGO_BASE64}" x="0" y="0" width="100" height="25" />
-                    ${hasNote ? `<text x="120" y="10" style="font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #4b5563;">${noteText}</text>` : ''}
-                    <text x="120" y="${hasNote ? 28 : 18}" style="font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #666; font-weight: bold;">Source: Calculations based on EU SILC microdata for 2023</text>
-                </g>
-            </svg>`;
-
-        const img = new Image();
-        const blob = new Blob([combinedSVG], { type: "image/svg+xml;charset=utf-8" });
+    // Fetch logo BLOB first
+    let logoImg = null;
+    try {
+        const response = await fetch(LOGO_URL);
+        const blob = await response.blob();
         const url = URL.createObjectURL(blob);
-        img.onload = function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(0, 0, width, height);
-            ctx.drawImage(img, 0, 0);
-            const a = document.createElement("a");
-            a.href = canvas.toDataURL("image/png");
-            a.download = "Housing_Dashboard_Combined.png";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        };
-        img.src = url;
+        logoImg = await loadImage(url);
+    } catch (e) { console.warn("Logo fetch failed", e); }
+
+    const width = 1200;
+    const chartHeight = 550;
+    const footerHeight = 80;
+    const totalHeight = chartHeight + footerHeight;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = totalHeight;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, width, totalHeight);
+
+    try {
+        if (charts.length === 1) {
+             const svg = charts[0].getSVG({ chart: { width: width, height: chartHeight } });
+             const img = await svgToImage(svg);
+             ctx.drawImage(img, 0, 0);
+        } else {
+             const halfWidth = width / 2;
+             const svg1 = charts[0].getSVG({ chart: { width: halfWidth, height: chartHeight } });
+             const img1 = await svgToImage(svg1);
+             ctx.drawImage(img1, 0, 0);
+
+             const svg2 = charts[1].getSVG({ chart: { width: halfWidth, height: chartHeight } });
+             const img2 = await svgToImage(svg2);
+             ctx.drawImage(img2, halfWidth, 0);
+        }
+
+        // Draw Footer Logo
+        if (logoImg) {
+             ctx.drawImage(logoImg, 20, chartHeight + 15, 120, 30);
+        } else {
+             // Fallback text
+             ctx.fillStyle = '#0B7189';
+             ctx.font = 'bold 16px Inter, sans-serif';
+             ctx.fillText("HOUSING DASHBOARD", 20, chartHeight + 35);
+        }
+
+        const noteEl = document.getElementById('indicator-note');
+        const hasNote = noteEl && noteEl.style.display !== 'none';
+        const noteText = hasNote ? noteEl.innerText : '';
+
+        ctx.fillStyle = '#4b5563'; 
+        ctx.font = '11px Inter, Arial, sans-serif';
+
+        let textX = 160; 
+        let textY = chartHeight + 30;
+
+        if (hasNote) {
+            ctx.fillText(noteText, textX, textY);
+            textY += 18;
+        }
+
+        ctx.fillStyle = '#6b7280';
+        ctx.font = 'bold 11px Inter, Arial, sans-serif';
+        ctx.fillText('Source: Calculations based on EU SILC microdata for 2023', textX, textY);
+
+        const a = document.createElement("a");
+        a.href = canvas.toDataURL("image/png");
+        a.download = "Housing_Dashboard.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+    } catch (e) {
+        console.error(e);
+        alert("Export failed: " + e.message);
     }
 }
 
+// --- FIXED CSV EXPORT ---
 function triggerExportData() {
     const charts = window.activeCharts;
     if (!charts || charts.length === 0) return;
 
+    // Use specific Indicator Name for title
+    const mainTitle = state.indicator || "Housing Data";
+    const sourceText = "Source: Calculations based on EU SILC microdata for 2023";
+    const timestamp = new Date().toISOString().split('T')[0];
+
+    // Single Chart
     if (charts.length === 1) {
         const csv = charts[0].getCSV();
-        downloadBlob(csv, 'housing_data.csv');
-    } else {
-        let csv1 = charts[0].getCSV().split('\n');
-        let csv2 = charts[1].getCSV().split('\n');
-        let header1 = csv1[0].split(',');
-        let header2 = csv2[0].split(',');
-        let combined = [`Category,${header1[1].replace(/"/g, '')},${header2[1].replace(/"/g, '')}`];
-        for(let i=1; i<csv1.length; i++) {
-            if(!csv1[i]) continue;
-            let row1 = csv1[i].split(',');
-            let row2 = csv2[i] ? csv2[i].split(',') : ['',''];
-            combined.push(`${row1[0]},${row1[1]},${row2[1] || ''}`);
-        }
-        downloadBlob(combined.join('\n'), 'housing_comparison_data.csv');
+        const meta = `Indicator,"${mainTitle}"\nSource,"${sourceText}"\nDate,"${timestamp}"\n\n`;
+        downloadBlob(meta + csv, 'housing_data.csv');
+        return;
+    } 
+    
+    // Split View (Merge Data)
+    try {
+        const series1 = charts[0].series[0];
+        const series2 = charts[1].series[0];
+        
+        // Correct header using Series Names (Countries)
+        const header = `Category,"${series1.name}","${series2.name}"`;
+        let csvContent = `Indicator,"${mainTitle}"\nSource,"${sourceText}"\nDate,"${timestamp}"\n\n${header}\n`;
+
+        // Create a map to merge rows based on Category
+        const map = new Map();
+
+        // Helper to extract category name safely
+        const getCat = (p) => p.name || p.category || (p.properties ? (p.properties.na || p.id) : p.id);
+
+        series1.data.forEach(p => {
+            const key = getCat(p);
+            if(key) map.set(key, { v1: p.y || p.value, v2: '' });
+        });
+
+        series2.data.forEach(p => {
+            const key = getCat(p);
+            if (!map.has(key)) map.set(key, { v1: '', v2: '' });
+            map.get(key).v2 = p.y || p.value;
+        });
+
+        map.forEach((vals, key) => {
+            const cleanKey = String(key).includes(',') ? `"${key}"` : key;
+            const val1 = vals.v1 !== undefined && vals.v1 !== '' ? vals.v1 : '';
+            const val2 = vals.v2 !== undefined && vals.v2 !== '' ? vals.v2 : '';
+            csvContent += `${cleanKey},${val1},${val2}\n`;
+        });
+
+        downloadBlob(csvContent, 'housing_comparison.csv');
+
+    } catch (e) {
+        console.error("CSV Merge Failed", e);
+        // Fallback
+        downloadBlob(charts[0].getCSV(), 'housing_data_partial.csv');
     }
+}
+
+function svgToImage(svgString) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        const svgBlob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+        const url = URL.createObjectURL(svgBlob);
+        img.onload = () => { URL.revokeObjectURL(url); resolve(img); };
+        img.onerror = (e) => reject(new Error("SVG Load Error"));
+        img.src = url;
+    });
+}
+
+function loadImage(src) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "Anonymous"; // Important for external images
+        img.onload = () => resolve(img);
+        img.onerror = (e) => reject(new Error("Image Load Error"));
+        img.src = src;
+    });
 }
 
 function downloadBlob(content, filename) {
