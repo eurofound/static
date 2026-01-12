@@ -34874,3 +34874,972 @@ Nutrition,Sweden,2024,Children at-risk-of poverty or social exclusion,0.8,NA,"Sh
 Nutrition,Sweden,2024,Children not at-risk-of poverty or social exclusion,0.1,NA,"Share of Children   (aged less than 16) unable to have a meal with meat, chicken, fish (or vegetarian equivalent) at least once a day due to financial reasons"
 Nutrition,Sweden,2024,Children at-risk-of poverty or social exclusion,1.3,NA,Share of children  (aged less than 16) unable to have fresh fruits and vegetables once a day due to financial reasons
 Nutrition,Sweden,2024,Children not at-risk-of poverty or social exclusion,0.1,NA,Share of children   (aged less than 16) unable to have fresh fruits and vegetables once a day due to financial reasons
+Education,Austria,2014,High (ISCED 5-8) : 18-24 years,2.6,u,Share of early leavers by parental education
+Education,Austria,2014,Total : 18-24 years,8.1,NA,Share of early leavers by parental education
+Education,Belgium,2014,High (ISCED 5-8) : 18-24 years,2.6,NA,Share of early leavers by parental education
+Education,Belgium,2014,Total : 18-24 years,9.2,NA,Share of early leavers by parental education
+Education,Bulgaria,2014,High (ISCED 5-8) : 18-24 years,0.7,x,Share of early leavers by parental education
+Education,Bulgaria,2014,Total : 18-24 years,11.9,NA,Share of early leavers by parental education
+Education,Croatia,2014,High (ISCED 5-8) : 18-24 years,0.5,x,Share of early leavers by parental education
+Education,Croatia,2014,Total : 18-24 years,2.2,u,Share of early leavers by parental education
+Education,Cyprus,2014,High (ISCED 5-8) : 18-24 years,2.4,x,Share of early leavers by parental education
+Education,Cyprus,2014,Total : 18-24 years,7.0,NA,Share of early leavers by parental education
+Education,Czechia,2014,High (ISCED 5-8) : 18-24 years,0.8,u,Share of early leavers by parental education
+Education,Czechia,2014,Total : 18-24 years,5.4,NA,Share of early leavers by parental education
+Education,Estonia,2014,High (ISCED 5-8) : 18-24 years,5.7,u,Share of early leavers by parental education
+Education,Estonia,2014,Total : 18-24 years,12.7,NA,Share of early leavers by parental education
+Education,European Union (27),2014,High (ISCED 5-8) : 18-24 years,2.5,NA,Share of early leavers by parental education
+Education,European Union (27),2014,Total : 18-24 years,11.4,NA,Share of early leavers by parental education
+Education,Finland,2014,High (ISCED 5-8) : 18-24 years,5.1,NA,Share of early leavers by parental education
+Education,Finland,2014,Total : 18-24 years,8.6,NA,Share of early leavers by parental education
+Education,France,2014,High (ISCED 5-8) : 18-24 years,2.3,x,Share of early leavers by parental education
+Education,France,2014,Total : 18-24 years,9.1,NA,Share of early leavers by parental education
+Education,Greece,2014,High (ISCED 5-8) : 18-24 years,1.5,u,Share of early leavers by parental education
+Education,Greece,2014,Total : 18-24 years,8.8,NA,Share of early leavers by parental education
+Education,Hungary,2014,High (ISCED 5-8) : 18-24 years,1.5,u,Share of early leavers by parental education
+Education,Hungary,2014,Total : 18-24 years,11.0,NA,Share of early leavers by parental education
+Education,Italy,2014,High (ISCED 5-8) : 18-24 years,2.2,NA,Share of early leavers by parental education
+Education,Italy,2014,Total : 18-24 years,14.7,NA,Share of early leavers by parental education
+Education,Latvia,2014,High (ISCED 5-8) : 18-24 years,1.2,x,Share of early leavers by parental education
+Education,Latvia,2014,Total : 18-24 years,8.4,NA,Share of early leavers by parental education
+Education,Lithuania,2014,High (ISCED 5-8) : 18-24 years,2.5,x,Share of early leavers by parental education
+Education,Lithuania,2014,Total : 18-24 years,6.2,NA,Share of early leavers by parental education
+Education,Luxembourg,2014,High (ISCED 5-8) : 18-24 years,2.8,x,Share of early leavers by parental education
+Education,Luxembourg,2014,Total : 18-24 years,6.0,u,Share of early leavers by parental education
+Education,Malta,2014,High (ISCED 5-8) : 18-24 years,3.8,x,Share of early leavers by parental education
+Education,Malta,2014,Total : 18-24 years,17.1,NA,Share of early leavers by parental education
+Education,Poland,2014,High (ISCED 5-8) : 18-24 years,0.8,x,Share of early leavers by parental education
+Education,Poland,2014,Total : 18-24 years,5.5,NA,Share of early leavers by parental education
+Education,Portugal,2014,High (ISCED 5-8) : 18-24 years,NA,x,Share of early leavers by parental education
+Education,Portugal,2014,Total : 18-24 years,18.4,NA,Share of early leavers by parental education
+Education,Romania,2014,High (ISCED 5-8) : 18-24 years,0.4,x,Share of early leavers by parental education
+Education,Romania,2014,Total : 18-24 years,18.2,NA,Share of early leavers by parental education
+Education,Slovakia,2014,High (ISCED 5-8) : 18-24 years,0.8,x,Share of early leavers by parental education
+Education,Slovakia,2014,Total : 18-24 years,6.7,NA,Share of early leavers by parental education
+Education,Slovenia,2014,High (ISCED 5-8) : 18-24 years,0.6,x,Share of early leavers by parental education
+Education,Slovenia,2014,Total : 18-24 years,4.5,u,Share of early leavers by parental education
+Education,Spain,2014,High (ISCED 5-8) : 18-24 years,5.0,NA,Share of early leavers by parental education
+Education,Spain,2014,Total : 18-24 years,19.3,NA,Share of early leavers by parental education
+Education,Sweden,2014,High (ISCED 5-8) : 18-24 years,2.2,u,Share of early leavers by parental education
+Education,Sweden,2014,Total : 18-24 years,4.9,NA,Share of early leavers by parental education
+Education,Austria,2015,Mathematics : NA,21.8,NA,PISA share of low achievers in maths
+Education,Austria,2015,Reading : NA,22.5,NA,PISA share of low achievers in reading
+Education,Austria,2015,Science : NA,20.8,NA,PISA share of low achievers in science
+Education,Austria,2015,Total : Young people aged 18-24,7.3,NA,share of early leavers
+Education,Belgium,2015,Mathematics : NA,20.1,NA,PISA share of low achievers in maths
+Education,Belgium,2015,Reading : NA,19.5,NA,PISA share of low achievers in reading
+Education,Belgium,2015,Science : NA,19.8,NA,PISA share of low achievers in science
+Education,Belgium,2015,Total : Young people aged 18-24,10.1,NA,share of early leavers
+Education,Bulgaria,2015,Mathematics : NA,42.1,NA,PISA share of low achievers in maths
+Education,Bulgaria,2015,Reading : NA,41.5,NA,PISA share of low achievers in reading
+Education,Bulgaria,2015,Science : NA,37.9,NA,PISA share of low achievers in science
+Education,Bulgaria,2015,Total : Young people aged 18-24,13.4,NA,share of early leavers
+Education,Croatia,2015,Mathematics : NA,32.0,NA,PISA share of low achievers in maths
+Education,Croatia,2015,Reading : NA,19.9,NA,PISA share of low achievers in reading
+Education,Croatia,2015,Science : NA,24.6,NA,PISA share of low achievers in science
+Education,Croatia,2015,Total : Young people aged 18-24,2.7,u,share of early leavers
+Education,Cyprus,2015,Mathematics : NA,42.6,NA,PISA share of low achievers in maths
+Education,Cyprus,2015,Reading : NA,35.6,NA,PISA share of low achievers in reading
+Education,Cyprus,2015,Science : NA,42.1,NA,PISA share of low achievers in science
+Education,Cyprus,2015,Total : Young people aged 18-24,5.2,NA,share of early leavers
+Education,Czechia,2015,Mathematics : NA,21.7,NA,PISA share of low achievers in maths
+Education,Czechia,2015,Reading : NA,22.0,NA,PISA share of low achievers in reading
+Education,Czechia,2015,Science : NA,20.7,NA,PISA share of low achievers in science
+Education,Czechia,2015,Total : Young people aged 18-24,6.2,NA,share of early leavers
+Education,Denmark,2015,Mathematics : NA,13.6,NA,PISA share of low achievers in maths
+Education,Denmark,2015,Reading : NA,15.0,NA,PISA share of low achievers in reading
+Education,Denmark,2015,Science : NA,15.9,NA,PISA share of low achievers in science
+Education,Denmark,2015,Total : Young people aged 18-24,8.1,NA,share of early leavers
+Education,Estonia,2015,Mathematics : NA,11.2,NA,PISA share of low achievers in maths
+Education,Estonia,2015,Reading : NA,10.6,NA,PISA share of low achievers in reading
+Education,Estonia,2015,Science : NA,8.8,NA,PISA share of low achievers in science
+Education,Estonia,2015,Total : Young people aged 18-24,13.7,NA,share of early leavers
+Education,European Union (27),2015,Mathematics : NA,22.2,NA,PISA share of low achievers in maths
+Education,European Union (27),2015,Reading : NA,20.0,NA,PISA share of low achievers in reading
+Education,European Union (27),2015,Science : NA,21.1,NA,PISA share of low achievers in science
+Education,European Union (27),2015,Total : Young people aged 18-24,11.0,NA,share of early leavers
+Education,Finland,2015,Mathematics : NA,13.6,NA,PISA share of low achievers in maths
+Education,Finland,2015,Reading : NA,11.1,NA,PISA share of low achievers in reading
+Education,Finland,2015,Science : NA,11.5,NA,PISA share of low achievers in science
+Education,Finland,2015,Total : Young people aged 18-24,9.2,NA,share of early leavers
+Education,France,2015,Mathematics : NA,23.5,NA,PISA share of low achievers in maths
+Education,France,2015,Reading : NA,21.5,NA,PISA share of low achievers in reading
+Education,France,2015,Science : NA,22.1,NA,PISA share of low achievers in science
+Education,France,2015,Total : Young people aged 18-24,9.2,NA,share of early leavers
+Education,Germany,2015,Mathematics : NA,17.2,NA,PISA share of low achievers in maths
+Education,Germany,2015,Reading : NA,16.2,NA,PISA share of low achievers in reading
+Education,Germany,2015,Science : NA,17.0,NA,PISA share of low achievers in science
+Education,Germany,2015,Total : Young people aged 18-24,10.1,NA,share of early leavers
+Education,Greece,2015,Mathematics : NA,35.8,NA,PISA share of low achievers in maths
+Education,Greece,2015,Reading : NA,27.3,NA,PISA share of low achievers in reading
+Education,Greece,2015,Science : NA,32.7,NA,PISA share of low achievers in science
+Education,Greece,2015,Total : Young people aged 18-24,7.9,NA,share of early leavers
+Education,Hungary,2015,Mathematics : NA,28.0,NA,PISA share of low achievers in maths
+Education,Hungary,2015,Reading : NA,27.5,NA,PISA share of low achievers in reading
+Education,Hungary,2015,Science : NA,26.0,NA,PISA share of low achievers in science
+Education,Hungary,2015,Total : Young people aged 18-24,11.6,NA,share of early leavers
+Education,Ireland,2015,Mathematics : NA,15.0,NA,PISA share of low achievers in maths
+Education,Ireland,2015,Reading : NA,10.2,NA,PISA share of low achievers in reading
+Education,Ireland,2015,Science : NA,15.3,NA,PISA share of low achievers in science
+Education,Ireland,2015,Total : Young people aged 18-24,6.8,NA,share of early leavers
+Education,Italy,2015,Mathematics : NA,23.3,NA,PISA share of low achievers in maths
+Education,Italy,2015,Reading : NA,21.0,NA,PISA share of low achievers in reading
+Education,Italy,2015,Science : NA,23.2,NA,PISA share of low achievers in science
+Education,Italy,2015,Total : Young people aged 18-24,14.7,NA,share of early leavers
+Education,Latvia,2015,Mathematics : NA,21.4,NA,PISA share of low achievers in maths
+Education,Latvia,2015,Reading : NA,17.7,NA,PISA share of low achievers in reading
+Education,Latvia,2015,Science : NA,17.2,NA,PISA share of low achievers in science
+Education,Latvia,2015,Total : Young people aged 18-24,9.9,NA,share of early leavers
+Education,Lithuania,2015,Mathematics : NA,25.4,NA,PISA share of low achievers in maths
+Education,Lithuania,2015,Reading : NA,25.1,NA,PISA share of low achievers in reading
+Education,Lithuania,2015,Science : NA,24.7,NA,PISA share of low achievers in science
+Education,Lithuania,2015,Total : Young people aged 18-24,5.5,NA,share of early leavers
+Education,Luxembourg,2015,Mathematics : NA,25.8,NA,PISA share of low achievers in maths
+Education,Luxembourg,2015,Reading : NA,25.6,NA,PISA share of low achievers in reading
+Education,Luxembourg,2015,Science : NA,25.9,NA,PISA share of low achievers in science
+Education,Luxembourg,2015,Total : Young people aged 18-24,9.3,b,share of early leavers
+Education,Malta,2015,Mathematics : NA,29.1,NA,PISA share of low achievers in maths
+Education,Malta,2015,Reading : NA,35.6,NA,PISA share of low achievers in reading
+Education,Malta,2015,Science : NA,32.5,NA,PISA share of low achievers in science
+Education,Malta,2015,Total : Young people aged 18-24,16.3,NA,share of early leavers
+Education,Netherlands,2015,Mathematics : NA,16.7,NA,PISA share of low achievers in maths
+Education,Netherlands,2015,Reading : NA,18.1,NA,PISA share of low achievers in reading
+Education,Netherlands,2015,Science : NA,18.5,NA,PISA share of low achievers in science
+Education,Netherlands,2015,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,Poland,2015,Mathematics : NA,17.2,NA,PISA share of low achievers in maths
+Education,Poland,2015,Reading : NA,14.4,NA,PISA share of low achievers in reading
+Education,Poland,2015,Science : NA,16.3,NA,PISA share of low achievers in science
+Education,Poland,2015,Total : Young people aged 18-24,5.3,NA,share of early leavers
+Education,Portugal,2015,Mathematics : NA,23.8,NA,PISA share of low achievers in maths
+Education,Portugal,2015,Reading : NA,17.2,NA,PISA share of low achievers in reading
+Education,Portugal,2015,Science : NA,17.4,NA,PISA share of low achievers in science
+Education,Portugal,2015,Total : Young people aged 18-24,13.5,NA,share of early leavers
+Education,Romania,2015,Mathematics : NA,39.9,NA,PISA share of low achievers in maths
+Education,Romania,2015,Reading : NA,38.7,NA,PISA share of low achievers in reading
+Education,Romania,2015,Science : NA,38.5,NA,PISA share of low achievers in science
+Education,Romania,2015,Total : Young people aged 18-24,19.1,NA,share of early leavers
+Education,Slovakia,2015,Mathematics : NA,27.7,NA,PISA share of low achievers in maths
+Education,Slovakia,2015,Reading : NA,32.1,NA,PISA share of low achievers in reading
+Education,Slovakia,2015,Science : NA,30.7,NA,PISA share of low achievers in science
+Education,Slovakia,2015,Total : Young people aged 18-24,6.9,NA,share of early leavers
+Education,Slovenia,2015,Mathematics : NA,16.1,NA,PISA share of low achievers in maths
+Education,Slovenia,2015,Reading : NA,15.1,NA,PISA share of low achievers in reading
+Education,Slovenia,2015,Science : NA,15.0,NA,PISA share of low achievers in science
+Education,Slovenia,2015,Total : Young people aged 18-24,5.0,NA,share of early leavers
+Education,Spain,2015,Mathematics : NA,22.2,NA,PISA share of low achievers in maths
+Education,Spain,2015,Reading : NA,16.2,NA,PISA share of low achievers in reading
+Education,Spain,2015,Science : NA,18.3,NA,PISA share of low achievers in science
+Education,Spain,2015,Total : Young people aged 18-24,20.0,NA,share of early leavers
+Education,Sweden,2015,Mathematics : NA,20.8,NA,PISA share of low achievers in maths
+Education,Sweden,2015,Reading : NA,18.4,NA,PISA share of low achievers in reading
+Education,Sweden,2015,Science : NA,21.6,NA,PISA share of low achievers in science
+Education,Sweden,2015,Total : Young people aged 18-24,7.0,NA,share of early leavers
+Education,Austria,2016,Total : Young people aged 18-24,6.9,NA,share of early leavers
+Education,Belgium,2016,Total : Young people aged 18-24,8.8,NA,share of early leavers
+Education,Bulgaria,2016,Total : Young people aged 18-24,13.8,NA,share of early leavers
+Education,Croatia,2016,Total : Young people aged 18-24,2.8,u,share of early leavers
+Education,Cyprus,2016,Total : Young people aged 18-24,7.6,NA,share of early leavers
+Education,Czechia,2016,Total : Young people aged 18-24,6.6,NA,share of early leavers
+Education,Denmark,2016,Total : Young people aged 18-24,7.5,b,share of early leavers
+Education,Estonia,2016,Total : Young people aged 18-24,11.4,NA,share of early leavers
+Education,European Union (27),2016,Total : Young people aged 18-24,10.6,NA,share of early leavers
+Education,Finland,2016,Total : Young people aged 18-24,7.9,NA,share of early leavers
+Education,France,2016,Total : Young people aged 18-24,8.8,NA,share of early leavers
+Education,Germany,2016,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Greece,2016,Total : Young people aged 18-24,6.2,NA,share of early leavers
+Education,Hungary,2016,Total : Young people aged 18-24,12.4,NA,share of early leavers
+Education,Ireland,2016,Total : Young people aged 18-24,6.0,NA,share of early leavers
+Education,Italy,2016,Total : Young people aged 18-24,13.8,NA,share of early leavers
+Education,Latvia,2016,Total : Young people aged 18-24,10.0,NA,share of early leavers
+Education,Lithuania,2016,Total : Young people aged 18-24,4.8,NA,share of early leavers
+Education,Luxembourg,2016,Total : Young people aged 18-24,5.5,NA,share of early leavers
+Education,Malta,2016,Total : Young people aged 18-24,15.6,NA,share of early leavers
+Education,Netherlands,2016,Total : Young people aged 18-24,8.0,NA,share of early leavers
+Education,Poland,2016,Total : Young people aged 18-24,5.2,NA,share of early leavers
+Education,Portugal,2016,Total : Young people aged 18-24,13.9,NA,share of early leavers
+Education,Romania,2016,Total : Young people aged 18-24,18.5,NA,share of early leavers
+Education,Slovakia,2016,Total : Young people aged 18-24,7.4,NA,share of early leavers
+Education,Slovenia,2016,Total : Young people aged 18-24,4.9,NA,share of early leavers
+Education,Spain,2016,Total : Young people aged 18-24,19.0,NA,share of early leavers
+Education,Sweden,2016,Total : Young people aged 18-24,7.4,NA,share of early leavers
+Education,Austria,2017,Total : Young people aged 18-24,7.4,NA,share of early leavers
+Education,Belgium,2017,Total : Young people aged 18-24,8.9,b,share of early leavers
+Education,Bulgaria,2017,Total : Young people aged 18-24,12.7,NA,share of early leavers
+Education,Croatia,2017,Total : Young people aged 18-24,2.9,u,share of early leavers
+Education,Cyprus,2017,Total : Young people aged 18-24,8.5,NA,share of early leavers
+Education,Czechia,2017,Total : Young people aged 18-24,6.7,NA,share of early leavers
+Education,Denmark,2017,Total : Young people aged 18-24,8.8,b,share of early leavers
+Education,Estonia,2017,Total : Young people aged 18-24,11.8,NA,share of early leavers
+Education,European Union (27),2017,Total : Young people aged 18-24,10.5,NA,share of early leavers
+Education,Finland,2017,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,France,2017,Total : Young people aged 18-24,8.8,NA,share of early leavers
+Education,Germany,2017,Total : Young people aged 18-24,10.1,NA,share of early leavers
+Education,Greece,2017,Total : Young people aged 18-24,6.0,NA,share of early leavers
+Education,Hungary,2017,Total : Young people aged 18-24,12.5,NA,share of early leavers
+Education,Ireland,2017,Total : Young people aged 18-24,5.0,b,share of early leavers
+Education,Italy,2017,Total : Young people aged 18-24,14.0,NA,share of early leavers
+Education,Latvia,2017,Total : Young people aged 18-24,8.6,NA,share of early leavers
+Education,Lithuania,2017,Total : Young people aged 18-24,5.4,NA,share of early leavers
+Education,Luxembourg,2017,Total : Young people aged 18-24,7.3,NA,share of early leavers
+Education,Malta,2017,Total : Young people aged 18-24,14.0,NA,share of early leavers
+Education,Netherlands,2017,Total : Young people aged 18-24,7.1,NA,share of early leavers
+Education,Poland,2017,Total : Young people aged 18-24,5.0,NA,share of early leavers
+Education,Portugal,2017,Total : Young people aged 18-24,12.6,NA,share of early leavers
+Education,Romania,2017,Total : Young people aged 18-24,18.1,NA,share of early leavers
+Education,Slovakia,2017,Total : Young people aged 18-24,9.3,NA,share of early leavers
+Education,Slovenia,2017,Total : Young people aged 18-24,4.3,NA,share of early leavers
+Education,Spain,2017,Total : Young people aged 18-24,18.3,NA,share of early leavers
+Education,Sweden,2017,Total : Young people aged 18-24,7.7,NA,share of early leavers
+Education,Austria,2018,Mathematics : NA,21.1,NA,PISA share of low achievers in maths
+Education,Austria,2018,Reading : NA,23.6,b,PISA share of low achievers in reading
+Education,Austria,2018,Science : NA,21.9,NA,PISA share of low achievers in science
+Education,Austria,2018,Advantaged schools : NA,NA,NA,Student-teacher ratio by socio-economic status
+Education,Austria,2018,Disadvantaged schools : NA,NA,NA,Student-teacher ratio by socio-economic status
+Education,Austria,2018,Total : Young people aged 18-24,7.3,NA,share of early leavers
+Education,Belgium,2018,Mathematics : NA,19.7,NA,PISA share of low achievers in maths
+Education,Belgium,2018,Reading : NA,21.3,b,PISA share of low achievers in reading
+Education,Belgium,2018,Science : NA,20.0,NA,PISA share of low achievers in science
+Education,Belgium,2018,Advantaged schools : NA,10.6,NA,Student-teacher ratio by socio-economic status
+Education,Belgium,2018,Disadvantaged schools : NA,7.3,NA,Student-teacher ratio by socio-economic status
+Education,Belgium,2018,Total : Young people aged 18-24,8.6,NA,share of early leavers
+Education,Bulgaria,2018,Mathematics : NA,44.4,NA,PISA share of low achievers in maths
+Education,Bulgaria,2018,Reading : NA,47.1,b,PISA share of low achievers in reading
+Education,Bulgaria,2018,Science : NA,46.5,NA,PISA share of low achievers in science
+Education,Bulgaria,2018,Advantaged schools : NA,10.8,NA,Student-teacher ratio by socio-economic status
+Education,Bulgaria,2018,Disadvantaged schools : NA,11.2,NA,Student-teacher ratio by socio-economic status
+Education,Bulgaria,2018,Total : Young people aged 18-24,12.7,NA,share of early leavers
+Education,Croatia,2018,Mathematics : NA,31.2,NA,PISA share of low achievers in maths
+Education,Croatia,2018,Reading : NA,21.6,b,PISA share of low achievers in reading
+Education,Croatia,2018,Science : NA,25.4,NA,PISA share of low achievers in science
+Education,Croatia,2018,Advantaged schools : NA,11.1,NA,Student-teacher ratio by socio-economic status
+Education,Croatia,2018,Disadvantaged schools : NA,8.4,NA,Student-teacher ratio by socio-economic status
+Education,Croatia,2018,Total : Young people aged 18-24,3.1,u,share of early leavers
+Education,Cyprus,2018,Mathematics : NA,36.9,NA,PISA share of low achievers in maths
+Education,Cyprus,2018,Reading : NA,43.7,b,PISA share of low achievers in reading
+Education,Cyprus,2018,Science : NA,39.0,NA,PISA share of low achievers in science
+Education,Cyprus,2018,Advantaged schools : NA,8.0,NA,Student-teacher ratio by socio-economic status
+Education,Cyprus,2018,Disadvantaged schools : NA,5.4,NA,Student-teacher ratio by socio-economic status
+Education,Cyprus,2018,Total : Young people aged 18-24,7.8,NA,share of early leavers
+Education,Czechia,2018,Mathematics : NA,20.4,NA,PISA share of low achievers in maths
+Education,Czechia,2018,Reading : NA,20.7,b,PISA share of low achievers in reading
+Education,Czechia,2018,Science : NA,18.8,NA,PISA share of low achievers in science
+Education,Czechia,2018,Advantaged schools : NA,11.3,NA,Student-teacher ratio by socio-economic status
+Education,Czechia,2018,Disadvantaged schools : NA,11.6,NA,Student-teacher ratio by socio-economic status
+Education,Czechia,2018,Total : Young people aged 18-24,6.2,NA,share of early leavers
+Education,Denmark,2018,Mathematics : NA,14.6,NA,PISA share of low achievers in maths
+Education,Denmark,2018,Reading : NA,16.0,b,PISA share of low achievers in reading
+Education,Denmark,2018,Science : NA,18.7,NA,PISA share of low achievers in science
+Education,Denmark,2018,Advantaged schools : NA,12.3,NA,Student-teacher ratio by socio-economic status
+Education,Denmark,2018,Disadvantaged schools : NA,10.7,NA,Student-teacher ratio by socio-economic status
+Education,Denmark,2018,Total : Young people aged 18-24,10.4,NA,share of early leavers
+Education,Estonia,2018,Mathematics : NA,10.2,NA,PISA share of low achievers in maths
+Education,Estonia,2018,Reading : NA,11.1,b,PISA share of low achievers in reading
+Education,Estonia,2018,Science : NA,8.8,NA,PISA share of low achievers in science
+Education,Estonia,2018,Advantaged schools : NA,13.0,NA,Student-teacher ratio by socio-economic status
+Education,Estonia,2018,Disadvantaged schools : NA,9.4,NA,Student-teacher ratio by socio-economic status
+Education,Estonia,2018,Total : Young people aged 18-24,12.0,NA,share of early leavers
+Education,European Union (27),2018,Mathematics : NA,22.9,NA,PISA share of low achievers in maths
+Education,European Union (27),2018,Reading : NA,22.5,b,PISA share of low achievers in reading
+Education,European Union (27),2018,Science : NA,22.3,NA,PISA share of low achievers in science
+Education,European Union (27),2018,Advantaged schools : NA,11.315384615384616,NA,Student-teacher ratio by socio-economic status
+Education,European Union (27),2018,Disadvantaged schools : NA,9.576923076923077,NA,Student-teacher ratio by socio-economic status
+Education,European Union (27),2018,Total : Young people aged 18-24,10.5,NA,share of early leavers
+Education,Finland,2018,Mathematics : NA,15.0,NA,PISA share of low achievers in maths
+Education,Finland,2018,Reading : NA,13.5,b,PISA share of low achievers in reading
+Education,Finland,2018,Science : NA,12.9,NA,PISA share of low achievers in science
+Education,Finland,2018,Advantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Finland,2018,Disadvantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Finland,2018,Total : Young people aged 18-24,8.3,NA,share of early leavers
+Education,France,2018,Mathematics : NA,21.3,NA,PISA share of low achievers in maths
+Education,France,2018,Reading : NA,20.9,b,PISA share of low achievers in reading
+Education,France,2018,Science : NA,20.5,NA,PISA share of low achievers in science
+Education,France,2018,Advantaged schools : NA,11.7,NA,Student-teacher ratio by socio-economic status
+Education,France,2018,Disadvantaged schools : NA,10.1,NA,Student-teacher ratio by socio-economic status
+Education,France,2018,Total : Young people aged 18-24,8.7,NA,share of early leavers
+Education,Germany,2018,Mathematics : NA,21.1,NA,PISA share of low achievers in maths
+Education,Germany,2018,Reading : NA,20.7,b,PISA share of low achievers in reading
+Education,Germany,2018,Science : NA,19.6,NA,PISA share of low achievers in science
+Education,Germany,2018,Advantaged schools : NA,12.8,NA,Student-teacher ratio by socio-economic status
+Education,Germany,2018,Disadvantaged schools : NA,14.3,NA,Student-teacher ratio by socio-economic status
+Education,Germany,2018,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Greece,2018,Mathematics : NA,35.8,NA,PISA share of low achievers in maths
+Education,Greece,2018,Reading : NA,30.5,b,PISA share of low achievers in reading
+Education,Greece,2018,Science : NA,31.7,NA,PISA share of low achievers in science
+Education,Greece,2018,Advantaged schools : NA,8.5,NA,Student-teacher ratio by socio-economic status
+Education,Greece,2018,Disadvantaged schools : NA,7.3,NA,Student-teacher ratio by socio-economic status
+Education,Greece,2018,Total : Young people aged 18-24,4.7,NA,share of early leavers
+Education,Hungary,2018,Mathematics : NA,25.6,NA,PISA share of low achievers in maths
+Education,Hungary,2018,Reading : NA,25.3,b,PISA share of low achievers in reading
+Education,Hungary,2018,Science : NA,24.1,NA,PISA share of low achievers in science
+Education,Hungary,2018,Advantaged schools : NA,10.9,NA,Student-teacher ratio by socio-economic status
+Education,Hungary,2018,Disadvantaged schools : NA,9.6,NA,Student-teacher ratio by socio-economic status
+Education,Hungary,2018,Total : Young people aged 18-24,12.4,b,share of early leavers
+Education,Ireland,2018,Mathematics : NA,15.7,NA,PISA share of low achievers in maths
+Education,Ireland,2018,Reading : NA,11.8,b,PISA share of low achievers in reading
+Education,Ireland,2018,Science : NA,17.0,NA,PISA share of low achievers in science
+Education,Ireland,2018,Advantaged schools : NA,13.2,NA,Student-teacher ratio by socio-economic status
+Education,Ireland,2018,Disadvantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Ireland,2018,Total : Young people aged 18-24,5.0,NA,share of early leavers
+Education,Italy,2018,Mathematics : NA,23.8,NA,PISA share of low achievers in maths
+Education,Italy,2018,Reading : NA,23.3,b,PISA share of low achievers in reading
+Education,Italy,2018,Science : NA,25.9,NA,PISA share of low achievers in science
+Education,Italy,2018,Advantaged schools : NA,10.5,NA,Student-teacher ratio by socio-economic status
+Education,Italy,2018,Disadvantaged schools : NA,6.6,NA,Student-teacher ratio by socio-economic status
+Education,Italy,2018,Total : Young people aged 18-24,14.3,b,share of early leavers
+Education,Latvia,2018,Mathematics : NA,17.3,NA,PISA share of low achievers in maths
+Education,Latvia,2018,Reading : NA,22.4,b,PISA share of low achievers in reading
+Education,Latvia,2018,Science : NA,18.5,NA,PISA share of low achievers in science
+Education,Latvia,2018,Advantaged schools : NA,10.3,NA,Student-teacher ratio by socio-economic status
+Education,Latvia,2018,Disadvantaged schools : NA,8.1,NA,Student-teacher ratio by socio-economic status
+Education,Latvia,2018,Total : Young people aged 18-24,8.3,NA,share of early leavers
+Education,Lithuania,2018,Mathematics : NA,25.6,NA,PISA share of low achievers in maths
+Education,Lithuania,2018,Reading : NA,24.4,b,PISA share of low achievers in reading
+Education,Lithuania,2018,Science : NA,22.2,NA,PISA share of low achievers in science
+Education,Lithuania,2018,Advantaged schools : NA,10.7,NA,Student-teacher ratio by socio-economic status
+Education,Lithuania,2018,Disadvantaged schools : NA,8.9,NA,Student-teacher ratio by socio-economic status
+Education,Lithuania,2018,Total : Young people aged 18-24,4.6,NA,share of early leavers
+Education,Luxembourg,2018,Mathematics : NA,27.2,NA,PISA share of low achievers in maths
+Education,Luxembourg,2018,Reading : NA,29.3,b,PISA share of low achievers in reading
+Education,Luxembourg,2018,Science : NA,26.8,NA,PISA share of low achievers in science
+Education,Luxembourg,2018,Advantaged schools : NA,9.4,NA,Student-teacher ratio by socio-economic status
+Education,Luxembourg,2018,Disadvantaged schools : NA,9.3,NA,Student-teacher ratio by socio-economic status
+Education,Luxembourg,2018,Total : Young people aged 18-24,6.3,NA,share of early leavers
+Education,Malta,2018,Mathematics : NA,30.2,NA,PISA share of low achievers in maths
+Education,Malta,2018,Reading : NA,35.9,b,PISA share of low achievers in reading
+Education,Malta,2018,Science : NA,33.5,NA,PISA share of low achievers in science
+Education,Malta,2018,Advantaged schools : NA,8.5,NA,Student-teacher ratio by socio-economic status
+Education,Malta,2018,Disadvantaged schools : NA,5.3,NA,Student-teacher ratio by socio-economic status
+Education,Malta,2018,Total : Young people aged 18-24,14.0,NA,share of early leavers
+Education,Netherlands,2018,Mathematics : NA,15.8,NA,PISA share of low achievers in maths
+Education,Netherlands,2018,Reading : NA,24.1,b,PISA share of low achievers in reading
+Education,Netherlands,2018,Science : NA,20.0,NA,PISA share of low achievers in science
+Education,Netherlands,2018,Advantaged schools : NA,19.4,NA,Student-teacher ratio by socio-economic status
+Education,Netherlands,2018,Disadvantaged schools : NA,14.0,NA,Student-teacher ratio by socio-economic status
+Education,Netherlands,2018,Total : Young people aged 18-24,7.3,NA,share of early leavers
+Education,Poland,2018,Mathematics : NA,14.7,NA,PISA share of low achievers in maths
+Education,Poland,2018,Reading : NA,14.7,b,PISA share of low achievers in reading
+Education,Poland,2018,Science : NA,13.8,NA,PISA share of low achievers in science
+Education,Poland,2018,Advantaged schools : NA,6.8,NA,Student-teacher ratio by socio-economic status
+Education,Poland,2018,Disadvantaged schools : NA,9.0,NA,Student-teacher ratio by socio-economic status
+Education,Poland,2018,Total : Young people aged 18-24,4.8,NA,share of early leavers
+Education,Portugal,2018,Mathematics : NA,23.3,NA,PISA share of low achievers in maths
+Education,Portugal,2018,Reading : NA,20.2,b,PISA share of low achievers in reading
+Education,Portugal,2018,Science : NA,19.6,NA,PISA share of low achievers in science
+Education,Portugal,2018,Advantaged schools : NA,12.8,NA,Student-teacher ratio by socio-economic status
+Education,Portugal,2018,Disadvantaged schools : NA,9.4,NA,Student-teacher ratio by socio-economic status
+Education,Portugal,2018,Total : Young people aged 18-24,11.6,NA,share of early leavers
+Education,Romania,2018,Mathematics : NA,46.6,NA,PISA share of low achievers in maths
+Education,Romania,2018,Reading : NA,40.8,b,PISA share of low achievers in reading
+Education,Romania,2018,Science : NA,43.9,NA,PISA share of low achievers in science
+Education,Romania,2018,Advantaged schools : NA,12.5,NA,Student-teacher ratio by socio-economic status
+Education,Romania,2018,Disadvantaged schools : NA,14.7,NA,Student-teacher ratio by socio-economic status
+Education,Romania,2018,Total : Young people aged 18-24,16.4,NA,share of early leavers
+Education,Slovakia,2018,Mathematics : NA,25.1,NA,PISA share of low achievers in maths
+Education,Slovakia,2018,Reading : NA,31.4,b,PISA share of low achievers in reading
+Education,Slovakia,2018,Science : NA,29.3,NA,PISA share of low achievers in science
+Education,Slovakia,2018,Advantaged schools : NA,14.2,NA,Student-teacher ratio by socio-economic status
+Education,Slovakia,2018,Disadvantaged schools : NA,11.2,NA,Student-teacher ratio by socio-economic status
+Education,Slovakia,2018,Total : Young people aged 18-24,8.6,NA,share of early leavers
+Education,Slovenia,2018,Mathematics : NA,16.4,NA,PISA share of low achievers in maths
+Education,Slovenia,2018,Reading : NA,17.9,b,PISA share of low achievers in reading
+Education,Slovenia,2018,Science : NA,14.6,NA,PISA share of low achievers in science
+Education,Slovenia,2018,Advantaged schools : NA,8.3,NA,Student-teacher ratio by socio-economic status
+Education,Slovenia,2018,Disadvantaged schools : NA,6.3,NA,Student-teacher ratio by socio-economic status
+Education,Slovenia,2018,Total : Young people aged 18-24,4.2,NA,share of early leavers
+Education,Spain,2018,Mathematics : NA,24.7,NA,PISA share of low achievers in maths
+Education,Spain,2018,Reading : NA,NA,b,PISA share of low achievers in reading
+Education,Spain,2018,Science : NA,21.3,NA,PISA share of low achievers in science
+Education,Spain,2018,Advantaged schools : NA,13.1,NA,Student-teacher ratio by socio-economic status
+Education,Spain,2018,Disadvantaged schools : NA,10.1,NA,Student-teacher ratio by socio-economic status
+Education,Spain,2018,Total : Young people aged 18-24,17.9,NA,share of early leavers
+Education,Sweden,2018,Mathematics : NA,18.8,NA,PISA share of low achievers in maths
+Education,Sweden,2018,Reading : NA,18.4,b,PISA share of low achievers in reading
+Education,Sweden,2018,Science : NA,19.0,NA,PISA share of low achievers in science
+Education,Sweden,2018,Advantaged schools : NA,13.1,NA,Student-teacher ratio by socio-economic status
+Education,Sweden,2018,Disadvantaged schools : NA,10.0,NA,Student-teacher ratio by socio-economic status
+Education,Sweden,2018,Total : Young people aged 18-24,7.5,b,share of early leavers
+Education,Austria,2019,Total : Young people aged 18-24,7.8,NA,share of early leavers
+Education,Belgium,2019,Total : Young people aged 18-24,8.4,NA,share of early leavers
+Education,Bulgaria,2019,Total : Young people aged 18-24,13.9,b,share of early leavers
+Education,Croatia,2019,Total : Young people aged 18-24,3.0,u,share of early leavers
+Education,Cyprus,2019,Total : Young people aged 18-24,9.0,NA,share of early leavers
+Education,Czechia,2019,Total : Young people aged 18-24,6.7,NA,share of early leavers
+Education,Denmark,2019,Total : Young people aged 18-24,9.9,NA,share of early leavers
+Education,Estonia,2019,Total : Young people aged 18-24,11.2,NA,share of early leavers
+Education,European Union (27),2019,Total : Young people aged 18-24,10.1,NA,share of early leavers
+Education,Finland,2019,Total : Young people aged 18-24,7.3,NA,share of early leavers
+Education,France,2019,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,Germany,2019,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Greece,2019,Total : Young people aged 18-24,4.1,NA,share of early leavers
+Education,Hungary,2019,Total : Young people aged 18-24,11.9,NA,share of early leavers
+Education,Ireland,2019,Total : Young people aged 18-24,5.1,NA,share of early leavers
+Education,Italy,2019,Total : Young people aged 18-24,13.3,NA,share of early leavers
+Education,Latvia,2019,Total : Young people aged 18-24,8.7,NA,share of early leavers
+Education,Lithuania,2019,Total : Young people aged 18-24,4.0,NA,share of early leavers
+Education,Luxembourg,2019,Total : Young people aged 18-24,7.2,NA,share of early leavers
+Education,Malta,2019,Total : Young people aged 18-24,14.2,NA,share of early leavers
+Education,Netherlands,2019,Total : Young people aged 18-24,7.5,b,share of early leavers
+Education,Poland,2019,Total : Young people aged 18-24,5.1,b,share of early leavers
+Education,Portugal,2019,Total : Young people aged 18-24,10.5,NA,share of early leavers
+Education,Romania,2019,Total : Young people aged 18-24,15.3,NA,share of early leavers
+Education,Slovakia,2019,Total : Young people aged 18-24,8.3,NA,share of early leavers
+Education,Slovenia,2019,Total : Young people aged 18-24,4.6,NA,share of early leavers
+Education,Spain,2019,Total : Young people aged 18-24,17.3,NA,share of early leavers
+Education,Sweden,2019,Total : Young people aged 18-24,6.5,NA,share of early leavers
+Education,Austria,2020,Total : Young people aged 18-24,8.1,NA,share of early leavers
+Education,Belgium,2020,Total : Young people aged 18-24,8.1,NA,share of early leavers
+Education,Bulgaria,2020,Total : Young people aged 18-24,12.8,NA,share of early leavers
+Education,Croatia,2020,Total : Young people aged 18-24,2.2,u,share of early leavers
+Education,Cyprus,2020,Total : Young people aged 18-24,11.6,NA,share of early leavers
+Education,Czechia,2020,Total : Young people aged 18-24,7.6,NA,share of early leavers
+Education,Denmark,2020,Total : Young people aged 18-24,9.3,NA,share of early leavers
+Education,Estonia,2020,Total : Young people aged 18-24,8.5,NA,share of early leavers
+Education,European Union (27),2020,Total : Young people aged 18-24,10.0,NA,share of early leavers
+Education,Finland,2020,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,France,2020,Total : Young people aged 18-24,8.0,NA,share of early leavers
+Education,Germany,2020,Total : Young people aged 18-24,10.1,b,share of early leavers
+Education,Greece,2020,Total : Young people aged 18-24,3.8,NA,share of early leavers
+Education,Hungary,2020,Total : Young people aged 18-24,12.0,NA,share of early leavers
+Education,Ireland,2020,Total : Young people aged 18-24,5.0,NA,share of early leavers
+Education,Italy,2020,Total : Young people aged 18-24,14.2,NA,share of early leavers
+Education,Latvia,2020,Total : Young people aged 18-24,7.2,NA,share of early leavers
+Education,Lithuania,2020,Total : Young people aged 18-24,5.6,NA,share of early leavers
+Education,Luxembourg,2020,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,Malta,2020,Total : Young people aged 18-24,13.0,NA,share of early leavers
+Education,Netherlands,2020,Total : Young people aged 18-24,7.0,NA,share of early leavers
+Education,Poland,2020,Total : Young people aged 18-24,5.3,NA,share of early leavers
+Education,Portugal,2020,Total : Young people aged 18-24,9.1,NA,share of early leavers
+Education,Romania,2020,Total : Young people aged 18-24,15.6,NA,share of early leavers
+Education,Slovakia,2020,Total : Young people aged 18-24,7.6,NA,share of early leavers
+Education,Slovenia,2020,Total : Young people aged 18-24,4.1,NA,share of early leavers
+Education,Spain,2020,Total : Young people aged 18-24,16.0,NA,share of early leavers
+Education,Sweden,2020,Total : Young people aged 18-24,7.7,NA,share of early leavers
+Education,Austria,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,25.5,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Austria,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,11.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Austria,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Austria,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.4,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Austria,2021,High (ISCED 5-8) : 18-24 years,2.4,u,Share of early leavers by parental education
+Education,Austria,2021,Total : 18-24 years,7.8,NA,Share of early leavers by parental education
+Education,Austria,2021,Total : Young people aged 18-24,8.0,b,share of early leavers
+Education,Belgium,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,24.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Belgium,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,6.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Belgium,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Belgium,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Belgium,2021,High (ISCED 5-8) : 18-24 years,1.8,u,Share of early leavers by parental education
+Education,Belgium,2021,Total : 18-24 years,6.6,NA,Share of early leavers by parental education
+Education,Belgium,2021,Total : Young people aged 18-24,6.7,b,share of early leavers
+Education,Bulgaria,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,51.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Bulgaria,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,48.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Bulgaria,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,10.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Bulgaria,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,8.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Bulgaria,2021,High (ISCED 5-8) : 18-24 years,0.0,x,Share of early leavers by parental education
+Education,Bulgaria,2021,Total : 18-24 years,11.9,NA,Share of early leavers by parental education
+Education,Bulgaria,2021,Total : Young people aged 18-24,12.0,b,share of early leavers
+Education,Croatia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,9.5,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Croatia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,7.1,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Croatia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.1,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Croatia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.4,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Croatia,2021,High (ISCED 5-8) : 18-24 years,0.2,x,Share of early leavers by parental education
+Education,Croatia,2021,Total : 18-24 years,3.0,u,Share of early leavers by parental education
+Education,Croatia,2021,Total : Young people aged 18-24,2.4,bu,share of early leavers
+Education,Cyprus,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,35.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Cyprus,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,7.2,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Cyprus,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,6.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Cyprus,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.8,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Cyprus,2021,High (ISCED 5-8) : 18-24 years,4.3,u,Share of early leavers by parental education
+Education,Cyprus,2021,Total : 18-24 years,10.7,NA,Share of early leavers by parental education
+Education,Cyprus,2021,Total : Young people aged 18-24,9.8,b,share of early leavers
+Education,Czechia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,18.5,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Czechia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,22.6,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Czechia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Czechia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Czechia,2021,High (ISCED 5-8) : 18-24 years,0.0,x,Share of early leavers by parental education
+Education,Czechia,2021,Total : 18-24 years,6.6,NA,Share of early leavers by parental education
+Education,Czechia,2021,Total : Young people aged 18-24,6.4,b,share of early leavers
+Education,Denmark,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,15.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Denmark,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,11.1,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Denmark,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.7,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Denmark,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Denmark,2021,High (ISCED 5-8) : 18-24 years,7.3,NA,Share of early leavers by parental education
+Education,Denmark,2021,Total : 18-24 years,10.5,NA,Share of early leavers by parental education
+Education,Denmark,2021,Total : Young people aged 18-24,9.8,b,share of early leavers
+Education,Estonia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,5.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Estonia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,3.5,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Estonia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.6,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Estonia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Estonia,2021,High (ISCED 5-8) : 18-24 years,3.9,x,Share of early leavers by parental education
+Education,Estonia,2021,Total : 18-24 years,9.7,NA,Share of early leavers by parental education
+Education,Estonia,2021,Total : Young people aged 18-24,9.8,b,share of early leavers
+Education,European Union (27),2021,Children at-risk-of poverty or social exclusion : Children aged under 16,25.8,e,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,European Union (27),2021,Children at-risk-of poverty or social exclusion : Children aged under 16,18.2,e,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,European Union (27),2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.2,e,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,European Union (27),2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.5,e,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,European Union (27),2021,High (ISCED 5-8) : 18-24 years,2.9,NA,Share of early leavers by parental education
+Education,European Union (27),2021,Total : 18-24 years,9.2,NA,Share of early leavers by parental education
+Education,European Union (27),2021,Total : Young people aged 18-24,9.7,b,share of early leavers
+Education,Finland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,2.2,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Finland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,2.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Finland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Finland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.6,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Finland,2021,High (ISCED 5-8) : 18-24 years,5.3,NA,Share of early leavers by parental education
+Education,Finland,2021,Total : 18-24 years,7.6,NA,Share of early leavers by parental education
+Education,Finland,2021,Total : Young people aged 18-24,8.2,b,share of early leavers
+Education,France,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,18.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,France,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,10.0,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,France,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.3,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,France,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,France,2021,High (ISCED 5-8) : 18-24 years,2.1,x,Share of early leavers by parental education
+Education,France,2021,Total : 18-24 years,6.9,NA,Share of early leavers by parental education
+Education,France,2021,Total : Young people aged 18-24,7.8,bd,share of early leavers
+Education,Germany,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,NA,u,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Germany,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,NA,u,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Germany,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,NA,u,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Germany,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,NA,u,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Germany,2021,High (ISCED 5-8) : 18-24 years,3.7,u,Share of early leavers by parental education
+Education,Germany,2021,Total : 18-24 years,10.9,NA,Share of early leavers by parental education
+Education,Germany,2021,Total : Young people aged 18-24,12.3,b,share of early leavers
+Education,Greece,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,35.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Greece,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,18.5,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Greece,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,12.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Greece,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,8.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Greece,2021,High (ISCED 5-8) : 18-24 years,0.4,x,Share of early leavers by parental education
+Education,Greece,2021,Total : 18-24 years,4.5,NA,Share of early leavers by parental education
+Education,Greece,2021,Total : Young people aged 18-24,3.2,b,share of early leavers
+Education,Hungary,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,51.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Hungary,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,43.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Hungary,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,4.0,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Hungary,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Hungary,2021,High (ISCED 5-8) : 18-24 years,0.2,x,Share of early leavers by parental education
+Education,Hungary,2021,Total : 18-24 years,11.5,NA,Share of early leavers by parental education
+Education,Hungary,2021,Total : Young people aged 18-24,12.0,b,share of early leavers
+Education,Ireland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,19.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Ireland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,14.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Ireland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.4,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Ireland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Ireland,2021,High (ISCED 5-8) : 18-24 years,NA,x,Share of early leavers by parental education
+Education,Ireland,2021,Total : 18-24 years,2.6,u,Share of early leavers by parental education
+Education,Ireland,2021,Total : Young people aged 18-24,3.3,b,share of early leavers
+Education,Italy,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,22.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Italy,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,13.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Italy,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Italy,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Italy,2021,High (ISCED 5-8) : 18-24 years,3.1,NA,Share of early leavers by parental education
+Education,Italy,2021,Total : 18-24 years,12.2,NA,Share of early leavers by parental education
+Education,Italy,2021,Total : Young people aged 18-24,12.7,b,share of early leavers
+Education,Latvia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,10.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Latvia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,17.2,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Latvia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.0,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Latvia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.0,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Latvia,2021,High (ISCED 5-8) : 18-24 years,1.0,x,Share of early leavers by parental education
+Education,Latvia,2021,Total : 18-24 years,6.5,u,Share of early leavers by parental education
+Education,Latvia,2021,Total : Young people aged 18-24,7.3,b,share of early leavers
+Education,Lithuania,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,23.0,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Lithuania,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,1.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Lithuania,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.0,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Lithuania,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Lithuania,2021,High (ISCED 5-8) : 18-24 years,1.1,x,Share of early leavers by parental education
+Education,Lithuania,2021,Total : 18-24 years,4.4,NA,Share of early leavers by parental education
+Education,Lithuania,2021,Total : Young people aged 18-24,5.3,b,share of early leavers
+Education,Luxembourg,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,7.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Luxembourg,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,13.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Luxembourg,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Luxembourg,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Luxembourg,2021,High (ISCED 5-8) : 18-24 years,4.7,u,Share of early leavers by parental education
+Education,Luxembourg,2021,Total : 18-24 years,9.3,NA,Share of early leavers by parental education
+Education,Luxembourg,2021,Total : Young people aged 18-24,9.3,b,share of early leavers
+Education,Malta,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,19.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Malta,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,1.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Malta,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Malta,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Malta,2021,High (ISCED 5-8) : 18-24 years,3.7,x,Share of early leavers by parental education
+Education,Malta,2021,Total : 18-24 years,9.8,NA,Share of early leavers by parental education
+Education,Malta,2021,Total : Young people aged 18-24,10.9,b,share of early leavers
+Education,Netherlands,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,19.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Netherlands,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,4.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Netherlands,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Netherlands,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Netherlands,2021,High (ISCED 5-8) : 18-24 years,2.9,NA,Share of early leavers by parental education
+Education,Netherlands,2021,Total : 18-24 years,5.8,NA,Share of early leavers by parental education
+Education,Netherlands,2021,Total : Young people aged 18-24,5.1,b,share of early leavers
+Education,Poland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,16.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Poland,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,5.0,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Poland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.4,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Poland,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Poland,2021,High (ISCED 5-8) : 18-24 years,1.5,u,Share of early leavers by parental education
+Education,Poland,2021,Total : 18-24 years,4.4,NA,Share of early leavers by parental education
+Education,Poland,2021,Total : Young people aged 18-24,5.8,b,share of early leavers
+Education,Portugal,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,25.0,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Portugal,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,21.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Portugal,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,5.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Portugal,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.0,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Portugal,2021,High (ISCED 5-8) : 18-24 years,NA,x,Share of early leavers by parental education
+Education,Portugal,2021,Total : 18-24 years,6.1,NA,Share of early leavers by parental education
+Education,Portugal,2021,Total : Young people aged 18-24,6.4,b,share of early leavers
+Education,Romania,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,64.2,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Romania,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,58.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Romania,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,15.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Romania,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,5.7,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Romania,2021,High (ISCED 5-8) : 18-24 years,1.5,x,Share of early leavers by parental education
+Education,Romania,2021,Total : 18-24 years,15.5,NA,Share of early leavers by parental education
+Education,Romania,2021,Total : Young people aged 18-24,15.3,b,share of early leavers
+Education,Slovakia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,26.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovakia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,22.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovakia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.7,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovakia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.7,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovakia,2021,High (ISCED 5-8) : 18-24 years,2.2,x,Share of early leavers by parental education
+Education,Slovakia,2021,Total : 18-24 years,8.2,NA,Share of early leavers by parental education
+Education,Slovakia,2021,Total : Young people aged 18-24,7.8,b,share of early leavers
+Education,Slovenia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,14.3,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovenia,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,3.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovenia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.1,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovenia,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovenia,2021,High (ISCED 5-8) : 18-24 years,0.0,x,Share of early leavers by parental education
+Education,Slovenia,2021,Total : 18-24 years,3.2,u,Share of early leavers by parental education
+Education,Slovenia,2021,Total : Young people aged 18-24,3.1,bu,share of early leavers
+Education,Spain,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,21.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Spain,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,18.6,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Spain,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Spain,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.5,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Spain,2021,High (ISCED 5-8) : 18-24 years,3.9,NA,Share of early leavers by parental education
+Education,Spain,2021,Total : 18-24 years,13.5,NA,Share of early leavers by parental education
+Education,Spain,2021,Total : Young people aged 18-24,13.3,bd,share of early leavers
+Education,Sweden,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,16.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Sweden,2021,Children at-risk-of poverty or social exclusion : Children aged under 16,4.0,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Sweden,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Sweden,2021,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Sweden,2021,High (ISCED 5-8) : 18-24 years,6.0,NA,Share of early leavers by parental education
+Education,Sweden,2021,Total : 18-24 years,7.9,NA,Share of early leavers by parental education
+Education,Sweden,2021,Total : Young people aged 18-24,8.4,b,share of early leavers
+Education,Austria,2022,Mathematics : NA,24.9,NA,PISA share of low achievers in maths
+Education,Austria,2022,Reading : NA,25.3,NA,PISA share of low achievers in reading
+Education,Austria,2022,Science : NA,22.7,NA,PISA share of low achievers in science
+Education,Austria,2022,Advantaged schools : NA,10.7,NA,Student-teacher ratio by socio-economic status
+Education,Austria,2022,Disadvantaged schools : NA,9.3,NA,Student-teacher ratio by socio-economic status
+Education,Austria,2022,Total : Young people aged 18-24,8.4,NA,share of early leavers
+Education,Belgium,2022,Mathematics : NA,25.0,NA,PISA share of low achievers in maths
+Education,Belgium,2022,Reading : NA,25.3,NA,PISA share of low achievers in reading
+Education,Belgium,2022,Science : NA,22.4,NA,PISA share of low achievers in science
+Education,Belgium,2022,Advantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Belgium,2022,Disadvantaged schools : NA,6.6,NA,Student-teacher ratio by socio-economic status
+Education,Belgium,2022,Total : Young people aged 18-24,6.4,NA,share of early leavers
+Education,Bulgaria,2022,Mathematics : NA,53.6,NA,PISA share of low achievers in maths
+Education,Bulgaria,2022,Reading : NA,52.9,NA,PISA share of low achievers in reading
+Education,Bulgaria,2022,Science : NA,48.0,NA,PISA share of low achievers in science
+Education,Bulgaria,2022,Advantaged schools : NA,12.0,NA,Student-teacher ratio by socio-economic status
+Education,Bulgaria,2022,Disadvantaged schools : NA,9.6,NA,Student-teacher ratio by socio-economic status
+Education,Bulgaria,2022,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Croatia,2022,Mathematics : NA,32.9,NA,PISA share of low achievers in maths
+Education,Croatia,2022,Reading : NA,22.7,NA,PISA share of low achievers in reading
+Education,Croatia,2022,Science : NA,22.4,NA,PISA share of low achievers in science
+Education,Croatia,2022,Advantaged schools : NA,9.9,NA,Student-teacher ratio by socio-economic status
+Education,Croatia,2022,Disadvantaged schools : NA,8.0,NA,Student-teacher ratio by socio-economic status
+Education,Croatia,2022,Total : Young people aged 18-24,2.1,u,share of early leavers
+Education,Cyprus,2022,Mathematics : NA,53.2,NA,PISA share of low achievers in maths
+Education,Cyprus,2022,Reading : NA,60.6,NA,PISA share of low achievers in reading
+Education,Cyprus,2022,Science : NA,51.8,NA,PISA share of low achievers in science
+Education,Cyprus,2022,Advantaged schools : NA,8.5,NA,Student-teacher ratio by socio-economic status
+Education,Cyprus,2022,Disadvantaged schools : NA,4.7,NA,Student-teacher ratio by socio-economic status
+Education,Cyprus,2022,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,Czechia,2022,Mathematics : NA,25.5,NA,PISA share of low achievers in maths
+Education,Czechia,2022,Reading : NA,21.3,NA,PISA share of low achievers in reading
+Education,Czechia,2022,Science : NA,19.9,NA,PISA share of low achievers in science
+Education,Czechia,2022,Advantaged schools : NA,11.7,NA,Student-teacher ratio by socio-economic status
+Education,Czechia,2022,Disadvantaged schools : NA,11.7,NA,Student-teacher ratio by socio-economic status
+Education,Czechia,2022,Total : Young people aged 18-24,6.2,b,share of early leavers
+Education,Denmark,2022,Mathematics : NA,20.4,NA,PISA share of low achievers in maths
+Education,Denmark,2022,Reading : NA,19.0,NA,PISA share of low achievers in reading
+Education,Denmark,2022,Science : NA,19.5,NA,PISA share of low achievers in science
+Education,Denmark,2022,Advantaged schools : NA,11.5,NA,Student-teacher ratio by socio-economic status
+Education,Denmark,2022,Disadvantaged schools : NA,11.5,NA,Student-teacher ratio by socio-economic status
+Education,Denmark,2022,Total : Young people aged 18-24,10.0,NA,share of early leavers
+Education,Estonia,2022,Mathematics : NA,15.0,NA,PISA share of low achievers in maths
+Education,Estonia,2022,Reading : NA,13.8,NA,PISA share of low achievers in reading
+Education,Estonia,2022,Science : NA,10.1,NA,PISA share of low achievers in science
+Education,Estonia,2022,Advantaged schools : NA,12.3,NA,Student-teacher ratio by socio-economic status
+Education,Estonia,2022,Disadvantaged schools : NA,9.4,NA,Student-teacher ratio by socio-economic status
+Education,Estonia,2022,Total : Young people aged 18-24,10.8,NA,share of early leavers
+Education,European Union (27),2022,Mathematics : NA,29.5,NA,PISA share of low achievers in maths
+Education,European Union (27),2022,Reading : NA,26.2,NA,PISA share of low achievers in reading
+Education,European Union (27),2022,Science : NA,24.2,NA,PISA share of low achievers in science
+Education,European Union (27),2022,Advantaged schools : NA,11.184615384615384,NA,Student-teacher ratio by socio-economic status
+Education,European Union (27),2022,Disadvantaged schools : NA,9.453846153846154,NA,Student-teacher ratio by socio-economic status
+Education,European Union (27),2022,Total : Young people aged 18-24,9.6,NA,share of early leavers
+Education,Finland,2022,Mathematics : NA,24.9,NA,PISA share of low achievers in maths
+Education,Finland,2022,Reading : NA,21.4,NA,PISA share of low achievers in reading
+Education,Finland,2022,Science : NA,18.0,NA,PISA share of low achievers in science
+Education,Finland,2022,Advantaged schools : NA,10.8,NA,Student-teacher ratio by socio-economic status
+Education,Finland,2022,Disadvantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Finland,2022,Total : Young people aged 18-24,8.4,NA,share of early leavers
+Education,France,2022,Mathematics : NA,28.8,NA,PISA share of low achievers in maths
+Education,France,2022,Reading : NA,26.9,NA,PISA share of low achievers in reading
+Education,France,2022,Science : NA,23.8,NA,PISA share of low achievers in science
+Education,France,2022,Advantaged schools : NA,12.1,NA,Student-teacher ratio by socio-economic status
+Education,France,2022,Disadvantaged schools : NA,9.1,NA,Student-teacher ratio by socio-economic status
+Education,France,2022,Total : Young people aged 18-24,7.6,d,share of early leavers
+Education,Germany,2022,Mathematics : NA,29.5,NA,PISA share of low achievers in maths
+Education,Germany,2022,Reading : NA,25.5,NA,PISA share of low achievers in reading
+Education,Germany,2022,Science : NA,22.9,NA,PISA share of low achievers in science
+Education,Germany,2022,Advantaged schools : NA,14.3,NA,Student-teacher ratio by socio-economic status
+Education,Germany,2022,Disadvantaged schools : NA,11.9,NA,Student-teacher ratio by socio-economic status
+Education,Germany,2022,Total : Young people aged 18-24,12.5,NA,share of early leavers
+Education,Greece,2022,Mathematics : NA,47.2,NA,PISA share of low achievers in maths
+Education,Greece,2022,Reading : NA,37.6,NA,PISA share of low achievers in reading
+Education,Greece,2022,Science : NA,37.3,NA,PISA share of low achievers in science
+Education,Greece,2022,Advantaged schools : NA,7.3,NA,Student-teacher ratio by socio-economic status
+Education,Greece,2022,Disadvantaged schools : NA,8.2,NA,Student-teacher ratio by socio-economic status
+Education,Greece,2022,Total : Young people aged 18-24,4.1,NA,share of early leavers
+Education,Hungary,2022,Mathematics : NA,29.5,NA,PISA share of low achievers in maths
+Education,Hungary,2022,Reading : NA,25.9,NA,PISA share of low achievers in reading
+Education,Hungary,2022,Science : NA,22.9,NA,PISA share of low achievers in science
+Education,Hungary,2022,Advantaged schools : NA,10.0,NA,Student-teacher ratio by socio-economic status
+Education,Hungary,2022,Disadvantaged schools : NA,10.7,NA,Student-teacher ratio by socio-economic status
+Education,Hungary,2022,Total : Young people aged 18-24,12.2,NA,share of early leavers
+Education,Ireland,2022,Mathematics : NA,19.0,NA,PISA share of low achievers in maths
+Education,Ireland,2022,Reading : NA,11.4,NA,PISA share of low achievers in reading
+Education,Ireland,2022,Science : NA,15.6,NA,PISA share of low achievers in science
+Education,Ireland,2022,Advantaged schools : NA,12.7,NA,Student-teacher ratio by socio-economic status
+Education,Ireland,2022,Disadvantaged schools : NA,11.6,NA,Student-teacher ratio by socio-economic status
+Education,Ireland,2022,Total : Young people aged 18-24,3.7,NA,share of early leavers
+Education,Italy,2022,Mathematics : NA,29.6,NA,PISA share of low achievers in maths
+Education,Italy,2022,Reading : NA,21.4,NA,PISA share of low achievers in reading
+Education,Italy,2022,Science : NA,23.9,NA,PISA share of low achievers in science
+Education,Italy,2022,Advantaged schools : NA,8.6,NA,Student-teacher ratio by socio-economic status
+Education,Italy,2022,Disadvantaged schools : NA,5.4,NA,Student-teacher ratio by socio-economic status
+Education,Italy,2022,Total : Young people aged 18-24,11.5,NA,share of early leavers
+Education,Latvia,2022,Mathematics : NA,22.2,NA,PISA share of low achievers in maths
+Education,Latvia,2022,Reading : NA,22.8,NA,PISA share of low achievers in reading
+Education,Latvia,2022,Science : NA,16.5,NA,PISA share of low achievers in science
+Education,Latvia,2022,Advantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Latvia,2022,Disadvantaged schools : NA,8.1,NA,Student-teacher ratio by socio-economic status
+Education,Latvia,2022,Total : Young people aged 18-24,6.7,NA,share of early leavers
+Education,Lithuania,2022,Mathematics : NA,27.8,NA,PISA share of low achievers in maths
+Education,Lithuania,2022,Reading : NA,24.9,NA,PISA share of low achievers in reading
+Education,Lithuania,2022,Science : NA,21.8,NA,PISA share of low achievers in science
+Education,Lithuania,2022,Advantaged schools : NA,12.8,NA,Student-teacher ratio by socio-economic status
+Education,Lithuania,2022,Disadvantaged schools : NA,10.2,NA,Student-teacher ratio by socio-economic status
+Education,Lithuania,2022,Total : Young people aged 18-24,4.8,NA,share of early leavers
+Education,Luxembourg,2022,Advantaged schools : NA,NA,NA,Student-teacher ratio by socio-economic status
+Education,Luxembourg,2022,Disadvantaged schools : NA,NA,NA,Student-teacher ratio by socio-economic status
+Education,Luxembourg,2022,Total : Young people aged 18-24,8.2,NA,share of early leavers
+Education,Malta,2022,Mathematics : NA,32.6,NA,PISA share of low achievers in maths
+Education,Malta,2022,Reading : NA,36.3,NA,PISA share of low achievers in reading
+Education,Malta,2022,Science : NA,30.3,NA,PISA share of low achievers in science
+Education,Malta,2022,Advantaged schools : NA,7.4,NA,Student-teacher ratio by socio-economic status
+Education,Malta,2022,Disadvantaged schools : NA,5.8,NA,Student-teacher ratio by socio-economic status
+Education,Malta,2022,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Netherlands,2022,Mathematics : NA,27.4,NA,PISA share of low achievers in maths
+Education,Netherlands,2022,Reading : NA,34.6,NA,PISA share of low achievers in reading
+Education,Netherlands,2022,Science : NA,27.3,NA,PISA share of low achievers in science
+Education,Netherlands,2022,Advantaged schools : NA,17.2,NA,Student-teacher ratio by socio-economic status
+Education,Netherlands,2022,Disadvantaged schools : NA,14.4,NA,Student-teacher ratio by socio-economic status
+Education,Netherlands,2022,Total : Young people aged 18-24,5.6,NA,share of early leavers
+Education,Poland,2022,Mathematics : NA,23.0,NA,PISA share of low achievers in maths
+Education,Poland,2022,Reading : NA,22.2,NA,PISA share of low achievers in reading
+Education,Poland,2022,Science : NA,18.6,NA,PISA share of low achievers in science
+Education,Poland,2022,Advantaged schools : NA,8.6,NA,Student-teacher ratio by socio-economic status
+Education,Poland,2022,Disadvantaged schools : NA,8.4,NA,Student-teacher ratio by socio-economic status
+Education,Poland,2022,Total : Young people aged 18-24,4.7,NA,share of early leavers
+Education,Portugal,2022,Mathematics : NA,29.7,NA,PISA share of low achievers in maths
+Education,Portugal,2022,Reading : NA,23.1,NA,PISA share of low achievers in reading
+Education,Portugal,2022,Science : NA,21.8,NA,PISA share of low achievers in science
+Education,Portugal,2022,Advantaged schools : NA,10.2,NA,Student-teacher ratio by socio-economic status
+Education,Portugal,2022,Disadvantaged schools : NA,8.6,NA,Student-teacher ratio by socio-economic status
+Education,Portugal,2022,Total : Young people aged 18-24,6.3,NA,share of early leavers
+Education,Romania,2022,Mathematics : NA,48.6,NA,PISA share of low achievers in maths
+Education,Romania,2022,Reading : NA,41.7,NA,PISA share of low achievers in reading
+Education,Romania,2022,Science : NA,44.0,NA,PISA share of low achievers in science
+Education,Romania,2022,Advantaged schools : NA,12.6,NA,Student-teacher ratio by socio-economic status
+Education,Romania,2022,Disadvantaged schools : NA,14.7,NA,Student-teacher ratio by socio-economic status
+Education,Romania,2022,Total : Young people aged 18-24,15.6,NA,share of early leavers
+Education,Slovakia,2022,Mathematics : NA,33.2,NA,PISA share of low achievers in maths
+Education,Slovakia,2022,Reading : NA,35.4,NA,PISA share of low achievers in reading
+Education,Slovakia,2022,Science : NA,30.6,NA,PISA share of low achievers in science
+Education,Slovakia,2022,Advantaged schools : NA,12.3,NA,Student-teacher ratio by socio-economic status
+Education,Slovakia,2022,Disadvantaged schools : NA,11.0,NA,Student-teacher ratio by socio-economic status
+Education,Slovakia,2022,Total : Young people aged 18-24,7.4,b,share of early leavers
+Education,Slovenia,2022,Mathematics : NA,24.6,NA,PISA share of low achievers in maths
+Education,Slovenia,2022,Reading : NA,26.1,NA,PISA share of low achievers in reading
+Education,Slovenia,2022,Science : NA,17.8,NA,PISA share of low achievers in science
+Education,Slovenia,2022,Advantaged schools : NA,9.1,NA,Student-teacher ratio by socio-economic status
+Education,Slovenia,2022,Disadvantaged schools : NA,6.2,NA,Student-teacher ratio by socio-economic status
+Education,Slovenia,2022,Total : Young people aged 18-24,4.0,NA,share of early leavers
+Education,Spain,2022,Mathematics : NA,27.3,NA,PISA share of low achievers in maths
+Education,Spain,2022,Reading : NA,24.4,NA,PISA share of low achievers in reading
+Education,Spain,2022,Science : NA,21.3,NA,PISA share of low achievers in science
+Education,Spain,2022,Advantaged schools : NA,13.9,NA,Student-teacher ratio by socio-economic status
+Education,Spain,2022,Disadvantaged schools : NA,9.9,NA,Student-teacher ratio by socio-economic status
+Education,Spain,2022,Total : Young people aged 18-24,13.9,d,share of early leavers
+Education,Sweden,2022,Mathematics : NA,27.2,NA,PISA share of low achievers in maths
+Education,Sweden,2022,Reading : NA,24.3,NA,PISA share of low achievers in reading
+Education,Sweden,2022,Science : NA,23.7,NA,PISA share of low achievers in science
+Education,Sweden,2022,Advantaged schools : NA,13.5,NA,Student-teacher ratio by socio-economic status
+Education,Sweden,2022,Disadvantaged schools : NA,10.4,NA,Student-teacher ratio by socio-economic status
+Education,Sweden,2022,Total : Young people aged 18-24,8.8,NA,share of early leavers
+Education,Austria,2023,Total : Young people aged 18-24,8.6,NA,share of early leavers
+Education,Belgium,2023,Total : Young people aged 18-24,6.2,NA,share of early leavers
+Education,Bulgaria,2023,Total : Young people aged 18-24,9.3,NA,share of early leavers
+Education,Croatia,2023,Total : Young people aged 18-24,2.0,u,share of early leavers
+Education,Cyprus,2023,Total : Young people aged 18-24,10.4,NA,share of early leavers
+Education,Czechia,2023,Total : Young people aged 18-24,6.4,NA,share of early leavers
+Education,Denmark,2023,Total : Young people aged 18-24,10.4,NA,share of early leavers
+Education,Estonia,2023,Total : Young people aged 18-24,9.7,NA,share of early leavers
+Education,European Union (27),2023,Total : Young people aged 18-24,9.6,NA,share of early leavers
+Education,Finland,2023,Total : Young people aged 18-24,9.6,NA,share of early leavers
+Education,France,2023,Total : Young people aged 18-24,7.6,d,share of early leavers
+Education,Germany,2023,Total : Young people aged 18-24,13.0,NA,share of early leavers
+Education,Greece,2023,Total : Young people aged 18-24,3.7,NA,share of early leavers
+Education,Hungary,2023,Total : Young people aged 18-24,11.6,NA,share of early leavers
+Education,Ireland,2023,Total : Young people aged 18-24,4.0,NA,share of early leavers
+Education,Italy,2023,Total : Young people aged 18-24,10.5,NA,share of early leavers
+Education,Latvia,2023,Total : Young people aged 18-24,7.7,NA,share of early leavers
+Education,Lithuania,2023,Total : Young people aged 18-24,6.4,NA,share of early leavers
+Education,Luxembourg,2023,Total : Young people aged 18-24,6.8,u,share of early leavers
+Education,Malta,2023,Total : Young people aged 18-24,10.2,NA,share of early leavers
+Education,Netherlands,2023,Total : Young people aged 18-24,6.2,NA,share of early leavers
+Education,Poland,2023,Total : Young people aged 18-24,3.7,NA,share of early leavers
+Education,Portugal,2023,Total : Young people aged 18-24,8.1,NA,share of early leavers
+Education,Romania,2023,Total : Young people aged 18-24,16.6,NA,share of early leavers
+Education,Slovakia,2023,Total : Young people aged 18-24,6.4,NA,share of early leavers
+Education,Slovenia,2023,Total : Young people aged 18-24,5.4,b,share of early leavers
+Education,Spain,2023,Total : Young people aged 18-24,13.7,d,share of early leavers
+Education,Sweden,2023,Total : Young people aged 18-24,7.4,NA,share of early leavers
+Education,Austria,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,23.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Austria,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,6.1,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Austria,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Austria,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Austria,2024,Total : Young people aged 18-24,8.1,NA,share of early leavers
+Education,Belgium,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,26.0,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Belgium,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,6.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Belgium,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Belgium,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Belgium,2024,Total : Young people aged 18-24,7.0,b,share of early leavers
+Education,Bulgaria,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,43.0,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Bulgaria,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,37.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Bulgaria,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,8.4,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Bulgaria,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,5.7,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Bulgaria,2024,Total : Young people aged 18-24,8.2,b,share of early leavers
+Education,Croatia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,5.2,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Croatia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,3.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Croatia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.6,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Croatia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.1,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Croatia,2024,Total : Young people aged 18-24,2.0,u,share of early leavers
+Education,Cyprus,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,36.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Cyprus,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,8.1,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Cyprus,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Cyprus,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Cyprus,2024,Total : Young people aged 18-24,11.3,NA,share of early leavers
+Education,Czechia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,26.5,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Czechia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,16.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Czechia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.6,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Czechia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.6,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Czechia,2024,Total : Young people aged 18-24,5.4,NA,share of early leavers
+Education,Denmark,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,25.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Denmark,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,17.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Denmark,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.7,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Denmark,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Denmark,2024,Total : Young people aged 18-24,10.4,NA,share of early leavers
+Education,Estonia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,8.3,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Estonia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,4.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Estonia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.0,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Estonia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Estonia,2024,Total : Young people aged 18-24,11.0,NA,share of early leavers
+Education,European Union (27),2024,Children at-risk-of poverty or social exclusion : Children aged under 16,22.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,European Union (27),2024,Children at-risk-of poverty or social exclusion : Children aged under 16,13.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,European Union (27),2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,European Union (27),2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.4,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,European Union (27),2024,Total : Young people aged 18-24,9.4,NA,share of early leavers
+Education,Finland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,22.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Finland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,8.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Finland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.3,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Finland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.4,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Finland,2024,Total : Young people aged 18-24,9.6,NA,share of early leavers
+Education,France,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,16.2,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,France,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,10.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,France,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.7,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,France,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,France,2024,Total : Young people aged 18-24,7.7,d,share of early leavers
+Education,Germany,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,16.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Germany,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,3.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Germany,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Germany,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Germany,2024,Total : Young people aged 18-24,12.9,b,share of early leavers
+Education,Greece,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,68.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Greece,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,40.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Greece,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,7.3,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Greece,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.5,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Greece,2024,Total : Young people aged 18-24,3.0,b,share of early leavers
+Education,Hungary,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,35.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Hungary,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,23.1,u,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Hungary,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Hungary,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.6,u,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Hungary,2024,Total : Young people aged 18-24,10.3,NA,share of early leavers
+Education,Ireland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,27.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Ireland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,5.5,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Ireland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Ireland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.7,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Ireland,2024,Total : Young people aged 18-24,2.8,b,share of early leavers
+Education,Italy,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,24.3,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Italy,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,10.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Italy,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Italy,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Italy,2024,Total : Young people aged 18-24,9.8,NA,share of early leavers
+Education,Latvia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,11.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Latvia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,6.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Latvia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Latvia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Latvia,2024,Total : Young people aged 18-24,7.9,NA,share of early leavers
+Education,Lithuania,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,14.4,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Lithuania,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Lithuania,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Lithuania,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.4,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Lithuania,2024,Total : Young people aged 18-24,8.4,NA,share of early leavers
+Education,Luxembourg,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,11.2,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Luxembourg,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,2.9,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Luxembourg,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.3,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Luxembourg,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Luxembourg,2024,Total : Young people aged 18-24,7.8,u,share of early leavers
+Education,Malta,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,11.9,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Malta,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,1.0,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Malta,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.1,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Malta,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.2,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Malta,2024,Total : Young people aged 18-24,9.5,NA,share of early leavers
+Education,Netherlands,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,26.3,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Netherlands,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,2.6,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Netherlands,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Netherlands,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Netherlands,2024,Total : Young people aged 18-24,7.0,NA,share of early leavers
+Education,Poland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,12.7,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Poland,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,7.0,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Poland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,3.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Poland,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.8,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Poland,2024,Total : Young people aged 18-24,4.1,NA,share of early leavers
+Education,Portugal,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,29.5,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Portugal,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,13.5,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Portugal,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,4.7,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Portugal,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Portugal,2024,Total : Young people aged 18-24,6.6,NA,share of early leavers
+Education,Romania,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,52.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Romania,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,46.8,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Romania,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,10.8,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Romania,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,6.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Romania,2024,Total : Young people aged 18-24,16.8,NA,share of early leavers
+Education,Slovakia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,29.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovakia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,27.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovakia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.2,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovakia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.9,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovakia,2024,Total : Young people aged 18-24,7.5,NA,share of early leavers
+Education,Slovenia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,18.8,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovenia,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,5.3,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovenia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Slovenia,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.3,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Slovenia,2024,Total : Young people aged 18-24,5.0,NA,share of early leavers
+Education,Spain,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,15.1,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Spain,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,14.7,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Spain,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.9,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Spain,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,2.6,NA,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Spain,2024,Total : Young people aged 18-24,13.0,d,share of early leavers
+Education,Sweden,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,11.6,NA,Share of children (<16) AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Sweden,2024,Children at-risk-of poverty or social exclusion : Children aged under 16,1.4,NA,Share of children (<16) AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Sweden,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,1.5,NA,Share of children (<16) NOT AROPE unable to participate in regular leisure activities due to financial reasons
+Education,Sweden,2024,Children not at-risk-of poverty or social exclusion : Children aged under 16,0.0,n,Share of children (<16) NOT AROPE who suffer from the enforced lack of access to school trips and school events that cost money
+Education,Sweden,2024,Total : Young people aged 18-24,7.2,NA,share of early leavers
