@@ -21,6 +21,9 @@
   html,body{margin:0}
   body{font:13px/1.45 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink); padding:20px; max-width: 1200px; margin: 0 auto;}
 
+  /* Utility Class to Hide Elements */
+  .hidden { display: none !important; }
+
   /* Pills */
   .pill{display:inline-block; padding:.35rem .72rem; border-radius:999px; cursor:pointer; user-select:none;
         border:1px solid #cbd5e1; background:#fff; color:var(--ink); margin:.22rem .36rem .22rem 0; font-size:0.75rem; font-weight:600}
@@ -54,7 +57,7 @@
   .flag-dd{position:relative; width:260px}
   .flag-btn{width:100%; display:flex; align-items:center; justify-content:space-between; gap:.6rem;
             padding:.55rem .7rem; border:1px solid #cfd8e3; border-radius:14px; background:#fff; cursor:pointer}
-  .flag-list{position:absolute; left:0; right:0; top:calc(100% + 6px); z-index:999; background:#fff;
+  .flag-list{position:absolute; left:0; right:0; top:calc(100% + 6px); z-index:9999; background:#fff;
              border:1px solid #e5e7eb; border-radius:12px; box-shadow:0 12px 28px rgba(0,0,0,.15);
              max-height:340px; overflow:auto; padding:0}
   .flag-head{position:sticky; top:0; background:#fff; border-bottom:1px solid #eef2f7; padding:8px}
@@ -177,7 +180,7 @@ function placeLogo(hc){
     const w = 70;
     const h = Math.round(w * logoAspect);
     const x = hc.chartWidth  - w - 10;
-    const y = 10; // Top right, inside chart area
+    const y = 10; 
     if (hc._brand) hc._brand.destroy();
     hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h).css({opacity:.95, pointerEvents:'none'}).add();
   }catch(e){}
@@ -188,22 +191,9 @@ Papa.parse(CSV_URL,{
   download:true, header:true, dynamicTyping:false, skipEmptyLines:true,
   complete: ({ data }) => {
     rows = data.map(r => { const o={}; for (const k of Object.keys(r)) o[safe(k)] = typeof r[k]==='string' ? safe(r[k]) : r[k]; return o; });
-    
-    // Find headers case-insensitive
     const keys = Object.keys(rows[0] || {});
     const find = t => keys.find(k => String(k).trim().toLowerCase() === t.toLowerCase());
-    
-    H = { 
-      Title: find('Title'), 
-      Country: find('Country'), 
-      Year: find('Year'), 
-      Breakdown: find('Breakdown'), 
-      Value: find('Value'), 
-      Flag: find('Flag'), 
-      ID: find('ID'),
-      Notes: find('Notes') || find('Note'),
-      Source: find('Source')
-    };
+    H = { Title: find('Title'), Country: find('Country'), Year: find('Year'), Breakdown: find('Breakdown'), Value: find('Value'), Flag: find('Flag'), ID: find('ID'), Notes: find('Notes') || find('Note'), Source: find('Source') };
 
     rows = rows.map(r => ({
       ...r,
@@ -270,12 +260,22 @@ function setDefaults(){
   rebuildFilters();
 }
 
+/* Global handler for clicking outside dropdown to close it */
+document.addEventListener('click', (e) => {
+  const dd = document.querySelector('.flag-dd');
+  const list = document.querySelector('#cList');
+  if (dd && list && !list.classList.contains('hidden') && !dd.contains(e.target)) {
+    list.classList.add('hidden');
+  }
+});
+
 function rebuildFilters(){
   el.filterHdr.innerHTML = ''; el.filterCtrls.innerHTML = '';
   
   if(state.tab==='line'){
     el.filterHdr.innerHTML = `Countries`;
     const sel = document.createElement('div'); sel.className='flag-dd';
+    // ✅ FIX: Ensure 'hidden' class is present in the initial HTML string
     sel.innerHTML = `<button class="flag-btn" id="cBtn"><span id="cCap">${state.countries.length} selected</span><span class="muted">▾</span></button><div class="flag-list hidden" id="cList"><div class="flag-head"><div class="flag-search"><input id="cSearch" class="flag-input" placeholder="Search country…" /><button id="cClear" class="flag-clear" title="Clear selection">×</button></div></div><div id="cItems"></div></div>`;
     el.filterCtrls.appendChild(sel);
 
@@ -294,12 +294,15 @@ function rebuildFilters(){
       }).join('') || `<div style="padding:.8rem; color:#6b7280">No matches</div>`;
     };
     render();
-    const closeAll = e => { if(!sel.contains(e.target)) listBox.classList.add('hidden'); };
-    btn.onclick = ()=> listBox.classList.toggle('hidden');
-    document.addEventListener('click', closeAll);
+
+    btn.onclick = (e)=> { e.stopPropagation(); listBox.classList.toggle('hidden'); };
     search.addEventListener('input', ()=>render(search.value));
+    search.onclick = (e) => e.stopPropagation(); // prevent closing when clicking input
+    
     clearBtn.onclick = (e)=>{ e.stopPropagation(); state.countries = []; cap.textContent = '0 selected'; search.value = ''; render(''); draw(); };
+    
     itemsBox.onclick = e=>{
+      e.stopPropagation(); // keep open while selecting
       const t = e.target.closest('.flag-item'); if(!t) return;
       const c = decodeURIComponent(t.dataset.c);
       const i = state.countries.indexOf(c);
@@ -330,7 +333,7 @@ function draw(){
   if(chart) chart.destroy();
   el.tabs.forEach(b=>b.classList.toggle('active', b.dataset.t===state.tab));
   
-  /* ✅ SOURCE & NOTES LOGIC */
+  /* Source/Notes Logic */
   const rel = subset(); 
   const r = rel[0] || {};
   const noteText = r[H.Notes] ? safe(r[H.Notes]) : '';
@@ -338,7 +341,7 @@ function draw(){
   
   let captionHTML = '';
   if(noteText) captionHTML += `<b>Note:</b> ${noteText}<br>`;
-  if(sourceVal) captionHTML += `<b>Source:</b> ${sourceVal}`; // Add prefix only if source exists
+  if(sourceVal) captionHTML += `<b>Source:</b> ${sourceVal}`; 
 
   const years = availableYears();
   if(!years.length){ el.chart.innerHTML='<div style="padding:20px;color:#6b7280">No data for this selection.</div>'; return; }
@@ -347,7 +350,6 @@ function draw(){
       chart:{ spacing:[10,10,40,10], backgroundColor:'transparent', events:{ load(){placeLogo(this);}, redraw(){placeLogo(this);} } },
       title:{ text: state.id, style: { fontSize:'16px', fontWeight:'700' } },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
-      /* ✅ CAPTION: Now contains Source/Notes */
       caption: {
           text: captionHTML,
           align: 'left',
