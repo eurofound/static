@@ -180,7 +180,8 @@ function placeLogo(hc){
     const w = 70;
     const h = Math.round(w * logoAspect);
     const x = hc.chartWidth  - w - 10;
-    const y = 10; 
+    // ✅ FIX: Calculate y to be at the bottom, not the top
+    const y = hc.chartHeight - h - 10; 
     if (hc._brand) hc._brand.destroy();
     hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h).css({opacity:.95, pointerEvents:'none'}).add();
   }catch(e){}
@@ -275,7 +276,6 @@ function rebuildFilters(){
   if(state.tab==='line'){
     el.filterHdr.innerHTML = `Countries`;
     const sel = document.createElement('div'); sel.className='flag-dd';
-    // ✅ FIX: Ensure 'hidden' class is present in the initial HTML string
     sel.innerHTML = `<button class="flag-btn" id="cBtn"><span id="cCap">${state.countries.length} selected</span><span class="muted">▾</span></button><div class="flag-list hidden" id="cList"><div class="flag-head"><div class="flag-search"><input id="cSearch" class="flag-input" placeholder="Search country…" /><button id="cClear" class="flag-clear" title="Clear selection">×</button></div></div><div id="cItems"></div></div>`;
     el.filterCtrls.appendChild(sel);
 
@@ -297,12 +297,12 @@ function rebuildFilters(){
 
     btn.onclick = (e)=> { e.stopPropagation(); listBox.classList.toggle('hidden'); };
     search.addEventListener('input', ()=>render(search.value));
-    search.onclick = (e) => e.stopPropagation(); // prevent closing when clicking input
+    search.onclick = (e) => e.stopPropagation(); 
     
     clearBtn.onclick = (e)=>{ e.stopPropagation(); state.countries = []; cap.textContent = '0 selected'; search.value = ''; render(''); draw(); };
     
     itemsBox.onclick = e=>{
-      e.stopPropagation(); // keep open while selecting
+      e.stopPropagation(); 
       const t = e.target.closest('.flag-item'); if(!t) return;
       const c = decodeURIComponent(t.dataset.c);
       const i = state.countries.indexOf(c);
