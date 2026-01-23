@@ -180,10 +180,13 @@ function placeLogo(hc){
     const w = 70;
     const h = Math.round(w * logoAspect);
     const x = hc.chartWidth  - w - 10;
-    // ✅ FIX: Calculate y to be at the bottom, not the top
+    // ✅ Place logo relative to the bottom of the container
     const y = hc.chartHeight - h - 10; 
+    
     if (hc._brand) hc._brand.destroy();
-    hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h).css({opacity:.95, pointerEvents:'none'}).add();
+    hc._brand = hc.renderer.image(LOGO_URL, x, y, w, h)
+       .css({opacity:.95, pointerEvents:'none'})
+       .add();
   }catch(e){}
 }
 
@@ -333,15 +336,20 @@ function draw(){
   if(chart) chart.destroy();
   el.tabs.forEach(b=>b.classList.toggle('active', b.dataset.t===state.tab));
   
-  /* Source/Notes Logic */
   const rel = subset(); 
   const r = rel[0] || {};
   const noteText = r[H.Notes] ? safe(r[H.Notes]) : '';
   const sourceVal = r[H.Source] ? safe(r[H.Source]) : '';
   
-  let captionHTML = '';
-  if(noteText) captionHTML += `<b>Note:</b> ${noteText}<br>`;
-  if(sourceVal) captionHTML += `<b>Source:</b> ${sourceVal}`; 
+  // HTML for screen caption (allows rich text on screen)
+  let screenCaption = '';
+  if(noteText) screenCaption += `<b>Note:</b> ${noteText}<br>`;
+  if(sourceVal) screenCaption += `<b>Source:</b> ${sourceVal}`; 
+
+  // Plain string for export caption (prevents overlap issues)
+  let exportCaptionText = '';
+  if(noteText) exportCaptionText += `Note: ${noteText}<br/>`; // SVG supports <br/>
+  if(sourceVal) exportCaptionText += `Source: ${sourceVal}`;
 
   const years = availableYears();
   if(!years.length){ el.chart.innerHTML='<div style="padding:20px;color:#6b7280">No data for this selection.</div>'; return; }
@@ -350,15 +358,31 @@ function draw(){
       chart:{ spacing:[10,10,40,10], backgroundColor:'transparent', events:{ load(){placeLogo(this);}, redraw(){placeLogo(this);} } },
       title:{ text: state.id, style: { fontSize:'16px', fontWeight:'700' } },
       subtitle:{ text: `Breakdown: ${state.breakdown}` },
+      /* ✅ On Screen: Use HTML for better styling */
       caption: {
-          text: captionHTML,
+          text: screenCaption,
           align: 'left',
           useHTML: true,
           style: { color: '#555', fontSize: '11px', lineHeight:'1.4em' },
           x: 10,
           margin: 15
       },
-      legend:{ enabled:true }
+      legend:{ enabled:true },
+      /* ✅ Export Config */
+      exporting: {
+          chartOptions: {
+              // 1. Extra space at bottom to prevent clipping
+              chart: { spacingBottom: 40, events: { load: function() { placeLogo(this); } } }, 
+              // 2. Use SVG rendering (useHTML: false) for cleaner text export
+              caption: {
+                  text: exportCaptionText,
+                  useHTML: false, 
+                  align: 'left',
+                  style: { fontSize: '10px', color: '#555' },
+                  margin: 15
+              }
+          }
+      }
   };
 
   const seriesLine = state.countries.map((c,i)=>{
