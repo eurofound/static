@@ -65,19 +65,19 @@
         /* Bar Chart Styles */
         .bar-container { margin-bottom: 12px; }
         .bar-header { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; color: #475569; font-weight: 600; }
-        .bar-track { width: 100%; background: #f1f5f9; height: 10px; border-radius: 5px; overflow: hidden; }
+        /* Make bar track transparent/invisible */
+        .bar-track { width: 100%; background: transparent; height: 10px; border-radius: 5px; overflow: visible; display: flex; align-items: center;}
         .bar-fill { background: var(--orange); height: 100%; border-radius: 5px; transition: width 0.5s ease; }
 
         .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
         .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; }
-        .policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        /* Single column grid for policies now */
+        .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
         .policy-panel { padding: 16px; }
-        .policy-panel.right { background: #fafafa; border-left: 1px solid #e2e8f0; }
         .panel-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 10px; }
         .reg-item { font-size: 13px; margin-bottom: 6px; position: relative; padding-left: 20px; line-height: 1.4; }
         .reg-item.true::before { content: "✔"; color: var(--green); font-weight: bold; position: absolute; left: 0; top: 0; }
-        .reg-item.false { color: #94a3b8; text-decoration: line-through; }
-        .reg-item.false::before { content: "•"; color: #94a3b8; position: absolute; left: 4px; }
+        /* Hide false items completely via JS, styling kept just in case */
         .details-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-top: 8px; }
         .details-table td { padding: 4px 0; vertical-align: top; border-bottom: 1px solid #f8fafc; }
         .details-table td:first-child { color: #64748b; width: 45%; padding-right: 10px; }
@@ -90,13 +90,10 @@
         
         .chart-tooltip { position: absolute; background: rgba(0,0,0,0.85); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100; transform: translate(-50%, -120%); white-space: nowrap; }
 
-        .hero-stat { text-align: center; padding: 40px 20px; }
-        .hero-num { font-size: 64px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 15px; }
-        .hero-text { font-size: 18px; color: #475569; max-width: 400px; margin: 0 auto; line-height: 1.5; }
-
         .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
         .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
-        .hbar-track { flex: 1; height: 24px; background: #f1f5f9; border-radius: 4px; position: relative; overflow: hidden; }
+        /* Transparent track for hbars too */
+        .hbar-track { flex: 1; height: 24px; background: transparent; border-radius: 4px; position: relative; overflow: visible; display: flex; align-items: center; }
         .hbar-fill { height: 100%; background: var(--primary); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: white; font-size: 12px; font-weight: 600; }
 
         .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
@@ -126,7 +123,6 @@
             .controls-row { flex-direction: column; align-items: stretch; gap: 15px; }
             .container { padding: 15px; }
             .policy-grid { grid-template-columns: 1fr; }
-            .policy-panel.right { border-left: none; border-top: 1px solid #e2e8f0; }
             .footer-top { flex-direction: column; gap: 15px; }
         }
     </style>
@@ -180,13 +176,14 @@
     </div>
 </div>
 
-    <script>
+<script>
     // -------------------------------------------------------------
     // CONFIGURATION & GLOBAL STATE
     // -------------------------------------------------------------
-    const DATA_URL = "./housing_data.json"; // Relative path (Same folder in GitHub)
+    // Using relative path assuming json file is in same folder
+    const DATA_URL = "./housing_data.json"; 
     
-    // Fallback URL: Use this if you are testing locally on your computer and CORS fails
+    // Fallback: If you are testing locally without a server, you might need the raw GitHub URL
     // const DATA_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/housing_data.json";
 
     const COUNTRIES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"];
@@ -218,7 +215,7 @@
     const SEARCH_INDEX = [{"label": "Housing Allowances", "section": "Affordability", "parent": "Housing Allowances", "type": "parent"}, {"label": "Tax Relief", "section": "Affordability", "parent": "Tax Relief", "type": "parent"}, {"label": "Rent Regulations", "section": "Affordability", "parent": "Rent Regulations", "type": "parent"}, {"label": "Mortgage Market", "section": "Affordability", "parent": "Mortgage Market", "type": "parent"}, {"label": "Construction Subsidies", "section": "Affordability", "parent": "Construction Subsidies", "type": "parent"}, {"label": "Homebuying Subsidies", "section": "Affordability", "parent": "Homebuying Subsidies", "type": "parent"}, {"label": "Social Housing", "section": "Affordability", "parent": "Social Housing", "type": "parent"}, {"label": "House Prices Trend", "section": "General Housing System", "parent": "House Prices Trend", "type": "parent"}, {"label": "Rent Prices Trend", "section": "General Housing System", "parent": "Rent Prices Trend", "type": "parent"}, {"label": "Housing Completions", "section": "General Housing System", "parent": "Housing Completions", "type": "parent"}, {"label": "Housing Stock", "section": "General Housing System", "parent": "Housing Stock", "type": "parent"}, {"label": "Population", "section": "General Housing System", "parent": "Population", "type": "parent"}, {"label": "Households", "section": "General Housing System", "parent": "Households", "type": "parent"}, {"label": "Public Spending", "section": "General Housing System", "parent": "Public Spending", "type": "parent"}, {"label": "Short-term Regulations", "section": "General Housing System", "parent": "Short-term Regulations", "type": "parent"}, {"label": "Homelessness", "section": "Exclusion", "parent": "Homelessness", "type": "parent"}, {"label": "Age of Leaving Home", "section": "Exclusion", "parent": "Age of Leaving Home", "type": "parent"}, {"label": "Living with Parents", "section": "Exclusion", "parent": "Living with Parents", "type": "parent"}];
     const SOURCES = {"Mortgage Market": "European Mortgage Federation (2025), Hypostat 2025", "Homelessness": "FEANTSA and Fondation pour le Logement (2025); Szeintuch (2024); National Strategies", "Public Spending": "OECD Affordable Housing Database; Eurostat 2023 (gov_10a_exp)", "Short-term Regulations": "AirBnb 'responsible hosting' guides; National sources", "Social Housing": "OECD Affordable Housing Database; National sources", "Tax Relief": "OECD Affordable Housing Database; National sources", "Rent Regulations": "TENLAW project reports (2013-14); OECD Affordable Housing Database; National sources", "Housing Allowances": "OECD Affordable Housing Database; National sources", "Homebuying Subsidies": "OECD Affordable Housing Database; National sources", "Construction Subsidies": "National sources", "Households": "Eurostat", "Population": "Eurostat", "Housing Completions": "Hypostat 2025 report", "Rent Prices Trend": "Eurostat", "Housing Stock": "Hypostat 2025 report", "House Prices Trend": "Eurostat", "Age of Leaving Home": "Eurostat", "Living with Parents": "Eurostat"};
 
-    let DB = {}; // Populated via Fetch
+    let DB = {}; 
     let state = {
         country: COUNTRIES[0] || null,
         section: "Affordability",
@@ -238,13 +235,13 @@
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             
             DB = await response.json();
-            init(); // Start app once data is ready
+            init(); 
         } catch (e) {
             console.error(e);
             container.innerHTML = `<div class="empty-state" style="color:red;">
                 Failed to load data.<br>
                 <small>${e.message}</small><br><br>
-                If testing locally, you must use a local server or the Raw GitHub URL.
+                Ensure housing_data.json is in the same folder.
             </div>`;
         }
     }
@@ -288,6 +285,7 @@
     function transformItem(item, sectionTitle) {
         let newItem = JSON.parse(JSON.stringify(item));
         
+        // Move "Tax targeted" into title
         if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
             newItem.title = `${newItem.details["Tax targeted"]} ${newItem.title}`.replace("  ", " ");
             delete newItem.details["Tax targeted"];
@@ -379,7 +377,15 @@
         for (const [k, v] of Object.entries(data)) {
             if (v === 'N/A' || v === null) continue;
             const w = Math.min((v / maxScale) * 100, 100);
-            html += `<div class="bar-container"><div class="bar-header"><span>${cleanLabel(k)}</span><span>${v}%</span></div><div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div></div>`;
+            html += `<div class="bar-container">
+                        <div class="bar-header"><span>${cleanLabel(k)}</span></div>
+                        <div style="display: flex; align-items: center;">
+                            <div class="bar-track" style="flex-grow: 1; margin-right: 10px;">
+                                <div class="bar-fill" style="width:${w}%"></div>
+                            </div>
+                            <span style="font-weight: bold; font-size: 14px;">${v}%</span>
+                        </div>
+                     </div>`;
         }
         return html;
     }
@@ -411,9 +417,9 @@
                 for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
                 detailsHtml += `</table>`;
             }
+            // Hiding panel "Excluded/Not Required"
             html += `<div class="policy-block"><div class="policy-head">${item.title}</div><div class="policy-grid">
                 <div class="policy-panel"><div class="panel-label">Requirements & Eligibility</div>${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}${detailsHtml}</div>
-                <div class="policy-panel right"><div class="panel-label">Excluded / Not Required / N/A</div>${item.false_items.map(i => `<div class="reg-item false">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None</div>'}</div>
             </div></div>`;
         });
         return html;
@@ -424,7 +430,13 @@
         let html = ''; const max = 40; 
         for(const [k, v] of Object.entries(data)) {
             const w = (v / max) * 100;
-            html += `<div class="hbar-row"><div class="hbar-label">${k}</div><div class="hbar-track"><div class="hbar-fill" style="width:${w}%">${v}</div></div></div>`;
+            html += `<div class="hbar-row">
+                        <div class="hbar-label">${k}</div>
+                        <div class="hbar-track" style="flex-grow: 1; margin-right: 10px;">
+                            <div class="hbar-fill" style="width:${w}%"></div>
+                        </div>
+                        <span style="font-weight: bold; font-size: 14px;">${v}</span>
+                     </div>`;
         }
         return html;
     }
@@ -441,7 +453,8 @@
         if (type === 'time_series') return `<div class="card"><div class="card-header">${label} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
         if (type === 'bar_chart') return `<div class="card"><div class="card-header">${label}</div><div class="card-body">${renderSpending(content)}</div></div>`;
         if (type === 'policy') return renderPolicy(content, sectionTitle, filterTitle);
-        if (type === 'hero_stat') return `<div class="card"><div class="card-body"><div class="hero-stat"><div class="hero-num">${content}%</div><div class="hero-text">Young adults living with their parents</div></div></div></div>`;
+        // Hide Hero Stat
+        if (type === 'hero_stat') return '';
         
         let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
         if (type === 'horizontal_bar') html += renderHorizontalBars(content);
