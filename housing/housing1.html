@@ -58,7 +58,7 @@
         .bar-container { margin-bottom: 15px; }
         .bar-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: #475569; font-weight: 600; }
         .bar-wrapper { position: relative; width: 100%; height: 12px; }
-        /* Transparent Track implies we just show the fill */
+        /* Transparent Track */
         .bar-fill { background: var(--orange); height: 100%; border-radius: 6px; position: absolute; left: 0; top: 0; }
         .bar-label-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: -2px; padding-left: 8px; white-space: nowrap; }
 
@@ -205,7 +205,7 @@
         section: "Affordability",
         subIndicator: null,
         searchTags: [],
-        activePartly: false // Tracking for footnote
+        activePartly: false 
     };
 
     // -------------------------------------------------------------
@@ -264,14 +264,14 @@
     function transformItem(item, sectionTitle) {
         let newItem = JSON.parse(JSON.stringify(item));
         
-        // Check for Partly tag to trigger footnote
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
-        if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
-            // Format title: "{Tax targeted} - {lowercase title}"
+        // UPDATED FIX: Check for Tax targeted property presence, regardless of section title variable
+        if (newItem.details["Tax targeted"]) {
             newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title.toLowerCase()}`;
             delete newItem.details["Tax targeted"];
         }
+
         if (newItem.details["Mortgage"]) {
             if (newItem.details["Mortgage"] === "1.0" || newItem.details["Mortgage"] === 1) newItem.true_items.push("Mortgage required");
             delete newItem.details["Mortgage"];
@@ -283,7 +283,6 @@
             }
         });
         newItem.true_items = newItem.true_items.map(cleanLabel);
-        // We don't render false_items anymore but good to keep logic clean
         newItem.false_items = newItem.false_items.map(cleanLabel); 
         return newItem;
     }
@@ -306,18 +305,19 @@
         
         if(allVals.length === 0) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
 
-        // Adjust Y-axis range for better visualization
-        const minData = Math.min(...allVals);
-        const maxData = Math.max(...allVals);
-        const paddingRange = (maxData - minData) * 0.1;
-        const min = Math.floor((minData - paddingRange) / 10) * 10;
-        const max = Math.ceil((maxData + paddingRange) / 10) * 10;
-        
+        // Calculate Y Axis Range (Round to nearest 10)
+        const minVal = Math.min(...allVals);
+        const maxVal = Math.max(...allVals);
+        const min = Math.floor(minVal / 10) * 10 - 10;
+        const max = Math.ceil(maxVal / 10) * 10 + 10;
         const range = max - min;
+
         const width = 600; const height = 300;
-        const padding = { top: 20, right: 30, bottom: 40, left: 50 }; // Increased left padding for Y labels
+        // Increased Left Padding for Y-Axis labels
+        const padding = { top: 20, right: 30, bottom: 40, left: 60 }; 
         const chartW = width - padding.left - padding.right;
         const chartH = height - padding.top - padding.bottom;
+        
         const getX = (i) => padding.left + (i / (years.length - 1)) * chartW;
         const getY = (val) => padding.top + chartH - ((val - min) / range) * chartH;
 
@@ -330,7 +330,6 @@
             return d;
         };
 
-        // Render circles for data points
         const makePoints = (dataObj, color) => {
             let pts = '';
             years.forEach((y, i) => {
@@ -342,23 +341,23 @@
             return pts;
         };
 
-        // X Axis: Show ALL years with larger font
-        let xLabelsHtml = '';
-        years.forEach((y, i) => {
-             xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" text-anchor="middle" fill="#94a3b8" style="pointer-events:none;">${y}</text>`;
-        });
-
-        // Y Axis Labels & Grid Lines
-        let yLabelsHtml = '';
+        // Generate Y-Axis Labels
+        let yAxisHtml = '';
         let gridLinesHtml = '';
-        const yStep = 10;
-        for (let val = min; val <= max; val += yStep) {
-            const yPos = getY(val);
-            if (yPos > padding.top && yPos < height - padding.bottom) {
-                yLabelsHtml += `<text x="${padding.left - 10}" y="${yPos + 4}" font-size="12" text-anchor="end" fill="#94a3b8">${val}</text>`;
+        for (let v = min; v <= max; v += 10) {
+            const yPos = getY(v);
+            if(yPos >= padding.top && yPos <= height - padding.bottom) {
+                // Same font size as X axis (16px)
+                yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="14" text-anchor="end" fill="#94a3b8">${v}</text>`;
                 gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
             }
         }
+
+        let xLabelsHtml = '';
+        years.forEach((y, i) => {
+             // Much bigger year labels (16px, bold)
+             xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b" style="pointer-events:none;">${y}</text>`;
+        });
 
         let hoverHtml = '';
         years.forEach((y, i) => {
@@ -374,8 +373,8 @@
             ${gridLinesHtml}
             <line x1="${padding.left}" y1="${height-padding.bottom}" x2="${width-padding.right}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
             <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
+            ${yAxisHtml}
             ${xLabelsHtml}
-            ${yLabelsHtml}
             <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
             ${makePoints(safePrices, "#0B7189")}
             <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
@@ -430,7 +429,6 @@
                 for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
                 detailsHtml += `</table>`;
             }
-            // Removed right column (False items)
             html += `<div class="policy-block"><div class="policy-head">${item.title}</div><div class="policy-grid">
                 <div class="policy-panel"><div class="panel-label">Requirements & Eligibility</div>${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}${detailsHtml}</div>
             </div></div>`;
@@ -455,7 +453,7 @@
     }
 
     function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
-        if (type === 'hero_stat') return ''; // Removed Tile
+        if (type === 'hero_stat') return ''; 
 
         if (sectionTitle === "Mortgage Market") {
              if (type === 'policy' && content.length > 0 && content[0].details) {
@@ -485,21 +483,15 @@
         return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
     }
 
-    // Dynamic Footnotes
     function renderGlobalFootnotes(visibleItems) {
         let html = `<div class="footnote-area">`;
         
-        // 1. Partly Note
         if (state.activePartly) {
             html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
         }
-        
-        // 2. Rent Note
         if (visibleItems.includes("Rent Regulations")) {
             html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
         }
-
-        // 3. Homebuying Note
         if (visibleItems.includes("Homebuying Subsidies")) {
             html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
         }
@@ -515,14 +507,14 @@
 
         let html = '';
         let visibleItems = [];
-        state.activePartly = false; // Reset
+        state.activePartly = false; 
 
         if (state.searchTags.length > 0) {
             container.className = '';
             state.searchTags.forEach(tag => {
                 const secData = countryData[tag.section];
                 if(secData) {
-                    visibleItems.push(tag.parent); // Track parent section for footnotes
+                    visibleItems.push(tag.parent); 
                     html += renderComponent(tag.parent, secData, tag.section, (tag.type === 'sub') ? tag.label : null);
                 }
             });
@@ -548,7 +540,6 @@
         else if (state.section === "Exclusion") {
             container.className = 'exclusion-grid';
             Object.entries(data).forEach(([k,v]) => { 
-                // Don't render empty return values (like Hero Stat)
                 const tileHtml = renderGeneric(k, v.type, v.content, state.section);
                 if(tileHtml) { html += tileHtml; visibleItems.push(k); }
             });
