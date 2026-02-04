@@ -58,20 +58,20 @@
         .bar-container { margin-bottom: 15px; }
         .bar-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: #475569; font-weight: 600; }
         .bar-wrapper { position: relative; width: 100%; height: 12px; }
-        /* Transparent Track */
         .bar-fill { background: var(--orange); height: 100%; border-radius: 6px; position: absolute; left: 0; top: 0; }
         .bar-label-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: -2px; padding-left: 8px; white-space: nowrap; }
 
-        /* Updated Horizontal Bar (Age) Styles */
+        /* Updated Horizontal Bar Styles */
         .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
         .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
         .hbar-wrapper { flex: 1; height: 24px; position: relative; }
         .hbar-fill { height: 100%; background: var(--primary); border-radius: 4px; position: absolute; left: 0; }
         .hbar-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: 4px; padding-left: 8px; white-space: nowrap; }
 
+        /* Policy Blocks */
         .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
         .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-        .policy-type-badge { background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: uppercase; font-weight: 700; border: 1px solid #bae6fd; }
+        .policy-type-badge { background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: uppercase; font-weight: 700; border: 1px solid #bae6fd; margin-left: 10px; }
         
         .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
         .policy-panel { padding: 16px; }
@@ -99,15 +99,7 @@
         .footer-text { font-size: 11px; color: #94a3b8; line-height: 1.5; }
         .source-label { font-weight: 700; color: #64748b; margin-right: 5px; }
 
-        /* Footnotes Area */
-        .footnote-area {
-            margin-top: 10px;
-            padding-top: 15px;
-            border-top: 1px dotted #cbd5e1;
-            font-size: 11px;
-            color: #64748b;
-            line-height: 1.5;
-        }
+        .footnote-area { margin-top: 10px; padding-top: 15px; border-top: 1px dotted #cbd5e1; font-size: 11px; color: #64748b; line-height: 1.5; }
         .footnote-item { margin-bottom: 4px; }
 
         @media (max-width: 900px) {
@@ -192,7 +184,8 @@
         "Max sum": "Max available sum",
         "Calculation based on?": "Calculation method",
         "Regulated how?": "Subsequent increase regulation method",
-        "Exceptions to increase amount for renovations": "Exceptions for major/climate renovations"
+        "Exceptions to increase amount for renovations": "Exceptions for major/climate renovations",
+        "Type of measure": "Measure Type" 
     };
 
     const PUBLIC_SPENDING_MAX_SCALE = 2.5;
@@ -240,10 +233,8 @@
 
         // Special handling for Reduction/Amount which can be % or €
         if (key === "Reduction/ amount") {
-            // Heuristic: If it's 1.0 or 0.25 (and not 0), assume percentage
-            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%';
-            // Otherwise treat as currency
-            return '€' + num.toLocaleString('en-US');
+            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; // 1.0 -> 100%, 0.25 -> 25%
+            return '€' + num.toLocaleString('en-US'); // 500 -> €500
         }
 
         if (isPercentageKey) {
@@ -276,7 +267,6 @@
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
         if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
-            // Concatenate title, NO Lowercase enforcement
             newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
             delete newItem.details["Tax targeted"];
         }
@@ -314,7 +304,6 @@
         
         if(allVals.length === 0) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
 
-        // Calculate Y Axis Range (Round to nearest 10)
         const minVal = Math.min(...allVals);
         const maxVal = Math.max(...allVals);
         const min = Math.floor(minVal / 10) * 10 - 10;
@@ -349,13 +338,11 @@
             return pts;
         };
 
-        // Y-Axis Labels & Grid
         let yAxisHtml = '';
         let gridLinesHtml = '';
         for (let v = min; v <= max; v += 10) {
             const yPos = getY(v);
             if(yPos >= padding.top && yPos <= height - padding.bottom) {
-                // Font Size 16px to match X-Axis
                 yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="16" text-anchor="end" fill="#94a3b8">${v}</text>`;
                 gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
             }
@@ -363,7 +350,6 @@
 
         let xLabelsHtml = '';
         years.forEach((y, i) => {
-             // Font Size 16px, Bold
              xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b" style="pointer-events:none;">${y}</text>`;
         });
 
@@ -446,7 +432,7 @@
                 detailsHtml += `</table>`;
             }
             
-            // Mortgage Market Exception: Hide checklist, only show stats
+            // Mortgage Market: HIDE Checklist
             const isMortgage = (sectionTitle === "Mortgage Market");
             
             let contentHtml = '';
@@ -487,7 +473,7 @@
     function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
         if (type === 'hero_stat') return ''; 
 
-        // Mortgage Market Handling (Render as Policy so we can filter checklist)
+        // Reroute Mortgage Market to Policy Render (to apply checklist hiding logic)
         if (sectionTitle === "Mortgage Market" && type === 'policy') {
              return renderPolicy(content, sectionTitle, filterTitle);
         }
@@ -514,17 +500,9 @@
 
     function renderGlobalFootnotes(visibleItems) {
         let html = `<div class="footnote-area">`;
-        
-        if (state.activePartly) {
-            html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
-        }
-        if (visibleItems.includes("Rent Regulations")) {
-            html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
-        }
-        if (visibleItems.includes("Homebuying Subsidies")) {
-            html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
-        }
-
+        if (state.activePartly) html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
+        if (visibleItems.includes("Rent Regulations")) html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
+        if (visibleItems.includes("Homebuying Subsidies")) html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
         return html + `</div>`;
     }
 
