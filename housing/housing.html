@@ -74,7 +74,7 @@
     }
 
     /* Footer & Notes */
-    footer { margin-top: 0.0rem; padding-top: rem; border-top: 0px solid #e5e7eb; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
+    footer { margin-top: 0.0rem; padding-top: 0rem; border-top: 0px solid #e5e7eb; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
     .footer-left { display: flex; align-items: flex-start; gap: 16px; max-width: 80%; }
     .footer-text-col { display: flex; flex-direction: column; gap: 4px; }
     footer img { height: 32px; opacity: 0.9; margin-top: 2px; }
@@ -222,7 +222,11 @@ Papa.parse(CSV_URL, {
   download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
   complete: function(results) {
     rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
-          d['Value'] = d['Value'] * 100; 
+          // CHECK IF UNIT IS YEARS
+          const isYears = String(d['Indicator name']).toLowerCase().includes('age of leaving home');
+          if (!isYears) {
+              d['Value'] = d['Value'] * 100; 
+          }
           if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
           if (d['Top category']) {
               d['Top category'] = d['Top category'].replace(/\s+/g, ' ').trim();
@@ -234,6 +238,10 @@ Papa.parse(CSV_URL, {
   },
   error: (err) => { els.loader.textContent = "Error loading data."; }
 });
+
+function isYearsIndicator(indicatorName) {
+    return indicatorName && indicatorName.toLowerCase().includes('age of leaving home');
+}
 
 function buildTooltipCache() {
     window.tooltipCache = {};
@@ -265,7 +273,9 @@ async function preloadResources() {
 }
 
 function getMiniBarHTML(label, value, color, isMain) {
-   const width = Math.min(Math.max(value, 0), 100); 
+   const isYears = isYearsIndicator(state.indicator);
+   const unit = isYears ? "y" : "%";
+   const width = isYears ? Math.min((value / 40) * 100, 100) : Math.min(Math.max(value, 0), 100); 
    const weight = isMain ? '700' : '400';
    const bgColor = isMain ? '#e5e7eb' : '#f3f4f6';
    return `<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; color: #374151;">
@@ -273,7 +283,7 @@ function getMiniBarHTML(label, value, color, isMain) {
         <div style="flex: 0 0 80px; height: 12px; background: ${bgColor}; border-radius: 3px; overflow: hidden; position: relative;">
              <div style="width: ${width}%; height: 100%; background: ${color};"></div>
         </div>
-        <div style="flex: 0 0 30px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}%</div>
+        <div style="flex: 0 0 40px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}${unit}</div>
       </div>`;
 }
 
@@ -316,12 +326,15 @@ function getTooltipHTML(point) {
   
   if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
   
+  const isYears = isYearsIndicator(state.indicator);
+  const unitStr = isYears ? " years" : "%";
+
   if (typeof val === 'number') val = val.toFixed(1);
   
   let subLabel = point.series ? point.series.name : ''; 
   if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
   
-  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}%</div></div>`;
+  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}${unitStr}</div></div>`;
 }
 
 async function init() {
@@ -456,6 +469,7 @@ function renderBar(data) {
   const selectedCategories = state.mapCategories;
   const availableCountries = [...new Set(data.map(d => d['Country Name']))].sort();
   const displayCountries = availableCountries.filter(c => state.barCountries.includes(c));
+  const isYears = isYearsIndicator(state.indicator);
   
   const series = selectedCategories.map((cat, i) => ({
     name: cat, 
@@ -467,7 +481,10 @@ function renderBar(data) {
   }));
 
   const chart = Highcharts.chart('bar-container', {
-    chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, xAxis: { categories: displayCountries, title: { text: null } }, yAxis: { title: { text: '%' }, labels: { format: '{value}%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+    chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, 
+    xAxis: { categories: displayCountries, title: { text: null } }, 
+    yAxis: { title: { text: isYears ? 'Years' : '%' }, labels: { format: isYears ? '{value}' : '{value}%' } }, 
+    tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
     plotOptions: { 
         bar: { 
             pointPadding: 0.05, 
@@ -478,7 +495,7 @@ function renderBar(data) {
                 inside: false, 
                 crop: false, 
                 overflow: 'justify',
-                formatter: function() { return this.y.toFixed(1); },
+                formatter: function() { return this.y.toFixed(1) + (isYears ? "" : "%"); },
                 style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
             } 
         },
@@ -570,57 +587,79 @@ function renderCountryProfile() {
   
   relevantData = filterDataAndCheckCounts(relevantData);
   
-  const seriesData = indicators.map(ind => { const row = relevantData.find(d => d['Indicator name'] === ind); return row ? { y: row['Value'], name: ind } : null; });
+  const seriesData = indicators.map(ind => { 
+      const row = relevantData.find(d => d['Indicator name'] === ind); 
+      return row ? { y: row['Value'], name: ind, indicatorName: ind } : null; 
+  });
   
-  if (cpChart) { 
-      cpChart.setTitle({ text: `${state.cpCountry}` }, { text: `Category: ${category}` }); 
-      cpChart.xAxis[0].setCategories(indicators); 
-      cpChart.series[0].update({ name: state.cpCountry, data: seriesData }); 
-      window.activeCharts.push(cpChart); 
-  } 
-  else {
-    cpChart = Highcharts.chart('cp-container', {
-      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, xAxis: { categories: indicators, title: { text: null } }, yAxis: { title: { text: '%' } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+  const chartOptions = {
+      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, 
+      xAxis: { categories: indicators, title: { text: null } }, 
+      yAxis: { title: { text: 'Value' } }, 
+      tooltip: { formatter: function() { 
+          // Custom logic for multi-indicator profile
+          const isYears = isYearsIndicator(this.point.indicatorName);
+          const unitStr = isYears ? " years" : "%";
+          return `<div style="padding: 8px;"><div style="font-weight:700;">${this.point.name}</div><div>${this.y.toFixed(1)}${unitStr}</div></div>`;
+      } }, 
       plotOptions: { 
           bar: { 
-            pointPadding: 0.05, 
-            groupPadding: 0.05, 
-            dataLabels: { 
-                enabled: true, 
-                align: 'right',
-                inside: false, 
-                crop: false, 
-                overflow: 'justify',
-                formatter: function() { return this.y.toFixed(1); },
-                style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
-            } 
-          },
-          series: {
-              dataLabels: {
-                  inside: true, 
-                  color: '#FFFFFF', 
-                  style: { textOutline: 'none' }
-              }
+              pointPadding: 0.05, 
+              groupPadding: 0.05, 
+              dataLabels: { 
+                  enabled: true, 
+                  align: 'right',
+                  inside: false, 
+                  crop: false, 
+                  overflow: 'justify',
+                  formatter: function() { 
+                      const isYears = isYearsIndicator(this.point.indicatorName);
+                      return this.y.toFixed(1) + (isYears ? "" : "%"); 
+                  },
+                  style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
+              } 
           }
       }, 
       legend: { enabled: false }, series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }], exporting: { filename: `Housing_Profile_${state.cpCountry}` }
-    });
-    window.activeCharts.push(cpChart);
-  }
+  };
+
+  if (cpChart) cpChart.destroy();
+  cpChart = Highcharts.chart('cp-container', chartOptions);
+  window.activeCharts.push(cpChart);
 }
 
 function renderRadar2() {
   if (state.globalIndicators.length === 0 || state.r2Countries.length === 0) { Highcharts.chart('r2-container', { title: { text: 'Select Data' } }); return; }
   const indicators = state.globalIndicators; const category = state.cpCategory || 'All';
   const series = state.r2Countries.map((country, i) => {
-    let data = indicators.map(ind => { const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); return row ? { y: row['Value'], count: row['Count'] } : null; });
+    let data = indicators.map(ind => { 
+        const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); 
+        return row ? { y: row['Value'], count: row['Count'], indicatorName: ind } : null; 
+    });
     
     data = data.map(d => (d && d.count !== undefined && d.count < 50) ? null : d);
     
     return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
   });
   const chart = Highcharts.chart('r2-container', {
-    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { shared: true, pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.1f}%</b><br/>' }, series: series, exporting: { filename: `Housing_MultiRadar_Comparison` }
+    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, 
+    xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, 
+    yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, 
+    tooltip: { 
+        shared: true, 
+        formatter: function() {
+            let s = `<div style="padding:8px;"><div style="font-weight:700; margin-bottom:4px;">${this.x}</div>`;
+            const isYears = isYearsIndicator(this.x);
+            const unit = isYears ? " years" : "%";
+            this.points.forEach(p => {
+                s += `<div style="color:${p.series.color}">${p.series.name}: <b>${p.y.toFixed(1)}${unit}</b></div>`;
+            });
+            s += `</div>`;
+            return s;
+        }
+    }, 
+    series: series, 
+    exporting: { filename: `Housing_MultiRadar_Comparison` }
   });
   window.activeCharts.push(chart);
 }
