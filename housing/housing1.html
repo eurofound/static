@@ -17,14 +17,11 @@
         .ctrl-group { flex: 1; position: relative; }
         .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        /* EXPORT BUTTONS */
         .webhook-btns { display: flex; gap: 10px; }
         .btn { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: white; color: var(--secondary); transition: all 0.2s; }
         .btn:hover { background: #f1f5f9; border-color: #cbd5e1; }
-        .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
-        .btn-primary:hover { background: #096176; }
-
-        /* Country Dropdown */
+        
+        /* Custom Select */
         .custom-select-wrapper { position: relative; user-select: none; width: 100%; }
         .custom-select { position: relative; display: flex; flex-direction: column; }
         .custom-select__trigger { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 15px; font-weight: 400; color: #333; background: #fff; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
@@ -35,11 +32,9 @@
         .arrow { width: 10px; height: 10px; border-right: 2px solid #999; border-bottom: 2px solid #999; transform: rotate(45deg); margin-top: -4px; transition: 0.2s; }
         .open .arrow { transform: rotate(-135deg); margin-top: 2px; }
 
-        /* Search Tags */
         .search-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
         .tag { background: #e0f2fe; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
         .tag-remove { cursor: pointer; font-weight: bold; font-size: 14px; opacity: 0.6; }
-        .tag-remove:hover { opacity: 1; }
         .search-box { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box; outline: none; }
         
         .tabs { display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
@@ -51,33 +46,37 @@
         .card-header { background: #f8fafc; padding: 15px 20px; font-weight: 700; border-bottom: 1px solid var(--border); color: #334155; font-size: 15px; }
         .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 15px; }
 
-        /* General Housing System Grid */
         .ghs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
         .span-full { grid-column: 1 / -1; }
-
-        /* Exclusion Grid */
         .exclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
         .demo-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
         .demo-label { color: #64748b; font-size: 14px; }
         .demo-val { font-size: 18px; font-weight: 700; color: var(--primary); }
 
-        /* Bar Chart Styles */
-        .bar-container { margin-bottom: 12px; }
-        .bar-header { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; color: #475569; font-weight: 600; }
-        /* Make bar track transparent/invisible */
-        .bar-track { width: 100%; background: transparent; height: 10px; border-radius: 5px; overflow: visible; display: flex; align-items: center;}
-        .bar-fill { background: var(--orange); height: 100%; border-radius: 5px; transition: width 0.5s ease; }
+        /* Updated Bar Chart Styles */
+        .bar-container { margin-bottom: 15px; }
+        .bar-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: #475569; font-weight: 600; }
+        .bar-wrapper { position: relative; width: 100%; height: 12px; }
+        /* Transparent Track implies we just show the fill */
+        .bar-fill { background: var(--orange); height: 100%; border-radius: 6px; position: absolute; left: 0; top: 0; }
+        .bar-label-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: -2px; padding-left: 8px; white-space: nowrap; }
+
+        /* Updated Horizontal Bar (Age) Styles */
+        .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
+        .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
+        .hbar-wrapper { flex: 1; height: 24px; position: relative; }
+        .hbar-fill { height: 100%; background: var(--primary); border-radius: 4px; position: absolute; left: 0; }
+        .hbar-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: 4px; padding-left: 8px; white-space: nowrap; }
 
         .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
         .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; }
-        /* Single column grid for policies now */
+        /* Single column policy grid */
         .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
         .policy-panel { padding: 16px; }
         .panel-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 10px; }
         .reg-item { font-size: 13px; margin-bottom: 6px; position: relative; padding-left: 20px; line-height: 1.4; }
         .reg-item.true::before { content: "✔"; color: var(--green); font-weight: bold; position: absolute; left: 0; top: 0; }
-        /* Hide false items completely via JS, styling kept just in case */
         .details-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-top: 8px; }
         .details-table td { padding: 4px 0; vertical-align: top; border-bottom: 1px solid #f8fafc; }
         .details-table td:first-child { color: #64748b; width: 45%; padding-right: 10px; }
@@ -90,16 +89,9 @@
         
         .chart-tooltip { position: absolute; background: rgba(0,0,0,0.85); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100; transform: translate(-50%, -120%); white-space: nowrap; }
 
-        .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
-        .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
-        /* Transparent track for hbars too */
-        .hbar-track { flex: 1; height: 24px; background: transparent; border-radius: 4px; position: relative; overflow: visible; display: flex; align-items: center; }
-        .hbar-fill { height: 100%; background: var(--primary); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: white; font-size: 12px; font-weight: 600; }
-
         .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
         .empty-state { text-align: center; padding: 60px; color: #94a3b8; font-style: italic; }
 
-        /* FOOTER */
         .footer-note { margin-top: auto; padding-top: 30px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 15px; }
         .footer-top { display: flex; align-items: flex-start; gap: 30px; }
         .footer-logo { height: 35px; }
@@ -117,12 +109,10 @@
         }
         .footnote-item { margin-bottom: 4px; }
 
-        /* Mobile Responsiveness */
         @media (max-width: 900px) {
             .ghs-grid, .exclusion-grid { grid-template-columns: 1fr; }
             .controls-row { flex-direction: column; align-items: stretch; gap: 15px; }
             .container { padding: 15px; }
-            .policy-grid { grid-template-columns: 1fr; }
             .footer-top { flex-direction: column; gap: 15px; }
         }
     </style>
@@ -178,14 +168,9 @@
 
 <script>
     // -------------------------------------------------------------
-    // CONFIGURATION & GLOBAL STATE
+    // CONFIGURATION
     // -------------------------------------------------------------
-    // Using relative path assuming json file is in same folder
     const DATA_URL = "./housing_data.json"; 
-    
-    // Fallback: If you are testing locally without a server, you might need the raw GitHub URL
-    // const DATA_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/housing_data.json";
-
     const COUNTRIES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"];
     const FLAG_MAP = {'Austria':'at','Belgium':'be','Bulgaria':'bg','Croatia':'hr','Cyprus':'cy','Czechia':'cz','Denmark':'dk','Estonia':'ee','Finland':'fi','France':'fr','Germany':'de','Greece':'gr','Hungary':'hu','Ireland':'ie','Italy':'it','Latvia':'lv','Lithuania':'lt','Luxembourg':'lu','Malta':'mt','Netherlands':'nl','Poland':'pl','Portugal':'pt','Romania':'ro','Slovakia':'sk','Slovenia':'si','Spain':'es','Sweden':'se','United Kingdom':'gb'};
 
@@ -211,7 +196,6 @@
 
     const PUBLIC_SPENDING_MAX_SCALE = 2.5;
 
-    // Static Index & Sources
     const SEARCH_INDEX = [{"label": "Housing Allowances", "section": "Affordability", "parent": "Housing Allowances", "type": "parent"}, {"label": "Tax Relief", "section": "Affordability", "parent": "Tax Relief", "type": "parent"}, {"label": "Rent Regulations", "section": "Affordability", "parent": "Rent Regulations", "type": "parent"}, {"label": "Mortgage Market", "section": "Affordability", "parent": "Mortgage Market", "type": "parent"}, {"label": "Construction Subsidies", "section": "Affordability", "parent": "Construction Subsidies", "type": "parent"}, {"label": "Homebuying Subsidies", "section": "Affordability", "parent": "Homebuying Subsidies", "type": "parent"}, {"label": "Social Housing", "section": "Affordability", "parent": "Social Housing", "type": "parent"}, {"label": "House Prices Trend", "section": "General Housing System", "parent": "House Prices Trend", "type": "parent"}, {"label": "Rent Prices Trend", "section": "General Housing System", "parent": "Rent Prices Trend", "type": "parent"}, {"label": "Housing Completions", "section": "General Housing System", "parent": "Housing Completions", "type": "parent"}, {"label": "Housing Stock", "section": "General Housing System", "parent": "Housing Stock", "type": "parent"}, {"label": "Population", "section": "General Housing System", "parent": "Population", "type": "parent"}, {"label": "Households", "section": "General Housing System", "parent": "Households", "type": "parent"}, {"label": "Public Spending", "section": "General Housing System", "parent": "Public Spending", "type": "parent"}, {"label": "Short-term Regulations", "section": "General Housing System", "parent": "Short-term Regulations", "type": "parent"}, {"label": "Homelessness", "section": "Exclusion", "parent": "Homelessness", "type": "parent"}, {"label": "Age of Leaving Home", "section": "Exclusion", "parent": "Age of Leaving Home", "type": "parent"}, {"label": "Living with Parents", "section": "Exclusion", "parent": "Living with Parents", "type": "parent"}];
     const SOURCES = {"Mortgage Market": "European Mortgage Federation (2025), Hypostat 2025", "Homelessness": "FEANTSA and Fondation pour le Logement (2025); Szeintuch (2024); National Strategies", "Public Spending": "OECD Affordable Housing Database; Eurostat 2023 (gov_10a_exp)", "Short-term Regulations": "AirBnb 'responsible hosting' guides; National sources", "Social Housing": "OECD Affordable Housing Database; National sources", "Tax Relief": "OECD Affordable Housing Database; National sources", "Rent Regulations": "TENLAW project reports (2013-14); OECD Affordable Housing Database; National sources", "Housing Allowances": "OECD Affordable Housing Database; National sources", "Homebuying Subsidies": "OECD Affordable Housing Database; National sources", "Construction Subsidies": "National sources", "Households": "Eurostat", "Population": "Eurostat", "Housing Completions": "Hypostat 2025 report", "Rent Prices Trend": "Eurostat", "Housing Stock": "Hypostat 2025 report", "House Prices Trend": "Eurostat", "Age of Leaving Home": "Eurostat", "Living with Parents": "Eurostat"};
 
@@ -220,7 +204,8 @@
         country: COUNTRIES[0] || null,
         section: "Affordability",
         subIndicator: null,
-        searchTags: []
+        searchTags: [],
+        activePartly: false // Tracking for footnote
     };
 
     // -------------------------------------------------------------
@@ -229,20 +214,14 @@
     async function loadData() {
         const container = document.getElementById('content');
         container.innerHTML = '<div class="empty-state">Loading data...</div>';
-        
         try {
             const response = await fetch(DATA_URL);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
             DB = await response.json();
             init(); 
         } catch (e) {
             console.error(e);
-            container.innerHTML = `<div class="empty-state" style="color:red;">
-                Failed to load data.<br>
-                <small>${e.message}</small><br><br>
-                Ensure housing_data.json is in the same folder.
-            </div>`;
+            container.innerHTML = `<div class="empty-state" style="color:red;">Failed to load data.<br><small>${e.message}</small></div>`;
         }
     }
 
@@ -285,7 +264,9 @@
     function transformItem(item, sectionTitle) {
         let newItem = JSON.parse(JSON.stringify(item));
         
-        // Move "Tax targeted" into title
+        // Check for Partly tag to trigger footnote
+        if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
+
         if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
             newItem.title = `${newItem.details["Tax targeted"]} ${newItem.title}`.replace("  ", " ");
             delete newItem.details["Tax targeted"];
@@ -301,7 +282,8 @@
             }
         });
         newItem.true_items = newItem.true_items.map(cleanLabel);
-        newItem.false_items = newItem.false_items.map(cleanLabel);
+        // We don't render false_items anymore but good to keep logic clean
+        newItem.false_items = newItem.false_items.map(cleanLabel); 
         return newItem;
     }
 
@@ -342,11 +324,22 @@
             return d;
         };
 
+        // Render circles for data points
+        const makePoints = (dataObj, color) => {
+            let pts = '';
+            years.forEach((y, i) => {
+                const val = dataObj[y];
+                if (val && val !== 'N/A') {
+                    pts += `<circle cx="${getX(i)}" cy="${getY(val)}" r="4" fill="${color}" stroke="white" stroke-width="2"/>`;
+                }
+            });
+            return pts;
+        };
+
+        // X Axis: Show ALL years
         let xLabelsHtml = '';
         years.forEach((y, i) => {
-             if(i === 0 || i === years.length-1 || i % 4 === 0) {
-                 xLabelsHtml += `<text x="${getX(i)}" y="${height-15}" font-size="11" text-anchor="middle" fill="#94a3b8" style="pointer-events:none;">${y}</text>`;
-             }
+             xLabelsHtml += `<text x="${getX(i)}" y="${height-15}" font-size="13" text-anchor="middle" fill="#94a3b8" style="pointer-events:none;">${y}</text>`;
         });
 
         let hoverHtml = '';
@@ -363,8 +356,10 @@
             <line x1="${padding.left}" y1="${height-padding.bottom}" x2="${width-padding.right}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
             <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
             ${xLabelsHtml}
-            <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
-            <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
+            <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
+            ${makePoints(safePrices, "#0B7189")}
+            <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
+            ${makePoints(safeRents, "#ea580c")}
             ${hoverHtml}
         </svg><div id="chartTooltip" class="chart-tooltip"></div></div>`;
     }
@@ -379,11 +374,9 @@
             const w = Math.min((v / maxScale) * 100, 100);
             html += `<div class="bar-container">
                         <div class="bar-header"><span>${cleanLabel(k)}</span></div>
-                        <div style="display: flex; align-items: center;">
-                            <div class="bar-track" style="flex-grow: 1; margin-right: 10px;">
-                                <div class="bar-fill" style="width:${w}%"></div>
-                            </div>
-                            <span style="font-weight: bold; font-size: 14px;">${v}%</span>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width:${w}%"></div>
+                            <span class="bar-label-val" style="left:${w}%">${v}%</span>
                         </div>
                      </div>`;
         }
@@ -417,7 +410,7 @@
                 for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
                 detailsHtml += `</table>`;
             }
-            // Hiding panel "Excluded/Not Required"
+            // Removed right column (False items)
             html += `<div class="policy-block"><div class="policy-head">${item.title}</div><div class="policy-grid">
                 <div class="policy-panel"><div class="panel-label">Requirements & Eligibility</div>${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}${detailsHtml}</div>
             </div></div>`;
@@ -432,16 +425,18 @@
             const w = (v / max) * 100;
             html += `<div class="hbar-row">
                         <div class="hbar-label">${k}</div>
-                        <div class="hbar-track" style="flex-grow: 1; margin-right: 10px;">
+                        <div class="hbar-wrapper">
                             <div class="hbar-fill" style="width:${w}%"></div>
+                            <span class="hbar-val" style="left:${w}%">${v}</span>
                         </div>
-                        <span style="font-weight: bold; font-size: 14px;">${v}</span>
                      </div>`;
         }
         return html;
     }
 
     function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
+        if (type === 'hero_stat') return ''; // Removed Tile
+
         if (sectionTitle === "Mortgage Market") {
              if (type === 'policy' && content.length > 0 && content[0].details) {
                  let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
@@ -453,8 +448,6 @@
         if (type === 'time_series') return `<div class="card"><div class="card-header">${label} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
         if (type === 'bar_chart') return `<div class="card"><div class="card-header">${label}</div><div class="card-body">${renderSpending(content)}</div></div>`;
         if (type === 'policy') return renderPolicy(content, sectionTitle, filterTitle);
-        // Hide Hero Stat
-        if (type === 'hero_stat') return '';
         
         let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
         if (type === 'horizontal_bar') html += renderHorizontalBars(content);
@@ -472,12 +465,26 @@
         return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
     }
 
-    function renderGlobalFootnotes() {
-        return `<div class="footnote-area">
-            <div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>
-            <div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>
-            <div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>
-        </div>`;
+    // Dynamic Footnotes
+    function renderGlobalFootnotes(visibleItems) {
+        let html = `<div class="footnote-area">`;
+        
+        // 1. Partly Note
+        if (state.activePartly) {
+            html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
+        }
+        
+        // 2. Rent Note
+        if (visibleItems.includes("Rent Regulations")) {
+            html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
+        }
+
+        // 3. Homebuying Note
+        if (visibleItems.includes("Homebuying Subsidies")) {
+            html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
+        }
+
+        return html + `</div>`;
     }
 
     function render() {
@@ -488,19 +495,20 @@
 
         let html = '';
         let visibleItems = [];
+        state.activePartly = false; // Reset
 
         if (state.searchTags.length > 0) {
             container.className = '';
             state.searchTags.forEach(tag => {
                 const secData = countryData[tag.section];
                 if(secData) {
-                    visibleItems.push(tag.label);
+                    visibleItems.push(tag.parent); // Track parent section for footnotes
                     html += renderComponent(tag.parent, secData, tag.section, (tag.type === 'sub') ? tag.label : null);
                 }
             });
-            html += renderGlobalFootnotes();
+            html += renderGlobalFootnotes(visibleItems);
             container.innerHTML = html || '<div class="empty-state">No matching data found.</div>';
-            updateFooterSources(visibleItems);
+            updateFooterSources(state.searchTags.map(t => t.label));
             return;
         }
 
@@ -519,7 +527,11 @@
         } 
         else if (state.section === "Exclusion") {
             container.className = 'exclusion-grid';
-            Object.entries(data).forEach(([k,v]) => { html += renderGeneric(k, v.type, v.content, state.section); visibleItems.push(k); });
+            Object.entries(data).forEach(([k,v]) => { 
+                // Don't render empty return values (like Hero Stat)
+                const tileHtml = renderGeneric(k, v.type, v.content, state.section);
+                if(tileHtml) { html += tileHtml; visibleItems.push(k); }
+            });
         }
         else {
             const key = state.subIndicator || Object.keys(data)[0];
@@ -527,7 +539,7 @@
             html = renderComponent(key, data, state.section, null);
             visibleItems.push(key);
         }
-        html += renderGlobalFootnotes();
+        html += renderGlobalFootnotes(visibleItems);
         container.innerHTML = html;
         updateFooterSources(visibleItems);
     }
