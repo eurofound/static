@@ -185,7 +185,7 @@
         "Calculation based on?": "Calculation method",
         "Regulated how?": "Subsequent increase regulation method",
         "Exceptions to increase amount for renovations": "Exceptions for major/climate renovations",
-        "Type of measure": "Measure Type" 
+        "Type of measure": "Measure Type"
     };
 
     const PUBLIC_SPENDING_MAX_SCALE = 2.5;
@@ -231,10 +231,12 @@
         let num = Number(val);
         if (isNaN(num)) return val;
 
-        // Special handling for Reduction/Amount which can be % or €
+        // Special handling for Reduction/Amount
         if (key === "Reduction/ amount") {
-            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; // 1.0 -> 100%, 0.25 -> 25%
-            return '€' + num.toLocaleString('en-US'); // 500 -> €500
+            // If it is exactly 1 or small fraction, treat as percent
+            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; 
+            // If it is > 1 (e.g. 500), treat as Euro
+            return '€' + num.toLocaleString('en-US'); 
         }
 
         if (isPercentageKey) {
@@ -261,12 +263,13 @@
         return n.toLocaleString('en-US');
     }
 
-    function transformItem(item, sectionTitle) {
+    function transformItem(item, indicatorLabel) {
         let newItem = JSON.parse(JSON.stringify(item));
         
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
-        if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
+        // Fix Title for Tax Relief
+        if (indicatorLabel === "Tax Relief" && newItem.details["Tax targeted"]) {
             newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
             delete newItem.details["Tax targeted"];
         }
@@ -407,7 +410,7 @@
         <div class="demo-row"><span class="demo-label">Number of Households</span><span class="demo-val">${getVal('Households')}</span></div>`;
     }
 
-    function renderPolicy(data, sectionTitle, filterTitle = null) {
+    function renderPolicy(data, indicatorLabel, filterTitle = null) {
         if(!data || data.length === 0) return '<div style="color:#ccc;">No data found.</div>';
         let html = '';
         let items = data;
@@ -416,7 +419,7 @@
             if (items.length === 0) return '<div style="color:#ccc;">No specific data for this measure.</div>';
         }
         items.forEach(rawItem => {
-            const item = transformItem(rawItem, sectionTitle);
+            const item = transformItem(rawItem, indicatorLabel);
             
             // Extract "Type of measure" Badge
             let typeBadge = '';
@@ -432,8 +435,8 @@
                 detailsHtml += `</table>`;
             }
             
-            // Mortgage Market: HIDE Checklist
-            const isMortgage = (sectionTitle === "Mortgage Market");
+            // Logic to hide checklist for Mortgage Market
+            const isMortgage = (indicatorLabel === "Mortgage Market");
             
             let contentHtml = '';
             if (!isMortgage) {
@@ -474,13 +477,14 @@
         if (type === 'hero_stat') return ''; 
 
         // Reroute Mortgage Market to Policy Render (to apply checklist hiding logic)
-        if (sectionTitle === "Mortgage Market" && type === 'policy') {
-             return renderPolicy(content, sectionTitle, filterTitle);
+        // Note: The indicator name is passed as "label" here
+        if (label === "Mortgage Market" && type === 'policy') {
+             return renderPolicy(content, label, filterTitle);
         }
 
         if (type === 'time_series') return `<div class="card"><div class="card-header">${label} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
         if (type === 'bar_chart') return `<div class="card"><div class="card-header">${label}</div><div class="card-body">${renderSpending(content)}</div></div>`;
-        if (type === 'policy') return renderPolicy(content, sectionTitle, filterTitle);
+        if (type === 'policy') return renderPolicy(content, label, filterTitle); // Pass label as context
         
         let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
         if (type === 'horizontal_bar') html += renderHorizontalBars(content);
@@ -495,14 +499,23 @@
         if(key === "Short-term Regulations") return renderPolicy(data['Short-term Regulations']?.content, "Short-term Regulations", filterTitle);
         const item = data[key];
         if(!item) return '';
+        // Pass "key" (Indicator Name) as label to generic renderer
         return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
     }
 
     function renderGlobalFootnotes(visibleItems) {
         let html = `<div class="footnote-area">`;
-        if (state.activePartly) html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
-        if (visibleItems.includes("Rent Regulations")) html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
-        if (visibleItems.includes("Homebuying Subsidies")) html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
+        
+        if (state.activePartly) {
+            html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
+        }
+        if (visibleItems.includes("Rent Regulations")) {
+            html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
+        }
+        if (visibleItems.includes("Homebuying Subsidies")) {
+            html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
+        }
+
         return html + `</div>`;
     }
 
