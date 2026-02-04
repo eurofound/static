@@ -1,711 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing Data Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <style>
-        :root { --primary: #0B7189; --secondary: #1F2937; --bg: #f8fafc; --white: #ffffff; --border: #e2e8f0; --orange: #ea580c; --green: #047857; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--secondary); margin: 0; padding: 30px; }
-        .container { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; }
-        
-        .header-card { background: var(--white); border-radius: 8px; padding: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid var(--border); }
-        .controls-row { display: flex; gap: 30px; align-items: flex-end; justify-content: space-between; }
-        .ctrl-group { flex: 1; position: relative; }
-        .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-        
-        .webhook-btns { display: flex; gap: 10px; }
-        .btn { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: white; color: var(--secondary); transition: all 0.2s; }
-        .btn:hover { background: #f1f5f9; border-color: #cbd5e1; }
-        
-        /* Custom Select */
-        .custom-select-wrapper { position: relative; user-select: none; width: 100%; }
-        .custom-select { position: relative; display: flex; flex-direction: column; }
-        .custom-select__trigger { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 15px; font-weight: 400; color: #333; background: #fff; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
-        .custom-options { position: absolute; display: block; top: 100%; left: 0; right: 0; border: 1px solid var(--border); border-top: 0; background: #fff; opacity: 0; visibility: hidden; z-index: 100; max-height: 400px; overflow-y: auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-radius: 0 0 6px 6px; transition: all 0.2s; }
-        .custom-select.open .custom-options { opacity: 1; visibility: visible; }
-        .custom-option { padding: 10px 16px; font-size: 14px; cursor: pointer; display: flex; align-items: center; }
-        .custom-option:hover { background-color: #f1f5f9; color: var(--primary); }
-        .arrow { width: 10px; height: 10px; border-right: 2px solid #999; border-bottom: 2px solid #999; transform: rotate(45deg); margin-top: -4px; transition: 0.2s; }
-        .open .arrow { transform: rotate(-135deg); margin-top: 2px; }
+  <meta charset="utf-8" />
+  <title>Housing Indicators Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        .search-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-        .tag { background: #e0f2fe; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
-        .tag-remove { cursor: pointer; font-weight: bold; font-size: 14px; opacity: 0.6; }
-        .search-box { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box; outline: none; }
-        
-        .tabs { display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-        .tab { padding: 8px 18px; background: transparent; border-radius: 20px; cursor: pointer; font-weight: 600; color: #64748b; transition: all 0.2s; font-size: 14px; }
-        .tab:hover { color: var(--primary); background: #f0f9ff; }
-        .tab.active { background: var(--primary); color: white; }
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-        .card { background: var(--white); border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%; }
-        .card-header { background: #f8fafc; padding: 15px 20px; font-weight: 700; border-bottom: 1px solid var(--border); color: #334155; font-size: 15px; }
-        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 15px; }
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-        .ghs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
-        .span-full { grid-column: 1 / -1; }
-        .exclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .demo-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
-        .demo-label { color: #64748b; font-size: 14px; }
-        .demo-val { font-size: 18px; font-weight: 700; color: var(--primary); }
+  <style>
+    :root { --primary: #0B7189; --secondary: #D68434; --bg: #ffffff; --text: #1f2937; --warn: #b91c1c; }
+    body { font-family: 'Inter', Arial, sans-serif; margin: 0; padding: 2rem; background: var(--bg); color: var(--text); }
+    
+    .dashboard { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; }
+    
+    /* Controls Area */
+    .controls { padding: 0 0 1.5rem 0; display: grid; gap: 1.5rem; border-bottom: 1px solid #e5e7eb; position: relative; z-index: 1000; }
+    
+    .topic-scroll { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.5rem; }
+    .topic-btn { white-space: nowrap; padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-weight: 600; font-size: 13px; color: #4b5563; transition: all 0.2s; }
+    .topic-btn.active { border-color: var(--primary); color: #fff; background: var(--primary); }
 
-        /* Updated Bar Chart Styles */
-        .bar-container { margin-bottom: 15px; }
-        .bar-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: #475569; font-weight: 600; }
-        .bar-wrapper { position: relative; width: 100%; height: 12px; }
-        .bar-fill { background: var(--orange); height: 100%; border-radius: 6px; position: absolute; left: 0; top: 0; }
-        .bar-label-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: -2px; padding-left: 8px; white-space: nowrap; }
+    .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    label { display: block; font-size: 12px; font-weight: 600; color: #6b7280; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    select { width: 100%; padding: 0.6rem; border: 1px solid #d1d5db; border-radius: 6px; font-family: inherit; font-size: 14px; background-color: #fff; cursor: pointer; }
+    
+    /* Custom Dropdowns */
+    .dropdown-wrapper { position: relative; }
+    .checkbox-list { max-height: 300px; overflow-y: auto; border: 1px solid #d1d5db; border-radius: 6px; padding: 0.5rem; background: #fff; display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; font-size: 13px; }
+    .checkbox-list.visible { display: grid; }
+    .checkbox-list label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .checkbox-list .select-all-row { grid-column: 1 / -1; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 5px; font-weight: 600; color: var(--primary); }
+    .checkbox-list .group-header { grid-column: 1 / -1; background: #f3f4f6; padding: 4px 8px; font-weight: 700; color: #4b5563; font-size: 11px; margin-top: 4px; border-radius: 4px; }
 
-        /* Updated Horizontal Bar Styles */
-        .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
-        .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
-        .hbar-wrapper { flex: 1; height: 24px; position: relative; }
-        .hbar-fill { height: 100%; background: var(--primary); border-radius: 4px; position: absolute; left: 0; }
-        .hbar-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: 4px; padding-left: 8px; white-space: nowrap; }
+    /* Navigation Tabs */
+    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; gap: 2rem; overflow-x: auto; margin-bottom: 1rem; }
+    .tab { padding: 1rem 0.5rem; cursor: pointer; border-bottom: 3px solid transparent; color: #9ca3af; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; white-space: nowrap; }
+    .tab:hover { color: #4b5563; }
+    .tab.active { border-bottom-color: var(--primary); color: var(--primary); }
+    .tab svg { width: 20px; height: 20px; fill: currentColor; }
 
-        /* Policy Blocks */
-        .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
-        .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-        .policy-type-badge { background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: uppercase; font-weight: 700; border: 1px solid #bae6fd; margin-left: 10px; }
-        
-        .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
-        .policy-panel { padding: 16px; }
-        .panel-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 10px; }
-        .reg-item { font-size: 13px; margin-bottom: 6px; position: relative; padding-left: 20px; line-height: 1.4; }
-        .reg-item.true::before { content: "✔"; color: var(--green); font-weight: bold; position: absolute; left: 0; top: 0; }
-        .details-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-top: 8px; }
-        .details-table td { padding: 4px 0; vertical-align: top; border-bottom: 1px solid #f8fafc; }
-        .details-table td:first-child { color: #64748b; width: 45%; padding-right: 10px; }
-        .details-table td:last-child { font-weight: 600; color: #334155; }
+    /* Charts Area */
+    #chart-main { padding: 1rem 0; flex-grow: 1; position: relative; min-height: 600px; z-index: 1; }
+    .single-chart-view { height: 600px; width: 100%; }
+    .map-grid, .radar-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; height: 600px; }
+    .map-grid.split, .radar-grid.split { grid-template-columns: 1fr 1fr; }
+    .chart-card { border: none; overflow: hidden; position: relative; background: transparent; }
+    
+    /* Map Overlay Buttons */
+    #map-overlay-controls { 
+        position: absolute; top: 40px; left: 10px; z-index: 100; 
+        display: none; flex-direction: column; gap: 0; 
+    }
+    .rocker-container { display: flex; flex-direction: column; gap: 6px; }
+    .rocker-opt { text-align: center; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 20px; color: #6b7280; background: rgba(255, 255, 255, 0.95); border: 1px solid #d1d5db; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); backdrop-filter: blur(4px); }
+    .rocker-opt.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+    
+    /* Low Data Warning */
+    #low-data-warning {
+        display: none; align-items: center; gap: 8px; font-size: 12px; color: var(--warn); 
+        background: #fef2f2; padding: 8px 12px; border-radius: 6px; border: 1px solid #fecaca; 
+        margin-bottom: 10px; max-width: fit-content;
+    }
 
-        .line-chart { width: 100%; height: 300px; overflow: visible; }
-        .line-legend { display: flex; gap: 15px; justify-content: center; margin-bottom: 10px; font-size: 12px; font-weight: 600; }
-        .legend-item { display: flex; align-items: center; gap: 5px; }
-        .dot { width: 8px; height: 8px; border-radius: 50%; }
-        
-        .chart-tooltip { position: absolute; background: rgba(0,0,0,0.85); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100; transform: translate(-50%, -120%); white-space: nowrap; }
+    /* Footer & Notes */
+    footer { margin-top: 0.0rem; padding-top: 0rem; border-top: 0px solid #e5e7eb; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 16px; color: #6b7280; font-size: 13px; }
+    .footer-left { display: flex; align-items: flex-start; gap: 16px; max-width: 80%; }
+    .footer-text-col { display: flex; flex-direction: column; gap: 4px; }
+    footer img { height: 32px; opacity: 0.9; margin-top: 2px; }
 
-        .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
-        .empty-state { text-align: center; padding: 60px; color: #94a3b8; font-style: italic; }
+    /* Note styling */
+    .chart-note { font-size: 13px; line-height: 1.4; color: #4b5563; }
+    .source-text { font-size: 12px; color: #9ca3af; margin-top: 2px; }
 
-        .footer-note { margin-top: auto; padding-top: 30px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 15px; }
-        .footer-top { display: flex; align-items: flex-start; gap: 30px; }
-        .footer-logo { height: 35px; }
-        .footer-text { font-size: 11px; color: #94a3b8; line-height: 1.5; }
-        .source-label { font-weight: 700; color: #64748b; margin-right: 5px; }
+    .footer-right { display: flex; gap: 8px; }
 
-        .footnote-area { margin-top: 10px; padding-top: 15px; border-top: 1px dotted #cbd5e1; font-size: 11px; color: #64748b; line-height: 1.5; }
-        .footnote-item { margin-bottom: 4px; }
+    .export-btn { padding: 0.45rem 1rem; border: 1px solid #cfd8e3; border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; font-weight: 600; color: #374151; display: flex; align-items: center; gap: 6px; transition: all 0.2s; }
+    .export-btn:hover { background: #f3f4f6; border-color: #b6c3d7; }
+    .export-btn svg { width: 14px; height: 14px; fill: currentColor; }
 
-        @media (max-width: 900px) {
-            .ghs-grid, .exclusion-grid { grid-template-columns: 1fr; }
-            .controls-row { flex-direction: column; align-items: stretch; gap: 15px; }
-            .container { padding: 15px; }
-            .footer-top { flex-direction: column; gap: 15px; }
-        }
-    </style>
+    #loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #6b7280; }
+  </style>
 </head>
 <body>
 
-<div class="container" id="dashboard-container">
-    <div class="header-card" data-html2canvas-ignore="true">
-        <div class="controls-row">
-            <div class="ctrl-group">
-                <label>Select Country</label>
-                <div class="custom-select-wrapper">
-                    <div class="custom-select">
-                        <div class="custom-select__trigger">
-                            <span id="selected-val"><span class="fi fi-eu flag-icon"></span> Select Country</span>
-                            <div class="arrow"></div>
-                        </div>
-                        <div class="custom-options" id="country-options"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="ctrl-group" style="flex:2;">
-                <label>Search Indicators</label>
-                <div class="search-tags" id="searchTags"></div>
-                <input type="text" id="searchBox" class="search-box" list="searchList" placeholder="Search for any policy, rule or statistic...">
-                <datalist id="searchList"></datalist>
-            </div>
-            <div class="webhook-btns">
-                <button class="btn" onclick="downloadImage()">Download Image</button>
-                <button class="btn" onclick="downloadData()">Download Data</button>
-            </div>
+<div class="dashboard">
+  <div class="controls">
+    <div id="topic-wrapper"><label>TOPIC</label><div id="topic-container" class="topic-scroll"></div></div>
+    <div class="filters">
+      <div id="std-controls-1"><label>INDICATOR</label><select id="indicator-sel"></select></div>
+      <div id="std-controls-2"><label>Breakdown Category</label><select id="category-sel"></select></div>
+      <div id="cp-cat-wrapper" style="display: none;"><label>Breakdown (Sub-Category)</label><select id="cp-cat-sel"></select></div>
+      <div id="cp-controls-country" style="display: none;"><label>Select Country</label><select id="cp-country-sel"></select></div>
+      <div id="map-controls" style="display:none;"><label>Select Category (Max 2)</label><div class="dropdown-wrapper"><button id="map-toggle-cats" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select...</span><span>▾</span></button><div id="map-cat-list" class="checkbox-list"></div></div></div>
+      <div id="bar-controls"><label>Filter Countries</label><div class="dropdown-wrapper"><button id="bar-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>All Countries</span><span>▾</span></button><div id="bar-country-list" class="checkbox-list"></div></div></div>
+      <div id="radar-controls" style="display: none;"><label>Compare Countries (Max 2)</label><div class="dropdown-wrapper"><button id="radar-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Countries...</span><span>▾</span></button><div id="radar-country-list" class="checkbox-list"></div></div></div>
+      <div id="global-ind-wrapper" style="display: none;"><label>Select Indicators (Max 10)</label><div class="dropdown-wrapper"><button id="global-toggle-inds" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Indicators...</span><span>▾</span></button><div id="global-ind-list" class="checkbox-list"></div></div></div>
+      <div id="r2-controls-country" style="display: none;"><label>Select Countries (Max 5)</label><div class="dropdown-wrapper"><button id="r2-toggle-countries" class="topic-btn" style="width:100%; text-align:left; border-radius:6px; display: flex; justify-content: space-between;"><span>Select Countries...</span><span>▾</span></button><div id="r2-country-list" class="checkbox-list"></div></div></div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('bar')" title="Bar Chart"><svg viewBox="0 0 24 24"><path d="M4 20h16v2H4zm2-14h3v12H6zm5-4h3v16h-3zm5 7h3v9h-3z"/></svg><span>Bar</span></div>
+    <div class="tab" onclick="switchTab('map')" title="Map"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>Map</span></div>
+    <div class="tab" onclick="switchTab('radar')" title="Radar Chart"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l4 15h12l4-15L12 2zm0 2.8l6.8 3.4-1.6 6h-10.4l-1.6-6L12 4.8zM12 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg><span>Radar</span></div>
+    <div class="tab" onclick="switchTab('country')" title="Country Profile"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Country overview</span></div>
+    <div class="tab" onclick="switchTab('radar2')" title="Multi-Indicator Radar"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l4 15h12l4-15L12 2zm0 2.8l6.8 3.4-1.6 6h-10.4l-1.6-6L12 4.8z"/></svg><span>Radar comparison</span></div>
+  </div>
+
+  <div id="low-data-warning">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+    <span>Note: Some data points were excluded due to low sample size (Count &lt; 50).</span>
+  </div>
+
+  <div id="chart-main">
+    <div id="map-overlay-controls"><div class="rocker-container"><div id="view-nat" class="rocker-opt active" onclick="setMapView('national')">National</div><div id="view-nuts" class="rocker-opt" onclick="setMapView('nuts')">NUTS Regions</div></div></div>
+    <div id="loader">Loading data...</div>
+    <div id="bar-container" class="single-chart-view"></div>
+    <div id="map-container" class="map-grid" style="display: none;"></div>
+    <div id="radar-container" class="radar-grid" style="display: none;"></div>
+    <div id="cp-container" class="single-chart-view" style="display: none;"></div>
+    <div id="r2-container" class="single-chart-view" style="display: none;"></div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo">
+        <div class="footer-text-col">
+            <div id="indicator-note" class="chart-note" style="display:none;"></div>
+            <div class="source-text"><b>Source:</b> Calculations based on EU SILC microdata for 2023</div>
         </div>
     </div>
-
-    <div class="tabs" id="tabContainer" data-html2canvas-ignore="true"></div>
-
-    <div id="subControls" style="display:none; margin-bottom:20px;" data-html2canvas-ignore="true">
-        <label style="font-size:11px; font-weight:700; color:#64748b; margin-bottom:5px; display:block;">SELECT TOPIC:</label>
-        <select id="affordabilitySelect" class="search-box" style="width: auto; min-width: 300px;"></select>
+    <div class="footer-right">
+        <button id="dlPNG" class="export-btn" title="Download Image">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Image
+        </button>
+        <button id="dlCSV" class="export-btn" title="Download Data">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Data
+        </button>
     </div>
-
-    <div id="content"></div>
-
-    <div class="footer-note">
-        <div class="footer-top">
-            <img src="https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/logo.svg" alt="Eurofound" class="footer-logo">
-            <div class="footer-text" id="footer-sources">
-                <span class="source-label">Source:</span> Eurostat / National Sources
-            </div>
-        </div>
-    </div>
+  </footer>
 </div>
 
 <script>
-    // -------------------------------------------------------------
-    // CONFIGURATION
-    // -------------------------------------------------------------
-    const DATA_URL = "./housing_data.json"; 
-    const COUNTRIES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"];
-    const FLAG_MAP = {'Austria':'at','Belgium':'be','Bulgaria':'bg','Croatia':'hr','Cyprus':'cy','Czechia':'cz','Denmark':'dk','Estonia':'ee','Finland':'fi','France':'fr','Germany':'de','Greece':'gr','Hungary':'hu','Ireland':'ie','Italy':'it','Latvia':'lv','Lithuania':'lt','Luxembourg':'lu','Malta':'mt','Netherlands':'nl','Poland':'pl','Portugal':'pt','Romania':'ro','Slovakia':'sk','Slovenia':'si','Spain':'es','Sweden':'se','United Kingdom':'gb'};
+const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
+const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
+const LOGO_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg";
 
-    const LABEL_MAP = {
-        "Social housing": "Social housing tenancy required",
-        "Private rental": "Private rental tenancy required",
-        "People": "Household composition",
-        "No benefits": "Not receiving other benefits",
-        "Other benefits": "Must be receiving other benefits",
-        "Income": "Income below threshold",
-        "Income-tested?": "Income-tested",
-        "Housing costs > threshold": "Housing costs above threshold",
-        "Employed": "Employment required",
-        "Unemployed": "Unemployment status required",
-        "Specific demo group": "Specific demographic group",
-        "Interest": "Interest Rate",
-        "Max %": "Max % of costs covered",
-        "Max sum": "Max available sum",
-        "Calculation based on?": "Calculation method",
-        "Regulated how?": "Subsequent increase regulation method",
-        "Exceptions to increase amount for renovations": "Exceptions for major/climate renovations",
-        "Type of measure": "Measure Type"
-    };
+const INDICATOR_NOTES = {
+    "30/40 definition of housing affordability stress": "This is the percentage of households spending 30% or more of their disposable income on housing who are also in the bottom 40% of the national income distribution",
+    "Housing cost overburden rate (>40% of income)": "We assume that that the ratio of housing cost to income that underlies this variable is bounded between zero and 100"
+};
 
-    const PUBLIC_SPENDING_MAX_SCALE = 2.5;
+Highcharts.setOptions({
+  colors: PALETTE_5, 
+  chart: { style: { fontFamily: 'Inter, Arial, sans-serif' }, backgroundColor: null, animation: { duration: 500 } },
+  title: { style: { fontSize: '16px', fontWeight: '700', color: '#111827' } },
+  plotOptions: { series: { animation: { duration: 500 } } },
+  tooltip: { useHTML: true, backgroundColor: 'rgba(255,255,255,1)', borderRadius: 8, shadow: { opacity: 0.1 }, borderWidth: 0, padding: 0, followPointer: false },
+  credits: { enabled: false },
+  exporting: {
+      enabled: true, 
+      buttons: { contextButton: { enabled: false } }, 
+      libURL: 'https://code.highcharts.com/lib/',
+      chartOptions: {
+          chart: { backgroundColor: '#FFFFFF' },
+          title: { style: { display: 'block' } }
+      }
+  }
+});
 
-    const SEARCH_INDEX = [{"label": "Housing Allowances", "section": "Affordability", "parent": "Housing Allowances", "type": "parent"}, {"label": "Tax Relief", "section": "Affordability", "parent": "Tax Relief", "type": "parent"}, {"label": "Rent Regulations", "section": "Affordability", "parent": "Rent Regulations", "type": "parent"}, {"label": "Mortgage Market", "section": "Affordability", "parent": "Mortgage Market", "type": "parent"}, {"label": "Construction Subsidies", "section": "Affordability", "parent": "Construction Subsidies", "type": "parent"}, {"label": "Homebuying Subsidies", "section": "Affordability", "parent": "Homebuying Subsidies", "type": "parent"}, {"label": "Social Housing", "section": "Affordability", "parent": "Social Housing", "type": "parent"}, {"label": "House Prices Trend", "section": "General Housing System", "parent": "House Prices Trend", "type": "parent"}, {"label": "Rent Prices Trend", "section": "General Housing System", "parent": "Rent Prices Trend", "type": "parent"}, {"label": "Housing Completions", "section": "General Housing System", "parent": "Housing Completions", "type": "parent"}, {"label": "Housing Stock", "section": "General Housing System", "parent": "Housing Stock", "type": "parent"}, {"label": "Population", "section": "General Housing System", "parent": "Population", "type": "parent"}, {"label": "Households", "section": "General Housing System", "parent": "Households", "type": "parent"}, {"label": "Public Spending", "section": "General Housing System", "parent": "Public Spending", "type": "parent"}, {"label": "Short-term Regulations", "section": "General Housing System", "parent": "Short-term Regulations", "type": "parent"}, {"label": "Homelessness", "section": "Exclusion", "parent": "Homelessness", "type": "parent"}, {"label": "Age of Leaving Home", "section": "Exclusion", "parent": "Age of Leaving Home", "type": "parent"}, {"label": "Living with Parents", "section": "Exclusion", "parent": "Living with Parents", "type": "parent"}];
-    const SOURCES = {"Mortgage Market": "European Mortgage Federation (2025), Hypostat 2025", "Homelessness": "FEANTSA and Fondation pour le Logement (2025); Szeintuch (2024); National Strategies", "Public Spending": "OECD Affordable Housing Database; Eurostat 2023 (gov_10a_exp)", "Short-term Regulations": "AirBnb 'responsible hosting' guides; National sources", "Social Housing": "OECD Affordable Housing Database; National sources", "Tax Relief": "OECD Affordable Housing Database; National sources", "Rent Regulations": "TENLAW project reports (2013-14); OECD Affordable Housing Database; National sources", "Housing Allowances": "OECD Affordable Housing Database; National sources", "Homebuying Subsidies": "OECD Affordable Housing Database; National sources", "Construction Subsidies": "National sources", "Households": "Eurostat", "Population": "Eurostat", "Housing Completions": "Hypostat 2025 report", "Rent Prices Trend": "Eurostat", "Housing Stock": "Hypostat 2025 report", "House Prices Trend": "Eurostat", "Age of Leaving Home": "Eurostat", "Living with Parents": "Eurostat"};
+/* --- DATA PRELOAD & CACHING --- */
+window.nutsNames = {};
+window.nationalTopology = null;
+window.nutsTopology = null;
+window.activeCharts = []; 
+window.tooltipCache = {}; 
+const CSV_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/Master_Indicator_Data.csv";
+let rawData = [];
+let currentTab = 'bar';
+let cpChart = null;
 
-    let DB = {}; 
-    let state = {
-        country: COUNTRIES[0] || null,
-        section: "Affordability",
-        subIndicator: null,
-        searchTags: [],
-        activePartly: false 
-    };
+let state = {
+  topic: null, indicator: null, topCat: null,
+  barCountries: [], mapCategories: [], radarCountries: [],
+  cpCountry: null, globalIndicators: [], cpCategory: 'All', 
+  r2Countries: [], mapViewMode: 'national'
+};
 
-    // -------------------------------------------------------------
-    // DATA LOADING
-    // -------------------------------------------------------------
-    async function loadData() {
-        const container = document.getElementById('content');
-        container.innerHTML = '<div class="empty-state">Loading data...</div>';
-        try {
-            const response = await fetch(DATA_URL);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            DB = await response.json();
-            init(); 
-        } catch (e) {
-            console.error(e);
-            container.innerHTML = `<div class="empty-state" style="color:red;">Failed to load data.<br><small>${e.message}</small></div>`;
-        }
-    }
+const els = {
+  topicWrapper: document.getElementById('topic-wrapper'), topics: document.getElementById('topic-container'),
+  stdControls1: document.getElementById('std-controls-1'), ind: document.getElementById('indicator-sel'),
+  stdControls2: document.getElementById('std-controls-2'), cat: document.getElementById('category-sel'),
+  cpCatWrapper: document.getElementById('cp-cat-wrapper'), cpCatSel: document.getElementById('cp-cat-sel'),
+  cpControlsCountry: document.getElementById('cp-controls-country'), cpCountrySel: document.getElementById('cp-country-sel'),
+  globalIndWrapper: document.getElementById('global-ind-wrapper'), globalIndList: document.getElementById('global-ind-list'), globalIndToggle: document.getElementById('global-toggle-inds'),
+  barContainer: document.getElementById('bar-container'), barControls: document.getElementById('bar-controls'), barCountryList: document.getElementById('bar-country-list'), barCountryToggle: document.getElementById('bar-toggle-countries'),
+  mapContainer: document.getElementById('map-container'), mapControls: document.getElementById('map-controls'), mapCatList: document.getElementById('map-cat-list'), mapCatToggle: document.getElementById('map-toggle-cats'), mapOverlay: document.getElementById('map-overlay-controls'),
+  viewNat: document.getElementById('view-nat'), viewNuts: document.getElementById('view-nuts'),
+  radarContainer: document.getElementById('radar-container'), radarControls: document.getElementById('radar-controls'), radarCountryList: document.getElementById('radar-country-list'), radarCountryToggle: document.getElementById('radar-toggle-countries'),
+  cpContainer: document.getElementById('cp-container'),
+  r2Container: document.getElementById('r2-container'), r2ControlsCountry: document.getElementById('r2-controls-country'), r2CountryList: document.getElementById('r2-country-list'), r2CountryToggle: document.getElementById('r2-toggle-countries'),
+  loader: document.getElementById('loader'),
+  lowDataWarning: document.getElementById('low-data-warning'),
+  indicatorNote: document.getElementById('indicator-note')
+};
 
-    // -------------------------------------------------------------
-    // HELPERS & TRANSFORMS
-    // -------------------------------------------------------------
-    function formatValue(key, val) {
-        if (val === 'N/A' || val === null) return 'N/A';
-        if (val === "0.0" || val === 0) return "No";
-        if (val === "1.0" || val === 1) return "Yes";
+Papa.parse(CSV_URL, {
+  download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+  complete: function(results) {
+    rawData = results.data.filter(d => d['Value'] !== null && d['Country Code']).map(d => { 
+          // CHECK IF UNIT IS YEARS
+          const isYears = String(d['Indicator name']).toLowerCase().includes('age of leaving home');
+          if (!isYears) {
+              d['Value'] = d['Value'] * 100; 
+          }
+          if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
+          if (d['Top category']) {
+              d['Top category'] = d['Top category'].replace(/\s+/g, ' ').trim();
+          }
+          return d; 
+      });
+    buildTooltipCache(); 
+    init();
+  },
+  error: (err) => { els.loader.textContent = "Error loading data."; }
+});
 
-        const isPercentageKey = ["Stock %", "Max %", "Max % covered", "Interest", "Interest/fee rate", "Avg rate on new loans %", "Outstanding loans to disposable income ratio %", "% of lending with variable interest rate"].includes(key) || key.includes("%");
-        let num = Number(val);
-        if (isNaN(num)) return val;
+function isYearsIndicator(indicatorName) {
+    return indicatorName && indicatorName.toLowerCase().includes('age of leaving home');
+}
 
-        // Special handling for Reduction/Amount
-        if (key === "Reduction/ amount") {
-            // If it is exactly 1 or small fraction, treat as percent
-            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; 
-            // If it is > 1 (e.g. 500), treat as Euro
-            return '€' + num.toLocaleString('en-US'); 
-        }
+function buildTooltipCache() {
+    window.tooltipCache = {};
+    rawData.forEach(d => {
+        const ind = d['Indicator name'];
+        if (!window.tooltipCache[ind]) window.tooltipCache[ind] = [];
+        window.tooltipCache[ind].push(d);
+    });
+}
 
-        if (isPercentageKey) {
-            if (num <= 1.0 && num !== 0) return (num * 100).toFixed(1) + '%';
-            return num.toFixed(1) + '%';
-        }
-
-        const isCurrencyKey = ["Max sum", "Capped at", "Avg mortgage amount"].includes(key);
-        if (isCurrencyKey) return '€' + num.toLocaleString('en-US');
-
-        return num.toLocaleString('en-US');
-    }
-
-    function cleanLabel(text) {
-        let clean = text.replace(/\?$/, "");
-        clean = LABEL_MAP[clean] || clean;
-        return clean.charAt(0).toUpperCase() + clean.slice(1);
-    }
-
-    function formatNumber(num) {
-        if(num === 'N/A' || num === null) return 'N/A';
-        const n = Number(num);
-        if(isNaN(n)) return num;
-        return n.toLocaleString('en-US');
-    }
-
-    function transformItem(item, indicatorLabel) {
-        let newItem = JSON.parse(JSON.stringify(item));
+async function preloadResources() {
+    try {
+        const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
+        const respReg = await fetch(regionalUrl);
+        const topoReg = await respReg.json();
+        window.nutsTopology = topoReg;
         
-        if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
+        topojson.feature(topoReg, topoReg.objects.nutsrg).features.forEach(f => {
+            const p = f.properties;
+            const id = p.id || p.NUTS_ID;
+            const name = p.na || p.NUTS_NAME || p.name;
+            if(id && name) window.nutsNames[id] = name;
+        });
 
-        // Fix Title for Tax Relief
-        if (indicatorLabel === "Tax Relief" && newItem.details["Tax targeted"]) {
-            newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
-            delete newItem.details["Tax targeted"];
-        }
+        const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
+        const respNat = await fetch(nationalUrl);
+        window.nationalTopology = await respNat.json();
+    } catch(e) { console.warn("Failed to load maps", e); }
+}
 
-        if (newItem.details["Mortgage"]) {
-            if (newItem.details["Mortgage"] === "1.0" || newItem.details["Mortgage"] === 1) newItem.true_items.push("Mortgage required");
-            delete newItem.details["Mortgage"];
+function getMiniBarHTML(label, value, color, isMain) {
+   const isYears = isYearsIndicator(state.indicator);
+   const unit = isYears ? "y" : "%";
+   const width = isYears ? Math.min((value / 40) * 100, 100) : Math.min(Math.max(value, 0), 100); 
+   const weight = isMain ? '700' : '400';
+   const bgColor = isMain ? '#e5e7eb' : '#f3f4f6';
+   return `<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 11px; color: #374151;">
+        <div style="flex: 1; text-align: right; font-weight: ${weight}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px;" title="${label}">${label}</div>
+        <div style="flex: 0 0 80px; height: 12px; background: ${bgColor}; border-radius: 3px; overflow: hidden; position: relative;">
+             <div style="width: ${width}%; height: 100%; background: ${color};"></div>
+        </div>
+        <div style="flex: 0 0 40px; text-align: right; font-weight: 700; font-size: 11px;">${value.toFixed(1)}${unit}</div>
+      </div>`;
+}
+
+function getComparisonTooltipHTML(point, mainValue, mainLabel, mainColor) {
+    let html = `<div style="padding: 12px; min-width: 280px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;">`;
+    html += `<div style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px;"><div style="font-size: 14px; font-weight: 700; color: #111827;">${mainLabel}</div><div style="font-size: 12px; color: #6b7280;">${state.indicator}</div></div>`;
+    html += getMiniBarHTML(mainLabel, mainValue, mainColor, true);
+
+    const indData = window.tooltipCache[state.indicator] || [];
+
+    if (state.mapViewMode === 'national') {
+        const countryCode = point['hc-key'] || point.properties.id || point.id; 
+        const searchCode = (countryCode === 'GR') ? 'EL' : countryCode; 
+        const nutsData = indData.filter(d => String(d['Top category']).toLowerCase().includes('nuts') && (String(d['Category']).startsWith(countryCode) || String(d['Category']).startsWith(searchCode))).sort((a,b) => b['Value'] - a['Value']);
+        
+        if (nutsData.length > 0) {
+             html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">Regional breakdown (All):</div>`;
+             nutsData.forEach(d => { const name = window.nutsNames[d['Category']] || d['Category']; html += getMiniBarHTML(name, d['Value'], PALETTE_5[1], false); });
         }
-        Object.keys(newItem.details).forEach(k => {
-            if (k.startsWith("Calculation method")) {
-                const val = newItem.details[k];
-                if (val === "0.0" || val === 0 || val === "False") delete newItem.details[k];
+    } else {
+        const nutsId = point.id;
+        if(nutsId && nutsId.length >= 2) {
+            const countryCode = nutsId.substring(0, 2);
+            const lookupCode = (countryCode === 'EL') ? 'GR' : countryCode; 
+            const natData = indData.find(d => !String(d['Top category']).toLowerCase().includes('nuts') && (d['Country Code'] === countryCode || d['Country Code'] === lookupCode));
+            if (natData) {
+                 html += `<div style="margin: 8px 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; border-top: 1px solid #eee; padding-top: 8px;">National Average:</div>`;
+                 html += getMiniBarHTML(natData['Country Name'], natData['Value'], PALETTE_5[2], false);
             }
-        });
-        newItem.true_items = newItem.true_items.map(cleanLabel);
-        newItem.false_items = newItem.false_items.map(cleanLabel); 
-        return newItem;
+        }
     }
+    html += `</div>`;
+    return html;
+}
 
-    // -------------------------------------------------------------
-    // RENDERERS
-    // -------------------------------------------------------------
-    function renderLineChart(prices, rents) {
-        if (!prices || !rents) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
-        const safePrices = prices || {};
-        const safeRents = rents || {};
-        const years = [...new Set([...Object.keys(safePrices), ...Object.keys(safeRents)])].sort();
-        if (years.length < 2) return '<div style="text-align:center; padding:50px; color:#ccc;">Insufficient Data</div>';
+function getTooltipHTML(point) {
+  let val = (typeof point.value === 'number') ? point.value : (typeof point.y === 'number' ? point.y : 'N/A');
+  let label = point.name || (point.properties ? (point.properties.na || point.properties.id) : '');
+  const color = point.color || (point.series ? point.series.color : '#333');
+  
+  if (currentTab === 'map' && typeof val === 'number') return getComparisonTooltipHTML(point, val, label, color);
+  
+  const isYears = isYearsIndicator(state.indicator);
+  const unitStr = isYears ? " years" : "%";
 
-        const allVals = [];
-        years.forEach(y => { 
-            if(safePrices[y] && safePrices[y] !== 'N/A') allVals.push(Number(safePrices[y])); 
-            if(safeRents[y] && safeRents[y] !== 'N/A') allVals.push(Number(safeRents[y])); 
+  if (typeof val === 'number') val = val.toFixed(1);
+  
+  let subLabel = point.series ? point.series.name : ''; 
+  if(subLabel === 'Series 1' || !subLabel || subLabel === 'Regions') subLabel = state.indicator || '';
+  
+  return `<div style="padding: 8px; min-width: 150px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px;"><div style="font-size: 14px; color: #1f2937; font-weight: 700; border-bottom: 1px solid #f3f4f6; margin-bottom: 6px; padding-bottom: 4px;">${label}</div><div style="font-size: 12px; color: #6b7280; margin-bottom: 2px;">${subLabel}</div><div style="font-size: 20px; font-weight: 700; color: ${color}; line-height: 1;">${val}${unitStr}</div></div>`;
+}
+
+async function init() {
+  await preloadResources(); 
+  els.loader.style.display = 'none';
+  els.cat.removeAttribute('disabled');
+  const topics = [...new Set(rawData.map(d => d['Topic']))].sort();
+  state.topic = topics[0];
+  els.topics.innerHTML = topics.map(t => `<button class="topic-btn ${t === state.topic ? 'active' : ''}" onclick="setTopic('${t}')">${t}</button>`).join('');
+  updateIndicators();
+  const allCountries = [...new Set(rawData.map(d => d['Country Name']))].sort();
+  state.barCountries = [...allCountries]; 
+  populateCheckboxList(els.barCountryList, allCountries, state.barCountries, 'barCountry');
+  setupDropdown(els.barCountryToggle, els.barCountryList);
+  state.radarCountries = [allCountries[0]]; 
+  if(allCountries.length > 1) state.radarCountries.push(allCountries[1]); 
+  populateCheckboxList(els.radarCountryList, allCountries, state.radarCountries, 'radarCountry');
+  setupDropdown(els.radarCountryToggle, els.radarCountryList);
+  state.cpCountry = allCountries[0];
+  els.cpCountrySel.innerHTML = allCountries.map(c => `<option>${c}</option>`).join('');
+  els.cpCountrySel.onchange = (e) => { state.cpCountry = e.target.value; updateChart(); };
+  state.r2Countries = allCountries.slice(0, 3);
+  populateCheckboxList(els.r2CountryList, allCountries, state.r2Countries, 'r2Country');
+  setupDropdown(els.r2CountryToggle, els.r2CountryList);
+  buildGlobalIndicatorList();
+  setupDropdown(els.globalIndToggle, els.globalIndList);
+  buildNestedCategoryDropdown();
+  setupDropdown(els.mapCatToggle, els.mapCatList);
+  setMapView('national');
+  updateChart();
+}
+
+function buildGlobalIndicatorList() { const map = new Map(); rawData.forEach(d => { const top = d['Topic']; const ind = d['Indicator name']; if(!map.has(top)) map.set(top, new Set()); map.get(top).add(ind); }); let html = `<label class="select-all-row"><input type="checkbox" id="all-cpInd" onchange="toggleAll('cpInd', this.checked)"> (Un)Select All</label>`; Array.from(map.keys()).sort().forEach(top => { html += `<div class="group-header">${top}</div>`; Array.from(map.get(top)).sort().forEach(ind => { const checked = state.globalIndicators.includes(ind) ? 'checked' : ''; html += `<label><input type="checkbox" value="${ind}" ${checked} onchange="updateSelection('globalInd', this)"> ${ind}</label>`; }); }); els.globalIndList.innerHTML = html; if(state.globalIndicators.length === 0) { const firstTopic = Array.from(map.keys())[0]; const firstInds = Array.from(map.get(firstTopic)).slice(0,5); state.globalIndicators = firstInds; firstInds.forEach(i => { const cb = els.globalIndList.querySelector(`input[value="${i}"]`); if(cb) cb.checked = true; }); updateButtonLabel(els.globalIndToggle, state.globalIndicators, 100, "Indicators"); } }
+function setTopic(t) { state.topic = t; document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b.textContent === t)); updateIndicators(); }
+function updateIndicators() { const topicData = rawData.filter(d => d['Topic'] === state.topic); const indicators = [...new Set(topicData.map(d => d['Indicator name']))].sort(); state.indicator = indicators[0]; els.ind.innerHTML = indicators.map(i => `<option>${i}</option>`).join(''); els.ind.onchange = (e) => { state.indicator = e.target.value; updateCategories(); }; updateCategories(); }
+function updateCategories() { const indData = rawData.filter(d => d['Indicator name'] === state.indicator); const topCats = [...new Set(indData.map(d => d['Top category']))].filter(c => !String(c || "").toLowerCase().includes('nuts region')).sort((a, b) => { if (a === 'All') return -1; if (b === 'All') return 1; return String(a).localeCompare(String(b)); }); if (topCats.length === 0) { els.cat.innerHTML = '<option disabled>No Categories</option>'; state.topCat = null; return; } state.topCat = topCats.includes('All') ? 'All' : topCats[0]; els.cat.innerHTML = topCats.map(c => `<option>${c}</option>`).join(''); els.cat.value = state.topCat; els.cat.onchange = (e) => { state.topCat = e.target.value; updateDeepCategories(); updateChart(); }; updateDeepCategories(); updateChart(); }
+
+function updateDeepCategories() { 
+    const data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat); 
+    const cats = [...new Set(data.map(d => d['Category']))].filter(c => !String(c).toLowerCase().includes('nuts')); 
+    
+    if (currentTab === 'bar') {
+        state.mapCategories = [...cats];
+    } else {
+        state.mapCategories = [cats[0]]; 
+    }
+    
+    populateCheckboxList(els.mapCatList, cats, state.mapCategories, 'mapCat'); 
+    updateButtonLabel(els.mapCatToggle, state.mapCategories, cats.length, "Selected"); 
+}
+
+function buildNestedCategoryDropdown() { const map = new Map(); rawData.forEach(d => { const top = d['Top category']; const cat = d['Category']; const topStr = String(top || "").toLowerCase(); const catStr = String(cat || "").toLowerCase(); if(topStr.includes('nuts') || catStr.includes('nuts')) return; if(!map.has(top)) map.set(top, new Set()); map.get(top).add(cat); }); const sortedTop = Array.from(map.keys()).sort((a,b) => (a==='All'?-1:b==='All'?1:String(a).localeCompare(String(b)))); let html = ''; let firstVal = map.has('All') ? 'All' : (sortedTop.length > 0 ? sortedTop[0] : ''); sortedTop.forEach(top => { html += `<optgroup label="${top}">`; const cats = Array.from(map.get(top)).sort(); cats.forEach(c => { html += `<option value="${c}">${c}</option>`; }); html += `</optgroup>`; }); els.cpCatSel.innerHTML = html; if(firstVal) { state.cpCategory = firstVal; els.cpCatSel.value = firstVal; } els.cpCatSel.onchange = (e) => { state.cpCategory = e.target.value; updateChart(); }; }
+function setMapView(mode) { state.mapViewMode = mode; els.viewNat.classList.toggle('active', mode === 'national'); els.viewNuts.classList.toggle('active', mode === 'nuts'); if (mode === 'nuts') { els.stdControls2.style.display = 'none'; els.mapControls.style.display = 'none'; } else { els.stdControls2.style.display = 'block'; els.mapControls.style.display = 'block'; } if (currentTab === 'map') updateChart(); }
+function populateCheckboxList(container, allItems, selectedItems, type) { let html = ''; if (type === 'barCountry' || type === 'cpInd') html += `<label class="select-all-row"><input type="checkbox" id="all-${type}" ${selectedItems.length === allItems.length ? 'checked' : ''} onchange="toggleAll('${type}', this.checked)"> (Un)Select All</label>`; html += allItems.map(c => `<label><input type="checkbox" value="${c}" ${selectedItems.includes(c)?'checked':''} onchange="updateSelection('${type}', this)"> ${c}</label>`).join(''); container.innerHTML = html; }
+function setupDropdown(btn, list) { btn.onclick = (e) => { e.stopPropagation(); document.querySelectorAll('.checkbox-list').forEach(l => { if(l!==list) l.classList.remove('visible'); }); list.classList.toggle('visible'); }; }
+document.addEventListener('click', (e) => { if (!e.target.closest('.dropdown-wrapper')) document.querySelectorAll('.checkbox-list').forEach(l => l.classList.remove('visible')); });
+function toggleAll(type, isChecked) { let container; if(type==='barCountry') container = els.barCountryList; else if(type==='cpInd') container = els.globalIndList; if(container) container.querySelectorAll('input[type="checkbox"]:not([id^="all"])').forEach(cb => cb.checked = isChecked); updateSelectionLogic(type); }
+function updateSelection(type, checkbox) { let container = null; if (type === 'mapCat') container = els.mapCatList; else if (type === 'radarCountry') container = els.radarCountryList; else if (type === 'globalInd') container = els.globalIndList; else if (type === 'r2Country') container = els.r2CountryList; if (!container) { updateSelectionLogic(type); return; } let currentList = []; if (type === 'mapCat') currentList = state.mapCategories; else if (type === 'radarCountry') currentList = state.radarCountries; else if (type === 'globalInd') currentList = state.globalIndicators; else if (type === 'r2Country') currentList = state.r2Countries; const max = (type === 'globalInd') ? 10 : (type === 'r2Country' ? 5 : 2); const val = checkbox.value; if (checkbox.checked) { currentList.push(val); if (currentList.length > max) { const removed = currentList.shift(); const removedCb = container.querySelector(`input[value="${removed}"]`); if (removedCb) removedCb.checked = false; } } else { currentList = currentList.filter(item => item !== val); } if (type === 'mapCat') state.mapCategories = currentList; else if (type === 'radarCountry') state.radarCountries = currentList; else if (type === 'globalInd') state.globalIndicators = currentList; else if (type === 'r2Country') state.r2Countries = currentList; updateSelectionLogic(type, true); }
+function updateSelectionLogic(type, skipRead = false) { let container, btn; if (type === 'barCountry') { container = els.barCountryList; btn = els.barCountryToggle; } else if (type === 'mapCat') { container = els.mapCatList; btn = els.mapCatToggle; } else if (type === 'radarCountry') { container = els.radarCountryList; btn = els.radarCountryToggle; } else if (type === 'globalInd') { container = els.globalIndList; btn = els.globalIndToggle; } else if (type === 'r2Country') { container = els.r2CountryList; btn = els.r2CountryToggle; } if (!skipRead) { const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:not([id^="all"])')).filter(cb => cb.checked).map(cb => cb.value); if (type === 'barCountry') state.barCountries = checked; if (type === 'mapCat') state.mapCategories = checked; if (type === 'radarCountry') state.radarCountries = checked; if (type === 'globalInd') state.globalIndicators = checked; if (type === 'r2Country') state.r2Countries = checked; } const list = (type==='barCountry') ? state.barCountries : (type==='mapCat') ? state.mapCategories : (type==='radarCountry') ? state.radarCountries : (type==='globalInd') ? state.globalIndicators : state.r2Countries; updateButtonLabel(btn, list, container.querySelectorAll('input:not([id^="all"])').length, type === 'globalInd' ? "Indicators" : "Selected"); const allCb = container.querySelector('input[id^="all"]'); if(allCb) allCb.checked = (list.length === container.querySelectorAll('input:not([id^="all"])').length); updateChart(); }
+function updateButtonLabel(btn, checked, total, suffix) { if (checked.length === total && total > 0 && suffix !== 'Selected') btn.querySelector('span').textContent = `All ${suffix}`; else if (checked.length === 0) btn.querySelector('span').textContent = `Select...`; else btn.querySelector('span').textContent = `${checked.length} ${suffix}`; }
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const containers = [els.barContainer, els.mapContainer, els.radarContainer, els.cpContainer, els.r2Container];
+  containers.forEach(el => el.style.display = 'none');
+  const controls = [els.topicWrapper, els.stdControls1, els.stdControls2, els.barControls, els.mapControls, els.radarControls, els.cpControlsCountry, els.globalIndWrapper, els.cpCatWrapper, els.r2ControlsCountry, els.mapOverlay];
+  controls.forEach(el => el.style.display = 'none');
+
+  if (tab === 'bar') {
+    els.barContainer.style.display = 'block'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.barControls.style.display = 'block';
+    if(els.mapCatList.querySelectorAll('input').length > 1) els.mapControls.style.display = 'block';
+  } else if (tab === 'map') {
+    els.mapContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.mapOverlay.style.display = 'flex'; setMapView(state.mapViewMode);
+  } else if (tab === 'radar') {
+    els.radarContainer.style.display = 'grid'; els.topicWrapper.style.display = 'block'; els.stdControls1.style.display = 'block'; els.stdControls2.style.display = 'block'; els.radarControls.style.display = 'block';
+    const opts = Array.from(els.cat.options);
+    const ageOpt = opts.find(o => o.value.toLowerCase().includes('age category'));
+    if (ageOpt) { state.topCat = ageOpt.value; els.cat.value = ageOpt.value; updateDeepCategories(); }
+  } else if (tab === 'country') {
+    els.cpContainer.style.display = 'block'; els.cpControlsCountry.style.display = 'block'; els.globalIndWrapper.style.display = 'block'; els.cpCatWrapper.style.display = 'block'; 
+  } else if (tab === 'radar2') {
+    els.r2Container.style.display = 'block'; els.r2ControlsCountry.style.display = 'block'; els.globalIndWrapper.style.display = 'block'; els.cpCatWrapper.style.display = 'block'; 
+  }
+  updateChart();
+}
+
+function filterDataAndCheckCounts(data) {
+    const originalCount = data.length;
+    const filtered = data.filter(d => {
+        if (d['Count'] === undefined || d['Count'] === null) return true;
+        return d['Count'] >= 50;
+    });
+
+    if (filtered.length < originalCount) {
+        els.lowDataWarning.style.display = 'flex';
+    } else {
+        els.lowDataWarning.style.display = 'none';
+    }
+    return filtered;
+}
+
+function updateChart() {
+  window.activeCharts = []; 
+  els.lowDataWarning.style.display = 'none'; 
+
+  // UPDATE NOTE
+  if (state.indicator && INDICATOR_NOTES[state.indicator]) {
+      els.indicatorNote.innerHTML = `<b>Notes:</b> ${INDICATOR_NOTES[state.indicator]}`;
+      els.indicatorNote.style.display = 'block';
+  } else {
+      els.indicatorNote.style.display = 'none';
+  }
+
+  if (currentTab === 'country') return renderCountryProfile(); 
+  if (currentTab === 'radar2') return renderRadar2();
+  
+  if (currentTab === 'map') { 
+      renderMap(rawData); 
+      return; 
+  }
+
+  let data = rawData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+  data = filterDataAndCheckCounts(data);
+
+  if (currentTab === 'bar') renderBar(data); 
+  else if (currentTab === 'radar') renderRadar(data);
+}
+
+function renderBar(data) {
+  const selectedCategories = state.mapCategories;
+  const availableCountries = [...new Set(data.map(d => d['Country Name']))].sort();
+  const displayCountries = availableCountries.filter(c => state.barCountries.includes(c));
+  const isYears = isYearsIndicator(state.indicator);
+  
+  const series = selectedCategories.map((cat, i) => ({
+    name: cat, 
+    data: displayCountries.map(c => { 
+        const row = data.find(d => d['Country Name'] === c && d['Category'] === cat); 
+        return row ? { y: row['Value'], categoryName: cat } : null; 
+    }), 
+    color: PALETTE_5[i % PALETTE_5.length] 
+  }));
+
+  const chart = Highcharts.chart('bar-container', {
+    chart: { type: 'bar', marginLeft: 150 }, title: { text: `${state.indicator} by ${state.topCat}` }, 
+    xAxis: { categories: displayCountries, title: { text: null } }, 
+    yAxis: { title: { text: isYears ? 'Years' : '%' }, labels: { format: isYears ? '{value}' : '{value}%' } }, 
+    tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, 
+    plotOptions: { 
+        bar: { 
+            pointPadding: 0.05, 
+            groupPadding: 0.05, 
+            dataLabels: { 
+                enabled: true, 
+                align: 'right', 
+                inside: false, 
+                crop: false, 
+                overflow: 'justify',
+                formatter: function() { return this.y.toFixed(1) + (isYears ? "" : "%"); },
+                style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
+            } 
+        },
+        series: {
+            dataLabels: {
+                inside: true, 
+                color: '#FFFFFF', 
+                style: { textOutline: 'none' }
+            }
+        }
+    }, 
+    series: series,
+    exporting: { filename: `Housing_${state.indicator}_Bar` }
+  });
+  window.activeCharts.push(chart);
+}
+
+async function renderMap(allData) {
+  els.mapContainer.innerHTML = ''; els.mapContainer.className = 'map-grid';
+  if (state.mapViewMode === 'national') {
+      let data = allData.filter(d => d['Indicator name'] === state.indicator && d['Top category'] === state.topCat);
+      data = filterDataAndCheckCounts(data);
+
+      const selectedCats = state.mapCategories;
+      if (selectedCats.length === 0) { els.mapContainer.innerHTML = '<p style="text-align:center; padding:2rem;">Please select a category.</p>'; return; }
+      els.mapContainer.className = selectedCats.length > 1 ? 'map-grid split' : 'map-grid';
+      selectedCats.forEach((cat, index) => {
+        const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-${index}`; els.mapContainer.appendChild(div);
+        if(!window.nationalTopology) return;
+        let geojson; if (window.nationalTopology.type === 'FeatureCollection') geojson = window.nationalTopology; else geojson = topojson.feature(window.nationalTopology, window.nationalTopology.objects.nutsrg);
+        const mapData = data.filter(d => d['Category'] === cat).map(d => ({ 'id': d['Country Code'], value: d['Value'], name: d['Country Name'] }));
+        
+        const chart = Highcharts.mapChart(div.id, {
+          chart: { map: geojson, animation: false }, 
+          title: { text: `${state.indicator} by ${cat}`, style: { color: PALETTE_5[0], fontSize: '13px' } }, 
+          mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }, 
+          mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' } }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: mapData, joinBy: 'id', name: cat, states: { hover: { color: '#D68434' } }, dataLabels: { enabled: false } }], 
+          exporting: { filename: `Housing_${state.indicator}_Map_${cat}` }
         });
-        
-        if(allVals.length === 0) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
+        window.activeCharts.push(chart);
+      });
+  } else {
+      const div = document.createElement('div'); div.className = 'chart-card'; div.id = `map-slot-nuts`; div.style.height = '600px'; els.mapContainer.appendChild(div);
+      if(!window.nutsTopology) return;
+      let geojson = topojson.feature(window.nutsTopology, window.nutsTopology.objects.nutsrg);
+      geojson.features = geojson.features.filter(feature => feature.id !== 'NO0B');
+      
+      let nutsDataRows = allData.filter(d => d['Indicator name'] === state.indicator && String(d['Top category']).toLowerCase() === 'nuts region');
+      nutsDataRows = filterDataAndCheckCounts(nutsDataRows);
 
-        const minVal = Math.min(...allVals);
-        const maxVal = Math.max(...allVals);
-        const min = Math.floor(minVal / 10) * 10 - 10;
-        const max = Math.ceil(maxVal / 10) * 10 + 10;
-        const range = max - min;
+      if(nutsDataRows.length === 0) { div.innerHTML = `<p style="padding:40px; text-align:center;">No NUTS data.</p>`; return; }
+      const valueMap = new Map(); nutsDataRows.forEach(d => { if(d['Category']) valueMap.set(d['Category'], d['Value']); });
+      const chartData = [];
+      geojson.features.forEach(feature => { const mapId = feature.id || feature.properties.NUTS_ID; if (!mapId) return; let matchValue = valueMap.has(mapId) ? valueMap.get(mapId) : (mapId.length>=3 && valueMap.has(mapId.substring(0,3)) ? valueMap.get(mapId.substring(0,3)) : null); chartData.push({ id: mapId, value: matchValue, properties: feature.properties }); });
+      
+      const chart = Highcharts.mapChart(div.id, {
+        chart: { map: geojson, animation: false }, title: { text: `${state.indicator} (Regional)` }, 
+        mapView: { projection: { name: 'WebMercator' }, center: [10, 55], zoom: 3.4 }, 
+        mapNavigation: { enabled: true, buttonOptions: { verticalAlign: 'bottom' }, enableMouseWheelZoom: false }, colorAxis: { min: 0, stops: MAP_STOPS }, plotOptions: { series: { animation: false } }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, series: [{ data: chartData, joinBy: 'id', name: 'Regions', borderColor: '#999', borderWidth: 0.5, nullColor: '#f0f0f0', allAreas: true, states: { hover: { color: '#D68434' } } }], 
+        exporting: { filename: `Housing_${state.indicator}_RegionalMap` }
+      });
+      window.activeCharts.push(chart);
+  }
+}
 
-        const width = 600; const height = 300;
-        const padding = { top: 20, right: 30, bottom: 40, left: 60 }; 
-        const chartW = width - padding.left - padding.right;
-        const chartH = height - padding.top - padding.bottom;
-        
-        const getX = (i) => padding.left + (i / (years.length - 1)) * chartW;
-        const getY = (val) => padding.top + chartH - ((val - min) / range) * chartH;
+function renderRadar(data) {
+  els.radarContainer.innerHTML = ''; const categories = [...new Set(data.map(d => d['Category']))];
+  if (state.radarCountries.length === 0) { els.radarContainer.innerHTML = '<p>Select a country.</p>'; return; }
+  els.radarContainer.className = state.radarCountries.length > 1 ? 'radar-grid split' : 'radar-grid';
+  state.radarCountries.forEach((country, index) => {
+    const card = document.createElement('div'); card.className = 'chart-card'; card.id = `radar-${index}`; els.radarContainer.appendChild(card);
+    const countryData = categories.map(cat => { const row = data.find(d => d['Country Name'] === country && d['Category'] === cat); return row ? { y: row['Value'], categoryName: cat } : null; });
+    
+    const chart = Highcharts.chart(card.id, {
+      chart: { polar: true, type: 'area' }, 
+      title: { text: state.indicator, style: { fontWeight: 'bold', fontSize: '14px' } }, 
+      subtitle: { text: country, style: { fontSize: '13px', color: '#666' } },
+      pane: { size: '75%' }, xAxis: { categories: categories, tickmarkPlacement: 'on', lineWidth: 0 }, yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, tooltip: { formatter: function() { return getTooltipHTML(this.point); } }, legend: { enabled: false }, series: [{ name: country, data: countryData, pointPlacement: 'on', color: PALETTE_5[index], fillOpacity: 0.2 }], exporting: { filename: `Housing_${state.indicator}_Radar_${country}` }
+    });
+    window.activeCharts.push(chart);
+  });
+}
 
-        const makePath = (dataObj) => {
-            let d = '';
-            years.forEach((y, i) => {
-                const val = dataObj[y];
-                if (val && val !== 'N/A') d += (d ? 'L' : 'M') + `${getX(i)},${getY(val)}`;
+function renderCountryProfile() {
+  if (state.globalIndicators.length === 0) { if(cpChart) cpChart.destroy(); return; }
+  const indicators = state.globalIndicators;
+  const category = state.cpCategory || 'All';
+  let relevantData = rawData.filter(d => indicators.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
+  
+  relevantData = filterDataAndCheckCounts(relevantData);
+  
+  const seriesData = indicators.map(ind => { 
+      const row = relevantData.find(d => d['Indicator name'] === ind); 
+      return row ? { y: row['Value'], name: ind, indicatorName: ind } : null; 
+  });
+  
+  const chartOptions = {
+      chart: { type: 'bar', marginLeft: 250 }, title: { text: `${state.cpCountry}` }, subtitle: { text: `Category: ${category}` }, 
+      xAxis: { categories: indicators, title: { text: null } }, 
+      yAxis: { title: { text: 'Value' } }, 
+      tooltip: { formatter: function() { 
+          // Custom logic for multi-indicator profile
+          const isYears = isYearsIndicator(this.point.indicatorName);
+          const unitStr = isYears ? " years" : "%";
+          return `<div style="padding: 8px;"><div style="font-weight:700;">${this.point.name}</div><div>${this.y.toFixed(1)}${unitStr}</div></div>`;
+      } }, 
+      plotOptions: { 
+          bar: { 
+              pointPadding: 0.05, 
+              groupPadding: 0.05, 
+              dataLabels: { 
+                  enabled: true, 
+                  align: 'right',
+                  inside: false, 
+                  crop: false, 
+                  overflow: 'justify',
+                  formatter: function() { 
+                      const isYears = isYearsIndicator(this.point.indicatorName);
+                      return this.y.toFixed(1) + (isYears ? "" : "%"); 
+                  },
+                  style: { fontWeight: 'normal', fontSize: '11px', textOutline: 'none' }
+              } 
+          }
+      }, 
+      legend: { enabled: false }, series: [{ name: state.cpCountry, data: seriesData, color: PALETTE_5[0] }], exporting: { filename: `Housing_Profile_${state.cpCountry}` }
+  };
+
+  if (cpChart) cpChart.destroy();
+  cpChart = Highcharts.chart('cp-container', chartOptions);
+  window.activeCharts.push(cpChart);
+}
+
+function renderRadar2() {
+  if (state.globalIndicators.length === 0 || state.r2Countries.length === 0) { Highcharts.chart('r2-container', { title: { text: 'Select Data' } }); return; }
+  const indicators = state.globalIndicators; const category = state.cpCategory || 'All';
+  const series = state.r2Countries.map((country, i) => {
+    let data = indicators.map(ind => { 
+        const row = rawData.find(d => d['Indicator name'] === ind && d['Country Name'] === country && d['Category'] === category); 
+        return row ? { y: row['Value'], count: row['Count'], indicatorName: ind } : null; 
+    });
+    
+    data = data.map(d => (d && d.count !== undefined && d.count < 50) ? null : d);
+    
+    return { name: country, data: data, pointPlacement: 'on', color: PALETTE_5[i], fillOpacity: 0.1 };
+  });
+  const chart = Highcharts.chart('r2-container', {
+    chart: { polar: true, type: 'area' }, title: { text: 'Comparison' }, subtitle: { text: `Category: ${category}` }, pane: { size: '80%' }, 
+    xAxis: { categories: indicators, tickmarkPlacement: 'on', lineWidth: 0 }, 
+    yAxis: { gridLineInterpolation: 'polygon', lineWidth: 0, min: 0 }, 
+    tooltip: { 
+        shared: true, 
+        formatter: function() {
+            let s = `<div style="padding:8px;"><div style="font-weight:700; margin-bottom:4px;">${this.x}</div>`;
+            const isYears = isYearsIndicator(this.x);
+            const unit = isYears ? " years" : "%";
+            this.points.forEach(p => {
+                s += `<div style="color:${p.series.color}">${p.series.name}: <b>${p.y.toFixed(1)}${unit}</b></div>`;
             });
-            return d;
-        };
+            s += `</div>`;
+            return s;
+        }
+    }, 
+    series: series, 
+    exporting: { filename: `Housing_MultiRadar_Comparison` }
+  });
+  window.activeCharts.push(chart);
+}
 
-        const makePoints = (dataObj, color) => {
-            let pts = '';
-            years.forEach((y, i) => {
-                const val = dataObj[y];
-                if (val && val !== 'N/A') {
-                    pts += `<circle cx="${getX(i)}" cy="${getY(val)}" r="4" fill="${color}" stroke="white" stroke-width="2"/>`;
-                }
-            });
-            return pts;
-        };
+// --- FIXED IMAGE EXPORT ---
+async function triggerExportImage() {
+    const charts = window.activeCharts;
+    if (!charts || charts.length === 0) return;
 
-        let yAxisHtml = '';
-        let gridLinesHtml = '';
-        for (let v = min; v <= max; v += 10) {
-            const yPos = getY(v);
-            if(yPos >= padding.top && yPos <= height - padding.bottom) {
-                yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="16" text-anchor="end" fill="#94a3b8">${v}</text>`;
-                gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
-            }
+    // Fetch logo BLOB first
+    let logoImg = null;
+    try {
+        const response = await fetch(LOGO_URL);
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        logoImg = await loadImage(url);
+    } catch (e) { console.warn("Logo fetch failed", e); }
+
+    const width = 1200;
+    const chartHeight = 550;
+    const footerHeight = 80;
+    const totalHeight = chartHeight + footerHeight;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = totalHeight;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, width, totalHeight);
+
+    try {
+        if (charts.length === 1) {
+             const svg = charts[0].getSVG({ chart: { width: width, height: chartHeight } });
+             const img = await svgToImage(svg);
+             ctx.drawImage(img, 0, 0);
+        } else {
+             const halfWidth = width / 2;
+             const svg1 = charts[0].getSVG({ chart: { width: halfWidth, height: chartHeight } });
+             const img1 = await svgToImage(svg1);
+             ctx.drawImage(img1, 0, 0);
+
+             const svg2 = charts[1].getSVG({ chart: { width: halfWidth, height: chartHeight } });
+             const img2 = await svgToImage(svg2);
+             ctx.drawImage(img2, halfWidth, 0);
         }
 
-        let xLabelsHtml = '';
-        years.forEach((y, i) => {
-             xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b" style="pointer-events:none;">${y}</text>`;
-        });
-
-        let hoverHtml = '';
-        years.forEach((y, i) => {
-            const pVal = safePrices[y] !== 'N/A' ? safePrices[y] : 'N/A';
-            const rVal = safeRents[y] !== 'N/A' ? safeRents[y] : 'N/A';
-            hoverHtml += `<rect x="${getX(i) - (chartW/years.length)/2}" y="${padding.top}" width="${chartW/years.length}" height="${chartH}" fill="transparent" 
-                onmouseover="showTooltip(event, '${y}', '${pVal}', '${rVal}')" 
-                onmouseout="hideTooltip()" style="cursor:pointer;" />`;
-        });
-
-        return `<div class="line-legend"><div class="legend-item"><div class="dot" style="background:#0B7189;"></div> House Prices</div><div class="legend-item"><div class="dot" style="background:#ea580c;"></div> Rents</div></div>
-        <div style="position:relative;"><svg class="line-chart" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
-            ${gridLinesHtml}
-            <line x1="${padding.left}" y1="${height-padding.bottom}" x2="${width-padding.right}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
-            <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
-            ${yAxisHtml}
-            ${xLabelsHtml}
-            <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
-            ${makePoints(safePrices, "#0B7189")}
-            <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
-            ${makePoints(safeRents, "#ea580c")}
-            ${hoverHtml}
-        </svg><div id="chartTooltip" class="chart-tooltip"></div></div>`;
-    }
-
-    function renderSpending(data) {
-        if(!data) return '';
-        let html = '';
-        const vals = Object.values(data).filter(n => typeof n === 'number');
-        const maxScale = Math.max(PUBLIC_SPENDING_MAX_SCALE, ...vals);
-        for (const [k, v] of Object.entries(data)) {
-            if (v === 'N/A' || v === null) continue;
-            const w = Math.min((v / maxScale) * 100, 100);
-            html += `<div class="bar-container">
-                        <div class="bar-header"><span>${cleanLabel(k)}</span></div>
-                        <div class="bar-wrapper">
-                            <div class="bar-fill" style="width:${w}%"></div>
-                            <span class="bar-label-val" style="left:${w}%">${v}%</span>
-                        </div>
-                     </div>`;
-        }
-        return html;
-    }
-
-    function renderStock(sectionData) {
-        const getVal = (key) => {
-            const obj = sectionData[key]?.content;
-            return (!obj || !obj['Latest Value']) ? 'N/A' : formatNumber(obj['Latest Value']);
-        };
-        return `<div class="demo-row"><span class="demo-label">Annual Completions</span><span class="demo-val">${getVal('Housing Completions')}</span></div>
-        <div class="demo-row"><span class="demo-label">Total Stock</span><span class="demo-val">${getVal('Housing Stock')}</span></div>
-        <div class="demo-row"><span class="demo-label">Total Population</span><span class="demo-val">${getVal('Population')}</span></div>
-        <div class="demo-row"><span class="demo-label">Number of Households</span><span class="demo-val">${getVal('Households')}</span></div>`;
-    }
-
-    function renderPolicy(data, indicatorLabel, filterTitle = null) {
-        if(!data || data.length === 0) return '<div style="color:#ccc;">No data found.</div>';
-        let html = '';
-        let items = data;
-        if (filterTitle) {
-            items = data.filter(item => item.title === filterTitle);
-            if (items.length === 0) return '<div style="color:#ccc;">No specific data for this measure.</div>';
-        }
-        items.forEach(rawItem => {
-            const item = transformItem(rawItem, indicatorLabel);
-            
-            // Extract "Type of measure" Badge
-            let typeBadge = '';
-            if (item.details["Type of measure"]) {
-                typeBadge = `<span class="policy-type-badge">${item.details["Type of measure"]}</span>`;
-                delete item.details["Type of measure"];
-            }
-
-            let detailsHtml = '';
-            if (Object.keys(item.details).length > 0) {
-                detailsHtml += `<div class="panel-label" style="margin-top:16px;">Details & Specs</div><table class="details-table">`;
-                for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
-                detailsHtml += `</table>`;
-            }
-            
-            // Logic to hide checklist for Mortgage Market
-            const isMortgage = (indicatorLabel === "Mortgage Market");
-            
-            let contentHtml = '';
-            if (!isMortgage) {
-                contentHtml = `<div class="panel-label">Requirements & Eligibility</div>
-                               ${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}`;
-            }
-            
-            html += `<div class="policy-block">
-                        <div class="policy-head"><span>${item.title}</span>${typeBadge}</div>
-                        <div class="policy-grid">
-                            <div class="policy-panel">
-                                ${contentHtml}
-                                ${detailsHtml}
-                            </div>
-                        </div>
-                     </div>`;
-        });
-        return html;
-    }
-
-    function renderHorizontalBars(data) {
-        if (!data) return '';
-        let html = ''; const max = 40; 
-        for(const [k, v] of Object.entries(data)) {
-            const w = (v / max) * 100;
-            html += `<div class="hbar-row">
-                        <div class="hbar-label">${k}</div>
-                        <div class="hbar-wrapper">
-                            <div class="hbar-fill" style="width:${w}%"></div>
-                            <span class="hbar-val" style="left:${w}%">${v}</span>
-                        </div>
-                     </div>`;
-        }
-        return html;
-    }
-
-    function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
-        if (type === 'hero_stat') return ''; 
-
-        // Reroute Mortgage Market to Policy Render (to apply checklist hiding logic)
-        // Note: The indicator name is passed as "label" here
-        if (label === "Mortgage Market" && type === 'policy') {
-             return renderPolicy(content, label, filterTitle);
+        // Draw Footer Logo
+        if (logoImg) {
+             ctx.drawImage(logoImg, 20, chartHeight + 15, 120, 30);
+        } else {
+             // Fallback text
+             ctx.fillStyle = '#0B7189';
+             ctx.font = 'bold 16px Inter, sans-serif';
+             ctx.fillText("HOUSING DASHBOARD", 20, chartHeight + 35);
         }
 
-        if (type === 'time_series') return `<div class="card"><div class="card-header">${label} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
-        if (type === 'bar_chart') return `<div class="card"><div class="card-header">${label}</div><div class="card-body">${renderSpending(content)}</div></div>`;
-        if (type === 'policy') return renderPolicy(content, label, filterTitle); // Pass label as context
+        const noteEl = document.getElementById('indicator-note');
+        const hasNote = noteEl && noteEl.style.display !== 'none';
+        const noteText = hasNote ? noteEl.innerText : '';
+
+        ctx.fillStyle = '#4b5563'; 
+        ctx.font = '11px Inter, Arial, sans-serif';
+
+        let textX = 160; 
+        let textY = chartHeight + 30;
+
+        if (hasNote) {
+            ctx.fillText(noteText, textX, textY);
+            textY += 18;
+        }
+
+        ctx.fillStyle = '#6b7280';
+        ctx.font = 'bold 11px Inter, Arial, sans-serif';
+        ctx.fillText('Source: Calculations based on EU SILC microdata for 2023', textX, textY);
+
+        const a = document.createElement("a");
+        a.href = canvas.toDataURL("image/png");
+        a.download = "Housing_Dashboard.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+    } catch (e) {
+        console.error(e);
+        alert("Export failed: " + e.message);
+    }
+}
+
+// --- FIXED CSV EXPORT ---
+function triggerExportData() {
+    const charts = window.activeCharts;
+    if (!charts || charts.length === 0) return;
+
+    // Use specific Indicator Name for title
+    const mainTitle = state.indicator || "Housing Data";
+    const sourceText = "Source: Calculations based on EU SILC microdata for 2023";
+    const timestamp = new Date().toISOString().split('T')[0];
+
+    // Single Chart
+    if (charts.length === 1) {
+        const csv = charts[0].getCSV();
+        const meta = `Indicator,"${mainTitle}"\nSource,"${sourceText}"\nDate,"${timestamp}"\n\n`;
+        downloadBlob(meta + csv, 'housing_data.csv');
+        return;
+    } 
+    
+    // Split View (Merge Data)
+    try {
+        const series1 = charts[0].series[0];
+        const series2 = charts[1].series[0];
         
-        let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
-        if (type === 'horizontal_bar') html += renderHorizontalBars(content);
-        else if (type === 'key_value') for (const [k, v] of Object.entries(content)) html += `<div class="demo-row"><span class="demo-label">${cleanLabel(k)}</span><span class="demo-val">${formatNumber(v)}</span></div>`;
-        else html += `<div style="color:#666;">Data available (${type})</div>`;
-        return html + `</div></div>`;
-    }
+        // Correct header using Series Names (Countries)
+        const header = `Category,"${series1.name}","${series2.name}"`;
+        let csvContent = `Indicator,"${mainTitle}"\nSource,"${sourceText}"\nDate,"${timestamp}"\n\n${header}\n`;
 
-    function renderComponent(key, data, sectionTitle, filterTitle = null) {
-        if(key === "Market Trends") return `<div class="card"><div class="card-header">Market Trends (Index 2015=100)</div><div class="card-body">${renderLineChart(data['House Prices Trend']?.content, data['Rent Prices Trend']?.content)}</div></div>`;
-        if(key === "Stock & Demographics") return `<div class="card"><div class="card-header">Stock & Demographics</div><div class="card-body">${renderStock(data)}</div></div>`;
-        if(key === "Short-term Regulations") return renderPolicy(data['Short-term Regulations']?.content, "Short-term Regulations", filterTitle);
-        const item = data[key];
-        if(!item) return '';
-        // Pass "key" (Indicator Name) as label to generic renderer
-        return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
-    }
+        // Create a map to merge rows based on Category
+        const map = new Map();
 
-    function renderGlobalFootnotes(visibleItems) {
-        let html = `<div class="footnote-area">`;
-        
-        if (state.activePartly) {
-            html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
-        }
-        if (visibleItems.includes("Rent Regulations")) {
-            html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
-        }
-        if (visibleItems.includes("Homebuying Subsidies")) {
-            html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
-        }
+        // Helper to extract category name safely
+        const getCat = (p) => p.name || p.category || (p.properties ? (p.properties.na || p.id) : p.id);
 
-        return html + `</div>`;
-    }
-
-    function render() {
-        if(!state.country) return;
-        const container = document.getElementById('content');
-        const countryData = DB[state.country];
-        if (!countryData) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
-
-        let html = '';
-        let visibleItems = [];
-        state.activePartly = false; 
-
-        if (state.searchTags.length > 0) {
-            container.className = '';
-            state.searchTags.forEach(tag => {
-                const secData = countryData[tag.section];
-                if(secData) {
-                    visibleItems.push(tag.parent); 
-                    html += renderComponent(tag.parent, secData, tag.section, (tag.type === 'sub') ? tag.label : null);
-                }
-            });
-            html += renderGlobalFootnotes(visibleItems);
-            container.innerHTML = html || '<div class="empty-state">No matching data found.</div>';
-            updateFooterSources(state.searchTags.map(t => t.label));
-            return;
-        }
-
-        const data = countryData[state.section];
-        if (!data) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
-
-        if (state.section === "General Housing System") {
-            const trend = renderComponent("Market Trends", data, state.section);
-            const stock = renderComponent("Stock & Demographics", data, state.section);
-            const spending = renderSpending(data['Public Spending']?.content) ? `<div class="card"><div class="card-header">Public Spending (% GDP)</div><div class="card-body">${renderSpending(data['Public Spending']?.content)}</div></div>` : '';
-            const regContent = data['Short-term Regulations']?.content;
-            const reg = regContent ? `<div class="span-full"><div class="panel-label" style="font-size:14px; margin-bottom:10px;">SHORT-TERM & VACANCY REGULATIONS</div>${renderPolicy(regContent, "Short-term Regulations")}</div>` : '';
-            html = `<div class="ghs-grid">${trend}${stock}${spending}${reg}</div>`;
-            container.className = ''; 
-            visibleItems = ["House Prices Trend", "Rent Prices Trend", "Housing Stock", "Population", "Households", "Housing Completions", "Public Spending", "Short-term Regulations"];
-        } 
-        else if (state.section === "Exclusion") {
-            container.className = 'exclusion-grid';
-            Object.entries(data).forEach(([k,v]) => { 
-                const tileHtml = renderGeneric(k, v.type, v.content, state.section);
-                if(tileHtml) { html += tileHtml; visibleItems.push(k); }
-            });
-        }
-        else {
-            const key = state.subIndicator || Object.keys(data)[0];
-            container.className = '';
-            html = renderComponent(key, data, state.section, null);
-            visibleItems.push(key);
-        }
-        html += renderGlobalFootnotes(visibleItems);
-        container.innerHTML = html;
-        updateFooterSources(visibleItems);
-    }
-
-    // -------------------------------------------------------------
-    // INIT
-    // -------------------------------------------------------------
-    function init() {
-        const tabs = document.getElementById('tabContainer');
-        ["Affordability", "General Housing System", "Exclusion"].forEach(s => {
-            const btn = document.createElement('div');
-            btn.className = `tab ${s === state.section ? 'active' : ''}`;
-            btn.textContent = s;
-            btn.onclick = () => {
-                state.section = s; state.subIndicator = null; state.searchTags = [];
-                updateSearchTagsUI(); document.getElementById('searchBox').value = '';
-                updateTabs(); render();
-            };
-            tabs.appendChild(btn);
+        series1.data.forEach(p => {
+            const key = getCat(p);
+            if(key) map.set(key, { v1: p.y || p.value, v2: '' });
         });
 
-        const optionsContainer = document.getElementById('country-options');
-        const triggerSpan = document.getElementById('selected-val');
-        const wrapper = document.querySelector('.custom-select');
-        const trigger = document.querySelector('.custom-select__trigger');
-
-        COUNTRIES.forEach(c => {
-            const iso = FLAG_MAP[c] || 'eu';
-            const div = document.createElement('div');
-            div.className = 'custom-option';
-            div.innerHTML = `<span class="fi fi-${iso} flag-icon"></span> ${c}`;
-            div.onclick = () => {
-                state.country = c; triggerSpan.innerHTML = div.innerHTML;
-                wrapper.classList.remove('open'); state.searchTags = [];
-                updateSearchTagsUI(); filterSearchOptions(c); render();
-            };
-            optionsContainer.appendChild(div);
+        series2.data.forEach(p => {
+            const key = getCat(p);
+            if (!map.has(key)) map.set(key, { v1: '', v2: '' });
+            map.get(key).v2 = p.y || p.value;
         });
 
-        trigger.onclick = () => wrapper.classList.toggle('open');
-        window.onclick = (e) => { if (!wrapper.contains(e.target) && !trigger.contains(e.target)) wrapper.classList.remove('open'); };
-        if (COUNTRIES.length > 0 && optionsContainer.firstChild) optionsContainer.firstChild.click();
-
-        document.getElementById('searchBox').onchange = (e) => handleSearch(e.target.value);
-
-        const subSel = document.getElementById('affordabilitySelect');
-        const affInds = SEARCH_INDEX.filter(i => i.section === "Affordability" && i.type === "parent").map(i => i.label);
-        affInds.forEach(label => { const opt = document.createElement('option'); opt.value = label; opt.textContent = label; subSel.appendChild(opt); });
-        subSel.onchange = (e) => { state.subIndicator = e.target.value; render(); };
-        if(affInds.length > 0) state.subIndicator = affInds[0];
-        
-        updateTabs();
-    }
-
-    function filterSearchOptions(country) {
-        const dl = document.getElementById('searchList'); dl.innerHTML = ''; 
-        const countryData = DB[country]; if(!countryData) return;
-        const validOptions = new Set();
-        SEARCH_INDEX.forEach(item => {
-            if (countryData[item.section]) {
-                const sectionData = countryData[item.section];
-                if (item.type === 'sub') {
-                      const parentData = sectionData[item.parent];
-                      if(parentData && parentData.content) {
-                          if(parentData.content.some(x => x.title === item.label)) validOptions.add(item.label);
-                      }
-                } else { if (sectionData[item.parent]) validOptions.add(item.label); }
-            }
+        map.forEach((vals, key) => {
+            const cleanKey = String(key).includes(',') ? `"${key}"` : key;
+            const val1 = vals.v1 !== undefined && vals.v1 !== '' ? vals.v1 : '';
+            const val2 = vals.v2 !== undefined && vals.v2 !== '' ? vals.v2 : '';
+            csvContent += `${cleanKey},${val1},${val2}\n`;
         });
-        [...validOptions].sort().forEach(l => { const opt = document.createElement('option'); opt.value = l; dl.appendChild(opt); });
+
+        downloadBlob(csvContent, 'housing_comparison.csv');
+
+    } catch (e) {
+        console.error("CSV Merge Failed", e);
+        // Fallback
+        downloadBlob(charts[0].getCSV(), 'housing_data_partial.csv');
     }
+}
 
-    function updateTabs() {
-        document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.textContent === state.section));
-        document.getElementById('subControls').style.display = (state.section === "Affordability" && state.searchTags.length === 0) ? 'block' : 'none';
-    }
+function svgToImage(svgString) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        const svgBlob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+        const url = URL.createObjectURL(svgBlob);
+        img.onload = () => { URL.revokeObjectURL(url); resolve(img); };
+        img.onerror = (e) => reject(new Error("SVG Load Error"));
+        img.src = url;
+    });
+}
 
-    function handleSearch(term) {
-        if(!term) return;
-        const match = SEARCH_INDEX.find(i => i.label.toLowerCase() === term.toLowerCase());
-        if (match) {
-            if(!state.searchTags.some(t => t.label === match.label)) {
-                state.searchTags.push(match); updateSearchTagsUI(); updateTabs(); render();
-            }
-            document.getElementById('searchBox').value = ''; 
-        }
-    }
+function loadImage(src) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "Anonymous"; // Important for external images
+        img.onload = () => resolve(img);
+        img.onerror = (e) => reject(new Error("Image Load Error"));
+        img.src = src;
+    });
+}
 
-    function removeTag(label) {
-        state.searchTags = state.searchTags.filter(t => t.label !== label);
-        updateSearchTagsUI(); updateTabs(); render();
-    }
+function downloadBlob(content, filename) {
+    const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
-    function updateSearchTagsUI() {
-        const container = document.getElementById('searchTags'); container.innerHTML = '';
-        state.searchTags.forEach(tag => {
-            const el = document.createElement('div'); el.className = 'tag';
-            el.innerHTML = `${tag.label} <span class="tag-remove" onclick="removeTag('${tag.label}')">&times;</span>`;
-            container.appendChild(el);
-        });
-    }
+document.getElementById('dlPNG').addEventListener('click', triggerExportImage);
+document.getElementById('dlCSV').addEventListener('click', triggerExportData);
 
-    function downloadImage() {
-        html2canvas(document.getElementById('dashboard-container'), { useCORS: true, ignoreElements: (e) => e.getAttribute('data-html2canvas-ignore') === 'true' })
-        .then(canvas => { const link = document.createElement('a'); link.download = `housing_dashboard_${state.country}.png`; link.href = canvas.toDataURL(); link.click(); });
-    }
-
-    function downloadData() {
-        const jsonStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(DB[state.country], null, 2));
-        const link = document.createElement('a'); link.setAttribute("href", jsonStr); link.setAttribute("download", `housing_data_${state.country}.json`);
-        document.body.appendChild(link); link.click(); link.remove();
-    }
-
-    function updateFooterSources(visibleItems) {
-        const container = document.getElementById('footer-sources');
-        const uniqueSources = new Set();
-        visibleItems.forEach(label => {
-            if (SOURCES[label]) uniqueSources.add(SOURCES[label]);
-            else {
-                const meta = SEARCH_INDEX.find(i => i.label === label);
-                if (meta && SOURCES[meta.parent]) uniqueSources.add(SOURCES[meta.parent]);
-            }
-        });
-        container.innerHTML = `<span class="source-label">Source:</span> ${uniqueSources.size === 0 ? 'Eurostat / National Sources' : Array.from(uniqueSources).join(' | ')}`;
-    }
-
-    window.showTooltip = function(e, year, price, rent) {
-        const tt = document.getElementById('chartTooltip');
-        tt.style.opacity = 1; tt.style.left = e.offsetX + 'px'; tt.style.top = e.offsetY + 'px';
-        tt.innerHTML = `<b>${year}</b><br/>${price !== 'N/A' ? `House Prices: ${price}<br/>` : ''}${rent !== 'N/A' ? `Rents: ${rent}` : ''}`;
-    };
-    window.hideTooltip = function() { document.getElementById('chartTooltip').style.opacity = 0; };
-
-    // START
-    loadData();
+window.addEventListener("message", (event) => {
+    if (event.data === "download-png") triggerExportImage();
+    if (event.data === "download-csv") triggerExportData();
+});
 </script>
 </body>
 </html>
