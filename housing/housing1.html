@@ -70,8 +70,9 @@
         .hbar-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: 4px; padding-left: 8px; white-space: nowrap; }
 
         .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
-        .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; }
-        /* Single column policy grid */
+        .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .policy-type-badge { background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: uppercase; font-weight: 700; border: 1px solid #bae6fd; }
+        
         .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
         .policy-panel { padding: 16px; }
         .panel-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 10px; }
@@ -237,12 +238,20 @@
         let num = Number(val);
         if (isNaN(num)) return val;
 
+        // Special handling for Reduction/Amount which can be % or €
+        if (key === "Reduction/ amount") {
+            // Heuristic: If it's 1.0 or 0.25 (and not 0), assume percentage
+            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%';
+            // Otherwise treat as currency
+            return '€' + num.toLocaleString('en-US');
+        }
+
         if (isPercentageKey) {
             if (num <= 1.0 && num !== 0) return (num * 100).toFixed(1) + '%';
             return num.toFixed(1) + '%';
         }
 
-        const isCurrencyKey = ["Max sum", "Capped at", "Reduction/ amount", "Avg mortgage amount"].includes(key);
+        const isCurrencyKey = ["Max sum", "Capped at", "Avg mortgage amount"].includes(key);
         if (isCurrencyKey) return '€' + num.toLocaleString('en-US');
 
         return num.toLocaleString('en-US');
@@ -266,9 +275,9 @@
         
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
-        // UPDATED FIX: Check for Tax targeted property presence, regardless of section title variable
-        if (newItem.details["Tax targeted"]) {
-            newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title.toLowerCase()}`;
+        if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
+            // Concatenate title, NO Lowercase enforcement
+            newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
             delete newItem.details["Tax targeted"];
         }
 
@@ -313,7 +322,6 @@
         const range = max - min;
 
         const width = 600; const height = 300;
-        // Increased Left Padding for Y-Axis labels
         const padding = { top: 20, right: 30, bottom: 40, left: 60 }; 
         const chartW = width - padding.left - padding.right;
         const chartH = height - padding.top - padding.bottom;
@@ -341,21 +349,21 @@
             return pts;
         };
 
-        // Generate Y-Axis Labels
+        // Y-Axis Labels & Grid
         let yAxisHtml = '';
         let gridLinesHtml = '';
         for (let v = min; v <= max; v += 10) {
             const yPos = getY(v);
             if(yPos >= padding.top && yPos <= height - padding.bottom) {
-                // Same font size as X axis (16px)
-                yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="14" text-anchor="end" fill="#94a3b8">${v}</text>`;
+                // Font Size 16px to match X-Axis
+                yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="16" text-anchor="end" fill="#94a3b8">${v}</text>`;
                 gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
             }
         }
 
         let xLabelsHtml = '';
         years.forEach((y, i) => {
-             // Much bigger year labels (16px, bold)
+             // Font Size 16px, Bold
              xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b" style="pointer-events:none;">${y}</text>`;
         });
 
@@ -423,15 +431,39 @@
         }
         items.forEach(rawItem => {
             const item = transformItem(rawItem, sectionTitle);
+            
+            // Extract "Type of measure" Badge
+            let typeBadge = '';
+            if (item.details["Type of measure"]) {
+                typeBadge = `<span class="policy-type-badge">${item.details["Type of measure"]}</span>`;
+                delete item.details["Type of measure"];
+            }
+
             let detailsHtml = '';
             if (Object.keys(item.details).length > 0) {
                 detailsHtml += `<div class="panel-label" style="margin-top:16px;">Details & Specs</div><table class="details-table">`;
                 for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
                 detailsHtml += `</table>`;
             }
-            html += `<div class="policy-block"><div class="policy-head">${item.title}</div><div class="policy-grid">
-                <div class="policy-panel"><div class="panel-label">Requirements & Eligibility</div>${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}${detailsHtml}</div>
-            </div></div>`;
+            
+            // Mortgage Market Exception: Hide checklist, only show stats
+            const isMortgage = (sectionTitle === "Mortgage Market");
+            
+            let contentHtml = '';
+            if (!isMortgage) {
+                contentHtml = `<div class="panel-label">Requirements & Eligibility</div>
+                               ${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}`;
+            }
+            
+            html += `<div class="policy-block">
+                        <div class="policy-head"><span>${item.title}</span>${typeBadge}</div>
+                        <div class="policy-grid">
+                            <div class="policy-panel">
+                                ${contentHtml}
+                                ${detailsHtml}
+                            </div>
+                        </div>
+                     </div>`;
         });
         return html;
     }
@@ -455,14 +487,11 @@
     function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
         if (type === 'hero_stat') return ''; 
 
-        if (sectionTitle === "Mortgage Market") {
-             if (type === 'policy' && content.length > 0 && content[0].details) {
-                 let html = `<div class="card"><div class="card-header">${label}</div><div class="card-body">`;
-                 for(const [k,v] of Object.entries(content[0].details)) html += `<div class="demo-row"><span class="demo-label">${cleanLabel(k)}</span><span class="demo-val">${formatValue(k, v)}</span></div>`;
-                 html += `</div></div>`;
-                 return html;
-             }
+        // Mortgage Market Handling (Render as Policy so we can filter checklist)
+        if (sectionTitle === "Mortgage Market" && type === 'policy') {
+             return renderPolicy(content, sectionTitle, filterTitle);
         }
+
         if (type === 'time_series') return `<div class="card"><div class="card-header">${label} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
         if (type === 'bar_chart') return `<div class="card"><div class="card-header">${label}</div><div class="card-body">${renderSpending(content)}</div></div>`;
         if (type === 'policy') return renderPolicy(content, sectionTitle, filterTitle);
