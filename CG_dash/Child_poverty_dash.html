@@ -8,14 +8,15 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/maps/modules/map.js"></script>
 <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
-
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+
 <style>
   :root{ --ink:#111827; --muted:#6b7280; --b:#e5e7eb; --blue:#0A6AA6; --red:#B01E34; --green:#3C6F3C; --purple:#59419A; --eu:#063d67; }
   html,body{margin:0}
@@ -71,7 +72,18 @@
   .flag-item:last-child{border-bottom:none}
   .flag-item:hover{background:#f7f8fa}
   .flag-check{margin-left:auto; color:#64748b}
-  .fi{width:18px; height:12px; border-radius:2px; box-shadow:0 0 0 1px rgba(0,0,0,.08) inset}
+
+  /* Flag Icon Override */
+  .fi {
+    width: 21px !important;
+    height: 16px !important;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset; /* Subtle border for white flags */
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
 </style>
 </head>
 <body>
@@ -325,10 +337,11 @@ function rebuildFilters(){
   }
 }
 
+// ✅ Updated to use flag-icon-css syntax
 function flagSVG(code){
-  const pal={AT:'#ED2939,#FFFFFF,#ED2939',BE:'#000000,#FFD90C,#ED2939',BG:'#00966E,#FFFFFF,#D62612',HR:'#FF0000,#FFFFFF,#171796',CY:'#FFFFFF,#D57800,#107A3B',CZ:'#FFFFFF,#11457E,#D7141A',DK:'#C60C30,#FFFFFF,#C60C30',EE:'#4891D9,#000000,#FFFFFF',FI:'#FFFFFF,#003580,#FFFFFF',FR:'#0055A4,#FFFFFF,#EF4135',DE:'#000000,#DD0000,#FFCE00',GR:'#0D5EAF,#FFFFFF,#0D5EAF',HU:'#CE2939,#FFFFFF,#477050',IE:'#169B62,#FFFFFF,#FF883E',IT:'#009246,#FFFFFF,#CE2B37',LV:'#9E3039,#FFFFFF,#9E3039',LT:'#FDB913,#006A44,#C1272D',LU:'#00A1DE,#FFFFFF,#ED2939',NL:'#AE1C28,#FFFFFF,#21468B',PL:'#FFFFFF,#DC143C',PT:'#006600,#FF0000,#FFE600',RO:'#002B7F,#FCD116,#CE1126',SK:'#0B4EA2,#FFFFFF,#EE1C25',SI:'#0B4EA2,#FFFFFF,#EE1C25',ES:'#AA151B,#F1BF00,#AA151B',SE:'#006AA7,#FECC00',CH:'#D52B1E,#FFFFFF',IS:'#02529C,#FFFFFF,#DC1D35',NO:'#BA0C2F,#FFF,#00205B',GB:'#012169,#C8102E,#FFFFFF',IEU:'#003399,#003399,#003399'};
-  const p=(pal[(code||'').toUpperCase()]||'#ccc,#ccc,#ccc').split(',');
-  return `<svg class="fi" viewBox="0 0 24 16"><rect width="24" height="16" fill="${p[0]}"/><rect y="5.33" width="24" height="5.34" fill="${p[1]}"/><rect y="10.67" width="24" height="5.33" fill="${p[2]}"/></svg>`;
+  let c = (code || '').toLowerCase();
+  if (c === 'ieu') c = 'eu'; // Handle special case for EU if necessary
+  return `<span class="fi fi-${c}"></span>`;
 }
 
 /* ========= draw ========= */
