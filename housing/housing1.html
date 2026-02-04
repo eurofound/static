@@ -268,7 +268,8 @@
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
         if (sectionTitle === "Tax Relief" && newItem.details["Tax targeted"]) {
-            newItem.title = `${newItem.details["Tax targeted"]} ${newItem.title}`.replace("  ", " ");
+            // Format title: "{Tax targeted} - {lowercase title}"
+            newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title.toLowerCase()}`;
             delete newItem.details["Tax targeted"];
         }
         if (newItem.details["Mortgage"]) {
@@ -305,11 +306,16 @@
         
         if(allVals.length === 0) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
 
-        const min = Math.min(...allVals) * 0.9;
-        const max = Math.max(...allVals) * 1.05;
+        // Adjust Y-axis range for better visualization
+        const minData = Math.min(...allVals);
+        const maxData = Math.max(...allVals);
+        const paddingRange = (maxData - minData) * 0.1;
+        const min = Math.floor((minData - paddingRange) / 10) * 10;
+        const max = Math.ceil((maxData + paddingRange) / 10) * 10;
+        
         const range = max - min;
         const width = 600; const height = 300;
-        const padding = { top: 20, right: 30, bottom: 40, left: 40 };
+        const padding = { top: 20, right: 30, bottom: 40, left: 50 }; // Increased left padding for Y labels
         const chartW = width - padding.left - padding.right;
         const chartH = height - padding.top - padding.bottom;
         const getX = (i) => padding.left + (i / (years.length - 1)) * chartW;
@@ -336,11 +342,23 @@
             return pts;
         };
 
-        // X Axis: Show ALL years
+        // X Axis: Show ALL years with larger font
         let xLabelsHtml = '';
         years.forEach((y, i) => {
-             xLabelsHtml += `<text x="${getX(i)}" y="${height-15}" font-size="13" text-anchor="middle" fill="#94a3b8" style="pointer-events:none;">${y}</text>`;
+             xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" text-anchor="middle" fill="#94a3b8" style="pointer-events:none;">${y}</text>`;
         });
+
+        // Y Axis Labels & Grid Lines
+        let yLabelsHtml = '';
+        let gridLinesHtml = '';
+        const yStep = 10;
+        for (let val = min; val <= max; val += yStep) {
+            const yPos = getY(val);
+            if (yPos > padding.top && yPos < height - padding.bottom) {
+                yLabelsHtml += `<text x="${padding.left - 10}" y="${yPos + 4}" font-size="12" text-anchor="end" fill="#94a3b8">${val}</text>`;
+                gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
+            }
+        }
 
         let hoverHtml = '';
         years.forEach((y, i) => {
@@ -353,9 +371,11 @@
 
         return `<div class="line-legend"><div class="legend-item"><div class="dot" style="background:#0B7189;"></div> House Prices</div><div class="legend-item"><div class="dot" style="background:#ea580c;"></div> Rents</div></div>
         <div style="position:relative;"><svg class="line-chart" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+            ${gridLinesHtml}
             <line x1="${padding.left}" y1="${height-padding.bottom}" x2="${width-padding.right}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
             <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
             ${xLabelsHtml}
+            ${yLabelsHtml}
             <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
             ${makePoints(safePrices, "#0B7189")}
             <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
