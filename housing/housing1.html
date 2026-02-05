@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <style>
-        :root { --primary: #0B7189; --secondary: #1F2937; --bg: #f8fafc; --white: #ffffff; --border: #e2e8f0; --orange: #ea580c; --green: #047857; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--secondary); margin: 0; padding: 30px; }
-        .container { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; }
+        /* CHANGED: Background to white */
+        :root { --primary: #0B7189; --secondary: #1F2937; --bg: #ffffff; --white: #ffffff; --border: #e2e8f0; --orange: #ea580c; --green: #047857; }
         
-        .header-card { background: var(--white); border-radius: 8px; padding: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid var(--border); }
+        /* CHANGED: Reduced padding */
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--secondary); margin: 0; padding: 15px; }
+        
+        /* CHANGED: Tighter layout constraints */
+        .container { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; gap: 15px; }
+        
+        .header-card { background: var(--white); border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 10px; border: 1px solid var(--border); }
         .controls-row { display: flex; gap: 30px; align-items: flex-end; justify-content: space-between; }
         .ctrl-group { flex: 1; position: relative; }
         .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -33,7 +38,7 @@
         .tag-remove { cursor: pointer; font-weight: bold; font-size: 14px; opacity: 0.6; }
         .search-box { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box; outline: none; }
         
-        .tabs { display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
         .tab { padding: 8px 18px; background: transparent; border-radius: 20px; cursor: pointer; font-weight: 600; color: #64748b; transition: all 0.2s; font-size: 14px; }
         .tab:hover { color: var(--primary); background: #f0f9ff; }
         .tab.active { background: var(--primary); color: white; }
@@ -89,7 +94,7 @@
         .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
         .empty-state { text-align: center; padding: 60px; color: #94a3b8; font-style: italic; }
 
-        .footer-note { margin-top: auto; padding-top: 30px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 15px; }
+        .footer-note { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 15px; }
         .footer-top { display: flex; align-items: flex-start; gap: 30px; }
         .footer-logo { height: 35px; }
         .footer-text { font-size: 11px; color: #94a3b8; line-height: 1.5; }
