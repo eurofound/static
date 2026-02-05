@@ -17,10 +17,6 @@
         .ctrl-group { flex: 1; position: relative; }
         .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        .webhook-btns { display: flex; gap: 10px; }
-        .btn { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: white; color: var(--secondary); transition: all 0.2s; }
-        .btn:hover { background: #f1f5f9; border-color: #cbd5e1; }
-        
         /* Custom Select */
         .custom-select-wrapper { position: relative; user-select: none; width: 100%; }
         .custom-select { position: relative; display: flex; flex-direction: column; }
@@ -133,11 +129,7 @@
                 <input type="text" id="searchBox" class="search-box" list="searchList" placeholder="Search for any policy, rule or statistic...">
                 <datalist id="searchList"></datalist>
             </div>
-            <div class="webhook-btns">
-                <button class="btn" onclick="downloadImage()">Download Image</button>
-                <button class="btn" onclick="downloadData()">Download Data</button>
             </div>
-        </div>
     </div>
 
     <div class="tabs" id="tabContainer" data-html2canvas-ignore="true"></div>
@@ -233,9 +225,7 @@
 
         // Special handling for Reduction/Amount
         if (key === "Reduction/ amount") {
-            // If it is exactly 1 or small fraction, treat as percent
             if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; 
-            // If it is > 1 (e.g. 500), treat as Euro
             return '€' + num.toLocaleString('en-US'); 
         }
 
@@ -268,7 +258,6 @@
         
         if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
 
-        // Fix Title for Tax Relief
         if (indicatorLabel === "Tax Relief" && newItem.details["Tax targeted"]) {
             newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
             delete newItem.details["Tax targeted"];
@@ -435,7 +424,7 @@
                 detailsHtml += `</table>`;
             }
             
-            // Logic to hide checklist for Mortgage Market
+            // Mortgage Market: HIDE Checklist
             const isMortgage = (indicatorLabel === "Mortgage Market");
             
             let contentHtml = '';
@@ -499,23 +488,14 @@
         if(key === "Short-term Regulations") return renderPolicy(data['Short-term Regulations']?.content, "Short-term Regulations", filterTitle);
         const item = data[key];
         if(!item) return '';
-        // Pass "key" (Indicator Name) as label to generic renderer
         return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
     }
 
     function renderGlobalFootnotes(visibleItems) {
         let html = `<div class="footnote-area">`;
-        
-        if (state.activePartly) {
-            html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
-        }
-        if (visibleItems.includes("Rent Regulations")) {
-            html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
-        }
-        if (visibleItems.includes("Homebuying Subsidies")) {
-            html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
-        }
-
+        if (state.activePartly) html += `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`;
+        if (visibleItems.includes("Rent Regulations")) html += `<div class="footnote-item"><strong>*Rent Regulations:</strong> Unless otherwise specified, rent increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`;
+        if (visibleItems.includes("Homebuying Subsidies")) html += `<div class="footnote-item"><strong>*Homebuying Subsidies:</strong> "Max %" may refer to the percentage of the loan guaranteed rather than the direct cost coverage.</div>`;
         return html + `</div>`;
     }
 
@@ -703,6 +683,12 @@
         tt.innerHTML = `<b>${year}</b><br/>${price !== 'N/A' ? `House Prices: ${price}<br/>` : ''}${rent !== 'N/A' ? `Rents: ${rent}` : ''}`;
     };
     window.hideTooltip = function() { document.getElementById('chartTooltip').style.opacity = 0; };
+    
+    // EXPORT EVENT LISTENERS (WEBHOOKS)
+    window.addEventListener("message", (event) => {
+        if (event.data === "download-png") downloadImage();
+        if (event.data === "download-csv") downloadData();
+    });
 
     // START
     loadData();
