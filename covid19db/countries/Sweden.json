@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "08 June 2025",
-            "title": "New rules for EU Blue Card",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2025-1_3837.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Switch to Sweden: matching international talent",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-15_3141.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Lower tax on diesel for companies in forestry, agriculture and aquaculture",
-            "category": "Support for fuel expenses",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-1_2375.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Governmental investments in green jobs",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-1_2171.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Temporarily increased housing allowance for families with children",
+            "date": "12 December 2025",
+            "title": "The eco-city Augstenborg, Malmö",
             "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2021-27_2013.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-1998-1_4135.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "European Social Fund to help Ukrainian refugees find employment",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-23_2825.html"
+            "date": "12 December 2025",
+            "title": "Local Nature Conservation Investment Programme (LONA) - Wetlands projects",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2018-1_4142.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "Improved rules for climate bonus for electric vehicles",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-38_2884.html"
+            "date": "08 December 2025",
+            "title": "National Strategy and Action Plan for Climate Adaptation",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2024-12_4089.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "Financial compensation for short-time workers' training  ",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2021-1_1726.html"
+            "date": "08 December 2025",
+            "title": "State grants for preventive measures against natural disasters",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2022-1_4098.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "SportAdmin offers digital gym training twice a week",
-            "category": "Well-being of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-14_1370.html"
+            "date": "11 August 2025",
+            "title": "Grants for energy efficiency measures in multi-family dwellings",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2021-1_3916.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "Elite Hotels offer subsidised stays for people in risk groups and health care staff",
-            "category": "Remuneration and rewards for workers in essential services",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2020-13_1365.html"
+            "date": "08 August 2025",
+            "title": "Reduced tax incentive for installation of green technologies",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SE-2025-27_3915.html"
         }
     ]
 }

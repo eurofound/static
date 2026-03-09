@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "02 October 2025",
-            "title": "Subsidy scheme for solar panels for the production of hot water ",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-32_3976.html"
+            "date": "12 December 2025",
+            "title": "Establishment of a National Civil Protection Mechanism",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-38_4137.html"
         },
         {
-            "date": "23 September 2025",
-            "title": "Promoting energy efficiency & developing innovative approaches in schools",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2023-5_3972.html"
+            "date": "11 December 2025",
+            "title": "Support measure for farmers affected by natural disasters – drought 2025  ",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-25_4122.html"
         },
         {
-            "date": "23 September 2025",
-            "title": "Grant scheme for supporting the resilience and adaptation to climate change of rural communities (2nd Call) ",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-6_3971.html"
+            "date": "08 December 2025",
+            "title": "Package of supporting and reconstructing measures for areas affected by the fire and fire victims   ",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-31_4092.html"
         },
         {
-            "date": "23 September 2025",
+            "date": "08 December 2025",
+            "title": "Thermal stress of workers ",
+            "category": "Well-being of workers",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2002-1_4096.html"
+        },
+        {
+            "date": "19 September 2025",
             "title": "Reduction of CO2 emissions in businesses",
             "category": "Financing the green transition",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2024-5_3968.html"
         },
         {
-            "date": "23 September 2025",
-            "title": "Grant scheme to promote electric mobility",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2022-49_3023.html"
-        },
-        {
             "date": "19 September 2025",
-            "title": "Tuition fee subsidy for children up to four years old  ",
-            "category": "Access to childcare and education",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2022-36_2823.html"
-        },
-        {
-            "date": "19 September 2025",
-            "title": "Assisted voluntary return (AVR) programme",
-            "category": "Return policies for migrant workers ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2023-5_3857.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Employment of high qualified third country nationals by companies of foreign interests",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2024-5_3861.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Amendment of the immigration law to facilitate the grand of the EU Blue Card",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2024-31_3859.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Framework for the employment of foreign workers 2025",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2024-5_3858.html"
+            "title": "Grant scheme for supporting the resilience and adaptation to climate change of rural communities (2nd Call) ",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CY-2025-6_3971.html"
         }
     ]
 }

@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "09 June 2025",
-            "title": "New statutory sick leave to be introduced from 2022",
-            "category": "Paid sick leave",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2023-1_1960.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Housing for Ukrainian refugees",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2022-14_2983.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "Highest ever number of employment permits issued as extra occupations added to eligible list and Ireland reaches full employment",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2024-1_3876.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "New employment permits for sea fishers introduced to address skills shortage, with a quota of 150 permits",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2024-27_3795.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "Ireland to submit National Implementation Plan for the EU Asylum and Migration Pact to the European Commission ",
+            "date": "04 January 2026",
+            "title": "Humanitarian Assistance Scheme provides financial assistance to households impacted by severe weather events",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2026-23_3794.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2009-1_4166.html"
         },
         {
-            "date": "21 May 2025",
+            "date": "04 January 2026",
+            "title": "Government approves Sectoral Plans in response to extreme weather and climate change ",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2025-46_4167.html"
+        },
+        {
+            "date": "14 October 2025",
+            "title": "Grants for electric vehicles cut in 2023\r",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2023-26_3994.html"
+        },
+        {
+            "date": "14 October 2025",
+            "title": "Climate Action Plan Progress Report identifies continuing difficulties in completing delayed legacy actions",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2025-16_3995.html"
+        },
+        {
+            "date": "14 October 2025",
+            "title": "Largest ever investment in retrofitting in Budget 2026",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2026-1_3996.html"
+        },
+        {
+            "date": "06 May 2025",
             "title": "New employment permit legislation introduced to modernise system \r",
             "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2024-36_3875.html"
-        },
-        {
-            "date": "30 January 2025",
-            "title": "Budget for 2022 includes a number of measures to aid recovery",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-42_2060.html"
-        },
-        {
-            "date": "30 January 2025",
-            "title": "Economic Recovery Plan",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-23_1961.html"
-        },
-        {
-            "date": "30 January 2025",
-            "title": "Funding package and supports for Tourism, Arts & Culture announced in Budget",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-42_2061.html"
-        },
-        {
-            "date": "30 January 2025",
-            "title": "Agreement on terms of reference for report on move to Living Wage",
-            "category": "Well-being of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/IE-2021-16_1959.html"
         }
     ]
 }

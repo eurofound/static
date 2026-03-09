@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "14 May 2025",
-            "title": "Energy efficiency greenhouse horticulture (EC)",
+            "date": "11 November 2025",
+            "title": "Opportunity Scheme for Water Safety and Spatial Adaptation Limburg",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-49_4005.html"
+        },
+        {
+            "date": "11 November 2025",
+            "title": "Delta Programme 2025 ",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-38_4006.html"
+        },
+        {
+            "date": "11 November 2025",
+            "title": "National Heatwave Plan",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2007-1_4007.html"
+        },
+        {
+            "date": "11 November 2025",
+            "title": "Heat Protocol Construction and Infrastructure 2024",
+            "category": "Occupational health and safety",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-28_4008.html"
+        },
+        {
+            "date": "10 November 2025",
+            "title": "Financial hardship scheme following the July 2021 floods",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-36_4004.html"
+        },
+        {
+            "date": "04 August 2025",
+            "title": "Phasing out of the net metering scheme for solar panel",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2022-31_3493.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Investment subsidy for renewable energy and energy saving (ISDE)",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2017-26_3464.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Subsidy to pilot or demonstrate CO2-reducing technologies within companies",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2023-11_3206.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Subsidy for companies to invest in technologies related to energy efficiency, recycling and reuse of water, local infrastructure and CO2-reducing measures",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2023-11_3207.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Subsidy for (lessening the cost of) reducing CO2 emissions",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2023-14_3209.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Pension Fund for Metal and Technology employees (PMT)",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-18_3663.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Just Transition Fund (JTF)",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2021-1_3662.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Hydrogen: Connecting Innovation Worldwide",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2020-1_3661.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Greenhouse Horticulture Heat Infrastructure Grant (SWiG)",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2024-5_3494.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Flood compensation scheme Limburg and North Brabant",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2021-33_3333.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NL-2025-1_3909.html"
         }
     ]
 }

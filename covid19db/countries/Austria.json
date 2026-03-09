@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "26 September 2025",
-            "title": "Photovoltaics funding",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-1_3503.html"
+            "date": "19 December 2025",
+            "title": "Flood Special Funding Programme",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-1_4164.html"
         },
         {
-            "date": "23 September 2025",
-            "title": "Work Foundation in the environmental field",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-14_3128.html"
+            "date": "19 December 2025",
+            "title": "Flood relief fund 2024",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-38_4165.html"
         },
         {
-            "date": "23 September 2025",
-            "title": "Renovation bonus and 'out of oil and gas' promotion campaign",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2009-1_3433.html"
-        },
-        {
-            "date": "22 September 2025",
-            "title": "E-Mobility Funding 2024",
-            "category": "Sustainable mobility",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-9_3504.html"
-        },
-        {
-            "date": "22 September 2025",
-            "title": "Public transport incentive",
-            "category": "Sustainable mobility",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2021-44_3506.html"
-        },
-        {
-            "date": "19 September 2025",
-            "title": "Climate bonus and inflation bonus",
-            "category": "Sustainable mobility",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-36_2854.html"
-        },
-        {
-            "date": "25 June 2025",
-            "title": "Union Federation Climate office",
+            "date": "30 April 2025",
+            "title": "Red-White-Red Card Plus for displaced persons from Ukraine",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-46_3692.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-40_3862.html"
         },
         {
-            "date": "05 June 2025",
-            "title": "Just Transition Action Plan (Further) education and training",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-1_3690.html"
+            "date": "30 April 2025",
+            "title": "Skilled Worker Agreement",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-43_3865.html"
         },
         {
-            "date": "05 June 2025",
-            "title": "Eco booster",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2023-22_3688.html"
-        },
-        {
-            "date": "05 June 2025",
+            "date": "30 April 2025",
             "title": "Seasonal quota ordinance",
             "category": "Other",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2024-51_3866.html"
+        },
+        {
+            "date": "29 April 2025",
+            "title": "Red-White-Red-Card",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/AT-2022-40_3827.html"
         }
     ]
 }

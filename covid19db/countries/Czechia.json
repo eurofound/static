@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "09 October 2025",
-            "title": "Operational Programme Just Transition 2021 - 2027",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-6_3641.html"
+            "date": "12 December 2025",
+            "title": "Subsidy program ŽIVEL – Floods",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2024-13_4139.html"
         },
         {
-            "date": "02 October 2025",
+            "date": "12 December 2025",
+            "title": "Conditions for occupational health protection",
+            "category": "Occupational health and safety",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2007-52_4141.html"
+        },
+        {
+            "date": "10 December 2025",
+            "title": "Guarantee Program 2024 to 2030 - Floods",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2024-28_4111.html"
+        },
+        {
+            "date": "11 August 2025",
             "title": "Preparation for the launch of the Social Climate Fund in the Czech Republic ",
             "category": "Strategic plans and programmes",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2023-44_3917.html"
         },
         {
-            "date": "26 September 2025",
+            "date": "11 August 2025",
             "title": "National Energy and Climate Plan of the Czech Republic ",
             "category": "Strategic plans and programmes",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2020-1_3918.html"
         },
         {
-            "date": "26 September 2025",
+            "date": "31 July 2025",
             "title": "Modernization Fund program",
             "category": "Financing the green transition",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-1_3908.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Support for economic migration",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2024-18_3860.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Government labour migration programme",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2019-36_3853.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Pilot project of voluntary returns to Ukraine",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2024-22_3838.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Language as a Gateway: Systematic language courses for Ukrainian migrants towards their tertiary education in the Czech language",
-            "category": "Access to childcare and education",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2024-40_3834.html"
-        },
-        {
-            "date": "04 June 2025",
-            "title": "Special long-term stay after temporary protection",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2025-14_3840.html"
-        },
-        {
-            "date": "13 January 2025",
-            "title": "Subsidy for replacement of household and public space heating (boiler subsidy)",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/CZ-2021-1_3349.html"
         }
     ]
 }

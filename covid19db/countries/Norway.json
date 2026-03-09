@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "09 June 2025",
-            "title": "New measures for entrepreneurs and growth companies ",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-13_1211.html"
+            "date": "03 December 2025",
+            "title": "Obligation to report ground investigations and natural hazard assessments",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2025-1_4067.html"
         },
         {
-            "date": "08 June 2025",
+            "date": "03 December 2025",
+            "title": "New regulation on storm water management",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2026-1_4069.html"
+        },
+        {
+            "date": "03 December 2025",
+            "title": "New main collective agreement includes cooperation on restructuring due to environment and climate issues",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2025-48_4072.html"
+        },
+        {
+            "date": "02 December 2025",
+            "title": "Natural Hazard Forum",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2016-14_4062.html"
+        },
+        {
+            "date": "28 April 2025",
             "title": "Consultation on labour migration and social integration",
             "category": "Other",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2023-3_3820.html"
         },
         {
-            "date": "08 June 2025",
-            "title": "Climate Partnership",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2023-2_3679.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "The Council for a Just Transition in Working Life ",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2022-23_3657.html"
-        },
-        {
-            "date": "08 June 2025",
+            "date": "22 April 2025",
             "title": "Discontinuation of the au pair scheme",
             "category": "Other",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2024-11_3778.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Union representatives in the green transition",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2024-25_3665.html"
-        },
-        {
-            "date": "19 March 2025",
-            "title": "Information on crisis packages: Measures for companies",
-            "category": "Well-being of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-14_1072.html"
-        },
-        {
-            "date": "19 March 2025",
-            "title": "Countercyclical capital buffer is reduced",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-11_800.html"
-        },
-        {
-            "date": "19 March 2025",
-            "title": "Support for agriculture and agricultural industries",
-            "category": "Direct subsidies (full or partial) or damage compensation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-16_799.html"
-        },
-        {
-            "date": "02 March 2025",
-            "title": "Restoration of the Government Bond Fund",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/NO-2020-13_729.html"
         }
     ]
 }

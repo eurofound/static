@@ -2,10 +2,22 @@
     "status": "success",
     "data": [
         {
-            "date": "19 September 2025",
-            "title": "Preparation of the Social Climate Plan of the Republic of Bulgaria",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-15_3970.html"
+            "date": "08 December 2025",
+            "title": "Payment of one-time financial assistance to those affected by fires in 2025",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-31_4101.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Support for households affected by the October 2025 floods (Burgas region)",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-41_4103.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Preventive Flood-Defence Investments by Bulgarian Municipalities (2022–2025)",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-27_4104.html"
         },
         {
             "date": "19 September 2025",
@@ -15,51 +27,15 @@
         },
         {
             "date": "19 September 2025",
-            "title": "National Programme for Energy Efficiency of Multi-family Residential Buildings ",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2015-6_3470.html"
+            "title": "Preparation of the Social Climate Plan of the Republic of Bulgaria",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2025-15_3970.html"
         },
         {
-            "date": "06 June 2025",
-            "title": "Bilateral Agreements for Labour Migration",
-            "category": "Income support for people in employment (e.g., short-time work)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2018-1_3851.html"
-        },
-        {
-            "date": "06 June 2025",
+            "date": "30 April 2025",
             "title": "Employment Conditions for Third-Country Nationals in Bulgaria",
             "category": "Income support for people in employment (e.g., short-time work)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2016-27_3847.html"
-        },
-        {
-            "date": "06 June 2025",
-            "title": "Advisory Council for the European Green Deal",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2022-27_3667.html"
-        },
-        {
-            "date": "27 February 2025",
-            "title": "COVID - 19: Income support for workers",
-            "category": "Income support for people in employment (e.g., short-time work)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2020-11_2708.html"
-        },
-        {
-            "date": "24 October 2024",
-            "title": "Micro-credit Guarantee Fund",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2011-1_2510.html"
-        },
-        {
-            "date": "24 October 2024",
-            "title": "Encouraging micro enterprise employers to hire unemployed",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2003-1_2596.html"
-        },
-        {
-            "date": "24 October 2024",
-            "title": "Energy Efficiency and Renewable Sources Fund",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/BG-2015-20_2710.html"
         }
     ]
 }

@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "06 June 2025",
-            "title": "Talents attraction",
+            "date": "01 December 2025",
+            "title": "Emergency management plan and protective measures",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-25_3867.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2025-21_4046.html"
         },
         {
-            "date": "06 June 2025",
-            "title": "Law of May 10, 2022 - Health insurance",
-            "category": "Return policies for migrant workers ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-10_3816.html"
-        },
-        {
-            "date": "06 June 2025",
-            "title": "Grand-ducal regulation of may 12, 2022",
+            "date": "01 December 2025",
+            "title": "Strategy for adapting to the effects of climate change",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2022-1_3811.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2025-6_4048.html"
         },
         {
-            "date": "06 June 2025",
-            "title": "Law of August 27, 2024",
+            "date": "29 September 2025",
+            "title": "Greater green+",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-9_3989.html"
+        },
+        {
+            "date": "24 September 2025",
+            "title": "Citizens' committe 2050",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-37_3786.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2021-1_3984.html"
         },
         {
-            "date": "06 June 2025",
-            "title": "Law of April 21, 2023 - Conditions of entry and residence for third-country nationals",
+            "date": "24 September 2025",
+            "title": "Tax relief for investment in an ecological and energy transition project",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2025-27_3985.html"
+        },
+        {
+            "date": "22 September 2025",
+            "title": "Environmental impact assessment",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-19_3777.html"
-        },
-        {
-            "date": "06 June 2025",
-            "title": "Law of June 4, 2024 on the labour shortages",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2024-27_3766.html"
-        },
-        {
-            "date": "06 June 2025",
-            "title": "Law on the free movement of person",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2023-35_3760.html"
-        },
-        {
-            "date": "06 June 2025",
-            "title": "Recovery and resilience plan",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2021-18_3704.html"
-        },
-        {
-            "date": "11 February 2025",
-            "title": "The skills of tomorrow",
-            "category": "Smoothing frictions or reallocation of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2002-41_2491.html"
-        },
-        {
-            "date": "11 February 2025",
-            "title": "Accreditation of prior and experiential learning",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2010-3_2493.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/LU-2020-23_3981.html"
         }
     ]
 }

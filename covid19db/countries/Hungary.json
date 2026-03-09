@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "08 June 2025",
-            "title": "Annual quota for work permits issued to non-EU nationals ",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-9_3856.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "Employment rules for guest workers",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-1_3835.html"
-        },
-        {
-            "date": "28 March 2025",
-            "title": "SME Technology Plus Lending Budapest Programme",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-44_3639.html"
-        },
-        {
-            "date": "28 March 2025",
-            "title": "Home renovation programme",
-            "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-27_3638.html"
-        },
-        {
-            "date": "28 March 2025",
-            "title": "SME Technology Plus Loan Programme",
-            "category": "Change of production/Innovation",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-18_3637.html"
-        },
-        {
-            "date": "28 March 2025",
-            "title": "Support for the purchase of electric road vehicles for enterprises",
+            "date": "12 December 2025",
+            "title": "Urban green and blue infrastructure development ",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2024-6_3635.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2026-1_4148.html"
         },
         {
-            "date": "28 March 2025",
-            "title": "Energy Efficiency Obligation Scheme (EKR)",
+            "date": "12 December 2025",
+            "title": "Jedlik Energy Programme - Support for green energy production and storage for companies",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2025-26_4149.html"
+        },
+        {
+            "date": "12 December 2025",
+            "title": "Cooperation for climate-conscious river basin management / Life Logos 4 Waters project",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2021-40_4150.html"
+        },
+        {
+            "date": "12 December 2025",
+            "title": "Water to the land programme",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2025-8_4151.html"
+        },
+        {
+            "date": "23 September 2025",
+            "title": "Jedlik district heating support for service providers",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2025-25_3983.html"
+        },
+        {
+            "date": "02 September 2025",
+            "title": "Home renovation programme 2025",
             "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2021-1_3634.html"
-        },
-        {
-            "date": "28 March 2025",
-            "title": "Reference-rate freeze for adjustable-rate mortgages",
-            "category": "Preventing over-indebtedness",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-1_3518.html"
-        },
-        {
-            "date": "23 January 2025",
-            "title": "Solar panel programme for residents",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2021-50_2811.html"
-        },
-        {
-            "date": "23 January 2025",
-            "title": "Education and childcare for Ukrainian refugee children",
-            "category": "Access to childcare and education",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2022-10_2442.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/HU-2025-4_3928.html"
         }
     ]
 }

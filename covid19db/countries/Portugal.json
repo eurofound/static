@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "30 May 2025",
-            "title": "Exceptional support to workers' families",
-            "category": "Support for parents and carers (financial or in kind)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-11_874.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Exceptional and temporary recognition of the right to sick pay",
-            "category": "Paid sick leave",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-10_554.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Occupational health and safety promotion - Health professionals",
-            "category": "Occupational health and safety",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-4_532.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Occupational health and safety in the public transportation service",
-            "category": "Occupational health and safety",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_528.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "COVID-19: 40 urgent measures for construction workers ",
-            "category": "Occupational health and safety",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-25_1052.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Rotation of working teams rota in public passenger transportation companies",
-            "category": "Change of work arrangements (working time, rota schemes)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-13_390.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Care for children or other dependants of workers of essential services",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-11_395.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Tripartite Declaration of Commitment to jointly promote the economic and social recovery",
+            "date": "13 December 2025",
+            "title": "Regenerating territories funding line",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2020-20_1038.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2025-27_4155.html"
         },
         {
-            "date": "13 May 2025",
-            "title": "Campaign Jobs for Climate ",
+            "date": "12 December 2025",
+            "title": "Treasury support line",
+            "category": "Access to finance",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2025-27_4147.html"
+        },
+        {
+            "date": "11 December 2025",
+            "title": "Support scheme for restoring the productive capacity and economic competitiveness",
+            "category": "Measures to support a gradual relaunch of work",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2025-27_4124.html"
+        },
+        {
+            "date": "28 November 2025",
+            "title": "Support measures and mitigation of the impact of rural fires",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2016-23_3630.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2025-27_4041.html"
         },
         {
-            "date": "13 May 2025",
-            "title": "Agreement on vocational training and qualifications ",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2021-31_3623.html"
+            "date": "18 September 2025",
+            "title": "Light Vehicle Scrappage Incentive Programme",
+            "category": "Sustainable mobility",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2025-14_3956.html"
+        },
+        {
+            "date": "17 September 2025",
+            "title": "Green Industrial Strategy",
+            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/PT-2024-5_3944.html"
         }
     ]
 }

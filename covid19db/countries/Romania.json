@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "30 May 2025",
-            "title": "EU Blue Card for highly skilled worker",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-10_3843.html"
+            "date": "10 December 2025",
+            "title": "Measures to protect employees during periods of extreme temperatures",
+            "category": "Occupational health and safety",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2000-27_4112.html"
         },
         {
-            "date": "30 May 2025",
-            "title": "Digital nomad Visa ",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2022-3_3841.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "Setting the quota of foreign workers newly admitted to the labour market in 2024",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-52_3839.html"
-        },
-        {
-            "date": "30 May 2025",
-            "title": "State aid scheme for the replacement of energy inefficient machinery and equipment in the shipping and air transport sectors ",
+            "date": "10 December 2025",
+            "title": "National strategy for adaptation to climate change ",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-50_3706.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-34_4116.html"
         },
         {
-            "date": "30 May 2025",
-            "title": "Investment support state aid scheme for the purchase of zero emission road transport vehicles",
+            "date": "10 December 2025",
+            "title": "Public grants scheme for agricultural producers",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-41_4120.html"
+        },
+        {
+            "date": "10 December 2025",
+            "title": "Emergency aid for victims of dangerous weather events ",
+            "category": "Other humanitarian measures",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2025-31_4121.html"
+        },
+        {
+            "date": "19 September 2025",
+            "title": "Photovoltaic Green House 2024 programme",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-49_3703.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2024-11_3965.html"
         },
         {
-            "date": "14 May 2025",
-            "title": "Informing beneficiaries of temporary protection on access to the labour market",
-            "category": "Smoothing frictions or reallocation of workers",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2022-27_2874.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "The green house program ",
+            "date": "19 September 2025",
+            "title": "Multi-annual national programme for improving the energy performance of apartment buildings",
             "category": "Retrofitting buildings",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-1_3527.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Preparing teachers to address needs of Ukrainian children",
-            "category": "Access to childcare and education",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2022-27_2893.html"
-        },
-        {
-            "date": "14 May 2025",
-            "title": "Granting support and humanitarian assistance to foreign citizens or stateless persons in special situations",
-            "category": "Keeping or obtaining a safe home",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-18_3214.html"
-        },
-        {
-            "date": "02 March 2025",
-            "title": "Support of SMEs in sustainable growth and job creation",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-51_3526.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/RO-2023-14_3969.html"
         }
     ]
 }

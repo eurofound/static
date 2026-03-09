@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "09 June 2025",
-            "title": "Bilateral employment agreement with the Philippines",
+            "date": "08 December 2025",
+            "title": "Amended Natural Disaster Recovery Act ",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2025-44_4093.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Financial aid following natural disasters ",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2025-25_4094.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Absence from work due to a natural disaster \r",
+            "category": "Keeping or obtaining a safe home",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2013-10_4095.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Campaign #YouAreResilience ",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2025-26_4097.html"
+        },
+        {
+            "date": "08 December 2025",
+            "title": "Multi-annual plan for mitigating flood damage after the August 2023 floods (2025–2028) ",
             "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2025-11_3772.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2025-20_4099.html"
         },
         {
-            "date": "09 June 2025",
-            "title": "Aid for agriculture and fisheries",
-            "category": "Access to finance",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-27_2843.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Integration of migrants",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-44_3771.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Labour market test exemptions",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-52_3770.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Expeditious issuance of single permit",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-30_3769.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Setting prices for certain petroleum products",
-            "category": "Support for fuel expenses",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2022-25_2840.html"
-        },
-        {
-            "date": "08 June 2025",
-            "title": "SID Green",
+            "date": "16 September 2025",
+            "title": "Integrated National Energy and Climate Plan (NECN 2024)",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-32_3512.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "Temporary measures on the employment of foreign workers due to flood",
-            "category": "Mobilisation of a larger workforce",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-37_3337.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "Mandatory solidarity contribution for post-flood recover",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2023-35_3342.html"
-        },
-        {
-            "date": "21 May 2025",
-            "title": "Funding for flood reconstruction",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-1_3509.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/SI-2024-51_3935.html"
         }
     ]
 }

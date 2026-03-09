@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "26 September 2025",
+            "date": "05 December 2025",
+            "title": "Preparation for Forest Damage in Finland",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2025-43_4083.html"
+        },
+        {
+            "date": "04 December 2025",
+            "title": "National Climate Change Adaptation Plan 2030\r",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2023-1_4076.html"
+        },
+        {
+            "date": "03 December 2025",
+            "title": "Work in the heat - risk management at workplaces (HeatFit)",
+            "category": "Occupational health and safety",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2025-49_4071.html"
+        },
+        {
+            "date": "18 September 2025",
             "title": "Increase to the vehicle tax on electric and hybrid cars",
             "category": "Sustainable mobility",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2026-1_3955.html"
         },
         {
-            "date": "26 September 2025",
-            "title": "Lower targets for the distribution obligation of renewable transport fuels",
-            "category": "Support for fuel expenses",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2025-1_3919.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Grants to speed up the municipalities' climate work",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2023-41_3390.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Just transition now! - Campaign ",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2023-3_3589.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Clause on anticipatory skills development in white collar collective bargaining agreements in the chemical industry",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2022-4_3628.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Peat Working Group",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2020-15_3529.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Electrification Subsidy",
-            "category": "Support for energy bills",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2022-27_2970.html"
-        },
-        {
-            "date": "26 September 2025",
-            "title": "Lowering the excise duty on liquid fuels ",
-            "category": "Support for fuel expenses",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2024-1_3920.html"
-        },
-        {
-            "date": "26 September 2025",
+            "date": "27 August 2025",
             "title": "Lowering the vehicle tax rate",
             "category": "Support for other basic items (e.g., food, housing, public transport, medicines)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2025-1_3922.html"
         },
         {
-            "date": "26 September 2025",
-            "title": "Removal of the municipalities obligation to form climate action plans",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2025-1_3921.html"
+            "date": "22 August 2025",
+            "title": "Lowering the excise duty on liquid fuels ",
+            "category": "Support for fuel expenses",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/FI-2024-1_3920.html"
         }
     ]
 }

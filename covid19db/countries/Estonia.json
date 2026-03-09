@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
+            "date": "02 December 2025",
+            "title": "Sustainable urban draining system in Viimsi ",
+            "category": "Financing the green transition",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2020-5_4057.html"
+        },
+        {
+            "date": "02 December 2025",
+            "title": "Emergency support for farmers to compensate for damage caused by natural disasters",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-18_4058.html"
+        },
+        {
+            "date": "02 December 2025",
+            "title": "Emergency support subsidy for agricultural producers for extreme weather conditions",
+            "category": "Direct subsidies (full or partial) or damage compensation",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-11_4061.html"
+        },
+        {
             "date": "27 August 2025",
-            "title": "Flood risk construction activities",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-11_3426.html"
+            "title": "Reduction of subsidy for renovating apartment buildings for energy efficiency ",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-38_3924.html"
         },
         {
-            "date": "31 July 2025",
-            "title": "'Start Smart' programme for upskilling entrepreneurs with AI",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-14_3799.html"
+            "date": "06 August 2025",
+            "title": "Postponement of Corporate Sustainability Reporting ",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2025-21_3912.html"
         },
         {
-            "date": "31 July 2025",
-            "title": "Employability Programme for Refugees",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-22_3775.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Entrepreneurship programme 'Boost' for refugees ",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3774.html"
-        },
-        {
-            "date": "31 July 2025",
-            "title": "Entrepreneurship programme \u2018Empowering Women\u2019 for migrant women",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-40_3773.html"
-        },
-        {
-            "date": "09 June 2025",
+            "date": "28 April 2025",
             "title": "Employment Programme 2024-2029",
             "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
             "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-1_3821.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Employers' Confederation opposes Climate-Resilient Economy Act",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-42_3676.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Environment and Responsible Entrepreneurship Working Group",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-1_3659.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Just transition forum",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2024-46_3671.html"
-        },
-        {
-            "date": "09 June 2025",
-            "title": "Research group for monitoring social transition of Ida-Viru",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/EE-2023-42_3678.html"
         }
     ]
 }

@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
+            "date": "02 December 2025",
+            "title": "National Energy and Climate Plan (NECP / ΕΣΕΚ)",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2024-51_4051.html"
+        },
+        {
+            "date": "02 December 2025",
+            "title": "Ministry of Climate Crisis and Civil Protection",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2021-37_4053.html"
+        },
+        {
+            "date": "01 December 2025",
+            "title": "National Information Web Hub for Adaptation to Climate Change (Adaptive Greece Hub)",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2019-1_4047.html"
+        },
+        {
+            "date": "25 November 2025",
+            "title": "Production of high-resolution climate data and climate projections",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2019-1_4034.html"
+        },
+        {
+            "date": "24 November 2025",
+            "title": "LIFE-IP AdaptInGR – Boosting the implementation of adaptation policy across Greece",
+            "category": "Other",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2019-1_4030.html"
+        },
+        {
             "date": "23 September 2025",
-            "title": "Photovoltaic panels on rooftop",
+            "title": "Charge Everywhere ",
             "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-18_3545.html"
-        },
-        {
-            "date": "23 September 2025",
-            "title": "Save/renovate my home \u2013 for young people",
-            "category": "Support for spending, stimulus packages",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-20_3248.html"
-        },
-        {
-            "date": "10 June 2025",
-            "title": "Residence permit with the right to work for third-country nationals who have been working illegally in Greece up to 31/12/2023",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-51_3872.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": " Rebrain Greece Digital Platform",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-39_3877.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Customized  intervention programs for unemployed youth, featuring activities such as needs assessment, professional guidance, and social empowerment.",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2024-22_3636.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Proposals of IME GSEVEE for the Transition to the Post-Lignite Era in the Region of Western Macedonia: A Holistic Social, Economic, and Environmental Framework",
-            "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2021-19_3612.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Study by INE GSEE on Just Transition in Greece",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2021-38_3615.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Comprehensive Workforce Empowerment Interventions for a Just Transition in the Post-Lignite Era",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2024-14_3631.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Economic and Social Council (OKE) opinion on the conditions and procedures for the entry, residence, and employment of workers who are third-country nationals ",
-            "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-46_3723.html"
-        },
-        {
-            "date": "05 June 2025",
-            "title": "Migration Code - Law 5038/2023 ",
-            "category": "Other humanitarian measures",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-13_3871.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/GR-2023-19_3982.html"
         }
     ]
 }

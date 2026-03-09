@@ -2,64 +2,40 @@
     "status": "success",
     "data": [
         {
-            "date": "02 October 2025",
-            "title": "Energy Island Bornholm - a part of the Climate Agreement from 2020",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-26_3923.html"
+            "date": "02 December 2025",
+            "title": "Act on certain natural damages",
+            "category": "Protection of vulnerable groups (beyond employment support)",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-32_4050.html"
         },
         {
-            "date": "02 October 2025",
-            "title": "The governments' 2030 plan ",
+            "date": "01 December 2025",
+            "title": "Climate adaptation at Kastellet",
+            "category": "Retrofitting buildings",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2019-37_4042.html"
+        },
+        {
+            "date": "01 December 2025",
+            "title": "Climate adaptation at Aarhus Vand",
             "category": "Strategic plans and programmes",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-39_3593.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-1_4043.html"
         },
         {
-            "date": "02 October 2025",
-            "title": "The Green Tripartite ",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-47_3588.html"
-        },
-        {
-            "date": "02 October 2025",
-            "title": "Accelerating the Green Transition - with Jobs and Security for Workers.",
-            "category": "Income support for people in employment (e.g., short-time work)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-48_3590.html"
-        },
-        {
-            "date": "02 October 2025",
-            "title": "DKK 636 million to green transition ",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-17_3592.html"
-        },
-        {
-            "date": "02 October 2025",
-            "title": "Pool for green continuing education and learning ",
-            "category": "Active labour market policies (enhancing employability, training, subsidised job creation, etc.)",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2022-27_3015.html"
-        },
-        {
-            "date": "09 September 2025",
-            "title": "The Bridge to the Future ",
-            "category": "Financing the green transition",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2020-23_3595.html"
-        },
-        {
-            "date": "29 April 2025",
-            "title": "National initiative to recruit and retain non-EU healthcare staff",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2024-27_3730.html"
-        },
-        {
-            "date": "29 April 2025",
-            "title": "New English-taught study places in Business Academies and University Colleges",
+            "date": "01 December 2025",
+            "title": "Svanemøllen storm water tunnel",
             "category": "Other",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2025-13_3744.html"
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2025-51_4044.html"
         },
         {
-            "date": "29 April 2025",
-            "title": "Amendment to the Immigration Act aimed at enhancing international recruitment",
-            "category": "Labour market testing policies ",
-            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2023-13_3732.html"
+            "date": "01 December 2025",
+            "title": "Municipalities and businesses cooperate on implementing climate action plans.",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2025-1_4045.html"
+        },
+        {
+            "date": "26 November 2025",
+            "title": "Coast to Coast Climate Challenge",
+            "category": "Strategic plans and programmes",
+            "url": "https://static.eurofound.europa.eu/covid19db/cases/DK-2017-1_4036.html"
         }
     ]
 }
