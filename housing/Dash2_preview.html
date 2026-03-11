@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        :root { --primary: #0B7189; --secondary: #1F2937; --bg: #ffffff; --white: #ffffff; --border: #e2e8f0; --orange: #ea580c; --green: #047857; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--secondary); margin: 0; padding: 15px; }
+        
+        .container { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; gap: 15px; }
+        
+        .header-card { background: var(--white); border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .controls-row { display: flex; gap: 30px; align-items: flex-end; justify-content: space-between; }
+        .ctrl-group { flex: 1; position: relative; }
+        .ctrl-group label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        /* Custom Select */
+        .custom-select-wrapper { position: relative; user-select: none; width: 100%; }
+        .custom-select { position: relative; display: flex; flex-direction: column; }
+        .custom-select__trigger { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 15px; font-weight: 400; color: #333; background: #fff; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+        .custom-options { position: absolute; display: block; top: 100%; left: 0; right: 0; border: 1px solid var(--border); border-top: 0; background: #fff; opacity: 0; visibility: hidden; z-index: 100; max-height: 400px; overflow-y: auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-radius: 0 0 6px 6px; transition: all 0.2s; }
+        .custom-select.open .custom-options { opacity: 1; visibility: visible; }
+        .custom-option { padding: 10px 16px; font-size: 14px; cursor: pointer; display: flex; align-items: center; }
+        .custom-option:hover { background-color: #f1f5f9; color: var(--primary); }
+        .arrow { width: 10px; height: 10px; border-right: 2px solid #999; border-bottom: 2px solid #999; transform: rotate(45deg); margin-top: -4px; transition: 0.2s; }
+        .open .arrow { transform: rotate(-135deg); margin-top: 2px; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 10px; margin-bottom: 5px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .tab { padding: 8px 18px; background: transparent; border-radius: 20px; cursor: pointer; font-weight: 600; color: #64748b; transition: all 0.2s; font-size: 14px; }
+        .tab:hover { color: var(--primary); background: #f0f9ff; }
+        .tab.active { background: var(--primary); color: white; }
+
+        /* Search & Sub-controls Area */
+        .sub-controls-area { display: flex; gap: 20px; align-items: flex-end; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
+        .search-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+        .tag { background: #e0f2fe; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .tag-remove { cursor: pointer; font-weight: bold; font-size: 14px; opacity: 0.6; }
+        .search-box { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box; outline: none; }
+
+        .card { background: var(--white); border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid var(--border); display: flex; flex-direction: column; height: 100%; }
+        .card-header { background: #f8fafc; padding: 15px 20px; font-weight: 700; border-bottom: 1px solid var(--border); color: #334155; font-size: 15px; }
+        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 15px; }
+
+        .ghs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
+        .span-full { grid-column: 1 / -1; }
+        .exclusion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+        .demo-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+        .demo-label { color: #64748b; font-size: 14px; }
+        .demo-val { font-size: 18px; font-weight: 700; color: var(--primary); }
+
+        .bar-container { margin-bottom: 15px; }
+        .bar-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; color: #475569; font-weight: 600; }
+        .bar-wrapper { position: relative; width: 100%; height: 12px; }
+        .bar-fill { background: var(--orange); height: 100%; border-radius: 6px; position: absolute; left: 0; top: 0; }
+        .bar-label-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: -2px; padding-left: 8px; white-space: nowrap; }
+
+        .hbar-row { display: flex; align-items: center; margin-bottom: 12px; }
+        .hbar-label { width: 80px; font-size: 13px; font-weight: 600; color: #334155; }
+        .hbar-wrapper { flex: 1; height: 24px; position: relative; }
+        .hbar-fill { height: 100%; background: var(--primary); border-radius: 4px; position: absolute; left: 0; }
+        .hbar-val { position: absolute; font-size: 12px; font-weight: 700; color: #334155; top: 4px; padding-left: 8px; white-space: nowrap; }
+
+        .policy-block { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px; overflow: hidden; background: #fff; }
+        .policy-head { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #334155; font-size: 14px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .policy-type-badge { background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 11px; text-transform: uppercase; font-weight: 700; border: 1px solid #bae6fd; margin-left: 10px; }
+        
+        .policy-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+        .policy-panel { padding: 16px; }
+        .panel-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 10px; }
+        .reg-item { font-size: 13px; margin-bottom: 6px; position: relative; padding-left: 20px; line-height: 1.4; }
+        .reg-item.true::before { content: "✔"; color: var(--green); font-weight: bold; position: absolute; left: 0; top: 0; }
+        .details-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-top: 8px; }
+        .details-table td { padding: 4px 0; vertical-align: top; border-bottom: 1px solid #f8fafc; }
+        .details-table td:first-child { color: #64748b; width: 45%; padding-right: 10px; }
+        .details-table td:last-child { font-weight: 600; color: #334155; }
+
+        .line-chart { width: 100%; height: 300px; overflow: visible; }
+        .line-legend { display: flex; gap: 15px; justify-content: center; margin-bottom: 10px; font-size: 12px; font-weight: 600; }
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        
+        .chart-tooltip { position: absolute; background: rgba(0,0,0,0.85); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 100; transform: translate(-50%, -120%); white-space: nowrap; }
+
+        .flag-icon { margin-right: 12px; border-radius: 2px; box-shadow: 0 0 1px rgba(0,0,0,0.2); }
+        .empty-state { text-align: center; padding: 60px; color: #94a3b8; font-style: italic; }
+
+        .footer-note { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 15px; }
+        .footer-top { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-logo { height: 35px; }
+        .footer-text { font-size: 11px; color: #94a3b8; line-height: 1.5; }
+        .source-label { font-weight: 700; color: #64748b; margin-right: 5px; }
+
+        .footnote-area { margin-top: 15px; padding-top: 15px; border-top: 1px dotted #cbd5e1; font-size: 11px; color: #64748b; line-height: 1.6; }
+        .footnote-item { margin-bottom: 6px; }
+
+        @media (max-width: 900px) {
+            .ghs-grid, .exclusion-grid { grid-template-columns: 1fr; }
+            .controls-row { flex-direction: column; align-items: stretch; gap: 15px; }
+            .container { padding: 15px; }
+            .sub-controls-area { flex-direction: column; align-items: stretch; }
+            .footer-top { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="dashboard-container">
+    <div class="header-card" data-html2canvas-ignore="true">
+        <div class="controls-row">
+            <div class="ctrl-group">
+                <label>Select Country</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <span id="selected-val"><span class="fi fi-eu flag-icon"></span> Select Country</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options" id="country-options"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs" id="tabContainer" data-html2canvas-ignore="true"></div>
+
+    <div class="sub-controls-area" data-html2canvas-ignore="true">
+        <div class="ctrl-group" style="flex:2;">
+            <label>Search (Current Section)</label>
+            <div class="search-tags" id="searchTags"></div>
+            <input type="text" id="searchBox" class="search-box" list="searchList" placeholder="Search for any policy, rule or statistic...">
+            <datalist id="searchList"></datalist>
+        </div>
+
+        <div id="subControls" style="display:none; flex:1;">
+            <label style="font-size:11px; font-weight:700; color:#64748b; margin-bottom:8px; display:block;">SELECT TOPIC:</label>
+            <select id="affordabilitySelect" class="search-box" style="width: 100%;"></select>
+        </div>
+    </div>
+
+    <div id="content"></div>
+
+    <div class="footer-note">
+        <div class="footer-top">
+            <img src="https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/logo.svg" alt="Eurofound" class="footer-logo">
+            <div class="footer-text" id="footer-sources">
+                <span class="source-label">Source:</span> Eurostat / National Sources
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // -------------------------------------------------------------
+    // CONFIGURATION
+    // -------------------------------------------------------------
+    const DATA_URL_PRIMARY = "./housing_data.json"; 
+    const DATA_URL_FALLBACK = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/housing_data.json";
+
+    const COUNTRIES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"];
+    const FLAG_MAP = {'Austria':'at','Belgium':'be','Bulgaria':'bg','Croatia':'hr','Cyprus':'cy','Czechia':'cz','Denmark':'dk','Estonia':'ee','Finland':'fi','France':'fr','Germany':'de','Greece':'gr','Hungary':'hu','Ireland':'ie','Italy':'it','Latvia':'lv','Lithuania':'lt','Luxembourg':'lu','Malta':'mt','Netherlands':'nl','Poland':'pl','Portugal':'pt','Romania':'ro','Slovakia':'sk','Slovenia':'si','Spain':'es','Sweden':'se','United Kingdom':'gb'};
+
+    // New Mappings
+    const LABEL_MAP = {
+        "Social housing": "Social housing tenancy required",
+        "Private rental": "Private rental tenancy required",
+        "No benefits": "Not receiving other benefits",
+        "Other benefits": "Must be receiving other benefits",
+        "Income": "Income below threshold",
+        "Income-tested?": "Income-tested",
+        "Housing costs > threshold": "Housing costs above threshold",
+        "Employed": "Employment required",
+        "Unemployed": "Unemployment status required",
+        "Specific demo group": "Specific demographic group",
+        "Interest": "Interest Rate",
+        "Max %": "Max % of costs covered",
+        "Max sum": "Max available sum",
+        "Calculation based on?": "Calculation method",
+        "Regulated how?": "Subsequent increase regulation method",
+        "Exceptions to increase amount for renovations": "Exceptions to rent increase caps for major/climate renovations",
+        "Can either party terminate for other reason with compensation?": "Either party can terminate for other reasons with compensation",
+        "Type of measure": "Measure Type",
+        "Homelessness strategy": "National homelessness strategy",
+        "Homelessness strategy?": "National homelessness strategy" 
+    };
+
+    // Specific Footnotes by Section Key
+    const FOOTNOTES = {
+        "Tax Relief": `
+            <div class="footnote-item"><strong>*Tax Definitions:</strong> "Transfer tax" includes capital gains tax. "Registry tax" includes land registry, stamp duty, notary fees.</div>
+            <div class="footnote-item"><strong>*Reduction/Amount:</strong> Refers to the discount amount (for discount/credit) or the deductible amount (for deductions).</div>
+            <div class="footnote-item"><strong>*Minimum Residence:</strong> Can refer to residence before sale (transfer tax) and/or after acquisition (registry tax).</div>`,
+        
+        "Social Housing": `
+            <div class="footnote-item"><strong>*Requirements (True/False):</strong> "True (Partly)" means the requirement varies by area or is conditional (e.g. citizenship only required if not a permanent resident). "True" means always required. "False" means no explicit requirement found.</div>`,
+        
+        "Rent Regulations": `
+            <div class="footnote-item"><strong>*Initial Rent:</strong> Marked "Yes" if there is any cap/limitation; "No" if no clear limitation or only ex-post challenge allowed.</div>
+            <div class="footnote-item"><strong>*Lease Terms:</strong> "Depends on lease" implies parties can freely negotiate a clause which becomes binding. "Varies" implies multiple regulated options exist.</div>
+            <div class="footnote-item"><strong>*Termination:</strong> Refers to ending tenancy before expiry/renewal. Refusal to renew or eviction proceedings are not considered terminations here.</div>
+            <div class="footnote-item"><strong>*Rent Increases:</strong> Unless otherwise specified, increases are linked to the Consumer Price Index (CPI) or a specific national rental index.</div>`,
+        
+        "Housing Allowances": `
+            <div class="footnote-item"><strong>*Employment:</strong> Requirement marked as needed also when registration as a jobseeker is sufficient.</div>
+            <div class="footnote-item"><strong>*Social Housing:</strong> Requirement marked as needed also when being on the waiting list is sufficient.</div>`,
+        
+        "Homebuying Subsidies": `
+            <div class="footnote-item"><strong>*Max % / Caps:</strong> Refers to property value (loans/grants), mortgage amount (guarantees), savings amount (savings account), or interest rate (interest subsidies).</div>
+            <div class="footnote-item"><strong>*Interest/Fees:</strong> Refers to interest rates (loans), final interest rate (interest subsidy), or fees (guarantees).</div>`,
+        
+        "Partly": `<div class="footnote-item"><strong>*Partly:</strong> Indicates that the requirement/feature only applies in some regions, specific providers, specific demographic groups, or if conditional criteria are met.</div>`
+    };
+
+    const PUBLIC_SPENDING_MAX_SCALE = 2.5;
+
+    let DB = {}; 
+    let state = {
+        country: COUNTRIES[0] || null,
+        section: "Affordability", // Internal DB key
+        subIndicator: null,
+        searchTags: [],
+        activePartly: false 
+    };
+    
+    let dynamicSearchIndex = []; // Rebuilt dynamically per section
+
+    // -------------------------------------------------------------
+    // DATA LOADING
+    // -------------------------------------------------------------
+    async function loadData() {
+        const container = document.getElementById('content');
+        container.innerHTML = '<div class="empty-state">Loading data...</div>';
+        try {
+            // Try Primary
+            let response = await fetch(DATA_URL_PRIMARY);
+            if (!response.ok) {
+                console.warn("Local fetch failed. Attempting fallback URL...");
+                response = await fetch(DATA_URL_FALLBACK);
+            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            DB = await response.json();
+            init(); 
+        } catch (e) {
+            console.error(e);
+            container.innerHTML = `<div class="empty-state" style="color:red;">Failed to load data.<br><small>${e.message}</small></div>`;
+        }
+    }
+
+    // -------------------------------------------------------------
+    // HELPERS & TRANSFORMS
+    // -------------------------------------------------------------
+    function formatValue(key, val) {
+        if (val === 'N/A' || val === null) return 'N/A';
+        if (val === "0.0" || val === 0) return "No";
+        if (val === "1.0" || val === 1) return "Yes";
+
+        // Text replacement logic for internal values (e.g. replacing "people")
+        if (typeof val === 'string') {
+            val = val.replace(/\bpeople\b/gi, "household composition");
+        }
+
+        const isPercentageKey = ["Stock %", "Max %", "Max % covered", "Interest", "Interest/fee rate", "Avg rate on new loans %", "Outstanding loans to disposable income ratio %", "% of lending with variable interest rate"].includes(key) || key.includes("%");
+        let num = Number(val);
+        
+        if (isNaN(num)) return val;
+
+        if (key === "Reduction/ amount") {
+            if (num <= 1.0 && num > 0) return (num * 100).toFixed(0) + '%'; 
+            return '€' + num.toLocaleString('en-US'); 
+        }
+
+        if (isPercentageKey) {
+            if (num <= 1.0 && num !== 0) return (num * 100).toFixed(1) + '%';
+            return num.toFixed(1) + '%';
+        }
+
+        const isCurrencyKey = ["Max sum", "Capped at", "Avg mortgage amount"].includes(key);
+        if (isCurrencyKey) return '€' + num.toLocaleString('en-US');
+
+        return num.toLocaleString('en-US');
+    }
+
+    function cleanLabel(text) {
+        let clean = text.replace(/\?$/, "");
+        clean = LABEL_MAP[clean] || clean;
+        return clean.charAt(0).toUpperCase() + clean.slice(1);
+    }
+
+    function formatNumber(num) {
+        if(num === 'N/A' || num === null) return 'N/A';
+        const n = Number(num);
+        if(isNaN(n)) return num;
+        return n.toLocaleString('en-US');
+    }
+
+    function transformItem(item, indicatorLabel) {
+        let newItem = JSON.parse(JSON.stringify(item));
+        
+        if (JSON.stringify(newItem).includes("Partly")) state.activePartly = true;
+
+        if (indicatorLabel === "Tax Relief" && newItem.details["Tax targeted"]) {
+            newItem.title = `${newItem.details["Tax targeted"]} - ${newItem.title}`;
+            delete newItem.details["Tax targeted"];
+        }
+
+        if (newItem.details["Mortgage"]) {
+            if (newItem.details["Mortgage"] === "1.0" || newItem.details["Mortgage"] === 1) newItem.true_items.push("Mortgage required");
+            delete newItem.details["Mortgage"];
+        }
+        Object.keys(newItem.details).forEach(k => {
+            if (k.startsWith("Calculation method")) {
+                const val = newItem.details[k];
+                if (val === "0.0" || val === 0 || val === "False") delete newItem.details[k];
+            }
+        });
+        newItem.true_items = newItem.true_items.map(cleanLabel);
+        newItem.false_items = newItem.false_items.map(cleanLabel); 
+        return newItem;
+    }
+
+    // -------------------------------------------------------------
+    // RENDERERS
+    // -------------------------------------------------------------
+    function renderLineChart(prices, rents) {
+        if (!prices && !rents) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
+        const safePrices = prices || {};
+        const safeRents = rents || {};
+        const years = [...new Set([...Object.keys(safePrices), ...Object.keys(safeRents)])].sort();
+        if (years.length < 2) return '<div style="text-align:center; padding:50px; color:#ccc;">Insufficient Data</div>';
+
+        const allVals = [];
+        years.forEach(y => { 
+            if(safePrices[y] && safePrices[y] !== 'N/A') allVals.push(Number(safePrices[y])); 
+            if(safeRents[y] && safeRents[y] !== 'N/A') allVals.push(Number(safeRents[y])); 
+        });
+        
+        if(allVals.length === 0) return '<div style="text-align:center; padding:50px; color:#ccc;">No Data</div>';
+
+        const minVal = Math.min(...allVals);
+        const maxVal = Math.max(...allVals);
+        const paddingRange = (maxVal - minVal) * 0.1;
+        const min = Math.floor((minVal - paddingRange) / 10) * 10;
+        const max = Math.ceil((maxVal + paddingRange) / 10) * 10;
+        
+        const range = max - min;
+
+        const width = 600; const height = 300;
+        const padding = { top: 20, right: 30, bottom: 40, left: 60 }; 
+        const chartW = width - padding.left - padding.right;
+        const chartH = height - padding.top - padding.bottom;
+        
+        const getX = (i) => padding.left + (i / (years.length - 1)) * chartW;
+        const getY = (val) => padding.top + chartH - ((val - min) / range) * chartH;
+
+        const makePath = (dataObj) => {
+            let d = '';
+            years.forEach((y, i) => {
+                const val = dataObj[y];
+                if (val && val !== 'N/A') d += (d ? 'L' : 'M') + `${getX(i)},${getY(val)}`;
+            });
+            return d;
+        };
+
+        const makePoints = (dataObj, color) => {
+            let pts = '';
+            years.forEach((y, i) => {
+                const val = dataObj[y];
+                if (val && val !== 'N/A') {
+                    pts += `<circle cx="${getX(i)}" cy="${getY(val)}" r="4" fill="${color}" stroke="white" stroke-width="2"/>`;
+                }
+            });
+            return pts;
+        };
+
+        let yAxisHtml = '';
+        let gridLinesHtml = '';
+        for (let v = min; v <= max; v += 10) {
+            const yPos = getY(v);
+            if(yPos >= padding.top && yPos <= height - padding.bottom) {
+                yAxisHtml += `<text x="${padding.left - 10}" y="${yPos + 5}" font-size="16" text-anchor="end" fill="#94a3b8">${v}</text>`;
+                gridLinesHtml += `<line x1="${padding.left}" y1="${yPos}" x2="${width - padding.right}" y2="${yPos}" stroke="#e2e8f0" stroke-dasharray="4"/>`;
+            }
+        }
+
+        let xLabelsHtml = '';
+        years.forEach((y, i) => {
+             xLabelsHtml += `<text x="${getX(i)}" y="${height-10}" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b" style="pointer-events:none;">${y}</text>`;
+        });
+
+        let hoverHtml = '';
+        years.forEach((y, i) => {
+            const pVal = safePrices[y] !== 'N/A' ? safePrices[y] : 'N/A';
+            const rVal = safeRents[y] !== 'N/A' ? safeRents[y] : 'N/A';
+            hoverHtml += `<rect x="${getX(i) - (chartW/years.length)/2}" y="${padding.top}" width="${chartW/years.length}" height="${chartH}" fill="transparent" 
+                onmouseover="showTooltip(event, '${y}', '${pVal}', '${rVal}')" 
+                onmouseout="hideTooltip()" style="cursor:pointer;" />`;
+        });
+
+        return `<div class="line-legend"><div class="legend-item"><div class="dot" style="background:#0B7189;"></div> House Prices</div><div class="legend-item"><div class="dot" style="background:#ea580c;"></div> Rents</div></div>
+        <div style="position:relative;"><svg class="line-chart" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+            ${gridLinesHtml}
+            <line x1="${padding.left}" y1="${height-padding.bottom}" x2="${width-padding.right}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
+            <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height-padding.bottom}" stroke="#cbd5e1" />
+            ${yAxisHtml}
+            ${xLabelsHtml}
+            <path d="${makePath(safePrices)}" fill="none" stroke="#0B7189" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
+            ${makePoints(safePrices, "#0B7189")}
+            <path d="${makePath(safeRents)}" fill="none" stroke="#ea580c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="pointer-events:none;"/>
+            ${makePoints(safeRents, "#ea580c")}
+            ${hoverHtml}
+        </svg><div id="chartTooltip" class="chart-tooltip"></div></div>`;
+    }
+
+    function renderSpending(data) {
+        if(!data) return '';
+        let html = '';
+        const vals = Object.values(data).filter(n => typeof n === 'number');
+        const maxScale = Math.max(PUBLIC_SPENDING_MAX_SCALE, ...vals);
+        for (const [k, v] of Object.entries(data)) {
+            if (v === 'N/A' || v === null) continue;
+            const w = Math.min((v / maxScale) * 100, 100);
+            html += `<div class="bar-container">
+                        <div class="bar-header"><span>${cleanLabel(k)}</span></div>
+                        <div class="bar-wrapper">
+                            <div class="bar-fill" style="width:${w}%"></div>
+                            <span class="bar-label-val" style="left:${w}%">${v}%</span>
+                        </div>
+                     </div>`;
+        }
+        return html;
+    }
+
+    function renderStock(sectionData) {
+        const getVal = (key) => {
+            const obj = sectionData[key]?.content;
+            return (!obj || !obj['Latest Value']) ? 'N/A' : formatNumber(obj['Latest Value']);
+        };
+        return `<div class="demo-row"><span class="demo-label">Annual Completions</span><span class="demo-val">${getVal('Housing Completions')}</span></div>
+        <div class="demo-row"><span class="demo-label">Total Stock</span><span class="demo-val">${getVal('Housing Stock')}</span></div>
+        <div class="demo-row"><span class="demo-label">Total Population</span><span class="demo-val">${getVal('Population')}</span></div>
+        <div class="demo-row"><span class="demo-label">Number of Households</span><span class="demo-val">${getVal('Households')}</span></div>`;
+    }
+
+    function renderPolicy(data, indicatorLabel, filterTitle = null) {
+        if(!data || data.length === 0) return '<div style="color:#ccc;">No data found.</div>';
+        let html = '';
+        let items = data;
+        if (filterTitle) {
+            items = data.filter(item => item.title === filterTitle || (item.details && item.details["Tax targeted"] && (`${item.details["Tax targeted"]} - ${item.title}` === filterTitle)));
+            if (items.length === 0) return '<div style="color:#ccc;">No specific data for this measure.</div>';
+        }
+        items.forEach(rawItem => {
+            const item = transformItem(rawItem, indicatorLabel);
+            
+            let typeBadge = '';
+            if (item.details["Type of measure"]) {
+                typeBadge = `<span class="policy-type-badge">${item.details["Type of measure"]}</span>`;
+                delete item.details["Type of measure"];
+            }
+
+            let detailsHtml = '';
+            if (Object.keys(item.details).length > 0) {
+                detailsHtml += `<div class="panel-label" style="margin-top:16px;">Details & Specs</div><table class="details-table">`;
+                for (const [k, v] of Object.entries(item.details)) detailsHtml += `<tr><td>${cleanLabel(k)}</td><td>${formatValue(k, v)}</td></tr>`;
+                detailsHtml += `</table>`;
+            }
+            
+            const isMortgage = (indicatorLabel === "Mortgage Market");
+            let contentHtml = '';
+            if (!isMortgage) {
+                contentHtml = `<div class="panel-label">Requirements & Eligibility</div>
+                               ${item.true_items.map(i => `<div class="reg-item true">${i}</div>`).join('') || '<div style="color:#ccc; font-size:13px;">None listed</div>'}`;
+            }
+            
+            html += `<div class="policy-block">
+                        <div class="policy-head"><span>${item.title}</span>${typeBadge}</div>
+                        <div class="policy-grid">
+                            <div class="policy-panel">
+                                ${contentHtml}
+                                ${detailsHtml}
+                            </div>
+                        </div>
+                     </div>`;
+        });
+        return html;
+    }
+
+    function renderHorizontalBars(data) {
+        if (!data) return '';
+        let html = ''; const max = 40; 
+        for(const [k, v] of Object.entries(data)) {
+            const w = (v / max) * 100;
+            html += `<div class="hbar-row">
+                        <div class="hbar-label">${cleanLabel(k)}</div>
+                        <div class="hbar-wrapper">
+                            <div class="hbar-fill" style="width:${w}%"></div>
+                            <span class="hbar-val" style="left:${w}%">${v}</span>
+                        </div>
+                     </div>`;
+        }
+        return html;
+    }
+
+    function renderGeneric(label, type, content, sectionTitle, filterTitle = null) {
+        if (type === 'hero_stat') return ''; 
+
+        if (label === "Mortgage Market" && type === 'policy') {
+             return renderPolicy(content, label, filterTitle);
+        }
+
+        if (type === 'time_series') return `<div class="card"><div class="card-header">${cleanLabel(label)} (Index 2015=100)</div><div class="card-body">${renderLineChart(content, undefined)}</div></div>`;
+        if (type === 'bar_chart') return `<div class="card"><div class="card-header">${cleanLabel(label)}</div><div class="card-body">${renderSpending(content)}</div></div>`;
+        if (type === 'policy') return renderPolicy(content, label, filterTitle); 
+        
+        let html = `<div class="card"><div class="card-header">${cleanLabel(label)}</div><div class="card-body">`;
+        if (type === 'horizontal_bar') html += renderHorizontalBars(content);
+        else if (type === 'key_value') for (const [k, v] of Object.entries(content)) html += `<div class="demo-row"><span class="demo-label">${cleanLabel(k)}</span><span class="demo-val">${formatNumber(v)}</span></div>`;
+        else html += `<div style="color:#666;">Data available (${type})</div>`;
+        return html + `</div></div>`;
+    }
+
+    function renderComponent(key, data, sectionTitle, filterTitle = null) {
+        if(key === "Market Trends") return `<div class="card"><div class="card-header">Market Trends (Index 2015=100)</div><div class="card-body">${renderLineChart(data['House Prices Trend']?.content, data['Rent Prices Trend']?.content)}</div></div>`;
+        if(key === "Stock & Demographics") return `<div class="card"><div class="card-header">Stock & Demographics</div><div class="card-body">${renderStock(data)}</div></div>`;
+        if(key === "Short-term Regulations") return renderPolicy(data['Short-term Regulations']?.content, "Short-term Regulations", filterTitle);
+        const item = data[key];
+        if(!item) return '';
+        return renderGeneric(key, item.type, item.content, sectionTitle, filterTitle);
+    }
+
+    function renderGlobalFootnotes(visibleItems) {
+        let html = `<div class="footnote-area">`;
+        
+        if (state.activePartly) {
+            html += FOOTNOTES["Partly"];
+        }
+        
+        visibleItems.forEach(item => {
+            if (FOOTNOTES[item]) {
+                html += FOOTNOTES[item];
+            }
+        });
+
+        return html + `</div>`;
+    }
+
+    function render() {
+        if(!state.country) return;
+        const container = document.getElementById('content');
+        const countryData = DB[state.country];
+        if (!countryData) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
+
+        let html = '';
+        let visibleItems = [];
+        state.activePartly = false; 
+
+        // SEARCH TAGS ACTIVE
+        if (state.searchTags.length > 0) {
+            container.className = '';
+            const renderedComposites = new Set();
+
+            state.searchTags.forEach(tag => {
+                const secData = countryData[tag.section];
+                if(secData) {
+                    visibleItems.push(tag.parent); 
+                    
+                    // Route to composite components to avoid "No Data" screens
+                    if (["House Prices Trend", "Rent Prices Trend"].includes(tag.parent)) {
+                        if (!renderedComposites.has("Market Trends")) {
+                            html += renderComponent("Market Trends", secData, tag.section);
+                            renderedComposites.add("Market Trends");
+                        }
+                    } else if (["Housing Completions", "Housing Stock", "Population", "Households"].includes(tag.parent)) {
+                        if (!renderedComposites.has("Stock & Demographics")) {
+                            html += renderComponent("Stock & Demographics", secData, tag.section);
+                            renderedComposites.add("Stock & Demographics");
+                        }
+                    } else {
+                        html += renderComponent(tag.parent, secData, tag.section, (tag.type === 'sub') ? tag.rawTitle : null);
+                    }
+                }
+            });
+            html += renderGlobalFootnotes(visibleItems);
+            container.innerHTML = html || '<div class="empty-state">No matching data found.</div>';
+            return;
+        }
+
+        // TABS ACTIVE
+        const data = countryData[state.section];
+        if (!data) { container.innerHTML = `<div class="empty-state">No Data</div>`; return; }
+
+        if (state.section === "General Housing System") {
+            const trend = renderComponent("Market Trends", data, state.section);
+            const stock = renderComponent("Stock & Demographics", data, state.section);
+            const spending = renderSpending(data['Public Spending']?.content) ? `<div class="card"><div class="card-header">Public Spending (% GDP)</div><div class="card-body">${renderSpending(data['Public Spending']?.content)}</div></div>` : '';
+            const regContent = data['Short-term Regulations']?.content;
+            const reg = regContent ? `<div class="span-full"><div class="panel-label" style="font-size:14px; margin-bottom:10px;">SHORT-TERM & VACANCY REGULATIONS</div>${renderPolicy(regContent, "Short-term Regulations")}</div>` : '';
+            html = `<div class="ghs-grid">${trend}${stock}${spending}${reg}</div>`;
+            container.className = ''; 
+            visibleItems = ["House Prices Trend", "Rent Prices Trend", "Housing Stock", "Population", "Households", "Housing Completions", "Public Spending", "Short-term Regulations"];
+        } 
+        else if (state.section === "Exclusion") {
+            container.className = 'exclusion-grid';
+            Object.entries(data).forEach(([k,v]) => { 
+                const tileHtml = renderGeneric(k, v.type, v.content, state.section);
+                if(tileHtml) { html += tileHtml; visibleItems.push(k); }
+            });
+        }
+        else {
+            // Affordability
+            const key = state.subIndicator || Object.keys(data)[0];
+            container.className = '';
+            html = renderComponent(key, data, state.section, null);
+            visibleItems.push(key);
+        }
+        
+        html += renderGlobalFootnotes(visibleItems);
+        container.innerHTML = html;
+    }
+
+    // -------------------------------------------------------------
+    // INIT & EVENT HANDLERS
+    // -------------------------------------------------------------
+    function init() {
+        const tabs = document.getElementById('tabContainer');
+        const sections = ["Affordability", "General Housing System", "Exclusion"];
+        const displayNames = ["Finance, supports & regulations", "General Housing System", "Exclusion"];
+
+        sections.forEach((s, idx) => {
+            const btn = document.createElement('div');
+            btn.className = `tab ${s === state.section ? 'active' : ''}`;
+            btn.textContent = displayNames[idx];
+            btn.onclick = () => {
+                state.section = s; 
+                state.subIndicator = null; 
+                state.searchTags = [];
+                updateSearchTagsUI(); 
+                document.getElementById('searchBox').value = '';
+                updateTabs(); 
+                render();
+            };
+            tabs.appendChild(btn);
+        });
+
+        const optionsContainer = document.getElementById('country-options');
+        const triggerSpan = document.getElementById('selected-val');
+        const wrapper = document.querySelector('.custom-select');
+        const trigger = document.querySelector('.custom-select__trigger');
+
+        COUNTRIES.forEach(c => {
+            const iso = FLAG_MAP[c] || 'eu';
+            const div = document.createElement('div');
+            div.className = 'custom-option';
+            div.innerHTML = `<span class="fi fi-${iso} flag-icon"></span> ${c}`;
+            div.onclick = () => {
+                state.country = c; 
+                triggerSpan.innerHTML = div.innerHTML;
+                wrapper.classList.remove('open'); 
+                state.searchTags = [];
+                updateSearchTagsUI(); 
+                updateSubControls();
+                updateSearchIndex(); 
+                render();
+            };
+            optionsContainer.appendChild(div);
+        });
+
+        trigger.onclick = () => wrapper.classList.toggle('open');
+        window.onclick = (e) => { if (!wrapper.contains(e.target) && !trigger.contains(e.target)) wrapper.classList.remove('open'); };
+        if (COUNTRIES.length > 0 && optionsContainer.firstChild) optionsContainer.firstChild.click();
+
+        document.getElementById('searchBox').onchange = (e) => handleSearch(e.target.value);
+        
+        updateSubControls();
+        updateTabs();
+    }
+
+    function updateSubControls() {
+        const subSel = document.getElementById('affordabilitySelect');
+        subSel.innerHTML = '';
+        const countryData = DB[state.country];
+        
+        if (countryData && countryData["Affordability"]) {
+            Object.keys(countryData["Affordability"]).forEach(key => {
+                const opt = document.createElement('option');
+                opt.value = key;
+                opt.textContent = key;
+                subSel.appendChild(opt);
+            });
+        }
+        
+        if (!state.subIndicator || !countryData?.["Affordability"]?.[state.subIndicator]) {
+            if (subSel.options.length > 0) state.subIndicator = subSel.options[0].value;
+        } else {
+            subSel.value = state.subIndicator;
+        }
+        
+        subSel.onchange = (e) => { state.subIndicator = e.target.value; render(); };
+    }
+function updateSearchIndex() {
+        dynamicSearchIndex = [];
+        const dl = document.getElementById('searchList');
+        dl.innerHTML = ''; 
+        
+        const countryData = DB[state.country];
+        if (!countryData || !countryData[state.section]) return;
+
+        const sectionData = countryData[state.section];
+        const uniqueLabels = new Set();
+
+        Object.keys(sectionData).forEach(parentKey => {
+            
+            // ---> NEW LINE: Skip "Living with Parents" in the dropdown <---
+            if (parentKey === "Living with Parents") return; 
+
+            const item = sectionData[parentKey];
+            
+            dynamicSearchIndex.push({ label: parentKey, section: state.section, parent: parentKey, type: 'parent' });
+            uniqueLabels.add(parentKey);
+
+            if (item.type === 'policy' && Array.isArray(item.content)) {
+                item.content.forEach(policy => {
+                    let displayTitle = policy.title;
+                    if (parentKey === "Tax Relief" && policy.details && policy.details["Tax targeted"]) {
+                        displayTitle = `${policy.details["Tax targeted"]} - ${policy.title}`;
+                    }
+                    if (displayTitle && displayTitle.length > 1) {
+                        dynamicSearchIndex.push({ label: displayTitle, section: state.section, parent: parentKey, type: 'sub', rawTitle: policy.title });
+                        uniqueLabels.add(displayTitle);
+                    }
+                });
+            }
+        });
+
+        [...uniqueLabels].sort().forEach(l => { 
+            const opt = document.createElement('option'); 
+            opt.value = l; 
+            dl.appendChild(opt); 
+        });
+    }
+
+    function updateTabs() {
+        const sections = ["Affordability", "General Housing System", "Exclusion"];
+        document.querySelectorAll('.tab').forEach((t, i) => {
+            t.classList.toggle('active', sections[i] === state.section);
+        });
+        document.getElementById('subControls').style.display = (state.section === "Affordability" && state.searchTags.length === 0) ? 'block' : 'none';
+        
+        updateSearchIndex();
+    }
+
+    function handleSearch(term) {
+        if(!term) return;
+        const match = dynamicSearchIndex.find(i => i.label.toLowerCase() === term.toLowerCase());
+        if (match) {
+            if(!state.searchTags.some(t => t.label === match.label)) {
+                state.searchTags.push(match); 
+                updateSearchTagsUI(); 
+                updateTabs(); 
+                render();
+            }
+            document.getElementById('searchBox').value = ''; 
+        }
+    }
+
+    function removeTag(label) {
+        state.searchTags = state.searchTags.filter(t => t.label !== label);
+        updateSearchTagsUI(); updateTabs(); render();
+    }
+
+    function updateSearchTagsUI() {
+        const container = document.getElementById('searchTags'); container.innerHTML = '';
+        state.searchTags.forEach(tag => {
+            const el = document.createElement('div'); el.className = 'tag';
+            el.innerHTML = `${tag.label} <span class="tag-remove" onclick="removeTag('${tag.label}')">&times;</span>`;
+            container.appendChild(el);
+        });
+    }
+
+    window.showTooltip = function(e, year, price, rent) {
+        const tt = document.getElementById('chartTooltip');
+        tt.style.opacity = 1; tt.style.left = e.offsetX + 'px'; tt.style.top = e.offsetY + 'px';
+        tt.innerHTML = `<b>${year}</b><br/>${price !== 'N/A' ? `House Prices: ${price}<br/>` : ''}${rent !== 'N/A' ? `Rents: ${rent}` : ''}`;
+    };
+    window.hideTooltip = function() { document.getElementById('chartTooltip').style.opacity = 0; };
+    
+    window.addEventListener("message", (event) => {
+        if (event.data === "download-png") {
+            html2canvas(document.getElementById('dashboard-container'), { useCORS: true, ignoreElements: (e) => e.getAttribute('data-html2canvas-ignore') === 'true' })
+            .then(canvas => { const link = document.createElement('a'); link.download = `housing_dashboard_${state.country}.png`; link.href = canvas.toDataURL(); link.click(); });
+        }
+        if (event.data === "download-csv") {
+            const jsonStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(DB[state.country], null, 2));
+            const link = document.createElement('a'); link.setAttribute("href", jsonStr); link.setAttribute("download", `housing_data_${state.country}.json`);
+            document.body.appendChild(link); link.click(); link.remove();
+        }
+    });
+
+    // START
+    loadData();
+</script>
+</body>
+</html>
