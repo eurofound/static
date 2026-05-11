@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>European Restructuring Monitor (ERM)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
+
+<style>
+  :root{
+    --ink:           #0e2a3d;
+    --ink-2:         #1b3d54;
+    --teal-900:      #1e4a64;
+    --teal-700:      #2f6c8a;
+    --teal-500:      #4f8fa8;
+    --teal-300:      #8fb6c4;
+    --sage-200:      #b9d3d1;
+    --sage-100:      #d9e6e3;
+    --sage-50:       #eef3f2;
+
+    --accent:        #2b6c8a;
+    --accent-deep:   #18465e;
+    --accent-light:  rgba(43,108,138,0.08);
+    --warm:          #b3855e;
+
+    --bg-1:          #fafbfc;
+    --bg-2:          #f3f6f7;
+
+    --hairline:      rgba(14,42,61,0.09);
+    --hairline-soft: rgba(14,42,61,0.05);
+    --hairline-strong:rgba(14,42,61,0.18);
+
+    --text:          #0e2a3d;
+    --text-dim:      #5a6d7a;
+    --text-mute:     #8497a3;
+
+    --font-sans:"Source Sans 3","Inter","Segoe UI",system-ui,sans-serif;
+    --font-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  }
+
+  *{box-sizing:border-box}
+  html,body{
+    margin:0; padding:0;
+    background:
+      radial-gradient(1400px 700px at 85% -10%, #eef4f4 0%, transparent 55%),
+      radial-gradient(900px 600px at -10% 90%, #f1f5f3 0%, transparent 50%),
+      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    color:var(--text);
+    font-family:var(--font-sans); font-size:14px;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    min-height:100vh;
+  }
+
+  /* ============ Header ============ */
+  .header{
+    padding:32px 48px 24px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .header-inner{
+    max-width:1520px; margin:0 auto;
+    display:flex; align-items:flex-end; justify-content:space-between; gap:40px;
+  }
+  .brand{
+    font-family:var(--font-serif);
+    font-size:12.5px; color:var(--accent);
+    text-transform:uppercase; letter-spacing:0.22em;
+    margin-bottom:10px; font-weight:500;
+  }
+  h1{
+    margin:0; font-family:var(--font-serif);
+    font-weight:500; font-size:40px; line-height:1.05;
+    letter-spacing:-0.015em; color:var(--ink);
+  }
+  h1 .accent{color:var(--accent); font-style:italic; font-weight:400}
+  .header-meta{
+    display:flex; gap:36px; color:var(--text-dim); font-size:12px;
+    padding-bottom:6px;
+  }
+  .header-meta .meta-item{display:flex; flex-direction:column}
+  .header-meta .meta-label{
+    text-transform:uppercase; letter-spacing:0.12em;
+    font-size:10.5px; color:var(--text-mute); margin-bottom:4px;
+  }
+  .header-meta .meta-value{
+    color:var(--ink); font-weight:500; font-size:14px;
+    font-family:var(--font-serif);
+  }
+
+  /* ============ Filters ============ */
+  .filters{
+    max-width:1520px; margin:0 auto;
+    padding:28px 48px 24px;
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr auto;
+    gap:44px;
+    align-items:start;
+    border-bottom:1px solid var(--hairline);
+  }
+  .field-label{
+    display:block;
+    font-size:10.5px; text-transform:uppercase;
+    letter-spacing:0.14em; color:var(--text-dim);
+    margin-bottom:12px; font-weight:600;
+  }
+  .date-row{display:flex; align-items:center; gap:10px}
+  .date-row input[type="date"]{
+    flex:1; background:transparent; color:var(--ink);
+    border:none; border-bottom:1px solid var(--hairline-strong);
+    padding:6px 4px 6px 0;
+    font-size:14px; font-family:inherit;
+    border-radius:0;
+    transition:border-color 0.15s;
+  }
+  .date-row input[type="date"]:focus{
+    outline:none; border-bottom-color:var(--accent);
+  }
+  .date-row input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor:pointer; opacity:0.55; filter:invert(13%) sepia(15%) saturate(2000%) hue-rotate(170deg);
+  }
+  .date-sep{color:var(--text-mute); font-size:14px}
+
+  /* dual-range slider */
+  .range-slider{
+    position:relative; height:26px; margin-top:18px;
+    user-select:none;
+  }
+  .range-track{
+    position:absolute; left:8px; right:8px; top:50%;
+    height:2px; transform:translateY(-50%);
+    background:var(--sage-200); border-radius:1px;
+  }
+  .range-fill{
+    position:absolute; top:50%; height:2px; transform:translateY(-50%);
+    background:var(--accent); border-radius:1px;
+  }
+  .range-thumb{
+    position:absolute; top:50%; transform:translate(-50%,-50%);
+    width:16px; height:16px; border-radius:50%;
+    background:#fff; border:1.5px solid var(--accent);
+    cursor:grab; z-index:2;
+    transition:transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow:0 1px 2px rgba(14,42,61,0.15);
+  }
+  .range-thumb:hover{transform:translate(-50%,-50%) scale(1.15); box-shadow:0 2px 6px rgba(43,108,138,0.3)}
+  .range-thumb:active{cursor:grabbing; transform:translate(-50%,-50%) scale(1.1)}
+
+  /* checkboxes */
+  .check-list label{
+    display:flex; align-items:center; gap:9px;
+    font-size:13.5px; margin:4px 0; cursor:pointer;
+    color:var(--text); line-height:1.4;
+  }
+  .check-list input{
+    appearance:none; -webkit-appearance:none;
+    width:14px; height:14px;
+    border:1.5px solid var(--hairline-strong);
+    background:transparent;
+    border-radius:3px; cursor:pointer; position:relative;
+    transition: all 0.15s ease; flex-shrink:0;
+  }
+  .check-list input:checked{
+    background:var(--accent); border-color:var(--accent);
+  }
+  .check-list input:checked::after{
+    content:""; position:absolute; left:3px; top:0px;
+    width:4px; height:8px; border:solid #fff; border-width:0 2px 2px 0;
+    transform:rotate(45deg);
+  }
+  select{
+    width:100%; background:transparent; color:var(--ink);
+    border:none; border-bottom:1px solid var(--hairline-strong);
+    padding:6px 22px 6px 0;
+    font-size:14px; font-family:inherit;
+    appearance:none; -webkit-appearance:none;
+    cursor:pointer;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%235a6d7a' d='M0 0l5 6 5-6z'/></svg>");
+    background-repeat:no-repeat; background-position:right 2px center;
+    border-radius:0;
+    transition:border-color 0.15s;
+  }
+  select:focus{outline:none; border-bottom-color:var(--accent)}
+  .stack > * + *{margin-top:18px}
+
+  .clear-btn{
+    background:transparent; border:none;
+    color:var(--text-dim); padding:6px 0;
+    font-size:12px; font-family:inherit; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+    transition:color 0.15s ease;
+    align-self:flex-end;
+    white-space:nowrap;
+    text-transform:uppercase; letter-spacing:0.1em;
+    border-bottom:1px solid transparent;
+  }
+  .clear-btn:hover{color:var(--accent); border-bottom-color:var(--accent)}
+
+  /* ============ Main ============ */
+  .main{
+    max-width:1520px;
+    margin:36px auto 24px;
+    padding:0 48px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:32px 40px;
+  }
+
+  /* ===== KPI bar: borderless, divided by hairlines ===== */
+  .kpi-strip{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:repeat(9, 1fr);
+    margin-bottom:8px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .kpi{
+    padding:0 22px;
+    border-right:1px solid var(--hairline-soft);
+    display:flex; flex-direction:column; justify-content:flex-start;
+    gap:6px;
+    min-width:0;
+  }
+  .kpi:first-child{padding-left:0}
+  .kpi:last-child{border-right:none; padding-right:0}
+  .kpi-label{
+    color:var(--text-dim); font-size:10.5px;
+    text-transform:uppercase; letter-spacing:0.12em;
+    font-weight:600;
+  }
+  .kpi-value{
+    font-family:var(--font-serif);
+    font-size:26px; font-weight:500;
+    color:var(--ink); line-height:1.05;
+    letter-spacing:-0.01em;
+    word-break:break-word;
+  }
+  .kpi-value.smaller{font-size:17px; font-weight:500; padding-top:4px}
+  .kpi-value.negative{color:#a64a4a}
+
+  /* ===== Section blocks (no borders, no panels, just whitespace + soft heading) ===== */
+  .block{display:flex; flex-direction:column}
+  .block-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:18px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--hairline-soft);
+  }
+  .block-title{
+    font-family:var(--font-serif);
+    color:var(--ink);
+    font-weight:500;
+    font-size:18px;
+    margin:0; letter-spacing:-0.005em;
+  }
+  .block-sub{
+    color:var(--text-mute); font-size:11px;
+    text-transform:uppercase; letter-spacing:0.1em; font-weight:500;
+  }
+
+  .map-cell    {grid-column:1 / span 2}
+  .events-cell {grid-column:3 / span 2}
+  .jobs-cell   {grid-column:1 / span 4}
+  .recent-loss {grid-column:1 / span 2}
+  .recent-gain {grid-column:3 / span 2}
+  .sectors-cell{grid-column:1 / span 2}
+  .types-cell  {grid-column:3 / span 2}
+
+  #map-chart{height:380px}
+  #events-chart{height:340px}
+  #jobs-chart{height:380px}
+
+  /* Recent items - feels like editorial cards */
+  .recent-list{
+    max-height:340px; overflow-y:auto; padding-right:8px;
+  }
+  .recent-list::-webkit-scrollbar{width:4px}
+  .recent-list::-webkit-scrollbar-track{background:transparent}
+  .recent-list::-webkit-scrollbar-thumb{background:var(--sage-200); border-radius:2px}
+  .recent-item{
+    padding:14px 0;
+    border-bottom:1px solid var(--hairline-soft);
+  }
+  .recent-item:first-child{padding-top:0}
+  .recent-item:last-child{border-bottom:none}
+  .recent-head{
+    display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    margin-bottom:6px;
+  }
+  .recent-company{
+    font-family:var(--font-serif);
+    font-size:16px; font-weight:500;
+    color:var(--ink); line-height:1.25;
+  }
+  .recent-date{
+    color:var(--text-mute); font-size:11.5px;
+    white-space:nowrap; flex-shrink:0;
+  }
+  .recent-meta{
+    display:flex; gap:14px; flex-wrap:wrap;
+    color:var(--text-dim); font-size:12px;
+    margin:4px 0 6px 0;
+  }
+  .recent-meta strong{color:var(--ink); font-weight:600}
+  .recent-meta .num.loss{color:#a64a4a; font-weight:600}
+  .recent-meta .num.gain{color:#2d6c3e; font-weight:600}
+  .recent-desc{
+    color:var(--text-dim); font-size:12.5px; line-height:1.55;
+    margin-top:4px;
+  }
+
+  /* Sectors table - no panel, just rows */
+  .sectors-table{
+    max-height:380px; overflow-y:auto;
+    padding-right:6px;
+  }
+  .sectors-table::-webkit-scrollbar{width:4px}
+  .sectors-table::-webkit-scrollbar-thumb{background:var(--sage-200);border-radius:2px}
+  .sectors-table .row{
+    display:grid; grid-template-columns:1.4fr 60px 1.2fr;
+    align-items:center; gap:14px;
+    padding:10px 0;
+    border-bottom:1px solid var(--hairline-soft);
+    font-size:13px;
+  }
+  .sectors-table .row:last-child{border-bottom:none}
+  .sectors-table .bar-wrap{
+    height:6px; background:var(--sage-50);
+    border-radius:3px; overflow:hidden;
+  }
+  .sectors-table .bar-fill{
+    height:100%;
+    background:linear-gradient(90deg, var(--teal-700), var(--teal-300));
+    border-radius:3px;
+    transition:width 0.6s cubic-bezier(.2,.7,.2,1);
+  }
+  .sectors-table .num{
+    text-align:right; color:var(--ink);
+    font-variant-numeric:tabular-nums;
+    font-weight:500;
+  }
+
+  /* Types - smaller, lighter, no borders */
+  .types-grid{
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px 32px;
+  }
+  .type-cell{
+    padding:14px 0;
+    border-top:1px solid var(--hairline-soft);
+    cursor:default;
+    transition:all 0.15s ease;
+  }
+  .type-cell:hover{border-top-color:var(--accent)}
+  .type-cell .num{
+    font-family:var(--font-serif);
+    font-size:24px; font-weight:500;
+    color:var(--ink); line-height:1;
+  }
+  .type-cell .lbl{
+    font-size:11.5px; color:var(--text-dim);
+    margin-top:6px; line-height:1.3;
+  }
+
+  /* Loading */
+  .loading-overlay{
+    position:fixed; inset:0;
+    background:rgba(250,251,252,0.96);
+    backdrop-filter:blur(6px);
+    z-index:9999;
+    display:flex; align-items:center; justify-content:center; flex-direction:column;
+    gap:18px; color:var(--ink); font-size:13px;
+  }
+  .spinner{
+    width:32px; height:32px; border-radius:50%;
+    border:2px solid var(--sage-200); border-top-color:var(--accent);
+    animation:spin .9s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .err{
+    color:#8b3a3a; max-width:680px; text-align:center;
+    line-height:1.6; padding:0 20px;
+  }
+  .err code{
+    background:var(--sage-50); padding:2px 6px;
+    border-radius:3px; font-size:12.5px; color:var(--ink);
+  }
+
+  /* fade-in */
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(6px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+  .block, .kpi-strip{animation:fadeUp 0.45s cubic-bezier(.2,.7,.2,1) backwards}
+  .kpi-strip{animation-delay:0.02s}
+  .map-cell{animation-delay:0.08s}
+  .events-cell{animation-delay:0.12s}
+  .jobs-cell{animation-delay:0.16s}
+  .recent-loss{animation-delay:0.20s}
+  .recent-gain{animation-delay:0.22s}
+  .sectors-cell{animation-delay:0.26s}
+  .types-cell{animation-delay:0.28s}
+
+  /* footer */
+  .footer{
+    max-width:1520px; margin:0 auto;
+    padding:24px 48px 48px;
+    color:var(--text-mute); font-size:11px;
+    display:flex; justify-content:space-between;
+    border-top:1px solid var(--hairline-soft); margin-top:24px;
+  }
+
+  /* Responsive */
+  @media (max-width:1280px){
+    h1{font-size:34px}
+    .kpi-strip{grid-template-columns:repeat(5, 1fr); gap:18px 0; row-gap:24px}
+    .kpi{padding:0 16px}
+    .kpi:nth-child(5n){border-right:none; padding-right:0}
+  }
+  @media (max-width:980px){
+    .header{padding:24px 22px 20px}
+    .filters{grid-template-columns:1fr 1fr; padding:22px; gap:28px}
+    .main{padding:0 22px; grid-template-columns:1fr; gap:36px}
+    .map-cell,.events-cell,.jobs-cell,.recent-loss,.recent-gain,.sectors-cell,.types-cell{
+      grid-column:1 / -1;
+    }
+    .kpi-strip{grid-template-columns:repeat(3, 1fr); gap:20px 0}
+    .kpi{padding:0 12px; border-right:1px solid var(--hairline-soft)}
+    .kpi:nth-child(3n){border-right:none; padding-right:0}
+    .footer{padding:24px 22px; flex-direction:column; gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="spinner"></div>
+  <div id="loadingText">Loading restructuring data…</div>
+</div>
+
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <div class="brand">European Restructuring Monitor</div>
+      <h1>Restructuring across <span class="accent">Europe</span></h1>
+    </div>
+    <div class="header-meta">
+      <div class="meta-item">
+        <div class="meta-label">Coverage</div>
+        <div class="meta-value" id="meta-coverage">—</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Records</div>
+        <div class="meta-value" id="meta-records">—</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Last announcement</div>
+        <div class="meta-value" id="meta-latest">—</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="filters">
+  <div>
+    <label class="field-label">Date of announcement</label>
+    <div class="date-row">
+      <input type="date" id="dateFrom" />
+      <span class="date-sep">→</span>
+      <input type="date" id="dateTo" />
+    </div>
+    <div class="range-slider" id="rangeSlider">
+      <div class="range-track"></div>
+      <div class="range-fill" id="rangeFill"></div>
+      <div class="range-thumb" id="rangeThumbMin" tabindex="0"></div>
+      <div class="range-thumb" id="rangeThumbMax" tabindex="0"></div>
+    </div>
+  </div>
+
+  <div>
+    <label class="field-label">Country</label>
+    <div class="check-list">
+      <label><input type="checkbox" id="cb-world" checked /> Include all countries</label>
+      <label><input type="checkbox" id="cb-eu27" /> EU-27 only</label>
+    </div>
+    <div style="margin-top:14px">
+      <select id="countrySel"><option>All countries</option></select>
+    </div>
+  </div>
+
+  <div class="stack">
+    <div>
+      <label class="field-label">Sector (NACE)</label>
+      <select id="sectorSel"><option>All sectors</option></select>
+    </div>
+    <div>
+      <label class="field-label">Restructuring type</label>
+      <select id="typeSel"><option>All types</option></select>
+    </div>
+  </div>
+
+  <div>
+    <label class="field-label">Thematic subjects</label>
+    <div class="check-list">
+      <label><input type="checkbox" class="thematic" value="auto" /> Automotive</label>
+      <label><input type="checkbox" class="thematic" value="digital" /> Digital transition</label>
+      <label><input type="checkbox" class="thematic" value="green" /> Green transition</label>
+      <label><input type="checkbox" class="thematic" value="twin" /> Twin transition</label>
+      <label><input type="checkbox" class="thematic" value="covid" /> Covid-19</label>
+    </div>
+  </div>
+
+  <button class="clear-btn" onclick="clearAllSlicers()">Reset</button>
+</section>
+
+<main class="main">
+  <!-- KPI strip -->
+  <div class="kpi-strip">
+    <div class="kpi">
+      <div class="kpi-label">Restructurings</div>
+      <div class="kpi-value" id="kpi-num">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Top country</div>
+      <div class="kpi-value smaller" id="kpi-country">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Net job change</div>
+      <div class="kpi-value" id="kpi-net">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Min job losses</div>
+      <div class="kpi-value" id="kpi-minloss">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Max job losses</div>
+      <div class="kpi-value" id="kpi-maxloss">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Job gains</div>
+      <div class="kpi-value" id="kpi-gain">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Top company</div>
+      <div class="kpi-value smaller" id="kpi-company">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Avg duration</div>
+      <div class="kpi-value" id="kpi-duration">—</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Updates</div>
+      <div class="kpi-value" id="kpi-updates">—</div>
+    </div>
+  </div>
+
+  <div class="block map-cell">
+    <div class="block-head">
+      <h2 class="block-title">Restructurings by country</h2>
+      <span class="block-sub">Geographic distribution</span>
+    </div>
+    <div id="map-chart"></div>
+  </div>
+
+  <div class="block events-cell">
+    <div class="block-head">
+      <h2 class="block-title">Large restructuring events</h2>
+      <span class="block-sub">Annual count · 100+ jobs</span>
+    </div>
+    <div id="events-chart"></div>
+  </div>
+
+  <div class="block jobs-cell">
+    <div class="block-head">
+      <h2 class="block-title">Announced job changes over time</h2>
+      <span class="block-sub">Planned gains, losses and net change by year</span>
+    </div>
+    <div id="jobs-chart"></div>
+  </div>
+
+  <div class="block recent-loss">
+    <div class="block-head">
+      <h2 class="block-title">Most recent losses</h2>
+      <span class="block-sub">Latest reductions</span>
+    </div>
+    <div class="recent-list" id="recentLoss"></div>
+  </div>
+
+  <div class="block recent-gain">
+    <div class="block-head">
+      <h2 class="block-title">Most recent gains</h2>
+      <span class="block-sub">Latest creations</span>
+    </div>
+    <div class="recent-list" id="recentGain"></div>
+  </div>
+
+  <div class="block sectors-cell">
+    <div class="block-head">
+      <h2 class="block-title">Sectors</h2>
+      <span class="block-sub">By count</span>
+    </div>
+    <div class="sectors-table" id="sectorsTable"></div>
+  </div>
+
+  <div class="block types-cell">
+    <div class="block-head">
+      <h2 class="block-title">Restructuring by type</h2>
+      <span class="block-sub">Nine categories</span>
+    </div>
+    <div class="types-grid" id="typesGrid"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div>European Restructuring Monitor · Eurofound</div>
+  <div>Data: Full_data.csv · Visualised with Highcharts</div>
+</footer>
+
+
+<script>
+/* =====================================================================
+   ERM Dashboard
+   ===================================================================== */
+
+const CSV_URL = "https://media.githubusercontent.com/media/thomasdavid/dashboard/refs/heads/main/Full_data.csv";
+
+Highcharts.setOptions({
+  chart:{backgroundColor:'transparent', style:{fontFamily:'"Source Sans 3", system-ui, sans-serif'}, spacing:[8,4,8,4]},
+  credits:{enabled:false}, title:{text:null},
+  legend:{itemStyle:{color:'#0e2a3d', fontWeight:'500', fontSize:'12px'}, itemHoverStyle:{color:'#2b6c8a'}},
+  xAxis:{lineColor:'rgba(14,42,61,0.12)', tickColor:'rgba(14,42,61,0.12)',
+         labels:{style:{color:'#5a6d7a', fontSize:'11px'}}},
+  yAxis:{gridLineColor:'rgba(14,42,61,0.06)', lineColor:'transparent',
+         labels:{style:{color:'#5a6d7a', fontSize:'11px'}},
+         title:{style:{color:'#5a6d7a', fontSize:'10.5px', fontWeight:'500',
+                       textTransform:'uppercase', letterSpacing:'0.08em'}}},
+  tooltip:{backgroundColor:'rgba(255,255,255,0.98)', borderColor:'rgba(14,42,61,0.12)',
+           borderRadius:8, shadow:{color:'rgba(14,42,61,0.12)', offsetX:0, offsetY:4, opacity:0.4, width:8},
+           style:{color:'#0e2a3d', fontSize:'12.5px'}, useHTML:true}
+});
+
+/* ---- helpers ---- */
+const fmtInt = n => (n==null||isNaN(n))?'—':Math.round(n).toLocaleString('en-US');
+const fmtSigned = n => (n==null||isNaN(n))?'—':Math.round(n).toLocaleString('en-US');
+const lc = s => (s==null?'':String(s)).trim().toLowerCase();
+const num = v => {
+  if(v==null||v==='') return null;
+  const s = String(v).replace(/[, ]/g,'').replace(/\u2212/g,'-');
+  const n = parseFloat(s);
+  return isNaN(n) ? null : n;
+};
+const parseDate = v => {
+  if(!v) return null;
+  const s = String(v).trim();
+  if(!s) return null;
+  let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+  if(m) return new Date(+m[1],+m[2]-1,+m[3]);
+  m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
+  if(m){
+    const a=+m[1], b=+m[2], y=+m[3];
+    if(a>12) return new Date(y,b-1,a);
+    return new Date(y,b-1,a);
+  }
+  const d = new Date(s);
+  return isNaN(d)?null:d;
+};
+const truthy = v => {
+  if(v==null) return false;
+  const s = String(v).trim().toLowerCase();
+  return s==='1'||s==='true'||s==='yes'||s==='y'||s==='x';
+};
+const escapeHtml = s => String(s==null?'':s)
+  .replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const toISO = d => d.toISOString().slice(0,10);
+
+const COUNTRY_TO_HC = {
+  'austria':'at','belgium':'be','bulgaria':'bg','croatia':'hr','cyprus':'cy',
+  'czech republic':'cz','czechia':'cz','denmark':'dk','estonia':'ee','finland':'fi',
+  'france':'fr','germany':'de','greece':'gr','hungary':'hu','iceland':'is',
+  'ireland':'ie','italy':'it','latvia':'lv','liechtenstein':'li','lithuania':'lt',
+  'luxembourg':'lu','malta':'mt','netherlands':'nl','norway':'no','poland':'pl',
+  'portugal':'pt','romania':'ro','slovakia':'sk','slovenia':'si','spain':'es',
+  'sweden':'se','switzerland':'ch','turkey':'tr','türkiye':'tr','turkiye':'tr',
+  'ukraine':'ua','united kingdom':'gb','uk':'gb','great britain':'gb',
+  'serbia':'rs','bosnia and herzegovina':'ba','north macedonia':'mk',
+  'macedonia':'mk','albania':'al','montenegro':'me','moldova':'md',
+  'belarus':'by','russia':'ru','russian federation':'ru','kosovo':'xk'
+};
+
+let NORM=[], DATE_MIN=null, DATE_MAX=null;
+let TOTAL_DAYS = 0;
+
+function fetchCsv(url){
+  return new Promise((resolve,reject)=>{
+    Papa.parse(url,{
+      download:true, header:true, skipEmptyLines:true, dynamicTyping:false,
+      transformHeader: h => h.trim(),
+      complete:r=>resolve(r.data), error:e=>reject(e)
+    });
+  });
+}
+
+function normalizeRow(r){
+  const country = (r['Country']||'').trim();
+  return {
+    date:        parseDate(r['d_date_announcement']),
+    country:     country || null,
+    cc:          COUNTRY_TO_HC[lc(country)] || null,
+    eu27:        (r['EU-27']||'').toString().trim().toUpperCase()==='EU-27',
+    sector:      (r['V_sector']||'').trim() || null,
+    nace1:       (r['NACE_level_1']||'').trim() || null,
+    type:        (r['Restructuring_type']||'').trim() || null,
+    company:     (r['Company_name']||'').trim() || null,
+    desc:        r['Description'] || r['Description_lower'] || '',
+    minLoss:     num(r['Planned_job_reductions_minimum']),
+    maxLoss:     num(r['Planned_job_reductions_maximum']),
+    jobGain:     num(r['Planned_job_gain']),
+    netChange:   num(r['Net announced job change']),
+    updates:     num(r['V_nb_updates']),
+    duration:    num(r['Restructuring duration (months)']),
+    them_auto:   truthy(r['Thematic_automotive']),
+    them_digital:truthy(r['Thematic_Digitalisation']),
+    them_green:  truthy(r['Thematic_green']),
+    them_twin:   truthy(r['Thematic_twin']),
+    them_covid:  truthy(r['Thematic_covid'])
+  };
+}
+
+function currentFilters(){
+  const themBoxes = [...document.querySelectorAll('.thematic')];
+  const them = {};
+  themBoxes.forEach(b=>them[b.value]=b.checked);
+  return {
+    from: document.getElementById('dateFrom').value ? new Date(document.getElementById('dateFrom').value) : null,
+    to:   document.getElementById('dateTo').value   ? new Date(document.getElementById('dateTo').value)   : null,
+    country: document.getElementById('countrySel').value,
+    sector:  document.getElementById('sectorSel').value,
+    type:    document.getElementById('typeSel').value,
+    eu27Only: document.getElementById('cb-eu27').checked,
+    them
+  };
+}
+function applyFilters(rows){
+  const f = currentFilters();
+  const anyThem = f.them.auto||f.them.digital||f.them.green||f.them.twin||f.them.covid;
+  return rows.filter(r=>{
+    if(f.from && r.date && r.date < f.from) return false;
+    if(f.to   && r.date && r.date > f.to)   return false;
+    if(f.country && f.country!=='All countries' && r.country !== f.country) return false;
+    if(f.sector  && f.sector!=='All sectors'  && r.sector  !== f.sector)  return false;
+    if(f.type    && f.type!=='All types'    && r.type    !== f.type)    return false;
+    if(f.eu27Only && !r.eu27) return false;
+    if(anyThem){
+      const ok = (f.them.auto&&r.them_auto)||(f.them.digital&&r.them_digital)||
+                 (f.them.green&&r.them_green)||(f.them.twin&&r.them_twin)||
+                 (f.them.covid&&r.them_covid);
+      if(!ok) return false;
+    }
+    return true;
+  });
+}
+
+function renderAll(){
+  const rows = applyFilters(NORM);
+  renderKPIs(rows);
+  renderMap(rows);
+  renderEventsChart(rows);
+  renderJobsChart(rows);
+  renderSectors(rows);
+  renderTypes(rows);
+  renderRecent(rows);
+}
+
+function renderKPIs(rows){
+  document.getElementById('kpi-num').textContent = fmtInt(rows.length);
+
+  const byCountry = {};
+  rows.forEach(r=>{ if(r.country) byCountry[r.country]=(byCountry[r.country]||0)+1; });
+  let topC=null, topCN=0;
+  for(const k in byCountry) if(byCountry[k]>topCN){topCN=byCountry[k];topC=k;}
+  document.getElementById('kpi-country').textContent = topC || '—';
+
+  let totalGain=0,totalNet=0,totalMin=0,totalMax=0,totalUpd=0,durSum=0,durN=0;
+  rows.forEach(r=>{
+    if(r.jobGain!=null)   totalGain += r.jobGain;
+    if(r.netChange!=null) totalNet  += r.netChange;
+    if(r.minLoss!=null)   totalMin  += r.minLoss;
+    if(r.maxLoss!=null)   totalMax  += r.maxLoss;
+    if(r.updates!=null)   totalUpd  += r.updates;
+    if(r.duration!=null){ durSum += r.duration; durN++; }
+  });
+  const netEl = document.getElementById('kpi-net');
+  netEl.textContent = fmtSigned(totalNet);
+  netEl.classList.toggle('negative', totalNet < 0);
+
+  document.getElementById('kpi-minloss').textContent = fmtInt(totalMin);
+  document.getElementById('kpi-maxloss').textContent = fmtInt(totalMax);
+  document.getElementById('kpi-gain').textContent    = fmtInt(totalGain);
+
+  const byCompany={};
+  rows.forEach(r=>{ if(r.company) byCompany[r.company]=(byCompany[r.company]||0)+1; });
+  let topComp=null, topCompN=0;
+  for(const k in byCompany) if(byCompany[k]>topCompN){topCompN=byCompany[k];topComp=k;}
+  document.getElementById('kpi-company').textContent = topComp || '—';
+
+  document.getElementById('kpi-duration').textContent = durN ? Math.round(durSum/durN) : '—';
+  document.getElementById('kpi-updates').textContent  = fmtInt(totalUpd);
+}
+
+function renderMap(rows){
+  const counts = {};
+  rows.forEach(r=>{ if(r.cc) counts[r.cc]=(counts[r.cc]||0)+1; });
+  const data = Object.entries(counts).map(([k,v])=>[k,v]);
+
+  Highcharts.mapChart('map-chart',{
+    chart:{map:'custom/europe', backgroundColor:'transparent', spacingTop:0},
+    title:{text:null},
+    mapNavigation:{
+      enabled:true,
+      buttonOptions:{verticalAlign:'bottom',
+        theme:{fill:'rgba(255,255,255,0.8)', stroke:'rgba(14,42,61,0.15)'}}
+    },
+    colorAxis:{min:0, stops:[[0,'#eef3f2'],[0.4,'#8fb6c4'],[1,'#1e4a64']]},
+    legend:{
+      enabled:true, align:'right', verticalAlign:'bottom',
+      itemStyle:{fontSize:'10.5px', color:'#5a6d7a'},
+      symbolHeight:8, symbolWidth:60, layout:'horizontal'
+    },
+    tooltip:{
+      useHTML:true,
+      pointFormatter:function(){
+        return `<div style="padding:2px 4px">
+          <div style="font-weight:600;font-size:13px;color:#0e2a3d">${this.name}</div>
+          <div style="color:#5a6d7a;font-size:11.5px;margin-top:2px">Restructurings: <strong style="color:#2b6c8a">${(this.value||0).toLocaleString()}</strong></div>
+        </div>`;
+      }
+    },
+    series:[{
+      data, name:'Restructurings',
+      states:{hover:{color:'#2b6c8a', borderColor:'#0e2a3d'}},
+      borderColor:'rgba(14,42,61,0.15)', borderWidth:0.5,
+      nullColor:'#f3f6f7',
+      joinBy:['hc-key','hc-key'],
+      dataLabels:{enabled:false}
+    }]
+  });
+}
+
+function renderEventsChart(rows){
+  const byYear={};
+  rows.forEach(r=>{
+    if(!r.date) return;
+    const size = Math.max(r.maxLoss||0, r.minLoss||0, r.jobGain||0);
+    if(size >= 100){
+      const y = r.date.getFullYear();
+      byYear[y] = (byYear[y]||0)+1;
+    }
+  });
+  const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b);
+  const series = years.map(y=>[y, byYear[y]]);
+
+  Highcharts.chart('events-chart',{
+    chart:{type:'areaspline', spacingTop:6},
+    xAxis:{type:'linear', tickInterval:5, allowDecimals:false},
+    yAxis:{title:{text:'Events'}, min:0},
+    legend:{enabled:false},
+    tooltip:{useHTML:true,
+      formatter:function(){
+        return `<div style="padding:2px 4px">
+          <div style="font-weight:600;color:#0e2a3d">${this.x}</div>
+          <div style="color:#5a6d7a;font-size:11.5px">Events: <strong style="color:#2b6c8a">${this.y.toLocaleString()}</strong></div>
+        </div>`;
+      }
+    },
+    plotOptions:{
+      areaspline:{color:'#2b6c8a', lineWidth:2,
+        fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
+          stops:[[0,'rgba(43,108,138,0.22)'],[1,'rgba(43,108,138,0.01)']]},
+        marker:{enabled:false, states:{hover:{enabled:true, radius:5, fillColor:'#2b6c8a', lineColor:'#fff', lineWidth:2}}}
+      }
+    },
+    series:[{name:'Events', data:series}]
+  });
+}
+
+function renderJobsChart(rows){
+  const byYear = {};
+  rows.forEach(r=>{
+    if(!r.date) return;
+    const y = r.date.getFullYear();
+    if(!byYear[y]) byYear[y] = {gain:0, loss:0, net:0};
+    if(r.jobGain!=null) byYear[y].gain += r.jobGain;
+    if(r.maxLoss!=null) byYear[y].loss += r.maxLoss;
+    if(r.netChange!=null) byYear[y].net += r.netChange;
+  });
+  const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b);
+  const gains = years.map(y => [y, byYear[y].gain]);
+  const losses= years.map(y => [y, -byYear[y].loss]);
+  const nets  = years.map(y => [y, byYear[y].net]);
+
+  Highcharts.chart('jobs-chart',{
+    chart:{type:'spline', spacingTop:6},
+    xAxis:{type:'linear', tickInterval:2, allowDecimals:false,
+           labels:{rotation:0, style:{color:'#5a6d7a', fontSize:'11px'}}},
+    yAxis:{title:{text:null},
+           plotLines:[{color:'rgba(14,42,61,0.15)', width:1, value:0, zIndex:3}],
+           labels:{formatter:function(){
+             const v = this.value;
+             if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
+             if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
+             return v;
+           }}},
+    legend:{enabled:true, align:'center', verticalAlign:'bottom', symbolRadius:6},
+    tooltip:{shared:true, useHTML:true,
+      formatter:function(){
+        let s = `<div style="padding:2px 4px"><div style="font-weight:600;color:#0e2a3d;margin-bottom:4px">${this.x}</div>`;
+        this.points.forEach(p=>{
+          s += `<div style="color:#5a6d7a;font-size:11.5px;margin:2px 0">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${p.color};margin-right:6px"></span>
+            ${p.series.name}: <strong style="color:#0e2a3d">${Math.round(p.y).toLocaleString()}</strong>
+          </div>`;
+        });
+        return s+'</div>';
+      }
+    },
+    plotOptions:{spline:{lineWidth:2.5,
+      marker:{enabled:false, states:{hover:{enabled:true, radius:5, lineColor:'#fff', lineWidth:2}}}}},
+    series:[
+      {name:'Job gains',       data:gains,  color:'#2f6c8a'},
+      {name:'Net job change',  data:nets,   color:'#b3855e', lineWidth:3, zIndex:3},
+      {name:'Job losses',      data:losses, color:'#8fb6c4', dashStyle:'ShortDash'}
+    ]
+  });
+}
+
+function renderSectors(rows){
+  const bySec = {};
+  rows.forEach(r=>{
+    const s = r.sector || r.nace1;
+    if(s) bySec[s]=(bySec[s]||0)+1;
+  });
+  const arr = Object.entries(bySec).sort((a,b)=>b[1]-a[1]);
+  const max = Math.max(1, ...arr.map(x=>x[1]));
+
+  let html='';
+  arr.forEach(([sec,n])=>{
+    const pct = (n/max)*100;
+    html += `<div class="row">
+      <div>${escapeHtml(sec)}</div>
+      <div class="num">${n.toLocaleString()}</div>
+      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  });
+  document.getElementById('sectorsTable').innerHTML = html;
+}
+
+function renderTypes(rows){
+  const byType={};
+  rows.forEach(r=>{ if(r.type) byType[r.type]=(byType[r.type]||0)+1; });
+  const ORDER = ['Bankruptcy','Internal restructuring','Outsourcing',
+                 'Business expansion','Merger/Acquisition','Relocation',
+                 'Closure','Offshoring/Delocalisation','Reshoring'];
+  const ciMap={}; Object.keys(byType).forEach(k=>ciMap[lc(k)]=k);
+  const display = ORDER.map(t=>{
+    const realKey = ciMap[lc(t)];
+    return [t, realKey ? byType[realKey] : 0];
+  });
+  Object.keys(byType).forEach(k=>{
+    if(!ORDER.some(o=>lc(o)===lc(k))) display.push([k, byType[k]]);
+  });
+
+  let html='';
+  display.forEach(([t,n])=>{
+    html += `<div class="type-cell" title="${escapeHtml(t)}">
+      <div class="num">${n.toLocaleString()}</div>
+      <div class="lbl">${escapeHtml(t)}</div>
+    </div>`;
+  });
+  document.getElementById('typesGrid').innerHTML = html;
+}
+
+function renderRecent(rows){
+  const losses = rows.filter(r => (r.maxLoss||r.minLoss) && r.date)
+                     .sort((a,b)=>b.date-a.date).slice(0,8);
+  const gains  = rows.filter(r => r.jobGain && r.jobGain>0 && r.date)
+                     .sort((a,b)=>b.date-a.date).slice(0,8);
+  document.getElementById('recentLoss').innerHTML =
+    losses.map(r=>itemHtml(r,'loss')).join('') ||
+    '<div style="color:#8497a3;padding:6px;font-size:13px">No matching records</div>';
+  document.getElementById('recentGain').innerHTML =
+    gains.map(r=>itemHtml(r,'gain')).join('') ||
+    '<div style="color:#8497a3;padding:6px;font-size:13px">No matching records</div>';
+}
+function itemHtml(r, mode){
+  const d = r.date ? r.date.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '—';
+  const lossVal = r.maxLoss ?? r.minLoss;
+  const desc = r.desc ? (r.desc.length>200 ? r.desc.slice(0,200)+'…' : r.desc) : '';
+  const jobsHtml = mode==='loss'
+    ? (lossVal ? `<span class="num loss">−${fmtInt(lossVal)} jobs</span>`:'')
+    : (r.jobGain ? `<span class="num gain">+${fmtInt(r.jobGain)} jobs</span>`:'');
+
+  return `<div class="recent-item">
+    <div class="recent-head">
+      <div class="recent-company">${escapeHtml(r.company||'Unknown')}</div>
+      <div class="recent-date">${d}</div>
+    </div>
+    <div class="recent-meta">
+      ${jobsHtml}
+      <span>${escapeHtml(r.country||'—')}</span>
+      ${r.sector ? `<span>${escapeHtml(r.sector)}</span>`:''}
+    </div>
+    ${desc ? `<div class="recent-desc">${escapeHtml(desc)}</div>`:''}
+  </div>`;
+}
+
+/* ============ Dual-range slider ============ */
+function setupRangeSlider(){
+  const slider = document.getElementById('rangeSlider');
+  const thumbMin = document.getElementById('rangeThumbMin');
+  const thumbMax = document.getElementById('rangeThumbMax');
+  const fill = document.getElementById('rangeFill');
+  const fromInput = document.getElementById('dateFrom');
+  const toInput   = document.getElementById('dateTo');
+
+  if(!DATE_MIN || !DATE_MAX) return;
+
+  function syncFromInputs(){
+    const fromD = new Date(fromInput.value);
+    const toD   = new Date(toInput.value);
+    const totalMs = DATE_MAX - DATE_MIN;
+    const fromPct = Math.max(0, Math.min(100, ((fromD-DATE_MIN)/totalMs)*100));
+    const toPct   = Math.max(0, Math.min(100, ((toD-DATE_MIN)/totalMs)*100));
+    thumbMin.style.left = fromPct+'%';
+    thumbMax.style.left = toPct+'%';
+    fill.style.left = fromPct+'%';
+    fill.style.width = (toPct-fromPct)+'%';
+  }
+
+  function applyThumbPositions(){
+    const fromPct = parseFloat(thumbMin.style.left)||0;
+    const toPct   = parseFloat(thumbMax.style.left)||100;
+    const totalMs = DATE_MAX - DATE_MIN;
+    const fromD = new Date(DATE_MIN.getTime() + totalMs*fromPct/100);
+    const toD   = new Date(DATE_MIN.getTime() + totalMs*toPct/100);
+    fromInput.value = toISO(fromD);
+    toInput.value   = toISO(toD);
+    fill.style.left = fromPct+'%';
+    fill.style.width = (toPct-fromPct)+'%';
+  }
+
+  let dragging = null;
+
+  function pxToPct(clientX){
+    const rect = slider.getBoundingClientRect();
+    return Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width)*100));
+  }
+
+  function onMove(e){
+    if(!dragging) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    let pct = pxToPct(clientX);
+    if(dragging === thumbMin){
+      const maxPct = parseFloat(thumbMax.style.left)||100;
+      pct = Math.min(pct, maxPct - 0.5);
+      thumbMin.style.left = pct+'%';
+    } else {
+      const minPct = parseFloat(thumbMin.style.left)||0;
+      pct = Math.max(pct, minPct + 0.5);
+      thumbMax.style.left = pct+'%';
+    }
+    applyThumbPositions();
+  }
+  function onEnd(){
+    if(!dragging) return;
+    dragging = null;
+    renderAll();
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', onEnd);
+    document.removeEventListener('touchmove', onMove);
+    document.removeEventListener('touchend', onEnd);
+  }
+  function startDrag(thumb, e){
+    dragging = thumb;
+    e.preventDefault();
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onEnd);
+    document.addEventListener('touchmove', onMove, {passive:false});
+    document.addEventListener('touchend', onEnd);
+  }
+  thumbMin.addEventListener('mousedown', e=>startDrag(thumbMin, e));
+  thumbMax.addEventListener('mousedown', e=>startDrag(thumbMax, e));
+  thumbMin.addEventListener('touchstart', e=>startDrag(thumbMin, e), {passive:false});
+  thumbMax.addEventListener('touchstart', e=>startDrag(thumbMax, e), {passive:false});
+
+  // Click on track jumps the nearest thumb
+  slider.addEventListener('click', e=>{
+    if(e.target === thumbMin || e.target === thumbMax) return;
+    const pct = pxToPct(e.clientX);
+    const minP = parseFloat(thumbMin.style.left)||0;
+    const maxP = parseFloat(thumbMax.style.left)||100;
+    if(Math.abs(pct - minP) <= Math.abs(pct - maxP)){
+      thumbMin.style.left = Math.min(pct, maxP - 0.5)+'%';
+    } else {
+      thumbMax.style.left = Math.max(pct, minP + 0.5)+'%';
+    }
+    applyThumbPositions();
+    renderAll();
+  });
+
+  // Keep slider in sync when date inputs change manually
+  fromInput.addEventListener('change', syncFromInputs);
+  toInput.addEventListener('change', syncFromInputs);
+
+  syncFromInputs();
+}
+
+/* ============ Init ============ */
+function populateFilters(){
+  const sectors   = [...new Set(NORM.map(r=>r.sector).filter(Boolean))].sort();
+  const countries = [...new Set(NORM.map(r=>r.country).filter(Boolean))].sort();
+  const types     = [...new Set(NORM.map(r=>r.type).filter(Boolean))].sort();
+  const fill = (id, list, allLabel) => {
+    const el = document.getElementById(id);
+    el.innerHTML = `<option>${allLabel}</option>`+list.map(x=>`<option>${escapeHtml(x)}</option>`).join('');
+  };
+  fill('sectorSel', sectors, 'All sectors');
+  fill('countrySel', countries, 'All countries');
+  fill('typeSel', types, 'All types');
+
+  const dates = NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
+  if(dates.length){
+    DATE_MIN = dates[0]; DATE_MAX = dates[dates.length-1];
+    document.getElementById('dateFrom').value = toISO(DATE_MIN);
+    document.getElementById('dateTo').value   = toISO(DATE_MAX);
+    document.getElementById('meta-latest').textContent =
+      DATE_MAX.toLocaleDateString('en-GB',{day:'2-digit', month:'short', year:'numeric'});
+    document.getElementById('meta-coverage').textContent =
+      `${DATE_MIN.getFullYear()}–${DATE_MAX.getFullYear()}`;
+  }
+  document.getElementById('meta-records').textContent = NORM.length.toLocaleString();
+}
+function bindEvents(){
+  ['dateFrom','dateTo','countrySel','sectorSel','typeSel','cb-world','cb-eu27']
+    .forEach(id=>document.getElementById(id).addEventListener('change',renderAll));
+  document.querySelectorAll('.thematic').forEach(c=>c.addEventListener('change',renderAll));
+}
+window.clearAllSlicers = function(){
+  if(DATE_MIN) document.getElementById('dateFrom').value = toISO(DATE_MIN);
+  if(DATE_MAX) document.getElementById('dateTo').value   = toISO(DATE_MAX);
+  // reset slider thumbs
+  document.getElementById('rangeThumbMin').style.left = '0%';
+  document.getElementById('rangeThumbMax').style.left = '100%';
+  document.getElementById('rangeFill').style.left = '0%';
+  document.getElementById('rangeFill').style.width = '100%';
+
+  document.getElementById('countrySel').value='All countries';
+  document.getElementById('sectorSel').value='All sectors';
+  document.getElementById('typeSel').value='All types';
+  document.querySelectorAll('.thematic').forEach(c=>c.checked=false);
+  document.getElementById('cb-world').checked=true;
+  document.getElementById('cb-eu27').checked=false;
+  renderAll();
+};
+
+async function init(){
+  const overlay = document.getElementById('loadingOverlay');
+  const status  = document.getElementById('loadingText');
+  try{
+    status.textContent = 'Loading Full_data.csv …';
+    const rows = await fetchCsv(CSV_URL);
+    status.textContent = 'Parsing '+rows.length.toLocaleString()+' records…';
+    NORM = rows.map(normalizeRow).filter(r => r.country || r.company || r.date);
+    console.log('Loaded', NORM.length, 'rows.');
+
+    populateFilters();
+    bindEvents();
+    setupRangeSlider();
+    renderAll();
+    overlay.style.display = 'none';
+  }catch(err){
+    console.error(err);
+    overlay.innerHTML = `<div class="err">
+      <b>Couldn't load CSV data.</b><br><br>
+      ${escapeHtml(err.message||String(err))}<br><br>
+      Check the URL in <code>CSV_URL</code>.
+    </div>`;
+  }
+}
+init();
+</script>
+
+</body>
+</html>
