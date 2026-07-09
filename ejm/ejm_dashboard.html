@@ -214,7 +214,7 @@
 
 <script>
 /* CONSTANTS */
-const CSV_URL         = "https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/EJM2022update_FINAL_EDIT.csv";
+const CSV_URL         = "https://raw.githubusercontent.com/eurofound/static/gh-pages/ejm/EJM2026update.csv";
 const FIELD_COUNTRY   = 'Country';
 const FIELD_METRIC    = 'Metric';
 const FIELD_PERIOD    = 'Year';
@@ -321,19 +321,26 @@ function toDatasetKey(name){ if (name==='European Union') return 'EU_ANY'; retur
 /* Number formatting rules */
 function fmtVal(v){
   const abs = Math.abs(v);
+  
+  // Millions formatting (e.g., 2.7M or 27M)
   if (abs >= 1_000_000){
-    const digits = Number((abs/1e6).toPrecision(2));
-    return (v<0?'-':'') + (digits % 1 === 0 ? digits.toFixed(0) : digits.toString()) + 'M';
+    const m = abs / 1e6;
+    const digits = m < 10 ? m.toFixed(1) : Math.round(m).toString();
+    return (v<0?'-':'') + digits.replace(/\.0$/,'') + 'M';
   }
+  
+  // Tens of thousands formatting (Fixes the 265.5K -> 266K rounding issue)
   if (abs >= 10_000){
-    let k = Number((abs/1e3).toPrecision(2));
-    if (k >= 1000) k = 999;
-    return (v<0?'-':'') + (k % 1 === 0 ? k.toFixed(0) : k.toString()) + 'K';
+    return (v<0?'-':'') + Math.round(abs / 1e3) + 'K';
   }
+  
+  // Single thousands formatting (e.g., 1.5K or 9.5K)
   if (abs >= 1_000){
-    return (v<0?'-':'') + (abs/1e3).toFixed(1) + 'K';
+    return (v<0?'-':'') + (abs / 1e3).toFixed(1).replace(/\.0$/,'') + 'K';
   }
-  return Math.round(v).toString();
+  
+  // Under 1,000 formatting
+  return (v<0?'-':'') + Math.round(abs).toString();
 }
 function formatTooltip3(v){
   const sign = v < 0 ? '-' : '';
