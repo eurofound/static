@@ -147,20 +147,8 @@
     background:var(--card);
     border-top:5px solid var(--navy);
     position:relative;
-    padding:24px 26px 26px 64px;   /* left room for vertical label */
+    padding:24px 28px 26px;
     display:flex;flex-direction:column;
-  }
-  .card .side-label{
-    position:absolute;left:0;top:0;bottom:0;width:44px;
-    display:flex;align-items:flex-start;justify-content:center;
-    padding-top:22px;
-    border-right:1px solid var(--line);
-  }
-  .card .side-label span{
-    writing-mode:vertical-rl;transform:rotate(180deg);
-    font-size:12px;font-weight:700;letter-spacing:0.14em;
-    color:var(--text-dim);text-transform:uppercase;
-    font-family:var(--sans);
   }
   .card-kicker{
     display:flex;align-items:center;gap:10px;
@@ -204,8 +192,8 @@
   .kpi-value.smaller{font-size:17px;padding-top:3px}
   .kpi-value.negative{color:var(--data-red)}
 
-  #map-chart{height:400px}
-  #events-chart{height:330px}
+  #map-chart{height:620px}
+  #events-chart{height:580px}
   #jobs-chart{height:380px}
   #compare-chart{height:360px}
   #types-chart{height:360px}
@@ -316,7 +304,7 @@
     .kpi:nth-child(3n){border-right:none}
     .header-row{flex-direction:column;gap:12px}
     .footer{flex-direction:column;gap:8px}
-    .card{padding-left:56px}
+
   }
 </style>
 </head>
@@ -402,7 +390,6 @@
 
   <!-- KPIs -->
   <div class="card kpi-card">
-    <div class="side-label"><span>Overview</span></div>
     <div class="card-body kpi-strip">
       <div class="kpi"><div class="kpi-label">Restructurings</div><div class="kpi-value" id="kpi-num">—</div></div>
       <div class="kpi"><div class="kpi-label">Top country</div><div class="kpi-value smaller" id="kpi-country">—</div></div>
@@ -418,7 +405,6 @@
 
   <!-- Map -->
   <div class="card map-card">
-    <div class="side-label"><span>Map</span></div>
     <div class="card-kicker">Geography <span class="dot"></span> <span class="k-sub">country totals &amp; largest cases</span></div>
     <h2 class="card-title">Restructurings by country</h2>
     <div class="chart-controls">
@@ -433,7 +419,6 @@
 
   <!-- Events -->
   <div class="card events-card">
-    <div class="side-label"><span>Trend</span></div>
     <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">100+ jobs affected</span></div>
     <h2 class="card-title">Large restructuring events</h2>
     <div class="card-body"><div id="events-chart"></div></div>
@@ -442,7 +427,6 @@
 
   <!-- Jobs over time -->
   <div class="card jobs-card">
-    <div class="side-label"><span>Jobs</span></div>
     <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">annual totals</span></div>
     <h2 class="card-title">Announced job changes over time</h2>
     <div class="chart-controls">
@@ -457,7 +441,6 @@
 
   <!-- Compare -->
   <div class="card compare-card">
-    <div class="side-label"><span>Compare</span></div>
     <div class="card-kicker">Comparison <span class="dot"></span> <span class="k-sub">up to three selections</span></div>
     <h2 class="card-title">Compare trends</h2>
     <div class="chart-controls">
@@ -490,7 +473,6 @@
 
   <!-- Recent losses -->
   <div class="card loss-card">
-    <div class="side-label"><span>Recent</span></div>
     <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest reductions</span></div>
     <h2 class="card-title">Most recent job losses</h2>
     <div class="card-body"><div class="recent-list" id="recentLoss"></div></div>
@@ -498,7 +480,6 @@
 
   <!-- Recent gains -->
   <div class="card gain-card">
-    <div class="side-label"><span>Recent</span></div>
     <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest creations</span></div>
     <h2 class="card-title">Most recent job gains</h2>
     <div class="card-body"><div class="recent-list" id="recentGain"></div></div>
@@ -506,7 +487,6 @@
 
   <!-- Sectors -->
   <div class="card sector-card">
-    <div class="side-label"><span>Sectors</span></div>
     <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">click a sector for subsectors</span></div>
     <h2 class="card-title">Sectors and subsectors</h2>
     <div class="card-body"><div class="sectors-table" id="sectorsTable"></div></div>
@@ -515,7 +495,6 @@
 
   <!-- Types pie -->
   <div class="card types-card">
-    <div class="side-label"><span>Types</span></div>
     <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">share of all cases</span></div>
     <h2 class="card-title">Restructuring by type</h2>
     <div class="card-body"><div id="types-chart"></div></div>
@@ -523,7 +502,6 @@
 
   <!-- Caveats -->
   <div class="card caveat-card">
-    <div class="side-label"><span>Notes</span></div>
     <div class="card-kicker">About the data</div>
     <h2 class="card-title">Reading the figures</h2>
     <div class="card-body caveat-body">
@@ -676,7 +654,18 @@ function applyFilters(rows, ignore={}){
     if(f.from && r.date && r.date < f.from) return false;
     if(f.to   && r.date && r.date > f.to)   return false;
     if(!ignore.country && f.country!=='All countries' && r.country!==f.country) return false;
-    if(!ignore.sector  && f.sector!=='All sectors'  && r.sector!==f.sector)  return false;
+    if(!ignore.sector && f.sector!=='All sectors'){
+      const parts = f.sector.split('|');
+      if(parts[0]==='S'){
+        if(r.sector!==parts[1]) return false;
+      } else if(parts[0]==='B'){
+        if(r.sector!==parts[1]) return false;
+        const sub = r.nace2 || r.nace3;
+        if(sub!==parts[2]) return false;
+      } else {
+        if(r.sector!==f.sector) return false;
+      }
+    }
     if(!ignore.type    && f.type!=='All types'      && r.type!==f.type)      return false;
     if(f.eu27Only && !r.eu27) return false;
     if(anyThem){
@@ -1219,16 +1208,34 @@ function setupRangeSlider(){
 
 /* ---- Init ---- */
 function populateFilters(){
-  const sectors=[...new Set(NORM.map(r=>r.sector).filter(Boolean))].sort();
   const countries=[...new Set(NORM.map(r=>r.country).filter(Boolean))].sort();
   const types=[...new Set(NORM.map(r=>r.type).filter(Boolean))].sort();
   const fill=(id,list,all)=>{
     document.getElementById(id).innerHTML =
       `<option>${all}</option>`+list.map(x=>`<option>${escapeHtml(x)}</option>`).join('');
   };
-  fill('sectorSel',sectors,'All sectors');
   fill('countrySel',countries,'All countries');
   fill('typeSel',types,'All types');
+
+  /* Nested sector → subsector dropdown (optgroups) */
+  const secTree = {};
+  NORM.forEach(r=>{
+    if(!r.sector) return;
+    if(!secTree[r.sector]) secTree[r.sector] = new Set();
+    const sub = r.nace2 || r.nace3;
+    if(sub) secTree[r.sector].add(sub);
+  });
+  let secHtml = '<option value="All sectors">All sectors</option>';
+  Object.keys(secTree).sort().forEach(sec=>{
+    const subs = [...secTree[sec]].sort();
+    secHtml += `<optgroup label="${escapeHtml(sec)}">`;
+    secHtml += `<option value="S|${escapeHtml(sec)}">All ${escapeHtml(sec)}</option>`;
+    subs.forEach(sub=>{
+      secHtml += `<option value="B|${escapeHtml(sec)}|${escapeHtml(sub)}">&nbsp;&nbsp;${escapeHtml(sub)}</option>`;
+    });
+    secHtml += `</optgroup>`;
+  });
+  document.getElementById('sectorSel').innerHTML = secHtml;
 
   const dates=NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
   if(dates.length){
