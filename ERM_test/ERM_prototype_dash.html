@@ -229,9 +229,27 @@
   #map-chart{height:470px;position:relative}
   #events-chart{height:470px}
   .legend-hint{
-    position:absolute;pointer-events:none;z-index:15;
-    font-size:12px;font-weight:700;color:var(--navy);
-    text-align:right;white-space:nowrap;min-height:16px;
+    position:absolute;top:6px;left:50%;transform:translateX(-50%);
+    pointer-events:none;z-index:15;
+    font-size:13.5px;font-weight:700;color:var(--navy);
+    font-family:var(--serif);
+    text-align:center;white-space:nowrap;min-height:18px;
+  }
+  .map-legend{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:4px;z-index:15;
+  }
+  .map-legend .sw{
+    width:16px;height:34px;cursor:pointer;
+    transition:transform .1s ease, box-shadow .1s ease;
+  }
+  .map-legend .sw:hover{
+    transform:scaleX(1.25);
+    box-shadow:0 0 0 1.5px var(--navy);
+  }
+  .map-legend .lbl{
+    font-size:11.5px;color:var(--text-dim);font-weight:700;
+    font-variant-numeric:tabular-nums;
   }
   #jobs-chart{height:380px}
   #compare-chart{height:360px}
@@ -809,36 +827,17 @@ function renderMap(rows){
       const to   = i<8 ? (i+1)*step : undefined;
       return {from, to, color};
     });
-    const fmtK = v => v>=1000 ? (v/1000).toLocaleString(undefined,{maximumFractionDigits:1})+'k' : String(v);
-    note.textContent = 'Colour shows the number of recorded restructuring cases per country. Hover a legend swatch to see its value range and highlight countries in that band.';
+    const fmtK = v => v>=1000
+      ? ((v/1000)%1===0 ? (v/1000) : (v/1000).toFixed(1)) + 'K'
+      : String(v);
+    note.textContent = 'Colour shows the number of recorded restructuring cases per country. Hover a legend swatch to highlight the countries in that band.';
 
     const chart = Highcharts.mapChart('map-chart',{
       chart:{map:getEuropeMap(),backgroundColor:'transparent'},
       mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
         theme:{fill:'#fff',stroke:'#D9DEE4',r:4,states:{hover:{fill:'#EAF0F6'}}}}},
       colorAxis:{dataClasses},
-      legend:{
-        enabled:true, layout:'vertical',
-        align:'right', verticalAlign:'middle',
-        floating:true, x:-4,
-        backgroundColor:'transparent', borderWidth:0, padding:0,
-        reversed:true,                       /* darkest (max) at top */
-        symbolHeight:36, symbolWidth:16, symbolRadius:0,
-        itemMarginTop:2, itemMarginBottom:2, /* white gap between levels */
-        useHTML:true,
-        itemStyle:{fontSize:'11px', color:'#6B7690', fontWeight:'400'},
-        labelFormatter:function(){
-          const from = this.from||0, to = this.to;
-          const i = Math.round(from/step);       /* 0 (lightest) … 8 (darkest) */
-          const range = to!=null ? `${from.toLocaleString()} – ${to.toLocaleString()} cases`
-                                 : `${from.toLocaleString()}+ cases`;
-          let label = '';
-          if(i===0) label = fmtK(from);              /* min */
-          else if(i===4) label = fmtK(from);         /* mid */
-          else if(i===8) label = fmtK(from)+'+';     /* max band */
-          return `<span title="${range}" style="cursor:default">${label}</span>`;
-        }
-      },
+      legend:{enabled:false},
       tooltip:{useHTML:true,
         pointFormatter:function(){
           return `<div style="padding:3px 5px">
@@ -852,36 +851,51 @@ function renderMap(rows){
         joinBy:['hc-key','hc-key'],dataLabels:{enabled:false}}]
     });
 
-    /* Hover hint: show the hovered band's range at the top of the legend */
+    /* ---- Custom legend: max at top, 0 at bottom, band hover highlight ---- */
     const host = document.getElementById('map-chart');
-    let hint = host.querySelector('.legend-hint');
-    if(!hint){
-      hint = document.createElement('div');
-      hint.className = 'legend-hint';
-      host.appendChild(hint);
-    }
-    hint.textContent = '';
-    try{
-      const legGroup = chart.legend && chart.legend.group;
-      if(legGroup && legGroup.element){
-        const hostRect = host.getBoundingClientRect();
-        const legRect  = legGroup.element.getBoundingClientRect();
-        hint.style.top   = Math.max(4,(legRect.top - hostRect.top - 22)) + 'px';
-        hint.style.right = Math.max(2,(hostRect.right - legRect.right)) + 'px';
-      }
-      (chart.legend.allItems||[]).forEach(item=>{
-        const el = (item.legendItem && item.legendItem.group && item.legendItem.group.element)
-                || (item.legendGroup && item.legendGroup.element);
-        if(!el) return;
-        const from = item.from||0, to = item.to;
-        const range = to!=null
-          ? `${from.toLocaleString()} – ${to.toLocaleString()} cases`
-          : `${from.toLocaleString()}+ cases`;
-        el.style.cursor='pointer';
-        el.addEventListener('mouseenter',()=>{ hint.textContent = range; });
-        el.addEventListener('mouseleave',()=>{ hint.textContent = ''; });
+
+    const hint = document.createElement('div');
+    hint.className = 'legend-hint';
+    host.appendChild(hint);
+
+    const lg = document.createElement('div');
+    lg.className = 'map-legend';
+    lg.innerHTML =
+      `<div class="lbl">${fmtK(8*step)}+</div>` +
+      MAP_RAMP.slice().reverse().map((color,ri)=>{
+        const i = 8-ri;                          /* darkest first */
+        return `<div class="sw" data-i="${i}" style="background:${color}"></div>`;
+      }).join('') +
+      `<div class="lbl">0</div>`;
+    host.appendChild(lg);
+
+    const FADE = '#EBEDEF';
+    function paintBand(i){
+      const from = i*step, to = i<8 ? (i+1)*step : null;
+      const color = MAP_RAMP[i];
+      chart.series[0].points.forEach(p=>{
+        if(!p.graphic) return;
+        const v = p.value;
+        const inBand = v!=null && v>=from && (to==null || v<to);
+        p.graphic.attr({fill: inBand ? color : FADE});
       });
-    }catch(e){ console.warn('legend hint unavailable', e); }
+      const range = to!=null
+        ? `${fmtK(from)} – ${fmtK(to)} restructurings`
+        : `${fmtK(from)}+ restructurings`;
+      hint.textContent = range;
+    }
+    function clearBand(){
+      chart.series[0].points.forEach(p=>{
+        if(!p.graphic) return;
+        p.graphic.attr({fill: p.color || '#EDEFF2'});
+      });
+      hint.textContent = '';
+    }
+    lg.querySelectorAll('.sw').forEach(sw=>{
+      const i = +sw.dataset.i;
+      sw.addEventListener('mouseenter',()=>paintBand(i));
+      sw.addEventListener('mouseleave',clearBand);
+    });
   } else {
     /* Largest case per country (top 15 countries by case size) */
     const biggest = {};
@@ -1461,14 +1475,25 @@ function downloadBlob(blob, filename){
   document.body.appendChild(a); a.click();
   setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},200);
 }
-function exportChartSVG(chartId, name){
+function exportTitleOpts(title, subtitle){
+  return {
+    chart:{backgroundColor:'#FFFFFF', spacingTop:20},
+    title:{text:title||null, align:'left', x:10,
+      style:{color:'#26324D', fontFamily:"'Source Serif Pro', Georgia, serif",
+             fontWeight:'700', fontSize:'18px'}},
+    subtitle:{text:subtitle||null, align:'left', x:10,
+      style:{color:'#6B7690', fontFamily:"'Source Sans Pro', sans-serif",
+             fontSize:'12px'}}
+  };
+}
+function exportChartSVG(chartId, name, title, subtitle){
   const ch=getChartById(chartId); if(!ch) return;
-  const svg=ch.getSVG({chart:{backgroundColor:'#FFFFFF'}});
+  const svg=ch.getSVG(exportTitleOpts(title, subtitle));
   downloadBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), name+'.svg');
 }
-function exportChartPNG(chartId, name){
+function exportChartPNG(chartId, name, title, subtitle){
   const ch=getChartById(chartId); if(!ch) return;
-  const svg=ch.getSVG({chart:{backgroundColor:'#FFFFFF'}});
+  const svg=ch.getSVG(exportTitleOpts(title, subtitle));
   const img=new Image();
   const url='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
   img.onload=function(){
@@ -1651,10 +1676,14 @@ function buildExportMenus(){
       const act=e.target.dataset.act;
       if(!act) return;
       menuEl.classList.remove('open');
+      const titleEl=card.querySelector('.card-title');
+      const subEl=card.querySelector('.card-kicker .k-sub');
+      const title=titleEl?titleEl.textContent.trim():'';
+      const subtitle=subEl?subEl.textContent.trim():'';
       if(act==='csv') exportCSV(cfg.csv(), cfg.name);
-      else if(act==='svg') exportChartSVG(cfg.chartId, cfg.name);
+      else if(act==='svg') exportChartSVG(cfg.chartId, cfg.name, title, subtitle);
       else if(act==='png'){
-        if(cfg.chartId) exportChartPNG(cfg.chartId, cfg.name);
+        if(cfg.chartId) exportChartPNG(cfg.chartId, cfg.name, title, subtitle);
         else exportNodePNG(card, cfg.name);
       }
     });
