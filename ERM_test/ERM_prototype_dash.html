@@ -177,6 +177,25 @@
     font-size:12px;font-weight:600;color:var(--text-dim);
     font-family:var(--sans);z-index:5;
   }
+  /* rich tooltips with contributor bars */
+  .tt-wrap{min-width:240px;max-width:300px;padding:2px 2px 4px}
+  .tt-head{font-family:var(--serif);font-weight:700;font-size:15px;
+    color:var(--navy);margin-bottom:5px}
+  .tt-line{font-size:12px;color:var(--text-dim);margin:2px 0;display:flex;
+    align-items:center;gap:6px}
+  .tt-line strong{color:var(--navy);margin-left:auto;font-variant-numeric:tabular-nums}
+  .tt-dot{width:9px;height:9px;flex:none;display:inline-block}
+  .tt-sub{font-size:10px;text-transform:uppercase;letter-spacing:.09em;
+    color:var(--text-mute);font-weight:700;margin:9px 0 5px;
+    border-top:1px solid var(--line-soft);padding-top:7px}
+  .tt-row{margin-bottom:6px}
+  .tt-name{font-size:12px;color:var(--navy);font-weight:600;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+  .tt-track{display:flex;align-items:center;height:17px;background:#EAECF0}
+  .tt-fill{height:100%;flex:none}
+  .tt-val{font-size:11.5px;font-weight:700;padding-left:7px;
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+
   /* export widget — bottom right of each card */
   .export-wrap{position:absolute;bottom:14px;right:16px;z-index:20}
   .export-btn{
@@ -743,6 +762,38 @@ function applyFilters(rows, ignore={}){
 }
 
 /* ---- Render orchestrator ---- */
+/* =====================================================================
+   Rich tooltip helpers — top-3 contributors with inline bars
+   ===================================================================== */
+function topByMetric(rows, valueFn, keyFn, n){
+  const agg={};
+  rows.forEach(r=>{
+    const k=keyFn(r); if(!k) return;
+    const v=valueFn(r);
+    if(v==null||!isFinite(v)||v===0) return;
+    agg[k]=(agg[k]||0)+v;
+  });
+  return Object.entries(agg)
+    .sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]))
+    .slice(0,n||3)
+    .map(([name,value])=>({name,value}));
+}
+function ttSection(label, items, color, unit){
+  if(!items || !items.length) return '';
+  const max=Math.max(...items.map(i=>Math.abs(i.value)))||1;
+  const rows=items.map(i=>{
+    const w=8+(Math.abs(i.value)/max)*64;          /* 8–72% so the value always fits */
+    return `<div class="tt-row">
+      <div class="tt-name">${escapeHtml(i.name)}</div>
+      <div class="tt-track">
+        <div class="tt-fill" style="width:${w}%;background:${color}"></div>
+        <span class="tt-val" style="color:${color}">${fmtInt(Math.abs(i.value))}${unit?' '+unit:''}</span>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="tt-sub">${escapeHtml(label)}</div>${rows}`;
+}
+
 function renderAll(){
   const rows = applyFilters(NORM);
   LAST_ROWS = rows;
@@ -983,11 +1034,17 @@ function renderEventsChart(rows){
     xAxis:{type:'linear',tickInterval:5,allowDecimals:false},
     yAxis:{title:{text:'Events'},min:0},
     legend:{enabled:false},
-    tooltip:{useHTML:true,
+    tooltip:{useHTML:true, outside:true,
       formatter:function(){
-        return `<div style="padding:3px 5px">
-          <div style="font-weight:700;color:#26324D">${this.x}</div>
-          <div style="color:#6B7690;font-size:12px">Events: <strong style="color:#41719C">${this.y.toLocaleString()}</strong></div>
+        const y=this.x;
+        const yr=rows.filter(r=>r.date && r.date.getFullYear()===y &&
+          Math.max(r.maxLoss||0,r.minLoss||0,r.jobGain||0)>=100);
+        const top=topByMetric(yr, r=>Math.max(r.maxLoss||0,r.minLoss||0,r.jobGain||0),
+                              r=>r.company, 3);
+        return `<div class="tt-wrap">
+          <div class="tt-head">${y}</div>
+          <div class="tt-line">Large events <strong>${fmtInt(this.y)}</strong></div>
+          ${ttSection('Largest events · jobs affected', top, '#3F6C9B')}
         </div>`;
       }},
     plotOptions:{areaspline:{color:'#3F6C9B',lineWidth:2.5,
@@ -1048,14 +1105,21 @@ function renderJobsChart(rows){
         return v;
       }}},
     legend:{enabled:true,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
-    tooltip:{shared:true,useHTML:true,
+    tooltip:{shared:true,useHTML:true, outside:true,
       formatter:function(){
-        let s=`<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
+        const y=this.x;
+        const yr=rows.filter(r=>r.date && r.date.getFullYear()===y);
+        let s=`<div class="tt-wrap"><div class="tt-head">${y}</div>`;
         this.points.forEach(p=>{
-          s+=`<div style="color:#6B7690;font-size:12px;margin:2px 0">
-            <span style="display:inline-block;width:9px;height:9px;background:${p.color};margin-right:6px"></span>
-            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong></div>`;
+          s+=`<div class="tt-line"><span class="tt-dot" style="background:${p.color}"></span>
+            ${p.series.name} <strong>${fmtInt(p.y)}</strong></div>`;
         });
+        if(jobsMode==='jobs'){
+          s+=ttSection('Largest job losses', topByMetric(yr,r=>r.maxLoss,r=>r.company,3), '#A03B45');
+          s+=ttSection('Largest job gains',  topByMetric(yr,r=>r.jobGain,r=>r.company,3), '#4E6B3C');
+        }else{
+          s+=ttSection('Most cases', topByMetric(yr,()=>1,r=>r.company,3), '#3F6C9B','cases');
+        }
         return s+'</div>';
       }},
     plotOptions:{spline:{lineWidth:2.5,
@@ -1141,14 +1205,24 @@ function renderCompare(){
         return v;
       }}},
     legend:{enabled:true,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
-    tooltip:{shared:true,useHTML:true,
+    tooltip:{shared:true,useHTML:true, outside:true,
       formatter:function(){
-        let s=`<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
+        const y=this.x;
+        let s=`<div class="tt-wrap"><div class="tt-head">${y}</div>`;
         this.points.forEach(p=>{
-          s+=`<div style="color:#6B7690;font-size:12px;margin:2px 0">
-            <span style="display:inline-block;width:9px;height:9px;background:${p.color};margin-right:6px"></span>
-            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong></div>`;
+          s+=`<div class="tt-line"><span class="tt-dot" style="background:${p.color}"></span>
+            ${p.series.name} <strong>${fmtInt(p.y)}</strong></div>`;
         });
+        const keyOf=r=>dim==='country'?r.country:dim==='sector'?r.sector:r.company;
+        const yr=base.filter(r=>r.date && r.date.getFullYear()===y && picks.indexOf(keyOf(r))>-1);
+        const valFn = metric==='cases' ? ()=>1
+                    : metric==='net'   ? r=>r.netChange
+                    : metric==='loss'  ? r=>r.maxLoss
+                    :                    r=>r.jobGain;
+        const groupBy = dim==='company' ? (r=>r.sector) : (r=>r.company);
+        const top=topByMetric(yr, valFn, groupBy, 3);
+        const heading = (dim==='company'?'Top sectors · ':'Top companies · ') + metricLabel.toLowerCase();
+        s+=ttSection(heading, top, '#3F6C9B', metric==='cases'?'cases':'');
         return s+'</div>';
       }},
     plotOptions:{spline:{lineWidth:2.5,
