@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>European Restructuring Monitor (ERM)</title>
 
-<!-- Eurofound brand fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
@@ -18,450 +17,306 @@
 <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
 
 <style>
-  /* =====================================================
-     Eurofound design tokens
-     ===================================================== */
   :root{
-    /* Core brand */
-    --navy:          #26324D;   /* main heading navy */
-    --navy-2:        #2C3E66;
-    --blue:          #41719C;   /* steel blue — active buttons, links, accents */
-    --blue-dark:     #31649B;   /* section-label blue */
-    --blue-deep:     #1F3A5F;
-    --blue-pale:     #EAF0F6;
+    --navy:        #26324D;
+    --navy-2:      #2C3E66;
+    --blue:        #41719C;
+    --blue-dark:   #31649B;
+    --blue-pale:   #EAF0F6;
+    --green:       #5F7A5A;    /* the green button from the screenshot */
 
-    /* Data palette (from the explorer charts) */
-    --data-blue:     #3F6C9B;
-    --data-navy:     #21374F;
-    --data-tan:      #B08A5E;
-    --data-red:      #A03B45;
-    --data-green:    #4E6B3C;
-    --data-purple:   #5C4E8E;
-    --sage-1:        #E7EFE9;   /* map light */
-    --sage-2:        #AFC6BB;
-    --sage-3:        #7F9CA8;
+    --data-blue:   #3F6C9B;
+    --data-navy:   #21374F;
+    --data-tan:    #B08A5E;
+    --data-red:    #A03B45;
+    --data-green:  #4E6B3C;
+    --data-purple: #5C4E8E;
+    --data-teal:   #4E7F8C;
+    --data-gold:   #C0A05C;
+    --data-grey:   #8A93A6;
+    --sage-1:      #E7EFE9;
+    --sage-3:      #7F9CA8;
 
-    /* Neutrals */
-    --page:          #FFFFFF;
-    --surface:       #F7F8F9;   /* chart panel grey */
-    --line:          #D9DEE4;   /* control borders */
-    --line-soft:     #E8EBEF;
-    --text:          #26324D;
-    --text-body:     #3A4664;
-    --text-dim:      #6B7690;
-    --text-mute:     #98A1B3;
+    --page:        #FFFFFF;
+    --card:        #F2F3F5;     /* card grey from screenshot */
+    --line:        #D9DEE4;
+    --line-soft:   #E8EBEF;
+    --text:        #26324D;
+    --text-body:   #3A4664;
+    --text-dim:    #6B7690;
+    --text-mute:   #98A1B3;
 
-    --radius:        6px;
-    --radius-lg:     8px;
-
-    --serif: 'Source Serif Pro', Georgia, serif;
-    --sans:  'Source Sans Pro', 'Segoe UI', system-ui, sans-serif;
+    --serif:'Source Serif Pro', Georgia, serif;
+    --sans:'Source Sans Pro','Segoe UI',system-ui,sans-serif;
   }
 
   *{box-sizing:border-box}
   html,body{
-    margin:0; padding:0;
-    background:var(--page);
-    color:var(--text-body);
-    font-family:var(--sans); font-size:15px; font-weight:400;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    margin:0;padding:0;background:var(--page);color:var(--text-body);
+    font-family:var(--sans);font-size:15px;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
   }
 
-  /* =====================================================
-     Header
-     ===================================================== */
-  .topbar{
-    background:var(--navy);
-    height:6px;
-  }
-  .header{
-    max-width:1520px; margin:0 auto;
-    padding:30px 48px 4px;
-  }
-  .header-row{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:40px;
-  }
-  h1{
-    margin:0 0 6px 0;
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:40px; line-height:1.08;
-    color:var(--navy);
-    letter-spacing:-0.005em;
-  }
-  .header-sub{
-    color:var(--text-body); font-size:16px; margin:0 0 8px 0;
-    font-weight:400;
-  }
-  .header-meta{
-    display:flex; gap:32px; padding-top:10px; flex-shrink:0;
-  }
-  .meta-item{display:flex; flex-direction:column}
-  .meta-label{
-    font-size:12px; color:var(--text-dim);
-    margin-bottom:2px; font-weight:600;
-  }
-  .meta-value{
-    color:var(--navy); font-weight:600; font-size:17px;
-    font-family:var(--serif);
-  }
+  .topbar{background:var(--navy);height:6px}
 
-  .section-label{
-    font-family:var(--sans);
-    color:var(--blue-dark);
-    font-weight:600; font-size:15px;
-    margin:18px 0 10px 0;
-  }
+  .header{max-width:1520px;margin:0 auto;padding:30px 48px 4px}
+  .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+  h1{margin:0 0 6px;font-family:var(--serif);font-weight:700;font-size:40px;
+     line-height:1.08;color:var(--navy)}
+  .header-sub{color:var(--text-body);font-size:16px;margin:0 0 8px}
+  .header-meta{display:flex;gap:32px;padding-top:10px;flex-shrink:0}
+  .meta-item{display:flex;flex-direction:column}
+  .meta-label{font-size:12px;color:var(--text-dim);margin-bottom:2px;font-weight:600}
+  .meta-value{color:var(--navy);font-weight:600;font-size:17px;font-family:var(--serif)}
+  .section-label{color:var(--blue-dark);font-weight:600;font-size:15px;margin:18px 0 10px}
 
-  /* =====================================================
-     Filters — Eurofound control style
-     ===================================================== */
-  .filters-wrap{
-    max-width:1520px; margin:0 auto;
-    padding:0 48px 26px;
-    border-bottom:1px solid var(--line-soft);
-  }
-  .filters{
-    display:grid;
-    grid-template-columns: 1.25fr 1fr 1fr 1.1fr auto;
-    gap:36px;
-    align-items:start;
-  }
-  .field-label{
-    display:block;
-    font-size:14px; color:var(--blue-dark);
-    margin-bottom:8px; font-weight:600;
-  }
-
-  /* bordered white controls like the Eurofound dropdowns */
-  .date-row{display:flex; align-items:center; gap:8px}
+  /* ============ Filters ============ */
+  .filters-wrap{max-width:1520px;margin:0 auto;padding:0 48px 26px;
+    border-bottom:1px solid var(--line-soft)}
+  .filters{display:grid;grid-template-columns:1.25fr 1fr 1fr 1.1fr auto;gap:36px;align-items:start}
+  .field-label{display:block;font-size:14px;color:var(--blue-dark);margin-bottom:8px;font-weight:600}
+  .date-row{display:flex;align-items:center;gap:8px}
   .date-row input[type="date"]{
-    flex:1; background:#fff; color:var(--navy);
-    border:1px solid var(--line);
-    padding:9px 12px;
-    font-size:14.5px; font-family:var(--sans);
-    border-radius:var(--radius);
-    transition:border-color .15s, box-shadow .15s;
-  }
+    flex:1;background:#fff;color:var(--navy);border:1px solid var(--line);
+    padding:9px 12px;font-size:14.5px;font-family:var(--sans);border-radius:6px;
+    transition:border-color .15s, box-shadow .15s}
   .date-row input[type="date"]:hover{border-color:var(--blue)}
-  .date-row input[type="date"]:focus{
-    outline:none; border-color:var(--blue);
-    box-shadow:0 0 0 3px rgba(65,113,156,0.12);
-  }
-  .date-sep{color:var(--text-mute); font-size:14px}
-
+  .date-row input[type="date"]:focus{outline:none;border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(65,113,156,.12)}
+  .date-sep{color:var(--text-mute)}
   select{
-    width:100%; background:#fff; color:var(--navy);
-    border:1px solid var(--line);
-    padding:9px 34px 9px 12px;
-    font-size:14.5px; font-family:var(--sans);
-    border-radius:var(--radius);
-    appearance:none; -webkit-appearance:none;
-    cursor:pointer;
+    width:100%;background:#fff;color:var(--navy);border:1px solid var(--line);
+    padding:9px 34px 9px 12px;font-size:14.5px;font-family:var(--sans);border-radius:6px;
+    appearance:none;-webkit-appearance:none;cursor:pointer;
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'><path fill='%2341719C' d='M0 0l5.5 7L11 0z'/></svg>");
-    background-repeat:no-repeat; background-position:right 12px center;
-    transition:border-color .15s, box-shadow .15s;
-  }
+    background-repeat:no-repeat;background-position:right 12px center;
+    transition:border-color .15s, box-shadow .15s}
   select:hover{border-color:var(--blue)}
-  select:focus{
-    outline:none; border-color:var(--blue);
-    box-shadow:0 0 0 3px rgba(65,113,156,0.12);
-  }
+  select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(65,113,156,.12)}
   .stack > * + *{margin-top:16px}
 
-  /* Eurofound blue square checkboxes */
-  .check-list label{
-    display:flex; align-items:center; gap:9px;
-    font-size:14.5px; margin:5px 0; cursor:pointer;
-    color:var(--text-body); line-height:1.4;
-  }
+  .check-list label{display:flex;align-items:center;gap:9px;font-size:14.5px;
+    margin:5px 0;cursor:pointer;color:var(--text-body);line-height:1.4}
   .check-list input{
-    appearance:none; -webkit-appearance:none;
-    width:16px; height:16px;
-    border:1.5px solid var(--line);
-    background:#fff;
-    border-radius:3px; cursor:pointer; position:relative;
-    transition:all .15s ease; flex-shrink:0;
-  }
+    appearance:none;-webkit-appearance:none;width:16px;height:16px;
+    border:1.5px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;
+    position:relative;transition:all .15s;flex-shrink:0}
   .check-list input:hover{border-color:var(--blue)}
-  .check-list input:checked{
-    background:var(--blue); border-color:var(--blue);
-  }
-  .check-list input:checked::after{
-    content:""; position:absolute; left:4px; top:1px;
-    width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0;
-    transform:rotate(45deg);
-  }
+  .check-list input:checked{background:var(--blue);border-color:var(--blue)}
+  .check-list input:checked::after{content:"";position:absolute;left:4px;top:1px;
+    width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
 
-  /* dual-range slider */
-  .range-slider{
-    position:relative; height:28px; margin-top:14px; user-select:none;
-  }
-  .range-track{
-    position:absolute; left:9px; right:9px; top:50%;
-    height:4px; transform:translateY(-50%);
-    background:var(--line-soft); border-radius:2px;
-  }
-  .range-fill{
-    position:absolute; top:50%; height:4px; transform:translateY(-50%);
-    background:var(--blue); border-radius:2px;
-  }
-  .range-thumb{
-    position:absolute; top:50%; transform:translate(-50%,-50%);
-    width:18px; height:18px; border-radius:50%;
-    background:#fff; border:2px solid var(--blue);
-    cursor:grab; z-index:2;
-    transition:box-shadow .12s ease;
-    box-shadow:0 1px 3px rgba(38,50,77,0.2);
-  }
-  .range-thumb:hover{box-shadow:0 0 0 5px rgba(65,113,156,0.15)}
+  .range-slider{position:relative;height:28px;margin-top:14px;user-select:none}
+  .range-track{position:absolute;left:9px;right:9px;top:50%;height:4px;
+    transform:translateY(-50%);background:var(--line-soft);border-radius:2px}
+  .range-fill{position:absolute;top:50%;height:4px;transform:translateY(-50%);
+    background:var(--blue);border-radius:2px}
+  .range-thumb{position:absolute;top:50%;transform:translate(-50%,-50%);
+    width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid var(--blue);
+    cursor:grab;z-index:2;box-shadow:0 1px 3px rgba(38,50,77,.2);transition:box-shadow .12s}
+  .range-thumb:hover{box-shadow:0 0 0 5px rgba(65,113,156,.15)}
   .range-thumb:active{cursor:grabbing}
 
-  /* Eurofound button — like "Clear selection" */
+  /* Eurofound "View"-style button */
   .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    background:#fff; color:var(--navy);
-    border:1px solid var(--line);
-    padding:9px 18px;
-    font-family:var(--serif); font-weight:600; font-size:14.5px;
-    border-radius:var(--radius);
-    cursor:pointer;
-    transition:all .15s ease;
-    white-space:nowrap;
-  }
-  .btn:hover{border-color:var(--blue); color:var(--blue); background:var(--blue-pale)}
-  .btn svg{flex-shrink:0}
-  .filters .btn{align-self:end; margin-top:26px}
+    display:inline-flex;align-items:center;justify-content:space-between;gap:12px;
+    background:var(--blue);color:#fff;border:none;
+    padding:11px 20px;font-family:var(--serif);font-weight:600;font-size:15px;
+    border-radius:2px;cursor:pointer;transition:background .15s;white-space:nowrap}
+  .btn:hover{background:var(--navy-2)}
+  .btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--line);
+    font-size:14px;padding:9px 16px}
+  .btn.secondary:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-pale)}
+  .filters .btn{align-self:end;margin-top:26px}
 
-  /* =====================================================
-     Main
-     ===================================================== */
-  .main{
-    max-width:1520px;
-    margin:30px auto 8px;
-    padding:0 48px;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    gap:30px 34px;
-  }
+  /* segmented toggle (chart format buttons) */
+  .seg{display:inline-flex;gap:8px;flex-wrap:wrap}
+  .seg button{
+    background:#fff;color:var(--navy);border:1px solid var(--line);
+    padding:7px 14px;font-family:var(--sans);font-weight:600;font-size:13px;
+    border-radius:6px;cursor:pointer;transition:all .15s}
+  .seg button:hover{border-color:var(--blue);color:var(--blue)}
+  .seg button.active{background:var(--blue);border-color:var(--blue);color:#fff}
 
-  /* KPI strip — clean, divided */
-  .kpi-strip{
-    grid-column:1 / -1;
-    display:grid;
-    grid-template-columns:repeat(9, 1fr);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius-lg);
-    background:var(--surface);
-    padding:20px 8px;
+  /* ============ Main grid ============ */
+  .main{max-width:1520px;margin:30px auto 8px;padding:0 48px;
+    display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:34px}
+
+  /* ===== Eurofound card (from screenshot) ===== */
+  .card{
+    background:var(--card);
+    border-top:5px solid var(--navy);
+    position:relative;
+    padding:24px 26px 26px 64px;   /* left room for vertical label */
+    display:flex;flex-direction:column;
   }
-  .kpi{
-    padding:2px 20px;
+  .card .side-label{
+    position:absolute;left:0;top:0;bottom:0;width:44px;
+    display:flex;align-items:flex-start;justify-content:center;
+    padding-top:22px;
     border-right:1px solid var(--line);
-    display:flex; flex-direction:column; gap:5px;
-    min-width:0;
   }
+  .card .side-label span{
+    writing-mode:vertical-rl;transform:rotate(180deg);
+    font-size:12px;font-weight:700;letter-spacing:0.14em;
+    color:var(--text-dim);text-transform:uppercase;
+    font-family:var(--sans);
+  }
+  .card-kicker{
+    display:flex;align-items:center;gap:10px;
+    font-size:13px;font-weight:700;color:var(--navy);
+    text-transform:uppercase;letter-spacing:0.04em;
+    margin-bottom:10px;
+  }
+  .card-kicker .dot{width:5px;height:5px;border-radius:50%;background:var(--text-mute)}
+  .card-kicker .k-sub{color:var(--text-dim);font-weight:400;text-transform:none;letter-spacing:0}
+  .card-title{
+    font-family:var(--serif);color:var(--navy-2);
+    font-weight:700;font-size:23px;line-height:1.2;
+    margin:0 0 14px;
+  }
+  .card-body{flex:1}
+  .card-note{
+    margin-top:12px;color:var(--text-dim);font-size:12.5px;line-height:1.5;
+  }
+  .card-note.warn{color:#8a5a2a}
+
+  .kpi-card   {grid-column:1 / -1}
+  .map-card   {grid-column:1 / span 2}
+  .events-card{grid-column:3 / span 2}
+  .jobs-card  {grid-column:1 / span 4}
+  .compare-card{grid-column:1 / span 4}
+  .loss-card  {grid-column:1 / span 2}
+  .gain-card  {grid-column:3 / span 2}
+  .sector-card{grid-column:1 / span 2}
+  .types-card {grid-column:3 / span 2}
+  .caveat-card{grid-column:1 / span 4}
+
+  /* KPI strip inside card */
+  .kpi-strip{display:grid;grid-template-columns:repeat(9,1fr)}
+  .kpi{padding:2px 20px;border-right:1px solid var(--line);
+    display:flex;flex-direction:column;gap:5px;min-width:0}
+  .kpi:first-child{padding-left:0}
   .kpi:last-child{border-right:none}
-  .kpi-label{
-    color:var(--text-dim); font-size:12.5px; font-weight:600;
-  }
-  .kpi-value{
-    font-family:var(--serif);
-    font-size:26px; font-weight:700;
-    color:var(--navy); line-height:1.08;
-    word-break:break-word;
-  }
-  .kpi-value.smaller{font-size:17px; padding-top:3px}
+  .kpi-label{color:var(--text-dim);font-size:12.5px;font-weight:600}
+  .kpi-value{font-family:var(--serif);font-size:26px;font-weight:700;
+    color:var(--navy);line-height:1.08;word-break:break-word}
+  .kpi-value.smaller{font-size:17px;padding-top:3px}
   .kpi-value.negative{color:var(--data-red)}
 
-  /* Section blocks — chart surface like the Data Explorer */
-  .block{display:flex; flex-direction:column}
-  .block-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    margin-bottom:12px; gap:16px;
-  }
-  .block-title{
-    font-family:var(--serif);
-    color:var(--navy);
-    font-weight:700;
-    font-size:20px;
-    margin:0;
-  }
-  .block-sub{
-    color:var(--text-dim); font-size:13px; font-weight:400;
-    white-space:nowrap;
-  }
-  .chart-surface{
-    background:var(--surface);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius-lg);
-    padding:16px 14px 10px;
-    flex:1;
-  }
-
-  .map-cell    {grid-column:1 / span 2}
-  .events-cell {grid-column:3 / span 2}
-  .jobs-cell   {grid-column:1 / span 4}
-  .recent-loss {grid-column:1 / span 2}
-  .recent-gain {grid-column:3 / span 2}
-  .sectors-cell{grid-column:1 / span 2}
-  .types-cell  {grid-column:3 / span 2}
-
-  #map-chart{height:380px}
-  #events-chart{height:340px}
+  #map-chart{height:400px}
+  #events-chart{height:330px}
   #jobs-chart{height:380px}
+  #compare-chart{height:360px}
+  #types-chart{height:360px}
 
-  /* Recent lists */
-  .recent-list{
-    max-height:340px; overflow-y:auto; padding:4px 14px 4px 4px;
-  }
+  .chart-controls{display:flex;justify-content:space-between;align-items:center;
+    gap:16px;flex-wrap:wrap;margin-bottom:12px}
+
+  /* recent lists */
+  .recent-list{max-height:350px;overflow-y:auto;padding-right:10px}
   .recent-list::-webkit-scrollbar{width:5px}
-  .recent-list::-webkit-scrollbar-track{background:transparent}
-  .recent-list::-webkit-scrollbar-thumb{background:var(--line); border-radius:3px}
-  .recent-item{
-    padding:14px 2px;
-    border-bottom:1px solid var(--line-soft);
-  }
-  .recent-item:first-child{padding-top:6px}
+  .recent-list::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  .recent-item{padding:14px 0;border-bottom:1px solid var(--line)}
+  .recent-item:first-child{padding-top:2px}
   .recent-item:last-child{border-bottom:none}
-  .recent-head{
-    display:flex; align-items:baseline; justify-content:space-between; gap:12px;
-    margin-bottom:5px;
-  }
-  .recent-company{
-    font-family:var(--serif);
-    font-size:16.5px; font-weight:600;
-    color:var(--navy); line-height:1.25;
-  }
-  .recent-date{
-    color:var(--text-mute); font-size:12.5px; white-space:nowrap; flex-shrink:0;
-  }
-  .recent-meta{
-    display:flex; gap:14px; flex-wrap:wrap;
-    color:var(--text-dim); font-size:13px;
-    margin:3px 0 5px 0;
-  }
-  .recent-meta .num.loss{color:var(--data-red); font-weight:700}
-  .recent-meta .num.gain{color:var(--data-green); font-weight:700}
-  .recent-desc{
-    color:var(--text-dim); font-size:13px; line-height:1.55; margin-top:3px;
-  }
+  .recent-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:5px}
+  .recent-company{font-family:var(--serif);font-size:17px;font-weight:600;
+    color:var(--navy-2);line-height:1.25}
+  .recent-date{color:var(--text-dim);font-size:12.5px;font-weight:700;
+    text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+  .recent-meta{display:flex;gap:14px;flex-wrap:wrap;color:var(--text-dim);
+    font-size:13px;margin:3px 0 5px}
+  .recent-meta .num.loss{color:var(--data-red);font-weight:700}
+  .recent-meta .num.gain{color:var(--data-green);font-weight:700}
+  .recent-desc{color:var(--text-dim);font-size:13px;line-height:1.55;margin-top:3px}
 
-  /* Sectors table */
-  .sectors-table{
-    max-height:380px; overflow-y:auto;
-    padding:6px 14px 6px 4px;
-  }
+  /* sectors */
+  .sectors-table{max-height:400px;overflow-y:auto;padding-right:8px}
   .sectors-table::-webkit-scrollbar{width:5px}
   .sectors-table::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-  .sectors-table .row{
-    display:grid; grid-template-columns:1.4fr 62px 1.2fr;
-    align-items:center; gap:14px;
-    padding:9px 2px;
-    border-bottom:1px solid var(--line-soft);
-    font-size:14px;
+  .sec-row{
+    display:grid;grid-template-columns:16px 1.35fr 62px 1.1fr;
+    align-items:center;gap:10px;padding:9px 2px;
+    border-bottom:1px solid var(--line);font-size:14px;cursor:pointer;
+    transition:background .12s;
   }
-  .sectors-table .row:last-child{border-bottom:none}
-  .sectors-table .bar-wrap{
-    height:14px; background:#fff;
-    border:1px solid var(--line-soft);
-    border-radius:2px; overflow:hidden;
+  .sec-row:hover{background:rgba(65,113,156,0.05)}
+  .sec-row .chev{
+    color:var(--blue);font-size:11px;transition:transform .18s;
+    display:inline-block;text-align:center;
   }
-  .sectors-table .bar-fill{
-    height:100%;
-    background:var(--data-blue);
-    transition:width .6s cubic-bezier(.2,.7,.2,1);
+  .sec-row.open .chev{transform:rotate(90deg)}
+  .sec-row .bar-wrap{height:14px;background:#fff;border:1px solid var(--line-soft);
+    border-radius:2px;overflow:hidden}
+  .sec-row .bar-fill{height:100%;background:var(--data-blue);
+    transition:width .6s cubic-bezier(.2,.7,.2,1)}
+  .sec-row .num{text-align:right;color:var(--navy);font-variant-numeric:tabular-nums;font-weight:600}
+  .sec-row .num.lown{color:var(--text-mute)}
+  .sub-rows{display:none}
+  .sub-rows.open{display:block}
+  .sub-row{
+    display:grid;grid-template-columns:16px 1.35fr 62px 1.1fr;
+    align-items:center;gap:10px;padding:6px 2px 6px 14px;
+    border-bottom:1px dashed var(--line-soft);font-size:13px;color:var(--text-dim);
   }
-  .sectors-table .num{
-    text-align:right; color:var(--navy);
-    font-variant-numeric:tabular-nums; font-weight:600;
-  }
+  .sub-row .bar-wrap{height:9px;background:#fff;border:1px solid var(--line-soft);
+    border-radius:2px;overflow:hidden}
+  .sub-row .bar-fill{height:100%;background:var(--sage-3)}
+  .sub-row .num{text-align:right;font-variant-numeric:tabular-nums}
+  .lown-flag{color:#8a5a2a;font-size:11px;margin-left:5px}
 
-  /* Types grid — Eurofound rounds-style tiles */
-  .types-grid{
-    display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;
-    padding:6px 2px;
-  }
-  .type-cell{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:14px 12px;
-    cursor:default;
-    transition:all .15s ease;
-    display:flex; flex-direction:column; gap:4px;
-  }
-  .type-cell:hover{border-color:var(--blue); background:var(--blue-pale)}
-  .type-cell .num{
-    font-family:var(--serif);
-    font-size:23px; font-weight:700;
-    color:var(--navy); line-height:1;
-  }
-  .type-cell .lbl{
-    font-size:12.5px; color:var(--text-dim); line-height:1.3;
-  }
+  /* compare selectors */
+  .compare-selects{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+  .compare-selects .sel{min-width:190px}
+  .compare-selects label{display:block;font-size:12px;color:var(--text-dim);
+    font-weight:600;margin-bottom:4px}
 
-  /* Loading */
-  .loading-overlay{
-    position:fixed; inset:0;
-    background:rgba(255,255,255,0.97);
-    z-index:9999;
-    display:flex; align-items:center; justify-content:center; flex-direction:column;
-    gap:18px; color:var(--navy); font-size:14px;
-  }
-  .spinner{
-    width:34px; height:34px; border-radius:50%;
-    border:3px solid var(--line-soft); border-top-color:var(--blue);
-    animation:spin .9s linear infinite;
-  }
+  /* caveats */
+  .caveat-body{columns:2;column-gap:46px;font-size:13.5px;line-height:1.65;color:var(--text-body)}
+  .caveat-body p{margin:0 0 12px;break-inside:avoid}
+  .caveat-body strong{color:var(--navy)}
+
+  /* loading */
+  .loading-overlay{position:fixed;inset:0;background:rgba(255,255,255,.97);z-index:9999;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;
+    color:var(--navy);font-size:14px}
+  .spinner{width:34px;height:34px;border-radius:50%;
+    border:3px solid var(--line-soft);border-top-color:var(--blue);
+    animation:spin .9s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .err{
-    color:var(--data-red); max-width:680px; text-align:center;
-    line-height:1.6; padding:0 20px;
-  }
-  .err code{
-    background:var(--surface); padding:2px 6px;
-    border-radius:3px; font-size:13px; color:var(--navy);
-  }
+  .err{color:var(--data-red);max-width:680px;text-align:center;line-height:1.6;padding:0 20px}
+  .err code{background:var(--card);padding:2px 6px;border-radius:3px;font-size:13px;color:var(--navy)}
 
-  @keyframes fadeUp{
-    from{opacity:0; transform:translateY(6px)}
-    to{opacity:1; transform:translateY(0)}
-  }
-  .block,.kpi-strip{animation:fadeUp .4s cubic-bezier(.2,.7,.2,1) backwards}
-  .kpi-strip{animation-delay:.02s}
-  .map-cell{animation-delay:.07s}
-  .events-cell{animation-delay:.10s}
-  .jobs-cell{animation-delay:.14s}
-  .recent-loss{animation-delay:.18s}
-  .recent-gain{animation-delay:.20s}
-  .sectors-cell{animation-delay:.24s}
-  .types-cell{animation-delay:.26s}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .card{animation:fadeUp .4s cubic-bezier(.2,.7,.2,1) backwards}
+  .kpi-card{animation-delay:.02s}.map-card{animation-delay:.06s}
+  .events-card{animation-delay:.09s}.jobs-card{animation-delay:.12s}
+  .compare-card{animation-delay:.15s}.loss-card{animation-delay:.18s}
+  .gain-card{animation-delay:.20s}.sector-card{animation-delay:.23s}
+  .types-card{animation-delay:.25s}.caveat-card{animation-delay:.28s}
 
-  .footer{
-    max-width:1520px; margin:24px auto 0;
-    padding:20px 48px 44px;
-    color:var(--text-mute); font-size:12.5px;
-    display:flex; justify-content:space-between;
-    border-top:1px solid var(--line-soft);
-  }
+  .footer{max-width:1520px;margin:34px auto 0;padding:20px 48px 44px;
+    color:var(--text-mute);font-size:12.5px;display:flex;justify-content:space-between;
+    border-top:1px solid var(--line-soft)}
 
   @media (max-width:1280px){
     h1{font-size:33px}
-    .kpi-strip{grid-template-columns:repeat(5,1fr); row-gap:20px}
+    .kpi-strip{grid-template-columns:repeat(5,1fr);row-gap:20px}
     .kpi:nth-child(5n){border-right:none}
+    .caveat-body{columns:1}
   }
   @media (max-width:980px){
     .header,.filters-wrap,.footer{padding-left:22px;padding-right:22px}
-    .filters{grid-template-columns:1fr 1fr; gap:24px}
-    .main{padding:0 22px; grid-template-columns:1fr; gap:32px}
-    .map-cell,.events-cell,.jobs-cell,.recent-loss,.recent-gain,.sectors-cell,.types-cell{
-      grid-column:1 / -1;
-    }
+    .filters{grid-template-columns:1fr 1fr;gap:24px}
+    .main{padding:0 22px;grid-template-columns:1fr;gap:28px}
+    .kpi-card,.map-card,.events-card,.jobs-card,.compare-card,
+    .loss-card,.gain-card,.sector-card,.types-card,.caveat-card{grid-column:1 / -1}
     .kpi-strip{grid-template-columns:repeat(3,1fr)}
     .kpi:nth-child(3n){border-right:none}
-    .footer{flex-direction:column; gap:8px}
-    .header-row{flex-direction:column; gap:12px}
+    .header-row{flex-direction:column;gap:12px}
+    .footer{flex-direction:column;gap:8px}
+    .card{padding-left:56px}
   }
 </style>
 </head>
@@ -481,18 +336,9 @@
       <p class="header-sub">Restructuring events, announced job losses and gains across Europe.</p>
     </div>
     <div class="header-meta">
-      <div class="meta-item">
-        <div class="meta-label">Coverage</div>
-        <div class="meta-value" id="meta-coverage">—</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Records</div>
-        <div class="meta-value" id="meta-records">—</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Last announcement</div>
-        <div class="meta-value" id="meta-latest">—</div>
-      </div>
+      <div class="meta-item"><div class="meta-label">Coverage</div><div class="meta-value" id="meta-coverage">—</div></div>
+      <div class="meta-item"><div class="meta-label">Records</div><div class="meta-value" id="meta-records">—</div></div>
+      <div class="meta-item"><div class="meta-label">Last announcement</div><div class="meta-value" id="meta-latest">—</div></div>
     </div>
   </div>
   <div class="section-label">Filter the data</div>
@@ -548,80 +394,145 @@
       </div>
     </div>
 
-    <button class="btn" onclick="clearAllSlicers()">
-      Clear selection
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#41719C" stroke-width="2"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V6"/></svg>
-    </button>
+    <button class="btn" onclick="clearAllSlicers()">Clear selection <span>›</span></button>
   </section>
 </div>
 
 <main class="main">
-  <div class="kpi-strip">
-    <div class="kpi"><div class="kpi-label">Restructurings</div><div class="kpi-value" id="kpi-num">—</div></div>
-    <div class="kpi"><div class="kpi-label">Top country</div><div class="kpi-value smaller" id="kpi-country">—</div></div>
-    <div class="kpi"><div class="kpi-label">Net job change</div><div class="kpi-value" id="kpi-net">—</div></div>
-    <div class="kpi"><div class="kpi-label">Min job losses</div><div class="kpi-value" id="kpi-minloss">—</div></div>
-    <div class="kpi"><div class="kpi-label">Max job losses</div><div class="kpi-value" id="kpi-maxloss">—</div></div>
-    <div class="kpi"><div class="kpi-label">Job gains</div><div class="kpi-value" id="kpi-gain">—</div></div>
-    <div class="kpi"><div class="kpi-label">Top company</div><div class="kpi-value smaller" id="kpi-company">—</div></div>
-    <div class="kpi"><div class="kpi-label">Avg duration (mo)</div><div class="kpi-value" id="kpi-duration">—</div></div>
-    <div class="kpi"><div class="kpi-label">Updates</div><div class="kpi-value" id="kpi-updates">—</div></div>
+
+  <!-- KPIs -->
+  <div class="card kpi-card">
+    <div class="side-label"><span>Overview</span></div>
+    <div class="card-body kpi-strip">
+      <div class="kpi"><div class="kpi-label">Restructurings</div><div class="kpi-value" id="kpi-num">—</div></div>
+      <div class="kpi"><div class="kpi-label">Top country</div><div class="kpi-value smaller" id="kpi-country">—</div></div>
+      <div class="kpi"><div class="kpi-label">Net job change</div><div class="kpi-value" id="kpi-net">—</div></div>
+      <div class="kpi"><div class="kpi-label">Min job losses</div><div class="kpi-value" id="kpi-minloss">—</div></div>
+      <div class="kpi"><div class="kpi-label">Max job losses</div><div class="kpi-value" id="kpi-maxloss">—</div></div>
+      <div class="kpi"><div class="kpi-label">Job gains</div><div class="kpi-value" id="kpi-gain">—</div></div>
+      <div class="kpi"><div class="kpi-label">Top company</div><div class="kpi-value smaller" id="kpi-company">—</div></div>
+      <div class="kpi"><div class="kpi-label">Avg duration (mo)</div><div class="kpi-value" id="kpi-duration">—</div></div>
+      <div class="kpi"><div class="kpi-label">Updates</div><div class="kpi-value" id="kpi-updates">—</div></div>
+    </div>
   </div>
 
-  <div class="block map-cell">
-    <div class="block-head">
-      <h2 class="block-title">Restructurings by country</h2>
-      <span class="block-sub">Geographic distribution</span>
+  <!-- Map -->
+  <div class="card map-card">
+    <div class="side-label"><span>Map</span></div>
+    <div class="card-kicker">Geography <span class="dot"></span> <span class="k-sub">country totals &amp; largest cases</span></div>
+    <h2 class="card-title">Restructurings by country</h2>
+    <div class="chart-controls">
+      <div class="seg" id="mapModeSeg">
+        <button class="active" data-mode="choropleth">Country totals</button>
+        <button data-mode="cases">Largest cases</button>
+      </div>
     </div>
-    <div class="chart-surface"><div id="map-chart"></div></div>
+    <div class="card-body"><div id="map-chart"></div></div>
+    <div class="card-note" id="map-note">Colour shows the number of recorded restructuring cases per country.</div>
   </div>
 
-  <div class="block events-cell">
-    <div class="block-head">
-      <h2 class="block-title">Large restructuring events</h2>
-      <span class="block-sub">Annual count · 100+ jobs</span>
-    </div>
-    <div class="chart-surface"><div id="events-chart"></div></div>
+  <!-- Events -->
+  <div class="card events-card">
+    <div class="side-label"><span>Trend</span></div>
+    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">100+ jobs affected</span></div>
+    <h2 class="card-title">Large restructuring events</h2>
+    <div class="card-body"><div id="events-chart"></div></div>
+    <div class="card-note" id="events-note"></div>
   </div>
 
-  <div class="block jobs-cell">
-    <div class="block-head">
-      <h2 class="block-title">Announced job changes over time</h2>
-      <span class="block-sub">Planned gains, losses and net change by year</span>
+  <!-- Jobs over time -->
+  <div class="card jobs-card">
+    <div class="side-label"><span>Jobs</span></div>
+    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">annual totals</span></div>
+    <h2 class="card-title">Announced job changes over time</h2>
+    <div class="chart-controls">
+      <div class="seg" id="jobsModeSeg">
+        <button class="active" data-mode="jobs">Number of jobs</button>
+        <button data-mode="cases">Number of cases</button>
+      </div>
     </div>
-    <div class="chart-surface"><div id="jobs-chart"></div></div>
+    <div class="card-body"><div id="jobs-chart"></div></div>
+    <div class="card-note">Job gains are only collected from 2005 onwards; the gains series before then is incomplete. United Kingdom cases are no longer collected following Brexit (from January 2021).</div>
   </div>
 
-  <div class="block recent-loss">
-    <div class="block-head">
-      <h2 class="block-title">Most recent losses</h2>
-      <span class="block-sub">Latest reductions</span>
+  <!-- Compare -->
+  <div class="card compare-card">
+    <div class="side-label"><span>Compare</span></div>
+    <div class="card-kicker">Comparison <span class="dot"></span> <span class="k-sub">up to three selections</span></div>
+    <h2 class="card-title">Compare trends</h2>
+    <div class="chart-controls">
+      <div class="compare-selects">
+        <div class="sel">
+          <label>Compare by</label>
+          <select id="cmpDim">
+            <option value="country">Countries</option>
+            <option value="sector">Sectors</option>
+            <option value="company">Companies</option>
+          </select>
+        </div>
+        <div class="sel"><label>Selection 1</label><select id="cmpSel1"></select></div>
+        <div class="sel"><label>Selection 2</label><select id="cmpSel2"></select></div>
+        <div class="sel"><label>Selection 3</label><select id="cmpSel3"></select></div>
+        <div class="sel">
+          <label>Metric</label>
+          <select id="cmpMetric">
+            <option value="cases">Number of cases</option>
+            <option value="net">Net job change</option>
+            <option value="loss">Job losses</option>
+            <option value="gain">Job gains</option>
+          </select>
+        </div>
+      </div>
     </div>
-    <div class="chart-surface"><div class="recent-list" id="recentLoss"></div></div>
+    <div class="card-body"><div id="compare-chart"></div></div>
+    <div class="card-note" id="compare-note">Series with fewer than 30 cases in the selected period are flagged — interpret them with caution.</div>
   </div>
 
-  <div class="block recent-gain">
-    <div class="block-head">
-      <h2 class="block-title">Most recent gains</h2>
-      <span class="block-sub">Latest creations</span>
-    </div>
-    <div class="chart-surface"><div class="recent-list" id="recentGain"></div></div>
+  <!-- Recent losses -->
+  <div class="card loss-card">
+    <div class="side-label"><span>Recent</span></div>
+    <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest reductions</span></div>
+    <h2 class="card-title">Most recent job losses</h2>
+    <div class="card-body"><div class="recent-list" id="recentLoss"></div></div>
   </div>
 
-  <div class="block sectors-cell">
-    <div class="block-head">
-      <h2 class="block-title">Sectors</h2>
-      <span class="block-sub">By count</span>
-    </div>
-    <div class="chart-surface"><div class="sectors-table" id="sectorsTable"></div></div>
+  <!-- Recent gains -->
+  <div class="card gain-card">
+    <div class="side-label"><span>Recent</span></div>
+    <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest creations</span></div>
+    <h2 class="card-title">Most recent job gains</h2>
+    <div class="card-body"><div class="recent-list" id="recentGain"></div></div>
   </div>
 
-  <div class="block types-cell">
-    <div class="block-head">
-      <h2 class="block-title">Restructuring by type</h2>
-      <span class="block-sub">Nine categories</span>
+  <!-- Sectors -->
+  <div class="card sector-card">
+    <div class="side-label"><span>Sectors</span></div>
+    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">click a sector for subsectors</span></div>
+    <h2 class="card-title">Sectors and subsectors</h2>
+    <div class="card-body"><div class="sectors-table" id="sectorsTable"></div></div>
+    <div class="card-note">Counts in grey with ⚠ are based on fewer than 30 cases and may not be reliable.</div>
+  </div>
+
+  <!-- Types pie -->
+  <div class="card types-card">
+    <div class="side-label"><span>Types</span></div>
+    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">share of all cases</span></div>
+    <h2 class="card-title">Restructuring by type</h2>
+    <div class="card-body"><div id="types-chart"></div></div>
+  </div>
+
+  <!-- Caveats -->
+  <div class="card caveat-card">
+    <div class="side-label"><span>Notes</span></div>
+    <div class="card-kicker">About the data</div>
+    <h2 class="card-title">Reading the figures</h2>
+    <div class="card-body caveat-body">
+      <p><strong>Job creation coverage.</strong> Announced job gains are only collected systematically from 2005 onwards, so gain and net-change figures before 2005 understate actual job creation.</p>
+      <p><strong>United Kingdom.</strong> UK cases are no longer collected following the UK's withdrawal from the EU. UK figures reflect the period up to the end of 2020 only, and totals for later years exclude the UK entirely.</p>
+      <p><strong>Small samples.</strong> Where a filter combination returns fewer than 30 cases the dashboard flags the result. Small counts largely reflect reporting coverage rather than actual restructuring activity, and shares computed on them are unstable.</p>
+      <p><strong>Announced, not realised.</strong> Figures are announced planned changes at the time of the announcement; actual outcomes can differ, and large announcements are sometimes revised in later updates.</p>
+      <p><strong>Coverage differences.</strong> The ERM is based on media reporting by national correspondents. Reporting intensity differs between countries and over time, so cross-country level comparisons should be made with care.</p>
     </div>
-    <div class="chart-surface"><div class="types-grid" id="typesGrid"></div></div>
   </div>
 </main>
 
@@ -633,39 +544,39 @@
 
 <script>
 /* =====================================================================
-   ERM Dashboard — Eurofound design system
+   ERM Dashboard — Eurofound card design + comparison features
    ===================================================================== */
 
 const CSV_URL = "https://media.githubusercontent.com/media/thomasdavid/dashboard/refs/heads/main/Full_data.csv";
+const LOW_N = 30;
+const DATA_COLORS = ['#3F6C9B','#B08A5E','#A03B45','#4E6B3C','#5C4E8E','#4E7F8C','#C0A05C','#21374F','#8A93A6'];
 
-/* ---- Highcharts theme (Eurofound) ---- */
 Highcharts.setOptions({
   chart:{backgroundColor:'transparent',
     style:{fontFamily:"'Source Sans Pro','Segoe UI',system-ui,sans-serif"},
     spacing:[8,4,8,4]},
   credits:{enabled:false}, title:{text:null},
-  legend:{itemStyle:{color:'#26324D', fontWeight:'600', fontSize:'12.5px'},
+  colors:DATA_COLORS,
+  legend:{itemStyle:{color:'#26324D',fontWeight:'600',fontSize:'12.5px'},
           itemHoverStyle:{color:'#41719C'}},
-  xAxis:{lineColor:'#D9DEE4', tickColor:'#D9DEE4',
-         labels:{style:{color:'#6B7690', fontSize:'11.5px'}}},
-  yAxis:{gridLineColor:'#E8EBEF', lineColor:'transparent',
-         labels:{style:{color:'#6B7690', fontSize:'11.5px'}},
-         title:{style:{color:'#6B7690', fontSize:'12px', fontWeight:'600'}}},
-  tooltip:{backgroundColor:'#FFFFFF', borderColor:'#D9DEE4',
-           borderRadius:6,
-           shadow:{color:'rgba(38,50,77,0.15)', offsetX:0, offsetY:3, opacity:0.4, width:8},
-           style:{color:'#26324D', fontSize:'13px'}, useHTML:true}
+  xAxis:{lineColor:'#D9DEE4',tickColor:'#D9DEE4',
+         labels:{style:{color:'#6B7690',fontSize:'11.5px'}}},
+  yAxis:{gridLineColor:'#E2E6EB',lineColor:'transparent',
+         labels:{style:{color:'#6B7690',fontSize:'11.5px'}},
+         title:{style:{color:'#6B7690',fontSize:'12px',fontWeight:'600'}}},
+  tooltip:{backgroundColor:'#FFFFFF',borderColor:'#D9DEE4',borderRadius:4,
+           shadow:{color:'rgba(38,50,77,0.15)',offsetX:0,offsetY:3,opacity:.4,width:8},
+           style:{color:'#26324D',fontSize:'13px'},useHTML:true}
 });
 
 /* ---- helpers ---- */
 const fmtInt = n => (n==null||isNaN(n))?'—':Math.round(n).toLocaleString('en-US');
-const fmtSigned = n => (n==null||isNaN(n))?'—':Math.round(n).toLocaleString('en-US');
 const lc = s => (s==null?'':String(s)).trim().toLowerCase();
 const num = v => {
   if(v==null||v==='') return null;
   const s = String(v).replace(/[, ]/g,'').replace(/\u2212/g,'-');
   const n = parseFloat(s);
-  return isNaN(n) ? null : n;
+  return isNaN(n)?null:n;
 };
 const parseDate = v => {
   if(!v) return null;
@@ -674,10 +585,7 @@ const parseDate = v => {
   let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
   if(m) return new Date(+m[1],+m[2]-1,+m[3]);
   m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
-  if(m){
-    const a=+m[1], b=+m[2], y=+m[3];
-    return new Date(y,b-1,a);
-  }
+  if(m) return new Date(+m[3],+m[2]-1,+m[1]);
   const d = new Date(s);
   return isNaN(d)?null:d;
 };
@@ -705,12 +613,14 @@ const COUNTRY_TO_HC = {
 };
 
 let NORM=[], DATE_MIN=null, DATE_MAX=null;
+let mapMode='choropleth', jobsMode='jobs';
+let expandedSectors = new Set();
 
 function fetchCsv(url){
   return new Promise((resolve,reject)=>{
     Papa.parse(url,{
       download:true, header:true, skipEmptyLines:true, dynamicTyping:false,
-      transformHeader: h => h.trim(),
+      transformHeader:h=>h.trim(),
       complete:r=>resolve(r.data), error:e=>reject(e)
     });
   });
@@ -719,21 +629,24 @@ function fetchCsv(url){
 function normalizeRow(r){
   const country = (r['Country']||'').trim();
   return {
-    date:        parseDate(r['d_date_announcement']),
-    country:     country || null,
-    cc:          COUNTRY_TO_HC[lc(country)] || null,
-    eu27:        (r['EU-27']||'').toString().trim().toUpperCase()==='EU-27',
-    sector:      (r['V_sector']||'').trim() || null,
-    nace1:       (r['NACE_level_1']||'').trim() || null,
-    type:        (r['Restructuring_type']||'').trim() || null,
-    company:     (r['Company_name']||'').trim() || null,
-    desc:        r['Description'] || r['Description_lower'] || '',
-    minLoss:     num(r['Planned_job_reductions_minimum']),
-    maxLoss:     num(r['Planned_job_reductions_maximum']),
-    jobGain:     num(r['Planned_job_gain']),
-    netChange:   num(r['Net announced job change']),
-    updates:     num(r['V_nb_updates']),
-    duration:    num(r['Restructuring duration (months)']),
+    date:      parseDate(r['d_date_announcement']),
+    country:   country||null,
+    cc:        COUNTRY_TO_HC[lc(country)]||null,
+    eu27:      (r['EU-27']||'').toString().trim().toUpperCase()==='EU-27',
+    sector:    (r['V_sector']||'').trim()||null,
+    nace1:     (r['NACE_level_1']||'').trim()||null,
+    nace2:     (r['NACE_level_2']||'').trim()||null,
+    nace3:     (r['NACE_level_3']||'').trim()||null,
+    type:      (r['Restructuring_type']||'').trim()||null,
+    company:   (r['Company_name']||'').trim()||null,
+    location:  (r['Location_of_affected_units']||'').trim()||null,
+    desc:      r['Description']||r['Description_lower']||'',
+    minLoss:   num(r['Planned_job_reductions_minimum']),
+    maxLoss:   num(r['Planned_job_reductions_maximum']),
+    jobGain:   num(r['Planned_job_gain']),
+    netChange: num(r['Net announced job change']),
+    updates:   num(r['V_nb_updates']),
+    duration:  num(r['Restructuring duration (months)']),
     them_auto:   truthy(r['Thematic_automotive']),
     them_digital:truthy(r['Thematic_Digitalisation']),
     them_green:  truthy(r['Thematic_green']),
@@ -742,8 +655,9 @@ function normalizeRow(r){
   };
 }
 
+/* ---- Filters ---- */
 function currentFilters(){
-  const them = {};
+  const them={};
   document.querySelectorAll('.thematic').forEach(b=>them[b.value]=b.checked);
   return {
     from: document.getElementById('dateFrom').value ? new Date(document.getElementById('dateFrom').value) : null,
@@ -755,26 +669,27 @@ function currentFilters(){
     them
   };
 }
-function applyFilters(rows){
+function applyFilters(rows, ignore={}){
   const f = currentFilters();
   const anyThem = f.them.auto||f.them.digital||f.them.green||f.them.twin||f.them.covid;
   return rows.filter(r=>{
     if(f.from && r.date && r.date < f.from) return false;
     if(f.to   && r.date && r.date > f.to)   return false;
-    if(f.country && f.country!=='All countries' && r.country !== f.country) return false;
-    if(f.sector  && f.sector!=='All sectors'  && r.sector  !== f.sector)  return false;
-    if(f.type    && f.type!=='All types'    && r.type    !== f.type)    return false;
+    if(!ignore.country && f.country!=='All countries' && r.country!==f.country) return false;
+    if(!ignore.sector  && f.sector!=='All sectors'  && r.sector!==f.sector)  return false;
+    if(!ignore.type    && f.type!=='All types'      && r.type!==f.type)      return false;
     if(f.eu27Only && !r.eu27) return false;
     if(anyThem){
-      const ok = (f.them.auto&&r.them_auto)||(f.them.digital&&r.them_digital)||
-                 (f.them.green&&r.them_green)||(f.them.twin&&r.them_twin)||
-                 (f.them.covid&&r.them_covid);
+      const ok=(f.them.auto&&r.them_auto)||(f.them.digital&&r.them_digital)||
+               (f.them.green&&r.them_green)||(f.them.twin&&r.them_twin)||
+               (f.them.covid&&r.them_covid);
       if(!ok) return false;
     }
     return true;
   });
 }
 
+/* ---- Render orchestrator ---- */
 function renderAll(){
   const rows = applyFilters(NORM);
   renderKPIs(rows);
@@ -782,97 +697,155 @@ function renderAll(){
   renderEventsChart(rows);
   renderJobsChart(rows);
   renderSectors(rows);
-  renderTypes(rows);
+  renderTypesPie(rows);
   renderRecent(rows);
+  renderCompare();
 }
 
+/* ---- KPIs ---- */
 function renderKPIs(rows){
   document.getElementById('kpi-num').textContent = fmtInt(rows.length);
 
-  const byCountry = {};
+  const byCountry={};
   rows.forEach(r=>{ if(r.country) byCountry[r.country]=(byCountry[r.country]||0)+1; });
-  let topC=null, topCN=0;
+  let topC=null,topCN=0;
   for(const k in byCountry) if(byCountry[k]>topCN){topCN=byCountry[k];topC=k;}
-  document.getElementById('kpi-country').textContent = topC || '—';
+  document.getElementById('kpi-country').textContent = topC||'—';
 
   let totalGain=0,totalNet=0,totalMin=0,totalMax=0,totalUpd=0,durSum=0,durN=0;
   rows.forEach(r=>{
-    if(r.jobGain!=null)   totalGain += r.jobGain;
-    if(r.netChange!=null) totalNet  += r.netChange;
-    if(r.minLoss!=null)   totalMin  += r.minLoss;
-    if(r.maxLoss!=null)   totalMax  += r.maxLoss;
-    if(r.updates!=null)   totalUpd  += r.updates;
-    if(r.duration!=null){ durSum += r.duration; durN++; }
+    if(r.jobGain!=null)   totalGain+=r.jobGain;
+    if(r.netChange!=null) totalNet+=r.netChange;
+    if(r.minLoss!=null)   totalMin+=r.minLoss;
+    if(r.maxLoss!=null)   totalMax+=r.maxLoss;
+    if(r.updates!=null)   totalUpd+=r.updates;
+    if(r.duration!=null){durSum+=r.duration;durN++;}
   });
-  const netEl = document.getElementById('kpi-net');
-  netEl.textContent = fmtSigned(totalNet);
-  netEl.classList.toggle('negative', totalNet < 0);
-
+  const netEl=document.getElementById('kpi-net');
+  netEl.textContent = fmtInt(totalNet);
+  netEl.classList.toggle('negative', totalNet<0);
   document.getElementById('kpi-minloss').textContent = fmtInt(totalMin);
   document.getElementById('kpi-maxloss').textContent = fmtInt(totalMax);
   document.getElementById('kpi-gain').textContent    = fmtInt(totalGain);
 
   const byCompany={};
   rows.forEach(r=>{ if(r.company) byCompany[r.company]=(byCompany[r.company]||0)+1; });
-  let topComp=null, topCompN=0;
+  let topComp=null,topCompN=0;
   for(const k in byCompany) if(byCompany[k]>topCompN){topCompN=byCompany[k];topComp=k;}
-  document.getElementById('kpi-company').textContent = topComp || '—';
+  document.getElementById('kpi-company').textContent = topComp||'—';
 
-  document.getElementById('kpi-duration').textContent = durN ? Math.round(durSum/durN) : '—';
+  document.getElementById('kpi-duration').textContent = durN?Math.round(durSum/durN):'—';
   document.getElementById('kpi-updates').textContent  = fmtInt(totalUpd);
 }
 
+/* ---- Map ---- */
 function renderMap(rows){
-  const counts = {};
-  rows.forEach(r=>{ if(r.cc) counts[r.cc]=(counts[r.cc]||0)+1; });
-  const data = Object.entries(counts).map(([k,v])=>[k,v]);
+  const note = document.getElementById('map-note');
 
-  Highcharts.mapChart('map-chart',{
-    chart:{map:'custom/europe', backgroundColor:'transparent', spacingTop:0},
-    title:{text:null},
-    mapNavigation:{enabled:true,
-      buttonOptions:{verticalAlign:'bottom',
-        theme:{fill:'#fff', stroke:'#D9DEE4', r:4,
-               states:{hover:{fill:'#EAF0F6'}}}}},
-    colorAxis:{min:0, stops:[[0,'#E7EFE9'],[0.45,'#7F9CA8'],[1,'#21374F']]},
-    legend:{enabled:true, align:'right', verticalAlign:'bottom',
-      itemStyle:{fontSize:'11px', color:'#6B7690'},
-      symbolHeight:9, symbolWidth:70, layout:'horizontal'},
-    tooltip:{useHTML:true,
-      pointFormatter:function(){
-        return `<div style="padding:3px 5px">
-          <div style="font-weight:700;font-size:13.5px;color:#26324D;font-family:'Source Serif Pro',serif">${this.name}</div>
-          <div style="color:#6B7690;font-size:12px;margin-top:2px">Restructurings: <strong style="color:#41719C">${(this.value||0).toLocaleString()}</strong></div>
-        </div>`;
-      }},
-    series:[{
-      data, name:'Restructurings',
-      states:{hover:{color:'#41719C', borderColor:'#26324D'}},
-      borderColor:'#FFFFFF', borderWidth:0.7,
-      nullColor:'#EDEFF2',
-      joinBy:['hc-key','hc-key'],
-      dataLabels:{enabled:false}
-    }]
-  });
+  if(mapMode==='choropleth'){
+    const counts={};
+    rows.forEach(r=>{ if(r.cc) counts[r.cc]=(counts[r.cc]||0)+1; });
+    const data = Object.entries(counts).map(([k,v])=>[k,v]);
+    note.textContent = 'Colour shows the number of recorded restructuring cases per country.';
+
+    Highcharts.mapChart('map-chart',{
+      chart:{map:'custom/europe',backgroundColor:'transparent'},
+      mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
+        theme:{fill:'#fff',stroke:'#D9DEE4',r:4,states:{hover:{fill:'#EAF0F6'}}}}},
+      colorAxis:{min:0,stops:[[0,'#E7EFE9'],[0.45,'#7F9CA8'],[1,'#21374F']]},
+      legend:{enabled:true,align:'right',verticalAlign:'bottom',
+        itemStyle:{fontSize:'11px',color:'#6B7690'},
+        symbolHeight:9,symbolWidth:70,layout:'horizontal'},
+      tooltip:{useHTML:true,
+        pointFormatter:function(){
+          return `<div style="padding:3px 5px">
+            <div style="font-weight:700;font-size:13.5px;color:#26324D;font-family:'Source Serif Pro',serif">${this.name}</div>
+            <div style="color:#6B7690;font-size:12px;margin-top:2px">Cases: <strong style="color:#41719C">${(this.value||0).toLocaleString()}</strong></div>
+          </div>`;
+        }},
+      series:[{data,name:'Cases',
+        states:{hover:{color:'#41719C',borderColor:'#26324D'}},
+        borderColor:'#FFFFFF',borderWidth:.7,nullColor:'#EDEFF2',
+        joinBy:['hc-key','hc-key'],dataLabels:{enabled:false}}]
+    });
+  } else {
+    /* Largest case per country (top 15 countries by case size) */
+    const biggest = {};
+    rows.forEach(r=>{
+      if(!r.cc) return;
+      const size = Math.max(r.maxLoss||0, r.jobGain||0);
+      if(size<=0) return;
+      if(!biggest[r.cc] || size > biggest[r.cc].size){
+        biggest[r.cc] = {size, r};
+      }
+    });
+    const bubbles = Object.entries(biggest)
+      .sort((a,b)=>b[1].size-a[1].size)
+      .slice(0,15)
+      .map(([cc,{size,r}])=>({
+        'hc-key':cc, z:size,
+        custom:{company:r.company, country:r.country, loc:r.location,
+                loss:r.maxLoss, gain:r.jobGain,
+                date:r.date?r.date.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}):'—'}
+      }));
+    note.textContent = 'Bubble size shows the largest single announced case per country (top 15). Hover for company, location and jobs affected. Bubbles are placed at country level; exact locations are shown in the tooltip.';
+
+    Highcharts.mapChart('map-chart',{
+      chart:{map:'custom/europe',backgroundColor:'transparent'},
+      mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
+        theme:{fill:'#fff',stroke:'#D9DEE4',r:4}}},
+      legend:{enabled:false},
+      tooltip:{useHTML:true},
+      series:[{
+        name:'Countries', nullColor:'#EDEFF2', color:'#E7EFE9',
+        borderColor:'#FFFFFF', borderWidth:.7, enableMouseTracking:false,
+        data:[]
+      },{
+        type:'mapbubble', name:'Largest case',
+        joinBy:['hc-key','hc-key'],
+        data:bubbles,
+        minSize:10, maxSize:'18%',
+        color:'rgba(63,108,155,0.75)',
+        borderColor:'#21374F', borderWidth:1,
+        tooltip:{
+          pointFormatter:function(){
+            const c=this.custom||{};
+            const jobs = c.loss ? `−${Math.round(c.loss).toLocaleString()} jobs`
+                                : `+${Math.round(c.gain).toLocaleString()} jobs`;
+            return `<div style="padding:3px 5px;max-width:260px">
+              <div style="font-weight:700;font-size:14px;color:#26324D;font-family:'Source Serif Pro',serif">${escapeHtml(c.company||'Unknown')}</div>
+              <div style="color:#6B7690;font-size:12px;margin-top:3px">${escapeHtml(c.country||'')}${c.loc?' · '+escapeHtml(c.loc):''}</div>
+              <div style="font-size:12.5px;margin-top:3px;font-weight:700;color:${c.loss?'#A03B45':'#4E6B3C'}">${jobs}</div>
+              <div style="color:#98A1B3;font-size:11.5px;margin-top:2px">${c.date}</div>
+            </div>`;
+          }
+        }
+      }]
+    });
+  }
 }
 
+/* ---- Events chart ---- */
 function renderEventsChart(rows){
   const byYear={};
   rows.forEach(r=>{
     if(!r.date) return;
     const size = Math.max(r.maxLoss||0, r.minLoss||0, r.jobGain||0);
-    if(size >= 100){
-      const y = r.date.getFullYear();
-      byYear[y] = (byYear[y]||0)+1;
+    if(size>=100){
+      const y=r.date.getFullYear();
+      byYear[y]=(byYear[y]||0)+1;
     }
   });
   const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b);
-  const series = years.map(y=>[y, byYear[y]]);
+  const series = years.map(y=>[y,byYear[y]]);
+  const total = series.reduce((s,[,v])=>s+v,0);
+  document.getElementById('events-note').textContent =
+    total<LOW_N ? '⚠ Fewer than 30 large events match the current filters — interpret with caution.' : '';
 
   Highcharts.chart('events-chart',{
-    chart:{type:'areaspline', spacingTop:6},
-    xAxis:{type:'linear', tickInterval:5, allowDecimals:false},
-    yAxis:{title:{text:'Events'}, min:0},
+    chart:{type:'areaspline',spacingTop:6},
+    xAxis:{type:'linear',tickInterval:5,allowDecimals:false},
+    yAxis:{title:{text:'Events'},min:0},
     legend:{enabled:false},
     tooltip:{useHTML:true,
       formatter:function(){
@@ -881,114 +854,265 @@ function renderEventsChart(rows){
           <div style="color:#6B7690;font-size:12px">Events: <strong style="color:#41719C">${this.y.toLocaleString()}</strong></div>
         </div>`;
       }},
-    plotOptions:{
-      areaspline:{color:'#3F6C9B', lineWidth:2.5,
-        fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
-          stops:[[0,'rgba(63,108,155,0.20)'],[1,'rgba(63,108,155,0.01)']]},
-        marker:{enabled:false, states:{hover:{enabled:true, radius:5, fillColor:'#3F6C9B', lineColor:'#fff', lineWidth:2}}}}
-    },
-    series:[{name:'Events', data:series}]
+    plotOptions:{areaspline:{color:'#3F6C9B',lineWidth:2.5,
+      fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
+        stops:[[0,'rgba(63,108,155,0.2)'],[1,'rgba(63,108,155,0.01)']]},
+      marker:{enabled:false,states:{hover:{enabled:true,radius:5,fillColor:'#3F6C9B',lineColor:'#fff',lineWidth:2}}}}},
+    series:[{name:'Events',data:series}]
   });
 }
 
+/* ---- Jobs chart (jobs / cases toggle) ---- */
 function renderJobsChart(rows){
-  const byYear = {};
+  const byYear={};
   rows.forEach(r=>{
     if(!r.date) return;
-    const y = r.date.getFullYear();
-    if(!byYear[y]) byYear[y] = {gain:0, loss:0, net:0};
-    if(r.jobGain!=null) byYear[y].gain += r.jobGain;
-    if(r.maxLoss!=null) byYear[y].loss += r.maxLoss;
-    if(r.netChange!=null) byYear[y].net += r.netChange;
+    const y=r.date.getFullYear();
+    if(!byYear[y]) byYear[y]={gain:0,loss:0,net:0,nGain:0,nLoss:0};
+    if(r.jobGain!=null){ byYear[y].gain+=r.jobGain; if(r.jobGain>0) byYear[y].nGain++; }
+    if(r.maxLoss!=null){ byYear[y].loss+=r.maxLoss; if(r.maxLoss>0) byYear[y].nLoss++; }
+    if(r.netChange!=null) byYear[y].net+=r.netChange;
   });
   const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b);
-  const gains = years.map(y => [y, byYear[y].gain]);
-  const losses= years.map(y => [y, -byYear[y].loss]);
-  const nets  = years.map(y => [y, byYear[y].net]);
+
+  const annotations = {
+    plotLines:[
+      {color:'#B08A5E', width:1.5, value:2005, dashStyle:'ShortDash', zIndex:4,
+       label:{text:'Job gains collected from 2005', rotation:0, y:14, x:6,
+              style:{color:'#8a5a2a', fontSize:'11px', fontWeight:'600'}}},
+      {color:'#8A93A6', width:1.5, value:2021, dashStyle:'ShortDash', zIndex:4,
+       label:{text:'UK data ends', rotation:0, y:30, x:6,
+              style:{color:'#6B7690', fontSize:'11px', fontWeight:'600'}}}
+    ]
+  };
+
+  let series;
+  if(jobsMode==='jobs'){
+    series = [
+      {name:'Job gains',      data:years.map(y=>[y,byYear[y].gain]),  color:'#3F6C9B'},
+      {name:'Net job change', data:years.map(y=>[y,byYear[y].net]),   color:'#B08A5E', lineWidth:3, zIndex:3},
+      {name:'Job losses',     data:years.map(y=>[y,-byYear[y].loss]), color:'#A03B45', dashStyle:'ShortDash'}
+    ];
+  } else {
+    series = [
+      {name:'Cases with job gains',  data:years.map(y=>[y,byYear[y].nGain]), color:'#3F6C9B'},
+      {name:'Cases with job losses', data:years.map(y=>[y,byYear[y].nLoss]), color:'#A03B45'}
+    ];
+  }
 
   Highcharts.chart('jobs-chart',{
-    chart:{type:'spline', spacingTop:6},
-    xAxis:{type:'linear', tickInterval:2, allowDecimals:false},
+    chart:{type:'spline',spacingTop:6},
+    xAxis:Object.assign({type:'linear',tickInterval:2,allowDecimals:false}, annotations),
     yAxis:{title:{text:null},
-      plotLines:[{color:'#B9C1CE', width:1, value:0, zIndex:3}],
+      plotLines:[{color:'#B9C1CE',width:1,value:0,zIndex:3}],
       labels:{formatter:function(){
-        const v = this.value;
+        const v=this.value;
         if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
         if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
         return v;
       }}},
-    legend:{enabled:true, align:'center', verticalAlign:'bottom', symbolRadius:2, squareSymbol:true},
-    tooltip:{shared:true, useHTML:true,
+    legend:{enabled:true,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
+    tooltip:{shared:true,useHTML:true,
       formatter:function(){
-        let s = `<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
+        let s=`<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
         this.points.forEach(p=>{
-          s += `<div style="color:#6B7690;font-size:12px;margin:2px 0">
+          s+=`<div style="color:#6B7690;font-size:12px;margin:2px 0">
             <span style="display:inline-block;width:9px;height:9px;background:${p.color};margin-right:6px"></span>
-            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong>
-          </div>`;
+            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong></div>`;
         });
         return s+'</div>';
       }},
     plotOptions:{spline:{lineWidth:2.5,
-      marker:{enabled:false, states:{hover:{enabled:true, radius:5, lineColor:'#fff', lineWidth:2}}}}},
-    series:[
-      {name:'Job gains',      data:gains,  color:'#3F6C9B'},
-      {name:'Net job change', data:nets,   color:'#B08A5E', lineWidth:3, zIndex:3},
-      {name:'Job losses',     data:losses, color:'#A03B45', dashStyle:'ShortDash'}
-    ]
+      marker:{enabled:false,states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}}}},
+    series
   });
 }
 
-function renderSectors(rows){
-  const bySec = {};
-  rows.forEach(r=>{
-    const s = r.sector || r.nace1;
-    if(s) bySec[s]=(bySec[s]||0)+1;
+/* ---- Compare ---- */
+function cmpOptions(dim){
+  // options computed from rows ignoring the matching single-select filter
+  const base = applyFilters(NORM, dim==='country'?{country:true}:dim==='sector'?{sector:true}:{});
+  const counts={};
+  base.forEach(r=>{
+    const k = dim==='country'?r.country : dim==='sector'?r.sector : r.company;
+    if(k) counts[k]=(counts[k]||0)+1;
   });
-  const arr = Object.entries(bySec).sort((a,b)=>b[1]-a[1]);
-  const max = Math.max(1, ...arr.map(x=>x[1]));
+  return Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([k])=>k);
+}
+function populateCompareSelects(){
+  const dim = document.getElementById('cmpDim').value;
+  const opts = cmpOptions(dim);
+  const top = opts.slice(0, dim==='company'?100:opts.length);
+  [1,2,3].forEach(i=>{
+    const el = document.getElementById('cmpSel'+i);
+    const prev = el.value;
+    el.innerHTML = '<option value="">—</option>'+
+      top.map(o=>`<option${o===prev?' selected':''}>${escapeHtml(o)}</option>`).join('');
+  });
+  // sensible defaults on first fill
+  if(!document.getElementById('cmpSel1').value && top.length){
+    document.getElementById('cmpSel1').value = top[0];
+    if(top[1]) document.getElementById('cmpSel2').value = top[1];
+  }
+}
+function renderCompare(){
+  const dim = document.getElementById('cmpDim').value;
+  const metric = document.getElementById('cmpMetric').value;
+  const picks = [1,2,3].map(i=>document.getElementById('cmpSel'+i).value).filter(Boolean);
+  const noteEl = document.getElementById('compare-note');
+
+  const base = applyFilters(NORM, dim==='country'?{country:true}:dim==='sector'?{sector:true}:{});
+
+  const lowFlags=[];
+  const series = picks.map((pick,i)=>{
+    const rows = base.filter(r=>{
+      const k = dim==='country'?r.country : dim==='sector'?r.sector : r.company;
+      return k===pick;
+    });
+    if(rows.length<LOW_N) lowFlags.push(pick);
+    const byYear={};
+    rows.forEach(r=>{
+      if(!r.date) return;
+      const y=r.date.getFullYear();
+      if(!byYear[y]) byYear[y]={cases:0,net:0,loss:0,gain:0};
+      byYear[y].cases++;
+      if(r.netChange!=null) byYear[y].net+=r.netChange;
+      if(r.maxLoss!=null) byYear[y].loss+=r.maxLoss;
+      if(r.jobGain!=null) byYear[y].gain+=r.jobGain;
+    });
+    const years=Object.keys(byYear).map(Number).sort((a,b)=>a-b);
+    return {
+      name: pick + (rows.length<LOW_N?' ⚠':''),
+      color: DATA_COLORS[i],
+      data: years.map(y=>[y, byYear[y][metric]])
+    };
+  });
+
+  noteEl.textContent = lowFlags.length
+    ? `⚠ ${lowFlags.join(', ')} ${lowFlags.length>1?'have':'has'} fewer than ${LOW_N} cases in the selected period — trends may not be reliable.`
+    : 'Series with fewer than 30 cases in the selected period are flagged — interpret them with caution.';
+
+  const metricLabel = {cases:'Number of cases', net:'Net job change', loss:'Job losses', gain:'Job gains'}[metric];
+
+  Highcharts.chart('compare-chart',{
+    chart:{type:'spline',spacingTop:6},
+    xAxis:{type:'linear',tickInterval:2,allowDecimals:false},
+    yAxis:{title:{text:metricLabel},
+      labels:{formatter:function(){
+        const v=this.value;
+        if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
+        if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
+        return v;
+      }}},
+    legend:{enabled:true,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
+    tooltip:{shared:true,useHTML:true,
+      formatter:function(){
+        let s=`<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
+        this.points.forEach(p=>{
+          s+=`<div style="color:#6B7690;font-size:12px;margin:2px 0">
+            <span style="display:inline-block;width:9px;height:9px;background:${p.color};margin-right:6px"></span>
+            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong></div>`;
+        });
+        return s+'</div>';
+      }},
+    plotOptions:{spline:{lineWidth:2.5,
+      marker:{enabled:false,states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}}}},
+    series: series.length?series:[{name:'No selection',data:[]}]
+  });
+}
+
+/* ---- Sectors with subsector drill-down ---- */
+function renderSectors(rows){
+  const bySec={};
+  rows.forEach(r=>{
+    const s=r.sector||r.nace1;
+    if(!s) return;
+    if(!bySec[s]) bySec[s]={n:0, subs:{}};
+    bySec[s].n++;
+    const sub = r.nace2 || r.nace3;
+    if(sub) bySec[s].subs[sub]=(bySec[s].subs[sub]||0)+1;
+  });
+  const arr = Object.entries(bySec).sort((a,b)=>b[1].n-a[1].n);
+  const max = Math.max(1,...arr.map(x=>x[1].n));
 
   let html='';
-  arr.forEach(([sec,n])=>{
-    const pct = (n/max)*100;
-    html += `<div class="row">
-      <div>${escapeHtml(sec)}</div>
-      <div class="num">${n.toLocaleString()}</div>
+  arr.forEach(([sec,{n,subs}])=>{
+    const pct=(n/max)*100;
+    const id = 'sec_'+sec.replace(/[^a-z0-9]/gi,'_');
+    const isOpen = expandedSectors.has(sec);
+    const low = n<LOW_N;
+    const subArr = Object.entries(subs).sort((a,b)=>b[1]-a[1]).slice(0,10);
+    const subMax = Math.max(1,...subArr.map(x=>x[1]));
+
+    html += `<div class="sec-row${isOpen?' open':''}" data-sector="${escapeHtml(sec)}">
+      <span class="chev">${subArr.length?'▶':''}</span>
+      <div>${escapeHtml(sec)}${low?'<span class="lown-flag">⚠</span>':''}</div>
+      <div class="num${low?' lown':''}">${n.toLocaleString()}</div>
       <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
-    </div>`;
+    </div>
+    <div class="sub-rows${isOpen?' open':''}" id="${id}">`;
+    subArr.forEach(([sub,sn])=>{
+      const spct=(sn/subMax)*100;
+      html += `<div class="sub-row">
+        <span></span>
+        <div>${escapeHtml(sub)}</div>
+        <div class="num">${sn.toLocaleString()}</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:${spct}%"></div></div>
+      </div>`;
+    });
+    html += `</div>`;
   });
-  document.getElementById('sectorsTable').innerHTML = html;
+  const el = document.getElementById('sectorsTable');
+  el.innerHTML = html;
+
+  el.querySelectorAll('.sec-row').forEach(row=>{
+    row.addEventListener('click', ()=>{
+      const sec = row.getAttribute('data-sector');
+      if(expandedSectors.has(sec)) expandedSectors.delete(sec);
+      else expandedSectors.add(sec);
+      row.classList.toggle('open');
+      row.nextElementSibling.classList.toggle('open');
+    });
+  });
 }
 
-function renderTypes(rows){
+/* ---- Types pie ---- */
+function renderTypesPie(rows){
   const byType={};
   rows.forEach(r=>{ if(r.type) byType[r.type]=(byType[r.type]||0)+1; });
-  const ORDER = ['Bankruptcy','Internal restructuring','Outsourcing',
-                 'Business expansion','Merger/Acquisition','Relocation',
-                 'Closure','Offshoring/Delocalisation','Reshoring'];
-  const ciMap={}; Object.keys(byType).forEach(k=>ciMap[lc(k)]=k);
-  const display = ORDER.map(t=>{
-    const realKey = ciMap[lc(t)];
-    return [t, realKey ? byType[realKey] : 0];
-  });
-  Object.keys(byType).forEach(k=>{
-    if(!ORDER.some(o=>lc(o)===lc(k))) display.push([k, byType[k]]);
-  });
+  const total = Object.values(byType).reduce((s,v)=>s+v,0)||1;
+  const data = Object.entries(byType)
+    .sort((a,b)=>b[1]-a[1])
+    .map(([t,n],i)=>({name:t, y:n, color:DATA_COLORS[i%DATA_COLORS.length]}));
 
-  let html='';
-  display.forEach(([t,n])=>{
-    html += `<div class="type-cell" title="${escapeHtml(t)}">
-      <div class="num">${n.toLocaleString()}</div>
-      <div class="lbl">${escapeHtml(t)}</div>
-    </div>`;
+  Highcharts.chart('types-chart',{
+    chart:{type:'pie'},
+    tooltip:{useHTML:true,
+      pointFormatter:function(){
+        return `<div style="padding:2px 4px">
+          <div style="color:#6B7690;font-size:12px">Cases: <strong style="color:#26324D">${this.y.toLocaleString()}</strong>
+          (${(this.y/total*100).toFixed(1)}%)</div></div>`;
+      }},
+    plotOptions:{pie:{
+      innerSize:'55%',
+      borderColor:'#F2F3F5', borderWidth:2,
+      dataLabels:{
+        enabled:true,
+        format:'{point.name}<br><span style="font-weight:700">{point.percentage:.0f}%</span>',
+        style:{color:'#3A4664', fontSize:'11.5px', fontWeight:'400', textOutline:'none'},
+        distance:14, connectorColor:'#C4CBD6'
+      },
+      states:{hover:{halo:{size:6}}}
+    }},
+    series:[{name:'Cases', data}]
   });
-  document.getElementById('typesGrid').innerHTML = html;
 }
 
+/* ---- Recent lists ---- */
 function renderRecent(rows){
-  const losses = rows.filter(r => (r.maxLoss||r.minLoss) && r.date)
+  const losses = rows.filter(r=>(r.maxLoss||r.minLoss)&&r.date)
                      .sort((a,b)=>b.date-a.date).slice(0,8);
-  const gains  = rows.filter(r => r.jobGain && r.jobGain>0 && r.date)
+  const gains  = rows.filter(r=>r.jobGain&&r.jobGain>0&&r.date)
                      .sort((a,b)=>b.date-a.date).slice(0,8);
   document.getElementById('recentLoss').innerHTML =
     losses.map(r=>itemHtml(r,'loss')).join('') ||
@@ -997,144 +1121,122 @@ function renderRecent(rows){
     gains.map(r=>itemHtml(r,'gain')).join('') ||
     '<div style="color:#98A1B3;padding:10px;font-size:13.5px">No matching records</div>';
 }
-function itemHtml(r, mode){
-  const d = r.date ? r.date.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '—';
+function itemHtml(r,mode){
+  const d = r.date ? r.date.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase() : '—';
   const lossVal = r.maxLoss ?? r.minLoss;
-  const desc = r.desc ? (r.desc.length>200 ? r.desc.slice(0,200)+'…' : r.desc) : '';
+  const desc = r.desc ? (r.desc.length>200?r.desc.slice(0,200)+'…':r.desc) : '';
   const jobsHtml = mode==='loss'
-    ? (lossVal ? `<span class="num loss">−${fmtInt(lossVal)} jobs</span>`:'')
-    : (r.jobGain ? `<span class="num gain">+${fmtInt(r.jobGain)} jobs</span>`:'');
-
+    ? (lossVal?`<span class="num loss">−${fmtInt(lossVal)} jobs</span>`:'')
+    : (r.jobGain?`<span class="num gain">+${fmtInt(r.jobGain)} jobs</span>`:'');
   return `<div class="recent-item">
     <div class="recent-head">
       <div class="recent-company">${escapeHtml(r.company||'Unknown')}</div>
-      <div class="recent-date">${d}</div>
+      <div class="recent-date">${d} · ${escapeHtml((r.country||'—').toUpperCase())}</div>
     </div>
     <div class="recent-meta">
       ${jobsHtml}
-      <span>${escapeHtml(r.country||'—')}</span>
-      ${r.sector ? `<span>${escapeHtml(r.sector)}</span>`:''}
+      ${r.location?`<span>${escapeHtml(r.location)}</span>`:''}
+      ${r.sector?`<span>${escapeHtml(r.sector)}</span>`:''}
     </div>
-    ${desc ? `<div class="recent-desc">${escapeHtml(desc)}</div>`:''}
+    ${desc?`<div class="recent-desc">${escapeHtml(desc)}</div>`:''}
   </div>`;
 }
 
-/* ============ Dual-range slider ============ */
+/* ---- Dual-range slider ---- */
 function setupRangeSlider(){
-  const slider = document.getElementById('rangeSlider');
-  const thumbMin = document.getElementById('rangeThumbMin');
-  const thumbMax = document.getElementById('rangeThumbMax');
-  const fill = document.getElementById('rangeFill');
-  const fromInput = document.getElementById('dateFrom');
-  const toInput   = document.getElementById('dateTo');
-
-  if(!DATE_MIN || !DATE_MAX) return;
+  const slider=document.getElementById('rangeSlider');
+  const thumbMin=document.getElementById('rangeThumbMin');
+  const thumbMax=document.getElementById('rangeThumbMax');
+  const fill=document.getElementById('rangeFill');
+  const fromInput=document.getElementById('dateFrom');
+  const toInput=document.getElementById('dateTo');
+  if(!DATE_MIN||!DATE_MAX) return;
 
   function syncFromInputs(){
-    const fromD = new Date(fromInput.value);
-    const toD   = new Date(toInput.value);
-    const totalMs = DATE_MAX - DATE_MIN;
-    const fromPct = Math.max(0, Math.min(100, ((fromD-DATE_MIN)/totalMs)*100));
-    const toPct   = Math.max(0, Math.min(100, ((toD-DATE_MIN)/totalMs)*100));
-    thumbMin.style.left = fromPct+'%';
-    thumbMax.style.left = toPct+'%';
-    fill.style.left = fromPct+'%';
-    fill.style.width = (toPct-fromPct)+'%';
+    const fromD=new Date(fromInput.value), toD=new Date(toInput.value);
+    const total=DATE_MAX-DATE_MIN;
+    const fp=Math.max(0,Math.min(100,((fromD-DATE_MIN)/total)*100));
+    const tp=Math.max(0,Math.min(100,((toD-DATE_MIN)/total)*100));
+    thumbMin.style.left=fp+'%'; thumbMax.style.left=tp+'%';
+    fill.style.left=fp+'%'; fill.style.width=(tp-fp)+'%';
   }
-  function applyThumbPositions(){
-    const fromPct = parseFloat(thumbMin.style.left)||0;
-    const toPct   = parseFloat(thumbMax.style.left)||100;
-    const totalMs = DATE_MAX - DATE_MIN;
-    const fromD = new Date(DATE_MIN.getTime() + totalMs*fromPct/100);
-    const toD   = new Date(DATE_MIN.getTime() + totalMs*toPct/100);
-    fromInput.value = toISO(fromD);
-    toInput.value   = toISO(toD);
-    fill.style.left = fromPct+'%';
-    fill.style.width = (toPct-fromPct)+'%';
+  function applyThumbs(){
+    const fp=parseFloat(thumbMin.style.left)||0, tp=parseFloat(thumbMax.style.left)||100;
+    const total=DATE_MAX-DATE_MIN;
+    fromInput.value=toISO(new Date(DATE_MIN.getTime()+total*fp/100));
+    toInput.value=toISO(new Date(DATE_MIN.getTime()+total*tp/100));
+    fill.style.left=fp+'%'; fill.style.width=(tp-fp)+'%';
   }
-
-  let dragging = null;
-  function pxToPct(clientX){
-    const rect = slider.getBoundingClientRect();
-    return Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width)*100));
-  }
+  let dragging=null;
+  const pxToPct=x=>{
+    const r=slider.getBoundingClientRect();
+    return Math.max(0,Math.min(100,((x-r.left)/r.width)*100));
+  };
   function onMove(e){
     if(!dragging) return;
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    let pct = pxToPct(clientX);
-    if(dragging === thumbMin){
-      const maxPct = parseFloat(thumbMax.style.left)||100;
-      pct = Math.min(pct, maxPct - 0.5);
-      thumbMin.style.left = pct+'%';
-    } else {
-      const minPct = parseFloat(thumbMin.style.left)||0;
-      pct = Math.max(pct, minPct + 0.5);
-      thumbMax.style.left = pct+'%';
+    const x=e.touches?e.touches[0].clientX:e.clientX;
+    let pct=pxToPct(x);
+    if(dragging===thumbMin){
+      pct=Math.min(pct,(parseFloat(thumbMax.style.left)||100)-0.5);
+      thumbMin.style.left=pct+'%';
+    }else{
+      pct=Math.max(pct,(parseFloat(thumbMin.style.left)||0)+0.5);
+      thumbMax.style.left=pct+'%';
     }
-    applyThumbPositions();
+    applyThumbs();
   }
   function onEnd(){
     if(!dragging) return;
-    dragging = null;
-    renderAll();
-    document.removeEventListener('mousemove', onMove);
-    document.removeEventListener('mouseup', onEnd);
-    document.removeEventListener('touchmove', onMove);
-    document.removeEventListener('touchend', onEnd);
+    dragging=null; renderAll();
+    document.removeEventListener('mousemove',onMove);
+    document.removeEventListener('mouseup',onEnd);
+    document.removeEventListener('touchmove',onMove);
+    document.removeEventListener('touchend',onEnd);
   }
-  function startDrag(thumb, e){
-    dragging = thumb;
-    e.preventDefault();
-    document.addEventListener('mousemove', onMove);
-    document.addEventListener('mouseup', onEnd);
-    document.addEventListener('touchmove', onMove, {passive:false});
-    document.addEventListener('touchend', onEnd);
+  function startDrag(t,e){
+    dragging=t; e.preventDefault();
+    document.addEventListener('mousemove',onMove);
+    document.addEventListener('mouseup',onEnd);
+    document.addEventListener('touchmove',onMove,{passive:false});
+    document.addEventListener('touchend',onEnd);
   }
-  thumbMin.addEventListener('mousedown', e=>startDrag(thumbMin, e));
-  thumbMax.addEventListener('mousedown', e=>startDrag(thumbMax, e));
-  thumbMin.addEventListener('touchstart', e=>startDrag(thumbMin, e), {passive:false});
-  thumbMax.addEventListener('touchstart', e=>startDrag(thumbMax, e), {passive:false});
-
-  slider.addEventListener('click', e=>{
-    if(e.target === thumbMin || e.target === thumbMax) return;
-    const pct = pxToPct(e.clientX);
-    const minP = parseFloat(thumbMin.style.left)||0;
-    const maxP = parseFloat(thumbMax.style.left)||100;
-    if(Math.abs(pct - minP) <= Math.abs(pct - maxP)){
-      thumbMin.style.left = Math.min(pct, maxP - 0.5)+'%';
-    } else {
-      thumbMax.style.left = Math.max(pct, minP + 0.5)+'%';
-    }
-    applyThumbPositions();
-    renderAll();
+  thumbMin.addEventListener('mousedown',e=>startDrag(thumbMin,e));
+  thumbMax.addEventListener('mousedown',e=>startDrag(thumbMax,e));
+  thumbMin.addEventListener('touchstart',e=>startDrag(thumbMin,e),{passive:false});
+  thumbMax.addEventListener('touchstart',e=>startDrag(thumbMax,e),{passive:false});
+  slider.addEventListener('click',e=>{
+    if(e.target===thumbMin||e.target===thumbMax) return;
+    const pct=pxToPct(e.clientX);
+    const mp=parseFloat(thumbMin.style.left)||0, xp=parseFloat(thumbMax.style.left)||100;
+    if(Math.abs(pct-mp)<=Math.abs(pct-xp)) thumbMin.style.left=Math.min(pct,xp-0.5)+'%';
+    else thumbMax.style.left=Math.max(pct,mp+0.5)+'%';
+    applyThumbs(); renderAll();
   });
-
-  fromInput.addEventListener('change', syncFromInputs);
-  toInput.addEventListener('change', syncFromInputs);
-
+  fromInput.addEventListener('change',syncFromInputs);
+  toInput.addEventListener('change',syncFromInputs);
   syncFromInputs();
 }
 
-/* ============ Init ============ */
+/* ---- Init ---- */
 function populateFilters(){
-  const sectors   = [...new Set(NORM.map(r=>r.sector).filter(Boolean))].sort();
-  const countries = [...new Set(NORM.map(r=>r.country).filter(Boolean))].sort();
-  const types     = [...new Set(NORM.map(r=>r.type).filter(Boolean))].sort();
-  const fill = (id, list, allLabel) => {
-    const el = document.getElementById(id);
-    el.innerHTML = `<option>${allLabel}</option>`+list.map(x=>`<option>${escapeHtml(x)}</option>`).join('');
+  const sectors=[...new Set(NORM.map(r=>r.sector).filter(Boolean))].sort();
+  const countries=[...new Set(NORM.map(r=>r.country).filter(Boolean))].sort();
+  const types=[...new Set(NORM.map(r=>r.type).filter(Boolean))].sort();
+  const fill=(id,list,all)=>{
+    document.getElementById(id).innerHTML =
+      `<option>${all}</option>`+list.map(x=>`<option>${escapeHtml(x)}</option>`).join('');
   };
-  fill('sectorSel', sectors, 'All sectors');
-  fill('countrySel', countries, 'All countries');
-  fill('typeSel', types, 'All types');
+  fill('sectorSel',sectors,'All sectors');
+  fill('countrySel',countries,'All countries');
+  fill('typeSel',types,'All types');
 
-  const dates = NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
+  const dates=NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
   if(dates.length){
-    DATE_MIN = dates[0]; DATE_MAX = dates[dates.length-1];
-    document.getElementById('dateFrom').value = toISO(DATE_MIN);
-    document.getElementById('dateTo').value   = toISO(DATE_MAX);
+    DATE_MIN=dates[0]; DATE_MAX=dates[dates.length-1];
+    document.getElementById('dateFrom').value=toISO(DATE_MIN);
+    document.getElementById('dateTo').value=toISO(DATE_MAX);
     document.getElementById('meta-latest').textContent =
-      DATE_MAX.toLocaleDateString('en-GB',{day:'2-digit', month:'short', year:'numeric'});
+      DATE_MAX.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
     document.getElementById('meta-coverage').textContent =
       `${DATE_MIN.getFullYear()}–${DATE_MAX.getFullYear()}`;
   }
@@ -1144,15 +1246,41 @@ function bindEvents(){
   ['dateFrom','dateTo','countrySel','sectorSel','typeSel','cb-world','cb-eu27']
     .forEach(id=>document.getElementById(id).addEventListener('change',renderAll));
   document.querySelectorAll('.thematic').forEach(c=>c.addEventListener('change',renderAll));
-}
-window.clearAllSlicers = function(){
-  if(DATE_MIN) document.getElementById('dateFrom').value = toISO(DATE_MIN);
-  if(DATE_MAX) document.getElementById('dateTo').value   = toISO(DATE_MAX);
-  document.getElementById('rangeThumbMin').style.left = '0%';
-  document.getElementById('rangeThumbMax').style.left = '100%';
-  document.getElementById('rangeFill').style.left = '0%';
-  document.getElementById('rangeFill').style.width = '100%';
 
+  /* map mode */
+  document.querySelectorAll('#mapModeSeg button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#mapModeSeg button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      mapMode=b.dataset.mode;
+      renderMap(applyFilters(NORM));
+    });
+  });
+  /* jobs mode */
+  document.querySelectorAll('#jobsModeSeg button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#jobsModeSeg button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      jobsMode=b.dataset.mode;
+      renderJobsChart(applyFilters(NORM));
+    });
+  });
+  /* compare */
+  document.getElementById('cmpDim').addEventListener('change',()=>{
+    [1,2,3].forEach(i=>document.getElementById('cmpSel'+i).value='');
+    populateCompareSelects();
+    renderCompare();
+  });
+  ['cmpSel1','cmpSel2','cmpSel3','cmpMetric'].forEach(id=>
+    document.getElementById(id).addEventListener('change',renderCompare));
+}
+window.clearAllSlicers=function(){
+  if(DATE_MIN) document.getElementById('dateFrom').value=toISO(DATE_MIN);
+  if(DATE_MAX) document.getElementById('dateTo').value=toISO(DATE_MAX);
+  document.getElementById('rangeThumbMin').style.left='0%';
+  document.getElementById('rangeThumbMax').style.left='100%';
+  document.getElementById('rangeFill').style.left='0%';
+  document.getElementById('rangeFill').style.width='100%';
   document.getElementById('countrySel').value='All countries';
   document.getElementById('sectorSel').value='All sectors';
   document.getElementById('typeSel').value='All types';
@@ -1163,23 +1291,24 @@ window.clearAllSlicers = function(){
 };
 
 async function init(){
-  const overlay = document.getElementById('loadingOverlay');
-  const status  = document.getElementById('loadingText');
+  const overlay=document.getElementById('loadingOverlay');
+  const status=document.getElementById('loadingText');
   try{
-    status.textContent = 'Loading Full_data.csv …';
-    const rows = await fetchCsv(CSV_URL);
-    status.textContent = 'Parsing '+rows.length.toLocaleString()+' records…';
-    NORM = rows.map(normalizeRow).filter(r => r.country || r.company || r.date);
-    console.log('Loaded', NORM.length, 'rows.');
+    status.textContent='Loading Full_data.csv …';
+    const rows=await fetchCsv(CSV_URL);
+    status.textContent='Parsing '+rows.length.toLocaleString()+' records…';
+    NORM=rows.map(normalizeRow).filter(r=>r.country||r.company||r.date);
+    console.log('Loaded',NORM.length,'rows.');
 
     populateFilters();
     bindEvents();
     setupRangeSlider();
+    populateCompareSelects();
     renderAll();
-    overlay.style.display = 'none';
+    overlay.style.display='none';
   }catch(err){
     console.error(err);
-    overlay.innerHTML = `<div class="err">
+    overlay.innerHTML=`<div class="err">
       <b>Couldn't load CSV data.</b><br><br>
       ${escapeHtml(err.message||String(err))}<br><br>
       Check the URL in <code>CSV_URL</code>.
