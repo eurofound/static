@@ -172,8 +172,8 @@
   }
   .title-row .card-title{margin:0}
 
-  /* export widget */
-  .export-wrap{position:absolute;top:14px;right:16px;z-index:20}
+  /* export widget — bottom right of each card */
+  .export-wrap{position:absolute;bottom:14px;right:16px;z-index:20}
   .export-btn{
     width:30px;height:30px;border:1px solid var(--line);background:#fff;
     border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;
@@ -181,7 +181,7 @@
   }
   .export-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-pale)}
   .export-menu{
-    position:absolute;right:0;top:36px;background:#fff;
+    position:absolute;right:0;bottom:36px;background:#fff;
     border:1px solid var(--line);border-radius:4px;min-width:160px;
     box-shadow:0 6px 18px rgba(38,50,77,.14);display:none;overflow:hidden;
   }
@@ -199,6 +199,7 @@
   .card-body{flex:1}
   .card-note{
     margin-top:12px;color:var(--text-dim);font-size:12.5px;line-height:1.5;
+    padding-right:48px;
   }
   .card-note.warn{color:#8a5a2a}
 
@@ -764,6 +765,31 @@ function renderKPIs(rows){
 }
 
 /* ---- Map ---- */
+/* Europe map cropped for framing: drop Russia & Svalbard so western/central
+   Europe fills the frame */
+let EUROPE_MAP = null;
+function getEuropeMap(){
+  if(EUROPE_MAP) return EUROPE_MAP;
+  const src = Highcharts.maps['custom/europe'];
+  EUROPE_MAP = Object.assign({}, src, {
+    features: src.features.filter(f=>{
+      const k = f.properties && f.properties['hc-key'];
+      return k!=='ru' && k!=='sj';
+    })
+  });
+  return EUROPE_MAP;
+}
+
+/* 7-step discrete shade ramp (light → navy) */
+const MAP_RAMP = ['#E7EFE9','#CBDAD5','#ADC3C4','#8CA8B2','#6A8A9C','#476383','#21374F'];
+function niceStep(maxVal){
+  const raw = Math.max(1, maxVal/7);
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const norm = raw/mag;
+  const nice = norm<=1?1 : norm<=2?2 : norm<=2.5?2.5 : norm<=5?5 : 10;
+  return nice*mag;
+}
+
 function renderMap(rows){
   const note = document.getElementById('map-note');
 
@@ -771,17 +797,43 @@ function renderMap(rows){
     const counts={};
     rows.forEach(r=>{ if(r.cc) counts[r.cc]=(counts[r.cc]||0)+1; });
     const data = Object.entries(counts).map(([k,v])=>[k,v]);
-    note.textContent = 'Colour shows the number of recorded restructuring cases per country.';
+    const maxVal = Math.max(1, ...data.map(d=>d[1]));
+    const step = niceStep(maxVal);
+    const dataClasses = MAP_RAMP.map((color,i)=>{
+      const from = i*step;
+      const to   = i<6 ? (i+1)*step : undefined;
+      return {from, to, color};
+    });
+    const fmtK = v => v>=1000 ? (v/1000).toLocaleString(undefined,{maximumFractionDigits:1})+'k' : String(v);
+    note.textContent = 'Colour shows the number of recorded restructuring cases per country. Hover a legend swatch to see its value range and highlight countries in that band.';
 
     Highcharts.mapChart('map-chart',{
-      chart:{map:'custom/europe',backgroundColor:'transparent'},
+      chart:{map:getEuropeMap(),backgroundColor:'transparent'},
       mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
         theme:{fill:'#fff',stroke:'#D9DEE4',r:4,states:{hover:{fill:'#EAF0F6'}}}}},
-      colorAxis:{min:0,stops:[[0,'#E7EFE9'],[0.45,'#7F9CA8'],[1,'#21374F']]},
-      legend:{enabled:true,floating:true,align:'right',verticalAlign:'bottom',
-        x:-6,y:-8,backgroundColor:'rgba(255,255,255,0.88)',padding:10,
-        borderRadius:4,itemStyle:{fontSize:'11px',color:'#6B7690'},
-        symbolHeight:9,symbolWidth:70,layout:'horizontal'},
+      colorAxis:{dataClasses},
+      legend:{
+        enabled:true, layout:'vertical',
+        align:'right', verticalAlign:'middle',
+        floating:true, x:-4,
+        backgroundColor:'transparent', borderWidth:0, padding:0,
+        reversed:true,                       /* darkest (max) at top */
+        symbolHeight:24, symbolWidth:16, symbolRadius:0,
+        itemMarginTop:0, itemMarginBottom:0,
+        useHTML:true,
+        itemStyle:{fontSize:'11px', color:'#6B7690', fontWeight:'400'},
+        labelFormatter:function(){
+          const from = this.from||0, to = this.to;
+          const i = Math.round(from/step);       /* 0 (lightest) … 6 (darkest) */
+          const range = to!=null ? `${from.toLocaleString()} – ${to.toLocaleString()} cases`
+                                 : `${from.toLocaleString()}+ cases`;
+          let label = '';
+          if(i===0) label = fmtK(from);              /* min */
+          else if(i===3) label = fmtK(from);         /* mid */
+          else if(i===6) label = fmtK(from)+'+';     /* max band */
+          return `<span title="${range}" style="cursor:default">${label}</span>`;
+        }
+      },
       tooltip:{useHTML:true,
         pointFormatter:function(){
           return `<div style="padding:3px 5px">
@@ -817,7 +869,7 @@ function renderMap(rows){
     note.textContent = 'Bubble size shows the largest single announced case per country (top 15). Hover for company, location and jobs affected. Bubbles are placed at country level; exact locations are shown in the tooltip.';
 
     Highcharts.mapChart('map-chart',{
-      chart:{map:'custom/europe',backgroundColor:'transparent'},
+      chart:{map:getEuropeMap(),backgroundColor:'transparent'},
       mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
         theme:{fill:'#fff',stroke:'#D9DEE4',r:4}}},
       legend:{enabled:false},
