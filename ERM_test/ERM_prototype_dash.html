@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>European Restructuring Monitor (ERM)</title>
 
+<!-- Eurofound brand fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
@@ -16,254 +18,285 @@
 <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
 
 <style>
+  /* =====================================================
+     Eurofound design tokens
+     ===================================================== */
   :root{
-    --ink:           #0e2a3d;
-    --ink-2:         #1b3d54;
-    --teal-900:      #1e4a64;
-    --teal-700:      #2f6c8a;
-    --teal-500:      #4f8fa8;
-    --teal-300:      #8fb6c4;
-    --sage-200:      #b9d3d1;
-    --sage-100:      #d9e6e3;
-    --sage-50:       #eef3f2;
+    /* Core brand */
+    --navy:          #26324D;   /* main heading navy */
+    --navy-2:        #2C3E66;
+    --blue:          #41719C;   /* steel blue — active buttons, links, accents */
+    --blue-dark:     #31649B;   /* section-label blue */
+    --blue-deep:     #1F3A5F;
+    --blue-pale:     #EAF0F6;
 
-    --accent:        #2b6c8a;
-    --accent-deep:   #18465e;
-    --accent-light:  rgba(43,108,138,0.08);
-    --warm:          #b3855e;
+    /* Data palette (from the explorer charts) */
+    --data-blue:     #3F6C9B;
+    --data-navy:     #21374F;
+    --data-tan:      #B08A5E;
+    --data-red:      #A03B45;
+    --data-green:    #4E6B3C;
+    --data-purple:   #5C4E8E;
+    --sage-1:        #E7EFE9;   /* map light */
+    --sage-2:        #AFC6BB;
+    --sage-3:        #7F9CA8;
 
-    --bg-1:          #fafbfc;
-    --bg-2:          #f3f6f7;
+    /* Neutrals */
+    --page:          #FFFFFF;
+    --surface:       #F7F8F9;   /* chart panel grey */
+    --line:          #D9DEE4;   /* control borders */
+    --line-soft:     #E8EBEF;
+    --text:          #26324D;
+    --text-body:     #3A4664;
+    --text-dim:      #6B7690;
+    --text-mute:     #98A1B3;
 
-    --hairline:      rgba(14,42,61,0.09);
-    --hairline-soft: rgba(14,42,61,0.05);
-    --hairline-strong:rgba(14,42,61,0.18);
+    --radius:        6px;
+    --radius-lg:     8px;
 
-    --text:          #0e2a3d;
-    --text-dim:      #5a6d7a;
-    --text-mute:     #8497a3;
-
-    --font-sans:"Source Sans 3","Inter","Segoe UI",system-ui,sans-serif;
-    --font-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --serif: 'Source Serif Pro', Georgia, serif;
+    --sans:  'Source Sans Pro', 'Segoe UI', system-ui, sans-serif;
   }
 
   *{box-sizing:border-box}
   html,body{
     margin:0; padding:0;
-    background:
-      radial-gradient(1400px 700px at 85% -10%, #eef4f4 0%, transparent 55%),
-      radial-gradient(900px 600px at -10% 90%, #f1f5f3 0%, transparent 50%),
-      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
-    color:var(--text);
-    font-family:var(--font-sans); font-size:14px;
+    background:var(--page);
+    color:var(--text-body);
+    font-family:var(--sans); font-size:15px; font-weight:400;
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    min-height:100vh;
   }
 
-  /* ============ Header ============ */
+  /* =====================================================
+     Header
+     ===================================================== */
+  .topbar{
+    background:var(--navy);
+    height:6px;
+  }
   .header{
-    padding:32px 48px 24px;
-    border-bottom:1px solid var(--hairline);
-  }
-  .header-inner{
     max-width:1520px; margin:0 auto;
-    display:flex; align-items:flex-end; justify-content:space-between; gap:40px;
+    padding:30px 48px 4px;
   }
-  .brand{
-    font-family:var(--font-serif);
-    font-size:12.5px; color:var(--accent);
-    text-transform:uppercase; letter-spacing:0.22em;
-    margin-bottom:10px; font-weight:500;
+  .header-row{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:40px;
   }
   h1{
-    margin:0; font-family:var(--font-serif);
-    font-weight:500; font-size:40px; line-height:1.05;
-    letter-spacing:-0.015em; color:var(--ink);
+    margin:0 0 6px 0;
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:40px; line-height:1.08;
+    color:var(--navy);
+    letter-spacing:-0.005em;
   }
-  h1 .accent{color:var(--accent); font-style:italic; font-weight:400}
+  .header-sub{
+    color:var(--text-body); font-size:16px; margin:0 0 8px 0;
+    font-weight:400;
+  }
   .header-meta{
-    display:flex; gap:36px; color:var(--text-dim); font-size:12px;
-    padding-bottom:6px;
+    display:flex; gap:32px; padding-top:10px; flex-shrink:0;
   }
-  .header-meta .meta-item{display:flex; flex-direction:column}
-  .header-meta .meta-label{
-    text-transform:uppercase; letter-spacing:0.12em;
-    font-size:10.5px; color:var(--text-mute); margin-bottom:4px;
+  .meta-item{display:flex; flex-direction:column}
+  .meta-label{
+    font-size:12px; color:var(--text-dim);
+    margin-bottom:2px; font-weight:600;
   }
-  .header-meta .meta-value{
-    color:var(--ink); font-weight:500; font-size:14px;
-    font-family:var(--font-serif);
+  .meta-value{
+    color:var(--navy); font-weight:600; font-size:17px;
+    font-family:var(--serif);
   }
 
-  /* ============ Filters ============ */
-  .filters{
+  .section-label{
+    font-family:var(--sans);
+    color:var(--blue-dark);
+    font-weight:600; font-size:15px;
+    margin:18px 0 10px 0;
+  }
+
+  /* =====================================================
+     Filters — Eurofound control style
+     ===================================================== */
+  .filters-wrap{
     max-width:1520px; margin:0 auto;
-    padding:28px 48px 24px;
+    padding:0 48px 26px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .filters{
     display:grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1.2fr auto;
-    gap:44px;
+    grid-template-columns: 1.25fr 1fr 1fr 1.1fr auto;
+    gap:36px;
     align-items:start;
-    border-bottom:1px solid var(--hairline);
   }
   .field-label{
     display:block;
-    font-size:10.5px; text-transform:uppercase;
-    letter-spacing:0.14em; color:var(--text-dim);
-    margin-bottom:12px; font-weight:600;
+    font-size:14px; color:var(--blue-dark);
+    margin-bottom:8px; font-weight:600;
   }
-  .date-row{display:flex; align-items:center; gap:10px}
+
+  /* bordered white controls like the Eurofound dropdowns */
+  .date-row{display:flex; align-items:center; gap:8px}
   .date-row input[type="date"]{
-    flex:1; background:transparent; color:var(--ink);
-    border:none; border-bottom:1px solid var(--hairline-strong);
-    padding:6px 4px 6px 0;
-    font-size:14px; font-family:inherit;
-    border-radius:0;
-    transition:border-color 0.15s;
+    flex:1; background:#fff; color:var(--navy);
+    border:1px solid var(--line);
+    padding:9px 12px;
+    font-size:14.5px; font-family:var(--sans);
+    border-radius:var(--radius);
+    transition:border-color .15s, box-shadow .15s;
   }
+  .date-row input[type="date"]:hover{border-color:var(--blue)}
   .date-row input[type="date"]:focus{
-    outline:none; border-bottom-color:var(--accent);
-  }
-  .date-row input[type="date"]::-webkit-calendar-picker-indicator{
-    cursor:pointer; opacity:0.55; filter:invert(13%) sepia(15%) saturate(2000%) hue-rotate(170deg);
+    outline:none; border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(65,113,156,0.12);
   }
   .date-sep{color:var(--text-mute); font-size:14px}
 
-  /* dual-range slider */
-  .range-slider{
-    position:relative; height:26px; margin-top:18px;
-    user-select:none;
+  select{
+    width:100%; background:#fff; color:var(--navy);
+    border:1px solid var(--line);
+    padding:9px 34px 9px 12px;
+    font-size:14.5px; font-family:var(--sans);
+    border-radius:var(--radius);
+    appearance:none; -webkit-appearance:none;
+    cursor:pointer;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'><path fill='%2341719C' d='M0 0l5.5 7L11 0z'/></svg>");
+    background-repeat:no-repeat; background-position:right 12px center;
+    transition:border-color .15s, box-shadow .15s;
   }
-  .range-track{
-    position:absolute; left:8px; right:8px; top:50%;
-    height:2px; transform:translateY(-50%);
-    background:var(--sage-200); border-radius:1px;
+  select:hover{border-color:var(--blue)}
+  select:focus{
+    outline:none; border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(65,113,156,0.12);
   }
-  .range-fill{
-    position:absolute; top:50%; height:2px; transform:translateY(-50%);
-    background:var(--accent); border-radius:1px;
-  }
-  .range-thumb{
-    position:absolute; top:50%; transform:translate(-50%,-50%);
-    width:16px; height:16px; border-radius:50%;
-    background:#fff; border:1.5px solid var(--accent);
-    cursor:grab; z-index:2;
-    transition:transform 0.12s ease, box-shadow 0.12s ease;
-    box-shadow:0 1px 2px rgba(14,42,61,0.15);
-  }
-  .range-thumb:hover{transform:translate(-50%,-50%) scale(1.15); box-shadow:0 2px 6px rgba(43,108,138,0.3)}
-  .range-thumb:active{cursor:grabbing; transform:translate(-50%,-50%) scale(1.1)}
+  .stack > * + *{margin-top:16px}
 
-  /* checkboxes */
+  /* Eurofound blue square checkboxes */
   .check-list label{
     display:flex; align-items:center; gap:9px;
-    font-size:13.5px; margin:4px 0; cursor:pointer;
-    color:var(--text); line-height:1.4;
+    font-size:14.5px; margin:5px 0; cursor:pointer;
+    color:var(--text-body); line-height:1.4;
   }
   .check-list input{
     appearance:none; -webkit-appearance:none;
-    width:14px; height:14px;
-    border:1.5px solid var(--hairline-strong);
-    background:transparent;
+    width:16px; height:16px;
+    border:1.5px solid var(--line);
+    background:#fff;
     border-radius:3px; cursor:pointer; position:relative;
-    transition: all 0.15s ease; flex-shrink:0;
+    transition:all .15s ease; flex-shrink:0;
   }
+  .check-list input:hover{border-color:var(--blue)}
   .check-list input:checked{
-    background:var(--accent); border-color:var(--accent);
+    background:var(--blue); border-color:var(--blue);
   }
   .check-list input:checked::after{
-    content:""; position:absolute; left:3px; top:0px;
-    width:4px; height:8px; border:solid #fff; border-width:0 2px 2px 0;
+    content:""; position:absolute; left:4px; top:1px;
+    width:5px; height:9px; border:solid #fff; border-width:0 2px 2px 0;
     transform:rotate(45deg);
   }
-  select{
-    width:100%; background:transparent; color:var(--ink);
-    border:none; border-bottom:1px solid var(--hairline-strong);
-    padding:6px 22px 6px 0;
-    font-size:14px; font-family:inherit;
-    appearance:none; -webkit-appearance:none;
+
+  /* dual-range slider */
+  .range-slider{
+    position:relative; height:28px; margin-top:14px; user-select:none;
+  }
+  .range-track{
+    position:absolute; left:9px; right:9px; top:50%;
+    height:4px; transform:translateY(-50%);
+    background:var(--line-soft); border-radius:2px;
+  }
+  .range-fill{
+    position:absolute; top:50%; height:4px; transform:translateY(-50%);
+    background:var(--blue); border-radius:2px;
+  }
+  .range-thumb{
+    position:absolute; top:50%; transform:translate(-50%,-50%);
+    width:18px; height:18px; border-radius:50%;
+    background:#fff; border:2px solid var(--blue);
+    cursor:grab; z-index:2;
+    transition:box-shadow .12s ease;
+    box-shadow:0 1px 3px rgba(38,50,77,0.2);
+  }
+  .range-thumb:hover{box-shadow:0 0 0 5px rgba(65,113,156,0.15)}
+  .range-thumb:active{cursor:grabbing}
+
+  /* Eurofound button — like "Clear selection" */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; color:var(--navy);
+    border:1px solid var(--line);
+    padding:9px 18px;
+    font-family:var(--serif); font-weight:600; font-size:14.5px;
+    border-radius:var(--radius);
     cursor:pointer;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%235a6d7a' d='M0 0l5 6 5-6z'/></svg>");
-    background-repeat:no-repeat; background-position:right 2px center;
-    border-radius:0;
-    transition:border-color 0.15s;
-  }
-  select:focus{outline:none; border-bottom-color:var(--accent)}
-  .stack > * + *{margin-top:18px}
-
-  .clear-btn{
-    background:transparent; border:none;
-    color:var(--text-dim); padding:6px 0;
-    font-size:12px; font-family:inherit; cursor:pointer;
-    display:inline-flex; align-items:center; gap:6px;
-    transition:color 0.15s ease;
-    align-self:flex-end;
+    transition:all .15s ease;
     white-space:nowrap;
-    text-transform:uppercase; letter-spacing:0.1em;
-    border-bottom:1px solid transparent;
   }
-  .clear-btn:hover{color:var(--accent); border-bottom-color:var(--accent)}
+  .btn:hover{border-color:var(--blue); color:var(--blue); background:var(--blue-pale)}
+  .btn svg{flex-shrink:0}
+  .filters .btn{align-self:end; margin-top:26px}
 
-  /* ============ Main ============ */
+  /* =====================================================
+     Main
+     ===================================================== */
   .main{
     max-width:1520px;
-    margin:36px auto 24px;
+    margin:30px auto 8px;
     padding:0 48px;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:32px 40px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap:30px 34px;
   }
 
-  /* ===== KPI bar: borderless, divided by hairlines ===== */
+  /* KPI strip — clean, divided */
   .kpi-strip{
     grid-column:1 / -1;
     display:grid;
     grid-template-columns:repeat(9, 1fr);
-    margin-bottom:8px;
-    padding-bottom:28px;
-    border-bottom:1px solid var(--hairline);
+    border:1px solid var(--line-soft);
+    border-radius:var(--radius-lg);
+    background:var(--surface);
+    padding:20px 8px;
   }
   .kpi{
-    padding:0 22px;
-    border-right:1px solid var(--hairline-soft);
-    display:flex; flex-direction:column; justify-content:flex-start;
-    gap:6px;
+    padding:2px 20px;
+    border-right:1px solid var(--line);
+    display:flex; flex-direction:column; gap:5px;
     min-width:0;
   }
-  .kpi:first-child{padding-left:0}
-  .kpi:last-child{border-right:none; padding-right:0}
+  .kpi:last-child{border-right:none}
   .kpi-label{
-    color:var(--text-dim); font-size:10.5px;
-    text-transform:uppercase; letter-spacing:0.12em;
-    font-weight:600;
+    color:var(--text-dim); font-size:12.5px; font-weight:600;
   }
   .kpi-value{
-    font-family:var(--font-serif);
-    font-size:26px; font-weight:500;
-    color:var(--ink); line-height:1.05;
-    letter-spacing:-0.01em;
+    font-family:var(--serif);
+    font-size:26px; font-weight:700;
+    color:var(--navy); line-height:1.08;
     word-break:break-word;
   }
-  .kpi-value.smaller{font-size:17px; font-weight:500; padding-top:4px}
-  .kpi-value.negative{color:#a64a4a}
+  .kpi-value.smaller{font-size:17px; padding-top:3px}
+  .kpi-value.negative{color:var(--data-red)}
 
-  /* ===== Section blocks (no borders, no panels, just whitespace + soft heading) ===== */
+  /* Section blocks — chart surface like the Data Explorer */
   .block{display:flex; flex-direction:column}
   .block-head{
     display:flex; justify-content:space-between; align-items:baseline;
-    margin-bottom:18px;
-    padding-bottom:10px;
-    border-bottom:1px solid var(--hairline-soft);
+    margin-bottom:12px; gap:16px;
   }
   .block-title{
-    font-family:var(--font-serif);
-    color:var(--ink);
-    font-weight:500;
-    font-size:18px;
-    margin:0; letter-spacing:-0.005em;
+    font-family:var(--serif);
+    color:var(--navy);
+    font-weight:700;
+    font-size:20px;
+    margin:0;
   }
   .block-sub{
-    color:var(--text-mute); font-size:11px;
-    text-transform:uppercase; letter-spacing:0.1em; font-weight:500;
+    color:var(--text-dim); font-size:13px; font-weight:400;
+    white-space:nowrap;
+  }
+  .chart-surface{
+    background:var(--surface);
+    border:1px solid var(--line-soft);
+    border-radius:var(--radius-lg);
+    padding:16px 14px 10px;
+    flex:1;
   }
 
   .map-cell    {grid-column:1 / span 2}
@@ -278,163 +311,157 @@
   #events-chart{height:340px}
   #jobs-chart{height:380px}
 
-  /* Recent items - feels like editorial cards */
+  /* Recent lists */
   .recent-list{
-    max-height:340px; overflow-y:auto; padding-right:8px;
+    max-height:340px; overflow-y:auto; padding:4px 14px 4px 4px;
   }
-  .recent-list::-webkit-scrollbar{width:4px}
+  .recent-list::-webkit-scrollbar{width:5px}
   .recent-list::-webkit-scrollbar-track{background:transparent}
-  .recent-list::-webkit-scrollbar-thumb{background:var(--sage-200); border-radius:2px}
+  .recent-list::-webkit-scrollbar-thumb{background:var(--line); border-radius:3px}
   .recent-item{
-    padding:14px 0;
-    border-bottom:1px solid var(--hairline-soft);
+    padding:14px 2px;
+    border-bottom:1px solid var(--line-soft);
   }
-  .recent-item:first-child{padding-top:0}
+  .recent-item:first-child{padding-top:6px}
   .recent-item:last-child{border-bottom:none}
   .recent-head{
     display:flex; align-items:baseline; justify-content:space-between; gap:12px;
-    margin-bottom:6px;
+    margin-bottom:5px;
   }
   .recent-company{
-    font-family:var(--font-serif);
-    font-size:16px; font-weight:500;
-    color:var(--ink); line-height:1.25;
+    font-family:var(--serif);
+    font-size:16.5px; font-weight:600;
+    color:var(--navy); line-height:1.25;
   }
   .recent-date{
-    color:var(--text-mute); font-size:11.5px;
-    white-space:nowrap; flex-shrink:0;
+    color:var(--text-mute); font-size:12.5px; white-space:nowrap; flex-shrink:0;
   }
   .recent-meta{
     display:flex; gap:14px; flex-wrap:wrap;
-    color:var(--text-dim); font-size:12px;
-    margin:4px 0 6px 0;
+    color:var(--text-dim); font-size:13px;
+    margin:3px 0 5px 0;
   }
-  .recent-meta strong{color:var(--ink); font-weight:600}
-  .recent-meta .num.loss{color:#a64a4a; font-weight:600}
-  .recent-meta .num.gain{color:#2d6c3e; font-weight:600}
+  .recent-meta .num.loss{color:var(--data-red); font-weight:700}
+  .recent-meta .num.gain{color:var(--data-green); font-weight:700}
   .recent-desc{
-    color:var(--text-dim); font-size:12.5px; line-height:1.55;
-    margin-top:4px;
+    color:var(--text-dim); font-size:13px; line-height:1.55; margin-top:3px;
   }
 
-  /* Sectors table - no panel, just rows */
+  /* Sectors table */
   .sectors-table{
     max-height:380px; overflow-y:auto;
-    padding-right:6px;
+    padding:6px 14px 6px 4px;
   }
-  .sectors-table::-webkit-scrollbar{width:4px}
-  .sectors-table::-webkit-scrollbar-thumb{background:var(--sage-200);border-radius:2px}
+  .sectors-table::-webkit-scrollbar{width:5px}
+  .sectors-table::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
   .sectors-table .row{
-    display:grid; grid-template-columns:1.4fr 60px 1.2fr;
+    display:grid; grid-template-columns:1.4fr 62px 1.2fr;
     align-items:center; gap:14px;
-    padding:10px 0;
-    border-bottom:1px solid var(--hairline-soft);
-    font-size:13px;
+    padding:9px 2px;
+    border-bottom:1px solid var(--line-soft);
+    font-size:14px;
   }
   .sectors-table .row:last-child{border-bottom:none}
   .sectors-table .bar-wrap{
-    height:6px; background:var(--sage-50);
-    border-radius:3px; overflow:hidden;
+    height:14px; background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:2px; overflow:hidden;
   }
   .sectors-table .bar-fill{
     height:100%;
-    background:linear-gradient(90deg, var(--teal-700), var(--teal-300));
-    border-radius:3px;
-    transition:width 0.6s cubic-bezier(.2,.7,.2,1);
+    background:var(--data-blue);
+    transition:width .6s cubic-bezier(.2,.7,.2,1);
   }
   .sectors-table .num{
-    text-align:right; color:var(--ink);
-    font-variant-numeric:tabular-nums;
-    font-weight:500;
+    text-align:right; color:var(--navy);
+    font-variant-numeric:tabular-nums; font-weight:600;
   }
 
-  /* Types - smaller, lighter, no borders */
+  /* Types grid — Eurofound rounds-style tiles */
   .types-grid{
-    display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px 32px;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;
+    padding:6px 2px;
   }
   .type-cell{
-    padding:14px 0;
-    border-top:1px solid var(--hairline-soft);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 12px;
     cursor:default;
-    transition:all 0.15s ease;
+    transition:all .15s ease;
+    display:flex; flex-direction:column; gap:4px;
   }
-  .type-cell:hover{border-top-color:var(--accent)}
+  .type-cell:hover{border-color:var(--blue); background:var(--blue-pale)}
   .type-cell .num{
-    font-family:var(--font-serif);
-    font-size:24px; font-weight:500;
-    color:var(--ink); line-height:1;
+    font-family:var(--serif);
+    font-size:23px; font-weight:700;
+    color:var(--navy); line-height:1;
   }
   .type-cell .lbl{
-    font-size:11.5px; color:var(--text-dim);
-    margin-top:6px; line-height:1.3;
+    font-size:12.5px; color:var(--text-dim); line-height:1.3;
   }
 
   /* Loading */
   .loading-overlay{
     position:fixed; inset:0;
-    background:rgba(250,251,252,0.96);
-    backdrop-filter:blur(6px);
+    background:rgba(255,255,255,0.97);
     z-index:9999;
     display:flex; align-items:center; justify-content:center; flex-direction:column;
-    gap:18px; color:var(--ink); font-size:13px;
+    gap:18px; color:var(--navy); font-size:14px;
   }
   .spinner{
-    width:32px; height:32px; border-radius:50%;
-    border:2px solid var(--sage-200); border-top-color:var(--accent);
+    width:34px; height:34px; border-radius:50%;
+    border:3px solid var(--line-soft); border-top-color:var(--blue);
     animation:spin .9s linear infinite;
   }
   @keyframes spin{to{transform:rotate(360deg)}}
   .err{
-    color:#8b3a3a; max-width:680px; text-align:center;
+    color:var(--data-red); max-width:680px; text-align:center;
     line-height:1.6; padding:0 20px;
   }
   .err code{
-    background:var(--sage-50); padding:2px 6px;
-    border-radius:3px; font-size:12.5px; color:var(--ink);
+    background:var(--surface); padding:2px 6px;
+    border-radius:3px; font-size:13px; color:var(--navy);
   }
 
-  /* fade-in */
   @keyframes fadeUp{
     from{opacity:0; transform:translateY(6px)}
     to{opacity:1; transform:translateY(0)}
   }
-  .block, .kpi-strip{animation:fadeUp 0.45s cubic-bezier(.2,.7,.2,1) backwards}
-  .kpi-strip{animation-delay:0.02s}
-  .map-cell{animation-delay:0.08s}
-  .events-cell{animation-delay:0.12s}
-  .jobs-cell{animation-delay:0.16s}
-  .recent-loss{animation-delay:0.20s}
-  .recent-gain{animation-delay:0.22s}
-  .sectors-cell{animation-delay:0.26s}
-  .types-cell{animation-delay:0.28s}
+  .block,.kpi-strip{animation:fadeUp .4s cubic-bezier(.2,.7,.2,1) backwards}
+  .kpi-strip{animation-delay:.02s}
+  .map-cell{animation-delay:.07s}
+  .events-cell{animation-delay:.10s}
+  .jobs-cell{animation-delay:.14s}
+  .recent-loss{animation-delay:.18s}
+  .recent-gain{animation-delay:.20s}
+  .sectors-cell{animation-delay:.24s}
+  .types-cell{animation-delay:.26s}
 
-  /* footer */
   .footer{
-    max-width:1520px; margin:0 auto;
-    padding:24px 48px 48px;
-    color:var(--text-mute); font-size:11px;
+    max-width:1520px; margin:24px auto 0;
+    padding:20px 48px 44px;
+    color:var(--text-mute); font-size:12.5px;
     display:flex; justify-content:space-between;
-    border-top:1px solid var(--hairline-soft); margin-top:24px;
+    border-top:1px solid var(--line-soft);
   }
 
-  /* Responsive */
   @media (max-width:1280px){
-    h1{font-size:34px}
-    .kpi-strip{grid-template-columns:repeat(5, 1fr); gap:18px 0; row-gap:24px}
-    .kpi{padding:0 16px}
-    .kpi:nth-child(5n){border-right:none; padding-right:0}
+    h1{font-size:33px}
+    .kpi-strip{grid-template-columns:repeat(5,1fr); row-gap:20px}
+    .kpi:nth-child(5n){border-right:none}
   }
   @media (max-width:980px){
-    .header{padding:24px 22px 20px}
-    .filters{grid-template-columns:1fr 1fr; padding:22px; gap:28px}
-    .main{padding:0 22px; grid-template-columns:1fr; gap:36px}
+    .header,.filters-wrap,.footer{padding-left:22px;padding-right:22px}
+    .filters{grid-template-columns:1fr 1fr; gap:24px}
+    .main{padding:0 22px; grid-template-columns:1fr; gap:32px}
     .map-cell,.events-cell,.jobs-cell,.recent-loss,.recent-gain,.sectors-cell,.types-cell{
       grid-column:1 / -1;
     }
-    .kpi-strip{grid-template-columns:repeat(3, 1fr); gap:20px 0}
-    .kpi{padding:0 12px; border-right:1px solid var(--hairline-soft)}
-    .kpi:nth-child(3n){border-right:none; padding-right:0}
-    .footer{padding:24px 22px; flex-direction:column; gap:8px}
+    .kpi-strip{grid-template-columns:repeat(3,1fr)}
+    .kpi:nth-child(3n){border-right:none}
+    .footer{flex-direction:column; gap:8px}
+    .header-row{flex-direction:column; gap:12px}
   }
 </style>
 </head>
@@ -445,11 +472,13 @@
   <div id="loadingText">Loading restructuring data…</div>
 </div>
 
+<div class="topbar"></div>
+
 <header class="header">
-  <div class="header-inner">
+  <div class="header-row">
     <div>
-      <div class="brand">European Restructuring Monitor</div>
-      <h1>Restructuring across <span class="accent">Europe</span></h1>
+      <h1>European Restructuring Monitor</h1>
+      <p class="header-sub">Restructuring events, announced job losses and gains across Europe.</p>
     </div>
     <div class="header-meta">
       <div class="meta-item">
@@ -466,99 +495,77 @@
       </div>
     </div>
   </div>
+  <div class="section-label">Filter the data</div>
 </header>
 
-<section class="filters">
-  <div>
-    <label class="field-label">Date of announcement</label>
-    <div class="date-row">
-      <input type="date" id="dateFrom" />
-      <span class="date-sep">→</span>
-      <input type="date" id="dateTo" />
-    </div>
-    <div class="range-slider" id="rangeSlider">
-      <div class="range-track"></div>
-      <div class="range-fill" id="rangeFill"></div>
-      <div class="range-thumb" id="rangeThumbMin" tabindex="0"></div>
-      <div class="range-thumb" id="rangeThumbMax" tabindex="0"></div>
-    </div>
-  </div>
-
-  <div>
-    <label class="field-label">Country</label>
-    <div class="check-list">
-      <label><input type="checkbox" id="cb-world" checked /> Include all countries</label>
-      <label><input type="checkbox" id="cb-eu27" /> EU-27 only</label>
-    </div>
-    <div style="margin-top:14px">
-      <select id="countrySel"><option>All countries</option></select>
-    </div>
-  </div>
-
-  <div class="stack">
+<div class="filters-wrap">
+  <section class="filters">
     <div>
-      <label class="field-label">Sector (NACE)</label>
-      <select id="sectorSel"><option>All sectors</option></select>
+      <label class="field-label">Date of announcement</label>
+      <div class="date-row">
+        <input type="date" id="dateFrom" />
+        <span class="date-sep">→</span>
+        <input type="date" id="dateTo" />
+      </div>
+      <div class="range-slider" id="rangeSlider">
+        <div class="range-track"></div>
+        <div class="range-fill" id="rangeFill"></div>
+        <div class="range-thumb" id="rangeThumbMin" tabindex="0"></div>
+        <div class="range-thumb" id="rangeThumbMax" tabindex="0"></div>
+      </div>
     </div>
+
     <div>
-      <label class="field-label">Restructuring type</label>
-      <select id="typeSel"><option>All types</option></select>
+      <label class="field-label">Country</label>
+      <div class="check-list">
+        <label><input type="checkbox" id="cb-world" checked /> Include all countries</label>
+        <label><input type="checkbox" id="cb-eu27" /> EU-27 only</label>
+      </div>
+      <div style="margin-top:12px">
+        <select id="countrySel"><option>All countries</option></select>
+      </div>
     </div>
-  </div>
 
-  <div>
-    <label class="field-label">Thematic subjects</label>
-    <div class="check-list">
-      <label><input type="checkbox" class="thematic" value="auto" /> Automotive</label>
-      <label><input type="checkbox" class="thematic" value="digital" /> Digital transition</label>
-      <label><input type="checkbox" class="thematic" value="green" /> Green transition</label>
-      <label><input type="checkbox" class="thematic" value="twin" /> Twin transition</label>
-      <label><input type="checkbox" class="thematic" value="covid" /> Covid-19</label>
+    <div class="stack">
+      <div>
+        <label class="field-label">Sector (NACE)</label>
+        <select id="sectorSel"><option>All sectors</option></select>
+      </div>
+      <div>
+        <label class="field-label">Restructuring type</label>
+        <select id="typeSel"><option>All types</option></select>
+      </div>
     </div>
-  </div>
 
-  <button class="clear-btn" onclick="clearAllSlicers()">Reset</button>
-</section>
+    <div>
+      <label class="field-label">Thematic subjects</label>
+      <div class="check-list">
+        <label><input type="checkbox" class="thematic" value="auto" /> Automotive</label>
+        <label><input type="checkbox" class="thematic" value="digital" /> Digital transition</label>
+        <label><input type="checkbox" class="thematic" value="green" /> Green transition</label>
+        <label><input type="checkbox" class="thematic" value="twin" /> Twin transition</label>
+        <label><input type="checkbox" class="thematic" value="covid" /> Covid-19</label>
+      </div>
+    </div>
+
+    <button class="btn" onclick="clearAllSlicers()">
+      Clear selection
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#41719C" stroke-width="2"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V6"/></svg>
+    </button>
+  </section>
+</div>
 
 <main class="main">
-  <!-- KPI strip -->
   <div class="kpi-strip">
-    <div class="kpi">
-      <div class="kpi-label">Restructurings</div>
-      <div class="kpi-value" id="kpi-num">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Top country</div>
-      <div class="kpi-value smaller" id="kpi-country">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Net job change</div>
-      <div class="kpi-value" id="kpi-net">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Min job losses</div>
-      <div class="kpi-value" id="kpi-minloss">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Max job losses</div>
-      <div class="kpi-value" id="kpi-maxloss">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Job gains</div>
-      <div class="kpi-value" id="kpi-gain">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Top company</div>
-      <div class="kpi-value smaller" id="kpi-company">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Avg duration</div>
-      <div class="kpi-value" id="kpi-duration">—</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Updates</div>
-      <div class="kpi-value" id="kpi-updates">—</div>
-    </div>
+    <div class="kpi"><div class="kpi-label">Restructurings</div><div class="kpi-value" id="kpi-num">—</div></div>
+    <div class="kpi"><div class="kpi-label">Top country</div><div class="kpi-value smaller" id="kpi-country">—</div></div>
+    <div class="kpi"><div class="kpi-label">Net job change</div><div class="kpi-value" id="kpi-net">—</div></div>
+    <div class="kpi"><div class="kpi-label">Min job losses</div><div class="kpi-value" id="kpi-minloss">—</div></div>
+    <div class="kpi"><div class="kpi-label">Max job losses</div><div class="kpi-value" id="kpi-maxloss">—</div></div>
+    <div class="kpi"><div class="kpi-label">Job gains</div><div class="kpi-value" id="kpi-gain">—</div></div>
+    <div class="kpi"><div class="kpi-label">Top company</div><div class="kpi-value smaller" id="kpi-company">—</div></div>
+    <div class="kpi"><div class="kpi-label">Avg duration (mo)</div><div class="kpi-value" id="kpi-duration">—</div></div>
+    <div class="kpi"><div class="kpi-label">Updates</div><div class="kpi-value" id="kpi-updates">—</div></div>
   </div>
 
   <div class="block map-cell">
@@ -566,7 +573,7 @@
       <h2 class="block-title">Restructurings by country</h2>
       <span class="block-sub">Geographic distribution</span>
     </div>
-    <div id="map-chart"></div>
+    <div class="chart-surface"><div id="map-chart"></div></div>
   </div>
 
   <div class="block events-cell">
@@ -574,7 +581,7 @@
       <h2 class="block-title">Large restructuring events</h2>
       <span class="block-sub">Annual count · 100+ jobs</span>
     </div>
-    <div id="events-chart"></div>
+    <div class="chart-surface"><div id="events-chart"></div></div>
   </div>
 
   <div class="block jobs-cell">
@@ -582,7 +589,7 @@
       <h2 class="block-title">Announced job changes over time</h2>
       <span class="block-sub">Planned gains, losses and net change by year</span>
     </div>
-    <div id="jobs-chart"></div>
+    <div class="chart-surface"><div id="jobs-chart"></div></div>
   </div>
 
   <div class="block recent-loss">
@@ -590,7 +597,7 @@
       <h2 class="block-title">Most recent losses</h2>
       <span class="block-sub">Latest reductions</span>
     </div>
-    <div class="recent-list" id="recentLoss"></div>
+    <div class="chart-surface"><div class="recent-list" id="recentLoss"></div></div>
   </div>
 
   <div class="block recent-gain">
@@ -598,7 +605,7 @@
       <h2 class="block-title">Most recent gains</h2>
       <span class="block-sub">Latest creations</span>
     </div>
-    <div class="recent-list" id="recentGain"></div>
+    <div class="chart-surface"><div class="recent-list" id="recentGain"></div></div>
   </div>
 
   <div class="block sectors-cell">
@@ -606,7 +613,7 @@
       <h2 class="block-title">Sectors</h2>
       <span class="block-sub">By count</span>
     </div>
-    <div class="sectors-table" id="sectorsTable"></div>
+    <div class="chart-surface"><div class="sectors-table" id="sectorsTable"></div></div>
   </div>
 
   <div class="block types-cell">
@@ -614,7 +621,7 @@
       <h2 class="block-title">Restructuring by type</h2>
       <span class="block-sub">Nine categories</span>
     </div>
-    <div class="types-grid" id="typesGrid"></div>
+    <div class="chart-surface"><div class="types-grid" id="typesGrid"></div></div>
   </div>
 </main>
 
@@ -626,24 +633,28 @@
 
 <script>
 /* =====================================================================
-   ERM Dashboard
+   ERM Dashboard — Eurofound design system
    ===================================================================== */
 
 const CSV_URL = "https://media.githubusercontent.com/media/thomasdavid/dashboard/refs/heads/main/Full_data.csv";
 
+/* ---- Highcharts theme (Eurofound) ---- */
 Highcharts.setOptions({
-  chart:{backgroundColor:'transparent', style:{fontFamily:'"Source Sans 3", system-ui, sans-serif'}, spacing:[8,4,8,4]},
+  chart:{backgroundColor:'transparent',
+    style:{fontFamily:"'Source Sans Pro','Segoe UI',system-ui,sans-serif"},
+    spacing:[8,4,8,4]},
   credits:{enabled:false}, title:{text:null},
-  legend:{itemStyle:{color:'#0e2a3d', fontWeight:'500', fontSize:'12px'}, itemHoverStyle:{color:'#2b6c8a'}},
-  xAxis:{lineColor:'rgba(14,42,61,0.12)', tickColor:'rgba(14,42,61,0.12)',
-         labels:{style:{color:'#5a6d7a', fontSize:'11px'}}},
-  yAxis:{gridLineColor:'rgba(14,42,61,0.06)', lineColor:'transparent',
-         labels:{style:{color:'#5a6d7a', fontSize:'11px'}},
-         title:{style:{color:'#5a6d7a', fontSize:'10.5px', fontWeight:'500',
-                       textTransform:'uppercase', letterSpacing:'0.08em'}}},
-  tooltip:{backgroundColor:'rgba(255,255,255,0.98)', borderColor:'rgba(14,42,61,0.12)',
-           borderRadius:8, shadow:{color:'rgba(14,42,61,0.12)', offsetX:0, offsetY:4, opacity:0.4, width:8},
-           style:{color:'#0e2a3d', fontSize:'12.5px'}, useHTML:true}
+  legend:{itemStyle:{color:'#26324D', fontWeight:'600', fontSize:'12.5px'},
+          itemHoverStyle:{color:'#41719C'}},
+  xAxis:{lineColor:'#D9DEE4', tickColor:'#D9DEE4',
+         labels:{style:{color:'#6B7690', fontSize:'11.5px'}}},
+  yAxis:{gridLineColor:'#E8EBEF', lineColor:'transparent',
+         labels:{style:{color:'#6B7690', fontSize:'11.5px'}},
+         title:{style:{color:'#6B7690', fontSize:'12px', fontWeight:'600'}}},
+  tooltip:{backgroundColor:'#FFFFFF', borderColor:'#D9DEE4',
+           borderRadius:6,
+           shadow:{color:'rgba(38,50,77,0.15)', offsetX:0, offsetY:3, opacity:0.4, width:8},
+           style:{color:'#26324D', fontSize:'13px'}, useHTML:true}
 });
 
 /* ---- helpers ---- */
@@ -665,7 +676,6 @@ const parseDate = v => {
   m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
   if(m){
     const a=+m[1], b=+m[2], y=+m[3];
-    if(a>12) return new Date(y,b-1,a);
     return new Date(y,b-1,a);
   }
   const d = new Date(s);
@@ -695,7 +705,6 @@ const COUNTRY_TO_HC = {
 };
 
 let NORM=[], DATE_MIN=null, DATE_MAX=null;
-let TOTAL_DAYS = 0;
 
 function fetchCsv(url){
   return new Promise((resolve,reject)=>{
@@ -734,9 +743,8 @@ function normalizeRow(r){
 }
 
 function currentFilters(){
-  const themBoxes = [...document.querySelectorAll('.thematic')];
   const them = {};
-  themBoxes.forEach(b=>them[b.value]=b.checked);
+  document.querySelectorAll('.thematic').forEach(b=>them[b.value]=b.checked);
   return {
     from: document.getElementById('dateFrom').value ? new Date(document.getElementById('dateFrom').value) : null,
     to:   document.getElementById('dateTo').value   ? new Date(document.getElementById('dateTo').value)   : null,
@@ -822,31 +830,26 @@ function renderMap(rows){
   Highcharts.mapChart('map-chart',{
     chart:{map:'custom/europe', backgroundColor:'transparent', spacingTop:0},
     title:{text:null},
-    mapNavigation:{
-      enabled:true,
+    mapNavigation:{enabled:true,
       buttonOptions:{verticalAlign:'bottom',
-        theme:{fill:'rgba(255,255,255,0.8)', stroke:'rgba(14,42,61,0.15)'}}
-    },
-    colorAxis:{min:0, stops:[[0,'#eef3f2'],[0.4,'#8fb6c4'],[1,'#1e4a64']]},
-    legend:{
-      enabled:true, align:'right', verticalAlign:'bottom',
-      itemStyle:{fontSize:'10.5px', color:'#5a6d7a'},
-      symbolHeight:8, symbolWidth:60, layout:'horizontal'
-    },
-    tooltip:{
-      useHTML:true,
+        theme:{fill:'#fff', stroke:'#D9DEE4', r:4,
+               states:{hover:{fill:'#EAF0F6'}}}}},
+    colorAxis:{min:0, stops:[[0,'#E7EFE9'],[0.45,'#7F9CA8'],[1,'#21374F']]},
+    legend:{enabled:true, align:'right', verticalAlign:'bottom',
+      itemStyle:{fontSize:'11px', color:'#6B7690'},
+      symbolHeight:9, symbolWidth:70, layout:'horizontal'},
+    tooltip:{useHTML:true,
       pointFormatter:function(){
-        return `<div style="padding:2px 4px">
-          <div style="font-weight:600;font-size:13px;color:#0e2a3d">${this.name}</div>
-          <div style="color:#5a6d7a;font-size:11.5px;margin-top:2px">Restructurings: <strong style="color:#2b6c8a">${(this.value||0).toLocaleString()}</strong></div>
+        return `<div style="padding:3px 5px">
+          <div style="font-weight:700;font-size:13.5px;color:#26324D;font-family:'Source Serif Pro',serif">${this.name}</div>
+          <div style="color:#6B7690;font-size:12px;margin-top:2px">Restructurings: <strong style="color:#41719C">${(this.value||0).toLocaleString()}</strong></div>
         </div>`;
-      }
-    },
+      }},
     series:[{
       data, name:'Restructurings',
-      states:{hover:{color:'#2b6c8a', borderColor:'#0e2a3d'}},
-      borderColor:'rgba(14,42,61,0.15)', borderWidth:0.5,
-      nullColor:'#f3f6f7',
+      states:{hover:{color:'#41719C', borderColor:'#26324D'}},
+      borderColor:'#FFFFFF', borderWidth:0.7,
+      nullColor:'#EDEFF2',
       joinBy:['hc-key','hc-key'],
       dataLabels:{enabled:false}
     }]
@@ -873,18 +876,16 @@ function renderEventsChart(rows){
     legend:{enabled:false},
     tooltip:{useHTML:true,
       formatter:function(){
-        return `<div style="padding:2px 4px">
-          <div style="font-weight:600;color:#0e2a3d">${this.x}</div>
-          <div style="color:#5a6d7a;font-size:11.5px">Events: <strong style="color:#2b6c8a">${this.y.toLocaleString()}</strong></div>
+        return `<div style="padding:3px 5px">
+          <div style="font-weight:700;color:#26324D">${this.x}</div>
+          <div style="color:#6B7690;font-size:12px">Events: <strong style="color:#41719C">${this.y.toLocaleString()}</strong></div>
         </div>`;
-      }
-    },
+      }},
     plotOptions:{
-      areaspline:{color:'#2b6c8a', lineWidth:2,
+      areaspline:{color:'#3F6C9B', lineWidth:2.5,
         fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
-          stops:[[0,'rgba(43,108,138,0.22)'],[1,'rgba(43,108,138,0.01)']]},
-        marker:{enabled:false, states:{hover:{enabled:true, radius:5, fillColor:'#2b6c8a', lineColor:'#fff', lineWidth:2}}}
-      }
+          stops:[[0,'rgba(63,108,155,0.20)'],[1,'rgba(63,108,155,0.01)']]},
+        marker:{enabled:false, states:{hover:{enabled:true, radius:5, fillColor:'#3F6C9B', lineColor:'#fff', lineWidth:2}}}}
     },
     series:[{name:'Events', data:series}]
   });
@@ -907,35 +908,33 @@ function renderJobsChart(rows){
 
   Highcharts.chart('jobs-chart',{
     chart:{type:'spline', spacingTop:6},
-    xAxis:{type:'linear', tickInterval:2, allowDecimals:false,
-           labels:{rotation:0, style:{color:'#5a6d7a', fontSize:'11px'}}},
+    xAxis:{type:'linear', tickInterval:2, allowDecimals:false},
     yAxis:{title:{text:null},
-           plotLines:[{color:'rgba(14,42,61,0.15)', width:1, value:0, zIndex:3}],
-           labels:{formatter:function(){
-             const v = this.value;
-             if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
-             if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
-             return v;
-           }}},
-    legend:{enabled:true, align:'center', verticalAlign:'bottom', symbolRadius:6},
+      plotLines:[{color:'#B9C1CE', width:1, value:0, zIndex:3}],
+      labels:{formatter:function(){
+        const v = this.value;
+        if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
+        if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
+        return v;
+      }}},
+    legend:{enabled:true, align:'center', verticalAlign:'bottom', symbolRadius:2, squareSymbol:true},
     tooltip:{shared:true, useHTML:true,
       formatter:function(){
-        let s = `<div style="padding:2px 4px"><div style="font-weight:600;color:#0e2a3d;margin-bottom:4px">${this.x}</div>`;
+        let s = `<div style="padding:3px 5px"><div style="font-weight:700;color:#26324D;margin-bottom:4px">${this.x}</div>`;
         this.points.forEach(p=>{
-          s += `<div style="color:#5a6d7a;font-size:11.5px;margin:2px 0">
-            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${p.color};margin-right:6px"></span>
-            ${p.series.name}: <strong style="color:#0e2a3d">${Math.round(p.y).toLocaleString()}</strong>
+          s += `<div style="color:#6B7690;font-size:12px;margin:2px 0">
+            <span style="display:inline-block;width:9px;height:9px;background:${p.color};margin-right:6px"></span>
+            ${p.series.name}: <strong style="color:#26324D">${Math.round(p.y).toLocaleString()}</strong>
           </div>`;
         });
         return s+'</div>';
-      }
-    },
+      }},
     plotOptions:{spline:{lineWidth:2.5,
       marker:{enabled:false, states:{hover:{enabled:true, radius:5, lineColor:'#fff', lineWidth:2}}}}},
     series:[
-      {name:'Job gains',       data:gains,  color:'#2f6c8a'},
-      {name:'Net job change',  data:nets,   color:'#b3855e', lineWidth:3, zIndex:3},
-      {name:'Job losses',      data:losses, color:'#8fb6c4', dashStyle:'ShortDash'}
+      {name:'Job gains',      data:gains,  color:'#3F6C9B'},
+      {name:'Net job change', data:nets,   color:'#B08A5E', lineWidth:3, zIndex:3},
+      {name:'Job losses',     data:losses, color:'#A03B45', dashStyle:'ShortDash'}
     ]
   });
 }
@@ -993,10 +992,10 @@ function renderRecent(rows){
                      .sort((a,b)=>b.date-a.date).slice(0,8);
   document.getElementById('recentLoss').innerHTML =
     losses.map(r=>itemHtml(r,'loss')).join('') ||
-    '<div style="color:#8497a3;padding:6px;font-size:13px">No matching records</div>';
+    '<div style="color:#98A1B3;padding:10px;font-size:13.5px">No matching records</div>';
   document.getElementById('recentGain').innerHTML =
     gains.map(r=>itemHtml(r,'gain')).join('') ||
-    '<div style="color:#8497a3;padding:6px;font-size:13px">No matching records</div>';
+    '<div style="color:#98A1B3;padding:10px;font-size:13.5px">No matching records</div>';
 }
 function itemHtml(r, mode){
   const d = r.date ? r.date.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '—';
@@ -1042,7 +1041,6 @@ function setupRangeSlider(){
     fill.style.left = fromPct+'%';
     fill.style.width = (toPct-fromPct)+'%';
   }
-
   function applyThumbPositions(){
     const fromPct = parseFloat(thumbMin.style.left)||0;
     const toPct   = parseFloat(thumbMax.style.left)||100;
@@ -1056,12 +1054,10 @@ function setupRangeSlider(){
   }
 
   let dragging = null;
-
   function pxToPct(clientX){
     const rect = slider.getBoundingClientRect();
     return Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width)*100));
   }
-
   function onMove(e){
     if(!dragging) return;
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -1099,7 +1095,6 @@ function setupRangeSlider(){
   thumbMin.addEventListener('touchstart', e=>startDrag(thumbMin, e), {passive:false});
   thumbMax.addEventListener('touchstart', e=>startDrag(thumbMax, e), {passive:false});
 
-  // Click on track jumps the nearest thumb
   slider.addEventListener('click', e=>{
     if(e.target === thumbMin || e.target === thumbMax) return;
     const pct = pxToPct(e.clientX);
@@ -1114,7 +1109,6 @@ function setupRangeSlider(){
     renderAll();
   });
 
-  // Keep slider in sync when date inputs change manually
   fromInput.addEventListener('change', syncFromInputs);
   toInput.addEventListener('change', syncFromInputs);
 
@@ -1154,7 +1148,6 @@ function bindEvents(){
 window.clearAllSlicers = function(){
   if(DATE_MIN) document.getElementById('dateFrom').value = toISO(DATE_MIN);
   if(DATE_MAX) document.getElementById('dateTo').value   = toISO(DATE_MAX);
-  // reset slider thumbs
   document.getElementById('rangeThumbMin').style.left = '0%';
   document.getElementById('rangeThumbMax').style.left = '100%';
   document.getElementById('rangeFill').style.left = '0%';
