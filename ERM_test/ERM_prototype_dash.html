@@ -172,6 +172,11 @@
   }
   .title-row .card-title{margin:0}
 
+  .export-stamp{
+    position:absolute;top:22px;right:20px;
+    font-size:12px;font-weight:600;color:var(--text-dim);
+    font-family:var(--sans);z-index:5;
+  }
   /* export widget — bottom right of each card */
   .export-wrap{position:absolute;bottom:14px;right:16px;z-index:20}
   .export-btn{
@@ -805,6 +810,10 @@ function getEuropeMap(){
 
 /* 9-step discrete shade ramp (light → navy) */
 const MAP_RAMP = ['#E9F0EB','#D3E0DB','#BCCFCB','#A3BCBD','#89A6AC','#6E8D9A','#536F86','#39536D','#21374F'];
+const fmtMapK = v => v>=1000
+  ? ((v/1000)%1===0 ? (v/1000) : (v/1000).toFixed(1)) + 'K'
+  : String(v);
+let MAP_STEP = 1;   /* current class width, used to rebuild the legend on export */
 function niceStep(maxVal){
   const raw = Math.max(1, maxVal/9);
   const mag = Math.pow(10, Math.floor(Math.log10(raw)));
@@ -822,14 +831,13 @@ function renderMap(rows){
     const data = Object.entries(counts).map(([k,v])=>[k,v]);
     const maxVal = Math.max(1, ...data.map(d=>d[1]));
     const step = niceStep(maxVal);
+    MAP_STEP = step;
     const dataClasses = MAP_RAMP.map((color,i)=>{
       const from = i*step;
       const to   = i<8 ? (i+1)*step : undefined;
       return {from, to, color};
     });
-    const fmtK = v => v>=1000
-      ? ((v/1000)%1===0 ? (v/1000) : (v/1000).toFixed(1)) + 'K'
-      : String(v);
+    const fmtK = fmtMapK;
     note.textContent = 'Colour shows the number of recorded restructuring cases per country. Hover a legend swatch to highlight the countries in that band.';
 
     const chart = Highcharts.mapChart('map-chart',{
@@ -1475,9 +1483,31 @@ function downloadBlob(blob, filename){
   document.body.appendChild(a); a.click();
   setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},200);
 }
+function currentDateRangeLabel(){
+  const f=document.getElementById('dateFrom').value;
+  const t=document.getElementById('dateTo').value;
+  if(!f||!t) return '';
+  const fmt=d=>new Date(d).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+  return `${fmt(f)} – ${fmt(t)}`;
+}
 function exportTitleOpts(title, subtitle){
+  const stamp = currentDateRangeLabel();
   return {
-    chart:{backgroundColor:'#FFFFFF', spacingTop:20},
+    chart:{
+      backgroundColor:'#FFFFFF', spacingTop:20, spacingRight:16,
+      events:{
+        load:function(){
+          if(!stamp) return;
+          try{
+            this.renderer.text(stamp, this.chartWidth-16, 26)
+              .attr({align:'right', zIndex:8})
+              .css({color:'#6B7690', fontFamily:"'Source Sans Pro', sans-serif",
+                    fontSize:'12px', fontWeight:'600'})
+              .add();
+          }catch(e){}
+        }
+      }
+    },
     title:{text:title||null, align:'left', x:10,
       style:{color:'#26324D', fontFamily:"'Source Serif Pro', Georgia, serif",
              fontWeight:'700', fontSize:'18px'}},
@@ -1486,14 +1516,38 @@ function exportTitleOpts(title, subtitle){
              fontSize:'12px'}}
   };
 }
-function exportChartSVG(chartId, name, title, subtitle){
+/* Legend rebuilt for map exports (the on-screen one is custom HTML) */
+function mapExportLegendOpts(){
+  if(mapMode!=='choropleth') return {};
+  const step = MAP_STEP;
+  const dataClasses = MAP_RAMP.map((color,i)=>{
+    const from=i*step, to = i<8 ? (i+1)*step : undefined;
+    return {from, to, color,
+      name: to!=null ? `${fmtMapK(from)} – ${fmtMapK(to)}` : `${fmtMapK(from)}+`};
+  });
+  return {
+    colorAxis:{dataClasses},
+    legend:{
+      enabled:true, layout:'vertical', align:'right', verticalAlign:'middle',
+      floating:false, reversed:true, borderWidth:0, backgroundColor:'transparent',
+      symbolHeight:18, symbolWidth:16, symbolRadius:0,
+      itemMarginTop:2, itemMarginBottom:2, padding:8,
+      itemStyle:{fontSize:'11px', color:'#6B7690', fontWeight:'400',
+                 fontFamily:"'Source Sans Pro', sans-serif"},
+      title:{text:'Restructurings',
+             style:{fontSize:'11px', color:'#26324D', fontWeight:'700',
+                    fontFamily:"'Source Sans Pro', sans-serif"}}
+    }
+  };
+}
+function exportChartSVG(chartId, name, title, subtitle, extra){
   const ch=getChartById(chartId); if(!ch) return;
-  const svg=ch.getSVG(exportTitleOpts(title, subtitle));
+  const svg=ch.getSVG(Highcharts.merge(exportTitleOpts(title, subtitle), extra||{}));
   downloadBlob(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), name+'.svg');
 }
-function exportChartPNG(chartId, name, title, subtitle){
+function exportChartPNG(chartId, name, title, subtitle, extra){
   const ch=getChartById(chartId); if(!ch) return;
-  const svg=ch.getSVG(exportTitleOpts(title, subtitle));
+  const svg=ch.getSVG(Highcharts.merge(exportTitleOpts(title, subtitle), extra||{}));
   const img=new Image();
   const url='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
   img.onload=function(){
@@ -1509,9 +1563,24 @@ function exportChartPNG(chartId, name, title, subtitle){
 }
 function exportNodePNG(node, name){
   if(typeof html2canvas==='undefined') return;
+  const stampText = currentDateRangeLabel();
+  const wrap = node.querySelector('.export-wrap');
+  let stamp = null;
+  if(stampText){
+    stamp = document.createElement('div');
+    stamp.className = 'export-stamp';
+    stamp.textContent = stampText;
+    node.appendChild(stamp);
+  }
+  if(wrap) wrap.style.visibility='hidden';
+  const restore = ()=>{
+    if(wrap) wrap.style.visibility='';
+    if(stamp) stamp.remove();
+  };
   html2canvas(node,{backgroundColor:'#F2F3F5',scale:2,useCORS:true}).then(canvas=>{
+    restore();
     canvas.toBlob(b=>downloadBlob(b,name+'.png'),'image/png');
-  });
+  }).catch(()=>restore());
 }
 function exportCSV(rows, name){
   if(!rows || !rows.length){ rows=[{note:'no data for current selection'}]; }
@@ -1521,7 +1590,9 @@ function exportCSV(rows, name){
     const s=String(v);
     return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
   };
-  const csv=[cols.join(','), ...rows.map(r=>cols.map(c=>esc(r[c])).join(','))].join('\n');
+  const stamp=currentDateRangeLabel();
+  const meta = stamp ? `# Date of announcement: ${stamp}\n` : '';
+  const csv=meta+[cols.join(','), ...rows.map(r=>cols.map(c=>esc(r[c])).join(','))].join('\n');
   downloadBlob(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'}), name+'.csv');
 }
 
@@ -1640,7 +1711,8 @@ function csvSectors(){
 /* ---- Build export menus ---- */
 const EXPORT_CONFIG = [
   {sel:'.kpi-card',    name:'erm_overview',      csv:csvKpis},
-  {sel:'.map-card',    name:'erm_map',           chartId:'map-chart',    csv:csvMap},
+  {sel:'.map-card',    name:'erm_map',           chartId:'map-chart',    csv:csvMap,
+   exportOpts:mapExportLegendOpts},
   {sel:'.events-card', name:'erm_large_events',  chartId:'events-chart', csv:csvEvents},
   {sel:'.jobs-card',   name:'erm_job_changes',   chartId:'jobs-chart',   csv:csvJobs},
   {sel:'.compare-card',name:'erm_comparison',    chartId:'compare-chart',csv:csvCompare},
@@ -1681,9 +1753,9 @@ function buildExportMenus(){
       const title=titleEl?titleEl.textContent.trim():'';
       const subtitle=subEl?subEl.textContent.trim():'';
       if(act==='csv') exportCSV(cfg.csv(), cfg.name);
-      else if(act==='svg') exportChartSVG(cfg.chartId, cfg.name, title, subtitle);
+      else if(act==='svg') exportChartSVG(cfg.chartId, cfg.name, title, subtitle, cfg.exportOpts?cfg.exportOpts():{});
       else if(act==='png'){
-        if(cfg.chartId) exportChartPNG(cfg.chartId, cfg.name, title, subtitle);
+        if(cfg.chartId) exportChartPNG(cfg.chartId, cfg.name, title, subtitle, cfg.exportOpts?cfg.exportOpts():{});
         else exportNodePNG(card, cfg.name);
       }
     });
