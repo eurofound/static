@@ -848,8 +848,108 @@ function isAutomotive(nace3){
   return AUTOMOTIVE_NACE3.includes(code);
 }
 
+/* ---- Thematic classifiers over Description_lower / Thematic_marker / ID ----
+   Faithful ports of the Power BI DAX. `has(d,'x')` = CONTAINSSTRING (substring). */
+const has = (d, sub) => d.indexOf(sub) !== -1;
+
+function isDigital(d, marker){
+  if(!d && !marker) return false;
+  d = d || ''; marker = marker || '';
+  const technology = has(d,'technolo');
+  const digitalisation = has(d,'digitalisation')||has(d,'digitalization')||has(d,'digital')||
+                         has(d,'digitised')||has(d,'digitisation');
+  const automatisation = has(d,'automation')||has(d,'automati')||has(d,'automate');
+  const ai = has(d,' ai ')||has(d,'artificial intelligence')||has(d,'machine learning')||has(d,'language model');
+  const digType =
+    (has(d,'cyber') && !(has(d,'cyber-attack')||has(d,'cyber attack'))) ||
+    has(d,'robot') ||
+    has(d,'platform work')||has(d,'platform economy') ||
+    has(d,'block chain')||has(d,'blockchain') ||
+    has(d,'internet of thing')||has(d,' iot ') ||
+    has(d,'biotechnology') ||
+    has(d,' ict solution ')||has(d,'ict-based mobile') ||
+    has(d,' virtual reality')||has(d,'augmented reality') ||
+    has(d,'3d printing')||has(d,'additive manufacturing') ||
+    has(d,'autonomous vehicle')||has(d,'electric vehicle');
+  const digMean = has(d,'big data')||has(d,' cloud ')||has(d,'devops');
+  const markerCheck = has(marker.toLowerCase(),'digitalisation & ai');
+  const dataCheck = technology && has(d,' data ');
+  return !!(digType || digitalisation || automatisation || ai || digMean || markerCheck || dataCheck);
+}
+
+const GREEN_EXCLUDE_IDS = new Set([104910,105354,105411,106475,106629,108168,108580,108586,
+  200276,200509,200678,200749,200926,108479,107130,202001]);
+const GREEN_DECARB_IDS  = new Set([106212,276,201268,201902,105116,106135,104957,267,202020,
+  106799,107220,298,201834,104761,201943]);
+
+function isGreen(d, marker, id, company){
+  d = d || ''; marker = (marker||'').toLowerCase(); company = (company||'').toLowerCase();
+  const idn = num(id);
+
+  const decarbonization = has(d,'transition to carbon')||has(d,'renewable energy & clean')||
+                          (idn!=null && GREEN_DECARB_IDS.has(idn));
+  const carbon = has(d,'carbon')||has(d,'greenhouse gas')||has(d,'net-zero')||has(d,'zero-net')||
+                 has(d,'net zero')||has(d,'zero net')||has(d,'footprint')||has(d,'c02');
+  const isElectric = has(d,'electric')||has(d,'electri')||has(d,'electrification');
+  const electric = isElectric && !(
+    has(d,'electric household')||has(d,'electric appliance')||has(d,'electrical appliance')||
+    has(d,'electrical household')||has(d,'electronics')||has(d,'general electric')||
+    has(d,'electrolux')||has(d,'electrical measuring instruments')||has(d,'medical electronic')||
+    has(d,'boiler making, electricity')||
+    (has(d,'electricians') && !(has(d,'electricity')||has(d,'electrification')||has(d,'electric ')))
+  );
+  const fossilType =
+    has(d,'fuel')||has(d,'petroleum')||has(d,'fossil')||has(d,'petrochemical') ||
+    has(d,'oil shale')||(has(d,'oil')&&has(d,'energy')) ||
+    has(d,'coal')||(has(d,'charcoal')&&has(d,'energy')) ||
+    (has(d,'plastic') && !(has(d,'plastic surgery')||has(d,'plastic and reconstructive surgery')||
+                           has(d,'plastic syringes')||company==='tupperware')) ||
+    has(d,'natural gas')||has(d,'pollution')||has(d,'polluting')||has(d,'combustion')||
+    has(d,'seveso')||has(d,'hazard');
+  const energy = has(d,'energy-efficient')||has(d,'energy efficient')||has(d,'energy transition');
+  const renewable = has(d,'renewable')||has(d,'wind ')||has(d,'solar')||has(d,'photovoltaic')||
+    has(d,'hydroelectric')||has(d,'geothermal')||has(d,'biomass')||has(d,'hydrogen')||
+    has(d,'hydraulic')||has(d,'sustainable energy')||has(d,'water resource management')||
+    has(d,'water management')||has(d,'managing water')||has(d,'green energy')||has(d,'clean energy');
+  const recycling = has(d,'recycl')||has(d,'re-use')||has(d,'reuse')||has(d,'second-hand')||
+    has(d,'second hand')||has(d,'circular')||has(d,'refurbish');
+  const climate = has(d,'climate solution')||has(d,'climate change')||has(d,'climate regulation')||
+    has(d,'climate-smart')||has(d,'climate protection')||has(d,'climate crisis');
+  const sustainable = (has(d,'sustainable mobility')||has(d,'sustainable solution')||
+    has(d,'sustainable urban logistic')||has(d,'sustainable growth')||
+    has(d,'sustainable business practice')||has(d,'sustainable development')||has(d,'sustainable fish')) &&
+    !has(d,'socially acceptable and sustainable solutions');
+  const green = has(d,'green') && !(has(d,'greenland')||has(d,'green light'));
+  const ecological = has(d,'ecologic')||has(d,'environmental')||has(d,'ecosystem')||has(d,'biodiversity');
+  const clean = has(d,'cleantech')||has(d,'clean-tech')||has(d,'clean tech')||has(d,'clean solution');
+
+  /* NB: this mirrors the DAX operator precedence exactly (the NOT-in-ID list
+     binds only to `Ecological` via &&, as written in the original formula). */
+  const anyGreen = decarbonization||electric||fossilType||renewable||climate||recycling||
+                   energy||sustainable||green||clean||
+                   (ecological && !(idn!=null && GREEN_EXCLUDE_IDS.has(idn)));
+  return !!anyGreen;
+}
+
+function isCovid(marker){
+  return has((marker||'').toLowerCase(),'covid');
+}
+
 function normalizeRow(r){
   const country = (r['Country']||'').trim();
+  const nace3   = (r['NACE_level_3']||'').trim();
+  const descLower = String(r['Description_lower'] || r['Description'] || '').toLowerCase();
+  const marker  = r['Thematic_marker'] || '';
+  const id      = r['ID'];
+  const company = (r['Company_name']||'').trim();
+
+  const digital = isDigital(descLower, marker) || truthy(r['Thematic_Digitalisation']);
+  const green   = isGreen(descLower, marker, id, company) || truthy(r['Thematic_green']);
+  const auto    = isAutomotive(nace3) || truthy(r['Thematic_automotive']);
+  const covid   = isCovid(marker) || truthy(r['Thematic_covid']);
+  /* Twin transition = both digital AND green (falls back to column if present) */
+  const twin    = (digital && green) || truthy(r['Thematic_twin']);
+
   return {
     date:      parseDate(r['d_date_announcement']),
     country:   country||null,
@@ -858,9 +958,9 @@ function normalizeRow(r){
     sector:    (r['V_sector']||'').trim()||null,
     nace1:     (r['NACE_level_1']||'').trim()||null,
     nace2:     (r['NACE_level_2']||'').trim()||null,
-    nace3:     (r['NACE_level_3']||'').trim()||null,
+    nace3:     nace3||null,
     type:      (r['Restructuring_type']||'').trim()||null,
-    company:   (r['Company_name']||'').trim()||null,
+    company:   company||null,
     location:  (r['Location_of_affected_units']||'').trim()||null,
     desc:      r['Description']||r['Description_lower']||'',
     minLoss:   num(r['Planned_job_reductions_minimum']),
@@ -869,11 +969,11 @@ function normalizeRow(r){
     netChange: num(r['Net announced job change']),
     updates:   num(r['V_nb_updates']),
     duration:  num(r['Restructuring duration (months)']),
-    them_auto:   isAutomotive((r['NACE_level_3']||'').trim()) || truthy(r['Thematic_automotive']),
-    them_digital:truthy(r['Thematic_Digitalisation']),
-    them_green:  truthy(r['Thematic_green']),
-    them_twin:   truthy(r['Thematic_twin']),
-    them_covid:  truthy(r['Thematic_covid'])
+    them_auto:   auto,
+    them_digital:digital,
+    them_green:  green,
+    them_twin:   twin,
+    them_covid:  covid
   };
 }
 
