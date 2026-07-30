@@ -297,6 +297,7 @@
   .gain-card  {grid-column:3 / span 2}
   .sector-card{grid-column:1 / span 4}
   .types-card {grid-column:1 / span 4}
+  .companies-card{grid-column:1 / span 4}
   .caveat-card{grid-column:1 / span 4}
 
   /* KPI strip inside card */
@@ -339,6 +340,7 @@
   #jobs-chart{height:380px}
   #compare-chart{height:360px}
   #types-chart{height:360px}
+  #companies-chart{height:400px}
 
   .chart-controls{display:flex;justify-content:space-between;align-items:center;
     gap:16px;flex-wrap:wrap;margin-bottom:12px}
@@ -371,18 +373,26 @@
     align-items:center;gap:12px;padding:9px 2px;
     border-bottom:2px solid var(--line);font-size:14.5px;
   }
-  .sec-row .sec-name{font-weight:700;color:var(--navy)}
+  .sec-row.expandable{cursor:pointer}
+  .sec-row.expandable:hover{background:rgba(65,113,156,0.05)}
+  .sec-row .sec-name{font-weight:700;color:var(--navy);display:flex;align-items:center}
+  .sec-row .caret{
+    color:var(--blue);font-size:15px;font-weight:700;display:inline-block;
+    width:16px;text-align:center;transition:transform .18s;margin-right:4px;flex:none;
+  }
+  .sec-row.open .caret{transform:rotate(90deg)}
+  .sec-row .caret-spacer{display:inline-block;width:16px;margin-right:4px;flex:none}
   .sec-row .bar-wrap{height:15px;background:#fff;border:1px solid var(--line-soft);
     border-radius:2px;overflow:hidden}
   .sec-row .bar-fill{height:100%;background:var(--data-blue);
     transition:width .6s cubic-bezier(.2,.7,.2,1)}
   .sec-row .num{text-align:right;color:var(--navy);font-variant-numeric:tabular-nums;font-weight:700}
-  .sec-row .num.lown{color:var(--text-mute)}
-  .sub-rows .sub-extra{display:none}
-  .sub-rows.all .sub-extra{display:grid}
+  .sec-row .num.lown{color:var(--data-red)}
+  .sub-rows{display:none}
+  .sub-rows.open{display:block}
   .sub-row{
     display:grid;grid-template-columns:1.5fr 62px 1.1fr;
-    align-items:center;gap:12px;padding:6px 2px 6px 12px;
+    align-items:center;gap:12px;padding:6px 2px 6px 22px;
     border-bottom:1px dashed var(--line-soft);font-size:13px;color:var(--text-dim);
     cursor:pointer;transition:background .12s;
   }
@@ -392,12 +402,8 @@
     border-radius:2px;overflow:hidden}
   .sub-row .bar-fill.sub{height:100%;background:var(--sage-3)}
   .sub-row .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--navy)}
-  .show-more{
-    background:none;border:none;color:var(--blue);font-family:var(--sans);
-    font-size:12.5px;font-weight:600;cursor:pointer;padding:6px 2px 2px 12px;
-  }
-  .show-more:hover{text-decoration:underline}
-  .lown-flag{color:#8a5a2a;font-size:11px;margin-left:5px}
+  .sub-row .num.lown{color:var(--data-red)}
+  .lown-flag{color:var(--data-red);font-size:11px;margin-left:5px}
 
   /* subsector modal */
   .sm-overlay{
@@ -474,6 +480,7 @@
   .compare-card{animation-delay:.15s}.loss-card{animation-delay:.18s}
   .gain-card{animation-delay:.20s}.sector-card{animation-delay:.23s}
   .types-card{animation-delay:.25s}.caveat-card{animation-delay:.28s}
+  .companies-card{animation-delay:.27s}
 
   .footer{max-width:1520px;margin:34px auto 0;padding:20px 48px 44px;
     color:var(--text-mute);font-size:12.5px;display:flex;justify-content:space-between;
@@ -490,7 +497,7 @@
     .filters{grid-template-columns:1fr 1fr;gap:24px}
     .main{padding:0 22px;grid-template-columns:1fr;gap:28px}
     .kpi-card,.map-card,.events-card,.jobs-card,.compare-card,
-    .loss-card,.gain-card,.sector-card,.types-card,.caveat-card{grid-column:1 / -1}
+    .loss-card,.gain-card,.sector-card,.types-card,.companies-card,.caveat-card{grid-column:1 / -1}
     .kpi-strip{grid-template-columns:repeat(3,1fr)}
     .kpi:nth-child(3n){border-right:none}
     .header-row{flex-direction:column;gap:12px}
@@ -684,10 +691,10 @@
 
   <!-- Sectors -->
   <div class="card sector-card">
-    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">show more to reveal subsectors · click a subsector for detail</span></div>
+    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">expand a sector for subsectors · click a subsector for detail</span></div>
     <h2 class="card-title">Sectors and subsectors</h2>
     <div class="card-body"><div class="sectors-table" id="sectorsTable"></div></div>
-    <div class="card-note">Counts in grey with ⚠ are based on fewer than 30 cases and may not be reliable.</div>
+    <div class="card-note">Counts shown in <span style="color:var(--data-red);font-weight:600">red with ⚠</span> are based on fewer than 30 cases and may not be reliable.</div>
   </div>
 
   <!-- Types pie -->
@@ -695,6 +702,24 @@
     <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">share of all cases</span></div>
     <h2 class="card-title">Restructuring by type</h2>
     <div class="card-body"><div id="types-chart"></div></div>
+  </div>
+
+  <!-- Top companies over time -->
+  <div class="card companies-card">
+    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">largest employers in the data</span></div>
+    <div class="title-row">
+      <h2 class="card-title">Announced job changes — top companies</h2>
+      <div class="seg" id="compMetricSeg">
+        <button class="active" data-metric="net">Net change</button>
+        <button data-metric="loss">Job losses</button>
+        <button data-metric="gain">Job gains</button>
+      </div>
+    </div>
+    <div style="margin:2px 0 14px">
+      <div class="ms" id="companyMs" style="max-width:520px"></div>
+      <div class="ms-hint">Defaults to the three companies with the most recorded cases. Add or remove companies to compare their announced job changes over time.</div>
+    </div>
+    <div class="card-body"><div id="companies-chart"></div></div>
   </div>
 
   <!-- Caveats -->
@@ -958,6 +983,7 @@ function renderAll(){
   renderTypesPie(rows);
   renderRecent(rows);
   renderCompare();
+  renderCompaniesChart(rows);
 }
 
 /* ---- KPIs ---- */
@@ -1442,7 +1468,6 @@ function renderSectors(rows){
   sectorAgg = bySec;
   const arr = Object.entries(bySec).sort((a,b)=>b[1].n-a[1].n);
   const max = Math.max(1,...arr.map(x=>x[1].n));
-  const SHOW = 5;   /* subsectors shown before "show more" */
 
   let html='';
   arr.forEach(([sec,{n,subs}])=>{
@@ -1451,31 +1476,29 @@ function renderSectors(rows){
     const subArr = Object.entries(subs).sort((a,b)=>b[1].n-a[1].n);
     const subMax = Math.max(1,...subArr.map(x=>x[1].n));
     const secId = 'sec_'+sec.replace(/[^a-z0-9]/gi,'_');
+    const hasSubs = subArr.length>0;
 
     html += `<div class="sec-block">
-      <div class="sec-row">
-        <div class="sec-name">${escapeHtml(sec)}${low?'<span class="lown-flag" title="Fewer than 30 cases — interpret with caution">⚠</span>':''}</div>
+      <div class="sec-row${hasSubs?' expandable':''}"${hasSubs?` data-target="${secId}"`:''}>
+        <div class="sec-name">
+          ${hasSubs?'<span class="caret">›</span>':'<span class="caret-spacer"></span>'}${escapeHtml(sec)}${low?'<span class="lown-flag" title="Fewer than 30 cases — interpret with caution">⚠</span>':''}
+        </div>
         <div class="num${low?' lown':''}">${n.toLocaleString()}</div>
         <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
       </div>`;
 
-    if(subArr.length){
+    if(hasSubs){
       html += `<div class="sub-rows" id="${secId}">`;
-      subArr.forEach(([sub,info],idx)=>{
+      subArr.forEach(([sub,info])=>{
         const spct=(info.n/subMax)*100;
-        const hidden = idx>=SHOW ? ' sub-extra' : '';
         const slow = info.n<LOW_N;
-        html += `<div class="sub-row${hidden}" data-sector="${escapeHtml(sec)}" data-sub="${escapeHtml(sub)}" title="Click for details">
+        html += `<div class="sub-row" data-sector="${escapeHtml(sec)}" data-sub="${escapeHtml(sub)}" title="Click for details">
           <div class="sub-name">${escapeHtml(sub)}${slow?'<span class="lown-flag">⚠</span>':''}</div>
-          <div class="num">${info.n.toLocaleString()}</div>
+          <div class="num${slow?' lown':''}">${info.n.toLocaleString()}</div>
           <div class="bar-wrap"><div class="bar-fill sub" style="width:${spct}%"></div></div>
         </div>`;
       });
       html += `</div>`;
-      if(subArr.length>SHOW){
-        html += `<button class="show-more" data-target="${secId}" data-total="${subArr.length}" data-shown="${SHOW}">
-          Show more (${subArr.length-SHOW} more subsectors) ›</button>`;
-      }
     }
     html += `</div>`;
   });
@@ -1483,15 +1506,12 @@ function renderSectors(rows){
   const el = document.getElementById('sectorsTable');
   el.innerHTML = html;
 
-  /* show more / less */
-  el.querySelectorAll('.show-more').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const box=document.getElementById(btn.dataset.target);
-      const expanded=box.classList.toggle('all');
-      const total=+btn.dataset.total, shown=+btn.dataset.shown;
-      btn.textContent = expanded
-        ? 'Show less ‹'
-        : `Show more (${total-shown} more subsectors) ›`;
+  /* caret toggle — subsectors collapsed by default */
+  el.querySelectorAll('.sec-row.expandable').forEach(row=>{
+    row.addEventListener('click', ()=>{
+      const box=document.getElementById(row.dataset.target);
+      row.classList.toggle('open');
+      box.classList.toggle('open');
     });
   });
 
@@ -1603,6 +1623,139 @@ function renderTypesPie(rows){
 }
 
 /* ---- Recent lists ---- */
+/* =====================================================================
+   Top companies — announced job changes over time
+   Standalone selector (independent of the filter-panel comparison lock)
+   ===================================================================== */
+let compMetric='net';
+let COMPANY_SEL=[];          /* chosen company names */
+let COMPANY_MS=null;
+
+function companyOptionsFrom(rows){
+  const byCompany={};
+  rows.forEach(r=>{ if(r.company) byCompany[r.company]=(byCompany[r.company]||0)+1; });
+  return Object.entries(byCompany).sort((a,b)=>b[1]-a[1])
+    .map(([value,count])=>({value,label:value,count}));
+}
+
+function setupCompanyMs(){
+  const host=document.getElementById('companyMs');
+  const control=document.createElement('div'); control.className='ms-control';
+  const panel=document.createElement('div'); panel.className='ms-panel';
+  const search=document.createElement('div'); search.className='ms-search';
+  const searchInput=document.createElement('input');
+  searchInput.type='text'; searchInput.placeholder='Search companies…';
+  search.appendChild(searchInput);
+  const list=document.createElement('div');
+  panel.appendChild(search); panel.appendChild(list);
+  host.appendChild(control); host.appendChild(panel);
+
+  let allOpts=[];
+  function renderControl(){
+    control.innerHTML='';
+    if(!COMPANY_SEL.length){
+      const ph=document.createElement('span');
+      ph.className='ms-placeholder'; ph.textContent='Select companies…';
+      control.appendChild(ph);
+    }else{
+      COMPANY_SEL.forEach(v=>{
+        const chip=document.createElement('span'); chip.className='ms-chip';
+        const t=document.createElement('span'); t.textContent=v; chip.appendChild(t);
+        const x=document.createElement('span'); x.className='x'; x.textContent='×';
+        x.addEventListener('click',e=>{e.stopPropagation(); toggle(v);});
+        chip.appendChild(x); control.appendChild(chip);
+      });
+    }
+  }
+  function renderList(){
+    const q=searchInput.value.trim().toLowerCase();
+    list.innerHTML='';
+    const filtered=allOpts.filter(o=>!q||o.label.toLowerCase().includes(q)).slice(0, q?60:40);
+    if(!filtered.length){ list.innerHTML='<div class="ms-empty">No matches</div>'; return; }
+    filtered.forEach(o=>{
+      const isSel=COMPANY_SEL.includes(o.value);
+      const row=document.createElement('div');
+      row.className='ms-opt'+(isSel?' sel':'');
+      row.innerHTML=`<span class="box"></span><span>${escapeHtml(o.label)}</span><span class="cnt">${o.count.toLocaleString()}</span>`;
+      row.addEventListener('click',()=>toggle(o.value));
+      list.appendChild(row);
+    });
+  }
+  function toggle(v){
+    const i=COMPANY_SEL.indexOf(v);
+    if(i>-1) COMPANY_SEL.splice(i,1); else COMPANY_SEL.push(v);
+    renderControl(); renderList(); renderCompaniesChart(applyFilters(NORM));
+  }
+  control.addEventListener('click',()=>{
+    const open=host.classList.toggle('open');
+    if(open){ searchInput.value=''; renderList(); searchInput.focus(); }
+  });
+  searchInput.addEventListener('input',renderList);
+  searchInput.addEventListener('click',e=>e.stopPropagation());
+  document.addEventListener('click',e=>{ if(!e.target.closest('#companyMs')) host.classList.remove('open'); });
+
+  COMPANY_MS={
+    setOptions:(opts)=>{ allOpts=opts; renderControl(); },
+    refresh:()=>{ renderControl(); renderList(); }
+  };
+}
+
+function renderCompaniesChart(rows){
+  /* refresh the option list against the current filter (counts follow filters) */
+  if(COMPANY_MS) COMPANY_MS.setOptions(companyOptionsFrom(rows));
+
+  const picks = COMPANY_SEL.slice(0,12);
+  const yearsSet=new Set();
+  const perCo = picks.map(name=>{
+    const byYear={};
+    rows.forEach(r=>{
+      if(r.company!==name || !r.date) return;
+      const y=r.date.getFullYear();
+      if(!byYear[y]) byYear[y]={net:0,loss:0,gain:0};
+      if(r.netChange!=null) byYear[y].net+=r.netChange;
+      if(r.maxLoss!=null)   byYear[y].loss+=r.maxLoss;
+      if(r.jobGain!=null)   byYear[y].gain+=r.jobGain;
+      yearsSet.add(y);
+    });
+    return {name, byYear};
+  });
+  const years=[...yearsSet].sort((a,b)=>a-b);
+  const metricLabel={net:'Net job change',loss:'Job losses',gain:'Job gains'}[compMetric];
+
+  const series = perCo.map((c,i)=>({
+    name:c.name, color:DATA_COLORS[i%DATA_COLORS.length],
+    data:years.map(y=>[y, c.byYear[y] ? (compMetric==='loss'? c.byYear[y].loss
+                                        : compMetric==='gain'? c.byYear[y].gain
+                                        : c.byYear[y].net) : 0])
+  }));
+
+  Highcharts.chart('companies-chart',{
+    chart:{type:'spline',spacingTop:6},
+    xAxis:{type:'linear',tickInterval:2,allowDecimals:false},
+    yAxis:{title:{text:metricLabel},
+      plotLines: compMetric==='net' ? [{color:'#B9C1CE',width:1,value:0,zIndex:3}] : [],
+      labels:{formatter:function(){
+        const v=this.value;
+        if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1)+'M';
+        if(Math.abs(v)>=1000) return (v/1000).toFixed(0)+'k';
+        return v;
+      }}},
+    legend:{enabled:true,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
+    tooltip:{shared:true,useHTML:true,outside:true,
+      formatter:function(){
+        let s=`<div class="tt-wrap"><div class="tt-head">${this.x}</div>`;
+        this.points.forEach(p=>{
+          s+=`<div class="tt-line"><span class="tt-dot" style="background:${p.color}"></span>
+            ${escapeHtml(p.series.name)} <strong>${fmtInt(p.y)}</strong></div>`;
+        });
+        return s+'</div>';
+      }},
+    plotOptions:{spline:{lineWidth:2.5,
+      marker:{enabled:false,states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}}}},
+    series: series.length?series:[{name:'No companies selected',data:[]}]
+  });
+}
+
 function renderRecent(rows){
   const losses = rows.filter(r=>(r.maxLoss||r.minLoss)&&r.date)
                      .sort((a,b)=>b.date-a.date).slice(0,8);
@@ -1949,6 +2102,15 @@ function bindEvents(){
       renderEventsChart(applyFilters(NORM));
     });
   });
+  /* companies metric */
+  document.querySelectorAll('#compMetricSeg button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#compMetricSeg button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      compMetric=b.dataset.metric;
+      renderCompaniesChart(applyFilters(NORM));
+    });
+  });
   /* jobs mode */
   document.querySelectorAll('#jobsModeSeg button').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -2193,6 +2355,24 @@ function csvTypes(){
   LAST_ROWS.forEach(r=>{ if(r.type) byType[r.type]=(byType[r.type]||0)+1; });
   return Object.entries(byType).sort((a,b)=>b[1]-a[1]).map(([type,cases])=>({type,cases}));
 }
+function csvCompanies(){
+  const picks=COMPANY_SEL.slice(0,12);
+  const byYear={};
+  LAST_ROWS.forEach(r=>{
+    if(picks.indexOf(r.company)<0 || !r.date) return;
+    const y=r.date.getFullYear();
+    byYear[y]=byYear[y]||{};
+    byYear[y][r.company]=byYear[y][r.company]||{net:0,loss:0,gain:0};
+    if(r.netChange!=null) byYear[y][r.company].net+=r.netChange;
+    if(r.maxLoss!=null)   byYear[y][r.company].loss+=r.maxLoss;
+    if(r.jobGain!=null)   byYear[y][r.company].gain+=r.jobGain;
+  });
+  return Object.keys(byYear).map(Number).sort((a,b)=>a-b).map(y=>{
+    const row={year:y, metric:compMetric};
+    picks.forEach(p=>{ row[p]=byYear[y][p]?byYear[y][p][compMetric]:0; });
+    return row;
+  });
+}
 function csvKpis(){
   return [...document.querySelectorAll('.kpi')].map(k=>({
     metric:k.querySelector('.kpi-label').textContent,
@@ -2241,7 +2421,8 @@ const EXPORT_CONFIG = [
   {sel:'.loss-card',   name:'erm_recent_losses', csv:()=>csvRecent('loss')},
   {sel:'.gain-card',   name:'erm_recent_gains',  csv:()=>csvRecent('gain')},
   {sel:'.sector-card', name:'erm_sectors',       csv:csvSectors},
-  {sel:'.types-card',  name:'erm_types',         chartId:'types-chart',  csv:csvTypes}
+  {sel:'.types-card',  name:'erm_types',         chartId:'types-chart',  csv:csvTypes},
+  {sel:'.companies-card', name:'erm_top_companies', chartId:'companies-chart', csv:csvCompanies}
 ];
 
 function buildExportMenus(){
@@ -2301,6 +2482,9 @@ async function init(){
     bindEvents();
     setupRangeSlider();
     populateCompareSelects();
+    setupCompanyMs();
+    /* default: top 3 companies by number of cases across the full dataset */
+    COMPANY_SEL = companyOptionsFrom(NORM).slice(0,3).map(o=>o.value);
     buildExportMenus();
     renderAll();
     overlay.style.display='none';
