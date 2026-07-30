@@ -813,6 +813,16 @@ function fetchCsv(url){
   });
 }
 
+/* Automotive thematic flag — replicates the Power BI NACE_level_3 logic.
+   Matches on the NACE-3 code prefix so wording/label variations still match. */
+const AUTOMOTIVE_NACE3 = ['29','46.7','47.8','47.3','95.3','29.1','29.2','29.3'];
+function isAutomotive(nace3){
+  if(!nace3) return false;
+  const s = String(nace3).trim();
+  const code = (s.split(/[\s-]/)[0] || '').trim();  /* take the leading code, e.g. "29.1" */
+  return AUTOMOTIVE_NACE3.includes(code);
+}
+
 function normalizeRow(r){
   const country = (r['Country']||'').trim();
   return {
@@ -834,7 +844,7 @@ function normalizeRow(r){
     netChange: num(r['Net announced job change']),
     updates:   num(r['V_nb_updates']),
     duration:  num(r['Restructuring duration (months)']),
-    them_auto:   truthy(r['Thematic_automotive']),
+    them_auto:   isAutomotive((r['NACE_level_3']||'').trim()) || truthy(r['Thematic_automotive']),
     them_digital:truthy(r['Thematic_Digitalisation']),
     them_green:  truthy(r['Thematic_green']),
     them_twin:   truthy(r['Thematic_twin']),
