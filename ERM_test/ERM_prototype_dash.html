@@ -295,8 +295,8 @@
   .compare-card{grid-column:1 / span 4}
   .loss-card  {grid-column:1 / span 2}
   .gain-card  {grid-column:3 / span 2}
-  .sector-card{grid-column:1 / span 2}
-  .types-card {grid-column:3 / span 2}
+  .sector-card{grid-column:1 / span 4}
+  .types-card {grid-column:1 / span 4}
   .caveat-card{grid-column:1 / span 4}
 
   /* KPI strip inside card */
@@ -362,39 +362,88 @@
   .recent-desc{color:var(--text-dim);font-size:13px;line-height:1.55;margin-top:3px}
 
   /* sectors */
-  .sectors-table{max-height:400px;overflow-y:auto;padding-right:8px}
-  .sectors-table::-webkit-scrollbar{width:5px}
-  .sectors-table::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  .sectors-table{
+    column-count:2; column-gap:44px;
+  }
+  .sec-block{break-inside:avoid; margin-bottom:14px}
   .sec-row{
-    display:grid;grid-template-columns:16px 1.35fr 62px 1.1fr;
-    align-items:center;gap:10px;padding:9px 2px;
-    border-bottom:1px solid var(--line);font-size:14px;cursor:pointer;
-    transition:background .12s;
+    display:grid;grid-template-columns:1.5fr 62px 1.1fr;
+    align-items:center;gap:12px;padding:9px 2px;
+    border-bottom:2px solid var(--line);font-size:14.5px;
   }
-  .sec-row:hover{background:rgba(65,113,156,0.05)}
-  .sec-row .chev{
-    color:var(--blue);font-size:11px;transition:transform .18s;
-    display:inline-block;text-align:center;
-  }
-  .sec-row.open .chev{transform:rotate(90deg)}
-  .sec-row .bar-wrap{height:14px;background:#fff;border:1px solid var(--line-soft);
+  .sec-row .sec-name{font-weight:700;color:var(--navy)}
+  .sec-row .bar-wrap{height:15px;background:#fff;border:1px solid var(--line-soft);
     border-radius:2px;overflow:hidden}
   .sec-row .bar-fill{height:100%;background:var(--data-blue);
     transition:width .6s cubic-bezier(.2,.7,.2,1)}
-  .sec-row .num{text-align:right;color:var(--navy);font-variant-numeric:tabular-nums;font-weight:600}
+  .sec-row .num{text-align:right;color:var(--navy);font-variant-numeric:tabular-nums;font-weight:700}
   .sec-row .num.lown{color:var(--text-mute)}
-  .sub-rows{display:none}
-  .sub-rows.open{display:block}
+  .sub-rows .sub-extra{display:none}
+  .sub-rows.all .sub-extra{display:grid}
   .sub-row{
-    display:grid;grid-template-columns:16px 1.35fr 62px 1.1fr;
-    align-items:center;gap:10px;padding:6px 2px 6px 14px;
+    display:grid;grid-template-columns:1.5fr 62px 1.1fr;
+    align-items:center;gap:12px;padding:6px 2px 6px 12px;
     border-bottom:1px dashed var(--line-soft);font-size:13px;color:var(--text-dim);
+    cursor:pointer;transition:background .12s;
   }
+  .sub-row:hover{background:rgba(65,113,156,0.07);color:var(--navy)}
+  .sub-row .sub-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .sub-row .bar-wrap{height:9px;background:#fff;border:1px solid var(--line-soft);
     border-radius:2px;overflow:hidden}
-  .sub-row .bar-fill{height:100%;background:var(--sage-3)}
-  .sub-row .num{text-align:right;font-variant-numeric:tabular-nums}
+  .sub-row .bar-fill.sub{height:100%;background:var(--sage-3)}
+  .sub-row .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--navy)}
+  .show-more{
+    background:none;border:none;color:var(--blue);font-family:var(--sans);
+    font-size:12.5px;font-weight:600;cursor:pointer;padding:6px 2px 2px 12px;
+  }
+  .show-more:hover{text-decoration:underline}
   .lown-flag{color:#8a5a2a;font-size:11px;margin-left:5px}
+
+  /* subsector modal */
+  .sm-overlay{
+    position:fixed;inset:0;background:rgba(20,30,50,.45);z-index:200;
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  .sm-overlay.open{display:flex}
+  .sm-dialog{
+    background:#fff;border-radius:10px;max-width:640px;width:100%;
+    max-height:86vh;overflow-y:auto;padding:28px 30px 30px;position:relative;
+    box-shadow:0 24px 60px rgba(20,30,50,.3);
+  }
+  .sm-close{
+    position:absolute;top:16px;right:18px;background:none;border:none;
+    font-size:26px;line-height:1;color:var(--text-mute);cursor:pointer;
+  }
+  .sm-close:hover{color:var(--navy)}
+  .sm-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--blue-dark);font-weight:700;margin-bottom:4px}
+  .sm-title{font-family:var(--serif);font-size:24px;font-weight:700;
+    color:var(--navy);margin:0 0 18px}
+  .sm-warn{background:#FBF2E7;color:#8a5a2a;border-radius:6px;padding:9px 12px;
+    font-size:13px;margin-bottom:16px}
+  .sm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+  .sm-stat{background:var(--card);border-radius:8px;padding:12px 14px}
+  .sm-stat-val{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy);line-height:1.1}
+  .sm-stat-val.loss{color:var(--data-red)}
+  .sm-stat-val.gain{color:var(--data-green)}
+  .sm-stat-lbl{font-size:11px;color:var(--text-dim);text-transform:uppercase;
+    letter-spacing:.06em;font-weight:600;margin-top:4px}
+  .sm-headline{font-size:14px;color:var(--text-body);margin-bottom:18px}
+  .sm-headline strong{color:var(--navy)}
+  .sm-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .sm-sub{font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--text-mute);font-weight:700;margin-bottom:8px}
+  .sm-bar-row{margin-bottom:7px}
+  .sm-bar-name{font-size:12.5px;color:var(--navy);font-weight:600;margin-bottom:2px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sm-bar-track{display:flex;align-items:center;height:16px;background:#EAECF0;border-radius:2px}
+  .sm-bar-fill{height:100%;border-radius:2px}
+  .sm-bar-val{font-size:11.5px;font-weight:700;padding-left:7px;color:var(--navy);white-space:nowrap}
+  .sm-empty{color:var(--text-mute);font-size:13px;padding:6px 0}
+  @media (max-width:560px){
+    .sm-stats{grid-template-columns:repeat(2,1fr)}
+    .sm-cols{grid-template-columns:1fr}
+  }
 
   /* compare selectors */
   .compare-selects{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
@@ -561,7 +610,14 @@
   <!-- Events -->
   <div class="card events-card">
     <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">100+ jobs affected</span></div>
-    <h2 class="card-title">Large restructuring events</h2>
+    <div class="title-row">
+      <h2 class="card-title">Large restructuring events</h2>
+      <div class="seg" id="eventsModeSeg">
+        <button class="active" data-mode="all">Overall (selected)</button>
+        <button data-mode="gain">Job gains</button>
+        <button data-mode="loss">Job losses</button>
+      </div>
+    </div>
     <div class="card-body"><div id="events-chart"></div></div>
     <div class="card-note" id="events-note"></div>
   </div>
@@ -628,7 +684,7 @@
 
   <!-- Sectors -->
   <div class="card sector-card">
-    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">click a sector for subsectors</span></div>
+    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">show more to reveal subsectors · click a subsector for detail</span></div>
     <h2 class="card-title">Sectors and subsectors</h2>
     <div class="card-body"><div class="sectors-table" id="sectorsTable"></div></div>
     <div class="card-note">Counts in grey with ⚠ are based on fewer than 30 cases and may not be reliable.</div>
@@ -654,6 +710,18 @@
     </div>
   </div>
 </main>
+
+<!-- Subsector detail modal -->
+<div class="sm-overlay" id="subModal">
+  <div class="sm-dialog">
+    <button class="sm-close" onclick="document.getElementById('subModal').classList.remove('open')" aria-label="Close">×</button>
+    <div class="sm-head">
+      <div class="sm-kicker" id="subModalSub">Sector</div>
+      <h3 class="sm-title" id="subModalTitle">Subsector</h3>
+    </div>
+    <div id="subModalBody"></div>
+  </div>
+</div>
 
 <footer class="footer">
   <div>European Restructuring Monitor · Eurofound</div>
@@ -733,8 +801,7 @@ const COUNTRY_TO_HC = {
 };
 
 let NORM=[], DATE_MIN=null, DATE_MAX=null;
-let mapMode='choropleth', jobsMode='jobs';
-let expandedSectors = new Set();
+let mapMode='choropleth', jobsMode='jobs', eventsMode='all';
 
 function fetchCsv(url){
   return new Promise((resolve,reject)=>{
@@ -1089,45 +1156,83 @@ function renderMap(rows){
 }
 
 /* ---- Events chart ---- */
+function eventQualifies(r, mode){
+  if(mode==='gain') return (r.jobGain||0)>=100;
+  if(mode==='loss') return Math.max(r.maxLoss||0, r.minLoss||0)>=100;
+  return Math.max(r.maxLoss||0, r.minLoss||0, r.jobGain||0)>=100;  /* all */
+}
 function renderEventsChart(rows){
-  const byYear={};
-  rows.forEach(r=>{
-    if(!r.date) return;
-    const size = Math.max(r.maxLoss||0, r.minLoss||0, r.jobGain||0);
-    if(size>=100){
+  const md = multiDim();
+  const modeLabel = {all:'large events', gain:'events with 100+ job gains', loss:'events with 100+ job losses'}[eventsMode];
+
+  /* build one series per compared value, else a single series */
+  const cats = md ? SELECT[md] : [null];
+  const yearsSet = new Set();
+  const perCat = cats.map(val=>{
+    const byYear={};
+    rows.forEach(r=>{
+      if(!r.date) return;
+      if(val!=null && !matchesDim(r, md, val)) return;
+      if(!eventQualifies(r, eventsMode)) return;
       const y=r.date.getFullYear();
       byYear[y]=(byYear[y]||0)+1;
-    }
+      yearsSet.add(y);
+    });
+    return {val, byYear};
   });
-  const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b);
-  const series = years.map(y=>[y,byYear[y]]);
-  const total = series.reduce((s,[,v])=>s+v,0);
+  const years=[...yearsSet].sort((a,b)=>a-b);
+
+  const total = perCat.reduce((s,c)=>s+Object.values(c.byYear).reduce((a,b)=>a+b,0),0);
   document.getElementById('events-note').textContent =
-    total<LOW_N ? '⚠ Fewer than 30 large events match the current filters — interpret with caution.' : '';
+    total<LOW_N ? `⚠ Fewer than 30 ${modeLabel} match the current filters — interpret with caution.` : '';
+
+  const single = !md;
+  const series = perCat.map((c,i)=>({
+    name: c.val!=null ? c.val : 'Events',
+    color: DATA_COLORS[i%DATA_COLORS.length],
+    type: single ? 'areaspline' : 'spline',
+    data: years.map(y=>[y, c.byYear[y]||0])
+  }));
 
   Highcharts.chart('events-chart',{
-    chart:{type:'areaspline',spacingTop:6},
+    chart:{spacingTop:6},
     xAxis:{type:'linear',tickInterval:5,allowDecimals:false},
     yAxis:{title:{text:'Events'},min:0},
-    legend:{enabled:false},
-    tooltip:{useHTML:true, outside:true,
+    legend:{enabled:!single, align:'center', verticalAlign:'bottom', symbolRadius:2, squareSymbol:true},
+    tooltip:{useHTML:true, outside:true, shared:!single,
       formatter:function(){
-        const y=this.x;
-        const yr=rows.filter(r=>r.date && r.date.getFullYear()===y &&
-          Math.max(r.maxLoss||0,r.minLoss||0,r.jobGain||0)>=100);
-        const top=topByMetric(yr, r=>Math.max(r.maxLoss||0,r.minLoss||0,r.jobGain||0),
-                              r=>r.company, 3);
-        return `<div class="tt-wrap">
-          <div class="tt-head">${y}</div>
-          <div class="tt-line">Large events <strong>${fmtInt(this.y)}</strong></div>
-          ${ttSection('Largest events · jobs affected', top, '#3F6C9B')}
-        </div>`;
+        const y = single ? this.x : this.x;
+        if(single){
+          const yr=rows.filter(r=>r.date && r.date.getFullYear()===y && eventQualifies(r, eventsMode));
+          const valFn = eventsMode==='gain' ? (r=>r.jobGain)
+                      : eventsMode==='loss' ? (r=>Math.max(r.maxLoss||0,r.minLoss||0))
+                      : (r=>Math.max(r.maxLoss||0,r.minLoss||0,r.jobGain||0));
+          const col = eventsMode==='gain' ? '#4E6B3C' : eventsMode==='loss' ? '#A03B45' : '#3F6C9B';
+          const top=topByMetric(yr, valFn, r=>r.company, 3);
+          const secHead = eventsMode==='gain' ? 'Largest events · jobs gained'
+                        : eventsMode==='loss' ? 'Largest events · jobs lost'
+                        : 'Largest events · jobs affected';
+          return `<div class="tt-wrap">
+            <div class="tt-head">${y}</div>
+            <div class="tt-line">${modeLabel.charAt(0).toUpperCase()+modeLabel.slice(1)} <strong>${fmtInt(this.y)}</strong></div>
+            ${ttSection(secHead, top, col)}</div>`;
+        }
+        let s=`<div class="tt-wrap"><div class="tt-head">${y}</div>`;
+        this.points.forEach(p=>{
+          s+=`<div class="tt-line"><span class="tt-dot" style="background:${p.color}"></span>
+            ${escapeHtml(p.series.name)} <strong>${fmtInt(p.y)}</strong></div>`;
+        });
+        return s+'</div>';
       }},
-    plotOptions:{areaspline:{color:'#3F6C9B',lineWidth:2.5,
-      fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
-        stops:[[0,'rgba(63,108,155,0.2)'],[1,'rgba(63,108,155,0.01)']]},
-      marker:{enabled:false,states:{hover:{enabled:true,radius:5,fillColor:'#3F6C9B',lineColor:'#fff',lineWidth:2}}}}},
-    series:[{name:'Events',data:series}]
+    plotOptions:{
+      areaspline:{color:'#3F6C9B',lineWidth:2.5,
+        fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},
+          stops:[[0,'rgba(63,108,155,0.2)'],[1,'rgba(63,108,155,0.01)']]},
+        marker:{enabled:false,states:{hover:{enabled:true,radius:5,fillColor:'#3F6C9B',lineColor:'#fff',lineWidth:2}}}},
+      spline:{lineWidth:2.5,
+        marker:{enabled:false,states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}}}
+    },
+    series
   });
 }
 
@@ -1308,6 +1413,8 @@ function renderCompare(){
 }
 
 /* ---- Sectors with subsector drill-down ---- */
+let sectorAgg = {};   /* sector -> {n, subs:{sub:{n,rows:[]}} } kept for the modal */
+
 function renderSectors(rows){
   const bySec={};
   rows.forEach(r=>{
@@ -1316,50 +1423,141 @@ function renderSectors(rows){
     if(!bySec[s]) bySec[s]={n:0, subs:{}};
     bySec[s].n++;
     const sub = r.nace2 || r.nace3;
-    if(sub) bySec[s].subs[sub]=(bySec[s].subs[sub]||0)+1;
+    if(sub){
+      if(!bySec[s].subs[sub]) bySec[s].subs[sub]={n:0, rows:[]};
+      bySec[s].subs[sub].n++;
+      bySec[s].subs[sub].rows.push(r);
+    }
   });
+  sectorAgg = bySec;
   const arr = Object.entries(bySec).sort((a,b)=>b[1].n-a[1].n);
   const max = Math.max(1,...arr.map(x=>x[1].n));
+  const SHOW = 5;   /* subsectors shown before "show more" */
 
   let html='';
   arr.forEach(([sec,{n,subs}])=>{
     const pct=(n/max)*100;
-    const id = 'sec_'+sec.replace(/[^a-z0-9]/gi,'_');
-    const isOpen = expandedSectors.has(sec);
     const low = n<LOW_N;
-    const subArr = Object.entries(subs).sort((a,b)=>b[1]-a[1]).slice(0,10);
-    const subMax = Math.max(1,...subArr.map(x=>x[1]));
+    const subArr = Object.entries(subs).sort((a,b)=>b[1].n-a[1].n);
+    const subMax = Math.max(1,...subArr.map(x=>x[1].n));
+    const secId = 'sec_'+sec.replace(/[^a-z0-9]/gi,'_');
 
-    html += `<div class="sec-row${isOpen?' open':''}" data-sector="${escapeHtml(sec)}">
-      <span class="chev">${subArr.length?'▶':''}</span>
-      <div>${escapeHtml(sec)}${low?'<span class="lown-flag">⚠</span>':''}</div>
-      <div class="num${low?' lown':''}">${n.toLocaleString()}</div>
-      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
-    </div>
-    <div class="sub-rows${isOpen?' open':''}" id="${id}">`;
-    subArr.forEach(([sub,sn])=>{
-      const spct=(sn/subMax)*100;
-      html += `<div class="sub-row">
-        <span></span>
-        <div>${escapeHtml(sub)}</div>
-        <div class="num">${sn.toLocaleString()}</div>
-        <div class="bar-wrap"><div class="bar-fill" style="width:${spct}%"></div></div>
+    html += `<div class="sec-block">
+      <div class="sec-row">
+        <div class="sec-name">${escapeHtml(sec)}${low?'<span class="lown-flag" title="Fewer than 30 cases — interpret with caution">⚠</span>':''}</div>
+        <div class="num${low?' lown':''}">${n.toLocaleString()}</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
       </div>`;
-    });
+
+    if(subArr.length){
+      html += `<div class="sub-rows" id="${secId}">`;
+      subArr.forEach(([sub,info],idx)=>{
+        const spct=(info.n/subMax)*100;
+        const hidden = idx>=SHOW ? ' sub-extra' : '';
+        const slow = info.n<LOW_N;
+        html += `<div class="sub-row${hidden}" data-sector="${escapeHtml(sec)}" data-sub="${escapeHtml(sub)}" title="Click for details">
+          <div class="sub-name">${escapeHtml(sub)}${slow?'<span class="lown-flag">⚠</span>':''}</div>
+          <div class="num">${info.n.toLocaleString()}</div>
+          <div class="bar-wrap"><div class="bar-fill sub" style="width:${spct}%"></div></div>
+        </div>`;
+      });
+      html += `</div>`;
+      if(subArr.length>SHOW){
+        html += `<button class="show-more" data-target="${secId}" data-total="${subArr.length}" data-shown="${SHOW}">
+          Show more (${subArr.length-SHOW} more subsectors) ›</button>`;
+      }
+    }
     html += `</div>`;
   });
+
   const el = document.getElementById('sectorsTable');
   el.innerHTML = html;
 
-  el.querySelectorAll('.sec-row').forEach(row=>{
-    row.addEventListener('click', ()=>{
-      const sec = row.getAttribute('data-sector');
-      if(expandedSectors.has(sec)) expandedSectors.delete(sec);
-      else expandedSectors.add(sec);
-      row.classList.toggle('open');
-      row.nextElementSibling.classList.toggle('open');
+  /* show more / less */
+  el.querySelectorAll('.show-more').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const box=document.getElementById(btn.dataset.target);
+      const expanded=box.classList.toggle('all');
+      const total=+btn.dataset.total, shown=+btn.dataset.shown;
+      btn.textContent = expanded
+        ? 'Show less ‹'
+        : `Show more (${total-shown} more subsectors) ›`;
     });
   });
+
+  /* subsector click → modal */
+  el.querySelectorAll('.sub-row').forEach(row=>{
+    row.addEventListener('click', ()=>{
+      openSubsectorModal(row.dataset.sector, row.dataset.sub);
+    });
+  });
+}
+
+/* ---- Subsector detail modal ---- */
+function openSubsectorModal(sec, sub){
+  const info = sectorAgg[sec] && sectorAgg[sec].subs[sub];
+  if(!info) return;
+  const rows = info.rows;
+
+  let totLoss=0, totGain=0, totNet=0;
+  const byCountry={}, byCompany={};
+  rows.forEach(r=>{
+    if(r.maxLoss!=null) totLoss+=r.maxLoss;
+    if(r.jobGain!=null) totGain+=r.jobGain;
+    if(r.netChange!=null) totNet+=r.netChange;
+    if(r.country) byCountry[r.country]=(byCountry[r.country]||0)+1;
+    if(r.company) byCompany[r.company]=(byCompany[r.company]||0)+1;
+  });
+  const topCountry = Object.entries(byCountry).sort((a,b)=>b[1]-a[1]);
+  const topCompany = Object.entries(byCompany).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const lossByCountry = {};
+  rows.forEach(r=>{ if(r.country && r.maxLoss) lossByCountry[r.country]=(lossByCountry[r.country]||0)+r.maxLoss; });
+  const mostAffected = Object.entries(lossByCountry).sort((a,b)=>b[1]-a[1])[0];
+
+  const low = rows.length<LOW_N;
+  const modal = document.getElementById('subModal');
+  document.getElementById('subModalTitle').textContent = sub;
+  document.getElementById('subModalSub').textContent = sec;
+
+  const stat=(label,val,cls)=>`<div class="sm-stat">
+    <div class="sm-stat-val ${cls||''}">${val}</div>
+    <div class="sm-stat-lbl">${label}</div></div>`;
+
+  const listRows = (arr, color, unit)=>{
+    if(!arr.length) return '<div class="sm-empty">No data</div>';
+    const mx=Math.max(...arr.map(a=>a[1]))||1;
+    return arr.map(([name,v])=>{
+      const w=10+(v/mx)*70;
+      return `<div class="sm-bar-row">
+        <div class="sm-bar-name">${escapeHtml(name)}</div>
+        <div class="sm-bar-track"><div class="sm-bar-fill" style="width:${w}%;background:${color}"></div>
+          <span class="sm-bar-val">${fmtInt(v)}${unit?' '+unit:''}</span></div>
+      </div>`;
+    }).join('');
+  };
+
+  document.getElementById('subModalBody').innerHTML = `
+    ${low?'<div class="sm-warn">⚠ Based on fewer than 30 cases — figures may not be reliable.</div>':''}
+    <div class="sm-stats">
+      ${stat('Cases', fmtInt(rows.length))}
+      ${stat('Job losses', fmtInt(totLoss), 'loss')}
+      ${stat('Job gains', fmtInt(totGain), 'gain')}
+      ${stat('Net change', fmtInt(totNet), totNet<0?'loss':'gain')}
+    </div>
+    ${mostAffected?`<div class="sm-headline">Most affected country:
+      <strong>${escapeHtml(mostAffected[0])}</strong> (${fmtInt(mostAffected[1])} jobs lost)</div>`:''}
+    <div class="sm-cols">
+      <div>
+        <div class="sm-sub">Cases by country</div>
+        ${listRows(topCountry.slice(0,5), '#3F6C9B', 'cases')}
+      </div>
+      <div>
+        <div class="sm-sub">Top companies</div>
+        ${listRows(topCompany, '#41719C', 'cases')}
+      </div>
+    </div>`;
+
+  modal.classList.add('open');
 }
 
 /* ---- Types pie ---- */
@@ -1718,6 +1916,11 @@ function bindEvents(){
     if(!e.target.closest('.ms')) Object.values(MS).forEach(ms=>ms.close());
   });
 
+  /* subsector modal: click backdrop or Escape to close */
+  const subModal=document.getElementById('subModal');
+  subModal.addEventListener('click', e=>{ if(e.target===subModal) subModal.classList.remove('open'); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') subModal.classList.remove('open'); });
+
   /* map mode */
   document.querySelectorAll('#mapModeSeg button').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -1725,6 +1928,15 @@ function bindEvents(){
       b.classList.add('active');
       mapMode=b.dataset.mode;
       renderMap(applyFilters(NORM));
+    });
+  });
+  /* events mode */
+  document.querySelectorAll('#eventsModeSeg button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#eventsModeSeg button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      eventsMode=b.dataset.mode;
+      renderEventsChart(applyFilters(NORM));
     });
   });
   /* jobs mode */
