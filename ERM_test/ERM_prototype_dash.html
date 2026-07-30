@@ -78,6 +78,67 @@
     border-bottom:1px solid var(--line-soft)}
   .filters{display:grid;grid-template-columns:1.25fr 1fr 1fr 1.1fr auto;gap:36px;align-items:start}
   .field-label{display:block;font-size:14px;color:var(--blue-dark);margin-bottom:8px;font-weight:600}
+
+  /* multi-select control */
+  .ms{position:relative;font-size:14px}
+  .ms-control{
+    background:#fff;border:1px solid var(--line);border-radius:6px;
+    min-height:40px;padding:5px 30px 5px 8px;cursor:pointer;position:relative;
+    display:flex;flex-wrap:wrap;gap:5px;align-items:center;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .ms-control:hover{border-color:var(--blue)}
+  .ms.open .ms-control{border-color:var(--blue);box-shadow:0 0 0 3px rgba(65,113,156,.12)}
+  .ms-control::after{
+    content:"";position:absolute;right:12px;top:50%;transform:translateY(-50%);
+    border-left:5px solid transparent;border-right:5px solid transparent;
+    border-top:6px solid var(--blue);
+  }
+  .ms-placeholder{color:var(--navy);padding:3px 2px}
+  .ms-chip{
+    display:inline-flex;align-items:center;gap:5px;
+    background:var(--blue-pale);color:var(--blue-dark);
+    border-radius:3px;padding:3px 6px;font-size:13px;font-weight:600;max-width:100%;
+  }
+  .ms-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:150px}
+  .ms-chip .x{cursor:pointer;font-weight:700;line-height:1;opacity:.7}
+  .ms-chip .x:hover{opacity:1}
+  .ms-panel{
+    display:none;position:absolute;left:0;right:0;top:44px;z-index:60;
+    background:#fff;border:1px solid var(--line);border-radius:6px;
+    box-shadow:0 8px 22px rgba(38,50,77,.16);max-height:300px;overflow-y:auto;
+  }
+  .ms.open .ms-panel{display:block}
+  .ms-search{
+    position:sticky;top:0;background:#fff;padding:8px;border-bottom:1px solid var(--line-soft);
+  }
+  .ms-search input{
+    width:100%;border:1px solid var(--line);border-radius:4px;padding:6px 9px;
+    font-family:var(--sans);font-size:13.5px;
+  }
+  .ms-search input:focus{outline:none;border-color:var(--blue)}
+  .ms-opt{
+    display:flex;align-items:center;gap:9px;padding:7px 11px;cursor:pointer;
+    color:var(--text-body);
+  }
+  .ms-opt:hover{background:var(--blue-pale)}
+  .ms-opt.sel{color:var(--blue-dark);font-weight:600}
+  .ms-opt .box{
+    width:15px;height:15px;border:1.5px solid var(--line);border-radius:3px;
+    flex:none;position:relative;
+  }
+  .ms-opt.sel .box{background:var(--blue);border-color:var(--blue)}
+  .ms-opt.sel .box::after{
+    content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;
+    border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);
+  }
+  .ms-opt.disabled{opacity:.4;cursor:not-allowed}
+  .ms-opt .cnt{margin-left:auto;font-size:11.5px;color:var(--text-mute);font-weight:400}
+  .ms-optgroup{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--text-mute);font-weight:700;padding:9px 11px 3px}
+  .ms-empty{padding:14px 11px;color:var(--text-mute);font-size:13px}
+  .ms-hint{font-size:12px;color:var(--text-mute);margin-top:8px;line-height:1.4}
+  .ms.locked-out .ms-control{background:#F6F7F8;cursor:not-allowed;opacity:.7}
   .date-row{display:flex;align-items:center;gap:8px}
   .date-row input[type="date"]{
     flex:1;background:#fff;color:var(--navy);border:1px solid var(--line);
@@ -401,7 +462,7 @@
 <header class="header">
   <div class="header-row">
     <div>
-      <h1>European Restructuring Monitor</h1>
+      <h1>Large restructurings across Europe</h1>
       <p class="header-sub">Restructuring events, announced job losses and gains across Europe.</p>
     </div>
     <div class="header-meta">
@@ -429,39 +490,37 @@
         <div class="range-thumb" id="rangeThumbMin" tabindex="0"></div>
         <div class="range-thumb" id="rangeThumbMax" tabindex="0"></div>
       </div>
+      <div class="check-list" style="margin-top:14px">
+        <label><input type="checkbox" id="cb-eu27" checked /> EU-27 only</label>
+      </div>
     </div>
 
-    <div>
-      <label class="field-label">Country</label>
-      <div class="check-list">
-        <label><input type="checkbox" id="cb-world" checked /> Include all countries</label>
-        <label><input type="checkbox" id="cb-eu27" /> EU-27 only</label>
+    <div class="stack">
+      <div>
+        <label class="field-label">Country</label>
+        <div class="ms" data-dim="country"></div>
       </div>
-      <div style="margin-top:12px">
-        <select id="countrySel"><option>All countries</option></select>
+      <div>
+        <label class="field-label">Restructuring type</label>
+        <div class="ms" data-dim="type"></div>
       </div>
     </div>
 
     <div class="stack">
       <div>
         <label class="field-label">Sector (NACE)</label>
-        <select id="sectorSel"><option>All sectors</option></select>
+        <div class="ms" data-dim="sector"></div>
       </div>
       <div>
-        <label class="field-label">Restructuring type</label>
-        <select id="typeSel"><option>All types</option></select>
+        <label class="field-label">Subsector (NACE-2)</label>
+        <div class="ms" data-dim="nace2"></div>
       </div>
     </div>
 
     <div>
       <label class="field-label">Thematic subjects</label>
-      <div class="check-list">
-        <label><input type="checkbox" class="thematic" value="auto" /> Automotive</label>
-        <label><input type="checkbox" class="thematic" value="digital" /> Digital transition</label>
-        <label><input type="checkbox" class="thematic" value="green" /> Green transition</label>
-        <label><input type="checkbox" class="thematic" value="twin" /> Twin transition</label>
-        <label><input type="checkbox" class="thematic" value="covid" /> Covid-19</label>
-      </div>
+      <div class="ms" data-dim="thematic"></div>
+      <div class="ms-hint" id="msHint">Tip: pick 2–3 values in any one field to compare them.</div>
     </div>
 
     <button class="btn" onclick="clearAllSlicers()">Clear selection <span>›</span></button>
@@ -717,45 +776,62 @@ function normalizeRow(r){
 }
 
 /* ---- Filters ---- */
+/* =====================================================================
+   Multi-select filter model
+   Dimensions: country, sector, nace2, type, thematic.
+   Selections held as arrays. Only ONE dimension may hold 2+ values at once
+   (the "compare" dimension); the others are then locked to a single value.
+   ===================================================================== */
+const DIMS = ['country','sector','nace2','type','thematic'];
+const SELECT = {country:[], sector:[], nace2:[], type:[], thematic:[]};
+const MS = {};  /* component instances by dim */
+
+const THEMATIC_OPTS = [
+  {value:'auto',    label:'Automotive',        field:'them_auto'},
+  {value:'digital', label:'Digital transition',field:'them_digital'},
+  {value:'green',   label:'Green transition',  field:'them_green'},
+  {value:'twin',    label:'Twin transition',   field:'them_twin'},
+  {value:'covid',   label:'Covid-19',          field:'them_covid'}
+];
+const THEMATIC_FIELD = Object.fromEntries(THEMATIC_OPTS.map(o=>[o.value,o.field]));
+
+/* which dimension currently carries the multi-selection (>=2), or null */
+function multiDim(){
+  return DIMS.find(d=>SELECT[d].length>=2) || null;
+}
+
+function matchesDim(r, dim, val){
+  switch(dim){
+    case 'country':  return r.country===val;
+    case 'sector':   return r.sector===val;
+    case 'nace2':    return (r.nace2||r.nace3)===val;
+    case 'type':     return r.type===val;
+    case 'thematic': return !!r[THEMATIC_FIELD[val]];
+  }
+  return false;
+}
+
 function currentFilters(){
-  const them={};
-  document.querySelectorAll('.thematic').forEach(b=>them[b.value]=b.checked);
   return {
     from: document.getElementById('dateFrom').value ? new Date(document.getElementById('dateFrom').value) : null,
     to:   document.getElementById('dateTo').value   ? new Date(document.getElementById('dateTo').value)   : null,
-    country: document.getElementById('countrySel').value,
-    sector:  document.getElementById('sectorSel').value,
-    type:    document.getElementById('typeSel').value,
-    eu27Only: document.getElementById('cb-eu27').checked,
-    them
+    eu27Only: document.getElementById('cb-eu27').checked
   };
 }
+
+/* ignore: set a dim name true to skip that dim (used by compare card) */
 function applyFilters(rows, ignore={}){
   const f = currentFilters();
-  const anyThem = f.them.auto||f.them.digital||f.them.green||f.them.twin||f.them.covid;
   return rows.filter(r=>{
     if(f.from && r.date && r.date < f.from) return false;
     if(f.to   && r.date && r.date > f.to)   return false;
-    if(!ignore.country && f.country!=='All countries' && r.country!==f.country) return false;
-    if(!ignore.sector && f.sector!=='All sectors'){
-      const parts = f.sector.split('|');
-      if(parts[0]==='S'){
-        if(r.sector!==parts[1]) return false;
-      } else if(parts[0]==='B'){
-        if(r.sector!==parts[1]) return false;
-        const sub = r.nace2 || r.nace3;
-        if(sub!==parts[2]) return false;
-      } else {
-        if(r.sector!==f.sector) return false;
-      }
-    }
-    if(!ignore.type    && f.type!=='All types'      && r.type!==f.type)      return false;
     if(f.eu27Only && !r.eu27) return false;
-    if(anyThem){
-      const ok=(f.them.auto&&r.them_auto)||(f.them.digital&&r.them_digital)||
-               (f.them.green&&r.them_green)||(f.them.twin&&r.them_twin)||
-               (f.them.covid&&r.them_covid);
-      if(!ok) return false;
+    for(const dim of DIMS){
+      if(ignore[dim]) continue;
+      const sel = SELECT[dim];
+      if(!sel.length) continue;
+      /* OR within a dimension, AND across dimensions */
+      if(!sel.some(v=>matchesDim(r, dim, v))) return false;
     }
     return true;
   });
@@ -1450,40 +1526,181 @@ function setupRangeSlider(){
 }
 
 /* ---- Init ---- */
-function populateFilters(){
-  const countries=[...new Set(NORM.map(r=>r.country).filter(Boolean))].sort();
-  const types=[...new Set(NORM.map(r=>r.type).filter(Boolean))].sort();
-  const fill=(id,list,all)=>{
-    document.getElementById(id).innerHTML =
-      `<option>${all}</option>`+list.map(x=>`<option>${escapeHtml(x)}</option>`).join('');
-  };
-  fill('countrySel',countries,'All countries');
-  fill('typeSel',types,'All types');
 
-  /* Nested sector → subsector dropdown (optgroups) */
-  const secTree = {};
+/* Build the option list for a dimension (value, label, count). For nace2 we
+   only include subsectors that belong to a sector with > NACE2_MIN cases. */
+const NACE2_MIN = 500;
+let OPTIONS = {country:[], sector:[], nace2:[], type:[], thematic:[]};
+
+function buildOptions(){
+  const count = (keyFn)=>{
+    const m={};
+    NORM.forEach(r=>{ const k=keyFn(r); if(k) m[k]=(m[k]||0)+1; });
+    return m;
+  };
+  const toOpts = (m)=>Object.keys(m).sort()
+    .map(k=>({value:k, label:k, count:m[k]}));
+
+  OPTIONS.country = toOpts(count(r=>r.country));
+  OPTIONS.type    = toOpts(count(r=>r.type));
+
+  const secCounts = count(r=>r.sector);
+  OPTIONS.sector  = toOpts(secCounts);
+
+  /* NACE-2 grouped by sector, only for sectors with > NACE2_MIN cases */
+  const bigSectors = new Set(Object.entries(secCounts)
+    .filter(([,n])=>n>NACE2_MIN).map(([s])=>s));
+  const nace2Map = {};   /* sector -> {sub -> count} */
   NORM.forEach(r=>{
-    if(!r.sector) return;
-    if(!secTree[r.sector]) secTree[r.sector] = new Set();
+    if(!r.sector || !bigSectors.has(r.sector)) return;
     const sub = r.nace2 || r.nace3;
-    if(sub) secTree[r.sector].add(sub);
+    if(!sub) return;
+    (nace2Map[r.sector] = nace2Map[r.sector]||{});
+    nace2Map[r.sector][sub] = (nace2Map[r.sector][sub]||0)+1;
   });
-  let secHtml = '<option value="All sectors">All sectors</option>';
-  Object.keys(secTree).sort().forEach(sec=>{
-    const subs = [...secTree[sec]].sort();
-    secHtml += `<optgroup label="${escapeHtml(sec)}">`;
-    secHtml += `<option value="S|${escapeHtml(sec)}">All ${escapeHtml(sec)}</option>`;
-    subs.forEach(sub=>{
-      secHtml += `<option value="B|${escapeHtml(sec)}|${escapeHtml(sub)}">&nbsp;&nbsp;${escapeHtml(sub)}</option>`;
+  const nace2Opts=[];
+  Object.keys(nace2Map).sort().forEach(sec=>{
+    Object.keys(nace2Map[sec]).sort().forEach(sub=>{
+      nace2Opts.push({value:sub, label:sub, group:sec, count:nace2Map[sec][sub]});
     });
-    secHtml += `</optgroup>`;
   });
-  document.getElementById('sectorSel').innerHTML = secHtml;
+  OPTIONS.nace2 = nace2Opts;
+
+  OPTIONS.thematic = THEMATIC_OPTS.map(o=>({value:o.value, label:o.label,
+    count: NORM.filter(r=>r[o.field]).length}));
+}
+
+/* ---------- MultiSelect component ---------- */
+function MultiSelect(host, dim, opts){
+  const placeholder = {
+    country:'All countries', sector:'All sectors', nace2:'All subsectors',
+    type:'All types', thematic:'Any subject'
+  }[dim];
+
+  const control = document.createElement('div'); control.className='ms-control';
+  const panel   = document.createElement('div'); panel.className='ms-panel';
+  const search  = document.createElement('div'); search.className='ms-search';
+  const searchInput = document.createElement('input');
+  searchInput.type='text'; searchInput.placeholder='Search…';
+  search.appendChild(searchInput);
+  const list = document.createElement('div');
+  panel.appendChild(search); panel.appendChild(list);
+  host.appendChild(control); host.appendChild(panel);
+
+  function renderControl(){
+    const sel = SELECT[dim];
+    control.innerHTML='';
+    if(!sel.length){
+      const ph=document.createElement('span');
+      ph.className='ms-placeholder'; ph.textContent=placeholder;
+      control.appendChild(ph);
+    } else {
+      sel.forEach(v=>{
+        const o=opts.find(o=>o.value===v);
+        const chip=document.createElement('span'); chip.className='ms-chip';
+        const t=document.createElement('span'); t.textContent=o?o.label:v; chip.appendChild(t);
+        const x=document.createElement('span'); x.className='x'; x.textContent='×';
+        x.addEventListener('click',e=>{e.stopPropagation(); toggle(v);});
+        chip.appendChild(x);
+        control.appendChild(chip);
+      });
+    }
+  }
+
+  function renderList(){
+    const q = searchInput.value.trim().toLowerCase();
+    const sel = SELECT[dim];
+    const md = multiDim();
+    /* This dim is locked to single-select if another dim already has 2+ */
+    const lockedSingle = md && md!==dim;
+    host.classList.toggle('locked-out', false);
+    list.innerHTML='';
+
+    const filtered = opts.filter(o=>!q || o.label.toLowerCase().includes(q));
+    if(!filtered.length){
+      const e=document.createElement('div'); e.className='ms-empty';
+      e.textContent='No matches'; list.appendChild(e); return;
+    }
+    let lastGroup=null;
+    filtered.forEach(o=>{
+      if(o.group && o.group!==lastGroup){
+        lastGroup=o.group;
+        const g=document.createElement('div'); g.className='ms-optgroup';
+        g.textContent=o.group; list.appendChild(g);
+      }
+      const isSel = sel.includes(o.value);
+      /* disable adding a 2nd value when another dim owns the multi-selection */
+      const disabled = lockedSingle && !isSel;
+      const row=document.createElement('div');
+      row.className='ms-opt'+(isSel?' sel':'')+(disabled?' disabled':'');
+      row.innerHTML=`<span class="box"></span><span>${escapeHtml(o.label)}</span>`+
+        (o.count!=null?`<span class="cnt">${o.count.toLocaleString()}</span>`:'');
+      if(!disabled) row.addEventListener('click',()=>toggle(o.value));
+      list.appendChild(row);
+    });
+  }
+
+  function toggle(v){
+    const sel = SELECT[dim];
+    const i = sel.indexOf(v);
+    if(i>-1){ sel.splice(i,1); }
+    else{
+      const md = multiDim();
+      if(md && md!==dim){
+        /* another dim owns multi — this dim stays single-select: replace */
+        SELECT[dim] = [v];
+      } else {
+        sel.push(v);
+      }
+    }
+    afterChange();
+  }
+
+  this.refresh = ()=>{ renderControl(); renderList(); };
+  this.close = ()=>{ host.classList.remove('open'); };
+  this.open  = ()=>{
+    document.querySelectorAll('.ms.open').forEach(m=>{ if(m!==host) m.classList.remove('open'); });
+    host.classList.add('open'); searchInput.value=''; renderList(); searchInput.focus();
+  };
+
+  control.addEventListener('click', ()=> host.classList.contains('open')?this.close():this.open());
+  searchInput.addEventListener('input', renderList);
+  searchInput.addEventListener('click', e=>e.stopPropagation());
+
+  renderControl();
+}
+
+let SUPPRESS_RENDER=false;
+function afterChange(){
+  /* refresh every control (enable/disable states depend on multiDim) */
+  Object.values(MS).forEach(ms=>ms.refresh());
+  updateMsHint();
+  if(!SUPPRESS_RENDER) renderAll();
+}
+function updateMsHint(){
+  const md=multiDim();
+  const hint=document.getElementById('msHint');
+  const labels={country:'countries',sector:'sectors',nace2:'subsectors',type:'restructuring types',thematic:'thematic subjects'};
+  hint.textContent = md
+    ? `Comparing ${SELECT[md].length} ${labels[md]}. Other fields are limited to one value while comparing.`
+    : 'Tip: pick 2–3 values in any one field to compare them.';
+}
+
+function populateFilters(){
+  buildOptions();
+  DIMS.forEach(dim=>{
+    const hostEl = document.querySelector(`.ms[data-dim="${dim}"]`);
+    MS[dim] = new MultiSelect(hostEl, dim, OPTIONS[dim]);
+  });
+  updateMsHint();
 
   const dates=NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
   if(dates.length){
     DATE_MIN=dates[0]; DATE_MAX=dates[dates.length-1];
-    document.getElementById('dateFrom').value=toISO(DATE_MIN);
+    /* default window: 01/01/2005 → latest */
+    const defFrom = new Date(2005,0,1);
+    const startFrom = (defFrom>DATE_MIN && defFrom<DATE_MAX) ? defFrom : DATE_MIN;
+    document.getElementById('dateFrom').value=toISO(startFrom);
     document.getElementById('dateTo').value=toISO(DATE_MAX);
     document.getElementById('meta-latest').textContent =
       DATE_MAX.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
@@ -1493,9 +1710,13 @@ function populateFilters(){
   document.getElementById('meta-records').textContent = NORM.length.toLocaleString();
 }
 function bindEvents(){
-  ['dateFrom','dateTo','countrySel','sectorSel','typeSel','cb-world','cb-eu27']
+  ['dateFrom','dateTo','cb-eu27']
     .forEach(id=>document.getElementById(id).addEventListener('change',renderAll));
-  document.querySelectorAll('.thematic').forEach(c=>c.addEventListener('change',renderAll));
+
+  /* close any open multi-select when clicking outside */
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.ms')) Object.values(MS).forEach(ms=>ms.close());
+  });
 
   /* map mode */
   document.querySelectorAll('#mapModeSeg button').forEach(b=>{
@@ -1515,7 +1736,7 @@ function bindEvents(){
       renderJobsChart(applyFilters(NORM));
     });
   });
-  /* compare */
+  /* compare card (independent of filter panel) */
   document.getElementById('cmpDim').addEventListener('change',()=>{
     [1,2,3].forEach(i=>document.getElementById('cmpSel'+i).value='');
     populateCompareSelects();
@@ -1525,18 +1746,23 @@ function bindEvents(){
     document.getElementById(id).addEventListener('change',renderCompare));
 }
 window.clearAllSlicers=function(){
-  if(DATE_MIN) document.getElementById('dateFrom').value=toISO(DATE_MIN);
-  if(DATE_MAX) document.getElementById('dateTo').value=toISO(DATE_MAX);
-  document.getElementById('rangeThumbMin').style.left='0%';
-  document.getElementById('rangeThumbMax').style.left='100%';
-  document.getElementById('rangeFill').style.left='0%';
-  document.getElementById('rangeFill').style.width='100%';
-  document.getElementById('countrySel').value='All countries';
-  document.getElementById('sectorSel').value='All sectors';
-  document.getElementById('typeSel').value='All types';
-  document.querySelectorAll('.thematic').forEach(c=>c.checked=false);
-  document.getElementById('cb-world').checked=true;
-  document.getElementById('cb-eu27').checked=false;
+  const defFrom = new Date(2005,0,1);
+  const startFrom = (DATE_MIN && defFrom>DATE_MIN && DATE_MAX && defFrom<DATE_MAX) ? defFrom : DATE_MIN;
+  if(startFrom) document.getElementById('dateFrom').value=toISO(startFrom);
+  if(DATE_MAX)  document.getElementById('dateTo').value=toISO(DATE_MAX);
+  /* reset slider band to reflect the 2005→latest default */
+  if(DATE_MIN && DATE_MAX){
+    const total=DATE_MAX-DATE_MIN;
+    const fp=Math.max(0,Math.min(100,((startFrom-DATE_MIN)/total)*100));
+    document.getElementById('rangeThumbMin').style.left=fp+'%';
+    document.getElementById('rangeThumbMax').style.left='100%';
+    document.getElementById('rangeFill').style.left=fp+'%';
+    document.getElementById('rangeFill').style.width=(100-fp)+'%';
+  }
+  DIMS.forEach(d=>SELECT[d]=[]);
+  Object.values(MS).forEach(ms=>ms.refresh());
+  updateMsHint();
+  document.getElementById('cb-eu27').checked=true;
   renderAll();
 };
 
