@@ -135,7 +135,7 @@
 
   <footer>
     <div class="footer-left">
-        <img src="https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg" alt="Logo">
+        <img src="https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/logo1.svg" alt="Logo">
         <div class="footer-text-col">
             <div id="indicator-note" class="chart-note" style="display:none;"></div>
             <div class="source-text"><b>Source:</b> Calculations based on EU SILC microdata for 2023</div>
@@ -157,7 +157,7 @@
 <script>
 const PALETTE_5 = ['#0B7189', '#E3B038', '#6B7280', '#C24D46', '#2D3E50'];
 const MAP_STOPS = [[0, '#0B7189'], [0.5, '#E5E7EB'], [1, '#D68434']];
-const LOGO_URL = "https://raw.githubusercontent.com/thomasdavid/dashboard/main/logo.svg";
+const LOGO_URL = "https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/logo1.svg";
 
 const INDICATOR_NOTES = {
     "30/40 definition of housing affordability stress": "This is the percentage of households spending 30% or more of their disposable income on housing who are also in the bottom 40% of the national income distribution",
@@ -254,7 +254,7 @@ function buildTooltipCache() {
 
 async function preloadResources() {
     try {
-        const regionalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/custom_nuts_composite.json';
+        const regionalUrl = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/custom_nuts_composite.json';
         const respReg = await fetch(regionalUrl);
         const topoReg = await respReg.json();
         window.nutsTopology = topoReg;
@@ -266,7 +266,7 @@ async function preloadResources() {
             if(id && name) window.nutsNames[id] = name;
         });
 
-        const nationalUrl = 'https://raw.githubusercontent.com/thomasdavid/dashboard/main/housing/master.geojson';
+        const nationalUrl = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/housing/master.geojson';
         const respNat = await fetch(nationalUrl);
         window.nationalTopology = await respNat.json();
     } catch(e) { console.warn("Failed to load maps", e); }
