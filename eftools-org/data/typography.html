@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Typography</title>
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="#0" role="button">Online Modular Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+
+<!-- Main Menu -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item ">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colours</a>
+	</li>
+	<li class="nav-item active">
+	  <p class="nav-link">Typography</p>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="design principals.html">Design principles</a>
+	</li>
+	  <li class="nav-item">
+	  <a class="nav-link" href="chart design print.html">Chart design: Print</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="chart design web.html">Chart design: Web</a>
+	</li>
+  	<li class="nav-item">
+		<a class="nav-link" href="charts.html">Charts</a>
+	</li> 
+	  <li class="nav-item">
+			<a class="nav-link" href="digital chart actions.html">Digital chart actions</a>
+	</li> 
+  </ul>
+  </ul>
+</nav>
+
+<!-- Main Menu End -->
+
+
+<!-- Container -->
+
+<div class="container" style="margin-top: 60px;">
+
+
+    <!-- Content -->
+
+    <div class="row">
+
+
+
+        <!-- Side Menu -->
+
+		<div class="col-md-3" style="margin-bottom: 50px;">
+			<div class="sticky-top">
+
+                <ul class="Sidenav flex-column secondary">
+					
+				<li class="haschildren Sidenav-catagory  Sidenav-catagory-selected"> Typography</li>
+
+					<ul class="list-group">
+						<a class="list-group-item scroll" href="#serif"><li style="display:inline;">Font family &ndash; Serif</li></a>
+						<a class="list-group-item scroll" href="#sans"><li style="display:inline;">Font family &ndash; Sans Serif</li></a>
+					
+					</ul>	
+						
+				</ul>
+
+			</div>
+		</div>
+
+        <!-- Side Menu End -->
+
+
+        <!-- Main Content -->
+
+		<div class="col-md-9" style="padding-top: 10px;">
+
+			<h2 id="serif">Font family &ndash; Serif</h2>
+			<p>&nbsp;</p>
+
+			<h4>Source Serif Pro Semibold</h4>
+			<p class="serifSemi">abcdefghijklmnopqrstuvwxyz</p>
+			<p class="serifSemi">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p class="serifSemi">1234567890!@Â£$%^&amp;*()_+{};â\,./:â|</p>
+
+			<p>&nbsp;</p>
+
+			<h4>Source Serif Pro Bold</h4>
+			<p class="serifBold">abcdefghijklmnopqrstuvwxyz</p>
+			<p class="serifBold">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p class="serifBold">1234567890!@Â£$%^&amp;*()_+{};â\,./:â|</p>
+
+			<p>&nbsp;</p>
+
+			<p>Main headings and button texts are styled using Source Serif Pro. Source Serif is an open source font, available from Google Fonts: <a href="https://fonts.google.com/specimen/Source+Serif+Pro" target="_blank">https://fonts.google.com/specimen/Source+Serif+Pro</a></p>
+
+			<p><strong>HTML Embed Code</strong>
+			<br>
+			<code>&lt;link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet"&gt;</code></p>
+			<p><strong>CSS Code</strong>
+			<br>
+			font-family: âSource Serif Proâ, serif;</p>
+
+			<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+
+
+
+			<h2 id="sans">Font family &ndash; Sans serif</h2>
+			<p>&nbsp;</p>
+
+			<h4>Source Sans Pro Light</h4>
+			<p class="sansLight">abcdefghijklmnopqrstuvwxyz</p>
+			<p class="sansLight">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p class="sansLight">1234567890!@Â£$%^&amp;*()_+{};â\,./:â|</p>
+
+			<p>&nbsp;</p>
+
+			<h4>Source Sans Pro Regular</h4>
+			<p class="sansRegular">abcdefghijklmnopqrstuvwxyz</p>
+			<p class="sansRegular">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p class="sansRegular">1234567890!@Â£$%^&amp;*()_+{};â\,./:â|</p>
+
+			<p>&nbsp;</p>
+
+			<h4>Source Sans Pro Bold</h4>
+			<p class="sansBold">abcdefghijklmnopqrstuvwxyz</p>
+			<p class="sansBold">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+			<p class="sansBold">1234567890!@Â£$%^&amp;*()_+{};â\,./:â|</p>
+
+			<p>&nbsp;</p>
+
+			<p>All body text and secondary headings are laid in Source Sans Pro. Source Sans is an open source font, available from Google Fonts: <a href="https://fonts.google.com/specimen/Source+Sans+Pro" target="_blank">https://fonts.google.com/specimen/Source+Sans+Pro</a></p>
+
+			<p><strong>HTML Embed Code</strong>
+			<br>
+			<code>&lt;link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet"&gt;</code></p>
+			<p><strong>CSS Code</strong>
+			<br>
+			font-family: âSource Sans Proâ, sans-serif;</p>
+
+
+			
+			
+			
+			
+			
+			
+					
+			
+			
+			
+
+
+		</div>
+
+		<!-- End Column 9 -->
+
+
+	</div>
+
+	<!-- End Content -->
+
+</div>
+
+<!-- End Container -->
+
+
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:100px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2018</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+</body>
+</html>

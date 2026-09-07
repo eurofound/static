@@ -1,0 +1,2041 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Page Componants</title>
+
+
+
+
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+	
+	
+
+
+	  $('[data-toggle="tooltip"]').tooltip();
+
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="../data/" role="button">Data Visualisation Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colour palette</a>
+	</li>
+  <li class="nav-item">
+    <a class="nav-link" href="fonts.html">Fonts</a>
+  </li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="imagery.html">Imagery</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="navigation.html">Navigation</a>
+	</li>
+	<li class="nav-item active">
+	  <p class="nav-link">Page components</p>
+	</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="filters.html">Filters</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="forms.html">Forms</a>
+			</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="video.html">Video</a>
+			</li>
+  </ul>
+</nav>
+
+
+<div class="container" style="margin-top: 60px;">
+
+		<div class="row">
+
+   <div class="col-md-3" style="margin-bottom: 50px;">
+      <div class="sticky-top">
+
+                <ul class="Sidenav flex-column secondary">
+          
+              <li class="haschildren Sidenav-catagory">Page components</li>
+
+                <ul class="list-group">
+                  <a class="scroll list-group-item haschildren arrow-after" href="#blocks"><li style="display:inline;">Primary content blocks</li></a>
+                    <ul class="list-group">
+                      <a class="scroll list-group-item arrow small" href="#primary-ver1"><li>Primary featured content: Block 1 vertical</li></a>
+						<a class="scroll list-group-item arrow small" href="#primary-ver2"><li>Resources quick link blocks: Vertical</li></a>
+						<a class="scroll list-group-item arrow small" href="#primary-ver3"><li>Survey data blocks</li></a>
+						<a class="scroll list-group-item arrow small" href="#primary-ver4"><li>Data boxes: Grey</li></a>
+						<a class="scroll list-group-item arrow small" href="#primary-ver5"><li>Data boxes: White</li></a>
+                      <a class="scroll list-group-item arrow small" href="#primary-hor"><li>Primary featured content block: Horizontal</li></a>
+                     
+                    </ul>
+					
+					
+					
+					
+					
+						<a class="scroll list-group-item haschildren arrow-after" href="#secondary"><li>Secondary content<br> blocks</li></a>
+                  <ul class="list-group">
+				      <a class="scroll list-group-item arrow small" href="#secondary-ver1"><li>Secondary featured content blocks: Image and text vertical</li></a>
+                      <a class="scroll list-group-item arrow small" href="#secondary-text"><li>Secondary featured content blocks: Horizontal</li></a>
+						 <a class="scroll list-group-item arrow small" href="#resources-quick-link-hor"><li>Resources quick link boxes: Horizontal</li></a>
+						<a class="scroll list-group-item arrow small" href="#secondary-text-only"><li>Secondary featured content blocks: Text only</li></a>
+                      <a class="scroll list-group-item arrow small" href="#article-ver"><li>Article search blocks: Vertical</li></a>
+                      <a class="scroll list-group-item arrow small" href="#article-hor"><li>Article search blocks: Horizontal</li></a>
+           
+                    </ul>
+					
+					
+							<a class="scroll list-group-item haschildren arrow-after" href="#misc"><li>Miscellaneous content blocks</li></a>
+                  <ul class="list-group">
+				 
+                     
+                      <a class="scroll list-group-item arrow small" href="#accordian"><li>Accordian tabs</li></a>
+                      <a class="scroll list-group-item arrow small" href="#quick-links"><li>Quick links</li></a>
+                      <a class="scroll list-group-item arrow small" href="#image-hover"><li>Image hover</li></a>
+					  <a class="scroll list-group-item arrow small" href="#datacat-image"><li>Data catalogue image</li></a>
+                    </ul>
+					
+					
+					
+					
+					
+					<a class="scroll list-group-item haschildren arrow-after" href="#buttons"><li>Buttons</li></a>
+                  <ul class="list-group">
+					    <a class="scroll list-group-item arrow small" href="#primarybuttons"><li>Primary buttons</li></a>
+                     <a class="scroll list-group-item arrow small" href="#secondarybutton"><li>Secondary button</li></a>
+                      <a class="scroll list-group-item arrow small" href="#loginbutton"><li>Login button</li></a>
+                      <a class="scroll list-group-item arrow small" href="#fold"><li>Fold out button section</li></a>
+                    </ul>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					 <a class="scroll list-group-item haschildren arrow-after" href="#textlinks"><li>Text links</li></a>
+                  <ul class="list-group">
+                     <a class="scroll list-group-item arrow small" href="#textlinks"><li>Text links</li></a>
+					  <a class="scroll list-group-item arrow small" href="#textlist"><li>Text links: List</li></a>
+                      <a class="scroll list-group-item arrow small" href="#listgroup"><li>List group links</li></a>
+                     
+                    </ul>
+                  
+					
+					
+                  <a class="scroll list-group-item haschildren arrow-after" href="#feedback"><li>Feedback</li></a>
+                  <ul class="list-group">
+                      <a class="scroll list-group-item arrow small first" href="#cookie"><li>Cookies</li></a>
+                      <a class="scroll list-group-item arrow small" href="#positive"><li>Feedback</li></a>
+                      <a class="scroll list-group-item arrow small" href="#error"><li>Error messages</li></a>
+					   <a class="scroll list-group-item arrow small" href="#suggest-citation"><li>Suggested citation</li></a>
+                      <a class="scroll list-group-item arrow small" href="#citationblock"><li>Citation block</li></a>
+                      <a class="scroll list-group-item arrow small" href="#tooltip"><li>Tooltips</li></a>
+                    </ul>
+                    
+                  
+                     <a class="scroll list-group-item haschildren arrow-after" href="#tables"><li>Tables</li></a>
+                    <ul class="list-group">
+                      <a class="scroll list-group-item arrow small first" href="#striped"><li>Striped table with header</li></a>
+                      <a class="scroll list-group-item arrow small first" href="#side"><li>Table with Side Bar</li></a>
+                    </ul>
+                    <a class="scroll list-group-item haschildren arrow-after" href="#meta"><li>Metadata</li></a>
+					<ul class="list-group">
+                      <a class="scroll list-group-item arrow small first" href="#metalisting"><li>Metadata listing</li></a>
+						<a class="scroll list-group-item arrow small first" href="#metalinks"><li> Metadata Source and data collection</li></a>
+                      <a class="scroll list-group-item arrow small first" href="#inlinemetadatadisplay"><li>Inline metadata display</li></a>
+                    </ul>
+                  
+                </ul>
+            
+            </ul>
+
+      </div>
+    </div>
+
+
+
+<div  class="col-md-9" style="padding-top: 10px;">
+
+                    	<h2 id="blocks">Content blocks</h2>
+
+                    <div class="row" style="margin:40px 0px 20px 0px;">
+                      <h4 id="primary-ver1">Primary featured content: Block 1 vertical</h4>
+                    </div>
+
+                    <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+
+                            <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                                <div class="card">
+                                    <img src="images/two-lads-chill.jpg" width="100%" height="auto" alt=""/>
+                                  <div class="card-body">
+                                    <p class="date">17 April 2018</p>
+                                    <p class="dateUnderline" >&nbsp;</p>
+                                    <h3 class="card-title">This is the title of one of the latest publications</h3>
+                                    <p class="card-text">Supporting text as a natural lead-in to additional content.</p>
+                                    <p class="card-subtitle "><strong>Authors</strong></p>
+                                    <p class="AuthorName"><a href="#">Firstname Lastname</a> | <a href="#">Firstname Lastname</a></p>
+                                    <a href="#" class="btn btn-primary">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                                <div class="card">
+                                    <img src="images/public-square.jpg" width="100%" height="auto" alt=""/>
+                                  <div class="card-body">
+                                    <p class="date">19 September 2018</p>
+                                    <p class="dateUnderline" >&nbsp;</p>
+                                    <h3 class="card-title">This is the title of one of the latest blogs</h3>
+                                    <p class="card-text">Supporting text as a natural lead-in to additional content.</p>
+                                    <p class="card-subtitle "><strong>Authors</strong></p>
+                                    <p class="AuthorName"><a href="#">Firstname Lastname</a> | <a href="#">Firstname Lastname</a></p>
+                                    <a href="#" class="btn btn-primary">Blog <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+
+
+	
+	
+	
+	
+	
+	
+	<!-- START - CONTENT BLOCK 2-->
+	
+	<div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="primary-ver2"> Resources quick link blocks: Vertical </h4>
+                    </div>
+	
+	  <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+	    <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+	      <div class="content-block-2"> <img src="images/content-block-image-1.jpg" width="100%" height="auto" alt=""/>
+	        <div class="content-block-2-body">
+	          <p class="content-block-2-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+	           <p class="card-text small">Trade unions, employer organisations and public authorities all play a role in the governance of the employment relationship. They are interlocking parts in a system that operates at European, national, sectoral, regional and company level. </p>
+            </div>
+          </div>
+        </div>
+	
+
+	    <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+	      <div class="content-block-2"> <img src="images/content-block-image-3.jpg"  width="100%" height="auto" alt=""/>
+	        <div class="content-block-2-body">
+	          <p class="content-block-2-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+	           <p class="card-text small">Trade unions, employer organisations and public authorities all play a role in the governance of the employment relationship. They are interlocking parts in a system that operates at European, national, sectoral, regional and company level. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	<!-- END - CONTENT BLOCK 2-->
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- START - CONTENT BLOCK 3 -->
+	
+	 <div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="primary-ver3"> Survey data blocks </h4>
+                    </div>
+	
+	  <div class="row" style="background-color: #fff; ">
+	    <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+	      <div class="content-block-3"> <img src="images/content-block-image-5.jpg"  width="100%" height="auto" alt=""/>
+	        <div class="content-block-3-body">
+	          <p class="content-block-3-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+	          <div class="card-text small">
+	            <ul>
+	              <li>This is list item 01</li>
+	              <li>This is list item 03</li>
+					<li>This is list item 04</li>
+	              </ul>
+              </div>
+	          <p class="content-block-3-subtitle "><strong>Themes</strong></p>
+	          <p class="content-block-3-theme">Employment, Education, Housing, Family, Training, Health and safety</p>
+            </div>
+          </div>
+        </div>
+	 <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+	      <div class="content-block-3"> <img src="images/content-block-image-2.jpg" width="100%" height="auto" alt=""/>
+	        <div class="content-block-3-body">
+	          <p class="content-block-3-title">Pellentesque tellus lectus facilisis condimentum posuere  </p>
+	          <div class="card-text small">
+	            <ul>
+	              <li>This is list item 01</li>
+	              <li>This is list item 03</li>
+	              <li>This is list item 04</li>
+                </ul>
+              </div>
+	          <p class="content-block-3-subtitle "><strong>Themes</strong></p>
+	          <p class="content-block-3-theme">Employment, Education, Housing, Family, Training, Health and safety</p>
+            </div>
+          </div>
+        </div>
+		  
+		  
+	    <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+	      <div class="content-block-3"> <img src="images/content-block-image-6.jpg" width="100%" height="auto" alt=""/>
+	        <div class="content-block-3-body">
+	          <p class="content-block-3-title">Pellentesque tellus lectus facilisis condimentum posuere  </p>
+	          <div class="card-text small">
+	            <ul>
+	              <li>This is list item 01</li>
+	              <li>This is list item 03</li>
+                </ul>
+              </div>
+	          <p class="content-block-3-subtitle"><strong>Themes</strong></p>
+	          <p class="content-block-3-theme">Employment, Education, Housing, Family, Training</p>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	
+	<!-- END - CONTENT BLOCK 3-->
+	
+	
+	
+	
+	
+	<!-- START - CONTENT BLOCK 4 -->
+	
+	
+	
+		<div class="row" style="margin:40px 0px 20px 0px;">
+          <h4 id="primary-ver4">Data boxes: Grey</h4>
+                    </div>
+	
+	
+	  <div class="row" style="background-color: #fff;">
+
+                           <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-4">
+                                  <div class="content-block-4-body">
+                                    <p class="content-block-4-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna vitae tellus egestas varius eget non. </p> 
+								</div>
+                                 <p class="content-block-4-date"><strong>Date</strong> | 01 June 2019</p>
+                                  </div>
+                                </div>
+                            </div>
+
+                          <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-4">
+                                  <div class="content-block-4-body">
+                                    <p class="content-block-4-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna non. </p> 
+								</div>
+									
+                                 <p class="content-block-4-date"><strong>Date</strong> | 01 June 2019</p>
+         						 </div>
+									</div>
+                            </div>
+		  
+		  			<div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-4">
+                                  <div class="content-block-4-body">
+                                    <p class="content-block-4-title">Pellentesque tellus lectus facilisis </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna non. </p> 
+								</div>
+                                 <p class="content-block-4-date"><strong>Date</strong> | 01 June 2019</p>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+	
+	<!-- END - CONTENT BLOCK 4-->
+	
+	
+	
+	
+	
+	
+	
+	<!-- START - CONTENT BLOCK 5 -->
+	
+	<div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="primary-ver5">Data boxes: White </h4>
+                    </div>
+	
+	
+	  <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+
+                           <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-5">
+                                  <div class="content-block-5-body">
+                                    <p class="content-block-5-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna vitae tellus egestas varius eget non. </p> 
+								</div>
+                                 <p class="content-block-5-date"><strong>Date</strong> | 01 June 2019</p>
+                                  </div>
+                                </div>
+                            </div>
+
+                           <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-5">
+                                  <div class="content-block-5-body">
+                                    <p class="content-block-5-title">Pellentesque tellus lectus facilisis condimentum posuere </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna vitae tellus egestas varius eget non. </p> 
+								</div>
+                                 <p class="content-block-5-date"><strong>Date</strong> | 01 June 2019</p>
+                                  </div>
+                                </div>
+                            </div>
+		  
+		  			 <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="content-block-5">
+                                  <div class="content-block-5-body">
+                                    <p class="content-block-5-title">Tellus lectus facilisis condimentum posuere </p>
+									  <div class="card-text small">  
+									<p>Nullam sodales sapien ac elit ullamcorper suscipit. Suspendisse quis urna vitae varius eget non. </p> 
+								</div>
+                                 <p class="content-block-5-date"><strong>Date</strong> | 01 June 2019</p>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+	
+	<!-- END - CONTENT BLOCK 5-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+                        <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="primary-hor">Primary featured content blocks: Horizontal</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+							<div class="col-lg-6" style="display: flex; margin-bottom: 20px;">
+
+								<div class="cardHorizontal">
+									<div class="card-imageHorizontal">
+										<img src="images/Young-Lads-Publication.png" width="100%" height="auto" alt=""/>
+									</div>
+
+									<div  class="card-bodyHorizontal">
+									  <p class="date">12 October 2018</p>
+									  <p class="dateUnderline" >&nbsp;</p>
+									  <h3 class="card-titleHorizontal">Long-term unemployed youth: Characteristics and policy responses</h3>
+									  <a href="#" class="btn btn-primary" style="vertical-align:bottom;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+									</div>
+								</div>
+
+							</div>
+
+
+                       		<div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+								<div class="cardHorizontal">
+										<div class="card-imageHorizontal">
+											<img src="images/Young-Lads-Blog.png" width="100%" height="auto" alt=""/>
+										</div>
+
+										<div  class="card-bodyHorizontal" style="display: flex; justify-content:space-between; flex-direction: column;">
+										  <div>
+											  <p class="date">18 July 2018</p>
+											  <p class="dateUnderline" >&nbsp;</p>
+											  <p class="card-titleHorizontal">Long-term unemployed youth: The legacy of the crisis</p>
+										  </div>
+										  <div>
+											  <a href="#" class="btn btn-primary" style="vertical-align:bottom;">Blog <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+
+										  </div>
+										</div>
+								</div>
+                        	</div>
+
+                        </div>
+
+
+	
+	<!-- SECONDARY CONTENT BLOCKS - START-->
+	
+	<div style="width:100%; float:left; margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+				<h2 id="secondary">Secondary content block </h2>
+			
+			
+	
+		 <div class="row" style="margin:40px 0px 20px 0px;">
+                      <h4 id="secondary-ver1">Secondary featured content: Block 1 vertical</h4>
+                    </div>
+
+
+						
+
+	 					<div class="row" style="background-color: #fff;">
+
+                            <div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                                <div class="card" style="background-color: #E8EBEC;">
+
+                                  <div class="card-body">
+                                    <p class="date" style="margin-top:5px;">FEATURED</p>
+									<p class="dateUnderline" >&nbsp;</p>
+									<img src="images/topic_workingconditions.jpg" width="100%" height="auto" alt=""/>
+                                    <a href="#"><p class="contentBlock" style="margin-top:20px;">Working conditions and sustainable work</p></a>
+                                    <p class="card-text small">The demographic challenge of an ageing population and the increasing diversity of working life have led to an increased focus on the concept of sustainable work over the life course. This emphasises the relevance of the quality of a workerâs job and their working environment over the entire course of their working life.</p>
+                                    <a href="#" class="btn btn-primary">View article <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                  </div>
+
+                                </div>
+                            </div>
+
+							<div class="col-md-6" style="display: flex; margin-bottom: 20px;">
+                                <div class="card" style="background-color: #E8EBEC;">
+
+                                  <div class="card-body">
+
+                                    <p class="date" style="margin-top:5px;">FEATURED</p>
+                                    <p class="dateUnderline" >&nbsp;</p>
+									<img src="images/topic_industrialrelations.jpg" width="100%" height="auto" alt=""/>
+                                    <a href="#"><p class="contentBlock" style="margin-top:20px;">Industrial relations </p></a>
+                                    <p class="card-text small">Trade unions, employer organisations and public authorities all play a role in the governance of the employment relationship. They are interlocking parts in a system that operates at European, national, sectoral, regional and company level. In recent years, as technology and forms of work evolve within a constantly changing economic environment, industrial relations systems have faced key challenges.</p>
+                                    <a href="#" class="btn btn-primary">View article <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!--text and image horizontal-->
+                    <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="secondary-text">Secondary featured content blocks: Text and image horizontal</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #fff;">
+                            
+
+                            <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                                <div class="cardHorizontal">
+                                <div style="display:flex; background-color:#E8EBEC;  padding:25px 10px 10px 15px; ">
+                                        <div class="col-md-4" >
+                                            <img src="images/test.png" width="100%" height="auto" alt=""/>
+                                        </div>
+                                        <div class="col-md-8" >
+                                            <a href="#"><p class="contentBlock small">Statutory minimum wages 2018</p></a>
+                                            <p class="card-text small">This report provides information on statutory minimum wages that are generally applicable in a country and not limited to specific sectors, occupations or groups of employees. While the scope of the report covers all 28 EU Member States, the main findings relate to the 22 countries that had a statutory minimum wage in place in 2018. In the majority of countries, the social partners have been involved in the setting of the minimum wage in 2018 &ndash; in marked contrast to the beginning of the decade when minimum wage-setting was characterised by strong government intervention.</p>
+                                        </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+
+
+	
+	
+	
+	
+	
+	
+	<div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="resources-quick-link-hor">Resources quick link boxes: Horizontal</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+                            
+
+                            <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                                <div class="cardHorizontal-2">
+                                <div style="display:flex; background-color:#fff;">
+									<div class="row">
+                                        <div class="col-md-6" >
+                                            <img src="images/content-block-image-6.jpg" alt=""/>
+                                        </div>
+									
+									
+                                        <div class="col-md-6">
+										<div style="padding-top: 20px; padding-right: 20px">
+                                            <a href="#"><p class="cardHorizontal-2-title">Statutory minimum wages 2018</p></a>
+                                            <p class="card-text small">Integer eleifend felis metus, in porttitor felis mattis non. Suspendisse vehicula lorem turpis, semper maximus libero condimentum nec. Etiam purus massa, gravida sed elit ut, vehicula ornare mauris. Aenean euismod mattis urna, quis sollicitudin dolor feugiat quis. Nunc volutpat a libero vitae pharetra.</p>
+											</div>
+										</div>
+									</div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+	
+	
+	
+	
+	
+	
+
+
+
+						<div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="secondary-text-only">Secondary featured content blocks: Text only</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #fff; ">
+
+							<div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+
+								<div class="cardHorizontal" style="background-color:#E8EBEC;  padding:0px 30px 10px 30px; ">
+
+										<div  class="card-bodyHorizontal">
+											<p class="date">FEATURED</p>
+											<p class="dateUnderline" >&nbsp;</p>
+											<a href="#"><p class="contentBlock small">Statutory minimum wages 2018</p></a>
+											<p class="card-text small">This report provides information on statutory minimum wages that are generally applicable in a country and not limited to specific sectors, occupations or groups of employees. While the scope of the report covers all 28 EU Member States, the main findings relate to the 22 countries that had a statutory minimum wage in place in 2018. In the majority of countries, the social partners have been involved in the setting of the minimum wage in 2018 &ndash; in marked contrast to the beginning of the decade when minimum wage-setting was characterised by strong government intervention.</p>
+											<a href="#" class="btn btn-primary" style=" margin-top:0px;">View article <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+										</div>
+
+								</div>
+
+							</div>
+
+                        </div>
+
+
+
+
+
+                        <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="article-ver" >Article search blocks: Vertical</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+                                <div class="col-lg-4" style="display: flex; margin-bottom: 20px;">
+                                    <div class="card">
+
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" >&nbsp;</p>
+                                        <p class="card-titleHorizontal">This is the title of one of the latest publications</p>
+                                        <a href="#" class="btn btn-primary" style="margin-top: 0px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                               <div class="col-lg-4" style="display: flex; margin-bottom: 20px;">
+                                    <div class="card">
+
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" >&nbsp;</p>
+                                        <p class="card-titleHorizontal">This is the title of one of the latest publications</p>
+                                        <a href="#" class="btn btn-primary" style="margin-top: 0px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                            <div class="col-lg-4" style="display: flex; margin-bottom: 20px;">
+                                    <div class="card">
+
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" >&nbsp;</p>
+                                        <p class="card-titleHorizontal">This is the title of one of the latest publications</p>
+                                        <a href="#" class="btn btn-primary" style="margin-top: 0px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        
+                        
+                        
+                        <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                            <h4 id="article-hor">Article search blocks: Horizontal</h4>
+                        </div>
+
+                        <div class="row" style="background-color: #E8EBEC; padding:20px 20px 0px 20px;">
+                                
+                                <div class="col-8" style="display: flex;background-color: #fff; margin-bottom: 2px;">
+                                    <div class="card" style="width:100%; border-bottom:0px;">
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" style="font-size:10px;" >&nbsp;</p>
+                                        <p class="card-titleHorizontal"  style="margin-bottom: 10px;">This is the title of one of the latest publications</p> 
+                                      </div>
+                                    </div>                                  
+                                </div>
+                                
+                                <div class="col-4" style="background-color:#fff; margin-bottom: 2px;">
+                                	<a href="#0" class="btn btn-primary" style="margin-top:35px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>                    
+                                </div>
+                               
+                        </div>
+                        <div class="row" style="background-color: #E8EBEC; padding:0px 20px 0px 20px;">
+                                
+                                <div class="col-8" style="display: flex;background-color: #fff; margin-bottom: 2px;">
+                                    <div class="card" style="width:100%; border-bottom:0px;">
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" style="font-size:10px;" >&nbsp;</p>
+                                        <p class="card-titleHorizontal"  style="margin-bottom: 10px;">This is the title of one of the latest publications</p> 
+                                      </div>
+                                    </div>                                  
+                                </div>
+                                
+                                <div class="col-4" style="background-color:#fff; margin-bottom: 2px;">
+                                	<a href="#0" class="btn btn-primary" style="margin-top:35px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>                    
+                                </div>
+                               
+                        </div>
+                        <div class="row" style="background-color: #E8EBEC; padding:0px 20px 0px 20px;">
+                                
+                                <div class="col-8" style="display: flex;background-color: #fff; margin-bottom: 2px;">
+                                    <div class="card" style="width:100%; border-bottom:0px;">
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" style="font-size:10px;" >&nbsp;</p>
+                                        <p class="card-titleHorizontal"  style="margin-bottom: 10px;">This is the title of one of the latest publications</p> 
+                                      </div>
+                                    </div>                                  
+                                </div>
+                                
+                                <div class="col-4" style="background-color:#fff; margin-bottom: 2px;">
+                                	<a href="#0" class="btn btn-primary" style="margin-top:35px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>                    
+                                </div>
+                               
+                        </div>
+                        <div class="row" style="background-color: #E8EBEC; padding:0px 20px 20px 20px;">
+                                
+                                <div class="col-8" style="display: flex;background-color: #fff; margin-bottom: 2px;">
+                                    <div class="card" style="width:100%; border-bottom:0px;">
+                                      <div class="card-body">
+                                        <p class="date">17 April 2018</p>
+                                        <p class="dateUnderline" style="font-size:10px;" >&nbsp;</p>
+                                        <p class="card-titleHorizontal"  style="margin-bottom: 10px;">This is the title of one of the latest publications</p> 
+                                      </div>
+                                    </div>                                  
+                                </div>
+                                
+                                <div class="col-4" style="background-color:#fff; margin-bottom: 2px;">
+                                	<a href="#0" class="btn btn-primary" style="margin-top:35px;">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>                    
+                                </div>
+                               
+                        </div>
+
+
+				        <!--FOLD OUT BUTTON
+                        <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                                        <h4 id="fold">Fold out button section</h4>
+                                    </div>
+                        <div class="row" style="margin:0px 0px 60px -15px;">
+
+                            <div class="col-lg-4">
+
+                                <ul class="Sidenav flex-column secondary">
+                                
+                                        <li class="haschildren Sidenav-catagory">Dropdown Menu</li>
+
+                                            <ul class="list-group">
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 01</li>
+                                                     <button class="btn btn-primary btn-sm new-button" type="button">PDF
+                                                     </button>  
+                                                </a>
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 02</li>
+                                                    <button class="btn btn-primary btn-sm new-button" type="button">Order
+                                                    </button>   
+                                                </a>
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 03</li>
+                                                    <button class="btn btn-primary-inverse btn-sm new-button" type="button">Read
+                                                    </button>   
+                                                </a>
+                                            </ul>
+                                    
+                                    </ul>
+
+                            </div>
+                
+              
+                    
+            </div> -->
+
+
+            <!--accordion links -->
+		
+		 <div class="row" style="margin:80px 0px 20px 0px;border-top:1px solid #E8ECEB; padding-top:60px;">
+                      <h2 id="misc">Miscellaneous content blocks</h2>
+                    </div>
+		
+            <div class="row" style="margin:50px 0px 20px 0px">
+                <h4 id="accordian">Accordian tabs</h4>
+            </div>
+
+            <div class="row" style="margin:0px 0px 60px -15px;">
+
+                <div class="col-lg-12">
+
+                    <ul class="Sidenav flex-column secondary">
+                    
+                            <li id="link-accordian" class="haschildren Sidenav-catagory">
+                                <div class="link-area"><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></div>
+                                <div style="display: flex;"><p><span class="badge-info-plus">INDUSTRIAL RELATIONS</span></p><p class="date link-d">11 September 2017</p></div>
+                            </li>
+
+                                <ul class="list-group">
+                                    <a id="accord-sub" class="list-group-item haschildren" href="#0"><li style="display:inline;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum incidunt accumsan metus nec interdum. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</li></a>
+                                    
+                                    
+                                </ul>
+
+
+
+                            <li id="link-accordian" class="haschildren Sidenav-catagory">
+                                <div class="link-area"><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></div>
+                                <div style="display: flex;"><p><span class="badge-info-plus">INDUSTRIAL RELATIONS</span></p><p class="date link">11 September 2017</p></div>
+                            </li>
+
+                                <ul class="list-group">
+                                    <a id="accord-sub" class="list-group-item haschildren" href="#0"><li style="display:inline;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum incidunt accumsan metus nec interdum. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</li></a>
+                                    
+                                    
+                                </ul>
+
+
+                             <li id="link-accordian" class="haschildren Sidenav-catagory">
+                                <div class="link-area"><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></div>
+                                <div style="display: flex;"><p><span class="badge-info-plus">INDUSTRIAL RELATIONS</span></p><p class="date link">11 September 2017</p></div>
+                            </li>
+
+                                <ul class="list-group">
+                                    <a id="accord-sub" class="list-group-item haschildren" href="#0"><li style="display:inline;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum incidunt accumsan metus nec interdum. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</li></a>
+                                    
+                                    
+                                </ul>
+                        </ul>
+
+                </div>
+            </div>
+    
+
+
+
+
+                    <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                        <h4 id="quick-links">Quick links</h4>
+                    </div>
+
+                    <div class="row" style=" background-image:url(images/FOME.png); background-position:center; background-repeat:no-repeat; background-color: #ffffff; padding:120px 0px 120px 0px; margin-bottom:20px;">
+
+                            <div class="col-md-12" style=" text-align:center;">
+                                <h5>Future of Manufacturing in Europe (FOME)</h5>
+                            </div>
+                            <div class="col-md-12" style="text-align:center;">
+                            	<a href="#" class="btn btn-success" style="margin-top: 30px;">Tell me more <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                            </div>
+
+                    </div>
+
+                     <div class="row" style=" background-image:url(images/Correspondants.png); background-position:center; background-repeat:no-repeat; background-color: #ffffff; padding:120px 0px 120px 0px; margin-bottom:20px;">
+
+                            <div class="col-md-12" style=" text-align:center;">
+                                <h5>Network of Eurofound Correspondents</h5>
+                            </div>
+                            <div class="col-md-12" style="text-align:center;">
+                            	<a href="#" class="btn btn-secondary" style="margin-top: 30px;">Tell me more <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                            </div>
+
+                    </div>
+
+
+
+                    <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                        <h4 id="image-hover">Image hover</h4>
+                    </div>
+
+                    <div class="row" style="background-color: #368275; padding:15px 0px 2px 15px; margin-bottom:0px; border-bottom:1px solid #FFFFFF;">
+
+                            <div class="col-md-12" >
+                                <h5>Specialised data collections</h5>
+                            </div>
+
+                    </div>
+
+      <div class="row" style="background-color: #368275;  margin-bottom:20px;">
+
+                            <div class="col-md-6" style=" padding:30px 15px 30px 30px;">
+
+                            	<div class="data-ColLink">
+								  <img src="images/map.png" width="100%" height="auto" alt=""/>
+								  <div style="padding: 10px 20px 0px 20px">
+                                    <p><strong>Collective wage bargaining Data</strong></p>
+                                    <p class="hr-dataCol">&nbsp;</p>
+                                    <p>EurWORK</p>
+								  </div>
+                            	</div>
+
+							</div>
+
+
+
+                            <div class="col-md-6" style="padding:30px 30px 30px 15px;">
+
+                              <div class="data-ColLink">
+								<img src="images/dictionary.png" width="100%" height="auto" alt=""/>
+								  <div style="padding: 10px 20px 0px 20px">
+                                    <p><strong>European Industrial Relations Dictionary</strong></p>
+                                    <p class="hr-dataCol">&nbsp;</p>
+                                    <p>EurWORK</p>
+								  </div>
+                              </div>
+
+							</div>
+
+        </div>
+
+        <div class="row" style="background-color: #1A2F55; padding:15px 0px 2px 15px; margin-bottom:0px; border-bottom:1px solid #FFFFFF;">
+
+                            <div class="col-md-12">
+                                <h5>About Eurofound</h5>
+                            </div>
+
+                    </div>
+
+        <div class="row" style="background-color: #1A2F55;  margin-bottom:20px;">
+
+                            <div class="col-md-6" style=" padding:30px 15px 30px 30px;">
+
+
+                              <div class="aboutEFLink">
+								  <img src="images/report.png" width="100%" height="auto" alt=""/>
+								  <div style="padding: 10px 20px 0px 20px">
+                                  <p><strong>Annual activity report</strong></p>
+                                  <p class="hr-aboutEF">&nbsp;</p>
+                                  <p>Publications</p>
+								  </div>
+                              </div>
+
+							</div>
+
+
+                            <div class="col-md-6" style="padding:30px 30px 30px 15px;">
+
+
+                              <div class="aboutEFLink">
+								<img src="images/calendar.png" width="100%" height="auto" alt=""/>
+								  <div style="padding: 10px 20px 0px 20px">
+                                  <p><strong>Calendar</strong></p>
+                                  <p class="hr-aboutEF">&nbsp;</p>
+                                  <p>Events</p>
+								  </div>
+                              </div>
+
+							</div>
+
+        </div>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+                        <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                        <h4 id="datacat-image">Data catalogue image</h4>
+                    </div>
+
+                        <div class="row" style="background-color: #ffffff; padding:20px 0px 0px 0px;">
+                                <div class="col-lg-9" style="display: flex; margin-bottom: 20px;">
+                                    
+
+                                    <img src="images/Data-catalogue-image-component.jpg">
+                                    
+                                </div>
+
+                              
+
+                            <div class="col-lg-3" style="display: flex; margin-bottom: 20px;">
+                                    
+
+                                      <div class="datacatimg-body">
+                                         <p class="datacatimg-title">Related content </p>
+                                        <hr>
+                                        <p class="datacatimg-content-title"><a href="#"><strong>Name of the content</strong></a></p>
+										
+										<p class="datacatimg-date"><strong>Date</strong> | 01 June 2019</p>
+										<hr>
+										  <p class="datacatimg-content-title"><a href="#"><strong>Name of the content</strong></a></p>
+										
+										<p class="datacatimg-date"><strong>Date</strong> | 01 June 2019</p>
+								<hr>
+								
+								
+								</div>
+                                    
+                                </div>
+
+                        </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	<!-- BUTTONS - START-->
+	
+	<div style="width:100%; float:left; margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+				<h2 id="buttons">Buttons </h2>
+			
+			</div>
+
+	<div style="margin:60px 0px 20px 0px;  padding-top:60px;">
+				<h4 id="primarybuttons">Primary buttons </h4>
+			
+			</div>
+	
+	
+	
+	
+			
+
+                      <div  class="col-md-9" style="padding:0px;">
+						  
+						  
+
+                            <a href="#0" class="btn btn-primary">Primary Button <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a><br><br>
+                            <a href="#0" class="btn btn-primary">Publication <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a><br><br>
+                            <a href="#0" class="btn btn-primary">Download PDF <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                            <p style="margin-top:20px;">Primary buttons are always coloured EF Sky with a reversed out, bordered hover state. Primary buttons should always be used on white and grey backgrounds.
+
+                            <br><br>
+                            <a href="#0" class="btn btn-primary-inverse">Primary button inverse <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>  
+                            <br><br>
+                            Mouse over the button above to view hover state.</p>
+
+                      </div>
+
+
+	
+	
+	
+	<div class="row" style="margin:40px 0px 20px 0px;">
+                  		<h4 id="secondarybutton">Secondary button</h4>
+                  </div>
+	
+	
+	
+
+                    <div class="row" style="margin:0px 0px 0px 0px;">
+
+                        <div  class="col-md-9" style="padding:0px;">
+
+                              <a href="#0" class="btn btn-secondary">Secondary Button <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                              <p style="margin-top:20px;">Secondary buttons are always coloured EF Navy with a reversed out, bordered hover state. Secondary buttons should always be used on green backgrounds.
+                              <br><br>
+                              Mouse over the button above to view hover state.</p>
+
+                        </div>
+
+                    </div>
+
+
+<div class="row" style="margin:40px 0px 20px 0px;">
+                  		<h4 id="loginbutton">Login button</h4>
+                  </div>
+
+                    <div class="row" style="margin:0px 0px 0px 0px;">
+
+                        <div  class="col-md-9" style="padding:0px;">
+
+                              <a href="#0" class="btn btn-success">Login Button <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                              <p style="margin-top:20px;">
+                              The Login (alternative) button is coloured EF Green with a reversed out, bordered hover state. Alternative buttons should only be used on navy backgrounds.
+                              <br><br>
+                              Mouse over the button above to view hover state.</p>
+
+                        </div>
+
+                    </div>
+		
+		<div class="row" style="margin:40px 0px 20px 0px;">
+                  		<h4 id="fold">Fold out button section</h4>
+                  </div>
+
+                    <div class="row" style="margin:0px 0px 0px 0px;">
+
+                        <div  class="col-md-4" style="padding:0px;">
+
+                              
+
+                                <ul class="Sidenav flex-column secondary">
+                                
+                                        <li class="haschildren Sidenav-catagory">Dropdown Menu</li>
+
+                                            <ul class="list-group">
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 01</li>
+                                                     <button class="btn btn-primary btn-sm new-button" type="button">PDF
+                                                     </button>  
+                                                </a>
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 02</li>
+                                                    <button class="btn btn-primary btn-sm new-button" type="button">Order
+                                                    </button>   
+                                                </a>
+                                                <a class="list-group-item"><li style="display:inline;">Sub Item 03</li>
+                                                    <button class="btn btn-primary-inverse btn-sm new-button" type="button">Read
+                                                    </button>   
+                                                </a>
+                                            </ul>
+                                    
+                                    </ul>
+
+                           
+
+                        </div>
+
+                    </div>
+
+	<!-- BUTTONS - END-->
+	
+	
+	
+	
+	<!-- TEXT LINKS - START-->
+	
+	
+                <div  style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px; ">
+                	<h2 id="textlinks">Text links</h2>
+				</div>
+
+                  <div class="row" style="margin:40px 0px 0px 0px;">
+                  		<h4 class="textlinks" id="">On white backgrounds</h4>
+                  </div>
+
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#fff; border: 1px solid #E8EBEC;">
+
+                      <div  class="col-md-12" style="padding:20px;">
+        					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum <a href="">incidunt accumsan metus nec interdum</a>. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</p>
+                      </div>
+
+                  </div>
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+
+                  <div class="row" style="margin:50px 0px 0px 0px;">
+                  		<h4 class="small" id="">On grey backgrounds</h4>
+                  </div>
+
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#E8EBEC;">
+
+                      <div  class="col-md-12" style="padding:20px;">
+        					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum <a href="">incidunt accumsan metus nec interdum</a>. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</p>
+                      </div>
+
+                  </div>
+
+
+                   <div class="row" style="margin:50px 0px 0px 0px;">
+                  		<h4 class="small" id="">On navy backgrounds</h4>
+                  </div>
+
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#1A2F55;">
+
+                      <div  class="col-md-12" style="padding:20px;">
+        					<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum <a href=""><span>incidunt accumsan metus nec interdum</span></a>. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</p>
+                      </div>
+
+                  </div>
+
+
+                  <div class="row" style="margin:50px 0px 0px 0px;">
+                  		<h4 class="small" id="">On green backgrounds</h4>
+                  </div>
+
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#368275;">
+
+                      <div  class="col-md-12" style="padding:20px;">
+        					<p class="text-whiteOnGreen">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis nec arcu non tincidunt. Vestibulum <a href=""><span>incidunt accumsan metus nec interdum</span></a>. Donec ac lacus est. Quisque malesuada, tortor ac mollis consectetur, turpis nulla scelerisque tortor, ut accumsan leo sem eget nisl.</p>
+                      </div>
+
+                  </div>
+
+	
+	
+	
+	
+	
+	
+	
+		<!-- ADVANCED SEARCH TEXT LINK
+	
+	  <div class="row" style="margin:60px 0px 0px 0px;">
+                  		<h4 class="small" id="">Advanced search text link</h4>
+                  </div>
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#fff;">
+
+                      <div  class="col-md-9" style="padding:0px;">
+						  <p class="advanced-search-text"><a href="">Advanced Search<span class="glyphicon glyphicon-menu-right" style="padding-left: 5px;"></span></a></p>
+                      </div>
+                  </div> -->
+	
+	
+	
+	
+	
+	
+		<!-- CLEAR FILTER TEXT LINK
+	
+	  <div class="row" style="margin:40px 0px 0px 0px;">
+                  		<h4 class="small" id="">Clear filters</h4>
+                  </div>
+                  <div class="row" style="margin:15px 0px 0px 0px; background-color:#fff;">
+
+                      <div  class="col-md-9" style="padding:0px;">
+						  <p class="advanced-search-text"><a href="">Clear Filters</a></p>
+                      </div>
+                  </div> -->
+
+
+              
+
+
+
+
+                   <div class="row" style="margin:60px 0px 0px 0px;">
+                  		<h4 id="textlist">List text links</h4>
+                   </div>
+
+
+                   <div class="row" style="margin:20px 0px 0px 0px;">
+
+                      <div  class="col-md-9" style="padding:0px;">
+                              <ul>
+                                <li>This is list item 01</li>
+                                <li><a href="">This is a linked list item</a></li>
+                                <li>This is list item 03</li>
+                                <li>This is list item 04</li>
+                                <li>This is list item 05</li>
+                                <li>This is list item 06</li>
+                              </ul>
+                       </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="row" style="margin:60px 0px 0px 0px;">
+                  		<h4 id="listgroup"> List group links</h4>
+                   </div>
+
+
+                   <div class="row" style="margin:20px 0px 0px 0px;">
+                  		<p class="lead">List group description text.</p>
+                   
+                   		<div  class="col-md-12" style="padding:0px; margin-top:10px;">
+                            <ul class="list-group">
+                                <a class="list-group-item scroll" href="#links"><li style="display:inline;">Text line 01 <span class="glyphicon glyphicon-menu-right" style="float:right; color:#067EB1; padding-right:20px;"></span></li></a>
+                                <a class="list-group-item scroll" href="#blocks"><li style="display:inline;">Text line 02<span class="glyphicon glyphicon-menu-right" style="float:right; color:#067EB1; padding-right:20px;"></span></li></a>
+                                <a class="list-group-item scroll" href="#feedback"><li style="display:inline;">Text line 03<span class="glyphicon glyphicon-menu-right" style="float:right; color:#067EB1; padding-right:20px;"></span></li></a>
+                                <a class="list-group-item scroll" href="#forms"><li style="display:inline;">Text line 04<span class="glyphicon glyphicon-menu-right" style="float:right; color:#067EB1; padding-right:20px;"></span></li></a>
+                                <a class="list-group-item scroll" href="#tables"><li style="display:inline;">Text line 05<span class="glyphicon glyphicon-menu-right" style="float:right; color:#067EB1; padding-right:20px;"></span></li></a>
+                            </ul>
+                    	</div>
+
+                    </div>
+	
+	<!-- TEXT LINKS - END-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+					
+
+
+
+
+                    <div class="row" style="margin:80px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                    	<h2 id="feedback">Feedback</h2>
+                    </div>
+
+                    <div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="cookie">Cookies</h4>
+                    </div>
+
+                    <div class="row">
+
+                            <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                                <div class="alert alert-secondary" role="alert" style="width:100%; padding:20px 40px 0px 40px;">
+                                    <p class="small" style="text-align:center;">The Eurofound website uses cookies to gather information necessary for browsing the website, in accordance with the Eurofound website.</p>
+                                    <p class="small" style="text-align:center;">By clicking on any link in the Eurofound web pages you are giving your consent to the use of cookies.</p>
+                                     <div class="row" >
+                                     <div class="col-md-2" style="display: flex; margin-bottom: 20px;">
+                                    </div>
+                                    <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                    	<a href="#" class="btn btn-success" style="margin-top: 10px;">I agree <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                    </div>
+
+                                    <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                   	 <a href="#" class="btn btn-primary" style=" margin-top: 10px; ">More information <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                    </div>
+                                    <div class="col-md-2" style="display: flex; margin-bottom: 20px;">
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+
+
+                    <div class="row" style="margin:40px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                    	<h4 id="positive">Feedback</h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                            <div class="alert alert-success" role="alert" style="width:100%;">
+                                <p class="text-white-bold" style="padding-top:10px;">This is some positive feedback text.</p>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="row">
+                        <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                            <div class="alert alert-success" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">This is some positive feedback text with a dismiss button. <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                    	</div>
+                    </div>
+
+
+
+
+                    <div class="row" style="margin:40px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                    	<h4 id="error">Error messages</h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                            <div class="alert alert-danger" role="alert" style="width:100%;">
+                                <p class="text-white-bold" style="padding-top:10px;">This is an error message!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                            <div class="alert alert-danger" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">This is an error message with dismiss button <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                        </div>
+                    </div>
+	
+	
+	
+	<!-- excessive filters-->
+	
+	 <div class="row">
+                        <div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+                            <div class="alert alert-excessive-filters" role="alert-excessive-filters" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">This error message appears when too many filters have been selected. It will tell the user what the problem is and also give the option to <a href="#"> Clear All Filters </a></p> 
+									
+									<div><span class="glyphicon glyphicon-remove" style="padding-top: 10px" ></span></div>
+                            </div>
+                        </div>
+                    </div>
+	
+	
+	
+	
+	
+	
+	 
+	
+	
+	
+	
+	
+	
+	
+					<div class="row" style="margin:40px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                   	     <h4 id="suggest-citation">Suggested citation</h4>
+                   </div>
+
+                   <div class="row">
+						<div class="col-md-12" style="display: flex; margin-top:20px;">
+							<div class="alert alert-primary" role="alert" style="width:100%; cursor:pointer;">
+								<p class="text-white-bold" style="padding-top:10px;">This is text for a Suggested Citation <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+							</div>
+						</div>
+                   </div>
+
+					
+	
+	
+	<div class="row" style="margin:40px 0px 20px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                   	     <h4 id="citationblock">Citation blocks</h4>
+                   </div>
+	
+	
+	  <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+
+							<div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+
+								<div class="citation-block-horizontal" style="background-color:#fff;  padding-left: 20px; ">
+
+										<div  class="citation-block-body-horizontal">
+											<p class="citation-block-title">Citation</p>
+											<p class="card-text small">Integer eleifend felis metus, in porttitor felis mattis non. Suspendisse vehicula lorem turpis, semper maximus libero condimentum nec. Etiam purus massa, gravida sed elit ut, vehicula ornare mauris. Aenean euismod mattis urna, quis sollicitudin dolor feugiat quis. Nunc volutpat a libero vitae pharetra.</p>
+											
+										</div>
+
+								</div>
+
+							</div>
+
+                        </div>
+	
+	
+<br>
+		
+		
+		<div class="row" style="background-color: #E8EBEC; padding:20px 0px 40px 0px;">
+			
+<div class="col-md-12" style="display: flex; margin: 20px 0px 20px 0px;"><p class="contentBlockTitle small">Export and share </p> </div>
+							<div class="col-md-12" style="display: flex; margin-bottom: 20px;">
+								
+
+								<div class="citation-block-horizontal" style="background-color:#fff;  padding-left: 20px; ">
+
+										<div  class="citation-block-body-horizontal">
+											<p class="citation-block-title">Citation</p>
+											<p class="card-text small">Integer eleifend felis metus, in porttitor felis mattis non. Suspendisse vehicula lorem turpis, semper maximus libero condimentum nec. Etiam purus massa, gravida sed elit ut, vehicula ornare mauris. Aenean euismod mattis urna, quis sollicitudin dolor feugiat quis. Nunc volutpat a libero vitae pharetra.</p>
+											
+										</div>
+
+								</div>
+
+							</div>
+			
+			<div class="col-md-4" style="display: flex; margin-bottom: 20px;">	<a href="#0" class="btn btn-primary-green">Copy citation <span class="glyphicon glyphicon-duplicate" style="float:right;"></span></a> </div>
+			<div class="col-md-4" style="display: flex; margin-bottom: 20px;">	<a href="#0" class="btn btn-primary" >Download data set <span class="glyphicon glyphicon-save" style="float:right;"></span></a> </div>
+				<div class="col-md-4" style="display: flex; margin-bottom: 20px;">	<a href="#0" class="btn btn-primary" >Share <span class="glyphicon glyphicon-share-alt" style="float:right;"></span></a> </div>
+
+                        </div>
+		
+		
+	
+	
+	
+	
+                    
+                    
+                    <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="tooltip">Tooltips</h4>
+                  </div>
+
+
+                  <div class="row" style="margin:20px 0px 0px 0px;">
+
+                      <div  class="col-md-9" style="padding:0px;">
+
+                  	<a href="#0" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="TOOLTIP ON TOP" >Hover for Tooltip <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+						  
+
+                      </div>
+
+                   </div>
+
+
+
+
+
+
+                  
+                 
+
+
+                
+
+	
+	
+	
+	
+	          
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	     
+	
+	
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+					<div class="row" style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                    	<h2 id="tables">Tables</h2>
+                    </div>
+                    <div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="striped">Striped table with header</h4>
+                        <p>&nbsp;</p>
+                    </div>
+
+
+                    <div class="row">
+
+                        <table class="table table-striped">
+                            <thead style="background-color:#067EB1; color:white;">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                            <caption>This is an optional table caption.</caption>
+                        </table>
+
+                    </div>
+
+
+                    <div class="row" style="margin:60px 0px 20px 0px;">
+                        <h4 id="side">Table with side bar</h4>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="row">
+
+                        <div class="table-responsive">
+                                <table class="table table-bordered">
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" style=" background-color:#067EB1; color:white; text-align:center; padding:10px 30px;">1</th>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style=" background-color:#067EB1; color:white; text-align:center; padding:10px 30px;">2</th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style=" background-color:#067EB1; color:white; text-align:center; padding:10px 30px;">3</th>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                            <td style="background-color:#F6F7F7;">Table cell</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                    </div>
+	
+	
+	
+	
+				<div style="width:100%; float:left; margin:60px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+					<h2 id="meta">Metadata </h2>
+              <div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="metalisting">Metadata listing</h4>
+                    </div>
+	
+                      <!-- Metadata compact-->
+                <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC; padding:5px 5px;">
+                            <p class="font-weight-bold" style="color:#4c4c4c; margin-bottom: 0rem;">Authors:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;margin-bottom: 0rem;">
+                            <a href="">Firstname Lastname</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="">Firstname Lastname</a>
+                        </div>
+
+                   </div>
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;">
+                            <p class="font-weight-bold" style="color:#4c4c4c; margin-bottom: 0rem;">Number of pages:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;margin-bottom: 0rem;">
+                            <p style=" margin-bottom: 0rem;">26</p>
+                        </div>
+
+                   </div>
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;">
+                            <p class="font-weight-bold" style="color:#4c4c4c;margin-bottom: 0rem;">Reference nÂº:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;margin-bottom: 0rem;">
+                            <p style=" margin-bottom: 0rem;">EF18046 </p>
+                        </div>
+
+                   </div>
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;margin-bottom: 0rem;">
+                            <p class="font-weight-bold" style="color:#4c4c4c;margin-bottom: 0rem;">ISBN:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;">
+                            <p style=" margin-bottom: 0rem;">978-92-897-1643-7</p>
+                        </div>
+
+                   </div>
+
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;margin-bottom: 0rem;">
+                            <p class="font-weight-bold" style="color:#4c4c4c; margin-bottom: 0rem;">Observatory:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;">
+                            <p style=" margin-bottom: 0rem;"><a href="">EurWORK</a></p>
+                        </div>
+
+                   </div>
+
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;">
+                            <p class="font-weight-bold" style="color:#4c4c4c;margin-bottom: 0rem;">Topics:</p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;">
+                            <p style=" margin-bottom: 0rem;"><a href="">EurWORK</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Discrimination at work;</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Gender equality;</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Industrial relations;</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Inequality;</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Work-life balance;</a></p>
+                            <p style=" margin-bottom: 0rem;"><a href="">Working conditions </a></p>
+                        </div>
+
+                   </div>
+
+                   <div class="row">
+                        <div class="col-md-3" style="border-top: 1px solid #E8EBEC;  padding:5px 5px;">
+                            <p class="font-weight-bold" style="color:#4c4c4c;">Permalink: </p>
+                        </div>
+
+                        <div class="col-md-8" style="border-top: 1px solid #E8EBEC; padding:5px 5px;">
+                            <p style=" margin-bottom: 0rem;"><a href="">eurofound.link/ef18046</a></p>
+                        </div>
+
+                   </div>
+                
+					
+					
+					
+					
+					
+					
+			<div class="row" style="margin:80px 0px 20px 0px;">
+                        <h4 id="metalinks">Metadata Source and data collection </h4>
+                    </div>
+					<div class="row" style="background-color: #FFFFFF;">
+					<div class="col-md-12" style="display: flex margin-bottom: 0px;">
+								<div class="search-results" style="background-color:#FFFFFF;">
+										<div  class="search-results-body">
+											<p class="search-results-category-titles "><strong>Source:</strong> European Working Conditions Survey &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; European Quality of life Survey</p>
+											<p class="search-results-category-titles "><strong>Data Collection:</strong> <a href="#">European Quality of Life Data</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="#">European Working Conditions Data</a></p> 
+											</div>
+								</div>
+							</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- START - CONTENT BLOCK 5 -->
+	
+	<div class="row" style="margin:60px 0px 20px 0px;">
+                        <h4 id="inlinemetadatadisplay">Inline metadata display</h4>
+                    </div>
+	
+	
+	  <div class="row" style="background-color: #E8EBEC; padding:20px 0px 0px 0px;">
+
+                           <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="metadata-block">
+									<div class="metadata-block-background" style="background-color: #f0f0f0;"><p class="metadata-block-title"><span class="glyphicon glyphicon-hdd" style="padding-right:10px;" ></span>Data based on </p>
+										 </div>
+                                  <div class="metadata-block-body">
+                                      <div class="card-text small">  
+									<p>European Working Conditions Survey (2015) </p> 
+								</div>
+                                  </div>
+                                </div>
+                            </div>
+					
+
+                        <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+							
+							
+							
+                                <div class="metadata-block">
+									<div class="metadata-block-background" style="background-color: #f0f0f0;"><p class="metadata-block-title"><span class="glyphicon glyphicon-question-sign" style="padding-right:10px;"></span>Original question </p>
+										 </div>
+                                  <div class="metadata-block-body" >
+									    <div class="card-text small" >  
+									<p>"How many hours do you usually work perweek in your main paid job" </p> 
+								</div>
+                                 <p class="metadata-block-links"><a href="#">Question 24 from the sixth EWCS questionnaire</a></p>
+                                  </div>
+                                </div>
+                            </div>
+		  
+		  			 <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="metadata-block">
+										<div class="metadata-block-background" style="background-color: #f0f0f0;"><p class="metadata-block-title"><span class="glyphicon glyphicon-stats" style="padding-right:10px;" ></span>Variable measured </p>
+										 </div>
+                                  <div class="metadata-block-body">
+                                   
+									  <div class="card-text small">  
+									<p>European Working Conditions Survey (2015) </p> 
+								</div>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+	
+		</div>
+	<!-- END - CONTENT BLOCK 5-->
+	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+            </div>
+            
+	
+     </div>
+
+
+</div>
+            </div>
+			
+
+
+
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:80px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2019</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+
+</body>
+</html>

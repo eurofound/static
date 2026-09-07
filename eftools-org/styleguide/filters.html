@@ -1,0 +1,1908 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Page Componants</title>
+
+
+
+
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+
+<link href="css/range.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	 $(document).ready(function() {
+        $( "#mySlider" ).slider({
+          range: true,
+          min: 1990,
+          max: 2019,
+			values: [ 1992, 2019 ],
+          slide: function( event, ui ) {
+         $( "#price" ).val( "" + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+
+				 $( ".start-range").html(ui.values[ 0 ]);
+				 $( ".end-range").html(ui.values[ 1 ]);
+         }
+      });
+		 
+		 
+		         $( "#mySlider2" ).slider({
+          range: true,
+          min: 1990,
+          max: 2019,
+			values: [ 1992, 2019 ],
+          slide: function( event, ui ) {
+         $( "#price2" ).val( "" + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+
+				 $( ".start-range2").html(ui.values[ 0 ]);
+				 $( ".end-range2").html(ui.values[ 1 ]);
+         }
+      });
+
+      $( "#price" ).val( "" + $( "#mySlider" ).slider( "values", 0 ) + " - " + $( "#mySlider" ).slider( "values", 1 ) );
+      $( ".start-range").html($( "#mySlider" ).slider( "values", 0 ));
+			$( ".end-range").html($( "#mySlider" ).slider( "values", 1 ));
+		 
+		 
+		       $( "#price2" ).val( "" + $( "#mySlider2" ).slider( "values", 0 ) + " - " + $( "#mySlider2" ).slider( "values", 1 ) );
+      $( ".start-range2").html($( "#mySlider2" ).slider( "values", 0 ));
+			$( ".end-range2").html($( "#mySlider2" ).slider( "values", 1 ));
+		 
+		 
+		 /****************************************/
+		 
+		 
+		  $(".drop-search").click(function(event){
+           // $(this).find("#collapseExample").addClass("show");
+			  $("#collapseExample").addClass("show");
+        });
+		 
+		 
+		   $(".btn-primary-search").click(function(event){
+			   $("#collapseExample").removeClass("show");
+			    });
+		 
+       	/****GREY ONE*******/
+	
+			  $(".drop-search2").click(function(event){
+			
+           // $(this).find("#collapseExample").addClass("show");
+			  $("#collapseExample-TWO").addClass("show");
+        });
+		 
+		 
+		   $(".btn-primary-search2").click(function(event){
+		
+			   $("#collapseExample-TWO").removeClass("show");
+			    });
+		 
+		 
+		  $('.start-hidden2').hide();
+            $('.toggle-trigger2').click(function() { $(this).next('.toggle').slideToggle(); })
+		 
+		 
+        });	
+	
+	
+	
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+	
+	
+
+
+	  $('[data-toggle="tooltip"]').tooltip();
+
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+	
+	
+	
+	
+
+});
+
+	
+</script>
+
+</head>
+
+<body>
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="../data/" role="button">Data Visualisation Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colour palette</a>
+	</li>
+  <li class="nav-item">
+    <a class="nav-link" href="fonts.html">Fonts</a>
+  </li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="imagery.html">Imagery</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="navigation.html">Navigation</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="components.html">Page components</a>
+	</li>
+	  <li class="nav-item active">
+				<p class="nav-link">Filters</p>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="forms.html">Forms</a>
+			</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="video.html">Video</a>
+			</li>
+  </ul>
+</nav>
+
+
+<div class="container" style="margin-top: 60px;">
+
+	<div class="row">
+
+		   <div class="col-md-3" style="margin-bottom: 50px;">
+			  <div class="sticky-top">
+
+						<ul class="Sidenav flex-column secondary">
+
+					  <li class="haschildren Sidenav-catagory">Filters</li>
+
+						<ul class="list-group">
+						  <a class="scroll list-group-item haschildren arrow-after" href="#search"><li style="display:inline;">Search</li></a>
+							<ul class="list-group">
+							  <a class="scroll list-group-item arrow small first" href="#search"><li>Search</li></a>
+								<a class="scroll list-group-item arrow small first" href="#searchdrop"><li>Search with dropdowns</li></a>
+								
+							   </ul>
+
+
+
+							 <a class="scroll list-group-item haschildren arrow-after" href="#selectors"><li>Selectors</li></a>
+							<ul class="list-group">
+								<a class="scroll list-group-item arrow small first" href="#slider"><li>Multi-range slider</li></a>
+
+							  <a class="scroll list-group-item arrow small first" href="#dropdown"><li>Dropdown</li></a>
+								   <a class="scroll list-group-item arrow small first" href="#multiselect"><li>Multi-select dropdown</li></a>
+							  <a class="scroll list-group-item arrow small first" href="#horselect"><li>Horizontal selector</li></a>
+								   <a class="scroll list-group-item arrow small first" href="#radio"><li>Radio buttons</li></a>
+							  <a class="scroll list-group-item arrow small first" href="#disabled"><li>Disabled filter</li></a>
+								<a class="scroll list-group-item arrow small first" href="#select"><li>Search/select filter</li></a>
+							</ul>
+							<a class="scroll list-group-item haschildren" href="#filter-buttons"><li>Filter buttons</li></a>
+							<a class="scroll list-group-item haschildren" href="#datanav"><li>Data navigator</li></a>
+
+						</ul>
+
+					</ul>
+
+			  </div>
+			
+			</div>
+
+
+
+<div  class="col-md-9" style="padding-top: 10px;">
+	
+	
+	<h2 id="filters">Filters</h2>
+                 
+                  
+    <div class="row" style="margin:40px 0px 0px 0px;">
+        <p>Filters have been constructed using Bootstrap's extensive built in fiter components and are always displayed against an EF Silver or white background to ensure clarity and easy usability.</p>
+    </div>
+	
+	
+	<div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+		<h2 id="search">Search</h2> 
+	</div>
+
+                    	
+	<div class="row" style="margin:0px 0px 20px 0px; padding-top:20px;">
+    	<h4 id="subscriptionform">Search: White background</h4>
+    </div>
+	
+	<p>The search bar contains a magnifying glass icon for the clickable search function. In its non activated state, the search button is the EF Navy colour white EF Green being the hover over colour. </p>
+	
+		
+		
+		
+      <section class="search">
+
+          <div class="row" >
+
+              <div class="col-lg-4" style="background: #FFFFFF">
+
+              <div class="search-component" style="padding-top: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+				  
+				  
+              </div>
+
+              </div>
+          </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  	  
+		  
+		  
+		  
+		   <div class="row" >
+		      <div class="col-lg-6" style="background: #FFFFFF">
+
+              <div class="search-component" style="padding-top: 20px; padding-bottom: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+				  
+				  
+              </div>
+
+              </div>
+		  </div>
+		  
+		  
+		  
+		  <div class="row" >
+		      <div class="col-lg-9" style="background: #FFFFFF">
+
+              <div class="search-component2" style="padding-bottom: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+				  
+				  
+              </div>
+
+              </div>
+		  </div>
+		  
+		  
+		  
+		  
+
+      </section>
+		
+	
+	
+	<div class="row" style="margin:0px 0px 20px 0px; padding-top:20px;">
+    	<h4 id="subscriptionform">Search: Grey background</h4>
+    </div>
+	
+		
+      <section class="search">
+
+          <div class="row" style="background: #E8EBEC" >
+
+              <div class="col-lg-4">
+
+              <div class="search-component" style="padding-top: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+		  
+		  
+		      <div class="row" style="background: #E8EBEC" >
+
+              <div class="col-lg-6" >
+
+              <div class="search-component" style="padding-top: 20px; padding-bottom: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+		  
+		  
+		  
+		  
+		   <div class="row" style="background: #E8EBEC" >
+
+              <div class="col-lg-9" >
+
+              <div class="search-component2" style="padding-bottom: 20px" >
+
+                  <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter keywords">
+                      <span class="input-group-btn" >
+                          <button class="btn-search btn-primary-search" style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+                      </span>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+		  
+		  
+		  
+		  
+
+      </section>
+	
+                  
+
+	
+	
+	<div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+    	<h4 id="searchdrop">Search (with Prompt and dropdown): White background</h4>
+                   
+	
+	<p>The search with dropdowns has a functionality that shows 'Most popular searches' and 'Most recent searches' when the user searches for something. All of the options listed under these two titles are clickable and act as search criteria, saving the user from having to type any of the popular or recent search queries.  </p>
+	<p>This is activated when the user clicks on the search bar and deactivates when the user clicks on the search icon.</p>
+	
+	</div>
+			
+<section class="search-with-dropdown">
+
+	<div class="row" style="background: #FFFFFF">
+		<div class="col-lg-12"  style="padding-top: 20px;">
+
+			<div class="search-component-with-dropdown">
+
+			<div class="input-group">
+				 <input type="email" class="form-control drop-search2" placeholder="Search for things like 'working hours' or 'social conditions'">
+
+				 <span class="input-group-btn">
+				 <button class="btn-search btn-primary-search2"  style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+
+				 </span>
+
+				  </div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+</section>
+	
+		<div class="row">			
+	<div class="col-lg-12 column  search-drop-values">
+		<div class="collapse" id="collapseExample-TWO">
+			<div class="row">
+				<div class="col-lg-6 column" style="padding: 30px">
+                  <p class="search-dropdown-title">Most Popular</p>
+                  <p class="card-text small"> <a href="#">Workplace fairness, cooperation and trust</a> 
+                  <br><a href="#">WHO-5 mental well-being scale</a> </p>
+				</div>
+
+				<div class="col-lg-6 column" style="padding: 30px">
+					<p class="search-dropdown-title">Most Recent</p>
+                    <p class="card-text small"> <a href="#">WHO-5 mental well-being scale</a> 
+                    <br><a href="#">Preferences of working hours per week</a></p>
+				</div>
+			</div>
+		</div>
+
+  </div>
+</div>
+	
+	
+		<div class="row"  style="margin:60px 0px 20px 0px;">
+    	<h4 id="searchdrop">Search (with Prompt and dropdown): Grey background</h4>
+                   
+	
+		
+	</div>
+			
+<section class="search-with-dropdown">
+
+	<div class="row grey-background">
+		<div class="col-lg-12"  style="padding-top: 20px; padding-bottom: 20px">
+
+			<div class="search-component-with-dropdown">
+
+			<div class="input-group">
+				 <input type="email" class="form-control drop-search" placeholder="Search for things like 'working hours' or 'social conditions'">
+
+				 <span class="input-group-btn">
+				 <button class="btn-search btn-primary-search"  style="cursor: pointer;" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+
+				 </span>
+
+				  </div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	<div class="row">			
+	<div class="col-lg-12 column  search-drop-values">
+		<div class="collapse" id="collapseExample">
+			<div class="row">
+				<div class="col-lg-6 column" style="padding: 30px">
+                  <p class="search-dropdown-title">Most Popular</p>
+                  <p class="card-text small"> <a href="#">Workplace fairness, cooperation and trust</a> 
+                  <br><a href="#">WHO-5 mental well-being scale</a> </p>
+				</div>
+
+				<div class="col-lg-6 column" style="padding: 30px">
+					<p class="search-dropdown-title">Most Recent</p>
+                    <p class="card-text small"> <a href="#">WHO-5 mental well-being scale</a> 
+                    <br><a href="#">Preferences of working hours per week</a></p>
+				</div>
+			</div>
+		</div>
+
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+
+	 
+	
+	
+	
+	
+	
+	
+	  
+             
+
+
+	
+	 <div class="row" style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+     	<h2 id="selectors">Selectors</h2>
+     </div>
+	
+		
+    <div class="row" style="margin:40px 0px 20px 0px; ">
+        <h4 id="slider">Multi-range slider: White background</h4>	
+    </div>
+	
+	<div class="row ranger-scope" style="padding-top: 30px; padding-bottom: 10px; background: #FFFFFF">
+	 	<div class="col-md-12 column">
+			<div id="mySlider"></div>
+			<input type="hidden" id="price" name="date-range">
+			</div>
+		
+		 <div class="col-md-6 column start-range" style="padding-top: 10px"></div>
+		 <div class="col-md-6 column end-range" style="padding-top: 10px"></div>
+			
+</div>
+	
+	
+	
+	
+	
+	    <div class="row" style="margin:40px 0px 20px 0px; ">
+        <h4 id="slider">Multi-range slider: Grey background</h4>	
+    </div>
+	
+	
+	
+	
+	
+	<div class="row ranger-scope grey-background" style="padding-top: 30px; padding-bottom: 10px;">
+	 	<div class="col-md-12 column">
+			<div id="mySlider2"></div>
+			<input type="hidden" id="price2" name="date-range">
+			</div>
+		
+		 <div class="col-md-6 column start-range2" style="padding-top: 10px"></div>
+		 <div class="col-md-6 column end-range2" style="padding-top: 10px"></div>
+			
+</div>
+	
+	
+	
+	
+	
+	
+	
+      <div>
+          
+	
+
+	
+	
+	<!-- DROPDOWN MENU START-->
+	     <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="dropdown">Dropdown: White background</h4>
+                  </div>
+		
+		
+	
+		
+		<div class="row" >
+                    <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px; background: #FFFFFF">
+
+						<div>
+							
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4; cursor:pointer;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+							
+						   <div id="dropdowns2" class="toggle start-hidden2;" style="display: none;">
+							   <div style="border: 1px solid; border-color: #e3e4e4;">
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 01</li></a>
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 02</li></a>
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 03</li></a>
+								  <a class="dropdown-group-item " href="#0"><li style="display:inline;">Option 04</li></a>
+							   </div>
+						   </div>
+							
+						</div>
+
+                    </div>
+
+        </div>
+	
+	
+		
+		<!-- DROPDOWN MENU END-->
+		  
+		  <!-- DROPDOWN MENU START-->
+	     <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="dropdown">Dropdown: Grey background</h4>
+                  </div>
+		
+		
+	
+		
+		<div class="row " >
+                    <div class="col-lg-4"  style="padding-top: 20px; padding-bottom: 20px; background: #E8EBEC">
+
+						<div>
+							
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4; cursor:pointer;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+							
+						   <div id="dropdowns2" class="toggle start-hidden;" style="display: none;">
+							   <div style="border: 1px solid; border-color: #e3e4e4;">
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 01</li></a>
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 02</li></a>
+								  <a class="dropdown-group-item"  href="#0"><li style="display:inline;">Option 03</li></a>
+								  <a class="dropdown-group-item " href="#0"><li style="display:inline;">Option 04</li></a>
+							   </div>
+						   </div>
+							
+						</div>
+
+                    </div>
+
+        </div>
+	
+	
+		
+		<!-- DROPDOWN MENU END-->
+		
+		
+		
+		
+		
+		
+	
+	     <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="multiselect">Multi-select dropdown: White background </h4>
+                  </div>
+	
+	
+	
+	
+		
+	<div class="row" >
+                    <div class="col-lg-4"  style="padding-top: 20px; padding-bottom: 20px; background: #FFFFFF">
+
+						<div>
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4; cursor:pointer;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+						   <div id="dropdowns2" class="toggle start-hidden" >
+							   <div style="border: 1px solid #8F8F8F;">
+								   
+								   
+								   <ul class="multi-dropdown">
+									  <li><label><input type="checkbox"/> Option A</label>
+										<ul class="accounts">
+										  <li><label><input type="checkbox"/> Option A1</label>
+										  </li>
+										  <li><label><input type="checkbox"/> Option A2</label>
+
+										  </li>
+												  <li><label><input type="checkbox"/> Option  A3</label>
+										  </li>
+										</ul>
+										  </li>
+
+
+										  <li><label><input type="checkbox"/> Option B </label>
+										<ul class="accounts">
+										  <li><label><input type="checkbox"/> Option B1</label>
+										  </li>
+										  <li><label><input type="checkbox"/> Option B2</label>
+
+										  </li>
+												  <li><label><input type="checkbox"/> Option B3</label>
+										  </li>
+
+											  </ul>
+									  </li>
+									</ul>
+							   </div>
+						   </div>
+						</div>
+                    </div>
+            </div>
+	
+	
+	
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		    <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="multiselect">Multi-select dropdown: Grey background </h4>
+                  </div>
+	
+	
+	
+	
+		
+	<div class="row" >
+                    <div class="col-lg-4"  style="padding-top: 20px; padding-bottom: 20px; background: #E8EBEC">
+
+						<div>
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4; cursor:pointer;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+						   <div id="dropdowns2" class="toggle start-hidden" >
+							   <div style="border: 1px solid #8F8F8F;">
+								   
+								   
+								   <ul class="multi-dropdown">
+									  <li><label><input type="checkbox"/> Option A</label>
+										<ul class="accounts">
+										  <li><label><input type="checkbox"/> Option A1</label>
+										  </li>
+										  <li><label><input type="checkbox"/> Option A2</label>
+
+										  </li>
+												  <li><label><input type="checkbox"/> Option  A3</label>
+										  </li>
+										</ul>
+										  </li>
+
+
+										  <li><label><input type="checkbox"/> Option B </label>
+										<ul class="accounts">
+										  <li><label><input type="checkbox"/> Option B1</label>
+										  </li>
+										  <li><label><input type="checkbox"/> Option B2</label>
+
+										  </li>
+												  <li><label><input type="checkbox"/> Option B3</label>
+										  </li>
+
+											  </ul>
+									  </li>
+									</ul>
+							   </div>
+						   </div>
+						</div>
+                    </div>
+            </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	
+	
+	
+	
+	
+	     <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="horselect">Horizontal selector: White background</h4>
+                  </div>
+	
+	
+		
+		
+		
+		<div class="row" >
+			
+                                        <div class="col-lg-4"  style="padding-top: 20px; background: #FFFFFF">
+
+
+						<nav class="nav  justify-content-left" >
+							
+							<ul class="pagination">
+
+								<li><a class="horizontal-selector-link-selected" href="#">All</a>
+								</li>
+								
+								<li><a class="horizontal-selector-link"  href="#0">1</a>
+								</li>
+								<li><a class="horizontal-selector-link"  href="#0">2</a>
+								</li>
+								<li><a class="horizontal-selector-link"  href="#0">3</a>
+                                </li>
+								<li><a class="horizontal-selector-link"  href="#0">4</a>
+								</li>
+
+							</ul>
+						</nav>
+
+                    
+			</div>
+            </div>
+		  
+		  
+		  
+		   <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="horselect">Horizontal selector: Grey background</h4>
+                  </div>
+	
+	
+		
+		
+		
+		<div class="row" >
+			
+                                        <div class="col-lg-4"  style="padding-top: 20px; background: #E8EBEC">
+
+
+						<nav class="nav  justify-content-left" >
+							
+							<ul class="pagination">
+
+								<li><a class="horizontal-selector-link-selected" href="#">All</a>
+								</li>
+								
+								<li><a class="horizontal-selector-link"  href="#0">1</a>
+								</li>
+								<li><a class="horizontal-selector-link"  href="#0">2</a>
+								</li>
+								<li><a class="horizontal-selector-link"  href="#0">3</a>
+                                </li>
+								<li><a class="horizontal-selector-link"  href="#0">4</a>
+								</li>
+
+							</ul>
+						</nav>
+
+                    
+			</div>
+            </div>
+		
+		
+		
+		
+		
+	
+	
+	
+	                    <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="radio">Radio buttons: White background</h4>
+                  </div>
+		  <div class="col-lg-4">
+	<div class="row" style="background-color:#FFFFFF; padding:20px;">
+                          <form>
+                               <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By gender
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By employment status 
+                                </label>
+                              </div>
+                             <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By sector 
+                                </label>
+                              </div>
+                         </form>
+                    </div>
+		  </div>
+	
+		 
+		  
+		  
+		  
+		  
+		  
+		  
+		                      <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="radio">Radio buttons: Grey background</h4>
+                  </div>
+		  <div class="col-lg-4">
+	<div class="row" style="background-color:#E8EBEC; padding:20px;">
+                          <form>
+                               <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By gender
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By employment status 
+                                </label>
+                              </div>
+                             <div class="radio">
+                                <label>
+                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                  By sector 
+                                </label>
+                              </div>
+                         </form>
+                    </div>
+		  </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		
+	
+	<!-- DISABLED FILTER DROPDOWN - START -->
+	
+	     <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="disabled">Disabled filter: White background</h4>
+                  </div>
+	
+	<p> The disabled filter dropdown shows a light grey non-selectable disabled option at the end of the list.    </p>
+		
+	
+		
+	<div class="row" >
+                    <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px; background: #FFFFFF">
+
+						<div>
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+						   <div id="dropdowns2" class="toggle start-hidden">
+							   <div style="border: 1px solid #8F8F8F;">
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;">25-34</li></a>
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;">35-49</li></a>
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;"><stong>50-64</stong></li></a>
+                              <a class="dropdown-group-item2 disabled " href="#0" ><li style="display:inline;">65+</li></a>
+							   </div>
+						   </div>
+						</div>
+
+                    </div>
+
+            </div>
+	
+	
+	<!-- DISABLED FILTER DROPDOWN - END -->
+	
+		  
+		  
+		  <!-- DISABLED FILTER DROPDOWN - START -->
+	
+	     <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="disabled">Disabled filter: Grey background</h4>
+                  </div>
+	
+	
+		
+	
+		
+	<div class="row" >
+                    <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px; background: #E8EBEC">
+
+						<div>
+						   <button class="btn-filter-dropdown btn-primary toggle-trigger" type="button" style="color:grey; background-color:white; border:1px solid #e3e4e4;">
+						   Select <span class="glyphicon glyphicon-menu-down" style="color: grey; float:right;"></span>
+						   </button>
+						   <div id="dropdowns2" class="toggle start-hidden">
+							   <div style="border: 1px solid #8F8F8F;">
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;">25-34</li></a>
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;">35-49</li></a>
+                              <a class="dropdown-group-item2"  href="#0"><li style="display:inline;"><stong>50-64</stong></li></a>
+                              <a class="dropdown-group-item2 disabled " href="#0" ><li style="display:inline;">65+</li></a>
+							   </div>
+						   </div>
+						</div>
+
+                    </div>
+
+            </div>
+	
+	
+	<!-- DISABLED FILTER DROPDOWN - END -->
+	
+	
+	
+	
+	
+
+	
+	<!-- SELECT FILTER - START -->
+	
+	     <div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                  		<h4 id="select">Search/select filter: White background </h4>
+                  </div>
+	
+	
+		
+	
+		
+		<div class="row" >
+                    <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px; background: #FFFFFF">
+						
+						
+                    <div class="left" >	
+                        <section class="search">
+                                <div class="search-component" >
+                                    <div class="input-group">
+                                        <input type="email" class="form-control narrow" placeholder="Type or select">
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+						
+
+					<div class="left">
+						<button type="button" class="btn-search btn-primary-search padded" data-toggle="modal" data-target="#exampleModal" style="background-color:#a5a5a5; border:3px solid #a5a5a5; height:54px;" >
+							<span class="glyphicon glyphicon-th-list" style="color:white; float:right;"></span>
+						</button>
+					</div>		
+						
+						
+						
+						
+						
+						
+						
+
+<!-- Modal -->
+					
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-lb">
+      <div class="modal-header-lb">
+        <h3 class="modal-title-lb" id="exampleModalLabel">Select topic</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		
+		<div class="row" >
+			<div class="col-lg-12">	
+		
+			<section class="search-lb">
+			<div class="search-component-lb">
+			<div class="input-group">
+         	<input type="email" class="form-control" placeholder="Search...">
+         	<span class="input-group-btn">
+         	<button class="btn-search btn-primary-search" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+         	</span>
+          	</div>
+			</div>
+			</section>
+		
+			</div>
+		</div>
+		
+		
+      <div class="modal-body-lb">
+          <div class="row" >
+                    
+						<div class="col-lg-4">	
+				
+							<li ><label class="option-title-lb"><input type="checkbox"/>Living conditions of household </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Conditions of accommodation</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Financial situation</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Economising</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Local area</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Social relations and activities </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Volunteering</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Political engagement</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Free-time and leisure</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social inequality</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Health and well-being </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Mental well-being</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Health and safety at the workplace</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Free-time and leisure</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social inequality</label>
+							</li>
+							</ul>
+							</li>
+								
+								
+							
+							
+	  
+			  			</div>
+			  
+			  
+			  
+			  
+			  
+						<div class="col-lg-4">
+							
+						<li ><label class="option-title-lb"><input type="checkbox"/>Work-life balance </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Household responsibilities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Homework responsibilities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Work and family time</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Care and education</label>
+							</li>
+							</ul>
+							</li>
+	  
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Work environment </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Physical environment at work</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Social environment at work</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Working conditions </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Skills and training</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Working time</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Pay and income </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Work intensity</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Workplace organisation </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Autonomy at work</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Teamwork</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Employee involvement </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Workplace innovation and development </label>
+							</li>
+									<li><label class="options-lb"><input type="checkbox"/> Employee representation </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+			  			</div>
+			  
+			  
+			  
+			  
+			  
+						<div class="col-lg-4">	
+	
+	 						<li ><label class="option-title-lb"><input type="checkbox"/>Employment relationship </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Employment status and security</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Self-employment</label>
+							</li>
+							</ul>
+							</li>
+	  
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Provision of public services </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Childcare</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Education </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social services </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Local services</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Online services </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Provision of health services </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> General practitioner, dentist and mental healthcare</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Hospital and emergency healthcare </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Long-term care </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+								<li ><label class="option-title-lb"><input type="checkbox"/>Trust in institutions </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Trust in public authorities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Trust in private organisations</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+			
+			  			</div>
+			  
+			  
+			  
+			 
+		  </div>
+      </div>
+      <div class="modal-footer-lb row">
+        
+		
+  <div class="col-md-3 offset-md-9">
+	  
+	  
+	  <a href="#0" class="btn btn-success">Select filters <span class="glyphicon glyphicon-chevron-right" style="float:right;"></span></a>
+		  </div>
+		    <div class="col-md-3 offset-md-9">
+		  	  <span class="secondary-action"> <a href="">Cancel </a> </span><span class="secondary-action right"> <a href="">Clear filters</a> </span>
+		  </div>
+
+       
+		  
+		  		
+		  
+      </div>
+    </div>
+  </div>
+</div>
+			
+					<!-- END OF MODAL -->	
+						
+						
+						
+						
+						
+
+                    </div>
+            </div>
+	</div>
+	
+	<!-- SELECT FILTER - END -->
+	
+		  
+		  
+		  
+		  
+		  
+		  
+		  <!-- SELECT FILTER - START -->
+	
+	     <div class="row" style="margin:20px 0px 20px 0px;">
+                  		<h4 id="select">Search/select filter: Grey background </h4>
+                  </div>
+	
+	
+		
+	
+		
+		<div class="row" >
+                    <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px; background: #E8EBEC">
+						
+						
+                    <div class="left" >	
+                        <section class="search">
+                                <div class="search-component" >
+                                    <div class="input-group">
+                                        <input type="email" class="form-control narrow" placeholder="Type or select">
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+						
+
+					<div class="left">
+						<button type="button" class="btn-search btn-primary-search padded" data-toggle="modal" data-target="#exampleModal" style="background-color:#a5a5a5; border:3px solid #a5a5a5; height:54px;" >
+							<span class="glyphicon glyphicon-th-list" style="color:white; float:right;"></span>
+						</button>
+					</div>		
+						
+						
+						
+						
+						
+						
+						
+
+<!-- Modal -->
+					
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-lb">
+      <div class="modal-header-lb">
+        <h3 class="modal-title-lb" id="exampleModalLabel">Select topic</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		
+		<div class="row" >
+			<div class="col-lg-12">	
+		
+			<section class="search-lb">
+			<div class="search-component-lb">
+			<div class="input-group">
+         	<input type="email" class="form-control" placeholder="Search...">
+         	<span class="input-group-btn">
+         	<button class="btn-search btn-primary-search" type="submit"><span class="glyphicon glyphicon-search"  ></span></button>
+         	</span>
+          	</div>
+			</div>
+			</section>
+		
+			</div>
+		</div>
+		
+		
+      <div class="modal-body-lb">
+          <div class="row" >
+                    
+						<div class="col-lg-4">	
+				
+							<li ><label class="option-title-lb"><input type="checkbox"/>Living conditions of household </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Conditions of accommodation</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Financial situation</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Economising</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Local area</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Social relations and activities </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Volunteering</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Political engagement</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Free-time and leisure</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social inequality</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Health and well-being </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Mental well-being</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Health and safety at the workplace</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Free-time and leisure</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social inequality</label>
+							</li>
+							</ul>
+							</li>
+								
+								
+							
+							
+	  
+			  			</div>
+			  
+			  
+			  
+			  
+			  
+						<div class="col-lg-4">
+							
+						<li ><label class="option-title-lb"><input type="checkbox"/>Work-life balance </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Household responsibilities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Homework responsibilities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Work and family time</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Care and education</label>
+							</li>
+							</ul>
+							</li>
+	  
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Work environment </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Physical environment at work</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Social environment at work</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Working conditions </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Skills and training</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Working time</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Pay and income </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Work intensity</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Workplace organisation </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Autonomy at work</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Teamwork</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Employee involvement </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Workplace innovation and development </label>
+							</li>
+									<li><label class="options-lb"><input type="checkbox"/> Employee representation </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+			  			</div>
+			  
+			  
+			  
+			  
+			  
+						<div class="col-lg-4">	
+	
+	 						<li ><label class="option-title-lb"><input type="checkbox"/>Employment relationship </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Employment status and security</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Self-employment</label>
+							</li>
+							</ul>
+							</li>
+	  
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Provision of public services </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Childcare</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Education </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Social services </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Local services</label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Online services </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							<li ><label class="option-title-lb"><input type="checkbox"/>Provision of health services </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> General practitioner, dentist and mental healthcare</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Hospital and emergency healthcare </label>
+							</li>
+								<li><label class="options-lb"><input type="checkbox"/> Long-term care </label>
+							</li>
+							</ul>
+							</li>
+							
+							
+							
+								<li ><label class="option-title-lb"><input type="checkbox"/>Trust in institutions </label>
+							<ul class="accounts">
+							<li><label class="options-lb"><input type="checkbox"/> Trust in public authorities</label>
+							</li>
+							<li><label class="options-lb"><input type="checkbox"/> Trust in private organisations</label>
+							</li>
+							</ul>
+							</li>
+							
+							
+			
+			  			</div>
+			  
+			  
+			  
+			 
+		  </div>
+      </div>
+      <div class="modal-footer-lb row">
+        
+		
+  <div class="col-md-3 offset-md-9">
+	  
+	  
+	  <a href="#0" class="btn btn-success">Select filters <span class="glyphicon glyphicon-chevron-right" style="float:right;"></span></a>
+		  </div>
+		    <div class="col-md-3 offset-md-9">
+		  	  <span class="secondary-action"> <a href="">Cancel </a> </span><span class="secondary-action right"> <a href="">Clear filters</a> </span>
+		  </div>
+
+       
+		  
+		  		
+		  
+      </div>
+    </div>
+  </div>
+</div>
+			
+					<!-- END OF MODAL -->	
+						
+						
+						
+						
+						
+
+                    </div>
+            </div>
+	
+	
+	<!-- SELECT FILTER - END -->
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	
+	
+	
+					<div class="row" style="margin:60px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+						<h2 id="filter-buttons">Filter buttons</h2> 
+					</div>
+	
+					<div class="row" style="margin:40px 0px 20px 0px;">
+						<h4 id="applyclearfilter">Apply / clear filters</h4>
+						<p style="margin-top:20px;">
+						The Apply/ Clear filters buttons have a bordered normal state, with a solid EF Green and dark red hover state. Filter buttons should only be used on white and grey backgrounds. 
+						<br><br>
+						Mouse over the buttons above to view hover state.</p>
+                  	</div>
+	
+	
+			<div class="row"  style="margin:20px 0px 0px 0px;">
+    	<h4 id="searchdrop">Apply / clear filter buttons: White background</h4>
+	</div>
+	
+	        		<div class="row" >
+
+                        <div  class="col-md-4" style="background: #FFFFFF; padding: 20px 20px 20px 20px">
+
+                            <a href="#0" class="btn btn-apply-filters-inverse">Apply filters <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+							<br>
+							<br>
+							<a href="#0" class="btn btn-clear-filters-inverse">Clear filters <span class="glyphicon glyphicon-remove" style="float:right;"></span></a>
+                              
+                        </div>
+
+                    </div>
+	
+		<br>
+	
+	
+	
+	
+		<div class="row"  style="margin:20px 0px 20px 0px;">
+    	<h4 id="searchdrop">Apply / clear filter buttons: Grey background</h4>
+	</div>
+	
+	
+	<div class="row" >
+
+                        <div  class="col-md-4" style="background: #E8EBEC; padding: 20px 20px 20px 20px">
+
+                            <a href="#0" class="btn btn-apply-filters-inverse">Apply filters <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+							<br>
+							<br>
+							<a href="#0" class="btn btn-clear-filters-inverse">Clear filters <span class="glyphicon glyphicon-remove" style="float:right;"></span></a>
+                              
+                        </div>
+	</div>
+                    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+					<div class="row" style="margin:80px 0px 20px 0px;  border-top:1px solid #E8ECEB; padding-top:60px;">
+                    	<h2 id="datanav">Data navigator</h2>
+                    </div>
+	
+                    <div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="striped">Data navigation table with header: White background</h4>
+                        <p>&nbsp;</p>
+                    </div>
+	
+					<div class="row" >
+						<div class="col-lg-4" style="padding-top: 20px; padding-bottom: 0px; background: #FFFFFF">
+
+
+							<div class="form-group2">
+								<div style="background-color: #368275; padding:15px 10px 5px 10px;">
+									<p class="data-nav-title"><span class="glyphicon glyphicon-menu-left arrow-left"  style="float: left" ></span>Health and mental <br>well-being  <span class="glyphicon glyphicon-menu-right arrow-right"  style="float: right" ></span>  </p>
+								</div>
+								<ul class="form-control2" >
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="row" style="margin:40px 0px 20px 0px;">
+                        <h4 id="striped">Data navigation table with header: Grey background</h4>
+                        <p>&nbsp;</p>
+                    </div>
+	
+					<div class="row" >
+						<div class="col-lg-4" style="padding-top: 20px; padding-bottom: 0px; background: #E8EBEC">
+
+
+							<div class="form-group2">
+								<div style="background-color: #368275; padding:15px 10px 5px 10px;">
+									<p class="data-nav-title"><span class="glyphicon glyphicon-menu-left arrow-left"  style="float: left" ></span>Health and mental <br>well-being  <span class="glyphicon glyphicon-menu-right arrow-right"  style="float: right" ></span>  </p>
+								</div>
+								<ul class="form-control2" >
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+									<li><a href="#">WHO-5 mental well-being scale and this is the option</a></li>
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+            </div>           
+	
+     
+	
+	
+	
+	
+	
+	
+	</div><!-- Row END -->
+
+</div><!-- Container END -->
+         
+			
+
+
+
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:80px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2019</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+
+
+<script src="js/popper.min.js"></script>
+ <script src="js/bootstrap-4.0.0.js"></script> 
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>

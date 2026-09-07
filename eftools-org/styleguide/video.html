@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Video</title>
+
+
+
+
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="../data/" role="button">Data Visualisation Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colour palette</a>
+	</li>
+	<li class="nav-item">
+    	<a class="nav-link" href="fonts.html">Fonts</a>
+  	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="imagery.html">Imagery</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="navigation.html">Navigation</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="components.html">Page components</a>
+	</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="filters.html">Filters</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="forms.html">Forms</a>
+			</li>
+	<li class="nav-item active">
+		<p class="nav-link">Video</p>
+	</li>
+  </ul>
+</nav>
+
+
+<div class="container" style="margin-top: 60px;">
+
+		<div class="row">
+
+
+
+            <div class="col-md-3" style="margin-bottom: 50px;">
+                <div class="sticky-top">
+
+                	<ul class="Sidenav flex-column secondary">
+
+
+						<ul class="list-group">
+							<a class="first list-group-item scroll " href="#videoOverview"><li class="Sidenav-catagory-selected" style="display:inline;">Video</li></a>
+							<a class="list-group-item scroll" href="#videoOverview"><li style="display:inline;">Video overview</li></a>
+							<a class="list-group-item scroll" href="#web"><li style="display:inline;">Video Eurofound web</li></a>
+							<a class="list-group-item scroll" href="#videoSM"><li style="display:inline;">Video social media</li></a>
+							<!--<a class="list-group-item scroll" href="#square"><li style="display:inline;">Square Video</li></a>
+							<a class="list-group-item scroll" href="#vertical"><li style="display:inline;">Vertical Video</li></a>-->
+							<a class="list-group-item scroll" href="#standarDesign"><li style="display:inline;">Standard design</li></a>
+							<a class="list-group-item scroll" href="#intro"><li style="display:inline;">Intro screen</li></a>
+							<a class="list-group-item scroll" href="#video"><li style="display:inline;">Video</li></a>
+							<a class="list-group-item scroll" href="#youtube"><li style="display:inline;">Video captions and Youtube overlays</li></a>
+							<a class="list-group-item scroll" href="#captions"><li style="display:inline;">Video captions</li></a>	
+							<a class="list-group-item scroll" href="#quotes"><li style="display:inline;">Quotes</li></a>
+							<a class="list-group-item scroll" href="#closing"><li style="display:inline;">Closing ident</li></a>
+                            <a class="list-group-item scroll" href="#altDesign"><li style="display:inline;">Alternative design</li></a>
+                            <a class="list-group-item scroll" href="#overlay"><li style="display:inline;">Text overlay footage</li></a>
+                            <a class="list-group-item scroll" href="#info"><li style="display:inline;">Infographic style video</li></a>
+						</ul>	
+
+					</ul>
+	
+
+                </div>
+
+             </div>
+
+
+
+		<div  class="col-md-9" style="padding-top: 10px;">
+
+                <div class="row" style="margin:0px 0px 0px 0px;"> 
+					<h2 id="videoOverview">Video overview</h2>
+				</div>
+
+                <div class="row" style="margin:40px 0px 0px 0px;">
+                	<h4 id="web">Video on the Eurofound website</h4>
+                </div>
+
+                <div class="row" style="margin:0px 0px 0px 0px;">               	
+						<p style="margin-top:10px;">Video content is pulled into the Eurofound website through our YouTube Channel. YouTube uses 16:9 aspect ratio players, so all videos should be output as such to avoid pillar boxes &#40;black bars to the left and right&#41; or letter boxes &#40;black bars at the top and bottom&#41; from being displayed.</p>	
+						<p>YouTube recommends the use of MP4 video using the H.264 video codec. Content should be uploaded to YouTube using the same frame rate used during recording and any interlaced content should be de-interlaced before uploading.</p>
+						<p>Further information can be obtained from Google's <a href="https://support.google.com/youtube/answer/1722171?hl=en-GB" target="_blank">YouTube support page</a>.</p>
+                 </div>
+			
+				<div style=" margin-top: 10px;">	
+					<img src="images/Video-Monitor.jpg" width="100%" height="auto" alt=""/>
+				</div>
+			<p class="figure-caption">Standard 16:9 video shown fullscreen</p>
+			
+				<div class="row" style="margin:40px 0px 0px 0px;">
+                	<h4 id="videoSM">Video for social media</h4>
+                </div>
+
+                <div class="row" style="margin:0px 0px 0px 0px;">               	
+						<p style="margin-top:10px;">Access to social media through the use of mobile devices is increasing year on year. As of January 2018 the <a href="https://www.statista.com/statistics/412257/mobile-social-penetration-rate-region/" target="_blank">global average user percentage</a> when compared to desktops stood at 39%, slightly below the average for Western Europe (44%) and Northern Europe (57%). Although Eastern Europe currently sits below the global average with just 37% of users accessing social media through mobile devices, the MOVR Mobile Overview Report from 2014 found that <b>94% of <b>ALL</b> mobile users hold their device vertically</b> whilst accessing social media. The opportunity for square and vertical video formats has arrived.</p>	
+				
+                 </div>
+			
+			
+			
+			
+				<div class="row" style="margin:40px 0px 0px 0px;">
+                	<h5 id="" class="text-darkGrey">Square video</h5>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p>It is recommended to work with a 1:1 square 1080px sized video using a 30fps frame rate. This will ensure anything created can be used on Facebook and Twitter with no issues.</p>	
+						<p>Again the use of MP4 video using the H.264 video codec is recommended.</p>
+                        <p>Although the number of users taking advantage of video content including audio is on the increase, use of captions is still recommended. Where audio is used, the use of the AAC audio codec is recommended to deliver an optimum user experience</p>
+					
+					<div style=" margin-top: 0px;">	
+						<img src="images/Video-Phone-Square.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					<p class="figure-caption">1:1 square video shown on mobile device</p>
+		
+                </div>
+			
+			<div class="row" style="margin:40px 0px 0px 0px;">
+                	<h5 id="" class="text-darkGrey">Vertical video</h5>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p>It is recommended to work with a 9:16 vertical 1080 x 1920px sized video using a 30fps frame rate. Again the use of MP4 video using the H.264 video codec and AAC audio where applicable is recommended.</p>	
+						<p>Further information for specifications of different social platforms is available <a href="https://engageinteractive.co.uk/blog/video-formats-facebook-twitter-instagram" target="_blank">here.</a></p>
+					
+					<div style=" margin-top: 0px;">	
+						<img src="images/Video-Phone-Vertical.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					<p class="figure-caption">9:16 vertical video shown on mobile device</p>
+					
+                </div>
+			
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;"> 
+					<h2 id="standarDesign">Video design</h2>
+                    <p>The basic design principles for video remain the same whether it's for 16:9, 1:1 or 9:16 format outputs. </p>
+				</div>
+
+                <div class="row" style="margin:40px 0px 0px 0px;">
+                	<h4 id="intro">Intro screen</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Where required, a video introduction screen can be added. The screen should appear using a simple fade and will contain the title of the video. After three seconds, the intro screen should fade directly into the first frame of the video content.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-intro-screen.jpg" width="100%" height="auto" alt=""/>
+						<img src="images/Video-Fade.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+			
+
+
+                <div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="video">Video</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Video is displayed with a dark gradient overlay to the bottom and a small Eurofound logo sitting in the top right hand corner. The logo is positioned so as to allow room for image captions and YouTube overlays &#40;see below&#41;.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="">Video captions</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Captions sit on top of an EF Navy background which is displayed at 93% opacity. Captions are set in Source Sans Pro Regular, center aligned, coloured white with a font size of 48pt and 54pt leading.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-captions.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="youtube">Video captions and YouTube overlays</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Captions are also positioned so that upon screen mouseover, the YouTube overlay doesn't interfere with the displayed content.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-caption-on-mouseover.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="captions">Video captions and speaker details</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Speaker details are positioned to sit directly above video captions and aligned right with the Eurofound logo. The speaker's name is set in Source Sans Pro Bold, coloured white with a font size of 48pt with 54pt leading. The job title and position are set in Source Sans Pro Light, coloured white with a font size of 36pt and 54pt leading.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-captions-and-name.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="quotes">Quotes</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">Speaker quotes are displayed on top of an EF Silver background displayed at 93% opacity. The quote is set in Source Sans Pro Regular, coloured black with a font size of 52pt with 72pt leading. The accreditation is set in Source Sans Pro Regular, coloured EF Charcol with a font size of 40pt and 48pt leading.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-quote.jpg" width="100%" height="auto" alt=""/>
+					</div>
+                </div>
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="closing">Closing ident</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+						<p style="margin-top:10px;">The closing ident utilises the animated ident used on existing Eurofound video content.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/video-outro.jpg" width="100%" height="auto" alt="" style="border: 1px solid #E8EBEC;"/>
+					</div>
+                </div>
+			
+            
+            
+            
+            
+            
+            
+            
+			
+				<div class="row" style="margin:80px 0px 0px 0px;"> 
+					<h2 id="altDesign">Alternative video design styles</h2>
+				</div>
+			
+			
+				<div class="row" style="margin:40px 0px 0px 0px;">
+                	<h4 id="overlay">Text overlay footage</h4>
+                </div>
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+                    <p style="margin-top:10px;">Footage can have text overlays added to add impact and grab the viewers attention. This is also helpful as no dialogue soundtrack is required, the message being conveyed by the on-screen prompts.</p>
+                    <p>Text overlays can take on any shape, but a few simple rules should be followed...</p>
+                    <p>Text can be spread over multiple lines, but should be as snappy as possible. It is preferable to split long sentances over multiple scenes as opposed to displaying too much text at once.</p>
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/Text-on-Video-Monitor.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					
+					<p class="figure-caption">16:9 Text Overlay video shown fullscreen.</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>Across multiple lines, text should cascade from left to right. The text should sit on a solid EF Navy background and one of the edges should bleed. Vertically the text can be positioned anywhere to best suit the footage.</p>
+					<p>The main body copy is laid in white, Source Sans Pro at 60px with highlights being pulled out in 80px Source Serif Pro Bold coloured EF Mint. All leading is 80px.</p>
+					
+                    <div style=" margin-top: 20px;">	
+						<img src="images/Text-Overlay.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					
+					<div style=" margin: 10px 0px;">	
+						<img src="images/Text-Overlay2.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					
+					<p class="figure-caption">1:1 Text Overlay video</p>
+
+                </div>
+			
+			
+			
+			
+				<div class="row" style="margin:80px 0px 0px 0px;">
+                	<h4 id="info">Infographic style video</h4>
+                </div>
+			
+				<div class="row" style="margin:0px 0px 0px 0px;">
+                    <p style="margin-top:10px;">Infographic style videos are a great way of quickly presenting visual representations of information, data or knowledge.</p>
+                    <p>Infographics can take on many forms, but a few simple rules should be followed...</p>
+                   
+					
+					<div style=" margin-top: 10px;">	
+						<img src="images/Infographic-Video-Monitor.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					
+					<p class="figure-caption">16:9 Infographic style video shown fullscreen.</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					
+					<p style="margin-top:10px;">Information should be presented in an easy to understand format, condensing large amounts of information into a form where it will be more easily absorbed by the reader. Information should be presented on an EF Silver background, using the Eurofound graphical guidelines &#40;text styles, colours etc&#41; as a guide.</p>
+					
+                    <div style=" margin-top: 20px;">	
+						<img src="images/Infographic-Overlay.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+                    
+                    <div style=" margin-top: 10px;">	
+						<img src="images/Infographic-Overlay2.jpg" width="100%" height="auto" alt="" style="border: 0px solid #E8EBEC;"/>
+					</div>
+					
+					<p class="figure-caption">1:1 Infographic video style</p>
+		
+                </div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+                <div class="row" style="margin:0px 0px 0px 0px;">
+					<div class="alert alert-primary" role="alert" style="width:100%; margin-top: 60px;">
+					<p style="margin-top:10px;">A Photoshop guide template of all video content can be downloaded from <a href="downloads/Video-Template.zip"><span class="text-white-bold">here</span></a>.</p>
+					</div>
+                </div>
+			
+				
+
+
+	
+			</div>
+			
+	</div>
+
+</div>
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:80px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2018</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+
+</body>
+</html>

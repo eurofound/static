@@ -1,0 +1,1025 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Navigation</title>
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="#0" role="button">Online Modular Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+   <ul class="navbar-nav">
+	<li class="nav-item ">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colours</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="design principals.html">Design principles</a>
+	</li>
+	  <li class="nav-item active">
+	  <p class="nav-link">Chart design: Print</p>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="chart design web.html">Chart design: Web</a>
+	</li>
+  	<li class="nav-item">
+		<a class="nav-link" href="charts.html">Charts</a>
+	</li> 
+	  <li class="nav-item">
+			<a class="nav-link" href="digital chart actions.html">Digital chart actions</a>
+	</li> 
+  </ul>
+  </nav>
+
+
+
+<div class="container" style="margin-top: 60px;">
+
+  <div class="row">
+
+		<div class="col-md-3" style="margin-bottom: 50px;">
+			<div class="sticky-top">
+				<ul class="Sidenav flex-column secondary">
+					
+				<li class="haschildren Sidenav-catagory  Sidenav-catagory-selected"> Chart design</li>  
+
+								<ul class="list-group">
+									<a class="list-group-item scroll" href="#chart-tiles"><li style="display:inline;"> Chart titles</li></a>
+									<a class="list-group-item scroll" href="#axis-titles-and-labels"><li style="display:inline;"> Axis titles and labels</li></a>
+									<a class="list-group-item scroll" href="#legend"><li style="display:inline;">Legend</li></a>
+									<a class="list-group-item scroll" href="#data"><li style="display:inline;">Data figure labels</li></a>
+									<a class="list-group-item scroll" href="#Typography"><li style="display:inline;">Typography</li></a>
+									<a class="list-group-item scroll" href="#Gridlines"><li style="display:inline;">Grid and axis lines</li></a>
+									<a class="list-group-item scroll" href="#colour"><li style="display:inline;">Colour use</li></a>
+									<a class="list-group-item scroll" href="#spacing"><li style="display:inline;">Spacing</li></a>
+									<a class="list-group-item scroll" href="#line"><li style="display:inline;">Line weight</li></a>
+									<a class="list-group-item scroll" href="#Size"><li style="display:inline;">Size</li></a>
+									
+								</ul>	
+						
+				</ul>
+				
+            </div>
+		</div>
+
+
+
+
+	  <div class="col-md-9" style="padding-top: 10px;">
+
+
+			<div class="row" style="margin:0px 0px 20px 0px;">
+				<h2 id="sub">Chart design: Print</h2>
+				<p>Our print chart guidelines are here to help you create charts that are in line with Eurofound branding.<br>
+<br>
+					Download our <a href="">Microsoft Excel</a> document with ready-made templates and colour groups.
+</p>
+                      
+                
+                
+			</div>
+
+
+		  <p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		  
+		  
+		  
+		  
+		  			  <div style="margin: 0px 0px 20px 0px;">
+				  <h2 id="chart-tiles">Chart titles</h2> </div>
+				  
+				 
+				  <div style="margin: 0px 0px 20px 0px;">
+					  <h4>Chart titles</h4>
+                        <p >Titles within charts are not required if the title is within the body of content. However, if they are required, then they should be formatted correctly to match the style used in the examples below. 
+							<br><br>
+							Please see <a class="scroll" href="#Typography">Chart typography</a> for all chart text formatting.</p>
+					 
+					  
+					  
+		  
+		  </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  <p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		 
+		  	  <div style="margin: 0px 0px 20px 0px;">
+				  <h2 id="axis-titles-and-labels">Axis titles and labels</h2> </div>
+				  
+		  
+		  
+		  
+		  			  <div style="margin: 0px 0px 20px 0px;">
+					    <h4>Axis titles</h4>
+                        <p >
+							Axis titles are written in sentence case (all lower case except the first letter of the first word and proper nouns), for example âNumber of peopleâ.<br><br> Axis titles can be removed if the axis labels are self-explanatory, for example country names.</p>
+						
+		  
+		  </div>
+			
+		  
+		  
+		  
+			
+		
+					  
+					  <div style="margin: 0px 0px 20px 0px;">
+					    <h4>Axis labels</h4>
+                        <p >
+							To ensure readability, the axis labels should be displayed horizontally or at a 45 degree angle. If the labels do not fit correctly on the 'X' axis, then it is recommended that the chart changes to something that is easier to read. For example, a column chart might have to change to a bar chart in order to accommodate for the size of the labels. <br> <br>
+					  Use a comma as a separator for thousands (for example: 1,250 or 1,400,000).</p>
+		  
+		  </div>
+			
+		  
+		  
+		  		  <div style="margin: 0px 0px 20px 0px;">
+					    <h4>Bar chart axis labels</h4>
+                        <p >Bar chart axis label positions are different from other charts as they are reversed, with the numbers/ values along the X axis and the categories along the Y axis. </p>
+		  
+		  </div>
+		  
+		  
+		  
+		  
+		  
+		  <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Wrong <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                        </div>
+                    </div>
+		  
+			<div class="row" style="margin-bottom:20px;">
+                            <div class="col-12">
+								
+                            <img src="images/Print Chart Design/bar-chart-wrong-labels.jpg"   width="100%" height="auto"/>
+                            </div>
+       				 </div>
+			
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-success" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Correct <span class="glyphicon glyphicon-ok" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                    	</div>
+                    </div>
+		  
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+								
+                            <img src="images/Print Chart Design/bar chart correct labels.jpg"  width="100%" height="auto" style="border:1px solid #eeeeee;"/>
+                            </div>
+       				 </div>
+			
+		  	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  		
+			  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="legend">Legend</h2>
+				  
+				  <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Position</h4>
+                        <p > The legend for charts must be centrally and horizontally aligned across the bottom of the chart area to ensure consistency. The legend must also not interfere with axis titles and data labels and must be clear enough to read.  </p> 
+					 </div>
+			
+			
+			
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+								<p style="color: #676767"><strong>EXAMPLE</strong></p>
+                            <img src="images/Print Chart Design/legend.jpg"   width="100%" height="auto"/>
+                            </div>
+                           
+        </div>
+		  
+		  
+		    <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Order</h4>
+                        <p >The legend categories must follow the order of how the user would read the data. </p>
+				  </div>
+		  	
+				  
+				  
+				  <div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+								<p style="color: #676767"><strong>EXAMPLE</strong></p>
+                            <img src="images/Print Chart Design/pie.jpg"   width="100%" height="auto"/>
+                            </div>
+				  </div>
+				  
+		  
+		  
+		  
+		  	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		  
+		  
+		  
+		  
+		 
+		  
+		  
+	  	 
+			
+		  
+		  
+		  
+		
+		  
+		  
+		  
+		  
+		   <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="data">Data figure labels</h2>
+                      
+			   <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Position</h4>
+                        <p >The data figure labels must be clear and easy to read without any overlapping. They must also not obstruct the chart elements.
+				   <br><br>
+				   Data figure labels do not need to be used if the chart is clear enough without them. Data figure labels can become intrusive when dealing with smaller charts so careful consideration should be given. <br><br>If used correctly, they should be displayed in a way that they do not intrude on other chart data such as other labels and remain clear and easy to read.  
+							
+				   </p></div>
+			
+			
+			
+			<!-- images-->
+			   
+			   
+			   
+			     <div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-danger" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Wrong <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                        </div>
+                    </div>
+			   
+			   	<div class="row" style="margin-bottom:20px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/line-with-wronglabels.jpg"  width="100%" height="auto"/>
+                            </div>
+                           
+        </div>
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			  <div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-success" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Correct <span class="glyphicon glyphicon-ok" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                    	</div>
+                    </div>
+			   
+			   
+			   
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/line-with-correct-labels.jpg"  width="100%" height="auto"/>
+                            </div>
+                           
+        </div>
+			   
+			   
+			   
+			   <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Design</h4>
+                         <p >Data figure labels must be clear and easy to read. If they are placed over chart information such as line graphs, then they must have a white background with a grey border. If they are placed outside of a graph, such as a pie chart, they can be presented without a border or background as they do not interfere with the chart.</p></div>
+		  
+		
+			   
+			   
+			   	<div class="row" style="margin-bottom:50px;">
+					
+									
+                            <div class="col-6">
+								<p style="color: #676767"><strong>EXAMPLE: Data figure labels with a box</strong></p>
+                            <img src="images/Print Chart Design/line-labels-close-up.jpg"   width="100%" height="auto"/>
+                            </div>
+                            <div class="col-6">
+								<p style="color: #676767"><strong>EXAMPLE: Data figure labels without a box</strong></p>
+                            <img src="images/Print Chart Design/pie-chart-labels.jpg"  width="100%" height="auto"/>
+                            </div>
+        </div>
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+			   
+			   
+			   
+		  
+		  
+		  
+		  
+		  
+		  		
+			  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="Typography">Chart typography</h2>
+                        <p >Eurofound uses a combination of <a href="https://fonts.google.com/specimen/Source+Serif+Pro" target="_blank">Source Serif Pro</a> and <a href="https://fonts.google.com/specimen/Source+Sans+Pro" target="_blank">Source Sans Pro</a>. Source Serif Pro and Source Sans Pro are open source fonts, available from Google Fonts.
+				  <br><br>
+							<a href="typography.html">Learn more about our typography.</a> <br><br>
+			   Below is a table showing the typography attributes for text created in Microsoft Excel. </p>
+			   
+			   </div>
+		  
+		  
+		  
+		  
+		  <div class="row" style="margin-bottom:20px;">
+                            <div class="col-12">
+								  <table class="table table-striped">
+                            <thead style="background-color:#067EB1; color:white;">
+                                <tr>
+                                    <th>Object</th>
+                                    <th>Text</th>
+                                    <th>Font</th>
+									<th>Size</th>
+									<th>Location</th>
+									<th>Colour</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+    								<td>Chart title</td>
+   									<td>Source Sans Pro Regular</td>
+	 								<td>14pt</td>
+	 								<td>Left</td>
+	  								<td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+   									 <td>Y Axis titles<br>(Where required)</td>
+   									 <td>Source Sans Pro Light</td>
+	  									<td>8pt</td>
+	  									<td>Centre Vertical</td>
+	  								<td>	<p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+                                <tr>
+                                   <td>3</td>
+    <td>X Axis titles <br>(Where required)</td>
+    <td>Source Sans Pro Light</td>
+	  <td>8pt</td>
+	  <td>Centre Horizontal</td>
+	  <td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+								    <tr>
+                                  <td>4</td>
+    <td>Y Axis labels</td>
+    <td>Source Sans Pro Light </td>
+	  <td>8pt</td>
+	  <td>Centre Horizontal</td>
+	  <td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+								<tr>
+								 <td>5</td>
+    <td>X Axis labels</td>
+    <td>Source Sans Pro Light</td>
+	  <td>8pt</td>
+	  <td>Centre Horizontal</td>
+	  <td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+												    <tr>
+                                  <td>6</td>
+    <td>Legend</td>
+    <td>Source Sans Pro Light </td>
+	  <td>8pt</td>
+	  <td>Centre </td>
+	  <td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+								
+								
+																			    <tr>
+                                  <td>7</td>
+    <td>Data figure labels</td>
+    <td>Source Sans Pro Light</td>
+	  <td>6pt</td>
+	  <td>Centre </td>
+	  <td><p><strong>RGB:</strong> 0.0.0
+			<br>
+			<strong>HEX:</strong> #000000<br>
+		  <strong>CMYK:</strong> 75.68.67.90
+		  </p></td>
+                                </tr>
+								
+								
+                            </tbody>
+                               </table>
+			  </div>
+		  </div>
+								
+								
+								
+			
+			
+			<!-- images-->
+			<div class="row" style="margin-bottom:50px;">
+                
+			
+				<div class="col-12">
+							
+                            <img src="images/Print Chart Design/typograpahy.jpg"    width="100%" height="auto"/>
+                            </div>
+                        
+        </div>
+		  
+		  
+		  
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		  
+		
+		  
+		  
+		  
+		  		
+			  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="Gridlines">Grid and axis lines</h2>
+				  <h4 id="Gridlines">Axis lines</h4>
+				   <p>Axis lines along the X and Y axis should be included for each graph. </p>
+                       		  	
+		 
+					
+				<ul>
+					<li><strong>Line:</strong> Solid</li>
+					<li><strong>Width:</strong> 1pt</li>
+					<li><strong>RGB:</strong> 217.217.217</li>
+					<li><strong>HEX:</strong> #d9d9d9</li>
+					<li><strong>CMYK:</strong> 14.10.11.0</li>
+				</ul>
+				
+			
+			
+			
+			<!-- images-->
+		  
+			<div class="row" style="margin-bottom:50px;">
+                            
+                              <img src="images/print-graphs-gridlines.jpg" width="100%" height="auto"/>
+                            
+                        
+        </div>
+		  
+		  
+				  
+				  <div style="margin: 60px 0px 20px 0px;">
+                        <h4 id="Gridlines">Gridlines</h4>
+					  
+                       		  	
+		  
+					
+				<ul>
+					<li><strong>Line:</strong> Solid</li>
+					<li><strong>Width:</strong> .5pt</li>
+					<li><strong>RGB:</strong> 217.217.217</li>
+					<li><strong>HEX:</strong> #d9d9d9</li>
+					<li><strong>CMYK:</strong> 14.10.11.0</li>
+				</ul>
+				
+			
+			
+			
+			<!-- images-->
+		  
+			<div class="row" style="margin-bottom:50px;">
+                            
+                              <img src="images/print-graphs-gridlines.jpg" width="100%" height="auto"/>
+                            
+                        
+        </div>
+		  
+		  
+		  
+		  
+		  
+		  
+			   
+			   
+			   
+			   	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+			   
+			   
+		  
+		  
+		  
+		  
+		  
+		  
+		  <!-- Colour-->
+		  
+		   <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="colour">Colour use</h2>
+                        <p >The Eurofound data visualisation colour palette, which is a separate colour palette specifically created for charts should be used. 
+			   <br>
+							<br>
+			  The specified colour sets must be used depending on the number of data groups. Below is an example of a column chart with three data groups, the incorrect example shows the wrong use of colour, while the correct example shows the colour set that is specified for use with a chart that has three data groups.  
+			   <br>
+							<br>
+							<a href="colours.html">View our colour palette.</a></p></div>
+			
+		  <!-- IMAGES-->
+				<div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-danger" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Wrong <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                        </div>
+                </div>
+			   
+			   	<div class="row" style="margin-bottom:20px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/column-chart-wrong-colour.jpg"    width="100%" height="auto"/>
+                            </div>
+        		</div>
+			   
+			  <div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-success" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Correct <span class="glyphicon glyphicon-ok" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                    	</div>
+                    </div>
+			   
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/column.jpg"  width="100%" height="auto"/>
+                            </div>
+        	</div>
+		  
+			   <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Men and women colour group</h4>
+                        <p >A specific colour set has been created to present separate data for men and women and must be used whenever using gender within a chart. </p></div>
+		  
+		
+			   
+			   
+			   	<div class="row" style="margin-bottom:50px;">
+					
+									
+                            <div class="col-12">
+								<p style="color: #676767"><strong>EXAMPLE: Men and women demographic chart</strong></p>
+                            <img src="images/Print Chart Design/demographic-chart.jpg"  width="100%" height="auto"/>
+                            </div>
+                            
+        </div>
+			   
+			   
+			   
+			   <div style="margin: 0px 0px 20px 0px;">
+				  <h4>Colour shades</h4>
+                        <p >A set of colour shades has been created for the main colours. These shades can be used when multiple charts are being used to illustrate different sets of data together. This helps break the charts up and the reader will be able to differentiate the charts from one another.</p> 
+				   <p>To ensure consistency the colour shade groups should be used starting with the darkest colour.</p>
+							
+				   
+				   </div>
+		  
+		
+			   
+			   
+			   	<div class="row" style="margin-bottom:50px;">
+					
+									
+                            <div class="col-12">
+								<p style="color: #676767"><strong>EXAMPLE:</strong></p>
+                            <img src="images/Print Chart Design/green-shade-chart-5-6.jpg"   width="100%" height="auto"/>
+                            </div>
+                            
+        </div>
+			   
+				  
+			
+		  
+		  
+		  
+		  	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+		  
+		  
+		  <!-- Spacing-->
+		  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="spacing">Spacing</h2>
+                        <p >When creating charts, you must make sure that there is an appropriate amount of space between data groups, data and axis labels, titles and legends. While there is no set spacing, the chart should not look overcrowded or cramped. All of the data must be easy to read and understand.</p>
+		  </div>
+		  	
+				   
+			     	<div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-danger" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Wrong <span class="glyphicon glyphicon-remove" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                        </div>
+                    </div>
+			   
+			   	<div class="row" style="margin-bottom:20px;">
+                        <div class="col-12">
+                        <img src="images/Print Chart Design/column-wrong-spacing.jpg"  width="100%" height="auto"/>
+                        </div>
+                           
+        		</div>
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			  <div class="row">
+                        <div class="col-md-12" >
+                            <div class="alert alert-success" role="alert" style="width:100%; cursor:pointer;">
+                                <p class="text-white-bold" style="padding-top:10px;">Correct <span class="glyphicon glyphicon-ok" style="float:right; padding-top:5px;"></span></p>
+                            </div>
+                    	</div>
+                    </div>
+			   
+			   
+			   
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/column.jpg"   width="100%" height="auto"/>
+                            </div>
+                           
+        </div>
+        </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		  
+		  
+		  
+		  
+		
+		  
+		  
+		  
+		  
+		  	  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="line">Line weight</h2>
+                        <p >This refers to the line weight of certain charts, for example, line graphs.</p></div>
+		   <div class="col-12">
+					
+				<ul>
+					<li><strong>Line:</strong> Solid</li>
+					<li><strong>Width:</strong> 1pt</li>
+					</ul>
+				</div>
+			
+			
+			
+			<!-- images-->
+			<div class="row" style="margin-bottom:50px;">
+                            <div class="col-12">
+                            <img src="images/Print Chart Design/line.jpg"   width="100%" height="auto"/>
+                            </div>
+				
+				
+				
+				
+        </div>
+		  
+		  
+		  
+		  	<p>&nbsp;</p>
+			<hr>
+			<p>&nbsp;</p>
+		 
+		  
+		  
+		  
+		  
+		  	  
+		  	  <div style="margin: 0px 0px 20px 0px;">
+                        <h2 id="Size">Size</h2>
+                        <p >The size of the charts should allow the user to clearly see the information. Typographic information such as axis, data labels and legends have a set size and shouldn't be changed. This will ensure consistency across all charts being used despite the size of the chart area. If the chart used looks too cramped and is difficult for the user to read, then an alternative chart should be considered. </p></div>
+			
+			
+			
+		
+                        
+        </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+			
+			
+			
+
+
+
+			
+
+                     	
+
+          </div>
+
+
+
+
+
+      </div>
+
+
+
+
+</div>
+
+	</div>
+	</div>
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:100px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2018</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+
+
+
+
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+
+</body>
+</html>

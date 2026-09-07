@@ -1,0 +1,811 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurofound Brand Guidelines &ndash; Navigation</title>
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="../data/" role="button">Data Visualisation Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item">
+	  <a class="nav-link" href="overview.html">Overview</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colour palette</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="fonts.html">Fonts</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="imagery.html">Imagery</a>
+	</li>
+	  <li class="nav-item active">
+	  <p class="nav-link">Navigation</p>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="components.html">Page components</a>
+	</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="filters.html">Filters</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="forms.html">Forms</a>
+			</li>
+	  <li class="nav-item">
+				<a class="nav-link" href="video.html">Video</a>
+			</li>
+  </ul>
+</nav>
+
+
+
+<div class="container" style="margin-top: 60px;">
+
+	<div class="row">
+
+		<div class="col-md-3" style="margin-bottom: 50px;">
+			<div class="sticky-top">
+
+                <ul class="Sidenav flex-column secondary">
+					
+							<li class="haschildren Sidenav-catagory" href="#sub">Navigation</li>
+
+								<ul class="list-group">
+									<a class="scroll list-group-item haschildren arrow-after" href="#sub"><li style="display:inline;">Seconday navigation</li></a>
+										<ul class="list-group">
+											<a class="scroll list-group-item arrow small" href="#accordian"><li>Accordian secondary menu</li></a>
+											<a class="scroll list-group-item arrow small" href="#related"><li>Related content menu</li></a>
+											<a class="scroll list-group-item arrow small" href="#work-menu"><li>Ongoing work menu</li></a>
+											<a class="scroll list-group-item arrow small" href="#author"><li>Author menu</li></a>
+										</ul>
+									<a class="scroll list-group-item haschildren" href="#portal"><li>Portal blocks</li></a>
+									<a class="scroll list-group-item haschildren arrow-after" href="#tabbed"><li style="display:inline;">Tabbed navigation</li></a>
+									<ul class="list-group">
+											<a class="scroll list-group-item arrow small" href="#leftaligned"><li>Left aligned</li></a>
+											<a class="scroll list-group-item arrow small" href="#centrallyaligned"><li>Centrally aligned </li></a>
+											
+										</ul>
+									<a class="scroll list-group-item haschildren" href="#dropdown"><li>Drop down navigation</li></a>
+									<a class="scroll list-group-item haschildren" href="#formselector"><li>Form selector</li></a>
+									<a class="scroll list-group-item haschildren" href="#language"><li>Language selector</li></a>
+									<a class="scroll list-group-item haschildren" href="#pagination"><li>Pagination</li></a>
+									<a class="scroll list-group-item haschildren" href="#dictionary"><li>Dictionary index</li></a>
+									<a class="scroll list-group-item haschildren" href="#carrousel"><li>Carrousel</li></a>
+									<a class="scroll list-group-item haschildren" href="#breadcrumbs"><li>Breadcrumbs</li></a>
+							
+								</ul>
+						
+						</ul>
+
+			</div>
+		</div>
+
+
+
+
+
+		<div class="col-md-9" style="padding-top: 10px;">
+
+
+			<div class="row" style="margin:0px 0px 20px 0px;">
+				<h2 id="sub">Secondary navigation</h2>
+                <p>The examples below show a variety of ways that the user can navigate and explore the site.</p>         
+                <p>The accordian style secondary menu sits to the left of the main page content. Related content, Author and Ongoing Work menus sit to the right. All other navigation elements sit within the page.</p> 
+                <p>A down arrow denotes that a menu item contains extra content. Sub content can also contain a third tier of links and this too is denoted by the use of an arrow.</p>
+                <p>Click/hover on the examples below to view the various navigation design styles.</p>  
+                
+			</div>
+
+
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="accordian">Accordian secondary menu</h4>
+			</div>
+
+			<div class="row" style="margin:0px 0px 60px -15px;">
+
+				<div class="col-lg-4">
+
+					<ul class="Sidenav flex-column secondary">
+					
+							<li class="haschildren Sidenav-catagory">Dropdown Menu</li>
+
+								<ul class="list-group">
+									<a class="list-group-item haschildren arrow-after" href="#0"><li style="display:inline;">Sub Item 01</li></a>
+										<ul class="list-group">
+											<a class="list-group-item arrow small first"><li>Sub Item 01a</li></a>
+											<a class="list-group-item arrow small"><li>Sub Item 01b</li></a>
+											<a class="list-group-item arrow small last"><li>Sub Item 01c</li></a>
+										</ul>
+									<a class="list-group-item"><li>Sub Item 02</li></a>
+									<a class="list-group-item"><li>Sub Item 03</li></a>
+								</ul>
+
+
+
+							<li class="haschildren Sidenav-catagory">Dropdown Menu</li>
+
+							<ul class="list-group">
+									<a class="list-group-item"><li>Sub Item 01</li></a>
+									<a class="list-group-item haschildren arrow-after" href="#0"><li style="display:inline;">Sub Item 02</li></a>
+										<ul class="list-group">
+											<a class="list-group-item arrow"><li>Sub Item 02a</li></a>
+											<a class="list-group-item arrow"><li>Sub Item 02b</li></a>
+											<a class="list-group-item arrow"><li>Sub Item 02c</li></a>
+										</ul>
+
+
+									<a class="list-group-item"><li>Sub Item 03</li></a>
+								  </ul>
+
+
+
+							<li class="haschildren Sidenav-catagory-arrow-right">Menu Link</li>
+						
+						</ul>
+
+				</div>
+    		</div>
+	
+<hr>		
+
+
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="related">Related content menu</h4>
+			</div>
+
+			<div class="row" style="margin:0px 0px 60px -15px;">
+                    <div class="col-lg-4">
+						<nav class="Related-HeaderBox">
+							<p class="Sec-Nav-Header-related">Related content</p>
+						</nav>
+
+						<div class="Related-LinkBox">
+							<p class="Sec-Nav-link-related">Quality of life and public services</p>
+							<p class="Sec-Nav-related" style="padding-left:15px;"><strong>Publication</strong> | 21 October 2018</p>
+						</div>
+
+						<div class="Related-LinkBox">
+							<p class="Sec-Nav-link-related">The gender employment gap: Challenges and solutions</p>
+							<p class="Sec-Nav-related" style="padding-left:15px;"><strong>Publication</strong> | 21 October 2018</p>
+						</div>
+					</div>
+
+            </div>
+
+<hr>
+
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="work-menu">Ongoing work menu</h4>
+			</div>
+
+			<div class="row" style="margin:0px 0px 60px -15px;">
+                    <div class="col-lg-4">
+						<nav class="Ongoing-HeaderBox">
+							<p class="Sec-Nav-Header">Ongoing work</p>
+						</nav>
+
+						<nav class="Ongoing-LinkBox">
+							<p class="Sec-Nav">Policy brief on underemployment, long-term unemployment and in-work poverty</p>
+						</nav>
+
+						<nav class="Ongoing-imgBox">
+							<div class="Ongoing-TopicLink">
+								<img src="images/two-lads-chill.jpg" width="100%" height="auto" alt=""/>
+								<div style="padding: 10px 10px 0px 10px">
+									<p><strong>Topic</strong></p>
+									<p class="hrTopic">&nbsp;</p>
+									<p>This is a topic name</p>
+								</div>
+							</div>
+
+							<div class="Ongoing-TopicLink">
+								<img src="images/public-square.jpg" width="100%" height="auto" alt=""/>
+								<div style="padding: 10px 10px 0px 10px">
+									<p><strong>Topic</strong></p>
+									<p class="hrTopic">&nbsp;</p>
+									<p>This is a topic name</p>
+								</div>
+							</div>
+						</nav>
+					</div>
+            </div>
+			
+			
+<hr>
+
+
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="author">Author menu</h4>
+			</div>
+
+			<div class="row" style="margin:0px 0px 60px -15px;">
+                    <div class="col-lg-4">
+						<nav class="Author-HeaderBox">
+							<p class="Sec-Nav-Header">Author:<br>Surname, Name</p>
+						</nav>
+
+						<div class="Author-LinkBox">
+							<p class="Sec-Nav-link" href="#">This is the title of a publication</p>
+							<p class="Sec-Nav" style="padding-left:15px;"><strong>Publication</strong> | 21 October 2018</p>
+						</div>
+
+						<div class="Author-LinkBox">
+							<p class="Sec-Nav-link" href="#">This is the title of a blog</p>
+							<p class="Sec-Nav" style="padding-left:15px;"><strong>Blog</strong> | 21 October 2018</p>
+						</div>
+
+						<div class="Author-LinkBox">
+							<p class="Sec-Nav-link" href="#">This is the title of a publication</p>
+							<p class="Sec-Nav" style="padding-left:15px;"><strong>Publication</strong> | 21 October 2018</p>
+						</div>
+
+
+					</div>
+
+
+            </div>
+			
+			
+			
+			<div class="row" style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px;">
+                        <h2 id="portal">Portal blocks</h2>
+                    </div>
+
+                    <div class="row" style="background-color: #fff; padding:20px 0px 60px 0px;">
+
+                            <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="card" style="display: flex; border: 1px solid #E8EBEC;">
+                                    <img src="images/dr-ewcs.png" width="100%" height="auto" alt=""/>
+                                  <div class="card-body">
+
+                                    <p class="card-titleHorizontal">European Working Conditions Survey</p>
+									<p class="hr-portal">&nbsp;</p>
+                                    <p class="card-text small">Visualise, explore and compare EU and country data from the <a href="#">2015 European Working Conditions Survey (EWCS)</a> in our interactive data visualisation tool. <a href="#">2010 data</a> is also available.</p>
+
+                                  </div>
+									<a href="#" class="btn btn-primary">See more <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="card" style="display: flex; border: 1px solid #E8EBEC;">
+                                    <img src="images/dr-eqls.png" width="100%" height="auto" alt=""/>
+                                  <div class="card-body">
+
+                                    <p class="card-titleHorizontal">European Quality of Life Survey</p>
+									<p class="hr-portal">&nbsp;</p>
+                                    <p class="card-text small">Visualise, explore and compare EU and country data from the <a href="#">2016 European Quality of Life Survey (EQLS)</a>. <a href="#">2011</a>, <a href="#">2007</a> and <a href="#">2003</a> data is also available.</p>
+
+                                  </div>
+									<a href="#" class="btn btn-primary">See more <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                </div>
+                            </div>
+
+						<div class="col-md-4" style="display: flex; margin-bottom: 20px;">
+                                <div class="card" style="display: flex; border: 1px solid #E8EBEC;">
+                                    <img src="images/dr-ecs.png" width="100%" height="auto" alt=""/>
+                                  <div class="card-body">
+
+                                    <p class="card-titleHorizontal">European Company Survey</p>
+									<p class="hr-portal">&nbsp;</p>
+                                    <p class="card-text small">Visualise, explore and compare EU and country data from the <a href="#">2013 European Company Survey (ECS)</a> in our interactive data visualisation tool.</p>
+
+                                  </div>
+									<a href="#" class="btn btn-primary">See more <span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+                                </div>
+                            </div>
+                    </div>
+
+
+<hr>
+
+
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h2 id="tabbed">Tabbed navigation</h2>
+			</div>
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="leftaligned">Tabbed navigation: Left aligned</h4>
+			</div>
+
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+                    <div class="col-12" style="padding:0px; background-color: #E8EBEC; height: 140px;">
+                      <ul class="nav justify-content-left" style="width:100%; padding-top:14px; padding-left: 20px; height:55px; background-color: #1A2F55;">
+						  <li>
+							<div class="Tabnav-link-active"><a href="#0">Active</a></div>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+					</ul>
+                    </div>
+            </div>
+			
+			
+			
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h4 id="centrallyaligned">Tabbed navigation: Centrally aligned</h4>
+			</div>
+
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+                    <div class="col-12" style="padding:0px; background-color: #E8EBEC; height: 140px;">
+                      <ul class="nav justify-content-center" style="width:100%; padding-top:14px; padding-left: 20px; height:55px; background-color: #1A2F55;">
+						  <li>
+							<div class="Tabnav-link-active"><a href="#0">Active</a></div>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+						  <li>
+							<a class="Tabnav-link" href="#0">Link</a>
+						  </li>
+					</ul>
+                    </div>
+            </div>
+			
+			
+			
+			
+			
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+            <div class="tab">
+			  <button class="tablinks" id="defaultOpen">Publications</button>
+			  <button class="tablinks">Data</button>
+			  <button class="tablinks">Ongoing work</button>
+			</div>
+
+			<div id="" class="tabcontent">
+
+			  <p></p>
+			</div>
+		</div>
+
+
+<hr>
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h2 id="dropdown">Drop down navigation</h2>
+			</div>
+
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+                    <div class="col-lg-4">
+
+						<div>
+						   <button class="btn btn-primary toggle-trigger" type="button">
+						   English <span class="glyphicon glyphicon-menu-down" style="float:right;"></span>
+						   </button>
+						   <div id="dropdowns" class="toggle start-hidden">
+                              <a class="lang-group-item"  href="#0"><li style="display:inline;">Language 01</li></a>
+                              <a class="lang-group-item"  href="#0"><li style="display:inline;">Language 02</li></a>
+                              <a class="lang-group-item"  href="#0"><li style="display:inline;">Language 03</li></a>
+                              <a class="lang-group-item " href="#0"><li style="display:inline;">Language 04</li></a>
+						   </div>
+						</div>
+
+                    </div>
+
+            </div>
+            
+            
+ <hr>
+			
+			
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h2 id="language">Language selector</h2>
+			</div>
+
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+                    <div class="col-12" style="padding-top:0px; background-color: #fff;">
+
+						<nav class="nav  justify-content-center">
+							<ul class="pagination">
+
+								<li><a class="language-link-selected" href="#">EN</a>
+								</li>
+								<li><a class="language-link" href="#0">BG</a>
+								</li>
+								<li><a class="language-link"  href="#0">HR</a>
+								</li>
+								<li><a class="language-link"  href="#0">CS</a>
+								</li>
+								<li><a class="language-link"  href="#0">DA</a>
+								</li>
+								<li><a class="language-link" href="#0">NL</a>
+								</li>
+								<li><a class="language-link" href="#0">ET</a>
+								</li>
+								<li><a class="language-link"  href="#0">FI</a>
+								</li>
+								<li><a class="language-link"  href="#0">FR</a>
+								</li>
+								<li><a class="language-link"  href="#0">DE</a>
+								</li>
+								<li><a class="language-link" href="#0">EL</a>
+								</li>
+								<li><a class="language-link" href="#0">HU</a>
+								</li>
+								<li><a class="language-link"  href="#0">IT</a>
+								</li>
+								<li><a class="language-link"  href="#0">LV</a>
+								</li>
+								<li><a class="language-link"  href="#0">LT</a>
+								</li>
+								<li><a class="language-link" href="#0">PL</a>
+								</li>
+								<li><a class="language-link" href="#0">PT</a>
+								</li>
+								<li><a class="language-link"  href="#0">RO</a>
+								</li>
+								<li><a class="language-link"  href="#0">SK</a>
+								</li>
+								<li><a class="language-link"  href="#0">SL</a>
+								</li>
+								<li><a class="language-link"  href="#0">ES</a>
+                                </li>
+								<li><a class="language-link"  href="#0">SV</a>
+								</li>
+
+							</ul>
+						</nav>
+
+                    </div>
+
+            </div>
+
+
+<hr>
+
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h2 id="pagination">Pagination</h2>
+			</div>
+
+
+			<div class="row" style="margin:0px 0px 60px 0px;">
+                    <div class="col-md-12" style="padding-top:40px; background-color: #E8EBEC; height: 130px;">
+
+						<nav class="nav  justify-content-center">
+							<ul class="pagination">
+	
+									<a href="#" >
+										<span class="glyphicon glyphicon-menu-left" style="float:left; margin-right: 10px; padding-top: 10px;color: #8a8c8d;"></span>
+									</a>
+								
+								<li class="page-link-selected" href="#">1</li>
+								<li class="page-link" href="#">2</li>
+								<li class="page-link"  href="#">3</li>
+								<li class="page-link"  href="#">4</li>
+								<li class="page-link"  href="#">5</li>
+	
+									<a href="#" aria-label="Next">
+										<span class="glyphicon glyphicon-menu-right" style="float:right; margin-left: 10px; padding-top: 10px; color: #8a8c8d;"></span>
+									</a>
+	
+							</ul>
+						</nav>
+
+                    </div>
+
+            </div>
+
+
+
+<hr>
+
+			
+			<div class="row" style="margin:50px 0px 20px 0px;">
+				<h2 id="dictionary">Dictionary index</h2>
+			</div>
+
+
+			<div class="row" style="background-color: #E8EBEC; padding: 40px 0px 10px 0px;">
+				<div class="col-3"></div>
+				<div class="col-9"><h4>Browse</h4></div>
+
+            </div>
+
+
+			<div class="row" style="background-color: #E8EBEC;">
+
+				<div class="col-lg-3"></div>
+
+				<div class="col dictionary-index">A</div>
+				<div class="col dictionary-index">B</div>
+				<div class="col dictionary-index">C</div>
+				<div class="col dictionary-index">D</div>
+				<div class="col dictionary-index">E</div>
+				<div class="col dictionary-index">F</div>
+
+				<div class="col-lg-3"></div>
+
+            </div>
+
+			<div class="row" style="background-color: #E8EBEC;">
+
+				<div class="col-lg-3"></div>
+
+				<div class="col dictionary-index">G</div>
+				<div class="col dictionary-index">H</div>
+				<div class="col dictionary-index">I</div>
+				<div class="col dictionary-index">J</div>
+				<div class="col dictionary-index">K</div>
+				<div class="col dictionary-index">L</div>
+
+				<div class="col-lg-3"></div>
+
+            </div>
+
+			<div class="row" style="background-color: #E8EBEC;">
+
+				<div class="col-lg-3"></div>
+
+				<div class="col dictionary-index">M</div>
+				<div class="col dictionary-index">N</div>
+				<div class="col dictionary-index">O</div>
+				<div class="col dictionary-index">P</div>
+				<div class="col dictionary-index">Q</div>
+				<div class="col dictionary-index">R</div>
+
+
+				<div class="col-lg-3"></div>
+
+            </div>
+
+			<div class="row" style="background-color: #E8EBEC;">
+
+				<div class="col-lg-3"></div>
+
+				<div class="col dictionary-index">S</div>
+				<div class="col dictionary-index">T</div>
+				<div class="col dictionary-index">U</div>
+				<div class="col dictionary-index">V</div>
+				<div class="col dictionary-index">W</div>
+				<div class="col dictionary-index">X</div>
+
+				<div class="col-lg-3"></div>
+
+            </div>
+
+			<div class="row" style="background-color: #E8EBEC; padding-bottom: 60px;">
+
+				<div class="col-lg-3"></div>
+
+				<div class="col dictionary-index">Y</div>
+				<div class="col dictionary-index">Z</div>
+				<div class="col-4 btn btn-primary btn-dictionary">View all<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></div>
+	
+
+
+				<div class="col-lg-3"></div>
+
+            </div>
+
+            	<div class="row" style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px; ">
+                  		<h2 id="carrousel">Carrousel</h2>
+                  </div>
+            	<a href="#" class="btn btn-primary carrousel"><span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+
+
+
+			
+			<div class="row" style="margin:80px 0px 0px 0px; border-top:1px solid #E8ECEB; padding-top:60px; ">
+                  		<h2 id="breadcrumbs">Breadcrumbs</h2>
+                  </div>
+
+
+                  <div class="row" style="margin:20px 0px 0px 0px;">
+
+                      <div  class="col-md-9" style="padding:0px;">
+
+                     		<p class="EFbreadcrumb"><a href="">Home</a> <span class="glyphicon glyphicon-menu-right" style="color:4c4c4c; font-size:16px;"></span> <a href="">Main Section</a> <span class="glyphicon glyphicon-menu-right" style="color:4c4c4c; font-size:16px;"></span> <a href="">Sub Section</a> <span class="glyphicon glyphicon-menu-right" style="color:4c4c4c; font-size:16px;"></span> <a href="">Sub Sub Section</a> </p>
+
+                      </div>
+
+                   </div>
+
+
+
+
+
+      </div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:100px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2019</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+
+
+
+
+
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+
+
+</body>
+</html>

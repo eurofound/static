@@ -1,0 +1,267 @@
+<!doctype html>
+<html  lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eurofound Brand Guidelines &ndash; Overview</title>
+
+<link href="css/bootstrap-4.0.0-EF.css" rel="stylesheet" type="text/css">
+<link href="css/Eurofound.css" rel="stylesheet" type="text/css">
+<link href="css/Glyphicon.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+ $(".scroll").click(function(event){
+         event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top-0;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 400,'swing');
+     });
+
+
+            //dropdown
+             $('.start-hidden').hide();
+             $('.toggle-trigger').click(function() { $(this).next('.toggle').slideToggle(); })
+			 
+	
+
+          //multilevel menu
+          //hide the dropdowns initally
+          //cept for the first one
+            var multimenu = $('.Sidenav.secondary');
+            multimenu.find('.list-group').hide().first().show();
+            multimenu.find('.haschildren').first().addClass('selected');
+
+          //show the next ul on click of the category link
+            multimenu.find('.haschildren').click(
+
+              function() {
+
+                //the element clicked on
+                var thisitem = $(this);
+
+                //other top level
+                var others = thisitem.siblings().next('.list-group');
+                others.hide();
+
+                 //children of siblings
+                 others.find('.list-group').hide();
+                 others.find('.selected').removeClass('selected');
+
+                 //this section
+                 var thissection = thisitem.next('.list-group');
+                 thissection.toggle();
+                 //hide the current children? I guess?
+                 thissection.find('.list-group').hide();
+                 thissection.find('.selected').removeClass('selected');
+
+                 //toggle selected class (already in css)
+                 $(this).filter('.Sidenav-catagory').toggleClass('Sidenav-catagory-selected');
+                 $(this).siblings().filter('.Sidenav-catagory').removeClass('Sidenav-catagory-selected');
+				 
+				  //toggle selected class (already in css)
+                 $(this).filter('.arrow-after').toggleClass('arrow-after-selected');
+                 $(this).siblings().filter('.arrow-after').removeClass('arrow-after-selected');
+
+                 //toggle additional _selected_ class for other elements if needed
+                 $(this).filter(':not(.Sidenav-catagory)').toggleClass('selected');
+                 $(this).siblings().filter(':not(.Sidenav-catagory)').removeClass('selected');
+
+              }
+
+            );
+
+});//]]>
+
+</script>
+
+</head>
+
+<body>
+
+
+<!--Header-->
+<div id="top" class="container-fluid" style="width:100%; height:119px;">	
+    <div class="row">
+    	<div class="col-8" >
+            <table width="965" border="0" >
+                <tbody>
+                <tr>
+                    <td style="width: 270px;"><a href="index.html"><img src="images/Eurofound-logo.png" width="225" height="119" alt=""/></a></td>
+                    <td style="width: 245px"><p class="small" style="line-height: 1; padding-top: 40px;">European Foundation<br>
+                        for the Improvement of<br>
+                        Living and Working Conditions</p></td>
+                    <td style="width: 450px;"><p class="small" style="line-height: 1; padding-top: 40px;">The tripartite EU agency providing knowledge to assist<br>
+                        in the development of better social, employment and<br>
+                        work-related policies</p></td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    	<div class="col-4" style=" text-align:right; padding-right:40px;">  
+            <div style="align-content:center; margin-top:40px;">
+             <a class="btn btn-success" href="#0" role="button">Online Modular Guide<span class="glyphicon glyphicon-menu-right" style="float:right;"></span></a>
+            </div>
+        </div>
+	</div>
+    
+</div>
+<!--Header End-->
+
+
+<!-- Main Menu -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+	<li class="nav-item active">
+	  <p class="nav-link">Overview</p>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="colours.html">Colours</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="typography.html">Typography</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="design principals.html">Design principles</a>
+	</li>
+	  <li class="nav-item">
+	  <a class="nav-link" href="chart design print.html">Chart design: Print</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="chart design web.html">Chart design: Web</a>
+	</li>
+  	<li class="nav-item">
+		<a class="nav-link" href="charts.html">Charts</a>
+	</li> 
+	  <li class="nav-item">
+			<a class="nav-link" href="digital chart actions.html">Digital chart actions</a>
+	</li> 
+  </ul>
+</nav>
+<!-- End -->
+
+
+<div class="container" style="margin-top: 60px;">
+
+		<div class="row">
+
+                <!-- Side Menu 
+                <div class="col-xl-3" style="margin-bottom: 50px;">
+                    <div class="sticky-top">
+                        
+						<ul class="Sidenav flex-column secondary">
+					
+						<li class="haschildren Sidenav-catagory  Sidenav-catagory-selected">Overview</li>
+
+							<ul class="list-group">
+								<a class="list-group-item scroll" href="#structure"><li style="display:inline;">Structure</li></a>
+                          <a class="list-group-item scroll" href="#grid"><li style="display:inline;">Grid</li></a>
+                          <a class="list-group-item scroll" href="#layout"><li style="display:inline;">Layout</li></a>
+							</ul>	
+
+						</ul>
+
+                    </div>
+                </div>
+                <!-- End -->
+
+
+                <!-- Structure -->
+                <div id="structure" class="col-xl-12" style="padding-top: 10px;">
+						<div style="margin: 0px 0px 50px 0px;">
+                        <h2>Overview</h2>
+                        <p class="lead">The guidelines presented here describe the default standards for charts in all Eurofound content. Deviations from these standards should be deliberate and made case by case.</p></div>
+                        
+                        
+
+                        <h4>Function:</h4>
+                        <p style="margin: 0px 0px 50px 0px;">The purpose of charts in Eurofound content is to visually represent and support data in a format that is easily interpreted.</p>
+                        
+						<h4>Content:</h4>
+						<p style="margin: 0px 0px 50px 0px;">Charts should focus on the key points in the content; the amount of data covered should be limited to what is necessary to illustrate the finding. To aid interpretation, no unnecessary detail should be included. At the same time, the chart should contain enough detail for it to be readily understood.</p>
+						<h4>Types:</h4>
+						<p style="margin: 0px 0px 50px 0px;">Bar charts, column charts and line charts are the chart types most commonly used in Eurofound content. However, a wider range of chart types have been included such as scatter charts, pie charts and map charts. </p>
+					<h4>Formatting:</h4>
+						<p style="margin: 0px 0px 50px 0px;">Formatting specifications on various chart elements such as typography, colour, legends, axis, labels and gridlines are explained in these data visualisation guidelines. Most of the formatting is applied during the creation of charts, such as font specifications and axis and gridline formatting. In terms of presentation, the charts passed to the typesetter serve as a guide to the overall desired look. </p>
+
+                   
+                        </div>
+                <!-- 12 Column End -->
+
+
+        </div>
+        <!-- Row End -->
+
+
+</div>
+
+<!-- Container End -->
+
+
+
+
+
+
+
+
+
+<!--Footer-->
+<div id="EFfooter" style="margin-top:40px;">
+
+        <div class="container-fluid" style="width:94%; margin-top:40px;">
+                
+				<div class="row">
+                  <div class="col-12">
+                      <h4 class="footerHeader">Contact</h4>
+                      <p class="text-white" style="margin:-20px 0px 50px 0px;"><a href="mailto:web@eurofound.europa.eu">web@eurofound.europa.eu</a></p>
+                  </div>   
+                </div>
+               
+         
+				<div class="row" style="border-top:1px solid #FFFFFF;">                  
+                	<div class="col-sm-9" style="padding-top:20px;">
+                        <img src="images/Eurofound-logo-sm.png" width="122" height="28" alt="" style="text-align:left;"/>
+                    </div>
+    
+                    <div class="col-sm-3" style="text-align:right;">
+                      <p class="copyrightText"><br><br>&copy; EUROFOUND 2018</p>
+                	</div>                     
+                </div>
+               
+               
+               <div class="row" style="margin-top:20px;">                  
+                    <div class="col-sm-9">
+                    </div>
+                  
+                    <div class="col-sm-3" style="text-align:right;">
+                      <a href="#top" class="scroll"><img src="images/top.png" width="52" height="44" alt=""/></a>
+                    </div>                      
+               </div>
+    
+ 		</div>
+    
+ </div>  
+<!--Footer End-->
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- <script src="js/bootstrap-4.0.0.js"></script> -->
+<script src="js/bootstrap-3.3.5.js" type="text/javascript"></script>
+</body>
+</html>
