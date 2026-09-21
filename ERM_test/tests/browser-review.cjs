@@ -85,6 +85,7 @@ const server = http.createServer((req, res) => {
       fs.writeFileSync(path.join(OUTPUT,'type-tooltip-dom.html'),await page.locator('.highcharts-tooltip-container').last().innerHTML());
       await page.screenshot({path:path.join(OUTPUT,'type-tooltip.png')});
       assert.ok(await page.locator('.highcharts-tooltip-container svg[aria-label="Number of cases over time"] path').count()>0);
+      assert.equal(await page.locator('.highcharts-tooltip-container .tt-wrap').last().evaluate(el=>el.scrollWidth<=el.clientWidth+1),true);
       await page.screenshot({path:path.join(OUTPUT,'type-tooltip.png')});
       await page.evaluate(()=>getChartById('types-loss-chart').tooltip.hide(0));
     });
