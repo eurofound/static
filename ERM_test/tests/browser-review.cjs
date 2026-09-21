@@ -34,6 +34,10 @@ const server = http.createServer((req, res) => {
     assert.equal(result.audit?.published,32382);assert.equal(result.audit?.outsideCoverage,2);
     assert.equal(await page.locator('#loadingOverlay').isVisible(),false);
     assert.equal(await page.locator('#r3-filter-panel').isVisible(),true);
+    assert.equal(await page.locator('.card-kicker').count(),0);
+    assert.equal(result.audit.covidCases,1133);
+    assert.equal(result.audit.covidSourceTagged,3);
+    assert.equal(result.audit.covidDescriptionOnly,1130);
     assert.equal(result.charts.length,6);assert.equal(result.version,'12.4.0');
   });
   if(result.charts?.length) {
@@ -158,9 +162,45 @@ const server = http.createServer((req, res) => {
       await page.locator('#r3-period-mode').selectOption('year');await page.locator('#r3-from-period').selectOption('2020');await page.locator('#r3-to-period').selectOption('2020');
       assert.equal(await page.locator('#dateFrom').inputValue(),'2020-01-01');assert.equal(await page.locator('#dateTo').inputValue(),'2020-12-31');
       await page.locator('[data-dim="thematic"] .ms-control').click();await page.getByRole('searchbox',{name:'Search thematic subjects'}).fill('covid');await page.locator('[data-dim="thematic"] .ms-opt input').check();await page.keyboard.press('Escape');
-      assert.ok((await page.locator('#r3-theme-definitions').innerText()).includes('Internal markers'));
+      assert.ok((await page.locator('#r3-theme-definitions').innerText()).includes('mentions in descriptions'));
       assert.equal(await page.evaluate(()=>ERMReview.getFilteredRows().every(r=>r.them_covid)),true);
       await page.evaluate(()=>clearAllSlicers());assert.equal(await page.locator('#cb-eu27').isChecked(),true);assert.equal(await page.evaluate(()=>ERMReview.getFilteredRows().length),23298);
+    });
+    await check('COVID theme includes untagged descriptions, shows its definition and respects EU-27 selection',async()=>{
+      const host=page.locator('[data-dim="thematic"]');await host.locator('.ms-control').click();
+      await page.getByRole('searchbox',{name:'Search thematic subjects'}).fill('covid');
+      assert.equal(await host.locator('.cnt').innerText(),'743');
+      await host.locator('.ms-opt input').check();await page.keyboard.press('Escape');
+      const ids=await page.evaluate(()=>ERMReview.getFilteredRows().map(r=>String(r.id)));
+      assert.equal(ids.length,743);
+      for(const id of ['103627','103579','101226','100730','102100','200850']) assert.ok(ids.includes(id),'Missing COVID case '+id);
+      for(const id of ['200887','201306']) assert.equal(ids.includes(id),false,'Worldwide case included in EU-27 '+id);
+      for(const id of ['77370','70588','89757','96370','88592']) assert.equal(ids.includes(id),false,'False COVID match '+id);
+      assert.match(await page.locator('#r3-theme-definitions').innerText(),/does not establish causation/);
+      await page.locator('#cb-eu27').uncheck();const allIds=await page.evaluate(()=>ERMReview.getFilteredRows().map(r=>String(r.id)));
+      assert.equal(allIds.length,1133);for(const id of ['200887','200850','201306']) assert.ok(allIds.includes(id));
+      await page.screenshot({path:path.join(OUTPUT,'covid-filter.png')});
+      await page.evaluate(()=>clearAllSlicers());
+    });
+    await check('COVID matching recognises source labels and disease names while excluding unrelated text and URLs',async()=>{
+      const matches=await page.evaluate(()=>{
+        const C=ERMRound3Core;
+        return [
+          C.covid({Thematic_covid:'Covid-19'}),
+          C.covid({Thematic_covid:'true'}),
+          C.covid({Thematic_marker:'COVID-19\rDigitalisation'}),
+          C.covid({Description:'Demand increased during theCOVID-19 pandemic.'}),
+          C.covid({Description:'Coronavirus restrictions reduced demand.'}),
+          C.covid({Description_lower:'manufacturing sars-cov-2 tests'}),
+          C.covid({Description:'Covidien announced job cuts.'}),
+          C.covid({Description:'Solidarity contracts: https://static.eurofound.europa.eu/covid19db/cases/example.html'}),
+          C.covid({Description:'[Government support](https://example.org/covid-19)'}),
+          C.covid({Description:'A generic pandemic or lockdown reference.'}),
+          C.covid({Description:'Coronavirus restrictions.'},{covidDescriptionMatches:false}),
+          C.covid({Thematic_covid:'Covid-19'},{covidDescriptionMatches:false})
+        ];
+      });
+      assert.deepEqual(matches,[true,true,true,true,true,true,false,false,false,false,false,true]);
     });
     await check('Two-country comparison and cascading NACE selectors work',async()=>{
       const host=page.locator('[data-dim="country"]');await host.locator('.ms-control').click();

@@ -215,14 +215,6 @@
     padding:24px 28px 26px;
     display:flex;flex-direction:column;
   }
-  .card-kicker{
-    display:flex;align-items:center;gap:10px;
-    font-size:13px;font-weight:700;color:var(--navy);
-    text-transform:uppercase;letter-spacing:0.04em;
-    margin-bottom:10px;
-  }
-  .card-kicker .dot{width:5px;height:5px;border-radius:50%;background:var(--text-mute)}
-  .card-kicker .k-sub{color:var(--text-dim);font-weight:400;text-transform:none;letter-spacing:0}
   .card-title{
     font-family:var(--serif);color:var(--navy-2);
     font-weight:700;font-size:23px;line-height:1.2;
@@ -772,7 +764,6 @@
 
   <!-- Map -->
   <div class="card map-card">
-    <div class="card-kicker">Geography <span class="dot"></span> <span class="k-sub">country totals &amp; largest cases</span></div>
     <div class="title-row">
       <h2 class="card-title">Restructurings by country</h2>
       <div class="seg" id="mapModeSeg">
@@ -786,7 +777,6 @@
 
   <!-- Events -->
   <div class="card events-card">
-    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">100+ jobs affected</span></div>
     <div class="title-row">
       <h2 class="card-title">Large restructuring events</h2>
       <div class="seg" id="eventsModeSeg">
@@ -801,7 +791,6 @@
 
   <!-- Jobs over time -->
   <div class="card jobs-card">
-    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">annual totals</span></div>
     <div class="title-row">
       <h2 class="card-title">Announced job changes over time</h2>
       <div class="seg" id="jobsModeSeg">
@@ -815,7 +804,6 @@
 
   <!-- Compare -->
   <div class="card compare-card">
-    <div class="card-kicker">Comparison <span class="dot"></span> <span class="k-sub">up to three selections</span></div>
     <h2 class="card-title">Compare trends</h2>
     <div class="chart-controls">
       <div class="compare-selects">
@@ -847,21 +835,18 @@
 
   <!-- Recent losses -->
   <div class="card loss-card">
-    <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest reductions</span></div>
     <h2 class="card-title">Most recent job losses</h2>
     <div class="card-body"><div class="recent-list" id="recentLoss"></div></div>
   </div>
 
   <!-- Recent gains -->
   <div class="card gain-card">
-    <div class="card-kicker">Announcements <span class="dot"></span> <span class="k-sub">latest creations</span></div>
     <h2 class="card-title">Most recent job gains</h2>
     <div class="card-body"><div class="recent-list" id="recentGain"></div></div>
   </div>
 
   <!-- Sectors -->
   <div class="card sector-card">
-    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">expand a sector for subsectors · click a subsector for detail</span></div>
     <h2 class="card-title">Sectors and subsectors</h2>
     <div class="card-body"><div class="sectors-table" id="sectorsTable"></div></div>
     <div class="card-note">Counts shown in <span style="color:var(--data-red);font-weight:600">red with ⚠</span> are based on fewer than 30 cases and may not be reliable.</div>
@@ -869,14 +854,12 @@
 
   <!-- Types pie -->
   <div class="card types-card">
-    <div class="card-kicker">Breakdown <span class="dot"></span> <span class="k-sub">share of all cases</span></div>
     <h2 class="card-title">Restructuring by type</h2>
     <div class="card-body"><div id="types-chart"></div></div>
   </div>
 
   <!-- Top companies over time -->
   <div class="card companies-card">
-    <div class="card-kicker">Time series <span class="dot"></span> <span class="k-sub">largest employers in the data</span></div>
     <div class="title-row">
       <h2 class="card-title">Announced job changes — top companies</h2>
       <div class="seg" id="compMetricSeg">
@@ -894,7 +877,6 @@
 
   <!-- Caveats -->
   <div class="card caveat-card">
-    <div class="card-kicker">About the data</div>
     <h2 class="card-title">Reading the figures</h2>
     <div class="card-body caveat-body">
       <p><strong>Job creation coverage.</strong> Announced job gains are only collected systematically from 2005 onwards, so gain and net-change figures before 2005 understate actual job creation.</p>
@@ -2785,6 +2767,7 @@ async function init(){
     statusColumn: 'status', publishedValues: ['published'],
     covidMarkerColumn: 'Thematic_marker', covidFlagColumn: 'Thematic_covid',
     covidMarkerValues: ['covid', 'covid-19', 'coronavirus', 'coronavirus disease (covid-19)'],
+    covidDescriptionMatches: true,
     dataCompleteThrough: null
   });
   const text = value => value == null ? '' : String(value).trim();
@@ -2853,16 +2836,24 @@ async function init(){
       excluded: rows.length - output.length, statusColumn: column, statuses}};
   }
   const normalMarker = value => fold(value).replace(/[\u2010-\u2015_\s]+/g, '-');
-  function covid(raw, settings) {
+  function covidBasis(raw, settings) {
     const cfg = Object.assign({}, DEFAULTS, settings || {});
-    const flag = findColumn(raw, cfg.covidFlagColumn);
-    if (flag && truthy(raw[flag])) return true;
-    const column = findColumn(raw, cfg.covidMarkerColumn);
-    if (!column) return false;
     const accepted = new Set(cfg.covidMarkerValues.map(normalMarker));
-    // Delimited internal markers only; never infer COVID from the case description.
-    return text(raw[column]).split(/[;|,\r\n]+/).some(marker => accepted.has(normalMarker(marker)));
+    const flag = findColumn(raw, cfg.covidFlagColumn);
+    if (flag && (truthy(raw[flag]) || accepted.has(normalMarker(raw[flag])))) return 'source tag';
+    const column = findColumn(raw, cfg.covidMarkerColumn);
+    if (column && text(raw[column]).split(/[;|,\r\n]+/).some(marker => accepted.has(normalMarker(marker)))) return 'source tag';
+    if (!cfg.covidDescriptionMatches) return '';
+    // The export's tags are sparse. Include explicit mentions, not generic pandemic
+    // language, company-name substrings (Covidien), or COVID policy-site URLs.
+    const description=['Description','Description_lower'].map(name=>{
+      const key=findColumn(raw,name);return key ? text(raw[key]) : '';
+    }).join(' ').replace(/<[^>]*>/g,' ').replace(/https?:\/\/[^\s<>]+/gi,' ');
+    // Some source prose joins words, e.g. "theCOVID-19"; the explicit disease
+    // identifier still counts. Its trailing boundary excludes "covid19db".
+    return /covid[\s_\-\u2010-\u2015]*19\b|\bcovid\b|\bcorona[\s_\-\u2010-\u2015]*virus\b|\bsars[\s_\-\u2010-\u2015]*cov[\s_\-\u2010-\u2015]*2\b/i.test(description) ? 'description mention' : '';
   }
+  function covid(raw, settings) { return !!covidBasis(raw,settings); }
   function caseUrl(id) {
     const value = text(id);
     // Source ID is a factsheet identifier, not an arbitrary URL or HTML fragment.
@@ -3023,7 +3014,7 @@ async function init(){
       rate:denominators.has(cc) ? cases / denominators.get(cc) * per : null,
       per,year:reference.year,source:reference.source}));
   }
-  return Object.freeze({DEFAULTS,text,fold,escape,truthy,number,date,iso,findColumn,publishedRows,covid,caseUrl,
+  return Object.freeze({DEFAULTS,text,fold,escape,truthy,number,date,iso,findColumn,publishedRows,covid,covidBasis,caseUrl,
     loss,gain,grossJobs,size,largest,countOptions,eligibleCompanies,latestCases,lastCompletedQuarter,
     quarterBounds,periods,inPeriod,values,typeBreakdown,sparkline,employmentRates});
 });
@@ -3047,7 +3038,7 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     digital:'Digital transition: Internal markers & keyword identification',
     green:'Green transition: Internal markers & keywords identification',
     twin:'Twin transition: Events referring to both the green and digital transition',
-    covid:'Covid-19: Internal markers'
+    covid:cfg.covidDescriptionMatches ? 'COVID-19: source-tagged cases or explicit COVID/coronavirus mentions in descriptions; a mention does not establish causation.' : 'COVID-19: source-tagged cases'
   };
   const LINKS = {
     database:'https://apps.eurofound.europa.eu/restructuring-events/search',
@@ -3120,12 +3111,8 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const compare=document.querySelector('.compare-card'); if(compare) compare.remove();
     setTitle('.events-card .card-title','Number of large restructuring events');
     setTitle('.sector-card .card-title','Sectors & subsectors (events)');
-    setTitle('.sector-card .k-sub','expand sectors and subsectors to see NACE-3');
     setTitle('.types-card .card-title','Restructuring by type (events)');
-    setTitle('.types-card .k-sub','share within job-gain and job-loss cases');
     setTitle('.companies-card .card-title','Most actively restructuring companies');
-    setTitle('.companies-card .k-sub','companies with more than '+cfg.companyMinExclusive+' restructurings');
-    setTitle('.jobs-card .k-sub','annual history and completed current-year quarters');
     setTitle('.companies-card .ms-hint','Only companies with more than '+cfg.companyMinExclusive+
       ' restructurings under the current filters are eligible. Jobs = announced losses plus gains, not net change or unique people.');
     setTitle('.sector-card .card-note','Expand sectors and subsectors to see NACE-3. NACE-3 detail requires at least '+
@@ -3180,7 +3167,8 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const row=originalNormalize(raw);
     row.id=C.text(raw.ID) || null;
     row.date=C.date(raw.d_date_announcement);
-    row.them_covid=C.covid(raw,cfg);
+    row.covidBasis=C.covidBasis(raw,cfg);
+    row.them_covid=!!row.covidBasis;
     row.status=C.text(raw[C.findColumn(raw,cfg.statusColumn)]);
     row.nace3=C.text(raw.NACE_level_3) || null;
     // Reject malformed numbers rather than partially parsing '123 invalid'.
@@ -3745,6 +3733,8 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
       audit.missingDates=NORM.filter(r=>!r.date).length;
       audit.unlinkedCases=NORM.filter(r=>!C.caseUrl(r.id)).length;
       audit.covidCases=NORM.filter(r=>r.them_covid).length;
+      audit.covidSourceTagged=NORM.filter(r=>r.covidBasis==='source tag').length;
+      audit.covidDescriptionOnly=NORM.filter(r=>r.covidBasis==='description mention').length;
       audit.confirmedProductionData=false;
       sourceWarning='';employment=null;
       if(cfg.employmentReferenceURL) {
