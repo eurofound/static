@@ -62,3 +62,11 @@ The COVID undercount came from relying on sparsely populated source tags. Publis
 The description matcher excludes URL targets and HTML attributes, the company name Covidien, and generic pandemic/lockdown text without a disease identifier. It handles source text with missing spaces such as `theCOVID-19`. An independent Python scan of all 32,382 rows found 1,133 matches, 743 marked EU-27, agreeing with the browser. Worldwide cases remain excluded when EU-27 is selected. This broadens retrieval; it does not repair the source's missing tags or certify every case as caused by COVID.
 
 All 30 Chromium checks pass, including the new theme counts, geography exclusions, source-tag retention, description-only examples and false-match cases. No browser errors or failed requests occurred. JavaScript syntax and Git whitespace checks pass.
+
+## Straight time series and filter cleanup
+
+All active time-series charts now connect observations with straight segments. The single-series event chart retains its area fill. Each series has circular markers on its first and last finite values; missing early observations are skipped, a single observation receives one marker, and gaps stay unconnected. Tooltip sparklines also mark their endpoints. Marker settings are applied to the rendered chart only, keeping CSV model values numeric.
+
+Removed the separate “Filter the data” heading and the COVID definition line from the dashboard. The filter button now reads “Open filters” or “Close filters”; filters still open on launch. COVID matching and counts are unchanged and remain documented in this review.
+
+32 Chromium checks pass, including straight SVG paths, rendered endpoint circles, comparisons, missing pre-2005 gains, one-period selections, exports and responsive widths. No browser errors or failed requests occurred. Single-series, comparison and tooltip screenshots were inspected; JavaScript syntax and Git whitespace checks pass.

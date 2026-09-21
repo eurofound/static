@@ -20,6 +20,25 @@ const server = http.createServer((req, res) => {
   const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});
   const errors=[], failed=[], checks=[];
   async function check(name,fn) {try {await fn(); checks.push({name,passed:true});console.log('PASS '+name);}catch(e){checks.push({name,passed:false,error:e.message});console.log('FAIL '+name+': '+e.message);}}
+  async function assertStraightMarkers() {
+    const charts=await page.evaluate(()=>['events-chart','jobs-chart','companies-chart'].map(id=>{
+      const chart=getChartById(id);
+      return {id,series:chart.series.map(series=>{
+        const points=series.points.filter(point=>Number.isFinite(point.y));
+        return {type:series.type,curved:series.graphPath?.some(segment=>['C','S','Q','T'].includes(segment[0])),
+          expected:[...new Set([points[0]?.index,points.at(-1)?.index])].filter(index=>index!=null),
+          marked:series.points.filter(point=>point.options.marker?.enabled).map(point=>point.index),
+          circles:series.points.filter(point=>point.options.marker?.enabled).every(point=>point.graphic?.symbolName==='circle')};
+      }),numericModel:ERMReview.getModels()[id].series.every(series=>series.data.every(value=>value===null||typeof value==='number'))};
+    }));
+    for(const chart of charts) {
+      assert.equal(chart.numericModel,true,chart.id+' export values remain numeric');
+      for(const series of chart.series) {
+        assert.ok(['area','line'].includes(series.type),chart.id+' uses straight segments');assert.equal(!!series.curved,false);
+        assert.deepEqual(series.marked,series.expected,chart.id+' marks first and last non-null points');assert.equal(series.circles,true,chart.id+' renders circles');
+      }
+    }
+  }
   page.on('pageerror',e=>errors.push(e.message));
   page.on('console',m=>{if(m.type()==='error') errors.push(m.text()); if(m.type()==='warning') console.log('BROWSER WARNING: '+m.text());});
   page.on('requestfailed',r=>failed.push({url:r.url(),failure:r.failure()}));
@@ -34,7 +53,9 @@ const server = http.createServer((req, res) => {
     assert.equal(result.audit?.published,32382);assert.equal(result.audit?.outsideCoverage,2);
     assert.equal(await page.locator('#loadingOverlay').isVisible(),false);
     assert.equal(await page.locator('#r3-filter-panel').isVisible(),true);
+    assert.equal(await page.locator('#r3-toggle-filters').innerText(),'Close filters');
     assert.equal(await page.locator('.card-kicker').count(),0);
+    assert.equal(await page.getByText('Filter the data',{exact:true}).count(),0);
     assert.equal(result.audit.covidCases,1133);
     assert.equal(result.audit.covidSourceTagged,3);
     assert.equal(result.audit.covidDescriptionOnly,1130);
@@ -43,9 +64,11 @@ const server = http.createServer((req, res) => {
   if(result.charts?.length) {
     // The app now opens with filters visible; collapse them for the chart interactions below.
     await page.locator('#r3-toggle-filters').click();
+    assert.equal(await page.locator('#r3-toggle-filters').innerText(),'Open filters');
     await check('Directory URL redirects to dashboard',()=>assert.match(result.url,/ERM_test\/ERM_prototype_dash.html$/));
+    await check('Every time-series chart uses straight segments and visible circular endpoint markers',assertStraightMarkers);
     await check('Original filled event chart and contributor-bar tooltip render with the current period data',async()=>{
-      assert.equal(await page.evaluate(()=>getChartById('events-chart').series[0].type),'areaspline');
+      assert.equal(await page.evaluate(()=>getChartById('events-chart').series[0].type),'area');
       assert.equal(await page.evaluate(()=>getChartById('events-chart').chartHeight),470);
       await page.locator('#events-chart').scrollIntoViewIfNeeded();
       await page.evaluate(()=>{const c=getChartById('events-chart');const i=ERMReview.getModels()['events-chart'].periods.findIndex(p=>p.id==='2012');c.tooltip.refresh(c.series[0].points[i]);});
@@ -136,6 +159,7 @@ const server = http.createServer((req, res) => {
       fs.writeFileSync(path.join(OUTPUT,'type-tooltip-dom.html'),await page.locator('.highcharts-tooltip-container').last().innerHTML());
       await page.screenshot({path:path.join(OUTPUT,'type-tooltip.png')});
       assert.ok(await page.locator('.highcharts-tooltip-container svg[aria-label="Number of cases over time"] path').count()>0);
+      assert.equal(await page.locator('.highcharts-tooltip-container svg[aria-label="Number of cases over time"] circle').count(),2);
       assert.equal(await page.locator('.highcharts-tooltip-container .tt-wrap').last().evaluate(el=>el.scrollWidth<=el.clientWidth+1),true);
       const tooltip=page.locator('.highcharts-tooltip-container .tt-wrap').last();
       assert.ok((await tooltip.boundingBox()).height<220);
@@ -162,11 +186,11 @@ const server = http.createServer((req, res) => {
       await page.locator('#r3-period-mode').selectOption('year');await page.locator('#r3-from-period').selectOption('2020');await page.locator('#r3-to-period').selectOption('2020');
       assert.equal(await page.locator('#dateFrom').inputValue(),'2020-01-01');assert.equal(await page.locator('#dateTo').inputValue(),'2020-12-31');
       await page.locator('[data-dim="thematic"] .ms-control').click();await page.getByRole('searchbox',{name:'Search thematic subjects'}).fill('covid');await page.locator('[data-dim="thematic"] .ms-opt input').check();await page.keyboard.press('Escape');
-      assert.ok((await page.locator('#r3-theme-definitions').innerText()).includes('mentions in descriptions'));
+      assert.equal(await page.locator('#r3-theme-definitions').isVisible(),false);
       assert.equal(await page.evaluate(()=>ERMReview.getFilteredRows().every(r=>r.them_covid)),true);
       await page.evaluate(()=>clearAllSlicers());assert.equal(await page.locator('#cb-eu27').isChecked(),true);assert.equal(await page.evaluate(()=>ERMReview.getFilteredRows().length),23298);
     });
-    await check('COVID theme includes untagged descriptions, shows its definition and respects EU-27 selection',async()=>{
+    await check('COVID theme retains its cases without showing the removed explanation',async()=>{
       const host=page.locator('[data-dim="thematic"]');await host.locator('.ms-control').click();
       await page.getByRole('searchbox',{name:'Search thematic subjects'}).fill('covid');
       assert.equal(await host.locator('.cnt').innerText(),'743');
@@ -176,7 +200,8 @@ const server = http.createServer((req, res) => {
       for(const id of ['103627','103579','101226','100730','102100','200850']) assert.ok(ids.includes(id),'Missing COVID case '+id);
       for(const id of ['200887','201306']) assert.equal(ids.includes(id),false,'Worldwide case included in EU-27 '+id);
       for(const id of ['77370','70588','89757','96370','88592']) assert.equal(ids.includes(id),false,'False COVID match '+id);
-      assert.match(await page.locator('#r3-theme-definitions').innerText(),/does not establish causation/);
+      assert.equal(await page.locator('#r3-theme-definitions').isVisible(),false);
+      assert.equal(await page.getByText(/a mention does not establish causation/).count(),0);
       await page.locator('#cb-eu27').uncheck();const allIds=await page.evaluate(()=>ERMReview.getFilteredRows().map(r=>String(r.id)));
       assert.equal(allIds.length,1133);for(const id of ['200887','200850','201306']) assert.ok(allIds.includes(id));
       await page.screenshot({path:path.join(OUTPUT,'covid-filter.png')});
@@ -207,10 +232,24 @@ const server = http.createServer((req, res) => {
       for(const country of ['France','Ireland']){await page.getByRole('searchbox',{name:'Search countries',exact:true}).fill(country);await host.locator('.ms-opt input').first().check();}await page.keyboard.press('Escape');
       assert.equal(await page.evaluate(()=>getChartById('events-chart').series.length),2);
       const headings=await page.locator('.r3-sector-head').innerText();assert.match(headings,/France/);assert.match(headings,/Ireland/);
+      await assertStraightMarkers();
+      await page.locator('#r3-toggle-filters').click();
+      await page.waitForTimeout(1200); // Let the initial chart reveal animation finish before visual review.
+      await page.locator('.events-card').screenshot({path:path.join(OUTPUT,'straight-comparison-lines.png')});
+      await page.locator('#r3-toggle-filters').click();
       await page.evaluate(()=>clearAllSlicers());
       await page.locator('[data-dim="sector"] .ms-control').click();await page.getByRole('searchbox',{name:'Search sectors',exact:true}).fill('Manufacturing');await page.locator('[data-dim="sector"] .ms-opt input').check();await page.keyboard.press('Escape');
       assert.equal(await page.evaluate(()=>OPTIONS.nace3.every(o=>o.count>50)),true);
       assert.equal(await page.evaluate(()=>ERMReview.getFilteredRows().every(r=>r.sector==='Manufacturing')),true);
+      await page.evaluate(()=>clearAllSlicers());
+    });
+    await check('Endpoint markers handle missing early gains and a one-period selection',async()=>{
+      await page.locator('#r3-period-mode').selectOption('year');await page.locator('#r3-from-period').selectOption('2002');
+      await assertStraightMarkers();
+      assert.equal(await page.evaluate(()=>{const c=getChartById('jobs-chart');const p=c.series.find(s=>s.options.custom.metric==='gain').points.find(p=>Number.isFinite(p.y));return ERMReview.getModels()['jobs-chart'].periods[p.index].label;}),'2005');
+      await page.locator('#r3-from-period').selectOption('2020');await page.locator('#r3-to-period').selectOption('2020');
+      await assertStraightMarkers();
+      assert.equal(await page.evaluate(()=>getChartById('jobs-chart').series.every(s=>s.points.filter(p=>p.options.marker?.enabled).length===1)),true);
       await page.evaluate(()=>clearAllSlicers());
     });
     for(const width of [375,390,768,1024,1440]) await check(`No horizontal page overflow at ${width}px with filters open`,async()=>{

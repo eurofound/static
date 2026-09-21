@@ -72,7 +72,6 @@
   .meta-item{display:flex;flex-direction:column}
   .meta-label{font-size:14px;color:var(--text-dim);margin-bottom:2px;font-weight:600}
   .meta-value{color:var(--navy);font-weight:600;font-size:20px;font-family:var(--serif)}
-  .section-label{color:var(--blue-dark);font-weight:600;font-size:15px;margin:18px 0 10px}
 
   /* ============ Filters ============ */
   .filters-wrap{max-width:1520px;margin:0 auto;padding:0 48px 26px;
@@ -690,7 +689,6 @@
     </div>
     <img class="header-logo" src="./Eurofound_logo.svg.webp" alt="Eurofound" onerror="this.style.display='none'">
   </div>
-  <div class="section-label">Filter the data</div>
 </header>
 
 <div class="filters-wrap">
@@ -2992,9 +2990,11 @@ async function init(){
       current.push((4 + index/n*(width-8)).toFixed(1) + ',' + (height-5-value/max*(height-10)).toFixed(1));
     });
     if (current.length) paths.push(current);
+    const endpoints=[...new Set([paths[0][0],paths.at(-1).at(-1)])];
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Number of cases over time">' +
       '<title>Number of cases over time; range 0 to '+max+'</title>' +
-      paths.map(points => '<path d="M'+points.join(' L')+'" fill="none" stroke="#41719C" stroke-width="2"/>').join('') + '</svg>';
+      paths.map(points => '<path d="M'+points.join(' L')+'" fill="none" stroke="#41719C" stroke-width="2"/>').join('') +
+      endpoints.map(point=>{const[x,y]=point.split(',');return '<circle cx="'+x+'" cy="'+y+'" r="3" fill="#41719C" stroke="#fff" stroke-width="1"/>';}).join('') + '</svg>';
   }
   // Prepared helper only. No employment figures are supplied with the review package.
   function employmentRates(rows, reference, per = 100000) {
@@ -3037,8 +3037,7 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     auto:'Automotive: NACE-29, 46.7, 47.8, 47.3, and 95.3 are included',
     digital:'Digital transition: Internal markers & keyword identification',
     green:'Green transition: Internal markers & keywords identification',
-    twin:'Twin transition: Events referring to both the green and digital transition',
-    covid:cfg.covidDescriptionMatches ? 'COVID-19: source-tagged cases or explicit COVID/coronavirus mentions in descriptions; a mention does not establish causation.' : 'COVID-19: source-tagged cases'
+    twin:'Twin transition: Events referring to both the green and digital transition'
   };
   const LINKS = {
     database:'https://apps.eurofound.europa.eu/restructuring-events/search',
@@ -3284,7 +3283,9 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const dim=multiDim();
     $('msHint').textContent=dim ? 'Comparing '+SELECT[dim].length+' '+LABELS[dim]+'. Other fields keep one value while comparing.' :
       'Choose two or three values in one field to compare them.';
-    $('r3-theme-definitions').innerHTML=SELECT.thematic.map(value=>'<p>'+C.escape(DEFINITIONS[value]||value)+'</p>').join('');
+    const definitions=SELECT.thematic.filter(value=>DEFINITIONS[value]);
+    $('r3-theme-definitions').hidden=!definitions.length;
+    $('r3-theme-definitions').innerHTML=definitions.map(value=>'<p>'+C.escape(DEFINITIONS[value])+'</p>').join('');
     $('r3-filter-summary').textContent=[$('r3-from-period').selectedOptions[0]?.textContent+' – '+
       $('r3-to-period').selectedOptions[0]?.textContent,$('cb-eu27').checked?'EU-27':'All countries',
       ...DIMS.filter(dim=>SELECT[dim].length).map(dim=>SELECT[dim].map(v=>dim==='thematic'?(THEMATIC_OPTS.find(o=>o.value===v)||{}).label||v:v).join(', '))].join(' · ');
@@ -3328,7 +3329,7 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     $('r3-toggle-filters').addEventListener('click',()=>{
       const open=$('r3-filter-panel').hidden; $('r3-filter-panel').hidden=!open;
       $('r3-toggle-filters').setAttribute('aria-expanded',String(open));
-      $('r3-toggle-filters').textContent=open?'Close filters':'Edit filters';
+      $('r3-toggle-filters').textContent=open?'Close filters':'Open filters';
       (Highcharts.charts||[]).forEach(chart=>{if(chart) chart.reflow();});
     });
     document.addEventListener('click',event=>{if(!event.target.closest('.ms')) Object.values(MS).forEach(ms=>ms.close());});
@@ -3407,11 +3408,11 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const eventChart=id==='events-chart', single=groups.length===1&&metrics.length===1;
     groups.forEach((group,g)=>metrics.forEach((metric,m)=>{
       const color=groups.length>1?DATA_COLORS[g%DATA_COLORS.length]:metric.color;
-      series.push({name:(group.name?group.name+' — ':'')+metric.label,type:eventChart&&single?'areaspline':'spline',
+      series.push({name:(group.name?group.name+' — ':'')+metric.label,type:eventChart&&single?'area':'line',
         data:C.values(group.rows,ps,metric.key),color,
         fillColor:{linearGradient:{x1:0,y1:0,x2:0,y2:1},stops:[[0,Highcharts.color(color).setOpacity(.2).get('rgba')],[1,Highcharts.color(color).setOpacity(.01).get('rgba')]]},
         dashStyle:m===1?'ShortDash':'Solid',lineWidth:2.5,connectNulls:false,
-        marker:{enabled:false,symbol:m===1?'diamond':'circle',states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}},custom:{metric:metric.key,group:group.name}});
+        marker:{enabled:false,symbol:'circle',radius:4,lineColor:'#fff',lineWidth:1.5,states:{hover:{enabled:true,radius:5,lineColor:'#fff',lineWidth:2}}},custom:{metric:metric.key,group:group.name}});
     }));
     const boundary=ps.findIndex(p=>p.kind==='separator');
     const plotLines=boundary>=0?[{value:boundary,color:'#98A1B3',width:1,dashStyle:'Dash',label:{text:'Quarterly →',rotation:0}}]:[];
@@ -3422,7 +3423,13 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const step=eventChart?5:shortScreen?5:2;
     const ticks=ps.map((p,i)=>({p,i})).filter(({p,i})=>p.kind!=='separator'&&(ps.length<=8||p.kind==='quarter'||i===0||p.start.getUTCFullYear()%step===0)).map(({i})=>i);
     models[id]={periods:ps,series};
-    newChart(id,{chart:{type:'spline',height:shortScreen?310:eventChart?470:360,spacingTop:6},xAxis:{categories:ps.map(p=>p.label),
+    // Keep the export model numeric; decorate only the rendered endpoints.
+    const chartSeries=series.map(item=>{
+      const first=item.data.findIndex(Number.isFinite);
+      let last=item.data.length-1;while(last>=0&&!Number.isFinite(item.data[last]))last--;
+      return {...item,data:item.data.map((y,index)=>(index===first||index===last)?{y,marker:{enabled:true,symbol:'circle'}}:y)};
+    });
+    newChart(id,{chart:{type:'line',height:shortScreen?310:eventChart?470:360,spacingTop:6},xAxis:{categories:ps.map(p=>p.label),
         tickPositions:ticks,plotLines,labels:{rotation:0}},
       yAxis:{min:0,allowDecimals:axisTitle!=='Events',title:{text:axisTitle}},
       legend:{enabled:!eventChart||!single,align:'center',verticalAlign:'bottom',symbolRadius:2,squareSymbol:true},
@@ -3444,7 +3451,7 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
           }
         }
         return html+'</div>';
-      }},series:series.length?series:[{name:'No matching data',data:[]}],credits:{enabled:false}});
+      }},series:chartSeries.length?chartSeries:[{name:'No matching data',data:[]}],credits:{enabled:false}});
   }
   renderEventsChart=function(rows) {
     const metric={all:{key:'events',label:'Number of restructurings',color:'#3F6C9B'},
