@@ -15,16 +15,16 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(file).pipe(res);
 });
 (async()=>{
-  await new Promise(resolve=>server.listen(8765,'127.0.0.1',resolve));
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const browser=await chromium.launch({headless:true});
   const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});
   const errors=[], failed=[], checks=[];
-  async function check(name,fn) {try {await fn(); checks.push({name,passed:true});}catch(e){checks.push({name,passed:false,error:e.message});}}
+  async function check(name,fn) {try {await fn(); checks.push({name,passed:true});console.log('PASS '+name);}catch(e){checks.push({name,passed:false,error:e.message});console.log('FAIL '+name+': '+e.message);}}
   page.on('pageerror',e=>errors.push(e.message));
   page.on('console',m=>{if(m.type()==='error') errors.push(m.text()); if(m.type()==='warning') console.log('BROWSER WARNING: '+m.text());});
   page.on('requestfailed',r=>failed.push({url:r.url(),failure:r.failure()}));
   if(process.env.ERM_CSV_PATH) await page.route('https://media.githubusercontent.com/**/Full_data.csv',r=>r.fulfill({path:path.resolve(process.env.ERM_CSV_PATH),contentType:'text/csv'}));
-  await page.goto('http://127.0.0.1:8765/ERM_test/',{waitUntil:'networkidle',timeout:90000});
+  await page.goto('http://127.0.0.1:'+server.address().port+'/ERM_test/',{waitUntil:'networkidle',timeout:90000});
   await page.waitForFunction(()=>document.querySelector('#loadingOverlay')?.style.display==='none'||document.querySelector('#loadingOverlay .err'),{timeout:90000});
   const result=await page.evaluate(()=>({url:location.href,overlay:document.querySelector('#loadingOverlay')?.innerText,audit:window.ERMReview?.getAudit(),version:window.Highcharts?.version,charts:window.Highcharts?.charts.filter(Boolean).map(c=>({id:c.renderTo.id,series:c.series.map(s=>({name:s.name,type:s.type,points:s.points.length})),title:c.title?.textStr})),kpis:document.querySelector('.kpi-grid')?.innerText,body:document.body.innerText.slice(0,7000)}));
   result.errors=errors;result.failed=failed;
@@ -39,6 +39,16 @@ const server = http.createServer((req, res) => {
     // The app now opens with filters visible; collapse them for the chart interactions below.
     await page.locator('#r3-toggle-filters').click();
     await check('Directory URL redirects to dashboard',()=>assert.match(result.url,/ERM_test\/ERM_prototype_dash.html$/));
+    await check('Original filled event chart and contributor-bar tooltip render with the current period data',async()=>{
+      assert.equal(await page.evaluate(()=>getChartById('events-chart').series[0].type),'areaspline');
+      assert.equal(await page.evaluate(()=>getChartById('events-chart').chartHeight),470);
+      await page.locator('#events-chart').scrollIntoViewIfNeeded();
+      await page.evaluate(()=>{const c=getChartById('events-chart');const i=ERMReview.getModels()['events-chart'].periods.findIndex(p=>p.id==='2012');c.tooltip.refresh(c.series[0].points[i]);});
+      assert.equal(await page.locator('.highcharts-tooltip-container .tt-head').last().innerText(),'2012');
+      assert.equal(await page.locator('.highcharts-tooltip-container .tt-fill').count(),3);
+      await page.screenshot({path:path.join(OUTPUT,'restored-events-tooltip.png')});
+      await page.evaluate(()=>getChartById('events-chart').tooltip.hide(0));
+    });
     await check('All eligible EU countries have plotted largest-case bubbles',async()=>{
       const data=await page.evaluate(()=>{const ch=getChartById('map-chart');return {expected:ERMRound3Core.largest(ERMReview.getFilteredRows()).length,points:ch.series[1].points.filter(p=>p.plotX!=null&&p.plotY!=null).length};});assert.equal(data.points,data.expected);assert.equal(data.points,26);
     });
@@ -77,6 +87,15 @@ const server = http.createServer((req, res) => {
       await page.locator('#sectorsTable > details').first().locator('details > summary').first().click();
       assert.ok(await page.locator('.r3-level-3:visible').count()>0);
       assert.equal(await page.evaluate(()=>csvSectors().filter(r=>r.level===3).every(r=>r.events>=30||r.suppressed)),true);
+    });
+    await check('Sector detail pop-up restores statistics, country/company bars and focus on close',async()=>{
+      const button=page.locator('.r3-level-2 > .r3-sector-actions .r3-sector-detail').first();
+      await button.click();assert.equal(await page.locator('#subModal').isVisible(),true);
+      assert.equal(await page.locator('#subModal .sm-stat').count(),4);
+      assert.ok(await page.locator('#subModal .sm-bar-row').count()>0);
+      await page.screenshot({path:path.join(OUTPUT,'restored-sector-details.png')});
+      await page.keyboard.press('Escape');assert.equal(await page.locator('#subModal').isVisible(),false);
+      assert.equal(await button.evaluate(el=>el===document.activeElement),true);
     });
     await check('Type treemaps use separate gain and loss denominators',async()=>{
       const panels=await page.evaluate(()=>['gain','loss'].map(side=>{const ps=getChartById('types-'+side+'-chart').series[0].points;return {sum:ps.reduce((s,p)=>s+p.custom.share,0),total:ps.reduce((s,p)=>s+p.value,0),expected:ERMReview.getFilteredRows().filter(r=>side==='gain'?r.jobGain>0:(r.maxLoss==null?r.minLoss:r.maxLoss)>0).length};}));panels.forEach(p=>{assert.ok(Math.abs(p.sum-100)<1e-8);assert.equal(p.total,p.expected);});
