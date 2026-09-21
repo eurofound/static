@@ -11,12 +11,13 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proj4@2.15.0/dist/proj4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/highmaps.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/highcharts-more.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/accessibility.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/exporting.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highcharts/map-collection@2.3.3/custom/europe.js"></script>
 
 <style>
   :root{
@@ -505,6 +506,130 @@
 
   }
 </style>
+<style id="erm-round3-styles">
+/* Review overrides: retain the existing Eurofound palette and card hierarchy. */
+.header h1 a { color:inherit; text-decoration:none; }
+.header h1 a:hover { text-decoration:underline; text-underline-offset:.15em; }
+.header h1 a:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible {
+  outline:3px solid #41719C; outline-offset:3px;
+}
+.r3-review-notice { margin:10px 0; padding:8px 12px; border-left:3px solid #B08A5E; background:#FBF6EE; font-size:13px; }
+.r3-filter-shell { position:sticky; top:0; z-index:100; background:#FFF; border-bottom:1px solid var(--line); box-shadow:0 2px 6px #26324D14; }
+.r3-filter-bar { display:flex; align-items:center; gap:16px; max-width:1520px; padding:10px 48px; margin:0 auto; min-height:58px; }
+.r3-filter-bar button { flex:none; background:var(--blue); color:#FFF; border:0; padding:9px 14px; border-radius:4px; font:600 14px var(--sans); cursor:pointer; }
+#r3-filter-summary { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
+#r3-filter-panel { max-height:65vh; overflow-y:auto; padding-top:12px; padding-bottom:16px; border:0; }
+#r3-filter-panel[hidden] { display:none !important; }
+#r3-filter-panel .filters { grid-template-columns:1.1fr 1fr 1.15fr 1fr auto; gap:22px; }
+#r3-filter-panel .date-row { display:grid; grid-template-columns:1fr; gap:7px; }
+.r3-date-label { display:grid; grid-template-columns:62px 1fr; gap:7px; align-items:center; font-size:13px; }
+.ms > button.ms-control { width:100%; font:inherit; color:var(--navy); text-align:left; line-height:1.4; }
+.ms-panel label.ms-opt input { accent-color:var(--blue); flex:none; }
+.r3-theme-definitions { margin-top:12px; font-size:13px; }
+.r3-theme-definitions p { margin:3px 0; }
+#r3-filter-resets { color:#8A5A2A; font-size:13px; }
+.kpi-strip { grid-template-columns:repeat(8,minmax(0,1fr)); }
+.kpi { padding-left:12px; padding-right:12px; }
+.kpi-value:not(.smaller) { font-size:22px; white-space:nowrap; word-break:normal; }
+.kpi:nth-child(8n) { border-right:0; }
+.main > .card { min-width:0; }
+.r3-map-tooltip { width:360px; max-width:calc(100vw - 40px); white-space:normal; overflow-wrap:anywhere; padding:6px; }
+.r3-map-tooltip p { margin:5px 0; }
+.r3-location { white-space:pre-wrap; overflow-wrap:anywhere; }
+.r3-company-tooltip { width:330px; max-width:calc(100vw - 40px); white-space:normal; overflow-wrap:anywhere; }
+.r3-company-tooltip li { margin:7px 0; }
+.r3-company-tooltip a, .recent-item a { color:var(--blue-dark); text-decoration:underline; text-underline-offset:2px; }
+.recent-desc summary { cursor:pointer; font-weight:600; color:var(--blue-dark); }
+.recent-desc p { white-space:pre-wrap; overflow-wrap:anywhere; }
+.seg button:disabled { cursor:not-allowed; opacity:.55; }
+.r3-type-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.r3-type-grid h3 { font:700 15px var(--sans); margin:0 0 5px; text-transform:uppercase; }
+.r3-type-grid section { min-width:0; }
+.r3-type-grid p { font-size:12px; color:var(--text-dim); margin:0 0 8px; }
+.r3-type-grid [id$="-chart"] { height:340px; }
+#sectorsTable { overflow-x:auto; }
+.r3-sector-head, .r3-sector-line { display:grid; grid-template-columns:minmax(170px,1.4fr) repeat(var(--r3-groups,1),minmax(90px,1fr)); gap:12px; align-items:center; padding:10px 0; min-width:max-content; }
+.r3-sector-head { font-size:13px; border-bottom:2px solid var(--line); }
+.r3-sector-line { font-size:13px; border-bottom:1px solid var(--line-soft); cursor:pointer; }
+.r3-sector-line:hover { background:#EAF0F6; }
+.r3-sector-line > span:first-child { padding-left:14px; max-width:360px; }
+.r3-sector-level[open] > summary { font-weight:700; }
+.r3-level-2 { margin-left:10px; }
+.r3-level-3 { margin-left:20px; }
+.r3-level-3 .r3-sector-line { cursor:default; }
+.r3-count-cell { display:flex; align-items:center; gap:7px; min-width:90px; }
+.r3-count-cell > span:first-child { min-width:30px; }
+.r3-count-bar { display:inline-block; min-width:2px; height:7px; border-radius:3px; }
+.r3-muted { color:var(--text-dim); font-size:12px; }
+@media(max-width:1280px) {
+  .kpi-strip { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  #r3-filter-panel .filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:700px) {
+  .header,.filters-wrap,.main,.footer { padding-left:16px; padding-right:16px; }
+  .header-meta { gap:16px; flex-wrap:wrap; margin-left:0; }
+  .r3-filter-bar { padding:9px 16px; gap:10px; }
+  .r3-filter-bar button { padding:9px 10px; }
+  #r3-filter-panel .filters { grid-template-columns:minmax(0,1fr); gap:16px; }
+  .card { padding:17px 16px; }
+  .card-title { font-size:21px; }
+  .seg { gap:5px; }
+  .seg button { padding:6px 8px; font-size:12px; }
+  .kpi-strip { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .r3-type-grid { grid-template-columns:1fr; }
+  .title-row { gap:10px; }
+  .r3-review-notice { font-size:12px; }
+}
+@media print {
+  .r3-filter-shell { position:static; }
+  .r3-review-notice { display:block; }
+}
+
+/* Full-page integration fixes (2026-09-21). */
+#sectorsTable { column-count:1; column-gap:normal; }
+#r3-filter-panel .ms-panel { position:relative; left:auto; right:auto; top:4px; width:100%; margin-bottom:5px; }
+.ms-control { overflow-wrap:anywhere; min-width:0; }
+.ms-panel { top:calc(100% + 4px); }
+.r3-sector-head, .r3-sector-line { min-width:0; }
+#sectorsTable { min-width:0; }
+.r3-sector-head > *, .r3-sector-line > * { min-width:0; overflow-wrap:anywhere; }
+.r3-sector-head { position:sticky; top:0; background:var(--card); z-index:1; }
+.r3-trend-values { font-size:11px; max-width:300px; white-space:normal; color:var(--text-dim); }
+.tt-wrap { white-space:normal; overflow-wrap:anywhere; }
+.r3-file-label { display:flex; flex-direction:column; gap:10px; padding:15px; background:var(--card); color:var(--navy); }
+.r3-file-label input { max-width:100%; }
+.loading-overlay { overflow:auto; padding:24px 0; }
+#events-chart { height:370px; }
+#companyMs .ms-panel { max-height:300px; overflow-y:auto; }
+.kpi { border-right:1px solid var(--line); }
+.kpi:nth-child(3n),.kpi:nth-child(5n) { border-right:1px solid var(--line); }
+.kpi:last-child { border-right:0; }
+@media(max-width:1280px) { .kpi:nth-child(4n) { border-right:0; } }
+@media(max-width:700px) {
+  .header-row { min-width:0; }
+  .header-row > div { min-width:0; }
+  .header-meta { width:100%; }
+  .meta-item { min-width:0; }
+  .recent-head { flex-direction:column; gap:4px; }
+  .recent-date { white-space:normal; }
+  #map-chart { height:360px; }
+  #events-chart,#jobs-chart,#companies-chart { height:310px; }
+  .r3-sector-head,.r3-sector-line { grid-template-columns:minmax(125px,1.4fr) repeat(var(--r3-groups,1),minmax(68px,1fr)); gap:8px; }
+  .r3-sector-head { min-width:280px; }
+  .r3-count-cell { min-width:60px; }
+  .r3-level-2 { margin-left:5px; }
+  .r3-level-3 { margin-left:10px; }
+  .kpi:nth-child(2n) { border-right:0; }
+  .kpi { padding:6px 8px; }
+  .r3-type-grid [id$="-chart"] { min-width:0; }
+}
+
+/* Explicit disclosure arrows remain visible after converting summary to a grid. */
+.r3-sector-level > summary > span:first-child::before { content:"›"; display:inline-block; width:14px; font-weight:700; color:var(--blue); }
+.r3-sector-level[open] > summary > span:first-child::before { content:"⌄"; }
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/treemap.js"></script>
 </head>
 <body>
 
@@ -526,7 +651,7 @@
       <div class="meta-item"><div class="meta-label">Records</div><div class="meta-value" id="meta-records">—</div></div>
       <div class="meta-item"><div class="meta-label">Last announcement</div><div class="meta-value" id="meta-latest">—</div></div>
     </div>
-    <img class="header-logo" src="https://raw.githubusercontent.com/eurofound/static/gh-pages/ERM_test/Eurofound_logo.svg.webp" alt="Eurofound" onerror="this.style.display='none'">
+    <img class="header-logo" src="./Eurofound_logo.svg.webp" alt="Eurofound" onerror="this.style.display='none'">
   </div>
   <div class="section-label">Filter the data</div>
 </header>
@@ -763,7 +888,7 @@ const CSV_URL = "https://media.githubusercontent.com/media/thomasdavid/dashboard
 const LOW_N = 30;
 const DATA_COLORS = ['#3F6C9B','#B08A5E','#A03B45','#4E6B3C','#5C4E8E','#4E7F8C','#C0A05C','#21374F','#8A93A6'];
 
-Highcharts.setOptions({
+if (globalThis.Highcharts) Highcharts.setOptions({
   exporting:{enabled:false},
   chart:{backgroundColor:'transparent',
     style:{fontFamily:"'Source Sans Pro','Segoe UI',system-ui,sans-serif"},
@@ -2597,6 +2722,966 @@ async function init(){
     </div>`;
   }
 }
+/* ERM ROUND 3 REVIEW BUILD: source blob e46d738fcaa4c53f6e470b886211f0d3df3bb264; not a production verification. */
+/* ERM round 3 review — pure, independently testable data operations.
+ * Prepared 2026-09-21. No libraries, network calls or production mutations.
+ */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  root.ERMRound3Core = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const DAY = 86400000;
+  const FACTSHEET_BASE = 'https://apps.eurofound.europa.eu/restructuring-events/detail/';
+  const DEFAULTS = Object.freeze({
+    firstYear: 2002, lastYear: 2026, companyMinExclusive: 15,
+    nace3FilterMinExclusive: 50, nace3ChartMinInclusive: 30,
+    statusColumn: 'status', publishedValues: ['published'],
+    covidMarkerColumn: 'Thematic_marker', covidFlagColumn: 'Thematic_covid',
+    covidMarkerValues: ['covid', 'covid-19', 'coronavirus', 'coronavirus disease (covid-19)'],
+    dataCompleteThrough: null
+  });
+  const text = value => value == null ? '' : String(value).trim();
+  const fold = value => text(value).toLowerCase();
+  const escape = value => text(value).replace(/[&<>"']/g, ch =>
+    ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[ch]));
+  const truthy = value => ['1','true','yes','y','x'].includes(fold(value));
+  function number(value) {
+    if (value == null || text(value) === '') return null;
+    if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+    const cleaned = text(value).replace(/[ ,\u00a0\u202f]/g, '').replace(/\u2212/g, '-');
+    if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(cleaned)) return null;
+    const n = Number(cleaned);
+    return Number.isFinite(n) ? n : null;
+  }
+  function date(value) {
+    if (value instanceof Date) return Number.isFinite(value.getTime()) ? new Date(value.getTime()) : null;
+    let s = text(value), m, y, mo, d;
+    // Announcement dates are calendar dates, not instants. Accept a validated
+    // optional time suffix from ISO/European CSV exports without shifting days.
+    const time = s.match(/[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?$/);
+    if (time) {
+      const zone=s.match(/([+-])(\d{2}):?(\d{2})$/);
+      if(zone&&(+zone[2]>23||+zone[3]>59))return null;
+      if (+time[1] > 23 || +time[2] > 59 || +(time[3] || 0) > 59) return null;
+      s = s.slice(0, time.index);
+    }
+    if ((m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/))) {
+      y = +m[1]; mo = +m[2]; d = +m[3];
+    } else if ((m = s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})$/))) {
+      y = +m[3]; mo = +m[2]; d = +m[1];
+    } else return null;
+    const result = new Date(Date.UTC(y, mo - 1, d));
+    return result.getUTCFullYear() === y && result.getUTCMonth() === mo - 1 && result.getUTCDate() === d ? result : null;
+  }
+  const iso = d => d && Number.isFinite(d.getTime()) ? d.toISOString().slice(0,10) : '';
+  const endDay = d => new Date(d.getTime() + DAY - 1);
+  const minDate = (...dates) => new Date(Math.min(...dates.filter(Boolean).map(d => d.getTime())));
+  const maxDate = (...dates) => new Date(Math.max(...dates.filter(Boolean).map(d => d.getTime())));
+  function findColumn(row, wanted) {
+    if(!row || typeof row !== 'object')return null;
+    const keys = Object.keys(row || {});
+    if (Object.prototype.hasOwnProperty.call(row, wanted)) return wanted;
+    const matches = keys.filter(key => fold(key).replace(/^\ufeff/, '') === fold(wanted));
+    return matches.length === 1 ? matches[0] : null;
+  }
+  function publishedRows(rows, settings) {
+    const cfg = Object.assign({}, DEFAULTS, settings || {});
+    if (!Array.isArray(rows)) throw new Error('The CSV parser did not return a row array.');
+    if (!rows.length) return {rows: [], audit: {input: 0, published: 0, excluded: 0, statuses: {}}};
+    const column = findColumn(rows[0], cfg.statusColumn);
+    if (!column) throw new Error('Published-only safeguard: column "' + cfg.statusColumn +
+      '" is missing or ambiguous. Confirm the status field and configure statusColumn; no cases have been displayed.');
+    if (!Array.isArray(cfg.publishedValues)) throw new Error('publishedValues must be an array of explicit approved status values.');
+    const accepted = new Set(cfg.publishedValues.map(fold));
+    if (!accepted.size || accepted.has('')) throw new Error('publishedValues must contain explicit, non-empty approved status values.');
+    const statuses = Object.create(null), output = [];
+    for (const row of rows) {
+      const status = fold(row[column]);
+      statuses[status || '(blank)'] = (statuses[status || '(blank)'] || 0) + 1;
+      if (accepted.has(status)) output.push(row);
+    }
+    if (!output.length) throw new Error('Published-only safeguard: no rows match the approved published status. Observed status values: ' +
+      Object.keys(statuses).join(', ') + '. Confirm the mapping; numeric values are not assumed to mean published.');
+    return {rows: output, audit: {input: rows.length, published: output.length,
+      excluded: rows.length - output.length, statusColumn: column, statuses}};
+  }
+  const normalMarker = value => fold(value).replace(/[\u2010-\u2015_\s]+/g, '-');
+  function covid(raw, settings) {
+    const cfg = Object.assign({}, DEFAULTS, settings || {});
+    const flag = findColumn(raw, cfg.covidFlagColumn);
+    if (flag && truthy(raw[flag])) return true;
+    const column = findColumn(raw, cfg.covidMarkerColumn);
+    if (!column) return false;
+    const accepted = new Set(cfg.covidMarkerValues.map(normalMarker));
+    // Delimited internal markers only; never infer COVID from the case description.
+    return text(raw[column]).split(/[;|,\r\n]+/).some(marker => accepted.has(normalMarker(marker)));
+  }
+  function caseUrl(id) {
+    const value = text(id);
+    // Source ID is a factsheet identifier, not an arbitrary URL or HTML fragment.
+    if (!/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(value) || /^(null|undefined|nan)$/i.test(value)) return null;
+    return FACTSHEET_BASE + encodeURIComponent(value);
+  }
+  function loss(row) {
+    const maximum = number(row.maxLoss), minimum = number(row.minLoss);
+    return Math.max(0, maximum == null ? (minimum == null ? 0 : minimum) : maximum);
+  }
+  const gain = row => Math.max(0, number(row.jobGain) || 0);
+  const grossJobs = row => loss(row) + gain(row);
+  const size = row => Math.max(loss(row), gain(row));
+  function largest(rows) {
+    const grouped = new Map();
+    for (const row of rows) {
+      if (!row.cc || size(row) <= 0) continue;
+      const previous = grouped.get(row.cc);
+      if (!previous || size(row) > size(previous) ||
+          (size(row) === size(previous) && (row.date || 0) > (previous.date || 0))) grouped.set(row.cc, row);
+    }
+    return [...grouped.values()].sort((a,b) => size(b) - size(a) || text(a.country).localeCompare(text(b.country)));
+  }
+  function countOptions(rows, field, minimum, exclusive) {
+    const counts = new Map();
+    for (const row of rows) {
+      const value = text(row[field]);
+      if (value) counts.set(value, (counts.get(value) || 0) + 1);
+    }
+    return [...counts].filter(([,n]) => exclusive ? n > minimum : n >= minimum)
+      .sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([value,count]) => ({value, label:value, count}));
+  }
+  function eligibleCompanies(rows, minimum = DEFAULTS.companyMinExclusive) {
+    return countOptions(rows, 'company', minimum, true);
+  }
+  function latestCases(rows, company, limit = 3) {
+    const seen = new Set();
+    return rows.filter(row => row.company === company && row.date && caseUrl(row.id))
+      .sort((a,b) => b.date - a.date || text(b.id).localeCompare(text(a.id)))
+      .filter(row => { if (seen.has(text(row.id))) return false; seen.add(text(row.id)); return true; })
+      .slice(0,limit);
+  }
+  function lastCompletedQuarter(now = new Date()) {
+    const year = now.getUTCFullYear(), currentQuarter = Math.floor(now.getUTCMonth() / 3);
+    const end = new Date(Date.UTC(year, currentQuarter * 3, 1) - 1);
+    const y = end.getUTCFullYear(), q = Math.floor(end.getUTCMonth()/3) + 1;
+    return {year:y, quarter:q, start:new Date(Date.UTC(y,(q-1)*3,1)), end,
+      label:'Q' + q + '-' + y};
+  }
+  function quarterBounds(value) {
+    let m = text(value).match(/^(\d{4})(?:-Q([1-4]))?$/);
+    if (!m) return null;
+    const y = +m[1], q = m[2] ? +m[2] : null;
+    if (y < 1900 || y > 2200) return null;
+    const start = new Date(Date.UTC(y, q ? (q-1)*3 : 0, 1));
+    const end = new Date(Date.UTC(q === 4 || !q ? y+1 : y, q ? (q === 4 ? 0 : q*3) : 0, 1) - 1);
+    return {start,end};
+  }
+  function periods(fromValue, toValue, now = new Date(), completeThrough = null) {
+    const from = date(fromValue), selectedEnd = date(toValue);
+    if (!from || !selectedEnd || from > selectedEnd) return [];
+    const quarter = lastCompletedQuarter(now);
+    const confirmation = completeThrough ? date(completeThrough) : null;
+    if (completeThrough && !confirmation) throw new Error('dataCompleteThrough must be a valid YYYY-MM-DD date.');
+    const to = minDate(endDay(selectedEnd), quarter.end, confirmation ? endDay(confirmation) : null);
+    if (to < from) return [];
+    const thisYear = now.getUTCFullYear(), result = [];
+    const first = Math.max(DEFAULTS.firstYear, from.getUTCFullYear());
+    const last = Math.min(DEFAULTS.lastYear, to.getUTCFullYear());
+    for (let year = first; year <= last; year++) {
+      if (year < thisYear) {
+        const fullStart = new Date(Date.UTC(year,0,1)), fullEnd = new Date(Date.UTC(year+1,0,1)-1);
+        const start = maxDate(from, fullStart), end = minDate(to, fullEnd);
+        if (start <= end) result.push({id:String(year), label:String(year) +
+          (start > fullStart || end < fullEnd ? ' (selected period)' : ''), start,end,kind:'annual'});
+      } else {
+        for (let q = 1; q <= 4; q++) {
+          const bounds = quarterBounds(year + '-Q' + q);
+          if (bounds.start >= from && bounds.end <= to) result.push({id:year+'-Q'+q,
+            label:'Q'+q+'-'+year, start:bounds.start, end:bounds.end, kind:'quarter'});
+        }
+      }
+    }
+    const lastQuarter = result.filter(p => p.kind === 'quarter').slice(-1)[0];
+    if (lastQuarter) { lastQuarter.label += '*'; lastQuarter.isLastQuarter = true; }
+    // A null-data separator prevents a line implying that one quarter is comparable to a full year.
+    const boundary = result.findIndex((p,i) => i && p.kind === 'quarter' && result[i-1].kind === 'annual');
+    if (boundary > 0) result.splice(boundary, 0, {id:'period-separator',label:'',kind:'separator'});
+    return result;
+  }
+  function inPeriod(row, period) {
+    return period.kind !== 'separator' && row.date && row.date >= period.start && row.date <= period.end;
+  }
+  function valueFor(row, metric) {
+    switch (metric) {
+      case 'events': return size(row) >= 100 ? 1 : 0;
+      case 'gainEvents': return gain(row) >= 100 ? 1 : 0;
+      case 'lossEvents': return loss(row) >= 100 ? 1 : 0;
+      case 'gain': return gain(row);
+      case 'loss': return loss(row);
+      case 'jobs': return grossJobs(row);
+      case 'cases': return 1;
+      default: throw new Error('Unknown metric: ' + metric);
+    }
+  }
+  function values(rows, periodList, metric) {
+    return periodList.map(period => {
+      if (period.kind === 'separator') return null;
+      // Missing collection is not zero. Preserve the existing pre-2005 gains caveat in the series itself.
+      if (['gain','gainEvents','jobs'].includes(metric) && period.end < new Date(Date.UTC(2005,0,1))) return null;
+      let sum = 0;
+      for (const row of rows) if (inPeriod(row,period)) sum += valueFor(row,metric);
+      return sum;
+    });
+  }
+  function typeBreakdown(rows, side) {
+    const chosen = rows.filter(row => (side === 'gain' ? gain(row) : loss(row)) > 0);
+    const total = chosen.length;
+    const grouped = new Map();
+    for (const row of chosen) {
+      const key = row.type || 'Unspecified';
+      if (!grouped.has(key)) grouped.set(key, []);
+      grouped.get(key).push(row);
+    }
+    return [...grouped].sort((a,b) => b[1].length-a[1].length)
+      .map(([name, list]) => ({name, cases:list.length, share:total ? 100*list.length/total : 0, rows:list, total}));
+  }
+  function sparkline(items, width = 210, height = 54) {
+    const ys = items.filter(v => v != null && Number.isFinite(v));
+    if (!ys.length) return '<span>No dated cases</span>';
+    const max = Math.max(1,...ys), n = Math.max(1,items.length-1);
+    let paths = [], current = [];
+    items.forEach((value,index) => {
+      if (value == null || !Number.isFinite(value)) { if(current.length) paths.push(current); current=[]; return; }
+      current.push((4 + index/n*(width-8)).toFixed(1) + ',' + (height-5-value/max*(height-10)).toFixed(1));
+    });
+    if (current.length) paths.push(current);
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Number of cases over time">' +
+      '<title>Number of cases over time; range 0 to '+max+'</title>' +
+      paths.map(points => '<path d="M'+points.join(' L')+'" fill="none" stroke="#41719C" stroke-width="2"/>').join('') + '</svg>';
+  }
+  // Prepared helper only. No employment figures are supplied with the review package.
+  function employmentRates(rows, reference, per = 100000) {
+    if (!reference || !Number.isInteger(reference.year) || reference.unit !== 'persons' || !text(reference.source))
+      throw new Error('Employment reference requires year, unit="persons", source and country values.');
+    if (!Array.isArray(reference.values)) throw new Error('Employment reference.values must be an array.');
+    const denominators = new Map();
+    for (const item of reference.values) {
+      const cc = fold(item.cc), employed = number(item.employed);
+      if (!/^[a-z]{2}$/.test(cc) || employed == null || employed <= 0 || denominators.has(cc))
+        throw new Error('Each country needs one unique, positive employment denominator in persons.');
+      denominators.set(cc, employed);
+    }
+    const counts = new Map();
+    for (const row of rows) if (row.cc) counts.set(row.cc, (counts.get(row.cc)||0)+1);
+    return [...counts].map(([cc,cases]) => ({cc,cases,employed:denominators.get(cc) || null,
+      rate:denominators.has(cc) ? cases / denominators.get(cc) * per : null,
+      per,year:reference.year,source:reference.source}));
+  }
+  return Object.freeze({DEFAULTS,text,fold,escape,truthy,number,date,iso,findColumn,publishedRows,covid,caseUrl,
+    loss,gain,grossJobs,size,largest,countOptions,eligibleCompanies,latestCases,lastCompletedQuarter,
+    quarterBounds,periods,inPeriod,values,typeBreakdown,sparkline,employmentRates});
+});
+
+window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["published"], "covidMarkerColumn": "Thematic_marker", "covidFlagColumn": "Thematic_covid", "covidMarkerValues": ["covid", "covid-19", "coronavirus", "coronavirus disease (covid-19)"], "companyMinExclusive": 15, "nace3FilterMinExclusive": 50, "nace3ChartMinInclusive": 30, "dataCompleteThrough": null};
+/* ERM round 3 — review integration for ERM_prototype_dash.html.
+ * Insert immediately before the original final init() call. The existing
+ * Eurofound styling, classifiers, CSV source and export helpers are retained.
+ * This is a review implementation, not a record of a production deployment.
+ */
+(function () {
+  'use strict';
+  const C = globalThis.ERMRound3Core;
+  if (!C) throw new Error('erm-round3-core.js must be loaded first.');
+  const cfg = Object.assign({}, C.DEFAULTS, globalThis.ERM_ROUND3_CONFIG || {});
+  const $ = id => document.getElementById(id);
+  const now = () => new Date();
+  const LABELS = {country:'countries',sector:'sectors',nace2:'subsectors',nace3:'NACE-3 groups',type:'restructuring types',thematic:'thematic subjects'};
+  const DEFINITIONS = {
+    auto:'Automotive: NACE-29, 46.7, 47.8, 47.3, and 95.3 are included',
+    digital:'Digital transition: Internal markers & keyword identification',
+    green:'Green transition: Internal markers & keywords identification',
+    twin:'Twin transition: Events referring to both the green and digital transition',
+    covid:'Covid-19: Internal markers'
+  };
+  const LINKS = {
+    database:'https://apps.eurofound.europa.eu/restructuring-events/search',
+    methodology:'https://www.eurofound.europa.eu/en/publications/all/european-restructuring-monitor-the-database-and-its-methodology',
+    data:'https://apps.eurofound.europa.eu/restructuring-events',
+    request:'https://forms.cloud.microsoft/pages/responsepage.aspx?id=vXuBUJxDNEWSAdJtkIZ90ywFFyDiISBImj8KaI3UAZRUMDVKNVI2SVhBMk9HUFFCM0NRUlM1NDMzVC4u'
+  };
+  let audit = {}, employment = null, sectorExport = [], models = {}, resets = '';
+  let sourceWarning = '';
+  let loadVersion = 0;
+  const originalNormalize = normalizeRow;
+  const originalMap = renderMap;
+  // Company selector is replaced below; no dependency on the old mouse-only selector.
+  if (!DIMS.includes('nace3')) DIMS.push('nace3');
+  SELECT.nace3 = [];
+  OPTIONS.nace3 = [];
+  mapMode = 'cases'; jobsMode = 'all'; eventsMode = 'all'; compMetric = 'jobs';
+
+  const anchor = (href,label) => '<a href="'+C.escape(href)+'" target="_blank" rel="noopener noreferrer">'+C.escape(label)+'</a>';
+  const prettyDate = d => d ? d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}) : 'Undated';
+  const caseLink = (row,label) => C.caseUrl(row.id) ? anchor(C.caseUrl(row.id),label) : '<span>'+C.escape(label)+'</span>';
+  const moneyless = n => n == null ? '—' : Number(n).toLocaleString('en-GB');
+  const chartNote = () => '*: last quarter completed. Earlier years show annual totals; '+
+    'current-year points show individual completed quarters, not year-to-date totals. '+
+    'The gap marks the change in period length; annual and quarterly totals are not directly comparable. '+
+    (cfg.dataCompleteThrough ? 'Data completeness cutoff supplied: '+cfg.dataCompleteThrough+'.' :
+      'Quarter completion is calendar-based. Without a confirmed source cutoff, quarters beyond the latest dated announcement are omitted conservatively; source completeness still needs confirmation.');
+  function periodList() {
+    const selectedEnd = C.date($('dateTo').value);
+    // Do not invent complete zero-valued periods beyond the actual data horizon.
+    const confirmed = cfg.dataCompleteThrough ? C.date(cfg.dataCompleteThrough) : null;
+    const horizon = confirmed || DATE_MAX;
+    const availableEnd = horizon && selectedEnd > horizon ? horizon : selectedEnd;
+    return C.periods($('dateFrom').value,C.iso(availableEnd),now(),cfg.dataCompleteThrough);
+  }
+  function currentRows() { return applyFilters(NORM); }
+  function newChart(id, options, isMap) {
+    const existing = getChartById(id);
+    if (existing) existing.destroy();
+    return isMap ? Highcharts.mapChart(id,options) : Highcharts.chart(id,options);
+  }
+  function setTitle(selector,text) {
+    const el = document.querySelector(selector);
+    if (!el) throw new Error('Review integration cannot find '+selector+'.');
+    el.textContent=text;
+  }
+  function setupDom() {
+    // Preserve the safe link relationship in Highcharts HTML tooltips.
+    if (Highcharts.AST && !Highcharts.AST.allowedAttributes.includes('rel')) Highcharts.AST.allowedAttributes.push('rel');
+    const title=document.querySelector('h1');
+    title.innerHTML=anchor(LINKS.database,title.textContent);
+    document.querySelector('#meta-records').previousElementSibling.textContent='All restructurings';
+    const euLabel=$('cb-eu27').parentElement;
+    [...euLabel.childNodes].filter(n=>n.nodeType===3).forEach(n=>n.textContent=' EU-27');
+    const kpi=$('kpi-updates')?.closest('.kpi');
+    if (kpi) kpi.remove();
+    $('kpi-company').previousElementSibling.textContent='Most active company';
+    const compare=document.querySelector('.compare-card'); if(compare) compare.remove();
+    setTitle('.events-card .card-title','Number of large restructuring events');
+    setTitle('.sector-card .card-title','Sectors & subsectors (events)');
+    setTitle('.sector-card .k-sub','expand sectors and subsectors to see NACE-3');
+    setTitle('.types-card .card-title','Restructuring by type (events)');
+    setTitle('.types-card .k-sub','share within job-gain and job-loss cases');
+    setTitle('.companies-card .card-title','Most actively restructuring companies');
+    setTitle('.companies-card .k-sub','companies with more than '+cfg.companyMinExclusive+' restructurings');
+    setTitle('.jobs-card .k-sub','annual history and completed current-year quarters');
+    setTitle('.companies-card .ms-hint','Only companies with more than '+cfg.companyMinExclusive+
+      ' restructurings under the current filters are eligible. Jobs = announced losses plus gains, not net change or unique people.');
+    setTitle('.sector-card .card-note','Expand sectors and subsectors to see NACE-3. NACE-3 detail requires at least '+
+      cfg.nace3ChartMinInclusive+' events. In comparisons, counts below 30 are suppressed; “<30” is not zero.');
+    $('mapModeSeg').innerHTML='<button data-mode="choropleth">Country totals (events)</button>'+
+      '<button class="active" data-mode="cases">Largest cases (jobs)</button>'+
+      '<button data-mode="rates" id="r3-rates" disabled title="An approved employment reference file is required">Per 100,000 employed</button>'+
+      '<button disabled title="NUTS field, level, boundary vintage and matching geometry are required">Regional map — awaiting data</button>';
+    $('eventsModeSeg').innerHTML='<button class="active" data-mode="all">Overall (events)</button>'+
+      '<button data-mode="gain">Job gains (events)</button><button data-mode="loss">Job losses (events)</button>';
+    $('jobsModeSeg').innerHTML='<button class="active" data-mode="all">Overall</button>'+
+      '<button data-mode="gain">Job gains</button><button data-mode="loss">Job losses</button>';
+    $('compMetricSeg').innerHTML='<button class="active" data-metric="jobs">Number of jobs</button>'+
+      '<button data-metric="cases">Number of cases</button>';
+    document.querySelector('.jobs-card .card-note').id='r3-jobs-note';
+    $('events-note').setAttribute('aria-live','polite');
+    const typesBody=document.querySelector('.types-card .card-body');
+    typesBody.innerHTML='<div class="r3-type-grid"><section><h3>Job gains</h3><p>Share of cases announcing job gains</p>'+
+      '<div id="types-gain-chart"></div></section><section><h3>Job losses</h3><p>Share of cases announcing job losses</p>'+
+      '<div id="types-loss-chart"></div></section></div><p class="card-note">An event announcing both losses and gains '+
+      'appears in both panels. Shares use each panel’s own case total.</p>';
+    const naceHost=document.createElement('div');
+    naceHost.innerHTML='<label class="field-label">NACE-3 group (&gt;'+cfg.nace3FilterMinExclusive+' events)</label>'+
+      '<div class="ms" data-dim="nace3"></div>';
+    document.querySelector('.ms[data-dim="nace2"]').parentElement.parentElement.appendChild(naceHost);
+    const wrap=document.querySelector('.filters-wrap');
+    const shell=document.createElement('div'); shell.className='r3-filter-shell';
+    wrap.before(shell);
+    shell.innerHTML='<div class="r3-filter-bar"><button type="button" id="r3-toggle-filters" '+
+      'aria-controls="r3-filter-panel" aria-expanded="false">Edit filters</button>'+
+      '<div id="r3-filter-summary" aria-live="polite"></div></div>';
+    shell.appendChild(wrap); wrap.id='r3-filter-panel'; wrap.hidden=true;
+    const theme=document.createElement('div'); theme.id='r3-theme-definitions';
+    theme.className='r3-theme-definitions'; theme.setAttribute('aria-live','polite'); wrap.appendChild(theme);
+    const reset=document.createElement('div'); reset.id='r3-filter-resets'; reset.setAttribute('role','status'); wrap.appendChild(reset);
+    const dateBox=$('dateFrom').closest('.date-row');
+    dateBox.innerHTML='<input type="hidden" id="dateFrom"><input type="hidden" id="dateTo">'+
+      '<label class="r3-date-label">Select by<select id="r3-period-mode"><option value="quarter">Quarter</option><option value="year">Year</option></select></label>'+
+      '<label class="r3-date-label">From<select id="r3-from-period"></select></label>'+
+      '<label class="r3-date-label">To<select id="r3-to-period"></select></label>';
+    $('rangeSlider').remove();
+    const info=document.createElement('div'); info.className='r3-review-notice'; info.id='r3-review-notice';
+    info.setAttribute('role','status');
+    info.textContent='Round 3 implementation — awaiting production-data verification.';
+    document.querySelector('.header').appendChild(info);
+    const caveats=document.querySelector('.caveat-body');
+    caveats.insertAdjacentHTML('beforeend','<p><strong>Country inclusion.</strong> BG, CY, CZ, EE, HU, LV, LT, MT, PL, RO, SI, SK were included in the ERM in 2005. '+
+      'HR was included in 2013. UK was no longer included after 2020.</p><p><strong>Full ERM methodology.</strong> '+
+      anchor(LINKS.methodology,'European Restructuring Monitor: The database and its methodology')+'</p>'+
+      '<h3>Using the data</h3><p>Please quote the data as follows: Eurofound, European Restructuring Monitor (ERM), available at: '+
+      anchor(LINKS.data,LINKS.data)+'</p><p>Request ERM disaggregated data: '+anchor(LINKS.request,'ERM Data request')+'.</p>'+
+      '<p><strong>Pending additions.</strong> Regional analysis needs the confirmed NUTS field, geographic level, boundary vintage and matching geometry. '+
+      'Cases involving multiple regions do not appear in the proposed regional chart. Employment-normalised analysis requires an approved denominator file and reference year.</p>');
+  }
+  normalizeRow=function(raw) {
+    const row=originalNormalize(raw);
+    row.id=C.text(raw.ID) || null;
+    row.date=C.date(raw.d_date_announcement);
+    row.them_covid=C.covid(raw,cfg);
+    row.status=C.text(raw[C.findColumn(raw,cfg.statusColumn)]);
+    row.nace3=C.text(raw.NACE_level_3) || null;
+    // Reject malformed numbers rather than partially parsing '123 invalid'.
+    for (const [field,column] of Object.entries({minLoss:'Planned_job_reductions_minimum',
+      maxLoss:'Planned_job_reductions_maximum',jobGain:'Planned_job_gain',netChange:'Net announced job change',
+      duration:'Restructuring duration (months)'})) row[field]=C.number(raw[column]);
+    // Do not assume that numeric or undocumented status values mean published.
+    return row;
+  };
+  currentFilters=function() {
+    const from=C.date($('dateFrom').value), to=C.date($('dateTo').value);
+    return {from,to:to ? new Date(to.getTime()+86400000-1):null,eu27Only:$('cb-eu27').checked};
+  };
+  matchesDim=function(row,dim,value) {
+    if(dim==='thematic') return !!row[THEMATIC_FIELD[value]];
+    if(dim==='nace2') return row.nace2===value;
+    return row[dim]===value;
+  };
+  applyFilters=function(rows,ignore={}) {
+    const f=currentFilters();
+    return rows.filter(row=>{
+      if((f.from || f.to) && !row.date) return false;
+      if(f.from && row.date<f.from) return false;
+      if(f.to && row.date>f.to) return false;
+      if(f.eu27Only && !row.eu27) return false;
+      return DIMS.every(dim=>ignore[dim] || !SELECT[dim].length || SELECT[dim].some(value=>matchesDim(row,dim,value)));
+    });
+  };
+  function periodOptions(mode) {
+    let html='';
+    for(let year=cfg.firstYear;year<=cfg.lastYear;year++) {
+      if(mode==='year') html+='<option value="'+year+'">'+year+'</option>';
+      else for(let quarter=1;quarter<=4;quarter++) html+='<option value="'+year+'-Q'+quarter+'">Q'+quarter+' '+year+'</option>';
+    }
+    return html;
+  }
+  function periodValue(d,mode) {
+    return mode==='year' ? String(d.getUTCFullYear()) : d.getUTCFullYear()+'-Q'+(Math.floor(d.getUTCMonth()/3)+1);
+  }
+  function setupPeriods(reset) {
+    const mode=$('r3-period-mode').value;
+    const from=reset ? new Date(Date.UTC(Math.max(2005,DATE_MIN.getUTCFullYear()),0,1)) : C.date($('dateFrom').value)||DATE_MIN;
+    const to=reset ? DATE_MAX : C.date($('dateTo').value)||DATE_MAX;
+    const safeFrom=from>to ? DATE_MIN:from;
+    $('r3-from-period').innerHTML=periodOptions(mode);
+    $('r3-to-period').innerHTML=periodOptions(mode);
+    $('r3-from-period').value=periodValue(safeFrom,mode);
+    $('r3-to-period').value=periodValue(to,mode);
+    syncPeriods();
+  }
+  function syncPeriods(changed) {
+    const from=$('r3-from-period'), to=$('r3-to-period');
+    if(from.selectedIndex>to.selectedIndex) {
+      if(changed==='to') from.selectedIndex=to.selectedIndex; else to.selectedIndex=from.selectedIndex;
+    }
+    const start=C.quarterBounds(from.value), end=C.quarterBounds(to.value);
+    if(!start || !end) throw new Error('Choose valid start and end periods.');
+    $('dateFrom').value=C.iso(start.start); $('dateTo').value=C.iso(end.end);
+  }
+  buildOptions=function() {
+    DIMS.forEach(dim=>{
+      const ignore={[dim]:true};
+      if(dim==='sector') {ignore.nace2=true; ignore.nace3=true;}
+      if(dim==='nace2') ignore.nace3=true;
+      const base=applyFilters(NORM,ignore);
+      if(dim==='thematic') OPTIONS[dim]=THEMATIC_OPTS.map(o=>({value:o.value,label:o.label,count:base.filter(r=>r[o.field]).length}));
+      else OPTIONS[dim]=C.countOptions(base,dim,dim==='nace3'?cfg.nace3FilterMinExclusive:1,dim==='nace3')
+        .sort((a,b)=>a.label.localeCompare(b.label));
+    });
+  };
+  MultiSelect=function(host,dim,initial) {
+    let opts=initial;
+    const control=document.createElement('button'); control.type='button'; control.className='ms-control';
+    control.setAttribute('aria-haspopup','true'); control.setAttribute('aria-expanded','false');
+    const panel=document.createElement('div'); panel.className='ms-panel'; panel.id='r3-options-'+dim;
+    control.setAttribute('aria-controls',panel.id);
+    const search=document.createElement('div'); search.className='ms-search';
+    const input=document.createElement('input'); input.type='search'; input.placeholder='Search '+LABELS[dim]+'…';
+    input.setAttribute('aria-label','Search '+LABELS[dim]); search.appendChild(input);
+    const list=document.createElement('div'); panel.append(search,list); host.append(control,panel);
+    const refresh=()=>{
+      control.textContent=SELECT[dim].length ? SELECT[dim].map(v=>(opts.find(o=>o.value===v)||{}).label||v).join('; ') : 'All '+LABELS[dim];
+      list.innerHTML='';
+      const items=opts.filter(o=>C.fold(o.label).includes(C.fold(input.value)));
+      if(!items.length) {const note=document.createElement('div'); note.className='ms-empty'; note.textContent='No eligible values'; list.appendChild(note);}
+      items.forEach(option=>{
+        const label=document.createElement('label'); label.className='ms-opt';
+        const checkbox=document.createElement('input'); checkbox.type='checkbox'; checkbox.checked=SELECT[dim].includes(option.value);
+        const name=document.createElement('span'); name.textContent=option.label;
+        const count=document.createElement('span'); count.className='cnt'; count.textContent=moneyless(option.count);
+        label.append(checkbox,name,count); list.appendChild(label);
+        checkbox.addEventListener('change',()=>{
+          const index=SELECT[dim].indexOf(option.value);
+          if(index>=0) SELECT[dim].splice(index,1);
+          else {const md=multiDim(); if(md && md!==dim) SELECT[dim]=[option.value]; else SELECT[dim].push(option.value);}
+          afterChange();
+          // Refresh replaces the options; retain keyboard focus on the selected value.
+          const current=[...list.querySelectorAll('label')].find(label=>label.querySelector('span')?.textContent===option.label);
+          (current?.querySelector('input')||control).focus();
+        });
+      });
+    };
+    this.close=()=>{host.classList.remove('open'); control.setAttribute('aria-expanded','false');};
+    this.open=()=>{Object.values(MS).forEach(ms=>ms.close()); host.classList.add('open'); control.setAttribute('aria-expanded','true'); input.value=''; refresh(); input.focus();};
+    this.refresh=refresh;
+    this.setOptions=items=>{opts=items; refresh();};
+    control.addEventListener('click',()=>host.classList.contains('open')?this.close():this.open());
+    input.addEventListener('input',refresh);
+    host.addEventListener('keydown',event=>{if(event.key==='Escape'){this.close();control.focus();}});
+    refresh();
+  };
+  updateMsHint=function() {
+    const dim=multiDim();
+    $('msHint').textContent=dim ? 'Comparing '+SELECT[dim].length+' '+LABELS[dim]+'. Other fields keep one value while comparing.' :
+      'Choose two or three values in one field to compare them.';
+    $('r3-theme-definitions').innerHTML=SELECT.thematic.map(value=>'<p>'+C.escape(DEFINITIONS[value]||value)+'</p>').join('');
+    $('r3-filter-summary').textContent=[$('r3-from-period').selectedOptions[0]?.textContent+' – '+
+      $('r3-to-period').selectedOptions[0]?.textContent,$('cb-eu27').checked?'EU-27':'All countries',
+      ...DIMS.filter(dim=>SELECT[dim].length).map(dim=>SELECT[dim].map(v=>dim==='thematic'?(THEMATIC_OPTS.find(o=>o.value===v)||{}).label||v:v).join(', '))].join(' · ');
+    $('r3-filter-resets').textContent=resets;
+  };
+  afterChange=function() {
+    resets=''; buildOptions();
+    for(const dim of ['nace2','nace3']) {
+      const available=new Set(OPTIONS[dim].map(o=>o.value));
+      const before=SELECT[dim].length;
+      SELECT[dim]=SELECT[dim].filter(value=>available.has(value));
+      if(SELECT[dim].length!==before) {resets='A dependent NACE selection was cleared because it is not eligible under the new filters.'; buildOptions();}
+    }
+    DIMS.forEach(dim=>{
+      const visible=OPTIONS[dim].slice();
+      for(const value of SELECT[dim]) if(!visible.some(o=>o.value===value)) {
+        const label=dim==='thematic'?(THEMATIC_OPTS.find(o=>o.value===value)||{}).label||value:value;
+        visible.unshift({value,label:label+' (no matching cases)',count:0});
+      }
+      if(MS[dim]) MS[dim].setOptions(visible);
+    });
+    updateMsHint(); if(!SUPPRESS_RENDER) renderAll();
+  };
+  populateFilters=function() {
+    const dates=NORM.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b);
+    DATE_MIN=dates[0]||new Date(Date.UTC(cfg.firstYear,0,1));
+    DATE_MAX=dates[dates.length-1]||new Date(Date.UTC(cfg.lastYear,11,31));
+    setupPeriods(true); buildOptions();
+    DIMS.forEach(dim=>{MS[dim]=new MultiSelect(document.querySelector('.ms[data-dim="'+dim+'"]'),dim,OPTIONS[dim]);});
+    $('meta-coverage').textContent=cfg.firstYear+'–'+cfg.lastYear;
+    $('meta-coverage').title='Dashboard reporting period. Actual dated source observations: '+C.iso(dates[0])+' to '+C.iso(dates[dates.length-1]);
+    $('meta-latest').textContent=dates.length?prettyDate(DATE_MAX):'No dated announcements';
+    $('meta-records').textContent=moneyless(NORM.length);
+    updateMsHint();
+  };
+  bindEvents=function() {
+    $('r3-period-mode').addEventListener('change',()=>{setupPeriods(false);afterChange();});
+    $('r3-from-period').addEventListener('change',()=>{syncPeriods('from');afterChange();});
+    $('r3-to-period').addEventListener('change',()=>{syncPeriods('to');afterChange();});
+    $('cb-eu27').addEventListener('change',afterChange);
+    $('r3-toggle-filters').addEventListener('click',()=>{
+      const open=$('r3-filter-panel').hidden; $('r3-filter-panel').hidden=!open;
+      $('r3-toggle-filters').setAttribute('aria-expanded',String(open));
+      $('r3-toggle-filters').textContent=open?'Close filters':'Edit filters';
+      (Highcharts.charts||[]).forEach(chart=>{if(chart) chart.reflow();});
+    });
+    document.addEventListener('click',event=>{if(!event.target.closest('.ms')) Object.values(MS).forEach(ms=>ms.close());});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape') {$('subModal').classList.remove('open');}});
+    $('subModal').addEventListener('click',event=>{if(event.target===$('subModal')) $('subModal').classList.remove('open');});
+    function segment(id,attr,action) {
+      document.querySelectorAll('#'+id+' button:not([disabled])').forEach(button=>{
+        button.setAttribute('aria-pressed',String(button.classList.contains('active')));
+        button.addEventListener('click',()=>{
+          document.querySelectorAll('#'+id+' button').forEach(el=>{
+            el.classList.remove('active');el.setAttribute('aria-pressed','false');
+          });
+          button.classList.add('active');button.setAttribute('aria-pressed','true');action(button.dataset[attr]);
+        });
+      });
+    }
+    segment('mapModeSeg','mode',value=>{mapMode=value;renderMap(currentRows());});
+    segment('eventsModeSeg','mode',value=>{eventsMode=value;renderEventsChart(currentRows());});
+    segment('jobsModeSeg','mode',value=>{jobsMode=value;renderJobsChart(currentRows());});
+    segment('compMetricSeg','metric',value=>{compMetric=value;renderCompaniesChart(currentRows());});
+  };
+  window.clearAllSlicers=function() {
+    DIMS.forEach(dim=>SELECT[dim]=[]); $('cb-eu27').checked=true; setupPeriods(true);
+    COMPANY_SEL=companyOptionsFrom(currentRows()).slice(0,3).map(option=>option.value);afterChange();
+  };
+  renderKPIs=function(rows) {
+    // The old renderer writes the deleted Updates tile; replace its output logic rather than leaving a hidden tile.
+    $('kpi-num').textContent=moneyless(rows.length);
+    for(const [id,key] of [['kpi-minloss','minLoss'],['kpi-maxloss','maxLoss'],['kpi-gain','jobGain'],['kpi-net','netChange']])
+      $(id).textContent=moneyless(rows.reduce((sum,row)=>sum+(C.number(row[key])||0),0));
+    $('kpi-net').classList.toggle('negative',rows.reduce((sum,r)=>sum+(C.number(r.netChange)||0),0)<0);
+    $('kpi-country').textContent=C.countOptions(rows,'country',1,false)[0]?.label||'—';
+    $('kpi-company').textContent=C.countOptions(rows,'company',1,false)[0]?.label||'—';
+    const durations=rows.map(r=>C.number(r.duration)).filter(v=>v!=null);
+    $('kpi-duration').textContent=durations.length?String(Math.round(durations.reduce((a,b)=>a+b,0)/durations.length)):'—';
+  };
+  renderMap=function(rows) {
+    if(mapMode==='choropleth') {originalMap(rows);return;}
+    if(mapMode==='rates') {
+      if(!employment) throw new Error('Employment reference is not configured.');
+      const rates=C.employmentRates(rows,employment);
+      newChart('map-chart',{chart:{map:getEuropeMap()},title:{text:null},credits:{enabled:false},
+        colorAxis:{min:0,minColor:'#EAF0F6',maxColor:'#21374F'},legend:{enabled:true},
+        tooltip:{pointFormatter:function(){const r=this.custom;return r?'<strong>'+C.escape(this.name)+'</strong><br>'+r.cases+' events / '+
+          moneyless(r.employed)+' employed ('+r.year+')<br>'+ (r.rate==null?'No denominator':r.rate.toFixed(2)+' per 100,000 employed'): 'No matching cases';}},
+        series:[{name:'Events per 100,000 employed',joinBy:['hc-key','cc'],data:rates.map(r=>({cc:r.cc,value:r.rate,custom:r})),nullColor:'#EDEFF2'}]},true);
+      $('map-note').textContent='Recorded events in the selected announcement period per 100,000 employed, using the static '+employment.year+
+        ' employment reference. Source: '+employment.source+'. This is not an annualised rate, and the denominator does not follow sector or thematic filters.';
+      return;
+    }
+    const data=C.largest(rows).map(row=>({'hc-key':row.cc,z:C.size(row),custom:row}));
+    newChart('map-chart',{chart:{map:getEuropeMap()},mapNavigation:{enabled:true},legend:{enabled:false},
+      tooltip:{useHTML:true,outside:true,style:{whiteSpace:'normal',width:'360px',pointerEvents:'auto'},hideDelay:1000,stickOnContact:true},
+      series:[{name:'Countries',data:[],nullColor:'#D8E0E7',borderColor:'#A9B6C3',enableMouseTracking:false},
+        {type:'mapbubble',name:'Largest case',joinBy:['hc-key','hc-key'],data,minSize:9,maxSize:'16%',
+          color:'rgba(63,108,155,0.75)',tooltip:{pointFormatter:function(){const r=this.custom;
+            return '<div class="r3-map-tooltip"><strong>'+caseLink(r,r.company||'Unknown company')+'</strong><p>'+C.escape(r.country)+
+              '</p><p class="r3-location">'+C.escape(r.location||'Location not supplied')+'</p><p>Announced job losses: <strong>'+moneyless(C.loss(r))+
+              '</strong><br>Announced job gains: <strong>'+moneyless(C.gain(r))+'</strong></p><p>'+prettyDate(r.date)+'</p></div>';}}}]},true);
+    $('map-note').textContent='Bubble size shows the largest single announced case in every country with eligible data, with no top-15 limit. '+
+      'Size is the larger of announced losses and gains; missing maximum losses use the minimum. Countries without an eligible case have no bubble. '+
+      'Bubbles are placed at country level; the full affected-unit location is shown in the tooltip.';
+  };
+  function comparisonGroups(rows) {
+    const dim=multiDim();
+    return dim ? SELECT[dim].map(value=>({name:dim==='thematic'?(THEMATIC_OPTS.find(o=>o.value===value)||{}).label||value:value,
+      rows:rows.filter(row=>matchesDim(row,dim,value))})) : [{name:'',rows}];
+  }
+  function drawPeriodChart(id,groups,metrics,axisTitle) {
+    const ps=periodList(), series=[];
+    const shortScreen=window.innerWidth<700;
+    groups.forEach((group,g)=>metrics.forEach((metric,m)=>{
+      series.push({name:(group.name?group.name+' — ':'')+metric.label,type:'line',
+        data:C.values(group.rows,ps,metric.key),color:groups.length>1?DATA_COLORS[g%DATA_COLORS.length]:metric.color,
+        dashStyle:m===1?'Dash':'ShortDash',lineWidth:2,connectNulls:false,
+        marker:{enabled:true,radius:4,symbol:m===1?'diamond':'circle'},custom:{metric:metric.key,group:group.name}});
+    }));
+    const boundary=ps.findIndex(p=>p.kind==='separator');
+    models[id]={periods:ps,series};
+    newChart(id,{chart:{type:'line',height:shortScreen?310:370},xAxis:{categories:ps.map(p=>p.label),
+        plotLines:boundary>=0?[{value:boundary,color:'#98A1B3',width:1,dashStyle:'Dash',label:{text:'Quarterly →',rotation:0}}]:[],
+        labels:{rotation:-45,step:shortScreen&&ps.length>12?Math.ceil(ps.length/10):1}},
+      yAxis:{min:0,allowDecimals:axisTitle!=='Events',title:{text:axisTitle}},legend:{enabled:true},
+      tooltip:{useHTML:true,outside:true,shared:true,formatter:function(){
+        const points=this.points||[this],index=points[0]?.point?.index??points[0]?.index??this.x;
+        const p=ps[Number(index)]; if(!p || p.kind==='separator') return false;
+        return '<div class="tt-wrap"><div class="tt-head">'+C.escape(p.label)+'</div><div class="tt-line">'+
+          prettyDate(p.start)+' – '+prettyDate(p.end)+'</div>'+points.map(point=>'<div class="tt-line">'+C.escape(point.series.name)+
+          ': <strong>'+moneyless(point.y)+'</strong></div>').join('')+(axisTitle==='Events'?'<div>Number of restructurings</div>':'<div>Jobs</div>')+'</div>';
+      }},series:series.length?series:[{name:'No matching data',data:[]}],credits:{enabled:false}});
+  }
+  renderEventsChart=function(rows) {
+    const metric={all:{key:'events',label:'Number of restructurings',color:'#3F6C9B'},
+      gain:{key:'gainEvents',label:'Job gains (events)',color:'#4E6B3C'},loss:{key:'lossEvents',label:'Job losses (events)',color:'#A03B45'}}[eventsMode];
+    drawPeriodChart('events-chart',comparisonGroups(rows),[metric],'Events');
+    const n=rows.filter(r=>(eventsMode==='gain'?C.gain(r):eventsMode==='loss'?C.loss(r):C.size(r))>=100).length;
+    $('events-note').textContent=(n<30?'Fewer than 30 qualifying events match these filters. ':'')+
+      (!periodList().length?'No completed periods are available in this selection. ':'')+chartNote();
+  };
+  renderJobsChart=function(rows) {
+    const metrics=[];
+    if(jobsMode!=='loss') metrics.push({key:'gain',label:'Job gains',color:'#4E6B3C'});
+    if(jobsMode!=='gain') metrics.push({key:'loss',label:'Job losses',color:'#A03B45'});
+    drawPeriodChart('jobs-chart',comparisonGroups(rows),metrics,'Jobs');
+    $('r3-jobs-note').textContent=(!periodList().length?'No completed periods are available in this selection. ':'')+chartNote()+' Job gains are systematically collected from 2005 onwards; earlier gains are not shown as zero. UK coverage ends in 2020.';
+  };
+  renderRecent=function(rows){
+    for(const side of ['loss','gain']) {
+      const recent=rows.filter(r=>(side==='loss'?C.loss(r):C.gain(r))>0&&r.date)
+        .sort((a,b)=>b.date-a.date||C.text(b.id).localeCompare(C.text(a.id))).slice(0,8);
+      $(side==='loss'?'recentLoss':'recentGain').innerHTML=recent.map(r=>itemHtml(r,side)).join('')||
+        '<p class="r3-muted">No matching records</p>';
+    }
+  };
+  itemHtml=function(row,mode) {
+    const jobs=mode==='loss'?'−'+moneyless(C.loss(row)):'+'+moneyless(C.gain(row));
+    return '<article class="recent-item"><div class="recent-head"><div class="recent-company">'+caseLink(row,row.company||'Unknown')+
+      '</div><div class="recent-date">'+C.escape(prettyDate(row.date))+' · '+C.escape(row.country)+'</div></div>'+
+      '<div class="recent-meta"><span class="num '+mode+'">'+jobs+' jobs</span><span>'+C.escape(row.location)+'</span><span>'+C.escape(row.sector)+'</span></div>'+
+      (C.caseUrl(row.id)?'<p>'+caseLink(row,'Open factsheet ↗')+'</p>':'<p class="r3-muted">Factsheet unavailable: missing or invalid case ID.</p>')+
+      (row.desc?'<details class="recent-desc"><summary>Read full description</summary><p>'+C.escape(row.desc)+'</p></details>':'')+'</article>';
+  };
+  companyOptionsFrom=function(rows) {return C.eligibleCompanies(rows,cfg.companyMinExclusive);};
+  setupCompanyMs=function() {
+    const host=$('companyMs');host.innerHTML='';
+    const control=document.createElement('button');control.type='button';control.className='ms-control';
+    control.setAttribute('aria-expanded','false');control.setAttribute('aria-controls','r3-company-panel');
+    const panel=document.createElement('div');panel.className='ms-panel';panel.id='r3-company-panel';
+    const search=document.createElement('div');search.className='ms-search';
+    const input=document.createElement('input');input.type='search';input.placeholder='Search eligible companies…';
+    input.setAttribute('aria-label','Search eligible companies');search.appendChild(input);
+    const list=document.createElement('div');panel.append(search,list);host.append(control,panel);
+    let options=[];
+    const refresh=()=>{
+      control.textContent=COMPANY_SEL.length?COMPANY_SEL.join('; '):'Select companies…';
+      control.title=control.textContent;list.innerHTML='';
+      const found=options.filter(o=>C.fold(o.label).includes(C.fold(input.value)));
+      if(!found.length){list.innerHTML='<div class="ms-empty">No eligible companies</div>';return;}
+      found.forEach(option=>{
+        const label=document.createElement('label');label.className='ms-opt';
+        const box=document.createElement('input');box.type='checkbox';box.checked=COMPANY_SEL.includes(option.value);
+        box.disabled=!box.checked&&COMPANY_SEL.length>=12;
+        const name=document.createElement('span');name.textContent=option.label;
+        const count=document.createElement('span');count.className='cnt';count.textContent=moneyless(option.count);
+        label.append(box,name,count);list.appendChild(label);
+        box.addEventListener('change',()=>{
+          const index=COMPANY_SEL.indexOf(option.value);
+          if(index>=0) COMPANY_SEL.splice(index,1);else if(COMPANY_SEL.length<12) COMPANY_SEL.push(option.value);
+          renderCompaniesChart(currentRows());
+          const current=[...list.querySelectorAll('label')].find(label=>label.querySelector('span')?.textContent===option.label);
+          (current?.querySelector('input')||control).focus();
+        });
+      });
+    };
+    const close=()=>{host.classList.remove('open');control.setAttribute('aria-expanded','false');};
+    control.addEventListener('click',()=>{
+      if(host.classList.contains('open')) close();
+      else{Object.values(MS).forEach(ms=>ms.close());host.classList.add('open');control.setAttribute('aria-expanded','true');input.value='';refresh();input.focus();}
+    });
+    input.addEventListener('input',refresh);
+    host.addEventListener('keydown',event=>{if(event.key==='Escape'){close();control.focus();}});
+    document.addEventListener('click',event=>{if(!host.contains(event.target)) close();});
+    COMPANY_MS={setOptions:items=>{options=items;refresh();},refresh,close};
+  };
+  renderCompaniesChart=function(rows) {
+    const options=companyOptionsFrom(rows), eligible=new Set(options.map(o=>o.value));
+    COMPANY_SEL=COMPANY_SEL.filter(name=>eligible.has(name)).slice(0,12);
+    if(COMPANY_MS) {COMPANY_MS.setOptions(options); COMPANY_MS.refresh();}
+    const groups=COMPANY_SEL.map(name=>({name,rows:rows.filter(r=>r.company===name)}));
+    drawPeriodChart('companies-chart',groups,[{key:compMetric,label:compMetric==='jobs'?'Number of jobs':'Number of cases',color:'#3F6C9B'}],compMetric==='jobs'?'Jobs':'Events');
+    const chart=getChartById('companies-chart');
+    chart.update({tooltip:{shared:false,useHTML:true,outside:true,stickOnContact:true,hideDelay:1100,
+      style:{pointerEvents:'auto',whiteSpace:'normal'},formatter:function(){
+        const point=this.point||this, name=point.series.options.custom.group;
+        const latest=C.latestCases(rows,name,3);
+        return '<div class="r3-company-tooltip"><strong>'+C.escape(name)+'</strong><p>'+moneyless(this.y)+' '+(compMetric==='jobs'?'jobs':'events')+
+          '</p><strong>Three most recent cases in the current selection</strong><ol>'+latest.map(row=>'<li>'+caseLink(row,prettyDate(row.date)+' — '+(row.company||''))+'</li>').join('')+
+          '</ol>'+(latest.length<3?'<p>Only '+latest.length+' linked case(s) available.</p>':'')+'</div>';
+      }}},false); chart.redraw();
+    let note=$('r3-company-note');
+    if(!note) {note=document.createElement('p');note.id='r3-company-note';note.className='card-note';document.querySelector('.companies-card').appendChild(note);}
+    note.textContent=(options.length?'':'No companies exceed the current eligibility threshold. ')+
+      (options.length && !COMPANY_SEL.length?'Select an eligible company. ':'')+
+      'Jobs are losses plus gains, not net change. '+chartNote();
+  };
+  renderSectors=function(rows) {
+    sectorExport=[];
+    const host=$('sectorsTable'); host.innerHTML='';
+    const groups=comparisonGroups(rows), comparing=groups.length>1;
+    const groupSets=groups.map(group=>new Set(group.rows));
+    const header=document.createElement('div'); header.className='r3-sector-head';
+    header.innerHTML='<strong>Sector / subsector / NACE-3</strong>'+groups.map(g=>'<strong>'+C.escape(g.name||'Events')+'</strong>').join('');
+    header.style.setProperty('--r3-groups',groups.length); host.appendChild(header);
+    function addLevel(parent,level,field,scope,trail) {
+      const aggregated=new Map();
+      for(const row of scope) {
+        const value=C.text(row[field]); if(!value) continue;
+        if(!aggregated.has(value)) aggregated.set(value,{value,rows:[],counts:groups.map(()=>0)});
+        const item=aggregated.get(value); item.rows.push(row);
+        groupSets.forEach((set,index)=>{if(set.has(row)) item.counts[index]++;});
+      }
+      const items=[...aggregated.values()].sort((a,b)=>b.rows.length-a.rows.length||a.value.localeCompare(b.value));
+      const maximum=Math.max(1,...items.flatMap(item=>item.counts));
+      const minimum=level===3?cfg.nace3ChartMinInclusive:comparing?30:1;
+      for(const item of items) {
+        if(Math.max(...item.counts)<minimum) continue;
+        const path=Object.assign({},trail,{[field]:item.value});
+        const details=document.createElement(level<3?'details':'div'); details.className='r3-sector-level r3-level-'+level;
+        const line=document.createElement(level<3?'summary':'div'); line.className='r3-sector-line';
+        line.style.setProperty('--r3-groups',groups.length);
+        const label=document.createElement('span');label.textContent=item.value;line.appendChild(label);
+        item.counts.forEach((count,index)=>{
+          const cell=document.createElement('span'); cell.className='r3-count-cell';
+          const suppressed=(comparing || level===3)&&count<minimum;
+          cell.innerHTML=suppressed?'<span class="r3-muted">&lt;'+minimum+'</span>':'<span>'+moneyless(count)+'</span><span class="r3-count-bar" style="width:'+
+            Math.round(count/maximum*70)+'%;background:'+DATA_COLORS[index%DATA_COLORS.length]+'"></span>';
+          if(suppressed) cell.title='Below the display threshold; not zero.';
+          line.appendChild(cell);
+          sectorExport.push(Object.assign({level,comparison:groups[index].name||'All selected',events:suppressed?'':count,
+            suppressed:!!suppressed,threshold:minimum},path));
+        });
+        details.appendChild(line); parent.appendChild(details);
+        if(level<3) {const child=document.createElement('div');details.appendChild(child);addLevel(child,level+1,level===1?'nace2':'nace3',item.rows,path);}
+      }
+    }
+    addLevel(host,1,'sector',rows,{});
+    if(!sectorExport.length) {const empty=document.createElement('p');empty.textContent='No sectors meet the display threshold under these filters.';host.appendChild(empty);}
+  };
+  renderTypesPie=function(rows) {
+    const ps=periodList();
+    const names=[...new Set(rows.map(r=>r.type||'Unspecified'))].sort();
+    for(const side of ['gain','loss']) {
+      const parts=C.typeBreakdown(rows,side);
+      const data=parts.map(part=>({name:part.name,value:part.cases,color:DATA_COLORS[names.indexOf(part.name)%DATA_COLORS.length],custom:part}));
+      newChart('types-'+side+'-chart',{chart:{type:'treemap',height:340},legend:{enabled:false},
+        tooltip:{useHTML:true,outside:true,formatter:function(){const p=this.point?.custom||this.custom;
+          const trend=C.values(p.rows,ps,'cases');
+          return '<div class="tt-wrap"><strong>'+C.escape(p.name)+'</strong><p>'+p.cases+' events ('+p.share.toFixed(1)+'%)</p>'+
+            '<p>Number of cases over time</p>'+C.sparkline(trend)+
+            '<p class="r3-muted">Annual history; completed current-year quarters after the gap.</p>'+
+            '<div class="r3-trend-values">'+ps.map((period,i)=>period.kind==='separator'?'':
+              C.escape(period.label)+': '+moneyless(trend[i])).filter(Boolean).join(' · ')+'</div></div>'; }},
+        plotOptions:{treemap:{layoutAlgorithm:'squarified',borderColor:'#F2F3F5',borderWidth:2,
+          dataLabels:{enabled:true,allowOverlap:false,style:{textOutline:'none',fontSize:'12px'},
+            formatter:function(){return C.escape(this.point.name)+'<br>'+this.point.custom.share.toFixed(0)+'%';}}}},
+        series:[{type:'treemap',name:side==='gain'?'Job gain events':'Job loss events',data}],credits:{enabled:false}});
+    }
+  };
+  renderCompare=function() {}; populateCompareSelects=function() {}; setupRangeSlider=function() {};
+  renderAll=function() {
+    const rows=currentRows(); LAST_ROWS=rows;
+    renderKPIs(rows);renderMap(rows);renderEventsChart(rows);renderJobsChart(rows);renderSectors(rows);
+    renderTypesPie(rows);renderRecent(rows);renderCompaniesChart(rows);updateMsHint();
+  };
+  function periodCsv(id) {
+    const model=models[id]; if(!model) return [];
+    return model.periods.flatMap((p,index)=>p.kind==='separator'?[]:model.series.map(series=>({
+      period:p.label,period_kind:p.kind,period_start:C.iso(p.start),period_end:C.iso(p.end),
+      selection:series.custom.group||'All selected',metric:series.custom.metric,value:series.data[index],
+      source_completeness_confirmed:!!cfg.dataCompleteThrough})));
+  }
+  csvMap=function() {
+    if(mapMode==='rates') return C.employmentRates(LAST_ROWS,employment);
+    if(mapMode==='choropleth') return C.countOptions(LAST_ROWS,'country',1,false).map(o=>({country:o.label,events:o.count}));
+    return C.largest(LAST_ROWS).map(row=>({country:row.country,company:row.company,id:row.id,factsheet:C.caseUrl(row.id)||'',
+      location:row.location,date:C.iso(row.date),jobs_lost:C.loss(row),jobs_gained:C.gain(row),bubble_size:C.size(row)}));
+  };
+  csvEvents=()=>periodCsv('events-chart');csvJobs=()=>periodCsv('jobs-chart');csvCompanies=()=>periodCsv('companies-chart');
+  csvSectors=()=>sectorExport.slice();
+  csvTypes=()=>['gain','loss'].flatMap(side=>C.typeBreakdown(LAST_ROWS,side).map(p=>({change:side,type:p.name,events:p.cases,share_percent:p.share,denominator_events:p.total})));
+  csvRecent=function(mode) {
+    const rows=LAST_ROWS.filter(row=>(mode==='gain'?C.gain(row):C.loss(row))>0&&row.date).sort((a,b)=>b.date-a.date||C.text(b.id).localeCompare(C.text(a.id))).slice(0,8);
+    return rows.map(row=>({id:row.id,factsheet:C.caseUrl(row.id)||'',company:row.company,country:row.country,location:row.location,
+      date:C.iso(row.date),jobs_lost:C.loss(row),jobs_gained:C.gain(row),description:row.desc||''}));
+  };
+  exportCSV=function(rows,name) {
+    if(!rows?.length) rows=[{note:'No data for current selection'}];
+    const columns=[...new Set(rows.flatMap(row=>Object.keys(row)))];
+    const escapeCell=value=>{
+      if(value==null)return '';
+      let s=String(value);
+      if(typeof value==='string'&&/^[\s]*[=+\-@]/.test(s))s="'"+s;
+      return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
+    };
+    const meta='# Date of announcement: '+currentDateRangeLabel()+'\r\n';
+    const content=meta+[columns.map(escapeCell).join(','),...rows.map(row=>columns.map(column=>escapeCell(row[column])).join(','))].join('\r\n');
+    downloadBlob(new Blob(['\ufeff'+content],{type:'text/csv;charset=utf-8'}),name+'.csv');
+  };
+  function configureExports() {
+    const current=[
+      {sel:'.kpi-card',name:'erm_overview',csv:csvKpis},
+      {sel:'.map-card',name:'erm_map',chartId:'map-chart',csv:csvMap,exportOpts:mapExportLegendOpts},
+      {sel:'.events-card',name:'erm_events',chartId:'events-chart',csv:csvEvents},
+      {sel:'.jobs-card',name:'erm_jobs',chartId:'jobs-chart',csv:csvJobs},
+      {sel:'.loss-card',name:'erm_recent_losses',csv:()=>csvRecent('loss')},
+      {sel:'.gain-card',name:'erm_recent_gains',csv:()=>csvRecent('gain')},
+      {sel:'.sector-card',name:'erm_sectors',csv:csvSectors},
+      {sel:'.types-card',name:'erm_types',csv:csvTypes},
+      {sel:'.companies-card',name:'erm_companies',chartId:'companies-chart',csv:csvCompanies}
+    ];
+    EXPORT_CONFIG.splice(0,EXPORT_CONFIG.length,...current);
+  }
+  function loadSource(fileOrURL) {
+    return new Promise((resolve,reject)=>{
+      if (!globalThis.Papa) return reject(new Error('The CSV parser could not load. Check the internet connection and the Papa Parse script URL.'));
+      Papa.parse(fileOrURL,{download:typeof fileOrURL==='string',header:true,skipEmptyLines:'greedy',dynamicTyping:false,
+        transformHeader:header=>header.replace(/^\ufeff/,'').trim(),
+        complete:result=>{
+          if(result.errors?.length) reject(new Error('CSV parsing failed: '+result.errors.slice(0,3).map(e=>e.message).join('; ')));
+          else resolve(result.data);
+        },error:error=>reject(error instanceof Error?error:new Error(String(error)))});
+    });
+  }
+  function errorPanel(error) {
+    const overlay=$('loadingOverlay');overlay.style.display='flex';
+    overlay.innerHTML='<div class="err"><strong>Dashboard could not load.</strong><p>'+C.escape(error.message||error)+
+      '</p><p>Nothing is displayed when the published-status mapping or required data is unconfirmed.</p>'+
+      '<label class="r3-file-label">Try a local Full_data.csv<input id="r3-local-csv" type="file" accept=".csv,text/csv"></label>'+
+      '<p class="r3-muted">The selected file is processed in this browser, not uploaded. Chart libraries still need an internet connection.</p></div>';
+    $('r3-local-csv').addEventListener('change',event=>{
+      const file=event.target.files[0];if(file) loadDashboard(file);
+    });
+  }
+  async function loadDashboard(source) {
+    const version=++loadVersion,overlay=$('loadingOverlay');
+    overlay.style.display='flex';overlay.innerHTML='<div class="spinner"></div><div id="loadingText">Loading CSV and checking publication status…</div>';
+    try {
+      if(!globalThis.Highcharts?.mapChart) throw new Error('Highcharts Maps did not load. Check the internet connection and the Highcharts script URLs.');
+      if(!Highcharts.maps?.['custom/europe']) throw new Error('The Europe map file did not load. Check the custom/europe map-data script URL.');
+      if(!Highcharts.seriesTypes?.treemap) throw new Error('The Highcharts treemap module did not load. Check modules/treemap.js.');
+      const raw=await loadSource(source);if(version!==loadVersion)return;
+      const checked=C.publishedRows(raw,cfg);audit=checked.audit;models={};sectorExport=[];
+      for(const column of ['Country','Company_name','d_date_announcement'])
+        if(checked.rows.length&&!C.findColumn(checked.rows[0],column)) throw new Error('Required source column missing: '+column);
+      // Resolve case-insensitive, trimmed headers once, not on every cell.
+      const canonicalColumns=['ID','Country','Company_name','d_date_announcement','EU-27','V_sector',
+        'NACE_level_1','NACE_level_2','NACE_level_3','Restructuring_type','Location_of_affected_units',
+        'Description','Description_lower','Thematic_marker','Thematic_Digitalisation','Thematic_green',
+        'Thematic_automotive','Thematic_covid','Thematic_twin','Planned_job_reductions_minimum',
+        'Planned_job_reductions_maximum','Planned_job_gain','Net announced job change',
+        'Restructuring duration (months)','V_nb_updates'];
+      const aliases=canonicalColumns.map(name=>[name,C.findColumn(checked.rows[0],name)])
+        .filter(([name,key])=>key&&name!==key);
+      const normalized=checked.rows.map(raw=>{const row={...raw};for(const[name,key]of aliases)row[name]=raw[key];return normalizeRow(row);}).filter(r=>r.country||r.company||r.date);
+      NORM=normalized.filter(r=>!r.date||(r.date.getUTCFullYear()>=cfg.firstYear&&r.date.getUTCFullYear()<=cfg.lastYear));
+      audit.outsideCoverage=normalized.length-NORM.length;
+      audit.missingDates=NORM.filter(r=>!r.date).length;
+      audit.unlinkedCases=NORM.filter(r=>!C.caseUrl(r.id)).length;
+      audit.covidCases=NORM.filter(r=>r.them_covid).length;
+      audit.confirmedProductionData=false;
+      sourceWarning='';employment=null;
+      if(cfg.employmentReferenceURL) {
+        try {
+          const response=await fetch(cfg.employmentReferenceURL);
+          if(!response.ok) throw new Error('Employment reference returned HTTP '+response.status);
+          const candidate=await response.json();if(version!==loadVersion)return;C.employmentRates(NORM,candidate);employment=candidate;
+        }catch(error){sourceWarning='Employment-rate view unavailable: '+error.message;}
+      }
+      if(version!==loadVersion)return;
+      DIMS.forEach(dim=>{SELECT[dim]=[];document.querySelector('.ms[data-dim="'+dim+'"]')?.replaceChildren();});
+      populateFilters();setupCompanyMs();
+      COMPANY_SEL=companyOptionsFrom(currentRows()).slice(0,3).map(o=>o.value);
+      // Disable after failure without making unrelated views unusable.
+      $('r3-rates').disabled=!employment;
+      if(!employment&&mapMode==='rates') {
+        mapMode='cases';document.querySelectorAll('#mapModeSeg button').forEach(button=>{
+          const active=button.dataset.mode==='cases';button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
+        });
+      }
+      document.querySelectorAll('.export-wrap').forEach(element=>element.remove());
+      configureExports();buildExportMenus();renderAll();
+      $('r3-review-notice').textContent='Round 3 implementation · '+moneyless(audit.published)+' published source rows; '+
+        moneyless(audit.excluded)+' excluded by status. '+(audit.missingDates?moneyless(audit.missingDates)+' undated records excluded from date-filtered views. ':'')+
+        'Production totals and thematic mappings still require verification.'+(sourceWarning?' '+sourceWarning:'');
+      overlay.style.display='none';window.dispatchEvent(new CustomEvent('erm-round3-ready',{detail:audit}));
+    }catch(error){if(version!==loadVersion)return;console.error(error);NORM=[];LAST_ROWS=[];models={};sectorExport=[];errorPanel(error);}
+  }
+  init=async function() {
+    try {
+      setupDom();bindEvents();
+      // bindEvents runs before the optional denominator fetch; bind this button separately.
+      $('r3-rates').addEventListener('click',()=>{
+        if(!employment)return;
+        document.querySelectorAll('#mapModeSeg button').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+        $('r3-rates').classList.add('active');$('r3-rates').setAttribute('aria-pressed','true');
+        mapMode='rates';renderMap(currentRows());
+      });
+      await loadDashboard(cfg.csvURL||CSV_URL);
+    }catch(error){console.error(error);errorPanel(error);}
+  };
+  globalThis.ERMReview={config:cfg,getAudit:()=>Object.assign({},audit),getModels:()=>models,
+    getRows:()=>NORM.slice(),getFilteredRows:currentRows,core:C,loadLocalFile:loadDashboard};
+})();
+
 init();
 </script>
 
