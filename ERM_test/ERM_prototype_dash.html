@@ -513,7 +513,6 @@
 .header h1 a:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible {
   outline:3px solid #41719C; outline-offset:3px;
 }
-.r3-review-notice { margin:10px 0; padding:8px 12px; border-left:3px solid #B08A5E; background:#FBF6EE; font-size:13px; }
 .r3-filter-shell { position:sticky; top:0; z-index:100; background:#FFF; border-bottom:1px solid var(--line); box-shadow:0 2px 6px #26324D14; }
 .r3-filter-bar { display:flex; align-items:center; gap:16px; max-width:1520px; padding:10px 48px; margin:0 auto; min-height:58px; }
 .r3-filter-bar button { flex:none; background:var(--blue); color:#FFF; border:0; padding:9px 14px; border-radius:4px; font:600 14px var(--sans); cursor:pointer; }
@@ -578,11 +577,9 @@
   .kpi-strip { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .r3-type-grid { grid-template-columns:1fr; }
   .title-row { gap:10px; }
-  .r3-review-notice { font-size:12px; }
 }
 @media print {
   .r3-filter-shell { position:static; }
-  .r3-review-notice { display:block; }
 }
 
 /* Full-page integration fixes (2026-09-21). */
@@ -3098,9 +3095,9 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const shell=document.createElement('div'); shell.className='r3-filter-shell';
     wrap.before(shell);
     shell.innerHTML='<div class="r3-filter-bar"><button type="button" id="r3-toggle-filters" '+
-      'aria-controls="r3-filter-panel" aria-expanded="false">Edit filters</button>'+
+      'aria-controls="r3-filter-panel" aria-expanded="true">Close filters</button>'+
       '<div id="r3-filter-summary" aria-live="polite"></div></div>';
-    shell.appendChild(wrap); wrap.id='r3-filter-panel'; wrap.hidden=true;
+    shell.appendChild(wrap); wrap.id='r3-filter-panel'; wrap.hidden=false;
     const theme=document.createElement('div'); theme.id='r3-theme-definitions';
     theme.className='r3-theme-definitions'; theme.setAttribute('aria-live','polite'); wrap.appendChild(theme);
     const reset=document.createElement('div'); reset.id='r3-filter-resets'; reset.setAttribute('role','status'); wrap.appendChild(reset);
@@ -3110,10 +3107,6 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
       '<label class="r3-date-label">From<select id="r3-from-period"></select></label>'+
       '<label class="r3-date-label">To<select id="r3-to-period"></select></label>';
     $('rangeSlider').remove();
-    const info=document.createElement('div'); info.className='r3-review-notice'; info.id='r3-review-notice';
-    info.setAttribute('role','status');
-    info.textContent='Round 3 implementation — awaiting production-data verification.';
-    document.querySelector('.header').appendChild(info);
     const caveats=document.querySelector('.caveat-body');
     caveats.insertAdjacentHTML('beforeend','<p><strong>Country inclusion.</strong> BG, CY, CZ, EE, HU, LV, LT, MT, PL, RO, SI, SK were included in the ERM in 2005. '+
       'HR was included in 2013. UK was no longer included after 2020.</p><p><strong>Full ERM methodology.</strong> '+
@@ -3652,6 +3645,7 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
       COMPANY_SEL=companyOptionsFrom(currentRows()).slice(0,3).map(o=>o.value);
       // Disable after failure without making unrelated views unusable.
       $('r3-rates').disabled=!employment;
+      $('r3-rates').title=sourceWarning||(!employment?'An approved employment reference file is required':'');
       if(!employment&&mapMode==='rates') {
         mapMode='cases';document.querySelectorAll('#mapModeSeg button').forEach(button=>{
           const active=button.dataset.mode==='cases';button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
@@ -3659,9 +3653,6 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
       }
       document.querySelectorAll('.export-wrap').forEach(element=>element.remove());
       configureExports();buildExportMenus();renderAll();
-      $('r3-review-notice').textContent='Round 3 implementation · '+moneyless(audit.published)+' published source rows; '+
-        moneyless(audit.excluded)+' excluded by status. '+(audit.missingDates?moneyless(audit.missingDates)+' undated records excluded from date-filtered views. ':'')+
-        'Production totals and thematic mappings still require verification.'+(sourceWarning?' '+sourceWarning:'');
       overlay.style.display='none';window.dispatchEvent(new CustomEvent('erm-round3-ready',{detail:audit}));
     }catch(error){if(version!==loadVersion)return;console.error(error);NORM=[];LAST_ROWS=[];models={};sectorExport=[];errorPanel(error);}
   }

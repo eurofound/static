@@ -36,6 +36,8 @@ const server = http.createServer((req, res) => {
     assert.equal(result.charts.length,6);assert.equal(result.version,'12.4.0');
   });
   if(result.charts?.length) {
+    // The app now opens with filters visible; collapse them for the chart interactions below.
+    await page.locator('#r3-toggle-filters').click();
     await check('Directory URL redirects to dashboard',()=>assert.match(result.url,/ERM_test\/ERM_prototype_dash.html$/));
     await check('All eligible EU countries have plotted largest-case bubbles',async()=>{
       const data=await page.evaluate(()=>{const ch=getChartById('map-chart');return {expected:ERMRound3Core.largest(ERMReview.getFilteredRows()).length,points:ch.series[1].points.filter(p=>p.plotX!=null&&p.plotY!=null).length};});assert.equal(data.points,data.expected);assert.equal(data.points,26);
