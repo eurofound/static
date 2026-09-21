@@ -532,9 +532,10 @@
 .kpi-value:not(.smaller) { font-size:22px; white-space:nowrap; word-break:normal; }
 .kpi:nth-child(8n) { border-right:0; }
 .main > .card { min-width:0; }
-.r3-map-tooltip { width:360px; max-width:calc(100vw - 40px); white-space:normal; overflow-wrap:anywhere; padding:6px; }
-.r3-map-tooltip p { margin:5px 0; }
-.r3-location { white-space:pre-wrap; overflow-wrap:anywhere; }
+.r3-map-tooltip { width:280px; max-width:calc(100vw - 40px); white-space:normal; overflow-wrap:anywhere; padding:2px 2px 4px; }
+.r3-map-tooltip .tt-head a { color:inherit; text-decoration:none; }
+.r3-map-tooltip .tt-head a:hover { text-decoration:underline; }
+.r3-location { white-space:pre-wrap; overflow-wrap:anywhere; font-size:12px; color:var(--text-dim); line-height:1.4; margin-top:7px; padding-top:7px; border-top:1px solid var(--line-soft); }
 .r3-company-tooltip { width:330px; max-width:calc(100vw - 40px); white-space:normal; overflow-wrap:anywhere; }
 .r3-company-tooltip li { margin:7px 0; }
 .r3-company-tooltip a, .recent-item a { color:var(--blue-dark); text-decoration:underline; text-underline-offset:2px; }
@@ -591,8 +592,10 @@
 #sectorsTable { min-width:0; }
 .r3-sector-head > *, .r3-sector-line > * { min-width:0; overflow-wrap:anywhere; }
 .r3-sector-head { position:sticky; top:0; background:var(--card); z-index:1; }
-.r3-trend-values { font-size:11px; max-width:300px; white-space:normal; color:var(--text-dim); }
 .tt-wrap { white-space:normal; overflow-wrap:anywhere; }
+.tt-sparkline { margin-top:7px; line-height:0; }
+.tt-sparkline svg { display:block; width:100%; height:54px; }
+.tt-axis { display:flex; justify-content:space-between; margin-top:4px; color:var(--text-mute); font:11px var(--sans); }
 .r3-file-label { display:flex; flex-direction:column; gap:10px; padding:15px; background:var(--card); color:var(--navy); }
 .r3-file-label input { max-width:100%; }
 .loading-overlay { overflow:auto; padding:24px 0; }
@@ -621,22 +624,54 @@
   .r3-type-grid [id$="-chart"] { min-width:0; }
 }
 
-/* Explicit disclosure arrows remain visible after converting summary to a grid. */
-.r3-sector-level > summary > span:first-child::before { content:"›"; display:inline-block; width:14px; font-weight:700; color:var(--blue); }
-.r3-sector-level[open] > summary > span:first-child::before { content:"⌄"; }
+/* Keep the original compact hierarchy, with separate disclosure and detail targets. */
+.r3-sector-label { display:flex; align-items:center; min-width:0; }
+.r3-sector-name { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.r3-sector-chevron { flex:none; width:16px; margin-right:4px; color:var(--blue); font-weight:700; }
+.r3-sector-chevron::before { content:"›"; }
+.r3-sector-level[open] > summary .r3-sector-chevron::before { content:"⌄"; }
 .r3-count-cell { gap:12px; }
 .r3-count-cell > span:first-child { min-width:42px; text-align:right; font-weight:700; font-variant-numeric:tabular-nums; }
 .r3-count-track { flex:1; height:9px; background:#E4E8EE; border-radius:3px; overflow:hidden; }
 .r3-count-track .r3-count-bar { display:block; height:100%; }
-.r3-sector-detail { margin-left:8px; border:0; border-bottom:1px dotted var(--blue); background:transparent; padding:0; color:var(--blue); font:600 11px var(--sans); cursor:pointer; }
-.r3-sector-actions { padding:3px 8px 8px; }
+.r3-sector-detail { min-width:0; border:0; background:transparent; padding:0; text-align:left; color:inherit; font:inherit; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.r3-sector-detail:hover { color:var(--blue-dark); }
+.r3-sector-detail:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
 .r3-sector-level { break-inside:avoid; }
 .r3-sector-head { column-span:all; }
+.r3-sector-single .r3-sector-head { display:none; }
+.r3-sector-single > .r3-level-1 { margin-bottom:14px; }
+.r3-sector-single .r3-sector-line { grid-template-columns:minmax(0,1.5fr) 62px minmax(0,1.1fr); gap:12px; padding:9px 2px; border-bottom:2px solid var(--line); font-size:14.5px; }
+.r3-sector-single .r3-sector-label { padding-left:0; max-width:none; }
+.r3-sector-single > .r3-level-1 > summary { font-weight:700; color:var(--navy); }
+.r3-sector-single .r3-count-cell { display:contents; }
+.r3-sector-single .r3-count-track { height:15px; background:#fff; border:1px solid var(--line-soft); border-radius:2px; }
+.r3-sector-single .r3-count-bar { border-radius:0; }
+.r3-sector-single .r3-level-2,.r3-sector-single .r3-level-3 { margin-left:0; }
+.r3-sector-single .r3-level-2 > .r3-sector-line,.r3-sector-single .r3-level-3 > .r3-sector-line { padding:6px 2px 6px 22px; border-bottom:1px dashed var(--line-soft); font-size:13px; font-weight:400; color:var(--text-dim); }
+.r3-sector-single .r3-level-3 > .r3-sector-line { padding-left:42px; }
+.r3-sector-single .r3-level-2 .r3-count-track { height:9px; }
+.r3-sector-single .r3-level-2 .r3-count-cell > span:first-child { font-weight:600; color:var(--navy); }
 @media(min-width:1100px) {
-  #sectorsTable.r3-sector-single { column-count:2; column-gap:28px; }
-  .r3-sector-single .r3-sector-line { grid-template-columns:minmax(160px,1.5fr) minmax(130px,1fr); }
-  .r3-sector-single .r3-sector-head { display:none; }
+  #sectorsTable.r3-sector-single { column-count:2; column-gap:44px; }
 }
+@media(max-width:700px) {
+  .r3-sector-single .r3-sector-line { grid-template-columns:minmax(0,1.5fr) 44px minmax(0,.7fr); gap:8px; }
+}
+#companyMs .ms-control { width:100%; }
+#companyMs .ms-control::after { pointer-events:none; }
+#companyMs .ms-toggle { position:absolute; inset:0; width:100%; border:0; border-radius:6px; padding:0; background:transparent; cursor:pointer; }
+#companyMs .ms-toggle:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+#companyMs .ms-chips { display:contents; }
+#companyMs .ms-chip { position:relative; }
+#companyMs .ms-chip .x { border:0; padding:0; background:transparent; color:inherit; font:inherit; line-height:1; }
+#companyMs .ms-chip .x:hover { opacity:1; }
+#companyMs .ms-placeholder { pointer-events:none; color:var(--text-dim); }
+#companyMs .ms-opt input { appearance:none; position:relative; width:16px; height:16px; margin:0; border:1.5px solid var(--line); border-radius:3px; background:#fff; cursor:pointer; }
+#companyMs .ms-opt input:checked { background:var(--blue); border-color:var(--blue); }
+#companyMs .ms-opt input:checked::after { content:""; position:absolute; width:5px; height:9px; left:4px; top:0; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); }
+#companyMs .ms-opt input:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+#companyMs .ms-opt input:disabled { opacity:.5; cursor:not-allowed; }
 
 </style>
 <script src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/treemap.js"></script>
@@ -3359,13 +3394,16 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
     const data=C.largest(rows).map(row=>({'hc-key':row.cc,z:C.size(row),custom:row}));
     newChart('map-chart',{chart:{map:getEuropeMap()},mapNavigation:{enabled:true,buttonOptions:{verticalAlign:'bottom',
         theme:{fill:'#fff',stroke:'#D9DEE4',r:4,states:{hover:{fill:'#EAF0F6'}}}}},legend:{enabled:false},
-      tooltip:{useHTML:true,outside:true,style:{whiteSpace:'normal',width:'360px',pointerEvents:'auto'},hideDelay:1000,stickOnContact:true},
+      tooltip:{useHTML:true,outside:true,headerFormat:'',style:{whiteSpace:'normal',pointerEvents:'auto'},hideDelay:1000,stickOnContact:true},
       series:[{name:'Countries',data:[],nullColor:'#E1E6E9',borderColor:'#FFFFFF',borderWidth:.7,enableMouseTracking:false},
         {type:'mapbubble',name:'Largest case',joinBy:['hc-key','hc-key'],data,minSize:9,maxSize:'16%',
           color:'rgba(63,108,155,0.75)',tooltip:{pointFormatter:function(){const r=this.custom;
-            return '<div class="r3-map-tooltip"><strong>'+caseLink(r,r.company||'Unknown company')+'</strong><p>'+C.escape(r.country)+
-              '</p><p class="r3-location">'+C.escape(r.location||'Location not supplied')+'</p><p>Announced job losses: <strong>'+moneyless(C.loss(r))+
-              '</strong><br>Announced job gains: <strong>'+moneyless(C.gain(r))+'</strong></p><p>'+prettyDate(r.date)+'</p></div>';}}}]},true);
+            return '<div class="r3-map-tooltip"><div class="tt-head">'+caseLink(r,r.company||'Unknown company')+'</div>'+
+              '<div class="tt-line">'+C.escape(r.country)+'<strong>'+prettyDate(r.date)+'</strong></div>'+
+              '<div class="tt-sub">Announced job changes</div>'+
+              '<div class="tt-line">Job losses<strong>'+moneyless(C.loss(r))+'</strong></div>'+
+              '<div class="tt-line">Job gains<strong>'+moneyless(C.gain(r))+'</strong></div>'+
+              '<div class="r3-location">'+C.escape(r.location||'Location not supplied')+'</div></div>';}}}]},true);
     $('map-note').textContent='Bubble size shows the largest single announced case in every country with eligible data, with no top-15 limit. '+
       'Size is the larger of announced losses and gains; missing maximum losses use the minimum. Countries without an eligible case have no bubble. '+
       'Bubbles are placed at country level; the full affected-unit location is shown in the tooltip.';
@@ -3454,21 +3492,30 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
   companyOptionsFrom=function(rows) {return C.eligibleCompanies(rows,cfg.companyMinExclusive);};
   setupCompanyMs=function() {
     const host=$('companyMs');host.innerHTML='';
-    const control=document.createElement('button');control.type='button';control.className='ms-control';
-    control.setAttribute('aria-expanded','false');control.setAttribute('aria-controls','r3-company-panel');
+    const control=document.createElement('div');control.className='ms-control';
+    const toggle=document.createElement('button');toggle.type='button';toggle.className='ms-toggle';
+    toggle.setAttribute('aria-label','Choose companies');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','r3-company-panel');
+    const chips=document.createElement('span');chips.className='ms-chips';control.append(toggle,chips);
     const panel=document.createElement('div');panel.className='ms-panel';panel.id='r3-company-panel';
     const search=document.createElement('div');search.className='ms-search';
-    const input=document.createElement('input');input.type='search';input.placeholder='Search eligible companies…';
+    const input=document.createElement('input');input.type='search';input.placeholder='Search companies…';
     input.setAttribute('aria-label','Search eligible companies');search.appendChild(input);
     const list=document.createElement('div');panel.append(search,list);host.append(control,panel);
     let options=[];
     const refresh=()=>{
-      control.textContent=COMPANY_SEL.length?COMPANY_SEL.join('; '):'Select companies…';
-      control.title=control.textContent;list.innerHTML='';
+      chips.replaceChildren();list.innerHTML='';
+      if(!COMPANY_SEL.length) {const placeholder=document.createElement('span');placeholder.className='ms-placeholder';placeholder.textContent='Select companies…';chips.appendChild(placeholder);}
+      COMPANY_SEL.forEach(company=>{
+        const chip=document.createElement('span');chip.className='ms-chip';
+        const name=document.createElement('span');name.textContent=company;name.title=company;
+        const remove=document.createElement('button');remove.type='button';remove.className='x';remove.textContent='×';remove.setAttribute('aria-label','Remove '+company);
+        remove.addEventListener('click',event=>{event.stopPropagation();COMPANY_SEL=COMPANY_SEL.filter(name=>name!==company);renderCompaniesChart(currentRows());toggle.focus();});
+        chip.append(name,remove);chips.appendChild(chip);
+      });
       const found=options.filter(o=>C.fold(o.label).includes(C.fold(input.value)));
       if(!found.length){list.innerHTML='<div class="ms-empty">No eligible companies</div>';return;}
       found.forEach(option=>{
-        const label=document.createElement('label');label.className='ms-opt';
+        const label=document.createElement('label');label.className='ms-opt'+(COMPANY_SEL.includes(option.value)?' sel':'');
         const box=document.createElement('input');box.type='checkbox';box.checked=COMPANY_SEL.includes(option.value);
         box.disabled=!box.checked&&COMPANY_SEL.length>=12;
         const name=document.createElement('span');name.textContent=option.label;
@@ -3479,17 +3526,17 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
           if(index>=0) COMPANY_SEL.splice(index,1);else if(COMPANY_SEL.length<12) COMPANY_SEL.push(option.value);
           renderCompaniesChart(currentRows());
           const current=[...list.querySelectorAll('label')].find(label=>label.querySelector('span')?.textContent===option.label);
-          (current?.querySelector('input')||control).focus();
+          (current?.querySelector('input')||toggle).focus();
         });
       });
     };
-    const close=()=>{host.classList.remove('open');control.setAttribute('aria-expanded','false');};
+    const close=()=>{host.classList.remove('open');toggle.setAttribute('aria-expanded','false');};
     control.addEventListener('click',()=>{
       if(host.classList.contains('open')) close();
-      else{Object.values(MS).forEach(ms=>ms.close());host.classList.add('open');control.setAttribute('aria-expanded','true');input.value='';refresh();input.focus();}
+      else{Object.values(MS).forEach(ms=>ms.close());host.classList.add('open');toggle.setAttribute('aria-expanded','true');input.value='';refresh();input.focus();}
     });
     input.addEventListener('input',refresh);
-    host.addEventListener('keydown',event=>{if(event.key==='Escape'){close();control.focus();}});
+    host.addEventListener('keydown',event=>{if(event.key==='Escape'){close();toggle.focus();}});
     document.addEventListener('click',event=>{if(!host.contains(event.target)) close();});
     COMPANY_MS={setOptions:items=>{options=items;refresh();},refresh,close};
   };
@@ -3543,10 +3590,10 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
         const details=document.createElement(level<3?'details':'div'); details.className='r3-sector-level r3-level-'+level;
         const line=document.createElement(level<3?'summary':'div'); line.className='r3-sector-line';
         line.style.setProperty('--r3-groups',groups.length);
-        const label=document.createElement('span');label.textContent=item.value;line.appendChild(label);
-        let detailButton=null;
+        const label=document.createElement('span');label.className='r3-sector-label';line.appendChild(label);
+        if(level<3) {const chevron=document.createElement('span');chevron.className='r3-sector-chevron';chevron.setAttribute('aria-hidden','true');label.appendChild(chevron);}
         if(level>=2&&!comparing) {
-          const button=document.createElement('button');button.type='button';button.className='r3-sector-detail';button.textContent='Details';
+          const button=document.createElement('button');button.type='button';button.className='r3-sector-detail';button.textContent=item.value;button.title=item.value;
           button.setAttribute('aria-label','Details for '+item.value);
           button.addEventListener('click',event=>{
             event.preventDefault();event.stopPropagation();sectorDetailTrigger=button;
@@ -3556,20 +3603,19 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
             $('subModalSub').textContent=[path.sector,level===3?path.nace2:null].filter(Boolean).join(' · ');
             $('subModal').querySelector('.sm-close').focus();
           });
-          detailButton=button;
-        }
+          label.appendChild(button);
+        } else {const name=document.createElement('span');name.className='r3-sector-name';name.textContent=item.value;name.title=item.value;label.appendChild(name);}
         item.counts.forEach((count,index)=>{
           const cell=document.createElement('span'); cell.className='r3-count-cell';
           const suppressed=(comparing || level===3)&&count<minimum;
           cell.innerHTML=suppressed?'<span class="r3-muted">&lt;'+minimum+'</span>':'<span>'+moneyless(count)+'</span><span class="r3-count-track"><span class="r3-count-bar" style="width:'+
-            Math.round(count/maximum*100)+'%;background:'+DATA_COLORS[index%DATA_COLORS.length]+'"></span></span>';
+            Math.round(count/maximum*100)+'%;background:'+(!comparing&&level>1?'var(--sage-3)':DATA_COLORS[index%DATA_COLORS.length])+'"></span></span>';
           if(suppressed) cell.title='Below the display threshold; not zero.';
           line.appendChild(cell);
           sectorExport.push(Object.assign({level,comparison:groups[index].name||'All selected',events:suppressed?'':count,
             suppressed:!!suppressed,threshold:minimum},path));
         });
         details.appendChild(line);
-        if(detailButton) {const actions=document.createElement('div');actions.className='r3-sector-actions';actions.appendChild(detailButton);details.appendChild(actions);}
         parent.appendChild(details);
         if(level<3) {const child=document.createElement('div');details.appendChild(child);addLevel(child,level+1,level===1?'nace2':'nace3',item.rows,path);}
       }
@@ -3586,11 +3632,12 @@ window.ERM_ROUND3_CONFIG = {"statusColumn": "status", "publishedValues": ["publi
       newChart('types-'+side+'-chart',{chart:{type:'treemap',height:340},legend:{enabled:false},
         tooltip:{useHTML:true,outside:true,formatter:function(){const p=this.point?.custom||this.custom;
           const trend=C.values(p.rows,ps,'cases');
-          return '<div class="tt-wrap"><strong>'+C.escape(p.name)+'</strong><p>'+p.cases+' events ('+p.share.toFixed(1)+'%)</p>'+
-            '<p>Number of cases over time</p>'+C.sparkline(trend)+
-            '<p class="r3-muted">Annual history; completed current-year quarters after the gap.</p>'+
-            '<div class="r3-trend-values">'+ps.map((period,i)=>period.kind==='separator'?'':
-              C.escape(period.label)+': '+moneyless(trend[i])).filter(Boolean).join(' · ')+'</div></div>'; }},
+          const periods=ps.filter(period=>period.kind!=='separator');
+          return '<div class="tt-wrap"><div class="tt-head">'+C.escape(p.name)+'</div>'+
+            '<div class="tt-line">Events<strong>'+moneyless(p.cases)+'</strong></div>'+
+            '<div class="tt-line">Share of job-'+side+' cases<strong>'+p.share.toFixed(1)+'%</strong></div>'+
+            '<div class="tt-sub">Events over time</div><div class="tt-sparkline">'+C.sparkline(trend,240,54)+'</div>'+
+            '<div class="tt-axis"><span>'+C.escape(periods[0]?.label||'')+'</span><span>'+C.escape(periods.at(-1)?.label||'')+'</span></div></div>'; }},
         plotOptions:{treemap:{layoutAlgorithm:'squarified',borderColor:'#F2F3F5',borderWidth:2,
           dataLabels:{enabled:true,allowOverlap:false,style:{textOutline:'none',fontSize:'12px'},
             formatter:function(){return C.escape(this.point.name)+'<br>'+this.point.custom.share.toFixed(0)+'%';}}}},

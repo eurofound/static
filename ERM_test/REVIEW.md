@@ -36,7 +36,7 @@ The browser test lives in `tests/browser-review.cjs`. It requires Node.js, Playw
 | Analytical choices | Company jobs means losses plus gains, not unique workers or net change. Company eligibility >15 and NACE-3 selector >50 apply to current filters; chart NACE-3 threshold is >=30. Annual history/current-year quarter mixing is explicitly labelled. Confirm these choices before release. |
 | Deferred scope | Offshoring/reshoring elaboration and company-group consolidation still require definitions and mappings, as the supplied review states. |
 
-This is a review branch. No live deployment or merge is implied. Factsheet URL generation and rendered anchors were tested; individual destination content, methodology/form access, real touch-device behaviour and full accessibility conformance are not certified. The optional employment-rate calculation is not validated against an approved denominator dataset.
+The initial review was prepared on a review branch; subsequent updates are published directly to `gh-pages` at the user's request. Factsheet URL generation and rendered anchors were tested; individual destination content, methodology/form access, real touch-device behaviour and full accessibility conformance are not certified. The optional employment-rate calculation is not validated against an approved denominator dataset.
 
 
 ## Original design restored on 21 September 2026
@@ -44,3 +44,11 @@ This is a review branch. No live deployment or merge is implied. Factsheet URL g
 The supplied `erm_dashboard (2).html` matches the original dashboard blob. Its rich chart presentation and sector interactions had been replaced by the round-three generic renderer. The filled event chart, smooth curves, compact year ticks, matching map/chart heights, contributor-bar tooltips, coverage annotations, two-column sector bars and sector detail pop-ups are restored. Company tooltips retain three factsheet links and now include the selected period and country-contribution bars. The requested published-only data handling, completed-period logic, comparisons, NACE-3 thresholds, separate type treemaps, open filters and absence of the review banner remain in place.
 
 26 Chromium checks pass on the reviewed real-data snapshot, including new checks for the original-style event tooltip and restored sector pop-up with keyboard focus. Existing chart modes, filtering, comparisons, exports and responsive-width checks continue to pass. Inline JavaScript syntax and diff checks pass. Desktop, mobile and restored-tooltip/modal screenshots were inspected. The original 24-check result above describes the earlier implementation.
+
+## Design refinement from the original screenshots
+
+Restored the company's removable selection chips, selected-row emphasis and original checkbox treatment. Sector rows again use the original compact spacing, two-column layout, single-line labels, aligned counts, blue sector bars and muted subsector bars. Clicking a subsector name opens its detail dialog; the adjacent chevron expands its NACE-3 entries.
+
+Type tooltips now use the original serif heading, compact label/value rows, thousands separators and subtle section rule. A small sparkline with endpoint dates replaces the lengthy list of yearly values. Map case tooltips use the same typography and spacing while preserving the factsheet link, date, job totals and full location. Filters still open on launch, and the removed review banner stays absent.
+
+28 Chromium checks pass with the same 32,382-row source snapshot, with no browser errors or failed requests. The added checks exercise chip removal/reselection and keyboard focus, and map tooltip content. Existing checks also verify compact type-tooltip sizing, sector expansion/detail interactions, filters, comparisons, exports and responsive widths. Company selector, expanded sectors, map/type/company tooltips and mobile screenshots were inspected. JavaScript syntax and Git whitespace checks pass.

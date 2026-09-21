@@ -33,6 +33,7 @@ const server = http.createServer((req, res) => {
   await check('Real CSV loads with 32382 published rows and 32380 in coverage',async()=>{
     assert.equal(result.audit?.published,32382);assert.equal(result.audit?.outsideCoverage,2);
     assert.equal(await page.locator('#loadingOverlay').isVisible(),false);
+    assert.equal(await page.locator('#r3-filter-panel').isVisible(),true);
     assert.equal(result.charts.length,6);assert.equal(result.version,'12.4.0');
   });
   if(result.charts?.length) {
@@ -51,6 +52,16 @@ const server = http.createServer((req, res) => {
     });
     await check('All eligible EU countries have plotted largest-case bubbles',async()=>{
       const data=await page.evaluate(()=>{const ch=getChartById('map-chart');return {expected:ERMRound3Core.largest(ERMReview.getFilteredRows()).length,points:ch.series[1].points.filter(p=>p.plotX!=null&&p.plotY!=null).length};});assert.equal(data.points,data.expected);assert.equal(data.points,26);
+    });
+    await check('Map case tooltip keeps its factsheet, full location and formatted job totals',async()=>{
+      await page.locator('#map-chart').scrollIntoViewIfNeeded();
+      const expected=await page.evaluate(()=>{const chart=getChartById('map-chart');const point=chart.series[1].points.find(p=>p.plotX!=null);chart.tooltip.refresh(point);return {location:point.custom.location,loss:ERMRound3Core.loss(point.custom).toLocaleString('en-GB')};});
+      const tip=page.locator('.highcharts-tooltip-container .r3-map-tooltip');
+      assert.match(await tip.locator('.tt-head a').getAttribute('href'),/\/detail\/\d+$/);
+      assert.equal(await tip.locator('.r3-location').innerText(),expected.location||'Location not supplied');
+      assert.ok((await tip.innerText()).includes(expected.loss));
+      await page.screenshot({path:path.join(OUTPUT,'restored-map-tooltip.png')});
+      await page.evaluate(()=>getChartById('map-chart').tooltip.hide(0));
     });
     await check('No incomplete 2026 quarters are plotted from January source',async()=>{
       const periods=await page.evaluate(()=>ERMReview.getModels()['events-chart'].periods.map(p=>p.label));assert.equal(periods.at(-1),'2025');
@@ -75,8 +86,21 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.evaluate(()=>getChartById('companies-chart').yAxis[0].axisTitle.textStr),'Events');
       await page.locator('#companyMs .ms-control').click();await page.getByRole('searchbox',{name:'Search eligible companies'}).fill('Amazon');
       await page.locator('#companyMs .ms-opt input').uncheck();assert.equal(await page.evaluate(()=>getChartById('companies-chart').series.some(s=>s.name.startsWith('Amazon'))),false);
-      await page.keyboard.press('Escape');assert.equal(await page.locator('#companyMs .ms-control').evaluate(el=>el===document.activeElement),true);
+      await page.keyboard.press('Escape');assert.equal(await page.locator('#companyMs .ms-toggle').evaluate(el=>el===document.activeElement),true);
       await page.locator('#compMetricSeg [data-metric="jobs"]').click();
+    });
+    await check('Company chips remove a series, preserve keyboard focus and reflect checkbox selection',async()=>{
+      const chip=page.locator('#companyMs .ms-chip').first();const name=await chip.locator('span').innerText();
+      await chip.getByRole('button',{name:'Remove '+name,exact:true}).click();
+      assert.equal(await page.evaluate(name=>getChartById('companies-chart').series.some(s=>s.options.custom.group===name),name),false);
+      assert.equal(await page.locator('#companyMs .ms-toggle').evaluate(el=>el===document.activeElement),true);
+      await page.keyboard.press('Enter');await page.getByRole('searchbox',{name:'Search eligible companies'}).fill(name);
+      await page.locator('#companyMs .ms-opt').filter({has:page.getByText(name,{exact:true})}).locator('input').check();
+      assert.equal(await page.getByRole('button',{name:'Remove '+name,exact:true}).count(),1);
+      assert.ok(await page.locator('#companyMs .ms-opt.sel').count()>0);
+      await page.getByRole('searchbox',{name:'Search eligible companies'}).fill('');
+      await page.locator('.companies-card').screenshot({path:path.join(OUTPUT,'restored-company-selector.png')});
+      await page.keyboard.press('Escape');
     });
     await check('Recent factsheet links and full descriptions work',async()=>{
       const link=page.locator('#recentLoss a').first();assert.match(await link.getAttribute('href'),/\/detail\/\d+$/);
@@ -84,18 +108,20 @@ const server = http.createServer((req, res) => {
     });
     await check('Native sector drill-down exposes NACE-3 counts >=30',async()=>{
       await page.locator('#sectorsTable > details > summary').first().click();
-      await page.locator('#sectorsTable > details').first().locator('details > summary').first().click();
+      await page.locator('#sectorsTable > details').first().locator('details > summary .r3-sector-chevron').first().click();
       assert.ok(await page.locator('.r3-level-3:visible').count()>0);
       assert.equal(await page.evaluate(()=>csvSectors().filter(r=>r.level===3).every(r=>r.events>=30||r.suppressed)),true);
     });
     await check('Sector detail pop-up restores statistics, country/company bars and focus on close',async()=>{
-      const button=page.locator('.r3-level-2 > .r3-sector-actions .r3-sector-detail').first();
+      const button=page.locator('.r3-level-2 > summary .r3-sector-detail').first();
       await button.click();assert.equal(await page.locator('#subModal').isVisible(),true);
       assert.equal(await page.locator('#subModal .sm-stat').count(),4);
       assert.ok(await page.locator('#subModal .sm-bar-row').count()>0);
       await page.screenshot({path:path.join(OUTPUT,'restored-sector-details.png')});
       await page.keyboard.press('Escape');assert.equal(await page.locator('#subModal').isVisible(),false);
       assert.equal(await button.evaluate(el=>el===document.activeElement),true);
+      await page.locator('#sectorsTable > details').first().locator('details > summary .r3-sector-chevron').first().click();
+      await page.locator('.sector-card').screenshot({path:path.join(OUTPUT,'restored-sector-rows.png')});
     });
     await check('Type treemaps use separate gain and loss denominators',async()=>{
       const panels=await page.evaluate(()=>['gain','loss'].map(side=>{const ps=getChartById('types-'+side+'-chart').series[0].points;return {sum:ps.reduce((s,p)=>s+p.custom.share,0),total:ps.reduce((s,p)=>s+p.value,0),expected:ERMReview.getFilteredRows().filter(r=>side==='gain'?r.jobGain>0:(r.maxLoss==null?r.minLoss:r.maxLoss)>0).length};}));panels.forEach(p=>{assert.ok(Math.abs(p.sum-100)<1e-8);assert.equal(p.total,p.expected);});
@@ -107,6 +133,10 @@ const server = http.createServer((req, res) => {
       await page.screenshot({path:path.join(OUTPUT,'type-tooltip.png')});
       assert.ok(await page.locator('.highcharts-tooltip-container svg[aria-label="Number of cases over time"] path').count()>0);
       assert.equal(await page.locator('.highcharts-tooltip-container .tt-wrap').last().evaluate(el=>el.scrollWidth<=el.clientWidth+1),true);
+      const tooltip=page.locator('.highcharts-tooltip-container .tt-wrap').last();
+      assert.ok((await tooltip.boundingBox()).height<220);
+      assert.equal(await tooltip.locator('.tt-head').count(),1);
+      assert.equal(await tooltip.locator('.tt-axis').innerText(),'2005\n2025');
       await page.screenshot({path:path.join(OUTPUT,'type-tooltip.png')});
       await page.evaluate(()=>getChartById('types-loss-chart').tooltip.hide(0));
     });
