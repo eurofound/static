@@ -1,0 +1,897 @@
+﻿Country,Metric,Year,Score
+European Union,Trust in country's government,2021,3.9
+European Union,Trust in country's government,2022,3.6
+European Union,Trust in country's government,2023,3.8
+European Union,Trust in country's government,2024,3.8
+European Union,Trust in people,2021,5.0
+European Union,Trust in people,2022,4.9
+European Union,Trust in people,2023,5.1
+European Union,Trust in people,2024,4.9
+European Union,Trust in pharmaceutical firms,2021,4.6
+European Union,Trust in pharmaceutical firms,2022,4.3
+European Union,Trust in science,2021,7.2
+European Union,Trust in science,2022,7.2
+European Union,Trust in social media,2021,3.4
+European Union,Trust in social media,2022,3.3
+European Union,Trust in social media,2023,3.3
+European Union,Trust in social media,2024,3.1
+European Union,Trust in the European Union,2021,4.6
+European Union,Trust in the European Union,2022,4.5
+European Union,Trust in the European Union,2023,5.0
+European Union,Trust in the European Union,2024,4.7
+European Union,Trust in the healthcare system,2021,5.9
+European Union,Trust in the healthcare system,2022,5.8
+European Union,Trust in the healthcare system,2023,5.9
+European Union,Trust in the healthcare system,2024,5.8
+European Union,Trust in the news media,2021,4.2
+European Union,Trust in the news media,2022,4.0
+European Union,Trust in the news media,2023,4.1
+European Union,Trust in the news media,2024,4.0
+European Union,Trust in the police,2021,5.7
+European Union,Trust in the police,2022,5.7
+European Union,Trust in the police,2023,6.0
+European Union,Trust in the police,2024,6.0
+Austria,Trust in country's government,2021,3.6
+Austria,Trust in country's government,2022,3.3
+Austria,Trust in country's government,2023,3.7
+Austria,Trust in country's government,2024,3.9
+Austria,Trust in people,2021,5.1
+Austria,Trust in people,2022,5.1
+Austria,Trust in people,2023,5.3
+Austria,Trust in people,2024,5.2
+Austria,Trust in pharmaceutical firms,2021,4.1
+Austria,Trust in pharmaceutical firms,2022,4.2
+Austria,Trust in science,2021,6.6
+Austria,Trust in science,2022,7.1
+Austria,Trust in social media,2021,3.2
+Austria,Trust in social media,2022,3.1
+Austria,Trust in social media,2023,3.2
+Austria,Trust in social media,2024,3.1
+Austria,Trust in the European Union,2021,3.8
+Austria,Trust in the European Union,2022,4.0
+Austria,Trust in the European Union,2023,4.7
+Austria,Trust in the European Union,2024,4.6
+Austria,Trust in the healthcare system,2021,5.6
+Austria,Trust in the healthcare system,2022,6.1
+Austria,Trust in the healthcare system,2023,6.3
+Austria,Trust in the healthcare system,2024,6.5
+Austria,Trust in the news media,2021,4.1
+Austria,Trust in the news media,2022,4.3
+Austria,Trust in the news media,2023,4.7
+Austria,Trust in the news media,2024,4.8
+Austria,Trust in the police,2021,5.8
+Austria,Trust in the police,2022,6.5
+Austria,Trust in the police,2023,7.0
+Austria,Trust in the police,2024,7.0
+Belgium,Trust in country's government,2021,3.7
+Belgium,Trust in country's government,2022,3.6
+Belgium,Trust in country's government,2023,3.8
+Belgium,Trust in country's government,2024,3.6
+Belgium,Trust in people,2021,5.3
+Belgium,Trust in people,2022,5.1
+Belgium,Trust in people,2023,5.4
+Belgium,Trust in people,2024,4.8
+Belgium,Trust in pharmaceutical firms,2021,4.5
+Belgium,Trust in pharmaceutical firms,2022,4.5
+Belgium,Trust in science,2021,6.7
+Belgium,Trust in science,2022,7.0
+Belgium,Trust in social media,2021,3.1
+Belgium,Trust in social media,2022,3.2
+Belgium,Trust in social media,2023,3.2
+Belgium,Trust in social media,2024,2.9
+Belgium,Trust in the European Union,2021,3.9
+Belgium,Trust in the European Union,2022,4.0
+Belgium,Trust in the European Union,2023,4.2
+Belgium,Trust in the European Union,2024,3.9
+Belgium,Trust in the healthcare system,2021,6.3
+Belgium,Trust in the healthcare system,2022,6.6
+Belgium,Trust in the healthcare system,2023,7.0
+Belgium,Trust in the healthcare system,2024,6.4
+Belgium,Trust in the news media,2021,4.2
+Belgium,Trust in the news media,2022,4.2
+Belgium,Trust in the news media,2023,4.4
+Belgium,Trust in the news media,2024,4.1
+Belgium,Trust in the police,2021,5.8
+Belgium,Trust in the police,2022,5.9
+Belgium,Trust in the police,2023,6.1
+Belgium,Trust in the police,2024,5.9
+Bulgaria,Trust in country's government,2021,2.7
+Bulgaria,Trust in country's government,2022,2.7
+Bulgaria,Trust in country's government,2023,2.2
+Bulgaria,Trust in country's government,2024,2.4
+Bulgaria,Trust in people,2021,4.7
+Bulgaria,Trust in people,2022,4.7
+Bulgaria,Trust in people,2023,4.2
+Bulgaria,Trust in people,2024,4.3
+Bulgaria,Trust in pharmaceutical firms,2021,3.7
+Bulgaria,Trust in pharmaceutical firms,2022,3.7
+Bulgaria,Trust in science,2021,6.5
+Bulgaria,Trust in science,2022,6.2
+Bulgaria,Trust in social media,2021,3.2
+Bulgaria,Trust in social media,2022,2.8
+Bulgaria,Trust in social media,2023,3.1
+Bulgaria,Trust in social media,2024,3.2
+Bulgaria,Trust in the European Union,2021,3.8
+Bulgaria,Trust in the European Union,2022,3.8
+Bulgaria,Trust in the European Union,2023,4.1
+Bulgaria,Trust in the European Union,2024,4.5
+Bulgaria,Trust in the healthcare system,2021,3.8
+Bulgaria,Trust in the healthcare system,2022,3.9
+Bulgaria,Trust in the healthcare system,2023,4.2
+Bulgaria,Trust in the healthcare system,2024,4.4
+Bulgaria,Trust in the news media,2021,2.9
+Bulgaria,Trust in the news media,2022,2.5
+Bulgaria,Trust in the news media,2023,2.9
+Bulgaria,Trust in the news media,2024,2.9
+Bulgaria,Trust in the police,2021,3.8
+Bulgaria,Trust in the police,2022,3.7
+Bulgaria,Trust in the police,2023,4.1
+Bulgaria,Trust in the police,2024,4.2
+Cyprus,Trust in country's government,2021,3.1
+Cyprus,Trust in country's government,2022,2.8
+Cyprus,Trust in country's government,2023,3.7
+Cyprus,Trust in country's government,2024,3.2
+Cyprus,Trust in people,2021,3.8
+Cyprus,Trust in people,2022,3.9
+Cyprus,Trust in people,2023,4.4
+Cyprus,Trust in people,2024,3.7
+Cyprus,Trust in pharmaceutical firms,2021,5.0
+Cyprus,Trust in pharmaceutical firms,2022,4.8
+Cyprus,Trust in science,2021,7.2
+Cyprus,Trust in science,2022,7.2
+Cyprus,Trust in social media,2021,3.4
+Cyprus,Trust in social media,2022,3.3
+Cyprus,Trust in social media,2023,3.5
+Cyprus,Trust in social media,2024,3.0
+Cyprus,Trust in the European Union,2021,4.1
+Cyprus,Trust in the European Union,2022,3.9
+Cyprus,Trust in the European Union,2023,4.9
+Cyprus,Trust in the European Union,2024,4.2
+Cyprus,Trust in the healthcare system,2021,5.5
+Cyprus,Trust in the healthcare system,2022,5.3
+Cyprus,Trust in the healthcare system,2023,5.5
+Cyprus,Trust in the healthcare system,2024,5.3
+Cyprus,Trust in the news media,2021,3.4
+Cyprus,Trust in the news media,2022,3.2
+Cyprus,Trust in the news media,2023,3.4
+Cyprus,Trust in the news media,2024,3.0
+Cyprus,Trust in the police,2021,4.1
+Cyprus,Trust in the police,2022,4.6
+Cyprus,Trust in the police,2023,4.7
+Cyprus,Trust in the police,2024,4.3
+Czechia,Trust in country's government,2021,2.8
+Czechia,Trust in country's government,2022,3.9
+Czechia,Trust in country's government,2023,3.8
+Czechia,Trust in country's government,2024,3.8
+Czechia,Trust in people,2021,4.8
+Czechia,Trust in people,2022,4.9
+Czechia,Trust in people,2023,4.7
+Czechia,Trust in people,2024,4.9
+Czechia,Trust in pharmaceutical firms,2021,4.8
+Czechia,Trust in pharmaceutical firms,2022,4.5
+Czechia,Trust in science,2021,7.6
+Czechia,Trust in science,2022,7.5
+Czechia,Trust in social media,2021,3.3
+Czechia,Trust in social media,2022,3.5
+Czechia,Trust in social media,2023,3.3
+Czechia,Trust in social media,2024,3.3
+Czechia,Trust in the European Union,2021,3.6
+Czechia,Trust in the European Union,2022,3.8
+Czechia,Trust in the European Union,2023,4.1
+Czechia,Trust in the European Union,2024,4.3
+Czechia,Trust in the healthcare system,2021,6.9
+Czechia,Trust in the healthcare system,2022,7.0
+Czechia,Trust in the healthcare system,2023,6.5
+Czechia,Trust in the healthcare system,2024,6.8
+Czechia,Trust in the news media,2021,4.0
+Czechia,Trust in the news media,2022,4.0
+Czechia,Trust in the news media,2023,4.0
+Czechia,Trust in the news media,2024,4.1
+Czechia,Trust in the police,2021,6.0
+Czechia,Trust in the police,2022,6.5
+Czechia,Trust in the police,2023,6.3
+Czechia,Trust in the police,2024,6.4
+Germany,Trust in country's government,2021,4.3
+Germany,Trust in country's government,2022,4.0
+Germany,Trust in country's government,2023,4.7
+Germany,Trust in country's government,2024,4.4
+Germany,Trust in people,2021,5.1
+Germany,Trust in people,2022,5.0
+Germany,Trust in people,2023,5.4
+Germany,Trust in people,2024,5.3
+Germany,Trust in pharmaceutical firms,2021,4.2
+Germany,Trust in pharmaceutical firms,2022,3.8
+Germany,Trust in science,2021,6.9
+Germany,Trust in science,2022,6.9
+Germany,Trust in social media,2021,3.3
+Germany,Trust in social media,2022,3.3
+Germany,Trust in social media,2023,3.3
+Germany,Trust in social media,2024,3.2
+Germany,Trust in the European Union,2021,4.0
+Germany,Trust in the European Union,2022,4.2
+Germany,Trust in the European Union,2023,5.0
+Germany,Trust in the European Union,2024,4.8
+Germany,Trust in the healthcare system,2021,5.5
+Germany,Trust in the healthcare system,2022,5.6
+Germany,Trust in the healthcare system,2023,5.9
+Germany,Trust in the healthcare system,2024,6.0
+Germany,Trust in the news media,2021,4.7
+Germany,Trust in the news media,2022,4.6
+Germany,Trust in the news media,2023,4.8
+Germany,Trust in the news media,2024,4.9
+Germany,Trust in the police,2021,6.1
+Germany,Trust in the police,2022,6.3
+Germany,Trust in the police,2023,6.4
+Germany,Trust in the police,2024,6.5
+Denmark,Trust in country's government,2021,7.0
+Denmark,Trust in country's government,2022,5.9
+Denmark,Trust in country's government,2023,5.1
+Denmark,Trust in country's government,2024,5.8
+Denmark,Trust in people,2021,7.0
+Denmark,Trust in people,2022,7.1
+Denmark,Trust in people,2023,6.9
+Denmark,Trust in people,2024,6.2
+Denmark,Trust in pharmaceutical firms,2021,6.3
+Denmark,Trust in pharmaceutical firms,2022,5.7
+Denmark,Trust in science,2021,8.1
+Denmark,Trust in science,2022,8.1
+Denmark,Trust in social media,2021,4.0
+Denmark,Trust in social media,2022,4.0
+Denmark,Trust in social media,2023,3.5
+Denmark,Trust in social media,2024,3.2
+Denmark,Trust in the European Union,2021,5.6
+Denmark,Trust in the European Union,2022,5.2
+Denmark,Trust in the European Union,2023,5.5
+Denmark,Trust in the European Union,2024,5.3
+Denmark,Trust in the healthcare system,2021,8.0
+Denmark,Trust in the healthcare system,2022,7.5
+Denmark,Trust in the healthcare system,2023,7.2
+Denmark,Trust in the healthcare system,2024,6.8
+Denmark,Trust in the news media,2021,5.6
+Denmark,Trust in the news media,2022,5.6
+Denmark,Trust in the news media,2023,5.5
+Denmark,Trust in the news media,2024,5.0
+Denmark,Trust in the police,2021,7.7
+Denmark,Trust in the police,2022,7.5
+Denmark,Trust in the police,2023,7.7
+Denmark,Trust in the police,2024,6.9
+Estonia,Trust in country's government,2021,4.7
+Estonia,Trust in country's government,2022,5.0
+Estonia,Trust in country's government,2023,4.2
+Estonia,Trust in country's government,2024,3.3
+Estonia,Trust in people,2021,5.7
+Estonia,Trust in people,2022,5.8
+Estonia,Trust in people,2023,5.7
+Estonia,Trust in people,2024,5.2
+Estonia,Trust in pharmaceutical firms,2021,5.1
+Estonia,Trust in pharmaceutical firms,2022,5.1
+Estonia,Trust in science,2021,7.8
+Estonia,Trust in science,2022,7.6
+Estonia,Trust in social media,2021,3.8
+Estonia,Trust in social media,2022,4.1
+Estonia,Trust in social media,2023,3.7
+Estonia,Trust in social media,2024,3.4
+Estonia,Trust in the European Union,2021,4.9
+Estonia,Trust in the European Union,2022,5.3
+Estonia,Trust in the European Union,2023,4.9
+Estonia,Trust in the European Union,2024,4.4
+Estonia,Trust in the healthcare system,2021,6.7
+Estonia,Trust in the healthcare system,2022,6.7
+Estonia,Trust in the healthcare system,2023,6.3
+Estonia,Trust in the healthcare system,2024,6.1
+Estonia,Trust in the news media,2021,4.8
+Estonia,Trust in the news media,2022,5.1
+Estonia,Trust in the news media,2023,4.4
+Estonia,Trust in the news media,2024,4.0
+Estonia,Trust in the police,2021,7.1
+Estonia,Trust in the police,2022,6.9
+Estonia,Trust in the police,2023,6.8
+Estonia,Trust in the police,2024,6.4
+Greece,Trust in country's government,2021,3.3
+Greece,Trust in country's government,2022,3.1
+Greece,Trust in country's government,2023,3.3
+Greece,Trust in country's government,2024,2.8
+Greece,Trust in people,2021,3.8
+Greece,Trust in people,2022,4.0
+Greece,Trust in people,2023,4.0
+Greece,Trust in people,2024,4.0
+Greece,Trust in pharmaceutical firms,2021,4.4
+Greece,Trust in pharmaceutical firms,2022,4.5
+Greece,Trust in science,2021,7.3
+Greece,Trust in science,2022,7.6
+Greece,Trust in social media,2021,3.9
+Greece,Trust in social media,2022,3.7
+Greece,Trust in social media,2023,3.5
+Greece,Trust in social media,2024,3.2
+Greece,Trust in the European Union,2021,3.5
+Greece,Trust in the European Union,2022,3.7
+Greece,Trust in the European Union,2023,4.1
+Greece,Trust in the European Union,2024,4.0
+Greece,Trust in the healthcare system,2021,5.2
+Greece,Trust in the healthcare system,2022,5.0
+Greece,Trust in the healthcare system,2023,4.9
+Greece,Trust in the healthcare system,2024,4.6
+Greece,Trust in the news media,2021,2.6
+Greece,Trust in the news media,2022,2.7
+Greece,Trust in the news media,2023,2.5
+Greece,Trust in the news media,2024,2.1
+Greece,Trust in the police,2021,4.4
+Greece,Trust in the police,2022,4.6
+Greece,Trust in the police,2023,4.6
+Greece,Trust in the police,2024,4.1
+Spain,Trust in country's government,2021,4.1
+Spain,Trust in country's government,2022,3.8
+Spain,Trust in country's government,2023,4.6
+Spain,Trust in country's government,2024,4.4
+Spain,Trust in people,2021,5.0
+Spain,Trust in people,2022,5.3
+Spain,Trust in people,2023,5.3
+Spain,Trust in people,2024,5.5
+Spain,Trust in pharmaceutical firms,2021,4.8
+Spain,Trust in pharmaceutical firms,2022,4.1
+Spain,Trust in science,2021,8.2
+Spain,Trust in science,2022,7.7
+Spain,Trust in social media,2021,3.2
+Spain,Trust in social media,2022,3.0
+Spain,Trust in social media,2023,3.1
+Spain,Trust in social media,2024,3.0
+Spain,Trust in the European Union,2021,5.3
+Spain,Trust in the European Union,2022,4.7
+Spain,Trust in the European Union,2023,5.4
+Spain,Trust in the European Union,2024,5.1
+Spain,Trust in the healthcare system,2021,7.3
+Spain,Trust in the healthcare system,2022,6.5
+Spain,Trust in the healthcare system,2023,7.0
+Spain,Trust in the healthcare system,2024,6.7
+Spain,Trust in the news media,2021,3.9
+Spain,Trust in the news media,2022,3.4
+Spain,Trust in the news media,2023,3.7
+Spain,Trust in the news media,2024,3.6
+Spain,Trust in the police,2021,6.1
+Spain,Trust in the police,2022,5.8
+Spain,Trust in the police,2023,6.3
+Spain,Trust in the police,2024,6.3
+Finland,Trust in country's government,2021,6.5
+Finland,Trust in country's government,2022,5.9
+Finland,Trust in country's government,2023,5.9
+Finland,Trust in country's government,2024,3.1
+Finland,Trust in people,2021,6.4
+Finland,Trust in people,2022,6.4
+Finland,Trust in people,2023,6.6
+Finland,Trust in people,2024,6.1
+Finland,Trust in pharmaceutical firms,2021,6.2
+Finland,Trust in pharmaceutical firms,2022,5.8
+Finland,Trust in science,2021,8.4
+Finland,Trust in science,2022,8.1
+Finland,Trust in social media,2021,4.1
+Finland,Trust in social media,2022,4.3
+Finland,Trust in social media,2023,4.0
+Finland,Trust in social media,2024,3.5
+Finland,Trust in the European Union,2021,5.7
+Finland,Trust in the European Union,2022,5.7
+Finland,Trust in the European Union,2023,6.0
+Finland,Trust in the European Union,2024,5.6
+Finland,Trust in the healthcare system,2021,7.6
+Finland,Trust in the healthcare system,2022,7.1
+Finland,Trust in the healthcare system,2023,6.8
+Finland,Trust in the healthcare system,2024,6.2
+Finland,Trust in the news media,2021,6.3
+Finland,Trust in the news media,2022,6.2
+Finland,Trust in the news media,2023,6.3
+Finland,Trust in the news media,2024,5.7
+Finland,Trust in the police,2021,7.9
+Finland,Trust in the police,2022,7.7
+Finland,Trust in the police,2023,7.7
+Finland,Trust in the police,2024,7.4
+France,Trust in country's government,2021,3.7
+France,Trust in country's government,2022,3.5
+France,Trust in country's government,2023,3.5
+France,Trust in country's government,2024,3.3
+France,Trust in people,2021,5.1
+France,Trust in people,2022,4.7
+France,Trust in people,2023,4.9
+France,Trust in people,2024,4.3
+France,Trust in pharmaceutical firms,2021,4.1
+France,Trust in pharmaceutical firms,2022,3.9
+France,Trust in science,2021,6.6
+France,Trust in science,2022,6.8
+France,Trust in social media,2021,3.1
+France,Trust in social media,2022,3.2
+France,Trust in social media,2023,2.9
+France,Trust in social media,2024,2.8
+France,Trust in the European Union,2021,4.1
+France,Trust in the European Union,2022,3.8
+France,Trust in the European Union,2023,4.1
+France,Trust in the European Union,2024,3.9
+France,Trust in the healthcare system,2021,6.0
+France,Trust in the healthcare system,2022,6.1
+France,Trust in the healthcare system,2023,6.3
+France,Trust in the healthcare system,2024,6.1
+France,Trust in the news media,2021,3.9
+France,Trust in the news media,2022,3.6
+France,Trust in the news media,2023,3.5
+France,Trust in the news media,2024,3.6
+France,Trust in the police,2021,5.6
+France,Trust in the police,2022,5.8
+France,Trust in the police,2023,5.9
+France,Trust in the police,2024,6.2
+Croatia,Trust in country's government,2021,2.5
+Croatia,Trust in country's government,2022,2.4
+Croatia,Trust in country's government,2023,2.7
+Croatia,Trust in country's government,2024,2.5
+Croatia,Trust in people,2021,4.2
+Croatia,Trust in people,2022,4.1
+Croatia,Trust in people,2023,4.6
+Croatia,Trust in people,2024,3.9
+Croatia,Trust in pharmaceutical firms,2021,3.7
+Croatia,Trust in pharmaceutical firms,2022,3.6
+Croatia,Trust in science,2021,6.4
+Croatia,Trust in science,2022,6.7
+Croatia,Trust in social media,2021,3.3
+Croatia,Trust in social media,2022,3.1
+Croatia,Trust in social media,2023,3.1
+Croatia,Trust in social media,2024,3.2
+Croatia,Trust in the European Union,2021,3.8
+Croatia,Trust in the European Union,2022,3.9
+Croatia,Trust in the European Union,2023,4.5
+Croatia,Trust in the European Union,2024,4.2
+Croatia,Trust in the healthcare system,2021,5.0
+Croatia,Trust in the healthcare system,2022,5.2
+Croatia,Trust in the healthcare system,2023,5.2
+Croatia,Trust in the healthcare system,2024,5.3
+Croatia,Trust in the news media,2021,3.6
+Croatia,Trust in the news media,2022,3.2
+Croatia,Trust in the news media,2023,3.3
+Croatia,Trust in the news media,2024,3.3
+Croatia,Trust in the police,2021,4.6
+Croatia,Trust in the police,2022,4.7
+Croatia,Trust in the police,2023,5.1
+Croatia,Trust in the police,2024,4.9
+Hungary,Trust in country's government,2021,3.0
+Hungary,Trust in country's government,2022,3.4
+Hungary,Trust in country's government,2023,2.8
+Hungary,Trust in country's government,2024,2.4
+Hungary,Trust in people,2021,4.7
+Hungary,Trust in people,2022,4.8
+Hungary,Trust in people,2023,5.1
+Hungary,Trust in people,2024,4.6
+Hungary,Trust in pharmaceutical firms,2021,4.7
+Hungary,Trust in pharmaceutical firms,2022,4.3
+Hungary,Trust in science,2021,7.3
+Hungary,Trust in science,2022,7.2
+Hungary,Trust in social media,2021,3.3
+Hungary,Trust in social media,2022,3.0
+Hungary,Trust in social media,2023,3.1
+Hungary,Trust in social media,2024,3.0
+Hungary,Trust in the European Union,2021,5.4
+Hungary,Trust in the European Union,2022,5.4
+Hungary,Trust in the European Union,2023,5.7
+Hungary,Trust in the European Union,2024,5.7
+Hungary,Trust in the healthcare system,2021,4.5
+Hungary,Trust in the healthcare system,2022,4.3
+Hungary,Trust in the healthcare system,2023,4.1
+Hungary,Trust in the healthcare system,2024,4.0
+Hungary,Trust in the news media,2021,3.2
+Hungary,Trust in the news media,2022,2.8
+Hungary,Trust in the news media,2023,2.6
+Hungary,Trust in the news media,2024,2.4
+Hungary,Trust in the police,2021,5.1
+Hungary,Trust in the police,2022,5.1
+Hungary,Trust in the police,2023,5.3
+Hungary,Trust in the police,2024,5.1
+Ireland,Trust in country's government,2021,4.8
+Ireland,Trust in country's government,2022,4.5
+Ireland,Trust in country's government,2023,4.9
+Ireland,Trust in country's government,2024,4.5
+Ireland,Trust in people,2021,5.6
+Ireland,Trust in people,2022,5.7
+Ireland,Trust in people,2023,5.8
+Ireland,Trust in people,2024,5.6
+Ireland,Trust in pharmaceutical firms,2021,5.6
+Ireland,Trust in pharmaceutical firms,2022,4.9
+Ireland,Trust in science,2021,8.1
+Ireland,Trust in science,2022,7.8
+Ireland,Trust in social media,2021,3.1
+Ireland,Trust in social media,2022,3.1
+Ireland,Trust in social media,2023,3.0
+Ireland,Trust in social media,2024,2.8
+Ireland,Trust in the European Union,2021,5.8
+Ireland,Trust in the European Union,2022,5.6
+Ireland,Trust in the European Union,2023,5.9
+Ireland,Trust in the European Union,2024,5.4
+Ireland,Trust in the healthcare system,2021,6.5
+Ireland,Trust in the healthcare system,2022,5.6
+Ireland,Trust in the healthcare system,2023,5.9
+Ireland,Trust in the healthcare system,2024,5.7
+Ireland,Trust in the news media,2021,5.1
+Ireland,Trust in the news media,2022,4.9
+Ireland,Trust in the news media,2023,4.6
+Ireland,Trust in the news media,2024,4.3
+Ireland,Trust in the police,2021,6.7
+Ireland,Trust in the police,2022,6.2
+Ireland,Trust in the police,2023,6.4
+Ireland,Trust in the police,2024,6.2
+Italy,Trust in country's government,2021,4.2
+Italy,Trust in country's government,2022,3.6
+Italy,Trust in country's government,2023,3.4
+Italy,Trust in country's government,2024,3.1
+Italy,Trust in people,2021,4.5
+Italy,Trust in people,2022,4.4
+Italy,Trust in people,2023,4.8
+Italy,Trust in people,2024,4.5
+Italy,Trust in pharmaceutical firms,2021,5.5
+Italy,Trust in pharmaceutical firms,2022,5.0
+Italy,Trust in science,2021,7.7
+Italy,Trust in science,2022,7.6
+Italy,Trust in social media,2021,3.2
+Italy,Trust in social media,2022,3.1
+Italy,Trust in social media,2023,3.2
+Italy,Trust in social media,2024,2.9
+Italy,Trust in the European Union,2021,5.0
+Italy,Trust in the European Union,2022,4.4
+Italy,Trust in the European Union,2023,5.0
+Italy,Trust in the European Union,2024,4.4
+Italy,Trust in the healthcare system,2021,6.4
+Italy,Trust in the healthcare system,2022,5.7
+Italy,Trust in the healthcare system,2023,5.8
+Italy,Trust in the healthcare system,2024,5.5
+Italy,Trust in the news media,2021,4.0
+Italy,Trust in the news media,2022,3.8
+Italy,Trust in the news media,2023,3.8
+Italy,Trust in the news media,2024,3.6
+Italy,Trust in the police,2021,6.2
+Italy,Trust in the police,2022,5.8
+Italy,Trust in the police,2023,6.0
+Italy,Trust in the police,2024,5.9
+Lithuania,Trust in country's government,2021,4.1
+Lithuania,Trust in country's government,2022,3.9
+Lithuania,Trust in country's government,2023,4.5
+Lithuania,Trust in country's government,2024,4.1
+Lithuania,Trust in people,2021,5.2
+Lithuania,Trust in people,2022,5.0
+Lithuania,Trust in people,2023,5.1
+Lithuania,Trust in people,2024,4.8
+Lithuania,Trust in pharmaceutical firms,2021,5.1
+Lithuania,Trust in pharmaceutical firms,2022,4.7
+Lithuania,Trust in science,2021,7.6
+Lithuania,Trust in science,2022,7.0
+Lithuania,Trust in social media,2021,3.9
+Lithuania,Trust in social media,2022,3.9
+Lithuania,Trust in social media,2023,3.9
+Lithuania,Trust in social media,2024,3.7
+Lithuania,Trust in the European Union,2021,5.1
+Lithuania,Trust in the European Union,2022,4.8
+Lithuania,Trust in the European Union,2023,5.8
+Lithuania,Trust in the European Union,2024,5.6
+Lithuania,Trust in the healthcare system,2021,6.0
+Lithuania,Trust in the healthcare system,2022,5.7
+Lithuania,Trust in the healthcare system,2023,6.2
+Lithuania,Trust in the healthcare system,2024,6.1
+Lithuania,Trust in the news media,2021,4.1
+Lithuania,Trust in the news media,2022,3.7
+Lithuania,Trust in the news media,2023,4.2
+Lithuania,Trust in the news media,2024,4.0
+Lithuania,Trust in the police,2021,6.0
+Lithuania,Trust in the police,2022,5.8
+Lithuania,Trust in the police,2023,6.7
+Lithuania,Trust in the police,2024,6.4
+Luxembourg,Trust in country's government,2021,6.0
+Luxembourg,Trust in country's government,2022,5.5
+Luxembourg,Trust in country's government,2023,5.7
+Luxembourg,Trust in country's government,2024,5.4
+Luxembourg,Trust in people,2021,5.3
+Luxembourg,Trust in people,2022,5.1
+Luxembourg,Trust in people,2023,5.0
+Luxembourg,Trust in people,2024,4.8
+Luxembourg,Trust in pharmaceutical firms,2021,5.0
+Luxembourg,Trust in pharmaceutical firms,2022,4.5
+Luxembourg,Trust in science,2021,7.6
+Luxembourg,Trust in science,2022,7.0
+Luxembourg,Trust in social media,2021,3.2
+Luxembourg,Trust in social media,2022,3.6
+Luxembourg,Trust in social media,2023,3.3
+Luxembourg,Trust in social media,2024,3.0
+Luxembourg,Trust in the European Union,2021,5.2
+Luxembourg,Trust in the European Union,2022,5.1
+Luxembourg,Trust in the European Union,2023,5.0
+Luxembourg,Trust in the European Union,2024,5.0
+Luxembourg,Trust in the healthcare system,2021,6.6
+Luxembourg,Trust in the healthcare system,2022,6.6
+Luxembourg,Trust in the healthcare system,2023,6.4
+Luxembourg,Trust in the healthcare system,2024,6.4
+Luxembourg,Trust in the news media,2021,4.9
+Luxembourg,Trust in the news media,2022,4.6
+Luxembourg,Trust in the news media,2023,4.6
+Luxembourg,Trust in the news media,2024,4.2
+Luxembourg,Trust in the police,2021,6.7
+Luxembourg,Trust in the police,2022,6.6
+Luxembourg,Trust in the police,2023,6.5
+Luxembourg,Trust in the police,2024,6.6
+Latvia,Trust in country's government,2021,3.3
+Latvia,Trust in country's government,2022,3.8
+Latvia,Trust in country's government,2023,3.8
+Latvia,Trust in country's government,2024,3.7
+Latvia,Trust in people,2021,4.7
+Latvia,Trust in people,2022,4.6
+Latvia,Trust in people,2023,5.0
+Latvia,Trust in people,2024,4.8
+Latvia,Trust in pharmaceutical firms,2021,4.5
+Latvia,Trust in pharmaceutical firms,2022,4.7
+Latvia,Trust in science,2021,6.9
+Latvia,Trust in science,2022,6.9
+Latvia,Trust in social media,2021,3.6
+Latvia,Trust in social media,2022,4.1
+Latvia,Trust in social media,2023,4.0
+Latvia,Trust in social media,2024,3.9
+Latvia,Trust in the European Union,2021,4.5
+Latvia,Trust in the European Union,2022,5.1
+Latvia,Trust in the European Union,2023,5.2
+Latvia,Trust in the European Union,2024,5.1
+Latvia,Trust in the healthcare system,2021,5.4
+Latvia,Trust in the healthcare system,2022,5.7
+Latvia,Trust in the healthcare system,2023,5.5
+Latvia,Trust in the healthcare system,2024,5.6
+Latvia,Trust in the news media,2021,4.2
+Latvia,Trust in the news media,2022,4.5
+Latvia,Trust in the news media,2023,4.4
+Latvia,Trust in the news media,2024,4.3
+Latvia,Trust in the police,2021,5.2
+Latvia,Trust in the police,2022,5.3
+Latvia,Trust in the police,2023,5.1
+Latvia,Trust in the police,2024,5.3
+Malta,Trust in country's government,2021,4.6
+Malta,Trust in country's government,2022,3.8
+Malta,Trust in country's government,2023,3.3
+Malta,Trust in country's government,2024,3.1
+Malta,Trust in people,2021,4.6
+Malta,Trust in people,2022,4.9
+Malta,Trust in people,2023,4.9
+Malta,Trust in people,2024,4.5
+Malta,Trust in pharmaceutical firms,2021,5.7
+Malta,Trust in pharmaceutical firms,2022,5.1
+Malta,Trust in science,2021,7.7
+Malta,Trust in science,2022,7.6
+Malta,Trust in social media,2021,3.8
+Malta,Trust in social media,2022,3.6
+Malta,Trust in social media,2023,3.4
+Malta,Trust in social media,2024,3.1
+Malta,Trust in the European Union,2021,5.9
+Malta,Trust in the European Union,2022,6.0
+Malta,Trust in the European Union,2023,5.8
+Malta,Trust in the European Union,2024,5.0
+Malta,Trust in the healthcare system,2021,7.0
+Malta,Trust in the healthcare system,2022,7.1
+Malta,Trust in the healthcare system,2023,6.5
+Malta,Trust in the healthcare system,2024,6.4
+Malta,Trust in the news media,2021,4.5
+Malta,Trust in the news media,2022,4.4
+Malta,Trust in the news media,2023,4.3
+Malta,Trust in the news media,2024,3.6
+Malta,Trust in the police,2021,5.5
+Malta,Trust in the police,2022,5.1
+Malta,Trust in the police,2023,4.7
+Malta,Trust in the police,2024,5.0
+Netherlands,Trust in country's government,2021,4.6
+Netherlands,Trust in country's government,2022,3.6
+Netherlands,Trust in country's government,2023,4.1
+Netherlands,Trust in country's government,2024,3.8
+Netherlands,Trust in people,2021,6.1
+Netherlands,Trust in people,2022,5.8
+Netherlands,Trust in people,2023,6.2
+Netherlands,Trust in people,2024,5.5
+Netherlands,Trust in pharmaceutical firms,2021,4.6
+Netherlands,Trust in pharmaceutical firms,2022,3.9
+Netherlands,Trust in science,2021,6.9
+Netherlands,Trust in science,2022,6.6
+Netherlands,Trust in social media,2021,3.7
+Netherlands,Trust in social media,2022,3.6
+Netherlands,Trust in social media,2023,3.4
+Netherlands,Trust in social media,2024,3.0
+Netherlands,Trust in the European Union,2021,4.6
+Netherlands,Trust in the European Union,2022,3.8
+Netherlands,Trust in the European Union,2023,4.6
+Netherlands,Trust in the European Union,2024,4.2
+Netherlands,Trust in the healthcare system,2021,6.2
+Netherlands,Trust in the healthcare system,2022,6.0
+Netherlands,Trust in the healthcare system,2023,6.4
+Netherlands,Trust in the healthcare system,2024,5.7
+Netherlands,Trust in the news media,2021,5.0
+Netherlands,Trust in the news media,2022,4.7
+Netherlands,Trust in the news media,2023,4.9
+Netherlands,Trust in the news media,2024,4.2
+Netherlands,Trust in the police,2021,6.3
+Netherlands,Trust in the police,2022,5.9
+Netherlands,Trust in the police,2023,6.5
+Netherlands,Trust in the police,2024,6.2
+Poland,Trust in country's government,2021,2.1
+Poland,Trust in country's government,2022,2.0
+Poland,Trust in country's government,2023,2.2
+Poland,Trust in country's government,2024,4.2
+Poland,Trust in people,2021,4.4
+Poland,Trust in people,2022,4.5
+Poland,Trust in people,2023,5.0
+Poland,Trust in people,2024,4.3
+Poland,Trust in pharmaceutical firms,2021,4.0
+Poland,Trust in pharmaceutical firms,2022,4.0
+Poland,Trust in science,2021,5.9
+Poland,Trust in science,2022,6.6
+Poland,Trust in social media,2021,4.1
+Poland,Trust in social media,2022,3.9
+Poland,Trust in social media,2023,3.7
+Poland,Trust in social media,2024,3.6
+Poland,Trust in the European Union,2021,5.2
+Poland,Trust in the European Union,2022,5.4
+Poland,Trust in the European Union,2023,6.0
+Poland,Trust in the European Union,2024,5.2
+Poland,Trust in the healthcare system,2021,4.1
+Poland,Trust in the healthcare system,2022,4.6
+Poland,Trust in the healthcare system,2023,4.6
+Poland,Trust in the healthcare system,2024,5.0
+Poland,Trust in the news media,2021,3.9
+Poland,Trust in the news media,2022,3.5
+Poland,Trust in the news media,2023,3.9
+Poland,Trust in the news media,2024,4.0
+Poland,Trust in the police,2021,3.9
+Poland,Trust in the police,2022,4.3
+Poland,Trust in the police,2023,4.7
+Poland,Trust in the police,2024,4.8
+Portugal,Trust in country's government,2021,5.0
+Portugal,Trust in country's government,2022,4.6
+Portugal,Trust in country's government,2023,4.2
+Portugal,Trust in country's government,2024,4.1
+Portugal,Trust in people,2021,4.5
+Portugal,Trust in people,2022,4.9
+Portugal,Trust in people,2023,5.1
+Portugal,Trust in people,2024,5.1
+Portugal,Trust in pharmaceutical firms,2021,5.6
+Portugal,Trust in pharmaceutical firms,2022,5.1
+Portugal,Trust in science,2021,8.2
+Portugal,Trust in science,2022,7.9
+Portugal,Trust in social media,2021,3.3
+Portugal,Trust in social media,2022,3.3
+Portugal,Trust in social media,2023,3.1
+Portugal,Trust in social media,2024,2.8
+Portugal,Trust in the European Union,2021,6.0
+Portugal,Trust in the European Union,2022,5.5
+Portugal,Trust in the European Union,2023,5.8
+Portugal,Trust in the European Union,2024,5.3
+Portugal,Trust in the healthcare system,2021,6.6
+Portugal,Trust in the healthcare system,2022,6.1
+Portugal,Trust in the healthcare system,2023,6.1
+Portugal,Trust in the healthcare system,2024,6.2
+Portugal,Trust in the news media,2021,4.7
+Portugal,Trust in the news media,2022,4.6
+Portugal,Trust in the news media,2023,4.3
+Portugal,Trust in the news media,2024,4.2
+Portugal,Trust in the police,2021,6.8
+Portugal,Trust in the police,2022,6.6
+Portugal,Trust in the police,2023,6.7
+Portugal,Trust in the police,2024,6.6
+Romania,Trust in country's government,2021,3.3
+Romania,Trust in country's government,2022,3.0
+Romania,Trust in country's government,2023,2.8
+Romania,Trust in country's government,2024,2.5
+Romania,Trust in people,2021,5.0
+Romania,Trust in people,2022,5.0
+Romania,Trust in people,2023,4.7
+Romania,Trust in people,2024,4.6
+Romania,Trust in pharmaceutical firms,2021,4.8
+Romania,Trust in pharmaceutical firms,2022,4.7
+Romania,Trust in science,2021,7.8
+Romania,Trust in science,2022,7.9
+Romania,Trust in social media,2021,4.1
+Romania,Trust in social media,2022,4.0
+Romania,Trust in social media,2023,3.8
+Romania,Trust in social media,2024,3.7
+Romania,Trust in the European Union,2021,5.2
+Romania,Trust in the European Union,2022,5.5
+Romania,Trust in the European Union,2023,5.3
+Romania,Trust in the European Union,2024,5.0
+Romania,Trust in the healthcare system,2021,4.4
+Romania,Trust in the healthcare system,2022,4.8
+Romania,Trust in the healthcare system,2023,5.0
+Romania,Trust in the healthcare system,2024,4.6
+Romania,Trust in the news media,2021,4.2
+Romania,Trust in the news media,2022,4.0
+Romania,Trust in the news media,2023,3.7
+Romania,Trust in the news media,2024,3.3
+Romania,Trust in the police,2021,4.5
+Romania,Trust in the police,2022,4.4
+Romania,Trust in the police,2023,4.9
+Romania,Trust in the police,2024,4.8
+Sweden,Trust in country's government,2021,5.1
+Sweden,Trust in country's government,2022,5.0
+Sweden,Trust in country's government,2023,5.9
+Sweden,Trust in country's government,2024,5.5
+Sweden,Trust in people,2021,5.5
+Sweden,Trust in people,2022,5.9
+Sweden,Trust in people,2023,6.2
+Sweden,Trust in people,2024,5.5
+Sweden,Trust in pharmaceutical firms,2021,6.0
+Sweden,Trust in pharmaceutical firms,2022,5.4
+Sweden,Trust in science,2021,8.2
+Sweden,Trust in science,2022,7.8
+Sweden,Trust in social media,2021,3.5
+Sweden,Trust in social media,2022,3.6
+Sweden,Trust in social media,2023,3.3
+Sweden,Trust in social media,2024,2.9
+Sweden,Trust in the European Union,2021,5.0
+Sweden,Trust in the European Union,2022,4.8
+Sweden,Trust in the European Union,2023,5.3
+Sweden,Trust in the European Union,2024,4.7
+Sweden,Trust in the healthcare system,2021,7.1
+Sweden,Trust in the healthcare system,2022,6.5
+Sweden,Trust in the healthcare system,2023,6.4
+Sweden,Trust in the healthcare system,2024,5.9
+Sweden,Trust in the news media,2021,5.4
+Sweden,Trust in the news media,2022,5.3
+Sweden,Trust in the news media,2023,5.3
+Sweden,Trust in the news media,2024,4.8
+Sweden,Trust in the police,2021,7.3
+Sweden,Trust in the police,2022,7.0
+Sweden,Trust in the police,2023,6.7
+Sweden,Trust in the police,2024,6.7
+Slovenia,Trust in country's government,2021,3.0
+Slovenia,Trust in country's government,2022,3.0
+Slovenia,Trust in country's government,2023,4.4
+Slovenia,Trust in country's government,2024,3.5
+Slovenia,Trust in people,2021,5.3
+Slovenia,Trust in people,2022,5.1
+Slovenia,Trust in people,2023,5.0
+Slovenia,Trust in people,2024,4.4
+Slovenia,Trust in pharmaceutical firms,2021,4.2
+Slovenia,Trust in pharmaceutical firms,2022,4.0
+Slovenia,Trust in science,2021,7.2
+Slovenia,Trust in science,2022,6.9
+Slovenia,Trust in social media,2021,3.3
+Slovenia,Trust in social media,2022,3.1
+Slovenia,Trust in social media,2023,3.1
+Slovenia,Trust in social media,2024,3.0
+Slovenia,Trust in the European Union,2021,4.7
+Slovenia,Trust in the European Union,2022,4.2
+Slovenia,Trust in the European Union,2023,4.4
+Slovenia,Trust in the European Union,2024,3.9
+Slovenia,Trust in the healthcare system,2021,5.9
+Slovenia,Trust in the healthcare system,2022,5.5
+Slovenia,Trust in the healthcare system,2023,5.4
+Slovenia,Trust in the healthcare system,2024,5.4
+Slovenia,Trust in the news media,2021,4.5
+Slovenia,Trust in the news media,2022,3.7
+Slovenia,Trust in the news media,2023,3.7
+Slovenia,Trust in the news media,2024,3.7
+Slovenia,Trust in the police,2021,5.1
+Slovenia,Trust in the police,2022,5.1
+Slovenia,Trust in the police,2023,5.9
+Slovenia,Trust in the police,2024,5.9
+Slovakia,Trust in country's government,2021,3.0
+Slovakia,Trust in country's government,2022,3.1
+Slovakia,Trust in country's government,2023,2.8
+Slovakia,Trust in country's government,2024,3.3
+Slovakia,Trust in people,2021,4.1
+Slovakia,Trust in people,2022,3.9
+Slovakia,Trust in people,2023,4.5
+Slovakia,Trust in people,2024,4.5
+Slovakia,Trust in pharmaceutical firms,2021,4.3
+Slovakia,Trust in pharmaceutical firms,2022,4.3
+Slovakia,Trust in science,2021,6.9
+Slovakia,Trust in science,2022,6.9
+Slovakia,Trust in social media,2021,3.2
+Slovakia,Trust in social media,2022,3.1
+Slovakia,Trust in social media,2023,3.1
+Slovakia,Trust in social media,2024,3.3
+Slovakia,Trust in the European Union,2021,4.1
+Slovakia,Trust in the European Union,2022,4.0
+Slovakia,Trust in the European Union,2023,4.5
+Slovakia,Trust in the European Union,2024,4.9
+Slovakia,Trust in the healthcare system,2021,4.8
+Slovakia,Trust in the healthcare system,2022,5.1
+Slovakia,Trust in the healthcare system,2023,5.0
+Slovakia,Trust in the healthcare system,2024,5.4
+Slovakia,Trust in the news media,2021,3.7
+Slovakia,Trust in the news media,2022,3.4
+Slovakia,Trust in the news media,2023,3.6
+Slovakia,Trust in the news media,2024,4.0
+Slovakia,Trust in the police,2021,4.6
+Slovakia,Trust in the police,2022,4.7
+Slovakia,Trust in the police,2023,5.2
+Slovakia,Trust in the police,2024,5.0
