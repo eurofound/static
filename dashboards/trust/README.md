@@ -10,6 +10,8 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 - `data-provenance.json`: source survey asset, questions, statistics and included rounds.
 - `validate-data.py`: dependency-free checks for coverage, round selection and known source values.
 - `eurofound-logo.svg`: official stacked Eurofound logo, copied from the website's survey explorer assets.
+- `label-layout.js`: positions measured country labels without overlap or clipping at the plot edges.
+- `label-layout.test.js`: regression checks for nearby dots, edge positions and deselection.
 
 ## Current data
 
@@ -49,8 +51,15 @@ The footer contains the requested source link and short response-scale note,
 with no heading. Text occupies 90% of its width and the Eurofound logo the
 right-hand 10%.
 
+Country flags and names sit in reserved space above the first chart row, with
+connector lines to their dots. Their full rendered widths determine spacing.
+Labels are keyed by country and repositioned together after selection, replacement,
+deselection, year changes and resizing. Selecting a third country replaces the
+oldest of the two selections; deselecting removes its label and highlights immediately.
+
 Run `python dashboards/trust/validate-data.py` from the repository root before
-publishing. Serve the repository locally and check every year, country
+publishing, and `node --test dashboards/trust/label-layout.test.js` for label
+positioning changes. Serve the repository locally and check every year, country
 comparisons, the default year and footer. GitHub Pages publishes `gh-pages`;
 changes to `master` do not update this dashboard.
 
