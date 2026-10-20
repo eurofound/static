@@ -1,0 +1,79 @@
+{
+  "survey": "Living and working in the EU e-survey",
+  "sourceUrl": "https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey",
+  "sourceSpaceId": "279033",
+  "sourceAssetId": "228771473524831",
+  "verifiedAt": "2026-10-20",
+  "rounds": [
+    {
+      "year": 2021,
+      "round": 3
+    },
+    {
+      "year": 2022,
+      "round": 5
+    },
+    {
+      "year": 2023,
+      "round": 6
+    },
+    {
+      "year": 2024,
+      "round": 7
+    },
+    {
+      "year": 2025,
+      "round": 8
+    }
+  ],
+  "excludedRound": 4,
+  "category": "All",
+  "statistic": "Mean",
+  "decimalPlaces": 1,
+  "records": 980,
+  "euAverage": "Use the source's European Union observation, without averaging country scores.",
+  "indicators": [
+    {
+      "question": "Trust - EU",
+      "metric": "Trust in the European Union",
+      "filename": "228771473524831_quality-of-society_trust-eu.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - The European Union Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust - government",
+      "metric": "Trust in country's government",
+      "filename": "228771473524831_quality-of-society_trust-government.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - Your country's government Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust - healthcare system",
+      "metric": "Trust in the healthcare system",
+      "filename": "228771473524831_quality-of-society_trust-healthcare-system.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - The healthcare system Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust - news media",
+      "metric": "Trust in the news media",
+      "filename": "228771473524831_quality-of-society_trust-news-media.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - The news media Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust - police",
+      "metric": "Trust in the police",
+      "filename": "228771473524831_quality-of-society_trust-police.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - The police Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust - social media",
+      "metric": "Trust in social media",
+      "filename": "228771473524831_quality-of-society_trust-social-media.json",
+      "text": "Please  indicate how much you trust each of the following institutions in the country where you live - Social media Scale: 1 = Do not trust at all; 10 = Trust completely."
+    },
+    {
+      "question": "Trust in people",
+      "metric": "Trust in people",
+      "filename": "228771473524831_quality-of-society_trust-in-people.json",
+      "text": "Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people? Scale: 1 = You can't be too careful; 10 = Most people can be trusted."
+    }
+  ]
+}
