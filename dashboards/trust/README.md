@@ -9,6 +9,7 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 - `trust.html`: a compatibility redirect to the folder's index page.
 - `data-provenance.json`: source survey asset, questions, statistics and included rounds.
 - `validate-data.py`: dependency-free checks for coverage, round selection and known source values.
+- `eurofound-logo.svg`: official stacked Eurofound logo, copied from the website's survey explorer assets.
 
 ## Current data
 
@@ -42,9 +43,11 @@ The additional `Round` column prevents ambiguous annual selections. The chart
 also checks the year/round pairs and indicator names before plotting. The newest
 included year, 2025, is the default. Keep the existing columns
 (`Country`, `Metric`, `Year`, `Score`) when updating the file.
+The selector displays years only; round selection remains explicit in the data.
 
-The footer links to the public survey page and explains the question and response
-scale separately for the six named bodies/services and for trust in people.
+The footer contains the requested source link and short response-scale note,
+with no heading. Text occupies 90% of its width and the Eurofound logo the
+right-hand 10%.
 
 Run `python dashboards/trust/validate-data.py` from the repository root before
 publishing. Serve the repository locally and check every year, country
