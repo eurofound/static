@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dashboard Studio design",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "title",
+    "source",
+    "blocks"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "subtitle": {
+      "type": "string",
+      "maxLength": 800
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 12000
+    },
+    "theme": {
+      "const": "eurofound-studio"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "reference",
+        "schema"
+      ],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "schema": {
+          "type": "array",
+          "maxItems": 150,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "type"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "type": {
+                "enum": [
+                  "number",
+                  "string"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title",
+          "description",
+          "xPos",
+          "yPos",
+          "w",
+          "h"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "type": {
+            "enum": [
+              "bar",
+              "column",
+              "line",
+              "area",
+              "pie",
+              "scatter",
+              "heatmap",
+              "treemap",
+              "map",
+              "clusteredBar",
+              "clusteredColumn",
+              "stackedBar",
+              "percentBar",
+              "donut",
+              "bubble",
+              "histogram",
+              "boxplot",
+              "metric",
+              "table",
+              "text",
+              "dropdown",
+              "slider",
+              "buttons",
+              "reset"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "xPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 11
+          },
+          "yPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2000
+          },
+          "w": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 20
+          },
+          "x": {
+            "type": "string"
+          },
+          "y": {
+            "type": "string"
+          },
+          "z": {
+            "type": "string"
+          },
+          "series": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "aggregate": {
+            "enum": [
+              "sum",
+              "count",
+              "mean"
+            ]
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "maxItems": 50000,
+      "items": {
+        "type": "object",
+        "additionalProperties": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
