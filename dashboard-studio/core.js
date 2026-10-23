@@ -1,4 +1,5 @@
 (function(root){'use strict';
+const Catalog=root.StudioCatalog||(typeof require!=='undefined'?require('./chart-catalog.js'):null);
 const charts=[
  ['radar','Radar','Compare at least three categories on a shared scale.'],
  ['bar','Bar','Compare categories with horizontal bars or vertical columns.'],
@@ -13,9 +14,10 @@ const charts=[
  ['histogram','Histogram','Show the distribution of raw numeric observations.'],
  ['boxplot','Box plot','Compare distributions of raw observations by category.']
 ];
+charts.sort((a,b)=>['bar','line','map','clusteredBar','stackedBar','area','pie','donut','scatter','bubble','heatmap','treemap','radar','histogram','boxplot'].indexOf(a[0])-['bar','line','map','clusteredBar','stackedBar','area','pie','donut','scatter','bubble','heatmap','treemap','radar','histogram','boxplot'].indexOf(b[0]));
 const controls=[['metric','Key figure'],['table','Data table'],['text','Text'],['dropdown','Dropdown'],['slider','Slider'],['buttons','Buttons'],['reset','Reset filters']];
-const paletteTypes=charts.map(c=>c[0]),chartTypes=[...paletteTypes,'percentBar'],controlTypes=['dropdown','slider','buttons','reset'],types=[...chartTypes,...controls.map(c=>c[0])];
-const names={...Object.fromEntries([...charts,...controls].map(c=>[c[0],c[1]])),percentBar:'100% stacked bars (saved design)'},descriptions=Object.fromEntries(charts.map(c=>[c[0],c[2]]));
+const paletteTypes=charts.map(c=>c[0]),chartTypes=[...paletteTypes,'percentBar','highcharts'],controlTypes=['dropdown','slider','buttons','reset'],types=[...chartTypes,...controls.map(c=>c[0])];
+const names={...Object.fromEntries([...charts,...controls].map(c=>[c[0],c[1]])),highcharts:'Highcharts',percentBar:'100% stacked bars (saved design)'},descriptions=Object.fromEntries(charts.map(c=>[c[0],c[2]]));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>v==null||typeof v==='boolean'||String(v).trim()===''?null:Number.isFinite(Number(v))?Number(v):null;
 function parseCSV(text){
@@ -38,6 +40,7 @@ function metric(rows,b){if(b.aggregate==='count')return rows.length;const values
 function quantile(sorted,f){const p=(sorted.length-1)*f,i=Math.floor(p);return sorted[i]+((sorted[i+1]??sorted[i])-sorted[i])*(p-i);}
 function boxData(rows,b){const groups=new Map();for(const r of rows){const v=num(r[b.y]);if(v===null||r[b.x]==null||r[b.x]==='')continue;const k=String(r[b.x]);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(v);}return [...groups].map(([category,values])=>{values.sort((a,b)=>a-b);const q1=quantile(values,.25),median=quantile(values,.5),q3=quantile(values,.75),iqr=q3-q1;const inside=values.filter(v=>v>=q1-1.5*iqr&&v<=q3+1.5*iqr),low=inside[0],high=inside[inside.length-1];return{category,values:[low,q1,median,q3,high],outliers:values.filter(v=>v<low||v>high)};});}
 function mappingIssues(b,schema){
+ if(b.type==='highcharts')return Catalog.mappingIssues(b,schema);
  const fields=new Set(schema.map(f=>f.name)),numeric=new Set(schema.filter(f=>f.type==='number').map(f=>f.name)),msgs=[],raw=['scatter','bubble','histogram','boxplot'].includes(b.type);
  if(chartTypes.includes(b.type)){if(b.type!=='histogram'&&!fields.has(b.x))msgs.push('Choose a category or X field.');if((raw||b.aggregate!=='count')&&!numeric.has(b.y))msgs.push('Choose a numeric value field.');if(b.series&&!fields.has(b.series))msgs.push('The series field is missing.');if(['clusteredBar','clusteredColumn','stackedBar','percentBar','heatmap','stacked-column'].includes(b.type)&&!b.series)msgs.push('Choose a series field for the groups.');if(['map','pie','donut','treemap','histogram','boxplot'].includes(b.type)&&b.series)msgs.push('This preview uses one measure per category; clear the series field.');if(['scatter','bubble'].includes(b.type)&&!numeric.has(b.x))msgs.push('Choose a numeric X field.');if(b.type==='bubble'&&!numeric.has(b.z))msgs.push('Choose a numeric bubble size field.');}
  if(['dropdown','slider','buttons'].includes(b.type)&&!fields.has(b.field))msgs.push('Choose a filter field.');if(b.type==='slider'&&!numeric.has(b.field))msgs.push('Choose a numeric slider field.');if(b.type==='metric'&&b.aggregate!=='count'&&!numeric.has(b.y))msgs.push('Choose a numeric value field.');return msgs;
@@ -45,22 +48,27 @@ function mappingIssues(b,schema){
 function readDesign(raw){const spec=checkSpec(raw);let rows=[];if(raw.data!==undefined){if(!Array.isArray(raw.data))throw Error('Embedded data must be an array.');if(raw.data.length){const schema=inspectRows(raw.data);rows=raw.data;spec.source.schema=schema;}}return{spec,rows};}
 function designFile(spec,rows,includeData){const file=checkSpec(spec);if(includeData&&rows.length)file.data=rows;return file;}
 
-function validate(spec){const msgs=[];for(const b of spec.blocks||[]){if(b.xPos+b.w>spec.canvas.width||b.yPos+b.h>spec.canvas.height)msgs.push(b.title+': outside the canvas.');if(b.yPos<110)msgs.push(b.title+': overlaps the dashboard heading.');}for(const b of spec.blocks)msgs.push(...mappingIssues(b,spec.source.schema).map(m=>b.title+': '+m));for(let i=0;i<spec.blocks.length;i++)for(let j=i+1;j<spec.blocks.length;j++){const a=spec.blocks[i],b=spec.blocks[j];if(a.xPos<b.xPos+b.w&&a.xPos+a.w>b.xPos&&a.yPos<b.yPos+b.h&&a.yPos+a.h>b.yPos)msgs.push('Overlap: '+a.title+' / '+b.title+'.');}return msgs;}
+function validate(spec){const msgs=[];for(const b of spec.blocks||[]){if(b.xPos+b.w>spec.canvas.width||b.yPos+b.h>spec.canvas.height)msgs.push(b.title+': outside the canvas.');if(b.yPos<110)msgs.push(b.title+': overlaps the dashboard heading.');}for(const b of spec.blocks)msgs.push(...mappingIssues(b,spec.source.schema).map(m=>b.title+': '+m));for(let i=0;i<spec.blocks.length;i++)for(let j=i+1;j<spec.blocks.length;j++){const a=spec.blocks[i],b=spec.blocks[j];if(a.pageId===b.pageId&&a.xPos<b.xPos+b.w&&a.xPos+a.w>b.xPos&&a.yPos<b.yPos+b.h&&a.yPos+a.h>b.yPos)msgs.push('Overlap: '+a.title+' / '+b.title+'.');}return msgs;}
 
 const snap = value => Math.round(value / 10) * 10;
 const bounded = (value, min, max, fallback) => Math.min(max, Math.max(min, Number.isFinite(Number(value)) ? Math.round(Number(value)) : fallback));
 function checkSpec(raw){
-  if(!raw || !['1.0','1.1','2.0','2.1','2.2'].includes(raw.schemaVersion) || !Array.isArray(raw.blocks) || raw.blocks.length>60)
-    throw Error('Use a Dashboard Studio design (1.0, 1.1, 2.0, 2.1 or 2.2) with at most 60 visuals.');
+  if(!raw || !['1.0','1.1','2.0','2.1','2.2','2.3'].includes(raw.schemaVersion) || !Array.isArray(raw.blocks) || raw.blocks.length>60)
+    throw Error('Use a Dashboard Studio design (1.0, 1.1, 2.0, 2.1, 2.2 or 2.3) with at most 60 visuals.');
+  const pages=raw.pages===undefined?[{id:'page-1',title:'Page 1'}]:raw.pages;
+  if(!Array.isArray(pages)||pages.length<1||pages.length>3)throw Error('Use between one and three dashboard pages.');
+  const pageIds=new Set();const checkedPages=pages.map(p=>{const id=String(p?.id||'').slice(0,80);if(!id||pageIds.has(id))throw Error('Each dashboard page needs a unique ID.');pageIds.add(id);return {id,title:String(p.title||'Page').slice(0,100)};});
   const legacy=['1.0','2.0'].includes(raw.schemaVersion), ids=new Set();
   const canvas={width:bounded(raw.canvas?.width,320,3840,1200),height:bounded(raw.canvas?.height,240,12000,1340),snap:10};
   const blocks=raw.blocks.map(original=>{
     const oldType=original?.type;const b={...original,type:({column:'bar',clusteredColumn:'clusteredBar','stacked-column':'stackedBar'})[oldType]||oldType};
     if(!b || !types.includes(b.type) || !b.id || ids.has(String(b.id).slice(0,80))) throw Error('Each visual needs a unique ID and a supported type.');
     ids.add(String(b.id).slice(0,80));
-    const c={id:String(b.id).slice(0,80),type:b.type,orientation:['column','clusteredColumn','stacked-column'].includes(oldType)||b.orientation==='vertical'?'vertical':'horizontal'};
+    const pageId=b.pageId||checkedPages[0].id;if(!pageIds.has(pageId))throw Error('A visual refers to a missing dashboard page.');
+    const c={pageId,id:String(b.id).slice(0,80),type:b.type,orientation:['column','clusteredColumn','stacked-column'].includes(oldType)||b.orientation==='vertical'?'vertical':'horizontal'};
     for(const k of ['title','x','y','z','series','field','text','note','instructions'])
       c[k]=String((k==='instructions'?b.instructions??b.description:b[k])??'').slice(0,['text','instructions'].includes(k)?12000:400);
+    if(b.type==='highcharts'){const entry=Catalog.get(b.hcType);if(!entry)throw Error('Choose a supported Highcharts type.');c.hcType=entry.id;c.mappings=Object.fromEntries(entry.roles.map(r=>[r.key,String(b.mappings?.[r.key]||'').slice(0,400)]));c.period=bounded(b.period,2,500,14);}
     c.aggregate=['sum','count','mean'].includes(b.aggregate)?b.aggregate:'sum';
     if(legacy){
       c.w=bounded(b.w,1,12,6)*100-10;
@@ -76,14 +84,16 @@ function checkSpec(raw){
     c.xPos=Math.min(c.xPos,canvas.width-c.w);c.yPos=Math.min(c.yPos,canvas.height-c.h);
     return c;
   });
-  return {schemaVersion:'2.2',title:String(raw.title||'Dashboard').slice(0,200),subtitle:String(raw.subtitle||'').slice(0,800),notes:String(raw.notes??raw.description??'').slice(0,12000),canvas,theme:'erm-classic-v0.1',source:{reference:String(raw.source?.reference||'').slice(0,1000),schema:Array.isArray(raw.source?.schema)?raw.source.schema.filter(f=>f&&typeof f.name==='string').slice(0,150).map(f=>({name:f.name.slice(0,200),type:f.type==='number'?'number':'string',...(Number.isInteger(f.missing)&&f.missing>=0?{missing:f.missing}:{})})):[]},blocks};
+  return {schemaVersion:'2.3',tabbed:pages.length>1||raw.tabbed===true,pages:checkedPages,title:String(raw.title||'Dashboard').slice(0,200),subtitle:String(raw.subtitle||'').slice(0,800),notes:String(raw.notes??raw.description??'').slice(0,12000),canvas,theme:'erm-classic-v0.1',source:{reference:String(raw.source?.reference||'').slice(0,1000),schema:Array.isArray(raw.source?.schema)?raw.source.schema.filter(f=>f&&typeof f.name==='string').slice(0,150).map(f=>({name:f.name.slice(0,200),type:f.type==='number'?'number':'string',...(Number.isInteger(f.missing)&&f.missing>=0?{missing:f.missing}:{})})):[]},blocks};
 }
 function designBrief(spec){
   const lines=['# '+spec.title,'','## Dashboard design brief',spec.subtitle,'','## Dashboard notes',spec.notes||'No dashboard notes supplied.','','## Canvas',`${spec.canvas.width} × ${spec.canvas.height} pixels. Position and resize on a 10-pixel grid. Centre the dashboard title and subtitle. Narrow screens stack visuals in reading order.`,'','## Dataset',spec.source.reference||'No source reference supplied.','Fields: '+spec.source.schema.map(f=>f.name+' ('+f.type+')').join(', '),'This readable brief contains mappings only. The saved design can include the dataset; otherwise supply the data separately.'];
+  lines.push('','## Dashboard pages',spec.tabbed?'Tabbed dashboard. Each page has its own layout and filter state.':'Single-page dashboard.',...(spec.pages||[{id:'page-1',title:'Page 1'}]).map(p=>p.id+': '+p.title));
   for(const b of [...spec.blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos)){
-    lines.push('',`## ${b.title} [${b.id}]`,`Visual: ${names[b.type]}`, ...(['bar','clusteredBar','stackedBar','percentBar'].includes(b.type)?['Orientation: '+(b.orientation==='vertical'?'Vertical columns':'Horizontal bars')]:[]),`Position: x ${b.xPos}px, y ${b.yPos}px. Size: ${b.w}px × ${b.h}px.`);
-    if(chartTypes.includes(b.type)||b.type==='metric') lines.push(`Mapping: X/category ${b.x||'—'}; Y/value ${b.y||'—'}; bubble size ${b.z||'—'}; series ${b.series||'none'}; aggregation ${['scatter','bubble','histogram','boxplot'].includes(b.type)?'raw observations':b.aggregate}.`);
-    if(controlTypes.includes(b.type)) lines.push(`Filter field: ${b.field||'—'}. Scope: all data visuals. Slider operator: less than or equal to.`);
+    lines.push('',`## ${b.title} [${b.id}]`,`Page: ${(spec.pages||[]).find(p=>p.id===b.pageId)?.title||'Page 1'}`,`Visual: ${b.type==='highcharts'?Catalog.get(b.hcType)?.label:names[b.type]}`, ...(['bar','clusteredBar','stackedBar','percentBar'].includes(b.type)?['Orientation: '+(b.orientation==='vertical'?'Vertical columns':'Horizontal bars')]:[]),`Position: x ${b.xPos}px, y ${b.yPos}px. Size: ${b.w}px × ${b.h}px.`);
+    if(b.type==='highcharts')lines.push('Highcharts type: '+b.hcType,'Field mapping: '+Object.entries(b.mappings||{}).map(([role,field])=>role+' → '+(field||'unmapped')).join('; '));
+    if((chartTypes.includes(b.type)&&b.type!=='highcharts')||b.type==='metric') lines.push(`Mapping: X/category ${b.x||'—'}; Y/value ${b.y||'—'}; bubble size ${b.z||'—'}; series ${b.series||'none'}; aggregation ${['scatter','bubble','histogram','boxplot'].includes(b.type)?'raw observations':b.aggregate}.`);
+    if(controlTypes.includes(b.type)) lines.push(`Filter field: ${b.field||'—'}. Scope: data visuals on this page. Slider operator: less than or equal to.`);
     if(b.text)lines.push('Content: '+b.text);
     if(b.note)lines.push('Supporting note: '+b.note);
     lines.push('Design and interaction instructions:',b.instructions||'No additional instructions supplied.');
@@ -91,9 +101,11 @@ function designBrief(spec){
   lines.push('','## Build requirements','Preserve the reviewed layout, visual IDs, mappings and design instructions. Text instructions describe intended behaviour; only configured mappings and shared filters run in this prototype. Resolve unspecified interactions before implementation.','Use the Eurofound visual style and quality workflow. Reconcile calculations with the source, keep nulls distinct from zero, and test keyboard access, narrow layouts, filters and exports. Do not treat fictional demonstration values as production evidence.');
   return lines.join('\n')+'\n';
 }
-function emptySpec(){return {schemaVersion:'2.2',title:'Untitled dashboard',subtitle:'',notes:'',canvas:{width:1200,height:900,snap:10},theme:'erm-classic-v0.1',source:{reference:'',schema:[]},blocks:[]};}
+function emptySpec(){return {schemaVersion:'2.3',tabbed:false,pages:[{id:'page-1',title:'Page 1'}],title:'Untitled dashboard',subtitle:'',notes:'',canvas:{width:1200,height:900,snap:10},theme:'erm-classic-v0.1',source:{reference:'',schema:[]},blocks:[]};}
 function demoRows(){const rows=[];const countries=[['Ireland','ie'],['France','fr'],['Germany','de'],['Spain','es'],['Italy','it'],['Poland','pl']];for(let y=2021;y<=2025;y++)countries.forEach(([country,country_code],i)=>['Manufacturing','Services'].forEach((sector,j)=>rows.push({country,country_code,year:y,sector,events:20+i*14+(y-2021)*3+j*9,job_gains:800+i*630+(y-2021)*160+j*210,job_losses:600+i*540+(y-2021)*210+j*130})));return rows;}
 function demoSpec(rows){const block=(id,type,title,xPos,yPos,w,h,extra={})=>({id,type,title,xPos,yPos,w,h,x:'country',y:'events',series:'',aggregate:'sum',field:'',text:'',note:'',...extra});return{schemaVersion:'1.0',title:'European restructuring overview',subtitle:'Explore countries, periods and announced employment changes.',theme:'erm-classic-v0.1',source:{reference:'Fictional demonstration data — replace before publication',schema:inspectRows(rows)},blocks:[block('country','dropdown','Country',0,0,4,2,{field:'country'}),block('year','slider','Up to year',4,0,4,2,{field:'year'}),block('sector','buttons','Sector',8,0,4,2,{field:'sector'}),block('events','metric','Restructuring events',0,2,4,3),block('gains','metric','Announced job gains',4,2,4,3,{y:'job_gains'}),block('losses','metric','Announced job losses',8,2,4,3,{y:'job_losses'}),block('map','map','Restructurings by country',0,5,6,7,{x:'country_code'}),block('trend','area','Number of restructuring events',6,5,6,7,{x:'year'}),block('jobs','line','Announced job gains over time',0,12,8,7,{x:'year',y:'job_gains',series:'country'}),block('sectors','bar','Events by sector',8,12,4,7,{x:'sector'}),block('notes','text','About these figures',0,19,9,3,{text:'Fictional data for testing the designer. Production ERM figures describe recorded announcements and should be interpreted alongside the methodology.'}),block('reset','reset','Reset filters',9,19,3,3)]};}
 const ordered=blocks=>[...blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos);
-const api={paletteTypes,charts,names,descriptions,controls,ordered,emptySpec,quantile,boxData,mappingIssues,readDesign,designFile,snap,designBrief,chartTypes,controlTypes,types,esc,num,parseCSV,inspectRows,filtered,aggregate,metric,validate,checkSpec,demoRows,demoSpec:rows=>checkSpec(demoSpec(rows))};if(typeof module!=='undefined')module.exports=api;root.StudioCore=api;
+const pageBlocks=(spec,id)=>spec.blocks.filter(b=>(b.pageId||spec.pages?.[0]?.id||'page-1')===id);
+const pageFilters=(spec,id,filters)=>Object.fromEntries(Object.entries(filters).filter(([key])=>pageBlocks(spec,id).some(b=>b.id===key)));
+const api={pageBlocks,pageFilters,paletteTypes,charts,names,descriptions,controls,ordered,emptySpec,quantile,boxData,mappingIssues,readDesign,designFile,snap,designBrief,chartTypes,controlTypes,types,esc,num,parseCSV,inspectRows,filtered,aggregate,metric,validate,checkSpec,demoRows,demoSpec:rows=>checkSpec(demoSpec(rows))};if(typeof module!=='undefined')module.exports=api;root.StudioCore=api;
 })(typeof window!=='undefined'?window:globalThis);

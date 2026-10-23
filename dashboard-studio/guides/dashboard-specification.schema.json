@@ -13,7 +13,7 @@
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": "2.2"
+      "const": "2.3"
     },
     "title": {
       "type": "string",
@@ -141,7 +141,8 @@
               "donut",
               "bubble",
               "histogram",
-              "boxplot"
+              "boxplot",
+              "highcharts"
             ]
           },
           "aggregate": {
@@ -185,6 +186,145 @@
               "vertical"
             ],
             "default": "horizontal"
+          },
+          "pageId": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "hcType": {
+            "enum": [
+              "funnel3d",
+              "pyramid3d",
+              "scatter3d",
+              "apo",
+              "abands",
+              "ad",
+              "arcdiagram",
+              "area",
+              "arearange",
+              "areaspline",
+              "areasplinerange",
+              "aroon",
+              "aroonoscillator",
+              "atr",
+              "ao",
+              "bar",
+              "bellcurve",
+              "bb",
+              "boxplot",
+              "bubble",
+              "bullet",
+              "candlestick",
+              "cci",
+              "chaikin",
+              "cmf",
+              "cmo",
+              "column",
+              "columnpyramid",
+              "columnrange",
+              "cylinder",
+              "dema",
+              "dependencywheel",
+              "disparityindex",
+              "dmi",
+              "dotplot",
+              "dpo",
+              "dumbbell",
+              "ema",
+              "errorbar",
+              "flags",
+              "flowmap",
+              "funnel",
+              "gantt",
+              "gauge",
+              "geoheatmap",
+              "heatmap",
+              "heikinashi",
+              "histogram",
+              "hlc",
+              "hollowcandlestick",
+              "ikh",
+              "item",
+              "keltnerchannels",
+              "klinger",
+              "line",
+              "linearRegression",
+              "linearRegressionAngle",
+              "linearRegressionIntercept",
+              "linearRegressionSlope",
+              "lollipop",
+              "macd",
+              "map",
+              "mapbubble",
+              "mapline",
+              "mappoint",
+              "mfi",
+              "momentum",
+              "natr",
+              "networkgraph",
+              "obv",
+              "ohlc",
+              "organization",
+              "packedbubble",
+              "pareto",
+              "pictorial",
+              "pie",
+              "pivotpoints",
+              "pointandfigure",
+              "polygon",
+              "ppo",
+              "pc",
+              "priceenvelopes",
+              "psar",
+              "pyramid",
+              "renko",
+              "roc",
+              "rsi",
+              "sankey",
+              "scatter",
+              "slowstochastic",
+              "sma",
+              "solidgauge",
+              "spline",
+              "stochastic",
+              "streamgraph",
+              "sunburst",
+              "supertrend",
+              "tema",
+              "tilemap",
+              "tiledwebmap",
+              "timeline",
+              "treegraph",
+              "treemap",
+              "trendline",
+              "trix",
+              "variablepie",
+              "variwide",
+              "vector",
+              "venn",
+              "vbp",
+              "vwap",
+              "waterfall",
+              "williamsr",
+              "windbarb",
+              "wma",
+              "wordcloud",
+              "xrange",
+              "zigzag"
+            ]
+          },
+          "mappings": {
+            "type": "object",
+            "maxProperties": 20,
+            "additionalProperties": {
+              "type": "string",
+              "maxLength": 400
+            }
+          },
+          "period": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 500
           }
         }
       }
@@ -232,7 +372,34 @@
           ]
         }
       }
+    },
+    "tabbed": {
+      "type": "boolean"
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 100
+          }
+        }
+      }
     }
   },
-  "$comment": "Version 2.2 uses one bar family entry with a horizontal/vertical orientation. Older column types migrate without changing their orientation. percentBar is accepted only to preserve saved designs, and is absent from the palette."
+  "$comment": "Version 2.3 supports up to three pages, a complete Highcharts 12.4.0 series catalogue, and warning-only HTML exports. Earlier versions migrate to page-1."
 }

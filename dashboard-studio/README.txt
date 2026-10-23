@@ -1,4 +1,4 @@
-Eurofound Dashboard Studio 2.2
+Eurofound Dashboard Studio 2.3
 
 Public entry point: https://static.eurofound.europa.eu/dashboard-studio/
 Source: eurofound/static, gh-pages branch, dashboard-studio directory.
@@ -13,7 +13,7 @@ Workflow
 1. The page starts with an empty layout and no data on every fresh load.
 2. Load a CSV or flat JSON array (up to 5 MB, 50,000 rows, 150 fields).
 3. Add and position tiles, then describe each visual. Preview mapping is optional.
-4. Save design downloads a version 2.2 JSON file, including the dataset by default.
+4. Save design downloads a version 2.3 JSON file, including the dataset by default.
    Uncheck Include the dataset in Data to save just the brief and schema.
 5. Open design restores the layout, instructions, mappings and any embedded data.
    A design-only file requires the source data to be loaded again for previews.
@@ -65,3 +65,12 @@ Keep core.js, renderer.js, studio.js, studio.css, index.html and the schema toge
 Designer: live mapped visuals and shared filters; free pixel movement with optional 10px snapping; resizable canvas; dashboard settings on background click; per-visual design instructions.
 
 The document has one vertical page scrollbar. The selected tile can be removed with Delete or Delete tile; typing fields retain normal Delete behaviour.
+
+Dashboard pages
+Single-page designs can switch to tabbed mode in Dashboard settings. Up to three pages share the dataset and canvas dimensions; each page has an independent layout and filter state. Page removal deletes its visuals with Undo available. Save/open, the brief, preview and HTML export preserve the pages.
+
+Full Highcharts catalogue
+118 registered series types are indexed from the official Highcharts 12.4.0 npm package. Extra modules load only when selected, from the Studio host. The additional types use explicit field mappings and raw observations; missing/invalid rows are omitted with a caption. Indicators use OHLC data and a configurable period, with volume where required. Specialised chart configurations may still require design instructions for the final build.
+
+HTML exports
+Missing data, incomplete mappings and overlaps produce visible warnings but never prevent downloading the prototype. Export includes the page tabs and empty-state explanations. Required chart assets are embedded. Web-map tiles and optional fonts still need internet access.

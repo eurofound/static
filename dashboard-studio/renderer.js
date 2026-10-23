@@ -2,8 +2,9 @@
 'use strict';
 const C=root.StudioCore||(typeof require!=='undefined'?require('./core.js'):null);
 const colours=['#41719c','#b47c50','#4c8575','#93668a','#b94f60','#737db5','#7a8c4b','#5d909f'];
-function destroy(el){(el._charts||[]).forEach(c=>c.destroy());el._charts=[];}
+function destroy(el){el._generation=(el._generation||0)+1;(el._charts||[]).forEach(c=>c.destroy());el._charts=[];}
 function chartOptions(b,rows){
+ if(b.type==='highcharts')return root.StudioCatalog.chartOptions(b,rows);
  const agg=C.aggregate(rows,b),categories=[...new Set(agg.map(a=>a.category))],groups=[...new Set(agg.map(a=>a.series))];
  const type=['bar','clusteredBar','stackedBar','percentBar'].includes(b.type)?(b.orientation==='vertical'?'column':'bar'):({donut:'pie',radar:'line'})[b.type]||b.type;
  const lookup=new Map(agg.map(a=>[JSON.stringify([a.category,a.series]),a.value]));
@@ -44,7 +45,7 @@ function drawBlock(el,b,rows,filters,onChange,schema){
  destroy(el);el.replaceChildren();const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;el.appendChild(e);return e;};
  if(b.type==='text'){make('div','text-block',b.text||'No text content supplied.');return;}
  if(b.type==='reset'){const bt=make('button','',b.title||'Reset filters');bt.onclick=()=>onChange(null);return;}
- if(!rows.length){make('div','empty-chart','Load a dataset in Data to preview this tile.');return;}
+ if(!rows.length&&!(b.type==='highcharts'&&root.StudioCatalog.get(b.hcType)?.adapter==='none')){make('div','empty-chart','Load a dataset in Data to preview this tile.');return;}
  const issues=C.mappingIssues(b,schema);if(issues.length){make('div','empty-chart',issues.join(' '));return;}
  const data=C.filtered(rows,filters);
  if(['dropdown','buttons','slider'].includes(b.type)){
@@ -57,6 +58,7 @@ function drawBlock(el,b,rows,filters,onChange,schema){
  if(b.type==='metric'){const v=C.metric(data,b);make('div','metric-value',v===null?'No data':v.toLocaleString('en-IE',{maximumFractionDigits:2}));make('div','metric-note',b.note||b.aggregate+' · '+(b.aggregate==='count'?'records':b.y));return;}
  if(b.type==='table'){const wrap=make('div','chart-table'),fields=schema.map(f=>f.name);wrap.innerHTML='<table><thead><tr>'+fields.map(f=>'<th>'+C.esc(f)+'</th>').join('')+'</tr></thead><tbody>'+data.slice(0,25).map(r=>'<tr>'+fields.map(f=>'<td>'+C.esc(r[f]??'—')+'</td>').join('')+'</tr>').join('')+'</tbody></table>';return;}
  if(!root.Highcharts){make('div','empty-chart','Charts could not load. Check the connection to code.highcharts.com. You can still save the design.');return;}
+ if(b.type==='highcharts'&&!root.Highcharts.seriesTypes[b.hcType]){const token=el._generation;make('div','empty-chart','Loading '+root.StudioCatalog.get(b.hcType).label+'…');root.StudioCatalog.ensure(b.hcType).then(()=>{if(el.isConnected&&el._generation===token)drawBlock(el,b,rows,filters,onChange,schema);}).catch(error=>{if(el.isConnected&&el._generation===token){el.replaceChildren();make('div','empty-chart',error.message);}});return;}
  const plot=make('div','block-chart');
  try{
    const options=chartOptions(b,data);let chart;
@@ -67,13 +69,15 @@ function drawBlock(el,b,rows,filters,onChange,schema){
      if(!valid.length)throw Error('No ISO2 country keys match the Europe map.');
      if(unknown.length){make('div','map-note','Not mapped (aggregates or unknown codes): '+unknown.map(a=>a.category).join(', '));plot.style.height='calc(100% - 42px)';}
      options.chart={...options.chart,map};options.colorAxis={minColor:'#e5edf3',maxColor:'#41719c'};options.mapNavigation={enabled:true,buttonOptions:{verticalAlign:'bottom'}};options.series=[{type:'map',name:b.y||'Records',joinBy:'hc-key',data:valid.map(a=>[a.category.toLowerCase(),a.value]),nullColor:'#edf0f2',borderColor:'#fff'}];chart=root.Highcharts.mapChart(plot,options);
-   }else chart=root.Highcharts.chart(plot,options);
+   }else {const factory=options._factory||'chart';delete options._factory;chart=root.Highcharts[factory](plot,options);}
    el._charts=[chart];
- }catch(error){plot.remove();make('div','empty-chart','Preview unavailable: '+error.message);}
+ }catch(error){for(const chart of root.Highcharts.charts||[])if(chart?.renderTo===plot){try{chart.destroy();}catch{}}plot.remove();make('div','empty-chart','Preview unavailable: '+error.message);}
 }
 function render(container,spec,rows,options={}){
   container._dispose?.();container.replaceChildren();container.className='dashboard-runtime';
-  let filters={};
+  const pages=spec.pages||[{id:'page-1',title:'Page 1'}];let activePage=pages[0].id,filters={};
+  const tabs=document.createElement('div');tabs.className='runtime-tabs page-tabs';tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','Dashboard pages');tabs.hidden=!spec.tabbed;container.appendChild(tabs);
+  function paintTabs(){tabs.replaceChildren();if(!spec.tabbed)return;for(const p of pages){const bt=document.createElement('button');bt.textContent=p.title;bt.id='runtime-tab-'+p.id;bt.setAttribute('role','tab');bt.setAttribute('aria-selected',String(activePage===p.id));bt.setAttribute('aria-controls','runtime-panel-'+p.id);bt.tabIndex=activePage===p.id?0:-1;bt.onclick=()=>{activePage=p.id;repaint();};bt.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const i=pages.findIndex(v=>v.id===activePage),n=e.key==='Home'?0:e.key==='End'?pages.length-1:(i+(e.key==='ArrowRight'?1:-1)+pages.length)%pages.length;activePage=pages[n].id;repaint();tabs.querySelector('[aria-selected=true]').focus();};tabs.appendChild(bt);}}
   const viewport=document.createElement('div');viewport.className='runtime-viewport';container.appendChild(viewport);
   const grid=document.createElement('div');grid.className='runtime-grid';viewport.appendChild(grid);
   const footer=document.createElement('div');footer.className='runtime-source';footer.textContent='Source: '+spec.source.reference+' · Layout specification '+spec.schemaVersion;container.appendChild(footer);
@@ -84,13 +88,14 @@ function render(container,spec,rows,options={}){
     else{const scale=Math.min(1,width/spec.canvas.width);grid.style.width=spec.canvas.width+'px';grid.style.height=spec.canvas.height+'px';grid.style.transform=`scale(${scale})`;viewport.style.height=spec.canvas.height*scale+'px';}
   }
   function repaint(){
+    paintTabs();viewport.id='runtime-panel-'+activePage;if(spec.tabbed){viewport.setAttribute('role','tabpanel');viewport.setAttribute('aria-labelledby','runtime-tab-'+activePage);}
     grid.querySelectorAll('.block-content').forEach(destroy);grid.replaceChildren();
     const heading=document.createElement('div');heading.className='runtime-heading';heading.innerHTML='<span class="runtime-badge">'+(options.demo?'Fictional demonstration data':'Dashboard preview')+'</span><h1>'+C.esc(spec.title)+'</h1><p>'+C.esc(spec.subtitle)+'</p>';grid.appendChild(heading);
-    for(const b of [...spec.blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos)){
+    for(const b of C.pageBlocks(spec,activePage).sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos)){
       const block=document.createElement('section');block.className='block '+(C.chartTypes.includes(b.type)?'chart-block':C.controlTypes.includes(b.type)?'control-block':'');
       Object.assign(block.style,{left:b.xPos+'px',top:b.yPos+'px',width:b.w+'px',height:b.h+'px'});
       block.innerHTML='<div class="block-header"><h3>'+C.esc(b.title)+'</h3></div><div class="block-content"></div>';grid.appendChild(block);
-      drawBlock(block.lastElementChild,b,rows,filters,f=>{if(!f)filters={};else filters[f.id]=f;repaint();},spec.source.schema);
+      drawBlock(block.lastElementChild,b,rows,C.pageFilters(spec,activePage,filters),f=>{if(!f){for(const block of C.pageBlocks(spec,activePage))delete filters[block.id];}else filters[f.id]=f;repaint();},spec.source.schema);
     }
     layout();
   }
