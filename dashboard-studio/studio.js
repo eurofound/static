@@ -144,11 +144,11 @@ $('export').onclick=async()=>{
  const issues=C.validate(spec);if(!rows.length)issues.unshift('No dataset is loaded. Unmapped charts will show an explanation.');
  const runtimeWarnings=[...$('canvas').querySelectorAll('.empty-chart')].map(e=>e.textContent);for(const warning of runtimeWarnings)if(!issues.includes(warning))issues.push(warning);
  try{
-  const files=await Promise.all(['chart-catalog.js','core.js','renderer.js','studio.css'].map(async path=>{const response=await fetch(path);if(!response.ok)throw Error('Export resources could not load. Please retry.');return response.text();}));
+  const files=await Promise.all(['chart-catalog.js','core.js','renderer.js','studio.css'].map(async path=>{const response=await fetch(path+'?v=2.3.1');if(!response.ok)throw Error('Export resources could not load. Please retry.');return response.text();}));
   const safeJSON=value=>JSON.stringify(value).replace(/</g,'\\u003c'),script=text=>text.replace(/<\/script/gi,'<\\/script');
   const paths=['highcharts','highcharts-more','histogram-bellcurve','heatmap','treemap','map','europe','accessibility'].map(name=>'vendor/'+name+'.js');
   for(const b of spec.blocks)if(b.type==='highcharts')for(const name of Cat.get(b.hcType).modules){const path='vendor/highcharts/'+name+'.js';if(!paths.includes(path))paths.push(path);}
-  const assets=await Promise.all(paths.map(async path=>{const response=await fetch(path);if(!response.ok)throw Error('Export chart files could not load. Please retry.');return response.text();}));
+  const assets=await Promise.all(paths.map(async path=>{const response=await fetch(path+'?v=2.3.1');if(!response.ok)throw Error('Export chart files could not load. Please retry.');return response.text();}));
   const dependencies=assets.map(text=>'<script>'+script(text)+'<\/script>').join('');
   const warningHTML=issues.length?'<details class="export-warnings" open><summary>Prototype warnings ('+issues.length+')</summary><ul>'+issues.map(message=>'<li>'+C.esc(message)+'</li>').join('')+'</ul></details>':'';
   const html='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+C.esc(spec.title)+'</title><style>'+files[3]+'</style></head><body>'+warningHTML+'<main id="dashboard"></main>'+dependencies+files.slice(0,3).map(text=>'<script>'+script(text)+'<\/script>').join('')+'<script>const dashboardSpec='+safeJSON(spec)+';const dashboardRows='+safeJSON(rows)+';StudioRenderer.render(document.getElementById("dashboard"),dashboardSpec,dashboardRows,{demo:'+isDemo+'});<\/script></body></html>';
