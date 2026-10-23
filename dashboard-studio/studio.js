@@ -128,7 +128,7 @@ function deleteTile(id){
  checkpoint();spec.blocks=spec.blocks.filter(b=>b.id!==id);delete designFilters[id];selected=null;render();$('canvas').focus();status('Deleted '+tile.title+'. Undo restores the tile.');
 }
 document.addEventListener('keydown',e=>{
- if(e.key!=='Delete'||e.ctrlKey||e.metaKey||e.altKey||view!=='design'||!selected)return;
+ if($('chart-picker').open||e.key!=='Delete'||e.ctrlKey||e.metaKey||e.altKey||view!=='design'||!selected)return;
  const target=e.target;if(target?.isContentEditable||target?.closest?.('input,textarea,select,[contenteditable]'))return;
  e.preventDefault();deleteTile(selected);
 });
