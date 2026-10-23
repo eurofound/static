@@ -1,4 +1,4 @@
-Eurofound Dashboard Studio 2.0
+Eurofound Dashboard Studio 2.1
 
 Public entry point: https://static.eurofound.europa.eu/dashboard-studio/
 Source: eurofound/static, gh-pages branch, dashboard-studio directory.
@@ -13,12 +13,12 @@ Workflow
 1. The page starts with an empty layout and no data on every fresh load.
 2. Load a CSV or flat JSON array (up to 5 MB, 50,000 rows, 150 fields).
 3. Add and position tiles, then describe each visual. Preview mapping is optional.
-4. Save design downloads a version 2.0 JSON file, including the dataset by default.
+4. Save design downloads a version 2.1 JSON file, including the dataset by default.
    Uncheck Include the dataset in Data to save just the brief and schema.
 5. Open design restores the layout, instructions, mappings and any embedded data.
    A design-only file requires the source data to be loaded again for previews.
-   Version 1.0 files migrate on opening; unknown types and duplicate IDs fail clearly.
-6. Send the saved file to the dashboard builder. Download AI brief supplies a
+   Version 1.0, 1.1 and 2.0 files migrate on opening; unknown types and duplicate IDs fail clearly.
+6. Send the saved file to the dashboard builder. Download design brief supplies a
    readable companion handoff. Incomplete mappings do not block saving.
 
 Privacy and dependencies
@@ -29,10 +29,10 @@ Highcharts 12.4.0 and Europe map geometry are bundled in vendor/ with their
 original notices. Fonts load from Google Fonts, with local font fallbacks. Highcharts remains subject to the organisation's
 licence terms; publishing this editor does not supply a Highcharts licence.
 
-17 chart starting points
+19 chart starting points
 Bar, column, line, area, pie, scatter, heatmap, treemap, Europe map,
 clustered bars, clustered columns, stacked bars, 100% stacked bars,
-donut, bubble, histogram and box plot.
+donut, bubble, histogram box plot, radar and stacked columns.
 
 Preview semantics
 Sum, row count and unweighted mean operate on one loaded table.
@@ -58,3 +58,6 @@ Buildless static HTML, CSS and JavaScript; no package installation is needed.
 Publish this directory on the existing gh-pages branch. Relative asset paths work
 under the /dashboard-studio/ prefix. Do not publish local verification datasets.
 Keep core.js, renderer.js, studio.js, studio.css, index.html and the schema together.
+
+
+Designer: live mapped visuals and shared filters; free pixel movement with optional 10px snapping; resizable canvas; dashboard settings on background click; per-visual design instructions.

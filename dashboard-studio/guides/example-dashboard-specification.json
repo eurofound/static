@@ -1,0 +1,240 @@
+{
+  "schemaVersion": "1.0",
+  "title": "European restructuring overview",
+  "subtitle": "Explore countries, periods and announced employment changes.",
+  "theme": "erm-classic-v0.1",
+  "source": {
+    "reference": "Fictional demonstration data — replace before publication",
+    "schema": [
+      {
+        "name": "country",
+        "type": "string",
+        "missing": 0
+      },
+      {
+        "name": "country_code",
+        "type": "string",
+        "missing": 0
+      },
+      {
+        "name": "year",
+        "type": "number",
+        "missing": 0
+      },
+      {
+        "name": "sector",
+        "type": "string",
+        "missing": 0
+      },
+      {
+        "name": "events",
+        "type": "number",
+        "missing": 0
+      },
+      {
+        "name": "job_gains",
+        "type": "number",
+        "missing": 0
+      },
+      {
+        "name": "job_losses",
+        "type": "number",
+        "missing": 0
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "country",
+      "type": "dropdown",
+      "title": "Country",
+      "xPos": 0,
+      "yPos": 0,
+      "w": 4,
+      "h": 2,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "country",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "year",
+      "type": "slider",
+      "title": "Up to year",
+      "xPos": 4,
+      "yPos": 0,
+      "w": 4,
+      "h": 2,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "year",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "sector",
+      "type": "buttons",
+      "title": "Sector",
+      "xPos": 8,
+      "yPos": 0,
+      "w": 4,
+      "h": 2,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "sector",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "events",
+      "type": "metric",
+      "title": "Restructuring events",
+      "xPos": 0,
+      "yPos": 2,
+      "w": 4,
+      "h": 3,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "gains",
+      "type": "metric",
+      "title": "Announced job gains",
+      "xPos": 4,
+      "yPos": 2,
+      "w": 4,
+      "h": 3,
+      "x": "country",
+      "y": "job_gains",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "losses",
+      "type": "metric",
+      "title": "Announced job losses",
+      "xPos": 8,
+      "yPos": 2,
+      "w": 4,
+      "h": 3,
+      "x": "country",
+      "y": "job_losses",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "map",
+      "type": "map",
+      "title": "Restructurings by country",
+      "xPos": 0,
+      "yPos": 5,
+      "w": 6,
+      "h": 7,
+      "x": "country_code",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "trend",
+      "type": "area",
+      "title": "Number of restructuring events",
+      "xPos": 6,
+      "yPos": 5,
+      "w": 6,
+      "h": 7,
+      "x": "year",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "jobs",
+      "type": "line",
+      "title": "Announced job gains over time",
+      "xPos": 0,
+      "yPos": 12,
+      "w": 8,
+      "h": 7,
+      "x": "year",
+      "y": "job_gains",
+      "series": "country",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "sectors",
+      "type": "bar",
+      "title": "Events by sector",
+      "xPos": 8,
+      "yPos": 12,
+      "w": 4,
+      "h": 7,
+      "x": "sector",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    },
+    {
+      "id": "notes",
+      "type": "text",
+      "title": "About these figures",
+      "xPos": 0,
+      "yPos": 19,
+      "w": 9,
+      "h": 3,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "Fictional data for testing the designer. Production ERM figures describe recorded announcements and should be interpreted alongside the methodology.",
+      "note": ""
+    },
+    {
+      "id": "reset",
+      "type": "reset",
+      "title": "Reset filters",
+      "xPos": 9,
+      "yPos": 19,
+      "w": 3,
+      "h": 3,
+      "x": "country",
+      "y": "events",
+      "series": "",
+      "aggregate": "sum",
+      "field": "",
+      "text": "",
+      "note": ""
+    }
+  ]
+}

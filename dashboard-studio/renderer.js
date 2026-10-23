@@ -5,12 +5,19 @@ const colours=['#41719c','#b47c50','#4c8575','#93668a','#b94f60','#737db5','#7a8
 function destroy(el){(el._charts||[]).forEach(c=>c.destroy());el._charts=[];}
 function chartOptions(b,rows){
  const agg=C.aggregate(rows,b),categories=[...new Set(agg.map(a=>a.category))],groups=[...new Set(agg.map(a=>a.series))];
- const type=({clusteredBar:'bar',clusteredColumn:'column',stackedBar:'bar',percentBar:'bar',donut:'pie'})[b.type]||b.type;
+ const type=({clusteredBar:'bar',clusteredColumn:'column',stackedBar:'bar',percentBar:'bar',donut:'pie','stacked-column':'column',radar:'line'})[b.type]||b.type;
  const lookup=new Map(agg.map(a=>[JSON.stringify([a.category,a.series]),a.value]));
- const base={chart:{type,animation:false,backgroundColor:'transparent',style:{fontFamily:'Arial, sans-serif'}},title:{text:undefined},credits:{enabled:true},colors:colours,accessibility:{enabled:true,description:b.title+'. Data preview; see the visual instructions for the intended final visual.'},xAxis:{categories,title:{text:undefined}},yAxis:{title:{text:b.aggregate==='count'?'Records':b.y}},legend:{enabled:groups.length>1},tooltip:{useHTML:false},plotOptions:{series:{animation:false,marker:{enabled:false}}},series:groups.map(s=>({name:s||b.y||'Records',data:categories.map(c=>lookup.get(JSON.stringify([c,s]))??null)}))};
+ const base={chart:{type,animation:false,backgroundColor:'transparent',style:{fontFamily:'Source Sans 3, Arial, sans-serif'}},title:{text:undefined},credits:{enabled:true},colors:colours,accessibility:{enabled:true,description:b.title+'. Data preview; see the visual instructions for the intended final visual.'},xAxis:{categories,title:{text:undefined}},yAxis:{title:{text:b.aggregate==='count'?'Records':b.y}},legend:{enabled:groups.length>1},tooltip:{useHTML:false},plotOptions:{series:{animation:false,marker:{enabled:false}}},series:groups.map(s=>({name:s||b.y||'Records',data:categories.map(c=>lookup.get(JSON.stringify([c,s]))??null)}))};
  if(['pie','donut','treemap','percentBar'].includes(b.type)&&agg.some(a=>a.value<0))throw Error('This preview needs non-negative values.');
  if(b.type==='clusteredBar'||b.type==='clusteredColumn')base.plotOptions.series.grouping=true;
- if(b.type==='stackedBar'||b.type==='percentBar'){base.plotOptions.series.stacking=b.type==='percentBar'?'percent':'normal';if(b.type==='percentBar'){base.yAxis={min:0,max:100,title:{text:'Share (%)'},labels:{format:'{value}%'}};base.tooltip={pointFormat:'{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)'};}}
+ if(['stackedBar','percentBar','stacked-column'].includes(b.type)){base.plotOptions.series.stacking=b.type==='percentBar'?'percent':'normal';if(b.type==='percentBar'){base.yAxis={min:0,max:100,title:{text:'Share (%)'},labels:{format:'{value}%'}};base.tooltip={pointFormat:'{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)'};}}
+ if(b.type==='radar'){
+   if(categories.length<3)throw Error('Radar charts need at least three categories.');
+   if(agg.some(a=>a.value<0))throw Error('Use non-negative values for a radar chart.');
+   base.chart.polar=true;base.pane={size:'75%'};base.xAxis.tickmarkPlacement='on';base.xAxis.lineWidth=0;
+   base.yAxis.gridLineInterpolation='polygon';base.yAxis.lineWidth=0;base.yAxis.min=0;
+   base.plotOptions.series.pointPlacement='on';base.plotOptions.series.marker={enabled:true,radius:3};
+ }
  if(b.type==='pie'||b.type==='donut'){base.series=[{name:b.y||'Records',data:agg.map(a=>({name:a.category,y:a.value})),innerSize:b.type==='donut'?'60%':0}];base.plotOptions.pie={dataLabels:{enabled:true,format:'{point.name}'}};}
  if(b.type==='scatter'||b.type==='bubble'){
    base.xAxis={title:{text:b.x}};base.yAxis={title:{text:b.y}};base.plotOptions.series.marker={enabled:true};
@@ -64,14 +71,33 @@ function drawBlock(el,b,rows,filters,onChange,schema){
    el._charts=[chart];
  }catch(error){plot.remove();make('div','empty-chart','Preview unavailable: '+error.message);}
 }
-function render(container,spec,rows){
- container.querySelectorAll('.block-content').forEach(destroy);container.replaceChildren();container.className='dashboard-runtime';let filters={};
- const heading=document.createElement('div');heading.className='runtime-heading';heading.innerHTML='<span class="runtime-badge">Data preview · final visuals follow your instructions</span><h1>'+C.esc(spec.title)+'</h1><p>'+C.esc(spec.subtitle)+'</p>';container.appendChild(heading);
- const grid=document.createElement('div');grid.className='runtime-grid';container.appendChild(grid);
- const footer=document.createElement('div');footer.className='runtime-source';footer.textContent='Source: '+(spec.source.reference||'No dataset loaded')+' · Dashboard Studio design '+spec.schemaVersion;container.appendChild(footer);
- function repaint(){grid.querySelectorAll('.block-content').forEach(destroy);grid.replaceChildren();if(!spec.blocks.length){grid.innerHTML='<div class="preview-empty">Your dashboard is blank. Add tiles in Design to begin.</div>';return;}
- for(const b of C.ordered(spec.blocks)){const block=document.createElement('section');block.className='block '+(C.chartTypes.includes(b.type)?'chart-block':C.controlTypes.includes(b.type)?'control-block':'');block.style.gridColumn=(b.xPos+1)+' / span '+b.w;block.style.gridRow=(b.yPos+1)+' / span '+b.h;block.innerHTML='<div class="block-header"><h3>'+C.esc(b.title)+'</h3></div><div class="block-content"></div>';grid.appendChild(block);drawBlock(block.lastElementChild,b,rows,filters,f=>{if(!f)filters={};else filters[f.id]=f;repaint();},spec.source.schema);}}
- repaint();return{destroy:()=>grid.querySelectorAll('.block-content').forEach(destroy)};
+function render(container,spec,rows,options={}){
+  container._dispose?.();container.replaceChildren();container.className='dashboard-runtime';
+  let filters={};
+  const viewport=document.createElement('div');viewport.className='runtime-viewport';container.appendChild(viewport);
+  const grid=document.createElement('div');grid.className='runtime-grid';viewport.appendChild(grid);
+  const footer=document.createElement('div');footer.className='runtime-source';footer.textContent='Source: '+spec.source.reference+' · Layout specification '+spec.schemaVersion;container.appendChild(footer);
+  function layout(){
+    const width=container.clientWidth-32,mobile=width<680;
+    grid.classList.toggle('mobile-layout',mobile);
+    if(mobile){grid.style.width='100%';grid.style.height='auto';grid.style.transform='none';viewport.style.height='auto';}
+    else{const scale=Math.min(1,width/spec.canvas.width);grid.style.width=spec.canvas.width+'px';grid.style.height=spec.canvas.height+'px';grid.style.transform=`scale(${scale})`;viewport.style.height=spec.canvas.height*scale+'px';}
+  }
+  function repaint(){
+    grid.querySelectorAll('.block-content').forEach(destroy);grid.replaceChildren();
+    const heading=document.createElement('div');heading.className='runtime-heading';heading.innerHTML='<span class="runtime-badge">'+(options.demo?'Fictional demonstration data':'Dashboard preview')+'</span><h1>'+C.esc(spec.title)+'</h1><p>'+C.esc(spec.subtitle)+'</p>';grid.appendChild(heading);
+    for(const b of [...spec.blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos)){
+      const block=document.createElement('section');block.className='block '+(C.chartTypes.includes(b.type)?'chart-block':C.controlTypes.includes(b.type)?'control-block':'');
+      Object.assign(block.style,{left:b.xPos+'px',top:b.yPos+'px',width:b.w+'px',height:b.h+'px'});
+      block.innerHTML='<div class="block-header"><h3>'+C.esc(b.title)+'</h3></div><div class="block-content"></div>';grid.appendChild(block);
+      drawBlock(block.lastElementChild,b,rows,filters,f=>{if(!f)filters={};else filters[f.id]=f;repaint();},spec.source.schema);
+    }
+    layout();
+  }
+  const observer=new ResizeObserver(layout);observer.observe(container);repaint();
+  const dispose=()=>{observer.disconnect();grid.querySelectorAll('.block-content').forEach(destroy);};container._dispose=dispose;
+  return {destroy:dispose,filters:()=>filters};
 }
 const api={drawBlock,render,destroy,chartOptions};if(typeof module!=='undefined')module.exports=api;root.StudioRenderer=api;
 })(typeof window!=='undefined'?window:globalThis);
+

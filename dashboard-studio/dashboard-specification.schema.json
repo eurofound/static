@@ -1,16 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Dashboard Studio design",
+  "title": "Dashboard Studio specification",
   "type": "object",
   "required": [
     "schemaVersion",
     "title",
+    "theme",
     "source",
-    "blocks"
+    "blocks",
+    "canvas"
   ],
+  "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": "2.0"
+      "const": "2.1"
     },
     "title": {
       "type": "string",
@@ -20,12 +23,8 @@
       "type": "string",
       "maxLength": 800
     },
-    "description": {
-      "type": "string",
-      "maxLength": 12000
-    },
     "theme": {
-      "const": "eurofound-studio"
+      "const": "erm-classic-v0.1"
     },
     "source": {
       "type": "object",
@@ -33,6 +32,7 @@
         "reference",
         "schema"
       ],
+      "additionalProperties": false,
       "properties": {
         "reference": {
           "type": "string",
@@ -47,17 +47,21 @@
               "name",
               "type"
             ],
+            "additionalProperties": false,
             "properties": {
               "name": {
                 "type": "string",
-                "minLength": 1,
                 "maxLength": 200
               },
               "type": {
                 "enum": [
-                  "number",
-                  "string"
+                  "string",
+                  "number"
                 ]
+              },
+              "missing": {
+                "type": "integer",
+                "minimum": 0
               }
             }
           }
@@ -73,13 +77,41 @@
           "id",
           "type",
           "title",
-          "description",
           "xPos",
           "yPos",
           "w",
           "h"
         ],
+        "additionalProperties": false,
         "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "x": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "y": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "series": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "field": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 400
+          },
           "id": {
             "type": "string",
             "minLength": 1,
@@ -96,6 +128,15 @@
               "heatmap",
               "treemap",
               "map",
+              "dropdown",
+              "slider",
+              "buttons",
+              "reset",
+              "metric",
+              "table",
+              "text",
+              "stacked-column",
+              "radar",
               "clusteredBar",
               "clusteredColumn",
               "stackedBar",
@@ -103,66 +144,8 @@
               "donut",
               "bubble",
               "histogram",
-              "boxplot",
-              "metric",
-              "table",
-              "text",
-              "dropdown",
-              "slider",
-              "buttons",
-              "reset"
+              "boxplot"
             ]
-          },
-          "title": {
-            "type": "string",
-            "maxLength": 400
-          },
-          "description": {
-            "type": "string",
-            "maxLength": 12000
-          },
-          "text": {
-            "type": "string",
-            "maxLength": 12000
-          },
-          "note": {
-            "type": "string",
-            "maxLength": 400
-          },
-          "xPos": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 11
-          },
-          "yPos": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 2000
-          },
-          "w": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 12
-          },
-          "h": {
-            "type": "integer",
-            "minimum": 2,
-            "maximum": 20
-          },
-          "x": {
-            "type": "string"
-          },
-          "y": {
-            "type": "string"
-          },
-          "z": {
-            "type": "string"
-          },
-          "series": {
-            "type": "string"
-          },
-          "field": {
-            "type": "string"
           },
           "aggregate": {
             "enum": [
@@ -170,7 +153,63 @@
               "count",
               "mean"
             ]
+          },
+          "xPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3840
+          },
+          "yPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 12000
+          },
+          "w": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 3840
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 80,
+            "maximum": 12000
+          },
+          "instructions": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "z": {
+            "type": "string",
+            "maxLength": 400
           }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 12000
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "snap"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 320,
+          "maximum": 3840
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 240,
+          "maximum": 12000
+        },
+        "snap": {
+          "const": 10
         }
       }
     },
@@ -179,6 +218,7 @@
       "maxItems": 50000,
       "items": {
         "type": "object",
+        "maxProperties": 150,
         "additionalProperties": {
           "type": [
             "string",
@@ -189,5 +229,6 @@
         }
       }
     }
-  }
+  },
+  "$comment": "Version 2.1 uses pixel coordinates. The app migrates 1.0, 1.1 and 2.0 designs, preserving visual instructions and embedded data."
 }

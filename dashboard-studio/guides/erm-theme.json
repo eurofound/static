@@ -1,0 +1,42 @@
+{
+  "version": "0.1",
+  "status": "observed reference, not approved corporate policy",
+  "reference": "https://eurofound-dashboards.vercel.app/dashboards/erm/",
+  "sourceRevision": "da49551b8fe705725d74d466dcdbfe6fa550d54d",
+  "fonts": {
+    "body": "Source Sans 3",
+    "heading": "Roboto"
+  },
+  "colors": {
+    "navy": "#26324D",
+    "action": "#41719C",
+    "body": "#3A4664",
+    "secondary": "#6B7690",
+    "line": "#D9DEE4",
+    "grid": "#E2E6EB",
+    "canvas": "#FFFFFF",
+    "pale": "#EAF0F6",
+    "loss": "#A03B45",
+    "gain": "#4E6B3C"
+  },
+  "palette": [
+    "#3F6C9B",
+    "#B08A5E",
+    "#A03B45",
+    "#4E6B3C",
+    "#5C4E8E",
+    "#4E7F8C",
+    "#C0A05C",
+    "#21374F",
+    "#8A93A6"
+  ],
+  "layout": {
+    "maxWidth": 1520,
+    "desktopGutter": 48,
+    "panelGap": 34,
+    "panelRule": 5,
+    "stackBreakpoint": 980,
+    "smallBreakpoint": 700
+  },
+  "prototypeNote": "Studio uses a 12-column authoring grid and a reduced responsive renderer; it is inspired by ERM, not a pixel-identical implementation."
+}

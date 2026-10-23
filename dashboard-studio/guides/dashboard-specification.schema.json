@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dashboard Studio specification",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "title",
+    "theme",
+    "source",
+    "blocks",
+    "canvas"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "2.1"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "subtitle": {
+      "type": "string",
+      "maxLength": 800
+    },
+    "theme": {
+      "const": "erm-classic-v0.1"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "reference",
+        "schema"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "reference": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "schema": {
+          "type": "array",
+          "maxItems": 150,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "type"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "maxLength": 200
+              },
+              "type": {
+                "enum": [
+                  "string",
+                  "number"
+                ]
+              },
+              "missing": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title",
+          "xPos",
+          "yPos",
+          "w",
+          "h"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "x": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "y": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "series": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "field": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "type": {
+            "enum": [
+              "bar",
+              "column",
+              "line",
+              "area",
+              "pie",
+              "scatter",
+              "heatmap",
+              "treemap",
+              "map",
+              "dropdown",
+              "slider",
+              "buttons",
+              "reset",
+              "metric",
+              "table",
+              "text",
+              "stacked-column",
+              "radar",
+              "clusteredBar",
+              "clusteredColumn",
+              "stackedBar",
+              "percentBar",
+              "donut",
+              "bubble",
+              "histogram",
+              "boxplot"
+            ]
+          },
+          "aggregate": {
+            "enum": [
+              "sum",
+              "count",
+              "mean"
+            ]
+          },
+          "xPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3840
+          },
+          "yPos": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 12000
+          },
+          "w": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 3840
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 80,
+            "maximum": 12000
+          },
+          "instructions": {
+            "type": "string",
+            "maxLength": 12000
+          },
+          "z": {
+            "type": "string",
+            "maxLength": 400
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 12000
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "snap"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 320,
+          "maximum": 3840
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 240,
+          "maximum": 12000
+        },
+        "snap": {
+          "const": 10
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "maxItems": 50000,
+      "items": {
+        "type": "object",
+        "maxProperties": 150,
+        "additionalProperties": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "$comment": "Version 2.1 uses pixel coordinates. The app migrates 1.0, 1.1 and 2.0 designs, preserving visual instructions and embedded data."
+}
