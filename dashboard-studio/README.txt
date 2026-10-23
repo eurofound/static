@@ -1,4 +1,4 @@
-Eurofound Dashboard Studio 2.1
+Eurofound Dashboard Studio 2.2
 
 Public entry point: https://static.eurofound.europa.eu/dashboard-studio/
 Source: eurofound/static, gh-pages branch, dashboard-studio directory.
@@ -6,18 +6,18 @@ Source: eurofound/static, gh-pages branch, dashboard-studio directory.
 Purpose
 Create a visual brief for a later dashboard build. Each tile records a starting
 visual, its position, suggested data mapping and free-text visual instructions.
-The instructions are included in the saved design and the downloadable AI brief.
+The instructions are included in the saved design and the downloadable design brief.
 Studio does not send prompts to an AI model or generate a production dashboard.
 
 Workflow
 1. The page starts with an empty layout and no data on every fresh load.
 2. Load a CSV or flat JSON array (up to 5 MB, 50,000 rows, 150 fields).
 3. Add and position tiles, then describe each visual. Preview mapping is optional.
-4. Save design downloads a version 2.1 JSON file, including the dataset by default.
+4. Save design downloads a version 2.2 JSON file, including the dataset by default.
    Uncheck Include the dataset in Data to save just the brief and schema.
 5. Open design restores the layout, instructions, mappings and any embedded data.
    A design-only file requires the source data to be loaded again for previews.
-   Version 1.0, 1.1 and 2.0 files migrate on opening; unknown types and duplicate IDs fail clearly.
+   Version 1.0, 1.1, 2.0 and 2.1 files migrate on opening; unknown types and duplicate IDs fail clearly.
 6. Send the saved file to the dashboard builder. Download design brief supplies a
    readable companion handoff. Incomplete mappings do not block saving.
 
@@ -29,10 +29,12 @@ Highcharts 12.4.0 and Europe map geometry are bundled in vendor/ with their
 original notices. Fonts load from Google Fonts, with local font fallbacks. Highcharts remains subject to the organisation's
 licence terms; publishing this editor does not supply a Highcharts licence.
 
-19 chart starting points
-Bar, column, line, area, pie, scatter, heatmap, treemap, Europe map,
-clustered bars, clustered columns, stacked bars, 100% stacked bars,
-donut, bubble, histogram box plot, radar and stacked columns.
+15 chart starting points
+Bar, clustered bar, stacked bar, radar, line, area, pie, scatter, heatmap,
+treemap, Europe map, donut, bubble, histogram and box plot.
+Bar families offer horizontal or vertical orientation in chart options.
+Older column designs migrate to the same orientation. Existing percentage
+bar designs retain their calculations when opened, but cannot be added anew.
 
 Preview semantics
 Sum, row count and unweighted mean operate on one loaded table.
@@ -61,3 +63,5 @@ Keep core.js, renderer.js, studio.js, studio.css, index.html and the schema toge
 
 
 Designer: live mapped visuals and shared filters; free pixel movement with optional 10px snapping; resizable canvas; dashboard settings on background click; per-visual design instructions.
+
+The document has one vertical page scrollbar. The selected tile can be removed with Delete or Delete tile; typing fields retain normal Delete behaviour.

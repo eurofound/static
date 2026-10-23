@@ -5,7 +5,7 @@ const colours=['#41719c','#b47c50','#4c8575','#93668a','#b94f60','#737db5','#7a8
 function destroy(el){(el._charts||[]).forEach(c=>c.destroy());el._charts=[];}
 function chartOptions(b,rows){
  const agg=C.aggregate(rows,b),categories=[...new Set(agg.map(a=>a.category))],groups=[...new Set(agg.map(a=>a.series))];
- const type=({clusteredBar:'bar',clusteredColumn:'column',stackedBar:'bar',percentBar:'bar',donut:'pie','stacked-column':'column',radar:'line'})[b.type]||b.type;
+ const type=['bar','clusteredBar','stackedBar','percentBar'].includes(b.type)?(b.orientation==='vertical'?'column':'bar'):({donut:'pie',radar:'line'})[b.type]||b.type;
  const lookup=new Map(agg.map(a=>[JSON.stringify([a.category,a.series]),a.value]));
  const base={chart:{type,animation:false,backgroundColor:'transparent',style:{fontFamily:'Source Sans 3, Arial, sans-serif'}},title:{text:undefined},credits:{enabled:true},colors:colours,accessibility:{enabled:true,description:b.title+'. Data preview; see the visual instructions for the intended final visual.'},xAxis:{categories,title:{text:undefined}},yAxis:{title:{text:b.aggregate==='count'?'Records':b.y}},legend:{enabled:groups.length>1},tooltip:{useHTML:false},plotOptions:{series:{animation:false,marker:{enabled:false}}},series:groups.map(s=>({name:s||b.y||'Records',data:categories.map(c=>lookup.get(JSON.stringify([c,s]))??null)}))};
  if(['pie','donut','treemap','percentBar'].includes(b.type)&&agg.some(a=>a.value<0))throw Error('This preview needs non-negative values.');

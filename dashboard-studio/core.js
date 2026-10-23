@@ -1,23 +1,21 @@
 (function(root){'use strict';
 const charts=[
- ['radar','Radar','Compare at least three categories on a shared scale.'],['stacked-column','Stacked columns','Compare totals and component groups vertically.'],
- ['bar','Bar','Compare categories horizontally.'],['column','Column','Compare categories vertically.'],
+ ['radar','Radar','Compare at least three categories on a shared scale.'],
+ ['bar','Bar','Compare categories with horizontal bars or vertical columns.'],
  ['line','Line','Show change across ordered periods.'],['area','Area','Show magnitude over ordered periods.'],
  ['pie','Pie','Show a few parts of a whole.'],['scatter','Scatter','Compare two numeric measures for each record.'],
  ['heatmap','Heatmap','Compare values across two categorical dimensions.'],['treemap','Treemap','Compare positive values using rectangle area.'],
  ['map','Europe map','Compare countries using ISO2 country codes.'],
  ['clusteredBar','Clustered bars','Compare groups side by side within each category.'],
- ['clusteredColumn','Clustered columns','Compare grouped vertical columns.'],
  ['stackedBar','Stacked bars','Compare totals and their component groups.'],
- ['percentBar','100% stacked bars','Compare group shares within each category.'],
  ['donut','Donut','Show parts of a whole around a central opening.'],
  ['bubble','Bubble','Compare X, Y and a third measure as bubble size.'],
  ['histogram','Histogram','Show the distribution of raw numeric observations.'],
  ['boxplot','Box plot','Compare distributions of raw observations by category.']
 ];
 const controls=[['metric','Key figure'],['table','Data table'],['text','Text'],['dropdown','Dropdown'],['slider','Slider'],['buttons','Buttons'],['reset','Reset filters']];
-const chartTypes=charts.map(c=>c[0]),controlTypes=['dropdown','slider','buttons','reset'],types=[...chartTypes,...controls.map(c=>c[0])];
-const names=Object.fromEntries([...charts,...controls].map(c=>[c[0],c[1]])),descriptions=Object.fromEntries(charts.map(c=>[c[0],c[2]]));
+const paletteTypes=charts.map(c=>c[0]),chartTypes=[...paletteTypes,'percentBar'],controlTypes=['dropdown','slider','buttons','reset'],types=[...chartTypes,...controls.map(c=>c[0])];
+const names={...Object.fromEntries([...charts,...controls].map(c=>[c[0],c[1]])),percentBar:'100% stacked bars (saved design)'},descriptions=Object.fromEntries(charts.map(c=>[c[0],c[2]]));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>v==null||typeof v==='boolean'||String(v).trim()===''?null:Number.isFinite(Number(v))?Number(v):null;
 function parseCSV(text){
@@ -52,14 +50,15 @@ function validate(spec){const msgs=[];for(const b of spec.blocks||[]){if(b.xPos+
 const snap = value => Math.round(value / 10) * 10;
 const bounded = (value, min, max, fallback) => Math.min(max, Math.max(min, Number.isFinite(Number(value)) ? Math.round(Number(value)) : fallback));
 function checkSpec(raw){
-  if(!raw || !['1.0','1.1','2.0','2.1'].includes(raw.schemaVersion) || !Array.isArray(raw.blocks) || raw.blocks.length>60)
-    throw Error('Use a Dashboard Studio design (1.0, 1.1, 2.0 or 2.1) with at most 60 visuals.');
+  if(!raw || !['1.0','1.1','2.0','2.1','2.2'].includes(raw.schemaVersion) || !Array.isArray(raw.blocks) || raw.blocks.length>60)
+    throw Error('Use a Dashboard Studio design (1.0, 1.1, 2.0, 2.1 or 2.2) with at most 60 visuals.');
   const legacy=['1.0','2.0'].includes(raw.schemaVersion), ids=new Set();
   const canvas={width:bounded(raw.canvas?.width,320,3840,1200),height:bounded(raw.canvas?.height,240,12000,1340),snap:10};
-  const blocks=raw.blocks.map(b=>{
+  const blocks=raw.blocks.map(original=>{
+    const oldType=original?.type;const b={...original,type:({column:'bar',clusteredColumn:'clusteredBar','stacked-column':'stackedBar'})[oldType]||oldType};
     if(!b || !types.includes(b.type) || !b.id || ids.has(String(b.id).slice(0,80))) throw Error('Each visual needs a unique ID and a supported type.');
     ids.add(String(b.id).slice(0,80));
-    const c={id:String(b.id).slice(0,80),type:b.type};
+    const c={id:String(b.id).slice(0,80),type:b.type,orientation:['column','clusteredColumn','stacked-column'].includes(oldType)||b.orientation==='vertical'?'vertical':'horizontal'};
     for(const k of ['title','x','y','z','series','field','text','note','instructions'])
       c[k]=String((k==='instructions'?b.instructions??b.description:b[k])??'').slice(0,['text','instructions'].includes(k)?12000:400);
     c.aggregate=['sum','count','mean'].includes(b.aggregate)?b.aggregate:'sum';
@@ -77,12 +76,12 @@ function checkSpec(raw){
     c.xPos=Math.min(c.xPos,canvas.width-c.w);c.yPos=Math.min(c.yPos,canvas.height-c.h);
     return c;
   });
-  return {schemaVersion:'2.1',title:String(raw.title||'Dashboard').slice(0,200),subtitle:String(raw.subtitle||'').slice(0,800),notes:String(raw.notes??raw.description??'').slice(0,12000),canvas,theme:'erm-classic-v0.1',source:{reference:String(raw.source?.reference||'').slice(0,1000),schema:Array.isArray(raw.source?.schema)?raw.source.schema.filter(f=>f&&typeof f.name==='string').slice(0,150).map(f=>({name:f.name.slice(0,200),type:f.type==='number'?'number':'string',...(Number.isInteger(f.missing)&&f.missing>=0?{missing:f.missing}:{})})):[]},blocks};
+  return {schemaVersion:'2.2',title:String(raw.title||'Dashboard').slice(0,200),subtitle:String(raw.subtitle||'').slice(0,800),notes:String(raw.notes??raw.description??'').slice(0,12000),canvas,theme:'erm-classic-v0.1',source:{reference:String(raw.source?.reference||'').slice(0,1000),schema:Array.isArray(raw.source?.schema)?raw.source.schema.filter(f=>f&&typeof f.name==='string').slice(0,150).map(f=>({name:f.name.slice(0,200),type:f.type==='number'?'number':'string',...(Number.isInteger(f.missing)&&f.missing>=0?{missing:f.missing}:{})})):[]},blocks};
 }
 function designBrief(spec){
-  const lines=['# '+spec.title,'','## Dashboard design brief',spec.subtitle,'','## Dashboard notes',spec.notes||'No dashboard notes supplied.','','## Canvas',`${spec.canvas.width} × ${spec.canvas.height} pixels. Position and resize on a 10-pixel grid. Narrow screens stack visuals in reading order.`,'','## Dataset',spec.source.reference||'No source reference supplied.','Fields: '+spec.source.schema.map(f=>f.name+' ('+f.type+')').join(', '),'This readable brief contains mappings only. The saved design can include the dataset; otherwise supply the data separately.'];
+  const lines=['# '+spec.title,'','## Dashboard design brief',spec.subtitle,'','## Dashboard notes',spec.notes||'No dashboard notes supplied.','','## Canvas',`${spec.canvas.width} × ${spec.canvas.height} pixels. Position and resize on a 10-pixel grid. Centre the dashboard title and subtitle. Narrow screens stack visuals in reading order.`,'','## Dataset',spec.source.reference||'No source reference supplied.','Fields: '+spec.source.schema.map(f=>f.name+' ('+f.type+')').join(', '),'This readable brief contains mappings only. The saved design can include the dataset; otherwise supply the data separately.'];
   for(const b of [...spec.blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos)){
-    lines.push('',`## ${b.title} [${b.id}]`,`Visual: ${b.type}`,`Position: x ${b.xPos}px, y ${b.yPos}px. Size: ${b.w}px × ${b.h}px.`);
+    lines.push('',`## ${b.title} [${b.id}]`,`Visual: ${names[b.type]}`, ...(['bar','clusteredBar','stackedBar','percentBar'].includes(b.type)?['Orientation: '+(b.orientation==='vertical'?'Vertical columns':'Horizontal bars')]:[]),`Position: x ${b.xPos}px, y ${b.yPos}px. Size: ${b.w}px × ${b.h}px.`);
     if(chartTypes.includes(b.type)||b.type==='metric') lines.push(`Mapping: X/category ${b.x||'—'}; Y/value ${b.y||'—'}; bubble size ${b.z||'—'}; series ${b.series||'none'}; aggregation ${['scatter','bubble','histogram','boxplot'].includes(b.type)?'raw observations':b.aggregate}.`);
     if(controlTypes.includes(b.type)) lines.push(`Filter field: ${b.field||'—'}. Scope: all data visuals. Slider operator: less than or equal to.`);
     if(b.text)lines.push('Content: '+b.text);
@@ -92,9 +91,9 @@ function designBrief(spec){
   lines.push('','## Build requirements','Preserve the reviewed layout, visual IDs, mappings and design instructions. Text instructions describe intended behaviour; only configured mappings and shared filters run in this prototype. Resolve unspecified interactions before implementation.','Use the Eurofound visual style and quality workflow. Reconcile calculations with the source, keep nulls distinct from zero, and test keyboard access, narrow layouts, filters and exports. Do not treat fictional demonstration values as production evidence.');
   return lines.join('\n')+'\n';
 }
-function emptySpec(){return {schemaVersion:'2.1',title:'Untitled dashboard',subtitle:'',notes:'',canvas:{width:1200,height:900,snap:10},theme:'erm-classic-v0.1',source:{reference:'',schema:[]},blocks:[]};}
+function emptySpec(){return {schemaVersion:'2.2',title:'Untitled dashboard',subtitle:'',notes:'',canvas:{width:1200,height:900,snap:10},theme:'erm-classic-v0.1',source:{reference:'',schema:[]},blocks:[]};}
 function demoRows(){const rows=[];const countries=[['Ireland','ie'],['France','fr'],['Germany','de'],['Spain','es'],['Italy','it'],['Poland','pl']];for(let y=2021;y<=2025;y++)countries.forEach(([country,country_code],i)=>['Manufacturing','Services'].forEach((sector,j)=>rows.push({country,country_code,year:y,sector,events:20+i*14+(y-2021)*3+j*9,job_gains:800+i*630+(y-2021)*160+j*210,job_losses:600+i*540+(y-2021)*210+j*130})));return rows;}
 function demoSpec(rows){const block=(id,type,title,xPos,yPos,w,h,extra={})=>({id,type,title,xPos,yPos,w,h,x:'country',y:'events',series:'',aggregate:'sum',field:'',text:'',note:'',...extra});return{schemaVersion:'1.0',title:'European restructuring overview',subtitle:'Explore countries, periods and announced employment changes.',theme:'erm-classic-v0.1',source:{reference:'Fictional demonstration data — replace before publication',schema:inspectRows(rows)},blocks:[block('country','dropdown','Country',0,0,4,2,{field:'country'}),block('year','slider','Up to year',4,0,4,2,{field:'year'}),block('sector','buttons','Sector',8,0,4,2,{field:'sector'}),block('events','metric','Restructuring events',0,2,4,3),block('gains','metric','Announced job gains',4,2,4,3,{y:'job_gains'}),block('losses','metric','Announced job losses',8,2,4,3,{y:'job_losses'}),block('map','map','Restructurings by country',0,5,6,7,{x:'country_code'}),block('trend','area','Number of restructuring events',6,5,6,7,{x:'year'}),block('jobs','line','Announced job gains over time',0,12,8,7,{x:'year',y:'job_gains',series:'country'}),block('sectors','bar','Events by sector',8,12,4,7,{x:'sector'}),block('notes','text','About these figures',0,19,9,3,{text:'Fictional data for testing the designer. Production ERM figures describe recorded announcements and should be interpreted alongside the methodology.'}),block('reset','reset','Reset filters',9,19,3,3)]};}
 const ordered=blocks=>[...blocks].sort((a,b)=>a.yPos-b.yPos||a.xPos-b.xPos);
-const api={charts,names,descriptions,controls,ordered,emptySpec,quantile,boxData,mappingIssues,readDesign,designFile,snap,designBrief,chartTypes,controlTypes,types,esc,num,parseCSV,inspectRows,filtered,aggregate,metric,validate,checkSpec,demoRows,demoSpec:rows=>checkSpec(demoSpec(rows))};if(typeof module!=='undefined')module.exports=api;root.StudioCore=api;
+const api={paletteTypes,charts,names,descriptions,controls,ordered,emptySpec,quantile,boxData,mappingIssues,readDesign,designFile,snap,designBrief,chartTypes,controlTypes,types,esc,num,parseCSV,inspectRows,filtered,aggregate,metric,validate,checkSpec,demoRows,demoSpec:rows=>checkSpec(demoSpec(rows))};if(typeof module!=='undefined')module.exports=api;root.StudioCore=api;
 })(typeof window!=='undefined'?window:globalThis);
