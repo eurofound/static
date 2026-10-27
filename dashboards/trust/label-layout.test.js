@@ -2,6 +2,15 @@ const { test } = require("node:test");
 const assert = require("node:assert/strict");
 const { layoutCountryLabels } = require("./label-layout.js");
 
+test("long country names use separate rows on a narrow mobile plot", () => {
+  const labels = layoutCountryLabels([
+    { country: "European Union", anchorX: 160, width: 174 },
+    { country: "Luxembourg", anchorX: 210, width: 155 },
+  ], 0, 256);
+  assert.deepEqual(labels.map(label => label.row), [0, 1]);
+  assert.ok(labels.every(label => label.x >= 0 && label.x + label.width <= 256));
+});
+
 test("nearby dots get separate labels, including at either plot edge", () => {
   // Cover all anchor positions, including equal scores, with unequal label widths.
   for (let a = 0; a <= 802; a += 10) {

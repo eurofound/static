@@ -4,7 +4,10 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 
 ## Files
 
-- `index.html`: the dashboard, with styles and chart code inline.
+- `index.html`: dashboard markup and styles; no site header or standalone export buttons.
+- `chart.js`: chart rendering, selections and responsive layout.
+- `exports.js`: CSV/PNG exports and the website's iframe message hooks.
+- `exports.test.js`: export data, CSV quoting and permitted-parent checks.
 - `Trust.csv`: the dashboard data, loaded using the relative path `./Trust.csv`.
 - `trust.html`: a compatibility redirect to the folder's index page.
 - `data-provenance.json`: source survey asset, questions, statistics and included rounds.
@@ -50,6 +53,7 @@ The selector displays years only; round selection remains explicit in the data.
 The footer contains the requested source link and short response-scale note,
 with no heading. Text occupies 90% of its width and the Eurofound logo the
 right-hand 10%.
+On phones the logo retains a readable 64 px width.
 
 Country flags and names sit in reserved space above the first chart row, with
 connector lines to their dots. Their full rendered widths determine spacing.
@@ -57,9 +61,44 @@ Labels are keyed by country and repositioned together after selection, replaceme
 deselection, year changes and resizing. Selecting a third country replaces the
 oldest of the two selections; deselecting removes its label and highlights immediately.
 
+## Mobile and website downloads
+
+At narrow widths, controls stack and indicator headings move above their dots.
+Each row gets enough height for its actual swarm. Country labels use a second
+row when needed. Resizing keeps the current year and selections. Mobile year
+changes use the final positions immediately so moving dots do not cross headings.
+
+The existing Storyblok website iframe controls in
+`components/publications/details/data-item-card.tsx` send these messages:
+
+- `download-png`: save a PNG of the current year and highlighted countries, including
+  the title, EU legend, country flags, source note and Eurofound logo.
+- `download-csv`: save all 196 observations plotted for the current year. Dimmed
+  countries remain plotted and are included; `Highlighted` records the selection.
+  The file retains indicator, score, unit, year, round and source URL.
+- `get-chart-data`: reply with `chart-data` containing the same export rows.
+
+The iframe announces `chart-ready` after loading. It accepts requests only from
+its parent window on the same origin, HTTPS Eurofound subdomains or
+`https://app.storyblok.com`. It also exposes `getChartData`, `getChartCSV`,
+`downloadChartCSV`, `downloadChartPNG` and the existing `window.chart` compatibility
+methods. There are deliberately no download buttons within the dashboard.
+
+These are browser message hooks, not Storyblok publishing webhooks. No CMS
+credentials or server export service are required. The website controls the
+iframe height; the existing 650 px embed scrolls internally when content is taller.
+
+PNG assets are embedded in the generated image. Exports do not rely on HTML
+foreignObject rendering or external flag styles in the saved file. The image is
+generated locally in the browser at twice the displayed SVG resolution.
+
+Verified on 27 October 2026: widths 320, 390 and 768 px plus desktop, long country
+labels, replacement/deselection, CSV values against all 196 source observations,
+desktop/mobile PNG generation and the parent message flow. No survey data changed.
+
 Run `python dashboards/trust/validate-data.py` from the repository root before
-publishing, and `node --test dashboards/trust/label-layout.test.js` for label
-positioning changes. Serve the repository locally and check every year, country
+publishing, and `node --test dashboards/trust/label-layout.test.js dashboards/trust/exports.test.js`
+for layout/export changes. Serve the repository locally and check every year, country
 comparisons, the default year and footer. GitHub Pages publishes `gh-pages`;
 changes to `master` do not update this dashboard.
 
