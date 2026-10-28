@@ -76,7 +76,8 @@ retains both selected countries. Choosing a year manually, hiding the page or
 requesting a CSV/PNG download pauses playback. The current year is retained.
 Flags, country names, connector endpoints, selected-country lines and dots share
 the same 650 ms easing. Rapid year changes continue from their visible positions.
-Users requesting reduced motion get immediate position updates instead.
+Year and selection changes retain the original 650 ms animation, including when
+the browser reports a reduced-motion preference. Playback is always user-started.
 
 Verified on 28 October 2026: a complete playback loop, pause/resume, manual-year
 pause, keyboard control, interrupted year transitions and 320/390 px layouts.

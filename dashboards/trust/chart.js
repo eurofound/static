@@ -8,8 +8,8 @@ const x=d3.scaleLinear().domain([1,8]).range([0,innerW]),rowY=i=>compact?(rowCen
 const color=d3.scaleDiverging().domain([1,5,8]).interpolator(d3.interpolateRgbBasis([css("--low"),css("--mid"),css("--high")]));
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
 const curve=d3.curveCatmullRom.alpha(.8),lineGen=d3.line().x(d=>d.x).y(d=>d.y).curve(curve),dotsG=g.append("g"),bandG=g.append("g").attr("class","band-layer"),layers={A:{g:g.append("g").attr("class","layer-A")},B:{g:g.append("g").attr("class","layer-B")}},countryLabelsG=g.append("g").attr("class","country-labels"),MOVE_MS=650;
-const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
-const moveDuration=()=>reducedMotion.matches?0:MOVE_MS;
+// Preserve the original smooth movement for user-requested year/selection changes.
+const moveDuration=()=>MOVE_MS;
 const movement=duration=>d3.transition().duration(duration).ease(d3.easeCubicInOut);
 dotsG.raise();
 const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${p.Metric}: ${p.value}`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll("circle").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
