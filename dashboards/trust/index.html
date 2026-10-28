@@ -21,6 +21,13 @@ h2{margin:6px 0;text-align:center;font-size:28px;letter-spacing:-.025em}
 .select-wrap select:focus{outline:none;border-color:#b8c2cf;box-shadow:0 0 0 3px rgba(14,91,118,.1)}
 .select-wrap.year select{min-width:150px;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%23222" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');background-repeat:no-repeat;background-position:right 12px center;background-size:12px 8px}
 .select-wrap.year select.soft{color:#7c8796}
+.year-controls{display:flex;align-items:center;gap:6px}
+.play-years{display:grid;place-items:center;flex:0 0 40px;width:40px;height:44px;padding:10px;border:0;border-radius:10px;background:transparent;color:var(--muted);cursor:pointer}
+.play-years:hover,.play-years[aria-pressed="true"]{background:#f1f5f7;color:var(--high)}
+.play-years:focus-visible{outline:2px solid var(--high);outline-offset:2px}
+.play-years:disabled{opacity:.4;cursor:default}
+.play-years svg{width:18px;height:18px;fill:currentColor}
+.play-years [hidden]{display:none}
 .clear-btn{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;background:transparent;color:#111;font-size:22px;line-height:1;padding:0;cursor:pointer}
 .clear-btn:hover{color:#000;transform:translateY(-50%) scale(1.05)}
 .clear-btn:active{transform:translateY(-50%) scale(.98)}
@@ -64,6 +71,9 @@ svg{display:block;width:100%;height:auto}
   .select-wrap,.select-wrap select{width:100%;min-width:0}
   .select-wrap select{font-size:16px}
   .select-wrap.year select{min-width:0}
+  .year-controls{width:100%}
+  .year-controls .select-wrap{flex:1;min-width:0}
+  .play-years{flex-basis:44px;width:44px}
   .legend-row{transform:none}
   .label{font-size:16px}
   .flag-row{font-size:16px}
@@ -79,7 +89,13 @@ svg{display:block;width:100%;height:auto}
 <header class="controls-stack">
 <div class="controls-row">
 <div class="select-wrap country"><select id="countrySel" required aria-label="Country"><option id="countryDisplay" value="" disabled selected hidden>Select a country</option></select><button id="clearSel" class="clear-btn" hidden aria-label="Clear selection">×</button></div>
+<div class="year-controls">
 <div class="select-wrap year"><select id="yearSel" required class="soft" aria-label="Survey year"></select></div>
+<button id="playYears" class="play-years" type="button" aria-label="Play years" title="Play years" aria-pressed="false" aria-controls="yearSel chart" disabled>
+<svg class="play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3.5a1 1 0 0 1 1.5-.86l10 6.5a1 1 0 0 1 0 1.72l-10 6.5A1 1 0 0 1 6 16.5Z"/></svg>
+<svg class="pause-icon" viewBox="0 0 20 20" aria-hidden="true" hidden><rect x="4" y="3" width="4" height="14" rx="1"/><rect x="12" y="3" width="4" height="14" rx="1"/></svg>
+</button>
+</div>
 </div>
 <div class="legend-row"><div class="legend-eu" title="EU27 average"><div class="chip"></div><span>EU27 average</span></div></div>
 </header>
@@ -92,7 +108,8 @@ svg{display:block;width:100%;height:auto}
 </main>
 <div id="tooltip" class="tooltip" style="display:none"></div>
 <script src="./label-layout.js?v=20261027"></script>
-<script src="./chart.js?v=20261027"></script>
-<script src="./exports.js?v=20261027"></script>
+<script src="./year-playback.js?v=20261028"></script>
+<script src="./chart.js?v=20261028"></script>
+<script src="./exports.js?v=20261028"></script>
 </body>
 </html>

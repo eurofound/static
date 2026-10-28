@@ -8,9 +8,12 @@ const x=d3.scaleLinear().domain([1,8]).range([0,innerW]),rowY=i=>compact?(rowCen
 const color=d3.scaleDiverging().domain([1,5,8]).interpolator(d3.interpolateRgbBasis([css("--low"),css("--mid"),css("--high")]));
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
 const curve=d3.curveCatmullRom.alpha(.8),lineGen=d3.line().x(d=>d.x).y(d=>d.y).curve(curve),dotsG=g.append("g"),bandG=g.append("g").attr("class","band-layer"),layers={A:{g:g.append("g").attr("class","layer-A")},B:{g:g.append("g").attr("class","layer-B")}},countryLabelsG=g.append("g").attr("class","country-labels"),MOVE_MS=650;
+const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
+const moveDuration=()=>reducedMotion.matches?0:MOVE_MS;
+const movement=duration=>d3.transition().duration(duration).ease(d3.easeCubicInOut);
 dotsG.raise();
 const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${p.Metric}: ${p.value}`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll("circle").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
-const yearSel=document.getElementById("yearSel"),countrySel=document.getElementById("countrySel"),countryDisplay=document.getElementById("countryDisplay"),clearBtn=document.getElementById("clearSel");let selectedCountries=[],categories=[],points=[],years=[],curYear=null,allRows=[];
+const yearSel=document.getElementById("yearSel"),countrySel=document.getElementById("countrySel"),countryDisplay=document.getElementById("countryDisplay"),clearBtn=document.getElementById("clearSel"),playBtn=document.getElementById("playYears");let selectedCountries=[],categories=[],points=[],years=[],curYear=null,allRows=[],playback;
 window.trustDataReady=d3.csv(CSV_URL,d3.autoType).then(init);
 window.trustDataReady.catch(err=>{
   console.error(err);
@@ -30,19 +33,34 @@ function init(rows){
   configureChart();renderChart();
   const countries=[...new Set(allRows.map(d=>d.Country))];
   ["European Union",...countries.filter(c=>c!=="European Union").sort((a,b)=>a.localeCompare(b))].forEach(c=>countrySel.add(new Option(c,c)));
-  yearSel.addEventListener("change",()=>{
-    yearSel.classList.remove("soft");
-    const y=+yearSel.value;if(y===curYear)return;
-    const prevMap=new Map(points.map(p=>[`${p.Metric}|${p.Country}`,{x:p.x,y:p.y}]));
-    const prevSelected=Object.fromEntries(selectedCountries.map(c=>[c,getCountryPoints(c).map(p=>({...p}))]));
-    curYear=y;hideTip();updateYear(allRows.filter(d=>d.Year===curYear),prevMap,prevSelected);
-  });
+  playback=createYearPlayback({years,getYear:()=>curYear,setYear:changeYear,onPlayingChange:playing=>{
+    playBtn.setAttribute("aria-pressed",String(playing));
+    playBtn.setAttribute("aria-label",playing?"Pause years":"Play years");
+    playBtn.title=playing?"Pause years":"Play years";
+    playBtn.querySelector(".play-icon").toggleAttribute("hidden",playing);
+    playBtn.querySelector(".pause-icon").toggleAttribute("hidden",!playing);
+  }});
+  playBtn.disabled=years.length<2;
+  playBtn.addEventListener("click",()=>playback.toggle());
+  yearSel.addEventListener("change",()=>{playback.pause();changeYear(+yearSel.value)});
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)playback.pause()});
+  window.addEventListener("pagehide",()=>playback.pause());
   countrySel.addEventListener("change",()=>{const choice=countrySel.value;if(!choice)return;hideTip();addCountry(choice,true);countrySel.value=""});
   clearBtn.addEventListener("click",()=>{selectedCountries=[];updateCountryDisplay();applyFade(new Set);drawSelected(false);hideTip()});
   svg.on("click",event=>{if(event.target.tagName.toLowerCase()!=="circle")deselectLast()});
   new ResizeObserver(()=>{
     if(configureChart()){hideTip();renderChart();updateCountryDisplay()}
   }).observe(document.querySelector(".wrap"));
+}
+window.pauseTrustPlayback=()=>playback?.pause();
+function changeYear(year){
+  if(!years.includes(year)||year===curYear)return;
+  // Start from what is on screen, including an interrupted year transition.
+  const prevMap=new Map();
+  dotsG.selectAll("circle").each(function(p){prevMap.set(`${p.Metric}|${p.Country}`,{x:+this.getAttribute("cx"),y:+this.getAttribute("cy")})});
+  const prevSelected=Object.fromEntries(selectedCountries.map(c=>[c,getCountryPoints(c).map(p=>({...p,...prevMap.get(`${p.Metric}|${p.Country}`)}))]));
+  curYear=year;yearSel.value=String(year);yearSel.classList.remove("soft");
+  hideTip();renderChart(prevMap,prevSelected);
 }
 function configureChart(){
   const available=Math.max(240,Math.floor(svg.node().getBoundingClientRect().width));
@@ -55,7 +73,7 @@ function configureChart(){
   return changed;
 }
 function renderChart(prevMap,prevSelected){
-  if(compact){prevMap=undefined;prevSelected=undefined}
+  const transition=movement(prevMap?moveDuration():0);
   points=buildPoints(allRows.filter(d=>d.Year===curYear));beeswarm(points);
   const titleY=[],ruleY=[];
   let axisY=(categories.length-1)*rowGap+78;
@@ -74,19 +92,24 @@ function renderChart(prevMap,prevSelected){
     rowCenters=nextCenters;axisY=ruleY[ruleY.length-1]+30;
   }else categories.forEach((_,i)=>{titleY[i]=rowY(i);ruleY[i]=rowY(i)+r+38});
   const totalH=margin.top+axisY+32;
-  svg.attr("width",width).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
-  guidesG.selectAll("*").remove();titlesG.selectAll("*").remove();
-  categories.forEach((lab,i)=>{
-    // Keep selection lines behind readable indicator headings on narrow screens.
-    if(compact)titlesG.append("rect").attr("x",labelLeft).attr("y",titleY[i]-14).attr("width",innerW).attr("height",28).attr("fill","#fff");
-    titlesG.append("text").attr("class","label").attr("x",labelLeft).attr("y",titleY[i]).attr("text-anchor","start").text(lab);
-    guidesG.append("line").attr("class","row-rule").attr("x1",labelLeft).attr("x2",innerW).attr("y1",ruleY[i]).attr("y2",ruleY[i]);
+  svg.interrupt().attr("width",width).transition(transition).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
+  // Keep headings and guides in step with the changing swarm height on phones.
+  const titles=titlesG.selectAll("g.chart-title").data(categories,d=>d).join(enter=>{
+    const group=enter.append("g").attr("class","chart-title");
+    group.append("rect").attr("height",28).attr("fill","#fff");
+    group.append("text").attr("class","label").attr("text-anchor","start");return group;
   });
-  guidesG.append("line").attr("x1",x(5)).attr("x2",x(5)).attr("y1",0).attr("y2",ruleY[ruleY.length-1]).attr("stroke","#d6d6d6");
-  const cues=guidesG.append("g").attr("class","axis-cues").attr("transform",`translate(0,${axisY})`);
-  cues.append("text").attr("class","low").attr("x",compact?0:x(1.2)).attr("text-anchor","start").text("← Lower trust");
-  cues.append("text").attr("class","high").attr("x",compact?innerW:x(7.5)).attr("text-anchor","end").text("Higher trust →");
-  drawDots(prevMap);drawSelected(false,prevSelected);titlesG.raise();countryLabelsG.raise();
+  titles.select("rect").interrupt().attr("display",compact?null:"none").transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]-14).attr("width",innerW);
+  titles.select("text").interrupt().text(d=>d).transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]);
+  guidesG.selectAll("line.row-rule").data(categories,d=>d).join("line").attr("class","row-rule").interrupt().transition(transition)
+    .attr("x1",labelLeft).attr("x2",innerW).attr("y1",(_,i)=>ruleY[i]).attr("y2",(_,i)=>ruleY[i]);
+  guidesG.selectAll("line.mid-guide").data([null]).join("line").attr("class","mid-guide").attr("stroke","#d6d6d6").interrupt().transition(transition)
+    .attr("x1",x(5)).attr("x2",x(5)).attr("y1",0).attr("y2",ruleY[ruleY.length-1]);
+  const cues=guidesG.selectAll("g.axis-cues").data([null]).join("g").attr("class","axis-cues");
+  cues.interrupt().transition(transition).attr("transform",`translate(0,${axisY})`);
+  cues.selectAll("text.low").data([null]).join("text").attr("class","low").attr("x",compact?0:x(1.2)).attr("text-anchor","start").text("← Lower trust");
+  cues.selectAll("text.high").data([null]).join("text").attr("class","high").attr("x",compact?innerW:x(7.5)).attr("text-anchor","end").text("Higher trust →");
+  drawDots(prevMap,transition);drawSelected(false,prevSelected,transition);titlesG.raise();countryLabelsG.raise();
 }
 window.getTrustExportState=()=>({
   year:curYear,round:INCLUDED_ROUNDS[curYear],selectedCountries:[...selectedCountries],
@@ -96,15 +119,14 @@ window.getTrustExportState=()=>({
 });
 
 function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));drawSelected(false)}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));drawSelected(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
-function updateYear(rows,prevMap,prevSelected){renderChart(prevMap,prevSelected)}
-function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Year}|${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
+function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
 function beeswarm(pts){const byRow=d3.group(pts,d=>d.row);byRow.forEach(rowPts=>{rowPts.sort((a,b)=>a.x-b.x);for(let i=0;i<rowPts.length;i++){let y=rowY(rowPts[i].row),tries=0;while(tries++<200){let ok=true;for(let j=0;j<i;j++){const dx=rowPts[i].x-rowPts[j].x,dy=y-rowPts[j].y;if(dx*dx+dy*dy<(2*r+1)*(2*r+1)){ok=false;break}}if(ok)break;y=rowY(rowPts[i].row)+((tries%2?1:-1)*Math.ceil(tries/2))}rowPts[i].y=y}})}
-function drawDots(prevMap){const sel=dotsG.selectAll("circle").data(points,d=>d.id);sel.exit().remove();const enter=sel.enter().append("circle").attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("cx",d=>prevMap?.get(`${d.Metric}|${d.Country}`)?.x??d.x).attr("cy",d=>prevMap?.get(`${d.Metric}|${d.Country}`)?.y??d.y).attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip).on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});enter.merge(sel).interrupt().attr("fill",d=>color(d.value)).transition().duration(prevMap?MOVE_MS:0).ease(d3.easeCubicInOut).attr("cx",d=>d.x).attr("cy",d=>d.y);applyFade(new Set(selectedCountries))}
+function drawDots(prevMap,transition){const sel=dotsG.selectAll("circle").data(points,d=>d.id);sel.exit().interrupt().remove();const enter=sel.enter().append("circle").attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("cx",d=>prevMap?.get(d.id)?.x??d.x).attr("cy",d=>prevMap?.get(d.id)?.y??d.y).attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip).on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});enter.merge(sel).interrupt().transition(transition).attr("fill",d=>color(d.value)).attr("cx",d=>d.x).attr("cy",d=>d.y);applyFade(new Set(selectedCountries))}
 function getCountryPoints(country){return categories.map(m=>points.find(p=>p.Country===country&&p.Metric===m)).filter(Boolean)}
-function drawSelected(animateNew,prevByCountry={}){clearLayers();drawCountryLabels(prevByCountry);if(!selectedCountries.length)return;const A=selectedCountries[0],B=selectedCountries[1],prevA=prevByCountry[A],prevB=prevByCountry[B];if(A)drawCountryLayer("A",A,animateNew,prevA);if(B)drawCountryLayer("B",B,animateNew,prevB);if(A&&B)drawBetweenBand(A,B,prevA,prevB)}
+function drawSelected(animateNew,prevByCountry={},transition=movement(moveDuration())){clearLayers();drawCountryLabels(transition);if(!selectedCountries.length)return;const A=selectedCountries[0],B=selectedCountries[1],prevA=prevByCountry[A],prevB=prevByCountry[B];if(A)drawCountryLayer("A",A,animateNew,prevA,transition);if(B)drawCountryLayer("B",B,animateNew,prevB,transition);if(A&&B)drawBetweenBand(A,B,prevA,prevB,transition)}
 // Join by country so replaced/deselected countries lose their labels immediately.
 // Positions are recomputed together, rather than independently beside each dot.
-function drawCountryLabels(prevByCountry={}){
+function drawCountryLabels(transition=movement(moveDuration())){
   const labels=selectedCountries.map(country=>({country,point:getCountryPoints(country)[0]})).filter(d=>d.point);
   const join=countryLabelsG.selectAll("g.country-label").data(labels,d=>d.country);
   join.exit().selectAll("*").interrupt();
@@ -116,6 +138,9 @@ function drawCountryLabels(prevByCountry={}){
   content.append("span").text(d=>d.country);
   const merged=enter.merge(join).attr("data-country",d=>d.country);
   merged.selectAll("*").interrupt();
+  merged.interrupt().transition(transition).attr("opacity",1);
+  // Let an existing name make room before a newly selected name fades in.
+  if(join.size())enter.attr("opacity",0).transition(transition).delay(moveDuration()*.8).duration(moveDuration()*.2).attr("opacity",1);
   // Use the full rendered flag/name width; long country names must not be clipped.
   merged.select("foreignObject").attr("width",innerW);
   const measured=[];
@@ -123,11 +148,15 @@ function drawCountryLabels(prevByCountry={}){
   const placed=new Map(layoutCountryLabels(measured,0,innerW).map(d=>[d.country,d]));
   merged.each(function(d){
     const label=placed.get(d.country),group=d3.select(this),labelY=compact?-140+label.row*36:-76;
-    group.select("foreignObject").attr("x",label.x).attr("y",labelY).attr("width",label.width);
-    const previous=oldPoint(prevByCountry[d.country],d.point.Metric,d.point);
-    const connector=group.select("line").attr("display",compact?"none":null).attr("x1",previous.x).attr("y1",previous.y-r-4)
-      .attr("x2",Math.max(label.x+10,Math.min(label.x+label.width-10,d.point.x))).attr("y2",labelY+32);
-    if(prevByCountry[d.country])connector.transition().duration(MOVE_MS).ease(d3.easeCubicInOut).attr("x1",d.point.x).attr("y1",d.point.y-r-4);
+    const name=group.select("foreignObject"),connector=group.select("line").attr("display",compact?"none":null);
+    const labelAnchor=Math.max(label.x+10,Math.min(label.x+label.width-10,d.point.x));
+    // Existing labels retain their on-screen positions when a transition is interrupted.
+    if(!name.attr("x")){
+      name.attr("x",label.x).attr("y",labelY);
+      connector.attr("x1",d.point.x).attr("y1",d.point.y-r-4).attr("x2",labelAnchor).attr("y2",labelY+32);
+    }
+    name.attr("width",label.width).transition(transition).attr("x",label.x).attr("y",labelY);
+    connector.transition(transition).attr("x1",d.point.x).attr("y1",d.point.y-r-4).attr("x2",labelAnchor).attr("y2",labelY+32);
   });
   countryLabelsG.raise();
 }
@@ -135,7 +164,7 @@ function drawCountryLabels(prevByCountry={}){
 document.fonts.ready.then(()=>drawCountryLabels());
 
 function oldPoint(prevPts,metric,fallback){return prevPts?.find(p=>p.Metric===metric)||fallback}
-function drawCountryLayer(slot,country,animateNew,prevPts){const L=layers[slot],pts=getCountryPoints(country);if(!pts.length)return;const path=L.g.append("path").attr("class",`highlight ${slot==="B"?"second":""}`).attr("d",lineGen(prevPts||pts));if(prevPts){path.transition().duration(MOVE_MS).ease(d3.easeCubicInOut).attr("d",lineGen(pts))}else if(animateNew){const len=path.node().getTotalLength();path.attr("stroke-dasharray",`${len} ${len}`).attr("stroke-dashoffset",len).transition().duration(700).ease(d3.easeCubicOut).attr("stroke-dashoffset",0)}L.g.selectAll("circle").data(pts,d=>d.Metric).enter().append("circle").attr("class",`highlight-pin ${slot==="B"?"second":""}`).attr("r",r+4).attr("cx",d=>oldPoint(prevPts,d.Metric,d).x).attr("cy",d=>oldPoint(prevPts,d.Metric,d).y).transition().duration(prevPts?MOVE_MS:0).ease(d3.easeCubicInOut).attr("cx",d=>d.x).attr("cy",d=>d.y);}
+function drawCountryLayer(slot,country,animateNew,prevPts,transition){const L=layers[slot],pts=getCountryPoints(country);if(!pts.length)return;const path=L.g.append("path").attr("class",`highlight ${slot==="B"?"second":""}`).attr("d",lineGen(prevPts||pts));if(prevPts){path.transition(transition).attr("d",lineGen(pts))}else if(animateNew){const len=path.node().getTotalLength();path.attr("stroke-dasharray",`${len} ${len}`).attr("stroke-dashoffset",len).transition(transition).attr("stroke-dashoffset",0)}L.g.selectAll("circle").data(pts,d=>d.Metric).enter().append("circle").attr("class",`highlight-pin ${slot==="B"?"second":""}`).attr("r",r+4).attr("cx",d=>oldPoint(prevPts,d.Metric,d).x).attr("cy",d=>oldPoint(prevPts,d.Metric,d).y).transition(transition).attr("cx",d=>d.x).attr("cy",d=>d.y);}
 
 function bandPath(A,B){const pairs=categories.map(m=>{const pa=A?.find(p=>p.Metric===m),pb=B?.find(p=>p.Metric===m);return pa&&pb?{pa,pb}:null}).filter(Boolean);if(!pairs.length)return null;const top=pairs.map(d=>({x:d.pa.x,y:d.pa.y})),bottom=pairs.slice().reverse().map(d=>({x:d.pb.x,y:d.pb.y}));return d3.line().x(d=>d.x).y(d=>d.y).curve(curve)([...top,...bottom])+"Z"}
-function drawBetweenBand(a,b,prevA,prevB){const A=getCountryPoints(a),B=getCountryPoints(b),finalPath=bandPath(A,B);if(!finalPath)return;const path=bandG.append("path").attr("class","between-band").attr("d",bandPath(prevA,prevB)||finalPath);if(prevA&&prevB)path.transition().duration(MOVE_MS).ease(d3.easeCubicInOut).attr("d",finalPath)}
+function drawBetweenBand(a,b,prevA,prevB,transition){const A=getCountryPoints(a),B=getCountryPoints(b),finalPath=bandPath(A,B);if(!finalPath)return;const path=bandG.append("path").attr("class","between-band").attr("d",bandPath(prevA,prevB)||finalPath);if(prevA&&prevB)path.transition(transition).attr("d",finalPath)}

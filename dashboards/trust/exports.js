@@ -90,16 +90,18 @@ if (typeof window !== "undefined") (() => {
 
   async function downloadCSV() {
     await window.trustDataReady;
+    window.pauseTrustPlayback?.();
     const state = window.getTrustExportState();
     save(new Blob(["\ufeff", trustExportCSV(state)], { type: "text/csv;charset=utf-8" }), `eurofound-trust-${state.year}.csv`);
   }
 
   async function makePNG() {
     await window.trustDataReady;
+    window.pauseTrustPlayback?.();
     await document.fonts.ready;
     // Finish any active year-change animation before taking a coherent snapshot.
     const source = document.getElementById("chart");
-    await Promise.all(Array.from(source.querySelectorAll("*")).map(node => {
+    await Promise.all([source, ...source.querySelectorAll("*")].map(node => {
       const active = d3.active(node);
       return active ? active.end().catch(() => {}) : Promise.resolve();
     }));

@@ -6,6 +6,8 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 
 - `index.html`: dashboard markup and styles; no site header or standalone export buttons.
 - `chart.js`: chart rendering, selections and responsive layout.
+- `year-playback.js`: play/pause state and chronological looping through available years.
+- `year-playback.test.js`: looping, pause/resume and single-timer regression checks.
 - `exports.js`: CSV/PNG exports and the website's iframe message hooks.
 - `exports.test.js`: export data, CSV quoting and permitted-parent checks.
 - `Trust.csv`: the dashboard data, loaded using the relative path `./Trust.csv`.
@@ -66,7 +68,20 @@ oldest of the two selections; deselecting removes its label and highlights immed
 At narrow widths, controls stack and indicator headings move above their dots.
 Each row gets enough height for its actual swarm. Country labels use a second
 row when needed. Resizing keeps the current year and selections. Mobile year
-changes use the final positions immediately so moving dots do not cross headings.
+changes animate the row headings and guides together with the dots.
+
+The discreet play/pause button beside the year selector advances every 2.4 seconds
+through 2021–2025, then loops back to 2021. Playback starts only on request and
+retains both selected countries. Choosing a year manually, hiding the page or
+requesting a CSV/PNG download pauses playback. The current year is retained.
+Flags, country names, connector endpoints, selected-country lines and dots share
+the same 650 ms easing. Rapid year changes continue from their visible positions.
+Users requesting reduced motion get immediate position updates instead.
+
+Verified on 28 October 2026: a complete playback loop, pause/resume, manual-year
+pause, keyboard control, interrupted year transitions and 320/390 px layouts.
+Sampled full-motion frames kept both top connectors aligned with their selected
+points. All 11 playback/layout/export tests and the 980-value data check passed.
 
 The existing Storyblok website iframe controls in
 `components/publications/details/data-item-card.tsx` send these messages:
@@ -98,7 +113,8 @@ desktop/mobile PNG generation and the parent message flow. No survey data change
 
 Run `python dashboards/trust/validate-data.py` from the repository root before
 publishing, and `node --test dashboards/trust/label-layout.test.js dashboards/trust/exports.test.js`
-for layout/export changes. Serve the repository locally and check every year, country
+for layout/export changes; also run `node --test dashboards/trust/year-playback.test.js`
+for playback changes. Serve the repository locally and check every year, country
 comparisons, the default year and footer. GitHub Pages publishes `gh-pages`;
 changes to `master` do not update this dashboard.
 
