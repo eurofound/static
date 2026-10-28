@@ -70,7 +70,7 @@ Each row gets enough height for its actual swarm. Country labels use a second
 row when needed. Resizing keeps the current year and selections. Mobile year
 changes animate the row headings and guides together with the dots.
 
-The discreet play/pause button beside the year selector advances every 2.4 seconds
+The discreet play/pause button beside the year selector advances every 0.7 seconds
 through 2021–2025, then loops back to 2021. Playback starts only on request and
 retains both selected countries. Choosing a year manually, hiding the page or
 requesting a CSV/PNG download pauses playback. The current year is retained.

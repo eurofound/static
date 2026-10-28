@@ -1,5 +1,5 @@
 // One timer advances through the available survey years, including the last-to-first loop.
-function createYearPlayback({ years, getYear, setYear, onPlayingChange = () => {}, delay = 2400,
+function createYearPlayback({ years, getYear, setYear, onPlayingChange = () => {}, delay = 700,
   schedule = setTimeout, cancel = clearTimeout }) {
   let playing = false, timer = null;
   function pause() {
