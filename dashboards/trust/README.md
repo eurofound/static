@@ -56,10 +56,9 @@ included year, 2025, is the default. Keep the existing columns
 (`Country`, `Metric`, `Year`, `Score`) when updating the file.
 The selector displays years only; round selection remains explicit in the data.
 
-The footer contains the requested source link and short response-scale note,
-with no heading. Text occupies 90% of its width and the Eurofound logo the
-right-hand 10%.
-On phones the logo retains a readable 64 px width.
+The embedded dashboard hides its title and source/notes footer because the host
+publishes them externally. PNG downloads still include the title, source,
+response-scale note and Eurofound logo, generated from the export metadata.
 
 Country flags and names sit in reserved space above the first chart row, with
 connector lines to their dots. Their full rendered widths determine spacing.

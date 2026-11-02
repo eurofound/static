@@ -61,6 +61,7 @@ svg{display:block;width:100%;height:auto}
 .source-logo{display:block;width:100%;height:auto}
 .source-note a{color:var(--high);text-underline-offset:3px}
 .source-note strong{color:var(--ink)}
+h2[hidden],.source-note[hidden]{display:none}
 .download-status{font-size:14px;color:var(--muted);text-align:right;margin:8px 0}
 .download-status:empty{display:none}
 .chart-area{position:relative;padding-top:32px}
@@ -104,8 +105,8 @@ svg{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
-<main class="wrap">
-<h2>Trust indicators dashboard</h2>
+<main class="wrap" aria-label="Trust indicators dashboard">
+<h2 hidden>Trust indicators dashboard</h2>
 <header class="controls-stack">
 <div class="controls-row">
 <div class="select-wrap country"><select id="countrySel" required aria-label="Country"><option id="countryDisplay" value="" disabled selected hidden>Select a country</option></select><button id="clearSel" class="clear-btn" hidden aria-label="Clear selection">×</button></div>
@@ -127,7 +128,7 @@ svg{display:block;width:100%;height:auto}
 <svg id="chart" width="1100" height="734" viewBox="0 0 1100 734" aria-label="Trust indicators beeswarm chart"></svg>
 </div>
 <p id="downloadStatus" class="download-status" role="status" aria-live="polite"></p>
-<footer class="source-note" aria-label="Source and note">
+<footer class="source-note" aria-label="Source and note" hidden>
 <p class="source-copy"><strong>Source:</strong> Eurofound, <a href="https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey">Living and Working in the EU e-survey</a>. <strong>Note:</strong> Survey respondents rate how much they trust each entity on a scale from 1 (Do not trust at all) to 10 (Trust completely).</p>
 <img class="source-logo" src="./eurofound-logo.svg" alt="Eurofound" width="244" height="162">
 </footer>
