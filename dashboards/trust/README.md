@@ -8,6 +8,8 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 - `chart.js`: chart rendering, selections and responsive layout.
 - `year-playback.js`: play/pause state and chronological looping through available years.
 - `year-playback.test.js`: looping, pause/resume and single-timer regression checks.
+- `trends.js`: expandable country trends and synchronized year/value highlights.
+- `trends.test.js`: source scores, complete country series, gaps and nearest-year selection.
 - `exports.js`: CSV/PNG exports and the website's iframe message hooks.
 - `exports.test.js`: export data, CSV quoting and permitted-parent checks.
 - `Trust.csv`: the dashboard data, loaded using the relative path `./Trust.csv`.
@@ -64,6 +66,34 @@ deselection, year changes and resizing. Selecting a third country replaces the
 oldest of the two selections; deselecting removes its label and highlights immediately.
 
 ## Mobile and website downloads
+
+### Country trends
+
+The small line-chart icon, Trends label and caret above the right edge of the
+chart expand a discreet trends pane. It starts collapsed. Selecting a country
+shows seven line charts aligned with the indicator rows; selecting a second
+country adds a second column. Each column has the country's flag and name.
+Replacing, deselecting or clearing countries updates both the beeswarm and trends.
+With no selection, the expanded pane prompts the user to select a country.
+
+All sparklines use the complete 2021–2025 series and the same fixed 1–8 vertical
+scale. Only the first chart in each country column shows its start and end years;
+there are no other axis labels. The current survey-year score is highlighted as
+a number. Hovering any sparkline synchronizes the year, dot, guide and year/value
+readout across every country's seven charts. Leaving restores the current-year
+score. Keyboard users can focus a sparkline and use Left/Right, Home/End or Escape.
+
+Below 960 px, an open trends pane moves beneath the main chart with indicator
+headings and the country columns side by side. This keeps the main plot readable
+on tablets and phones. Collapsing restores the original chart space. Trends are
+native SVG and are included in existing PNG downloads when the pane is expanded;
+CSV downloads retain the current year's 196 observations.
+
+Run `node --test dashboards/trust/trends.test.js` for trend-data changes. Verify
+one and two countries, replacement/deselection, shared hover and keyboard years,
+collapse/reopen, 320/390/768 px layouts and PNG downloads after layout changes.
+
+### Existing controls and downloads
 
 At narrow widths, controls stack and indicator headings move above their dots.
 Each row gets enough height for its actual swarm. Country labels use a second
@@ -135,3 +165,4 @@ Source Git blob hashes:
 At migration, the CSV was copied byte-for-byte, including its UTF-8 BOM and CRLF
 line endings: 896 records covering 2021–2024. The current data update is documented
 above.
+

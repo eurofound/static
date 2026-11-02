@@ -14,6 +14,11 @@ const movement=duration=>d3.transition().duration(duration).ease(d3.easeCubicInO
 dotsG.raise();
 const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${p.Metric}: ${p.value}`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll("circle").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
 const yearSel=document.getElementById("yearSel"),countrySel=document.getElementById("countrySel"),countryDisplay=document.getElementById("countryDisplay"),clearBtn=document.getElementById("clearSel"),playBtn=document.getElementById("playYears");let selectedCountries=[],categories=[],points=[],years=[],curYear=null,allRows=[],playback;
+const trustTrends=createTrustTrends({svg,flags:FLAG_CODE,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();configureChart();renderChart()}});
+function refreshSelection(animateNew=false){
+  if(trustTrends.isOpen()){configureChart();renderChart()}
+  else drawSelected(animateNew);
+}
 window.trustDataReady=d3.csv(CSV_URL,d3.autoType).then(init);
 window.trustDataReady.catch(err=>{
   console.error(err);
@@ -46,7 +51,7 @@ function init(rows){
   document.addEventListener("visibilitychange",()=>{if(document.hidden)playback.pause()});
   window.addEventListener("pagehide",()=>playback.pause());
   countrySel.addEventListener("change",()=>{const choice=countrySel.value;if(!choice)return;hideTip();addCountry(choice,true);countrySel.value=""});
-  clearBtn.addEventListener("click",()=>{selectedCountries=[];updateCountryDisplay();applyFade(new Set);drawSelected(false);hideTip()});
+  clearBtn.addEventListener("click",()=>{selectedCountries=[];updateCountryDisplay();applyFade(new Set);refreshSelection();hideTip()});
   svg.on("click",event=>{if(event.target.tagName.toLowerCase()!=="circle")deselectLast()});
   new ResizeObserver(()=>{
     if(configureChart()){hideTip();renderChart();updateCountryDisplay()}
@@ -64,11 +69,11 @@ function changeYear(year){
 }
 function configureChart(){
   const available=Math.max(240,Math.floor(svg.node().getBoundingClientRect().width));
-  const nextWidth=Math.min(1100,available),nextCompact=available<=680;
+  const nextWidth=Math.min(1100,available),nextCompact=available<=680||(trustTrends.isOpen()&&available<960);
   const changed=nextWidth!==width||nextCompact!==compact;
   width=nextWidth;compact=nextCompact;
   margin=compact?{top:148,right:16,bottom:76,left:16}:{top:84,right:28,bottom:110,left:270};
-  rowGap=compact?136:90;innerW=width-margin.left-margin.right;labelLeft=compact?0:-margin.left+24;
+  rowGap=compact?136:90;innerW=width-margin.left-margin.right-trustTrends.reservedWidth(compact,selectedCountries.length);labelLeft=compact?0:-margin.left+24;
   x.range([0,innerW]);g.attr("transform",`translate(${margin.left},${margin.top})`);
   return changed;
 }
@@ -91,7 +96,8 @@ function renderChart(prevMap,prevSelected){
     });
     rowCenters=nextCenters;axisY=ruleY[ruleY.length-1]+30;
   }else categories.forEach((_,i)=>{titleY[i]=rowY(i);ruleY[i]=rowY(i)+r+38});
-  const totalH=margin.top+axisY+32;
+  const chartHeight=margin.top+axisY+32;
+  const totalH=trustTrends.height(chartHeight,compact,categories.length,selectedCountries.length);
   svg.interrupt().attr("width",width).transition(transition).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
   // Keep headings and guides in step with the changing swarm height on phones.
   const titles=titlesG.selectAll("g.chart-title").data(categories,d=>d).join(enter=>{
@@ -110,6 +116,7 @@ function renderChart(prevMap,prevSelected){
   cues.selectAll("text.low").data([null]).join("text").attr("class","low").attr("x",compact?0:x(1.2)).attr("text-anchor","start").text("← Lower trust");
   cues.selectAll("text.high").data([null]).join("text").attr("class","high").attr("x",compact?innerW:x(7.5)).attr("text-anchor","end").text("Higher trust →");
   drawDots(prevMap,transition);drawSelected(false,prevSelected,transition);titlesG.raise();countryLabelsG.raise();
+  trustTrends.render({rows:allRows,countries:selectedCountries,metrics:categories,years,year:curYear,compact,width,chartHeight,margin,innerW,centers:categories.map((_,i)=>rowY(i)),rules:ruleY,transition});
 }
 window.getTrustExportState=()=>({
   year:curYear,round:INCLUDED_ROUNDS[curYear],selectedCountries:[...selectedCountries],
@@ -118,7 +125,7 @@ window.getTrustExportState=()=>({
   sourceUrl:"https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey"
 });
 
-function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));drawSelected(false)}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));drawSelected(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
+function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection()}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
 function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
 function beeswarm(pts){const byRow=d3.group(pts,d=>d.row);byRow.forEach(rowPts=>{rowPts.sort((a,b)=>a.x-b.x);for(let i=0;i<rowPts.length;i++){let y=rowY(rowPts[i].row),tries=0;while(tries++<200){let ok=true;for(let j=0;j<i;j++){const dx=rowPts[i].x-rowPts[j].x,dy=y-rowPts[j].y;if(dx*dx+dy*dy<(2*r+1)*(2*r+1)){ok=false;break}}if(ok)break;y=rowY(rowPts[i].row)+((tries%2?1:-1)*Math.ceil(tries/2))}rowPts[i].y=y}})}
 function drawDots(prevMap,transition){const sel=dotsG.selectAll("circle").data(points,d=>d.id);sel.exit().interrupt().remove();const enter=sel.enter().append("circle").attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("cx",d=>prevMap?.get(d.id)?.x??d.x).attr("cy",d=>prevMap?.get(d.id)?.y??d.y).attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip).on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});enter.merge(sel).interrupt().transition(transition).attr("fill",d=>color(d.value)).attr("cx",d=>d.x).attr("cy",d=>d.y);applyFade(new Set(selectedCountries))}
@@ -168,3 +175,4 @@ function drawCountryLayer(slot,country,animateNew,prevPts,transition){const L=la
 
 function bandPath(A,B){const pairs=categories.map(m=>{const pa=A?.find(p=>p.Metric===m),pb=B?.find(p=>p.Metric===m);return pa&&pb?{pa,pb}:null}).filter(Boolean);if(!pairs.length)return null;const top=pairs.map(d=>({x:d.pa.x,y:d.pa.y})),bottom=pairs.slice().reverse().map(d=>({x:d.pb.x,y:d.pb.y}));return d3.line().x(d=>d.x).y(d=>d.y).curve(curve)([...top,...bottom])+"Z"}
 function drawBetweenBand(a,b,prevA,prevB,transition){const A=getCountryPoints(a),B=getCountryPoints(b),finalPath=bandPath(A,B);if(!finalPath)return;const path=bandG.append("path").attr("class","between-band").attr("d",bandPath(prevA,prevB)||finalPath);if(prevA&&prevB)path.transition(transition).attr("d",finalPath)}
+

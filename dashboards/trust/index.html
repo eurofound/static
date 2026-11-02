@@ -63,6 +63,26 @@ svg{display:block;width:100%;height:auto}
 .source-note strong{color:var(--ink)}
 .download-status{font-size:14px;color:var(--muted);text-align:right;margin:8px 0}
 .download-status:empty{display:none}
+.chart-area{position:relative;padding-top:32px}
+.trends-toggle{position:absolute;right:0;top:0;display:flex;align-items:center;gap:6px;min-height:28px;padding:4px 7px;border:0;border-radius:5px;background:transparent;color:var(--muted);font:inherit;font-size:12px;cursor:pointer}
+.trends-toggle:hover,.trends-toggle[aria-expanded="true"]{color:var(--high);background:#f5f7f8}
+.trends-toggle:focus-visible{outline:2px solid var(--high);outline-offset:2px}
+.trends-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.trends-toggle .caret{width:12px;transition:transform .15s}
+.trends-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
+.trend-divider,.trend-rule{stroke:var(--line);stroke-width:1}
+.trend-rule{stroke-opacity:.6}
+.trend-country{font-size:12px;gap:5px;font-weight:700;text-shadow:none}
+.trend-country .fi{flex-basis:24px}
+.trend-line{fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.trend-point{stroke:#fff;stroke-width:1.5}
+.trend-guide{stroke:#aab7c1;stroke-width:1;stroke-dasharray:2 3}
+.trend-value{font-size:12px;font-weight:750;fill:var(--high);text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums}
+.trend-year{font-size:10px;font-weight:400;fill:var(--muted)}
+.trend-endpoint{font-size:10px;fill:var(--muted);pointer-events:none}
+.trend-empty,.trend-mobile-label{font-size:13px;fill:var(--muted)}
+.trend-hit{fill:transparent;cursor:crosshair;outline:none}
+.trend-cell:focus-visible .trend-hit{stroke:var(--high);stroke-width:1;rx:4}
 @media(max-width:680px){
   .wrap{margin-top:12px;padding:0 16px}
   h2{font-size:24px;line-height:1.2;margin-bottom:16px}
@@ -99,7 +119,14 @@ svg{display:block;width:100%;height:auto}
 </div>
 <div class="legend-row"><div class="legend-eu" title="EU27 average"><div class="chip"></div><span>EU27 average</span></div></div>
 </header>
+<div class="chart-area">
+<button id="trendsToggle" class="trends-toggle" type="button" aria-expanded="false" aria-controls="trustTrends" title="Show country trends">
+<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3v14h14M5 12l4-4 4 2 4-6"/></svg>
+<span>Trends</span>
+<svg class="caret" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+</button>
 <svg id="chart" width="1100" height="734" viewBox="0 0 1100 734" aria-label="Trust indicators beeswarm chart"></svg>
+</div>
 <p id="downloadStatus" class="download-status" role="status" aria-live="polite"></p>
 <footer class="source-note" aria-label="Source and note">
 <p class="source-copy"><strong>Source:</strong> Eurofound, <a href="https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey">Living and working in the EU e-survey</a>. <strong>Note:</strong> Survey respondents rate how much they trust each entity on a scale from 1 (Do not trust at all) to 10 (Trust completely).</p>
@@ -109,7 +136,9 @@ svg{display:block;width:100%;height:auto}
 <div id="tooltip" class="tooltip" style="display:none"></div>
 <script src="./label-layout.js?v=20261027"></script>
 <script src="./year-playback.js?v=20261028-700ms"></script>
-<script src="./chart.js?v=20261028-motion-fix"></script>
+<script src="./trends.js?v=20261102"></script>
+<script src="./chart.js?v=20261102-trends"></script>
 <script src="./exports.js?v=20261028"></script>
 </body>
 </html>
+
