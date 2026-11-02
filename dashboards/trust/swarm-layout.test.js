@@ -53,6 +53,7 @@ test('every year and plot width keeps fixed rows, exact scores and contained mar
     assert.equal(points.length, 196);
     assert.deepEqual(points.map(p => p.x), before, 'horizontal score positions stay exact');
     assertContained(points, layout); assertCentralPointsDoNotOverlap(points, layout);
+    assert(points.filter(p=>p.Country==='European Union').every(p=>p.y===layout.centers[p.row]), 'EU squares stay at each row centre');
     assert.deepEqual(layout.centers,Array.from({length:7},(_,i)=>compact?i*136+8:i*90));
     assert.equal(layout.axisY, compact ? 910 : 618, 'chart height must not depend on density or year');
   }

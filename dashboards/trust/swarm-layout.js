@@ -5,7 +5,9 @@ function layoutTrustSwarmRows(points, rowCount, { compact = false, radius = 6 } 
     ? Math.SQRT2 * (radius + .75) : radius + .5;
   for (const point of points) if (rows[point.row]) rows[point.row].push(point);
   for (const row of rows) {
-    row.sort((a, b) => a.x - b.x || String(a.Country).localeCompare(String(b.Country)));
+    // Anchor the EU square on the row centre, then pack country dots around it.
+    row.sort((a, b) => Number(b.Country === "European Union") - Number(a.Country === "European Union")
+      || a.x - b.x || String(a.Country).localeCompare(String(b.Country)));
     const placed = [];
     for (const point of row) {
       const neighbours = placed.filter(other => Math.abs(point.x - other.x) < bodyRadius(point) + bodyRadius(other) + 1);

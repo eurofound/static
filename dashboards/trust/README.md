@@ -109,6 +109,8 @@ collapse/reopen, 320/390/768 px layouts and PNG downloads after layout changes.
 The EU27 average uses a square marker in the plot, legend and PNG export, with
 a thin 1.5 px outline. Plot squares stay above the other dots and follow the same
 selection fading as all other countries.
+EU squares are anchored to each indicator's vertical centre; country dots pack
+around them without changing any horizontal score position.
 The government display label is “Trust in the country’s government”; source data
 keys remain unchanged. The survey credit is “Living and Working in the EU e-survey”.
 
