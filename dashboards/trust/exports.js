@@ -147,7 +147,7 @@ if (typeof window !== "undefined") (() => {
     let y = addText(output, state.title, padding, 34, chartWidth, chartWidth < 680 ? 22 : 28, 700);
     const selection = state.selectedCountries.length ? `Highlighted: ${state.selectedCountries.join(", ")}` : "All countries";
     y = addText(output, `${state.year} · ${selection}`, padding, y + 4, chartWidth, 15);
-    output.append(element("rect", { x: padding, y, width: 12, height: 12, fill: "#c8ced3", stroke: "black", "stroke-width": 2 }));
+    output.append(element("rect", { x: padding, y, width: 12, height: 12, fill: "#c8ced3", stroke: "black", "stroke-width": 1.5 }));
     y = addText(output, "EU27 average", padding + 20, y + 11, chartWidth - 20, 14);
     clone.setAttribute("x", padding); clone.setAttribute("y", y);
     clone.setAttribute("width", chartWidth); clone.setAttribute("height", chartHeight);

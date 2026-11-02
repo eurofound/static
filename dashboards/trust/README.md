@@ -71,7 +71,9 @@ oldest of the two selections; deselecting removes its label and highlights immed
 
 The small line-chart icon and caret above the right edge of the
 chart expand a discreet trends pane. It starts collapsed and slides in/out over
-360 ms; interrupted toggles continue from the visible position. Selecting a country
+360 ms together with the main plot, dots, selected-country lines and labels.
+Country additions/removals use the same transition; interrupted toggles continue
+from the visible position. Selecting a country
 shows seven line charts aligned with the indicator rows; selecting a second
 country adds a second column. Each column has the country's name without a flag.
 Replacing, deselecting or clearing countries updates both the beeswarm and trends.
@@ -101,7 +103,8 @@ Run `node --test dashboards/trust/trends.test.js` for trend-data changes. Verify
 one and two countries, replacement/deselection, shared hover and keyboard years,
 collapse/reopen, 320/390/768 px layouts and PNG downloads after layout changes.
 
-The EU27 average uses a square marker in the plot, legend and PNG export.
+The EU27 average uses a square marker in the plot, legend and PNG export, with
+a thin 1.5 px outline. Plot squares remain opaque and above the other dots.
 The government display label is “Trust in the country’s government”; source data
 keys remain unchanged. The survey credit is “Living and Working in the EU e-survey”.
 
