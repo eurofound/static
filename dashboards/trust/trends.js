@@ -118,7 +118,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         cell.append("line").attr("class", "trend-y-axis");
         cell.append("path").attr("class", "trend-line");
         cell.append("line").attr("class", "trend-guide").attr("y1", -23).attr("y2", 23);
-        cell.append("circle").attr("class", "trend-point").attr("r", 3.5);
+        cell.append("circle").attr("class", "trend-point").attr("r", 4);
         const value = cell.append("text").attr("class", "trend-value").attr("y", -29);
         value.append("tspan").attr("class", "trend-year");
         value.append("tspan").attr("class", "trend-score");
@@ -148,7 +148,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         });
       cells.select(".trend-line").attr("stroke", color)
         .attr("d", d => d3.line().defined(point => point.score !== null).x(point => x(point.year)).y(point => y(point.score))(d.values));
-      cells.select(".trend-point").attr("fill", color);
+      cells.select(".trend-point").attr("fill", "#fff");
       cells.select(".trend-guide").attr("y1", -halfHeight - 3).attr("y2", halfHeight + 3);
       cells.select(".trend-value").attr("y", compact ? -29 : -33);
       cells.selectAll("circle.trend-endpoint-dot")
@@ -156,6 +156,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         .join("circle").attr("class", "trend-endpoint-dot").attr("r", 3)
         .attr("cx", d => x(d.year)).attr("cy", d => y(d.score)).attr("fill", color)
         .attr("pointer-events", "none");
+      cells.select(".trend-point").raise();
       cells.select(".trend-hit").attr("x", 0).attr("y", -45).attr("width", sparkWidth).attr("height", 83);
       cells.select(".trend-y-axis").attr("x1", 6).attr("x2", 6)
         .attr("y1", y(2)).attr("y2", y(8));
