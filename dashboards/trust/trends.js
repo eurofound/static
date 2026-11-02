@@ -22,8 +22,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
   let open = false, context = null, hoverYear = null, activeCell = null;
-  let closing = false, revealing = false, pendingReveal = false;
-  const slideDuration = 360;
+  let closing = false, pendingReveal = false;
   const cellWidth = 144, gap = 16, mobileRow = 94;
 
   button.addEventListener("click", () => {
@@ -31,31 +30,16 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     button.setAttribute("aria-expanded", String(open));
     button.title = open ? "Hide country trends" : "Show country trends";
     button.setAttribute("aria-label", button.title);
-    panel.interrupt("disclosure"); revealing = false;
-    if (open) {
-      closing = false; pendingReveal = true;
-      onToggle();
-    } else if (context?.position) {
-      closing = true;
-      const { left, top, distance } = context.position;
-      panel.attr("pointer-events", "none").attr("aria-hidden", "true")
-        .transition("disclosure").duration(slideDuration).ease(d3.easeCubicInOut)
-        .attr("transform", `translate(${left + distance},${top})`).attr("opacity", 0)
-        .on("end", () => {
-          if (open) return;
-          closing = false; panel.attr("display", "none");
-          onToggle();
-        });
-    } else {
-      closing = false; panel.attr("display", "none"); onToggle();
-    }
+    panel.interrupt();
+    closing = !open; pendingReveal = open;
+    onToggle();
   });
 
   function reservedWidth(compact, count) {
-    return (open || closing) && !compact ? Math.max(1, count) * cellWidth + gap : 0;
+    return open && !compact ? Math.max(1, count) * cellWidth + gap : 0;
   }
   function height(chartHeight, compact, metricCount, count) {
-    if ((!open && !closing) || !compact) return chartHeight;
+    if (!open || !compact) return chartHeight;
     return chartHeight + (count ? 96 + metricCount * mobileRow : 96);
   }
   function highlight(year, isHover) {
@@ -81,7 +65,12 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
   function render(next) {
     context = next;
     if (!open) {
-      if (!closing) panel.attr("display", "none");
+      if (closing) {
+        const top=panel.node().transform.baseVal.consolidate()?.matrix.f ?? next.margin.top;
+        panel.attr("pointer-events", "none").attr("aria-hidden", "true").interrupt()
+          .transition(next.transition).attr("transform", `translate(${next.width + 24},${top})`).attr("opacity", 0)
+          .on("end", () => { if (!open) { closing=false; panel.attr("display", "none"); } });
+      } else panel.attr("display", "none");
       return;
     }
     const { rows, countries, metrics, years, year, compact, width, chartHeight, margin, innerW, centers, transition } = next;
@@ -93,13 +82,10 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     context.position = { left, top, distance };
     const wasHidden = panel.attr("display") === "none";
     panel.attr("display", null).attr("pointer-events", null).attr("aria-hidden", "false");
-    if (pendingReveal || revealing) {
-      if (wasHidden) panel.attr("transform", `translate(${left + distance},${top})`).attr("opacity", 0);
-      pendingReveal = false; revealing = true;
-      panel.interrupt("disclosure").transition("disclosure").duration(slideDuration).ease(d3.easeCubicInOut)
-        .attr("transform", `translate(${left},${top})`).attr("opacity", 1)
-        .on("end", () => { revealing = false; });
-    } else panel.attr("transform", `translate(${left},${top})`).attr("opacity", 1);
+    const fullReveal=pendingReveal;
+    if (wasHidden) panel.attr("transform", `translate(${left + distance},${top})`).attr("opacity", 0);
+    pendingReveal = false;
+    panel.interrupt().transition(transition).attr("transform", `translate(${left},${top})`).attr("opacity", 1);
     const sparkWidth = columnWidth - 20;
     const x = d3.scaleLinear().domain(d3.extent(years)).range([6, sparkWidth - 6]);
     // Keep desktop rows aligned while reducing the 50 px axis-to-axis gap to 37.5 px.
@@ -115,9 +101,13 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
       .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 43).text(labelMetric);
 
     const series = trustTrendSeries(rows, countries, metrics, years);
-    const columns = panel.selectAll("g.trend-column").data(series, d => d.country).join("g")
-      .attr("class", "trend-column").attr("data-country", d => d.country)
-      .attr("transform", (_, i) => `translate(${i * columnWidth + 8},0)`);
+    const columnJoin=panel.selectAll("g.trend-column").data(series,d=>d.country);
+    columnJoin.exit().attr("pointer-events","none").interrupt().transition(transition)
+      .attr("transform",`translate(${Math.max(1,countries.length)*columnWidth+columnWidth+8},0)`).attr("opacity",0).remove();
+    const entering=columnJoin.enter().append("g").attr("class","trend-column")
+      .attr("transform",(_,i)=>`translate(${i*columnWidth+8+(fullReveal?0:columnWidth)},0)`).attr("opacity",fullReveal?1:0);
+    const columns=entering.merge(columnJoin).attr("data-country",d=>d.country).attr("pointer-events",null);
+    columns.interrupt().transition(transition).attr("transform",(_,i)=>`translate(${i*columnWidth+8},0)`).attr("opacity",1);
     columns.each(function(country) {
       const column = d3.select(this), color = "#747474";
       column.selectAll("text.trend-country").data([country]).join("text")
@@ -177,5 +167,5 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     if (activeCell && !panel.node().contains(activeCell)) { activeCell = null; hoverYear = null; }
     highlight(hoverYear, hoverYear !== null);
   }
-  return { isOpen: () => open || closing, reservedWidth, height, render };
+  return { isOpen: () => open, isVisible: () => open || closing, reservedWidth, height, render };
 }
