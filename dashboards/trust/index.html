@@ -12,7 +12,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:#fff;color:var(--ink)}
 .wrap{max-width:1200px;margin:18px auto 30px;padding:0 12px}
-h2{margin:6px 0;text-align:center;font-size:28px;letter-spacing:-.025em}
+h2{margin:6px 0 14px;text-align:center;font-size:28px;letter-spacing:-.025em}
 .controls-stack{display:flex;flex-direction:column;align-items:center;gap:10px;margin:6px 0 6px}
 .controls-row{display:flex;align-items:center;justify-content:center;gap:12px;max-width:100%}
 .legend-row{margin-top:2px;transform:scale(.9);transform-origin:center}
@@ -21,7 +21,7 @@ h2{margin:6px 0;text-align:center;font-size:28px;letter-spacing:-.025em}
 .select-wrap select:focus{outline:none;border-color:#b8c2cf;box-shadow:0 0 0 3px rgba(14,91,118,.1)}
 .select-wrap.year select{min-width:150px;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%23222" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');background-repeat:no-repeat;background-position:right 12px center;background-size:12px 8px}
 .select-wrap.year select.soft{color:#7c8796}
-.year-controls{display:flex;align-items:center;gap:6px}
+.year-controls{display:flex;align-items:center;gap:4.5px}
 .play-years{display:grid;place-items:center;flex:0 0 40px;width:40px;height:44px;padding:10px;border:0;border-radius:10px;background:transparent;color:var(--muted);cursor:pointer}
 .play-years:hover,.play-years[aria-pressed="true"]{background:#f1f5f7;color:var(--high)}
 .play-years:focus-visible{outline:2px solid var(--high);outline-offset:2px}
@@ -33,7 +33,7 @@ h2{margin:6px 0;text-align:center;font-size:28px;letter-spacing:-.025em}
 .clear-btn:active{transform:translateY(-50%) scale(.98)}
 .clear-btn[hidden]{display:none}
 .legend-eu{display:flex;align-items:center;gap:8px;color:#333;font-size:14px}
-.legend-eu .chip{width:14px;height:14px;border-radius:50%;background:var(--mid);outline:2px solid #000;outline-offset:-1px}
+.legend-eu .chip{width:14px;height:14px;background:var(--mid);outline:2px solid #000;outline-offset:-1px}
 svg{display:block;width:100%;height:auto}
 .label{fill:#111;font-size:18px;font-weight:600;dominant-baseline:middle}
 .row-rule{stroke:var(--grid);stroke-width:1}
@@ -64,6 +64,7 @@ svg{display:block;width:100%;height:auto}
 .download-status{font-size:14px;color:var(--muted);text-align:right;margin:8px 0}
 .download-status:empty{display:none}
 .chart-area{position:relative;padding-top:32px}
+.chart-area>svg{overflow:hidden}
 .trends-toggle{position:absolute;right:0;top:0;display:flex;align-items:center;gap:6px;min-height:28px;padding:4px 7px;border:0;border-radius:5px;background:transparent;color:var(--muted);font:inherit;font-size:12px;cursor:pointer}
 .trends-toggle:hover,.trends-toggle[aria-expanded="true"]{color:var(--high);background:#f5f7f8}
 .trends-toggle:focus-visible{outline:2px solid var(--high);outline-offset:2px}
@@ -83,7 +84,7 @@ svg{display:block;width:100%;height:auto}
 .trend-cell:focus-visible .trend-hit{stroke:var(--high);stroke-width:1;rx:4}
 @media(max-width:680px){
   .wrap{margin-top:12px;padding:0 16px}
-  h2{font-size:24px;line-height:1.2;margin-bottom:16px}
+  h2{font-size:24px;line-height:1.2;margin-bottom:24px}
   .controls-stack,.controls-row{width:100%}
   .controls-row{flex-direction:column;gap:8px}
   .select-wrap,.select-wrap select{width:100%;min-width:0}
@@ -126,16 +127,16 @@ svg{display:block;width:100%;height:auto}
 </div>
 <p id="downloadStatus" class="download-status" role="status" aria-live="polite"></p>
 <footer class="source-note" aria-label="Source and note">
-<p class="source-copy"><strong>Source:</strong> Eurofound, <a href="https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey">Living and working in the EU e-survey</a>. <strong>Note:</strong> Survey respondents rate how much they trust each entity on a scale from 1 (Do not trust at all) to 10 (Trust completely).</p>
+<p class="source-copy"><strong>Source:</strong> Eurofound, <a href="https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey">Living and Working in the EU e-survey</a>. <strong>Note:</strong> Survey respondents rate how much they trust each entity on a scale from 1 (Do not trust at all) to 10 (Trust completely).</p>
 <img class="source-logo" src="./eurofound-logo.svg" alt="Eurofound" width="244" height="162">
 </footer>
 </main>
 <div id="tooltip" class="tooltip" style="display:none"></div>
 <script src="./label-layout.js?v=20261027"></script>
 <script src="./year-playback.js?v=20261028-700ms"></script>
-<script src="./trends.js?v=20261102-local-tooltip-year"></script>
-<script src="./chart.js?v=20261102-trends"></script>
-<script src="./exports.js?v=20261028"></script>
+<script src="./trends.js?v=20261102-slide"></script>
+<script src="./chart.js?v=20261102-square-label"></script>
+<script src="./exports.js?v=20261102-square"></script>
 </body>
 </html>
 

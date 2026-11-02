@@ -101,10 +101,16 @@ if (typeof window !== "undefined") (() => {
     await document.fonts.ready;
     // Finish any active year-change animation before taking a coherent snapshot.
     const source = document.getElementById("chart");
-    await Promise.all([source, ...source.querySelectorAll("*")].map(node => {
-      const active = d3.active(node);
-      return active ? active.end().catch(() => {}) : Promise.resolve();
-    }));
+    await new Promise(resolve => {
+      function finishMotion() {
+        d3.timerFlush();
+        const moving = [source, ...source.querySelectorAll("*")]
+          .some(node => d3.active(node) || d3.active(node, "disclosure"));
+        if (moving) requestAnimationFrame(finishMotion);
+        else resolve();
+      }
+      finishMotion();
+    });
     const state = window.getTrustExportState(), clone = source.cloneNode(true);
     const view = source.viewBox.baseVal, chartWidth = view.width, chartHeight = view.height;
     const styleNames = ["fill", "fill-opacity", "stroke", "stroke-width", "stroke-opacity", "stroke-linecap", "opacity", "font-size", "font-weight", "font-family", "dominant-baseline", "text-anchor"];
@@ -141,7 +147,7 @@ if (typeof window !== "undefined") (() => {
     let y = addText(output, state.title, padding, 34, chartWidth, chartWidth < 680 ? 22 : 28, 700);
     const selection = state.selectedCountries.length ? `Highlighted: ${state.selectedCountries.join(", ")}` : "All countries";
     y = addText(output, `${state.year} · ${selection}`, padding, y + 4, chartWidth, 15);
-    output.append(element("circle", { cx: padding + 6, cy: y + 6, r: 6, fill: "#c8ced3", stroke: "black", "stroke-width": 2 }));
+    output.append(element("rect", { x: padding, y, width: 12, height: 12, fill: "#c8ced3", stroke: "black", "stroke-width": 2 }));
     y = addText(output, "EU27 average", padding + 20, y + 11, chartWidth - 20, 14);
     clone.setAttribute("x", padding); clone.setAttribute("y", y);
     clone.setAttribute("width", chartWidth); clone.setAttribute("height", chartHeight);
@@ -205,3 +211,4 @@ if (typeof window !== "undefined") (() => {
     if (trustedTrustParent(origin, location.origin)) window.parent.postMessage({ type: "chart-ready", title: "Trust indicators dashboard", rowCount: getData().length }, origin);
   }).catch(() => {});
 })();
+

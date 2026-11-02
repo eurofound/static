@@ -17,11 +17,13 @@ function nearestTrustYear(years, fraction) {
 
 if (typeof module !== "undefined") module.exports = { trustTrendSeries, nearestTrustYear };
 
-function createTrustTrends({ svg, button, onToggle }) {
+function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metric }) {
   const panel = svg.append("g").attr("id", "trustTrends").attr("role", "group")
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
   let open = false, context = null, hoverYear = null, activeCell = null;
+  let closing = false, revealing = false, pendingReveal = false;
+  const slideDuration = 360;
   const cellWidth = 144, gap = 16, mobileRow = 94;
 
   button.addEventListener("click", () => {
@@ -29,14 +31,31 @@ function createTrustTrends({ svg, button, onToggle }) {
     button.setAttribute("aria-expanded", String(open));
     button.title = open ? "Hide country trends" : "Show country trends";
     button.setAttribute("aria-label", button.title);
-    onToggle();
+    panel.interrupt("disclosure"); revealing = false;
+    if (open) {
+      closing = false; pendingReveal = true;
+      onToggle();
+    } else if (context?.position) {
+      closing = true;
+      const { left, top, distance } = context.position;
+      panel.attr("pointer-events", "none").attr("aria-hidden", "true")
+        .transition("disclosure").duration(slideDuration).ease(d3.easeCubicInOut)
+        .attr("transform", `translate(${left + distance},${top})`).attr("opacity", 0)
+        .on("end", () => {
+          if (open) return;
+          closing = false; panel.attr("display", "none");
+          onToggle();
+        });
+    } else {
+      closing = false; panel.attr("display", "none"); onToggle();
+    }
   });
 
   function reservedWidth(compact, count) {
-    return open && !compact ? Math.max(1, count) * cellWidth + gap : 0;
+    return (open || closing) && !compact ? Math.max(1, count) * cellWidth + gap : 0;
   }
   function height(chartHeight, compact, metricCount, count) {
-    if (!open || !compact) return chartHeight;
+    if ((!open && !closing) || !compact) return chartHeight;
     return chartHeight + (count ? 96 + metricCount * mobileRow : 96);
   }
   function highlight(year, isHover) {
@@ -61,14 +80,26 @@ function createTrustTrends({ svg, button, onToggle }) {
 
   function render(next) {
     context = next;
-    panel.attr("display", open ? null : "none");
-    if (!open) return;
+    if (!open) {
+      if (!closing) panel.attr("display", "none");
+      return;
+    }
     const { rows, countries, metrics, years, year, compact, width, chartHeight, margin, innerW, centers, transition } = next;
     if (!years.includes(hoverYear)) hoverYear = null;
     const left = compact ? 16 : margin.left + innerW + gap;
     const top = compact ? chartHeight + 76 : margin.top;
-    panel.attr("transform", `translate(${left},${top})`);
     const columnWidth = compact ? (width - 32) / Math.max(1, countries.length) : cellWidth;
+    const distance = Math.max(1, countries.length) * columnWidth + 24;
+    context.position = { left, top, distance };
+    const wasHidden = panel.attr("display") === "none";
+    panel.attr("display", null).attr("pointer-events", null).attr("aria-hidden", "false");
+    if (pendingReveal || revealing) {
+      if (wasHidden) panel.attr("transform", `translate(${left + distance},${top})`).attr("opacity", 0);
+      pendingReveal = false; revealing = true;
+      panel.interrupt("disclosure").transition("disclosure").duration(slideDuration).ease(d3.easeCubicInOut)
+        .attr("transform", `translate(${left},${top})`).attr("opacity", 1)
+        .on("end", () => { revealing = false; });
+    } else panel.attr("transform", `translate(${left},${top})`).attr("opacity", 1);
     const sparkWidth = columnWidth - 20;
     const x = d3.scaleLinear().domain(d3.extent(years)).range([6, sparkWidth - 6]);
     // Keep desktop rows aligned while reducing the 50 px axis-to-axis gap to 37.5 px.
@@ -81,7 +112,7 @@ function createTrustTrends({ svg, button, onToggle }) {
       .selectAll("tspan").data(["Select a country", "to view its trends."]).join("tspan")
       .attr("x", 2).attr("dy", (_, i) => i ? 20 : 0).text(d => d);
     panel.selectAll("text.trend-mobile-label").data(compact && countries.length ? metrics : []).join("text")
-      .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 43).text(d => d);
+      .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 43).text(labelMetric);
 
     const series = trustTrendSeries(rows, countries, metrics, years);
     const columns = panel.selectAll("g.trend-column").data(series, d => d.country).join("g")
@@ -105,7 +136,7 @@ function createTrustTrends({ svg, button, onToggle }) {
         return cell;
       });
       cells.interrupt().transition(transition).attr("transform", (_, i) => `translate(0,${compact ? i * mobileRow : centers[i]})`);
-      cells.attr("aria-label", d => `${country.country}, ${d.metric}, use arrow keys to explore years`)
+      cells.attr("aria-label", d => `${country.country}, ${labelMetric(d.metric)}, use arrow keys to explore years`)
         .attr("aria-valuemin", years[0]).attr("aria-valuemax", years[years.length - 1])
         .on("pointermove pointerdown", function(event) {
           activeCell = this;
@@ -146,5 +177,5 @@ function createTrustTrends({ svg, button, onToggle }) {
     if (activeCell && !panel.node().contains(activeCell)) { activeCell = null; hoverYear = null; }
     highlight(hoverYear, hoverYear !== null);
   }
-  return { isOpen: () => open, reservedWidth, height, render };
+  return { isOpen: () => open || closing, reservedWidth, height, render };
 }
