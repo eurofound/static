@@ -21,11 +21,11 @@ function createTrustTrends({ svg, button, onToggle }) {
   const panel = svg.append("g").attr("id", "trustTrends").attr("role", "group")
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
-  let open = false, context = null, hoverYear = null;
+  let open = false, context = null, hoverYear = null, activeCell = null;
   const cellWidth = 144, gap = 16, mobileRow = 94;
 
   button.addEventListener("click", () => {
-    open = !open; hoverYear = null;
+    open = !open; hoverYear = null; activeCell = null;
     button.setAttribute("aria-expanded", String(open));
     button.title = open ? "Hide country trends" : "Show country trends";
     button.setAttribute("aria-label", button.title);
@@ -53,11 +53,11 @@ function createTrustTrends({ svg, button, onToggle }) {
       cell.select(".trend-point").attr("display", available ? null : "none")
         .attr("cx", x).attr("cy", available ? columns.y(score) : 0);
       const label = cell.select(".trend-value").attr("x", Math.max(36, Math.min(columns.width - 36, x)));
-      label.select(".trend-year").text(isHover ? `${activeYear} · ` : "");
+      label.select(".trend-year").text(isHover && this === activeCell ? `${activeYear} · ` : "");
       label.select(".trend-score").text(available ? score.toFixed(1) : "—");
     });
   }
-  function clearHover() { hoverYear = null; highlight(null, false); }
+  function clearHover() { hoverYear = null; activeCell = null; highlight(null, false); }
 
   function render(next) {
     context = next;
@@ -108,16 +108,18 @@ function createTrustTrends({ svg, button, onToggle }) {
       cells.attr("aria-label", d => `${country.country}, ${d.metric}, use arrow keys to explore years`)
         .attr("aria-valuemin", years[0]).attr("aria-valuemax", years[years.length - 1])
         .on("pointermove pointerdown", function(event) {
+          activeCell = this;
           hoverYear = nearestTrustYear(years, (d3.pointer(event, this)[0] - 6) / (sparkWidth - 12));
           highlight(hoverYear, true);
         })
         .on("pointerleave", clearHover)
-        .on("focus", () => { hoverYear ??= year; highlight(hoverYear, true); })
+        .on("focus", function() { activeCell = this; hoverYear ??= year; highlight(hoverYear, true); })
         .on("blur", clearHover)
         .on("keydown", event => {
           if (!["ArrowLeft", "ArrowRight", "Home", "End", "Escape"].includes(event.key)) return;
           event.preventDefault();
           if (event.key === "Escape") return clearHover();
+          activeCell = event.currentTarget;
           const index = years.indexOf(hoverYear ?? year);
           hoverYear = event.key === "Home" ? years[0] : event.key === "End" ? years[years.length - 1]
             : years[Math.max(0, Math.min(years.length - 1, index + (event.key === "ArrowRight" ? 1 : -1)))];
@@ -141,6 +143,7 @@ function createTrustTrends({ svg, button, onToggle }) {
         .attr("class", "trend-endpoint").attr("x", (_, i) => i ? sparkWidth - 6 : 6).attr("y", halfHeight + 16)
         .attr("text-anchor", (_, i) => i ? "end" : "start").text(d => d);
     });
+    if (activeCell && !panel.node().contains(activeCell)) { activeCell = null; hoverYear = null; }
     highlight(hoverYear, hoverYear !== null);
   }
   return { isOpen: () => open, reservedWidth, height, render };

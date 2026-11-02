@@ -85,8 +85,9 @@ with taller sparklines that retain indicator alignment, and 54 px on mobile,
 where the independent trend rows use a 94 px pitch.
 Only the first chart in each country column shows its start and end years;
 there are no other axis labels. The current survey-year score is highlighted as
-a number. Hovering any sparkline synchronizes the year, dot, guide and year/value
-readout across every country's seven charts. Leaving restores the current-year
+a number. Hovering any sparkline synchronizes the score, dot and guide across
+every country's seven charts. Only the hovered (or keyboard-focused) chart's
+readout includes the year. Leaving restores the current-year
 score. Keyboard users can focus a sparkline and use Left/Right, Home/End or Escape.
 
 Below 960 px, an open trends pane moves beneath the main chart with indicator
