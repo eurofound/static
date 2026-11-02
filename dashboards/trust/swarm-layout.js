@@ -1,4 +1,4 @@
-// Keep score positions exact; only move points vertically to prevent collisions.
+// Keep scores and row heights exact; allow crowding only near the row edges.
 function layoutTrustSwarmRows(points, rowCount, { compact = false, radius = 6 } = {}) {
   const rows = Array.from({ length: rowCount }, () => []);
   const bodyRadius = point => point.Country === "European Union"
@@ -24,37 +24,23 @@ function layoutTrustSwarmRows(points, rowCount, { compact = false, radius = 6 } 
     }
   }
 
-  // Include the selected-country ring, not just the six-pixel dot itself.
-  const halo = radius + 5, padding = 12;
-  const extents = rows.map(row => ({
-    low: row.length ? Math.min(...row.map(point => point.y)) - halo : -halo,
-    high: row.length ? Math.max(...row.map(point => point.y)) + halo : halo,
-  }));
+  // Leave room for selected-country rings. Preserve the central swarm and
+  // smoothly compress its tails, permitting overlap instead of growing rows.
+  const halo = radius + 5, limit = 44 - halo - 2, shoulder = Math.min(18, limit / 2 + 3);
+  const boundedOffset = value => {
+    const distance = Math.abs(value);
+    if (distance <= shoulder) return value;
+    return Math.sign(value) * (shoulder + (limit - shoulder) *
+      (1 - Math.exp(-(distance - shoulder) / (limit - shoulder))));
+  };
   const centers = [], titleY = [], ruleY = [], bounds = [];
-  if (compact) {
-    let title = -54;
-    rows.forEach((row, i) => {
-      titleY[i] = title;
-      centers[i] = title + 28 - extents[i].low;
-      ruleY[i] = centers[i] + extents[i].high + padding;
-      bounds[i] = { top: i ? ruleY[i - 1] : title - 18, bottom: ruleY[i] };
-      title = ruleY[i] + 32;
-    });
-  } else {
-    rows.forEach((row, i) => {
-      centers[i] = i ? Math.max(centers[i - 1] + 90,
-        centers[i - 1] + extents[i - 1].high + padding * 2 - extents[i].low)
-        : Math.max(0, -44 + padding - extents[i].low);
-      titleY[i] = centers[i];
-    });
-    rows.forEach((row, i) => {
-      ruleY[i] = i + 1 < rowCount
-        ? (centers[i] + extents[i].high + centers[i + 1] + extents[i + 1].low) / 2
-        : Math.max(centers[i] + 44, centers[i] + extents[i].high + padding);
-      bounds[i] = { top: i ? ruleY[i - 1] : -44, bottom: ruleY[i] };
-    });
-  }
-  rows.forEach((row, i) => row.forEach(point => { point.y += centers[i]; }));
+  rows.forEach((row, i) => {
+    centers[i] = compact ? i * 136 + 8 : i * 90;
+    titleY[i] = compact ? centers[i] - 62 : centers[i];
+    ruleY[i] = centers[i] + (compact ? 56 : 44);
+    bounds[i] = { top: i ? ruleY[i - 1] : compact ? -72 : -44, bottom: ruleY[i] };
+    row.forEach(point => { point.y = centers[i] + boundedOffset(point.y); });
+  });
   return { centers, titleY, ruleY, bounds, axisY: rowCount ? ruleY[rowCount - 1] + (compact ? 30 : 34) : 0 };
 }
 

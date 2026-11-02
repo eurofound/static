@@ -19,7 +19,7 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 - `eurofound-logo.svg`: official stacked Eurofound logo, copied from the website's survey explorer assets.
 - `label-layout.js`: positions measured country labels without overlap or clipping at the plot edges.
 - `label-layout.test.js`: regression checks for nearby dots, edge positions and deselection.
-- `swarm-layout.js`: collision-free point packing and adaptive indicator row spacing.
+- `swarm-layout.js`: fixed-height indicator rows with bounded point packing.
 - `swarm-layout.test.js`: dense/tied scores, every survey year and transition boundary checks.
 
 ## Current data
@@ -114,12 +114,13 @@ keys remain unchanged. The survey credit is “Living and Working in the EU e-su
 
 ### Existing controls and downloads
 
-Indicator rows on desktop and mobile expand to contain their complete swarm,
-including selected-country rings, with padding to each separator. Score positions
-stay exact. Desktop indicator labels and trend charts follow the same row centres.
+Indicator rows have fixed heights: 90 px on desktop and 136 px on mobile.
+Crowded swarms compress gently near the top and bottom, where overlap is allowed.
+Markers and selection rings stay inside their own row. Horizontal score positions
+stay exact, and desktop trend charts follow the fixed row centres.
 
 At narrow widths, controls stack and indicator headings move above their dots.
-Each row gets enough height for its actual swarm. Country labels use a second
+Rows retain their fixed height even for dense swarms. Country labels use a second
 row when needed. Resizing keeps the current year and selections. Mobile year
 changes animate the row headings and guides together with the dots.
 
