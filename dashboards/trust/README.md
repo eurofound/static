@@ -79,7 +79,7 @@ With no selection, the expanded pane prompts the user to select a country.
 All sparklines use the complete 2021–2025 series and the same fixed 2–8 vertical
 scale, with a left y-axis line and permanent dots at the first and last values.
 There are no vertical panel dividers or horizontal separators between sparklines.
-The first country's line and dots are grey; the second country's are green.
+Both countries' lines and dots are grey, with slightly darker grey year/value readouts.
 Vertical gaps between y-axis extents are reduced by 25%: 37.5 px on desktop,
 with taller sparklines that retain indicator alignment, and 54 px on mobile,
 where the independent trend rows use a 94 px pitch.

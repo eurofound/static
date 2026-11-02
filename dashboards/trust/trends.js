@@ -87,8 +87,8 @@ function createTrustTrends({ svg, button, onToggle }) {
     const columns = panel.selectAll("g.trend-column").data(series, d => d.country).join("g")
       .attr("class", "trend-column").attr("data-country", d => d.country)
       .attr("transform", (_, i) => `translate(${i * columnWidth + 8},0)`);
-    columns.each(function(country, countryIndex) {
-      const column = d3.select(this), color = countryIndex ? "#267a3e" : "#747474";
+    columns.each(function(country) {
+      const column = d3.select(this), color = "#747474";
       column.selectAll("text.trend-country").data([country]).join("text")
         .attr("class", "trend-country").attr("x", 0).attr("y", compact ? -71 : -61)
         .attr("dominant-baseline", "central").text(d => d.country);
