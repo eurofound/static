@@ -22,7 +22,7 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
   let open = false, context = null, hoverYear = null;
-  const cellWidth = 144, gap = 16, mobileRow = 112;
+  const cellWidth = 144, gap = 16, mobileRow = 94;
 
   button.addEventListener("click", () => {
     open = !open; hoverYear = null;
@@ -71,21 +71,24 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
     const columnWidth = compact ? (width - 32) / Math.max(1, countries.length) : cellWidth;
     const sparkWidth = columnWidth - 20;
     const x = d3.scaleLinear().domain(d3.extent(years)).range([6, sparkWidth - 6]);
-    const y = d3.scaleLinear().domain([2, 8]).range([20, -20]);
+    // Keep desktop rows aligned while reducing the 50 px axis-to-axis gap to 37.5 px.
+    // Mobile rows are independent: a 94 px pitch reduces their 72 px gap to 54 px.
+    const halfHeight = compact ? 20 : 26.25;
+    const y = d3.scaleLinear().domain([2, 8]).range([halfHeight, -halfHeight]);
     context.columns = { x, y, width: sparkWidth };
     panel.selectAll("text.trend-empty").data(countries.length ? [] : [null]).join("text")
       .attr("class", "trend-empty").attr("x", 2).attr("y", compact ? -12 : 8)
       .selectAll("tspan").data(["Select a country", "to view its trends."]).join("tspan")
       .attr("x", 2).attr("dy", (_, i) => i ? 20 : 0).text(d => d);
     panel.selectAll("text.trend-mobile-label").data(compact && countries.length ? metrics : []).join("text")
-      .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 46).text(d => d);
+      .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 43).text(d => d);
 
     const series = trustTrendSeries(rows, countries, metrics, years);
     const columns = panel.selectAll("g.trend-column").data(series, d => d.country).join("g")
       .attr("class", "trend-column").attr("data-country", d => d.country)
       .attr("transform", (_, i) => `translate(${i * columnWidth + 8},0)`);
     columns.each(function(country, countryIndex) {
-      const column = d3.select(this), color = countryIndex ? "#0b3d56" : "#566779";
+      const column = d3.select(this), color = countryIndex ? "#254b36" : "#3f3f3f";
       const header = column.selectAll("foreignObject.name-fo").data([country]).join(enter => {
         const fo = enter.append("foreignObject").attr("class", "name-fo");
         const row = fo.append("xhtml:div").attr("class", "flag-row trend-country");
@@ -128,6 +131,8 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
       cells.select(".trend-line").attr("stroke", color)
         .attr("d", d => d3.line().defined(point => point.score !== null).x(point => x(point.year)).y(point => y(point.score))(d.values));
       cells.select(".trend-point").attr("fill", color);
+      cells.select(".trend-guide").attr("y1", -halfHeight - 3).attr("y2", halfHeight + 3);
+      cells.select(".trend-value").attr("y", compact ? -29 : -33);
       cells.selectAll("circle.trend-endpoint-dot")
         .data(d => [d.values[0], d.values[d.values.length - 1]].filter(point => point?.score !== null && Number.isFinite(point?.score)), d => d.year)
         .join("circle").attr("class", "trend-endpoint-dot").attr("r", 3)
@@ -138,7 +143,7 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
         .attr("y1", y(2)).attr("y2", y(8));
       // Only the first indicator has endpoint years; all other axes stay unlabelled.
       cells.selectAll("text.trend-endpoint").data((_, i) => i ? [] : [years[0], years[years.length - 1]]).join("text")
-        .attr("class", "trend-endpoint").attr("x", (_, i) => i ? sparkWidth - 6 : 6).attr("y", 36)
+        .attr("class", "trend-endpoint").attr("x", (_, i) => i ? sparkWidth - 6 : 6).attr("y", halfHeight + 16)
         .attr("text-anchor", (_, i) => i ? "end" : "start").text(d => d);
     });
     highlight(hoverYear, hoverYear !== null);
