@@ -4,7 +4,7 @@ const SHARED_METRICS=new Set(["Trust in country's government","Trust in people",
 function displayTrustMetric(metric){return metric==="Trust in country's government"?"Trust in the country’s government":metric}
 const FLAG_CODE={"European Union":"eu","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Netherlands":"nl","Poland":"pl","Portugal":"pt","Romania":"ro","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se"};
 const svg=d3.select("#chart"),g=svg.append("g"),guidesG=g.append("g").attr("class","chart-guides"),titlesG=g.append("g").attr("class","chart-titles");
-let width=1100,compact=false,margin={top:84,right:28,bottom:110,left:270},rowGap=90,r=6,innerW=802,labelLeft=-246,rowCenters=[];
+let width=1100,compact=false,stacked=false,margin={top:84,right:28,bottom:110,left:270},rowGap=90,r=6,innerW=802,labelLeft=-246,rowCenters=[];
 const x=d3.scaleLinear().domain([1,8]).range([0,innerW]),rowY=i=>rowCenters[i]??i*rowGap;
 const color=d3.scaleDiverging().domain([1,5,8]).interpolator(d3.interpolateRgbBasis([css("--low"),css("--mid"),css("--high")]));
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
@@ -79,11 +79,11 @@ function changeYear(year){
 }
 function configureChart(){
   const available=Math.max(240,Math.floor(svg.node().getBoundingClientRect().width));
-  const nextWidth=Math.min(1100,available),nextCompact=available<=680||(trustTrends.isOpen()&&available<960);
-  const changed=nextWidth!==width||nextCompact!==compact;
-  width=nextWidth;compact=nextCompact;
+  const nextWidth=Math.min(1100,available),nextCompact=available<=860,nextStacked=available<=480;
+  const changed=nextWidth!==width||nextCompact!==compact||nextStacked!==stacked;
+  width=nextWidth;compact=nextCompact;stacked=nextStacked;
   margin=compact?{top:148,right:16,bottom:76,left:16}:{top:84,right:28,bottom:110,left:270};
-  rowGap=compact?136:90;innerW=width-margin.left-margin.right-trustTrends.reservedWidth(compact,selectedCountries.length);labelLeft=compact?0:-margin.left+24;
+  rowGap=compact?136:90;innerW=width-margin.left-margin.right-trustTrends.reservedWidth(stacked,selectedCountries.length,width);labelLeft=compact?0:-margin.left+24;
   x.range([0,innerW]);
   return changed;
 }
@@ -94,7 +94,7 @@ function renderChart(prevMap,prevSelected,duration=prevMap?moveDuration():0){
   const {centers,titleY,ruleY,axisY}=layoutTrustSwarmRows(points,categories.length,{compact,radius:r});
   rowCenters=centers;
   const chartHeight=margin.top+axisY+32;
-  const totalH=trustTrends.height(chartHeight,compact,categories.length,selectedCountries.length);
+  const totalH=trustTrends.height(chartHeight,stacked,categories.length,selectedCountries.length);
   svg.interrupt().attr("width",width).transition(transition).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
   // Keep headings and guides in step with the changing swarm height on phones.
   const titles=titlesG.selectAll("g.chart-title").data(categories,d=>d).join(enter=>{
@@ -103,17 +103,18 @@ function renderChart(prevMap,prevSelected,duration=prevMap?moveDuration():0){
     group.append("text").attr("class","label").attr("text-anchor","start");return group;
   });
   titles.select("rect").interrupt().attr("display",compact?null:"none").transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]-14).attr("width",innerW);
-  titles.select("text").interrupt().text(displayTrustMetric).transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]);
+  titles.select("text").interrupt().text(displayTrustMetric).style("font-size",compact&&innerW<280?"14px":null).transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]);
   guidesG.selectAll("line.row-rule").data(categories,d=>d).join("line").attr("class","row-rule").interrupt().transition(transition)
     .attr("x1",labelLeft).attr("x2",innerW).attr("y1",(_,i)=>ruleY[i]).attr("y2",(_,i)=>ruleY[i]);
   guidesG.selectAll("line.mid-guide").data([null]).join("line").attr("class","mid-guide").attr("stroke","#d6d6d6").interrupt().transition(transition)
     .attr("x1",x(5)).attr("x2",x(5)).attr("y1",0).attr("y2",ruleY[ruleY.length-1]);
   const cues=guidesG.selectAll("g.axis-cues").data([null]).join("g").attr("class","axis-cues");
+  cues.selectAll("text").style("font-size",innerW<340?"14px":null);
   cues.interrupt().transition(transition).attr("transform",`translate(0,${axisY})`);
   cues.selectAll("text.low").data([null]).join("text").attr("class","low").attr("text-anchor","start").text("← Lower trust").interrupt().transition(transition).attr("x",compact?0:x(1.2));
   cues.selectAll("text.high").data([null]).join("text").attr("class","high").attr("text-anchor","end").text("Higher trust →").interrupt().transition(transition).attr("x",compact?innerW:x(7.5));
   drawDots(prevMap,transition);drawSelected(false,prevSelected,transition);titlesG.raise();countryLabelsG.raise();
-  trustTrends.render({rows:allRows,countries:selectedCountries,metrics:categories,years,year:curYear,compact,width,chartHeight,margin,innerW,centers:categories.map((_,i)=>rowY(i)),rules:ruleY,transition});
+  trustTrends.render({rows:allRows,countries:selectedCountries,metrics:categories,years,year:curYear,compact,stacked,width,chartHeight,margin,innerW,centers:categories.map((_,i)=>rowY(i)),rules:ruleY,transition});
 }
 window.getTrustExportState=()=>({
   year:curYear,round:INCLUDED_ROUNDS[curYear],selectedCountries:[...selectedCountries],

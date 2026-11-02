@@ -35,11 +35,12 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     onToggle();
   });
 
-  function reservedWidth(compact, count) {
-    return open && !compact ? Math.max(1, count) * cellWidth + gap : 0;
+  function sideColumnWidth(width) { return Math.max(96, Math.min(cellWidth, width * .2)); }
+  function reservedWidth(stacked, count, width = 1100) {
+    return open && !stacked ? Math.max(1, count) * sideColumnWidth(width) + gap : 0;
   }
-  function height(chartHeight, compact, metricCount, count) {
-    if (!open || !compact) return chartHeight;
+  function height(chartHeight, stacked, metricCount, count) {
+    if (!open || !stacked) return chartHeight;
     return chartHeight + (count ? 96 + metricCount * mobileRow : 96);
   }
   function highlight(year, isHover) {
@@ -73,11 +74,11 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
       } else panel.attr("display", "none");
       return;
     }
-    const { rows, countries, metrics, years, year, compact, width, chartHeight, margin, innerW, centers, transition } = next;
+    const { rows, countries, metrics, years, year, compact, stacked, width, chartHeight, margin, innerW, centers, transition } = next;
     if (!years.includes(hoverYear)) hoverYear = null;
-    const left = compact ? 16 : margin.left + innerW + gap;
-    const top = compact ? chartHeight + 76 : margin.top;
-    const columnWidth = compact ? (width - 32) / Math.max(1, countries.length) : cellWidth;
+    const left = stacked ? 16 : margin.left + innerW + gap;
+    const top = stacked ? chartHeight + 76 : margin.top;
+    const columnWidth = stacked ? (width - 32) / Math.max(1, countries.length) : sideColumnWidth(width);
     const distance = Math.max(1, countries.length) * columnWidth + 24;
     context.position = { left, top, distance };
     const wasHidden = panel.attr("display") === "none";
@@ -90,14 +91,14 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     const x = d3.scaleLinear().domain(d3.extent(years)).range([6, sparkWidth - 6]);
     // Keep desktop rows aligned while reducing the 50 px axis-to-axis gap to 37.5 px.
     // Mobile rows are independent: a 94 px pitch reduces their 72 px gap to 54 px.
-    const halfHeight = compact ? 20 : 26.25;
+    const halfHeight = stacked ? 20 : 26.25;
     const y = d3.scaleLinear().domain([2, 8]).range([halfHeight, -halfHeight]);
     context.columns = { x, y, width: sparkWidth };
     panel.selectAll("text.trend-empty").data(countries.length ? [] : [null]).join("text")
-      .attr("class", "trend-empty").attr("x", 2).attr("y", compact ? -12 : 8)
+      .attr("class", "trend-empty").attr("x", 2).attr("y", stacked ? -12 : 8)
       .selectAll("tspan").data(["Select a country", "to view its trends."]).join("tspan")
       .attr("x", 2).attr("dy", (_, i) => i ? 20 : 0).text(d => d);
-    panel.selectAll("text.trend-mobile-label").data(compact && countries.length ? metrics : []).join("text")
+    panel.selectAll("text.trend-mobile-label").data(stacked && countries.length ? metrics : []).join("text")
       .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 43).text(labelMetric);
 
     const series = trustTrendSeries(rows, countries, metrics, years);
@@ -111,7 +112,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
     columns.each(function(country) {
       const column = d3.select(this), color = "#747474";
       column.selectAll("text.trend-country").data([country]).join("text")
-        .attr("class", "trend-country").attr("x", 0).attr("y", compact ? -71 : -61)
+        .attr("class", "trend-country").attr("x", 0).attr("y", stacked ? -71 : compact ? -125 : -61)
         .attr("dominant-baseline", "central").text(d => d.country);
       const cells = column.selectAll("g.trend-cell").data(country.indicators, d => d.metric).join(enter => {
         const cell = enter.append("g").attr("class", "trend-cell").attr("tabindex", 0).attr("role", "slider");
@@ -125,7 +126,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         cell.append("rect").attr("class", "trend-hit");
         return cell;
       });
-      cells.interrupt().transition(transition).attr("transform", (_, i) => `translate(0,${compact ? i * mobileRow : centers[i]})`);
+      cells.interrupt().transition(transition).attr("transform", (_, i) => `translate(0,${stacked ? i * mobileRow : centers[i]})`);
       cells.attr("aria-label", d => `${country.country}, ${labelMetric(d.metric)}, use arrow keys to explore years`)
         .attr("aria-valuemin", years[0]).attr("aria-valuemax", years[years.length - 1])
         .on("pointermove pointerdown", function(event) {
@@ -150,7 +151,7 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         .attr("d", d => d3.line().defined(point => point.score !== null).x(point => x(point.year)).y(point => y(point.score))(d.values));
       cells.select(".trend-point").attr("fill", "#fff");
       cells.select(".trend-guide").attr("y1", -halfHeight - 3).attr("y2", halfHeight + 3);
-      cells.select(".trend-value").attr("y", compact ? -29 : -33);
+      cells.select(".trend-value").attr("y", stacked ? -29 : -33);
       cells.selectAll("circle.trend-endpoint-dot")
         .data(d => [d.values[0], d.values[d.values.length - 1]].filter(point => point?.score !== null && Number.isFinite(point?.score)), d => d.year)
         .join("circle").attr("class", "trend-endpoint-dot").attr("r", 3)

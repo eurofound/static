@@ -95,9 +95,10 @@ readout includes the year. The active year's point is a white-filled circle with
 a grey outline, above the line and endpoint dots. Leaving restores the current-year
 score. Keyboard users can focus a sparkline and use Left/Right, Home/End or Escape.
 
-Below 960 px, an open trends pane moves beneath the main chart with indicator
-headings and the country columns side by side. This keeps the main plot readable
-on tablets and phones. Collapsing restores the original chart space. Trends are
+The trends pane stays beside the main chart on desktop, tablets and wider phones,
+with narrower trend columns when needed. It moves below only when the usable
+chart width is 480 px or less. Compact indicator headings can sit above the swarm
+without moving the trend pane below it. Collapsing restores the original chart space. Trends are
 native SVG and are included in existing PNG downloads when the pane is expanded;
 CSV downloads retain the current year's 196 observations.
 
