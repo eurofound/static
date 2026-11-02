@@ -101,10 +101,16 @@ if (typeof window !== "undefined") (() => {
     await document.fonts.ready;
     // Finish any active year-change animation before taking a coherent snapshot.
     const source = document.getElementById("chart");
-    await Promise.all([source, ...source.querySelectorAll("*")].flatMap(node =>
-      [d3.active(node), d3.active(node, "disclosure")].filter(Boolean).map(active => active.end().catch(() => {}))
-    ));
-    d3.timerFlush();
+    await new Promise(resolve => {
+      function finishMotion() {
+        d3.timerFlush();
+        const moving = [source, ...source.querySelectorAll("*")]
+          .some(node => d3.active(node) || d3.active(node, "disclosure"));
+        if (moving) requestAnimationFrame(finishMotion);
+        else resolve();
+      }
+      finishMotion();
+    });
     const state = window.getTrustExportState(), clone = source.cloneNode(true);
     const view = source.viewBox.baseVal, chartWidth = view.width, chartHeight = view.height;
     const styleNames = ["fill", "fill-opacity", "stroke", "stroke-width", "stroke-opacity", "stroke-linecap", "opacity", "font-size", "font-weight", "font-family", "dominant-baseline", "text-anchor"];
