@@ -19,6 +19,8 @@ Public page: https://static.eurofound.europa.eu/dashboards/trust/
 - `eurofound-logo.svg`: official stacked Eurofound logo, copied from the website's survey explorer assets.
 - `label-layout.js`: positions measured country labels without overlap or clipping at the plot edges.
 - `label-layout.test.js`: regression checks for nearby dots, edge positions and deselection.
+- `swarm-layout.js`: collision-free point packing and adaptive indicator row spacing.
+- `swarm-layout.test.js`: dense/tied scores, every survey year and transition boundary checks.
 
 ## Current data
 
@@ -83,7 +85,7 @@ All sparklines use the complete 2021–2025 series and the same fixed 2–8 vert
 scale, with a left y-axis line and permanent dots at the first and last values.
 There are no vertical panel dividers or horizontal separators between sparklines.
 Both countries' lines and dots are grey, with slightly darker grey year/value readouts.
-Vertical gaps between y-axis extents are reduced by 25%: 37.5 px on desktop,
+Vertical gaps between y-axis extents have a 37.5 px minimum on desktop,
 with taller sparklines that retain indicator alignment, and 54 px on mobile,
 where the independent trend rows use a 94 px pitch.
 Only the first chart in each country column shows its start and end years;
@@ -111,6 +113,10 @@ The government display label is “Trust in the country’s government”; sourc
 keys remain unchanged. The survey credit is “Living and Working in the EU e-survey”.
 
 ### Existing controls and downloads
+
+Indicator rows on desktop and mobile expand to contain their complete swarm,
+including selected-country rings, with padding to each separator. Score positions
+stay exact. Desktop indicator labels and trend charts follow the same row centres.
 
 At narrow widths, controls stack and indicator headings move above their dots.
 Each row gets enough height for its actual swarm. Country labels use a second
