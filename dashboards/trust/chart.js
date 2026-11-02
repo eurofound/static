@@ -5,7 +5,7 @@ function displayTrustMetric(metric){return metric==="Trust in country's governme
 const FLAG_CODE={"European Union":"eu","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Netherlands":"nl","Poland":"pl","Portugal":"pt","Romania":"ro","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se"};
 const svg=d3.select("#chart"),g=svg.append("g"),guidesG=g.append("g").attr("class","chart-guides"),titlesG=g.append("g").attr("class","chart-titles");
 let width=1100,compact=false,margin={top:84,right:28,bottom:110,left:270},rowGap=90,r=6,innerW=802,labelLeft=-246,rowCenters=[];
-const x=d3.scaleLinear().domain([1,8]).range([0,innerW]),rowY=i=>compact?(rowCenters[i]??i*rowGap):i*rowGap;
+const x=d3.scaleLinear().domain([1,8]).range([0,innerW]),rowY=i=>rowCenters[i]??i*rowGap;
 const color=d3.scaleDiverging().domain([1,5,8]).interpolator(d3.interpolateRgbBasis([css("--low"),css("--mid"),css("--high")]));
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
 const curve=d3.curveCatmullRom.alpha(.8),lineGen=d3.line().x(d=>d.x).y(d=>d.y).curve(curve),dotsG=g.append("g"),bandG=g.append("g").attr("class","band-layer"),layers={A:{g:g.append("g").attr("class","layer-A")},B:{g:g.append("g").attr("class","layer-B")}},countryLabelsG=g.append("g").attr("class","country-labels"),MOVE_MS=650;
@@ -90,23 +90,9 @@ function configureChart(){
 function renderChart(prevMap,prevSelected,duration=prevMap?moveDuration():0){
   const transition=movement(duration);
   g.interrupt().transition(transition).attr("transform",`translate(${margin.left},${margin.top})`);
-  points=buildPoints(allRows.filter(d=>d.Year===curYear));beeswarm(points);
-  const titleY=[],ruleY=[];
-  let axisY=(categories.length-1)*rowGap+78;
-  if(compact){
-    // Dense mobile swarms need space based on their actual height, not fixed rows.
-    let cursor=-54;
-    const nextCenters=[];
-    categories.forEach((_,i)=>{
-      const row=points.filter(p=>p.row===i),base=rowY(i);
-      const low=d3.min(row,p=>p.y-base)??0,high=d3.max(row,p=>p.y-base)??0;
-      titleY[i]=cursor;
-      const center=cursor+28-low;
-      row.forEach(p=>{p.y+=center-base});nextCenters[i]=center;
-      ruleY[i]=center+high+r+18;cursor=ruleY[i]+32;
-    });
-    rowCenters=nextCenters;axisY=ruleY[ruleY.length-1]+30;
-  }else categories.forEach((_,i)=>{titleY[i]=rowY(i);ruleY[i]=rowY(i)+r+38});
+  points=buildPoints(allRows.filter(d=>d.Year===curYear));
+  const {centers,titleY,ruleY,axisY}=layoutTrustSwarmRows(points,categories.length,{compact,radius:r});
+  rowCenters=centers;
   const chartHeight=margin.top+axisY+32;
   const totalH=trustTrends.height(chartHeight,compact,categories.length,selectedCountries.length);
   svg.interrupt().attr("width",width).transition(transition).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
@@ -138,7 +124,6 @@ window.getTrustExportState=()=>({
 
 function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection()}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
 function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
-function beeswarm(pts){const byRow=d3.group(pts,d=>d.row);byRow.forEach(rowPts=>{rowPts.sort((a,b)=>a.x-b.x);for(let i=0;i<rowPts.length;i++){let y=rowY(rowPts[i].row),tries=0;while(tries++<200){let ok=true;for(let j=0;j<i;j++){const dx=rowPts[i].x-rowPts[j].x,dy=y-rowPts[j].y;if(dx*dx+dy*dy<(2*r+1)*(2*r+1)){ok=false;break}}if(ok)break;y=rowY(rowPts[i].row)+((tries%2?1:-1)*Math.ceil(tries/2))}rowPts[i].y=y}})}
 function drawDots(prevMap,transition){
   const sel=dotsG.selectAll(".dot").data(points,d=>d.id);sel.exit().interrupt().remove();
   const enter=sel.enter().append(d=>document.createElementNS("http://www.w3.org/2000/svg",d.Country==="European Union"?"rect":"circle"))
