@@ -1,6 +1,7 @@
 const CSV_URL="./Trust.csv?v=2025-r8-2021-r3";
 const INCLUDED_ROUNDS={2021:3,2022:5,2023:6,2024:7,2025:8};
 const SHARED_METRICS=new Set(["Trust in country's government","Trust in people","Trust in social media","Trust in the European Union","Trust in the healthcare system","Trust in the news media","Trust in the police"]);
+function displayTrustMetric(metric){return metric==="Trust in country's government"?"Trust in the country’s government":metric}
 const FLAG_CODE={"European Union":"eu","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Netherlands":"nl","Poland":"pl","Portugal":"pt","Romania":"ro","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se"};
 const svg=d3.select("#chart"),g=svg.append("g"),guidesG=g.append("g").attr("class","chart-guides"),titlesG=g.append("g").attr("class","chart-titles");
 let width=1100,compact=false,margin={top:84,right:28,bottom:110,left:270},rowGap=90,r=6,innerW=802,labelLeft=-246,rowCenters=[];
@@ -12,9 +13,9 @@ const curve=d3.curveCatmullRom.alpha(.8),lineGen=d3.line().x(d=>d.x).y(d=>d.y).c
 const moveDuration=()=>MOVE_MS;
 const movement=duration=>d3.transition().duration(duration).ease(d3.easeCubicInOut);
 dotsG.raise();
-const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${p.Metric}: ${p.value}`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll("circle").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
+const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${displayTrustMetric(p.Metric)}: ${p.value}`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll(".dot").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
 const yearSel=document.getElementById("yearSel"),countrySel=document.getElementById("countrySel"),countryDisplay=document.getElementById("countryDisplay"),clearBtn=document.getElementById("clearSel"),playBtn=document.getElementById("playYears");let selectedCountries=[],categories=[],points=[],years=[],curYear=null,allRows=[],playback;
-const trustTrends=createTrustTrends({svg,flags:FLAG_CODE,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();configureChart();renderChart()}});
+const trustTrends=createTrustTrends({svg,labelMetric:displayTrustMetric,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();configureChart();renderChart()}});
 function refreshSelection(animateNew=false){
   if(trustTrends.isOpen()){configureChart();renderChart()}
   else drawSelected(animateNew);
@@ -52,7 +53,7 @@ function init(rows){
   window.addEventListener("pagehide",()=>playback.pause());
   countrySel.addEventListener("change",()=>{const choice=countrySel.value;if(!choice)return;hideTip();addCountry(choice,true);countrySel.value=""});
   clearBtn.addEventListener("click",()=>{selectedCountries=[];updateCountryDisplay();applyFade(new Set);refreshSelection();hideTip()});
-  svg.on("click",event=>{if(event.target.tagName.toLowerCase()!=="circle")deselectLast()});
+  svg.on("click",event=>{if(!event.target.classList.contains("dot"))deselectLast()});
   new ResizeObserver(()=>{
     if(configureChart()){hideTip();renderChart();updateCountryDisplay()}
   }).observe(document.querySelector(".wrap"));
@@ -62,7 +63,7 @@ function changeYear(year){
   if(!years.includes(year)||year===curYear)return;
   // Start from what is on screen, including an interrupted year transition.
   const prevMap=new Map();
-  dotsG.selectAll("circle").each(function(p){prevMap.set(`${p.Metric}|${p.Country}`,{x:+this.getAttribute("cx"),y:+this.getAttribute("cy")})});
+  dotsG.selectAll(".dot").each(function(p){prevMap.set(`${p.Metric}|${p.Country}`,{x:+this.getAttribute("cx"),y:+this.getAttribute("cy")})});
   const prevSelected=Object.fromEntries(selectedCountries.map(c=>[c,getCountryPoints(c).map(p=>({...p,...prevMap.get(`${p.Metric}|${p.Country}`)}))]));
   curYear=year;yearSel.value=String(year);yearSel.classList.remove("soft");
   hideTip();renderChart(prevMap,prevSelected);
@@ -106,7 +107,7 @@ function renderChart(prevMap,prevSelected){
     group.append("text").attr("class","label").attr("text-anchor","start");return group;
   });
   titles.select("rect").interrupt().attr("display",compact?null:"none").transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]-14).attr("width",innerW);
-  titles.select("text").interrupt().text(d=>d).transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]);
+  titles.select("text").interrupt().text(displayTrustMetric).transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]);
   guidesG.selectAll("line.row-rule").data(categories,d=>d).join("line").attr("class","row-rule").interrupt().transition(transition)
     .attr("x1",labelLeft).attr("x2",innerW).attr("y1",(_,i)=>ruleY[i]).attr("y2",(_,i)=>ruleY[i]);
   guidesG.selectAll("line.mid-guide").data([null]).join("line").attr("class","mid-guide").attr("stroke","#d6d6d6").interrupt().transition(transition)
@@ -121,14 +122,25 @@ function renderChart(prevMap,prevSelected){
 window.getTrustExportState=()=>({
   year:curYear,round:INCLUDED_ROUNDS[curYear],selectedCountries:[...selectedCountries],
   rows:allRows.filter(d=>d.Year===curYear).map(d=>({...d})),
-  title:"Trust indicators dashboard",source:"Eurofound, Living and working in the EU e-survey",
+  title:"Trust indicators dashboard",source:"Eurofound, Living and Working in the EU e-survey",
   sourceUrl:"https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey"
 });
 
 function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection()}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
 function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
 function beeswarm(pts){const byRow=d3.group(pts,d=>d.row);byRow.forEach(rowPts=>{rowPts.sort((a,b)=>a.x-b.x);for(let i=0;i<rowPts.length;i++){let y=rowY(rowPts[i].row),tries=0;while(tries++<200){let ok=true;for(let j=0;j<i;j++){const dx=rowPts[i].x-rowPts[j].x,dy=y-rowPts[j].y;if(dx*dx+dy*dy<(2*r+1)*(2*r+1)){ok=false;break}}if(ok)break;y=rowY(rowPts[i].row)+((tries%2?1:-1)*Math.ceil(tries/2))}rowPts[i].y=y}})}
-function drawDots(prevMap,transition){const sel=dotsG.selectAll("circle").data(points,d=>d.id);sel.exit().interrupt().remove();const enter=sel.enter().append("circle").attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("cx",d=>prevMap?.get(d.id)?.x??d.x).attr("cy",d=>prevMap?.get(d.id)?.y??d.y).attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip).on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});enter.merge(sel).interrupt().transition(transition).attr("fill",d=>color(d.value)).attr("cx",d=>d.x).attr("cy",d=>d.y);applyFade(new Set(selectedCountries))}
+function drawDots(prevMap,transition){
+  const sel=dotsG.selectAll(".dot").data(points,d=>d.id);sel.exit().interrupt().remove();
+  const enter=sel.enter().append(d=>document.createElementNS("http://www.w3.org/2000/svg",d.Country==="European Union"?"rect":"circle"))
+    .attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("width",2*r).attr("height",2*r)
+    .attr("cx",d=>prevMap?.get(d.id)?.x??d.x).attr("cy",d=>prevMap?.get(d.id)?.y??d.y)
+    .attr("x",d=>(prevMap?.get(d.id)?.x??d.x)-r).attr("y",d=>(prevMap?.get(d.id)?.y??d.y)-r)
+    .attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip)
+    .on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});
+  enter.merge(sel).interrupt().transition(transition).attr("fill",d=>color(d.value))
+    .attr("cx",d=>d.x).attr("cy",d=>d.y).attr("x",d=>d.x-r).attr("y",d=>d.y-r);
+  applyFade(new Set(selectedCountries));
+}
 function getCountryPoints(country){return categories.map(m=>points.find(p=>p.Country===country&&p.Metric===m)).filter(Boolean)}
 function drawSelected(animateNew,prevByCountry={},transition=movement(moveDuration())){clearLayers();drawCountryLabels(transition);if(!selectedCountries.length)return;const A=selectedCountries[0],B=selectedCountries[1],prevA=prevByCountry[A],prevB=prevByCountry[B];if(A)drawCountryLayer("A",A,animateNew,prevA,transition);if(B)drawCountryLayer("B",B,animateNew,prevB,transition);if(A&&B)drawBetweenBand(A,B,prevA,prevB,transition)}
 // Join by country so replaced/deselected countries lose their labels immediately.
