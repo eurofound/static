@@ -90,7 +90,8 @@ Only the first chart in each country column shows its start and end years;
 there are no other axis labels. The current survey-year score is highlighted as
 a number. Hovering any sparkline synchronizes the score, dot and guide across
 every country's seven charts. Only the hovered (or keyboard-focused) chart's
-readout includes the year. Leaving restores the current-year
+readout includes the year. The active year's point is a white-filled circle with
+a grey outline, above the line and endpoint dots. Leaving restores the current-year
 score. Keyboard users can focus a sparkline and use Left/Right, Home/End or Escape.
 
 Below 960 px, an open trends pane moves beneath the main chart with indicator
@@ -104,7 +105,8 @@ one and two countries, replacement/deselection, shared hover and keyboard years,
 collapse/reopen, 320/390/768 px layouts and PNG downloads after layout changes.
 
 The EU27 average uses a square marker in the plot, legend and PNG export, with
-a thin 1.5 px outline. Plot squares remain opaque and above the other dots.
+a thin 1.5 px outline. Plot squares stay above the other dots and follow the same
+selection fading as all other countries.
 The government display label is “Trust in the country’s government”; source data
 keys remain unchanged. The survey credit is “Living and Working in the EU e-survey”.
 
