@@ -1,4 +1,4 @@
-// Keep every sparkline on the same years and 1–8 score scale.
+// Keep every sparkline on the same years and 2–8 score scale.
 function trustTrendSeries(rows, countries, metrics, years) {
   const lookup = new Map(rows.map(row => [JSON.stringify([row.Country, row.Metric, row.Year]), row.Score]));
   return countries.map(country => ({ country, indicators: metrics.map(metric => ({
@@ -19,7 +19,7 @@ if (typeof module !== "undefined") module.exports = { trustTrendSeries, nearestT
 
 function createTrustTrends({ svg, flags, button, onToggle }) {
   const panel = svg.append("g").attr("id", "trustTrends").attr("role", "group")
-    .attr("aria-label", "Selected country trust trends, score scale 1 to 8").attr("display", "none")
+    .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
   let open = false, context = null, hoverYear = null;
   const cellWidth = 144, gap = 16, mobileRow = 112;
@@ -28,6 +28,7 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
     open = !open; hoverYear = null;
     button.setAttribute("aria-expanded", String(open));
     button.title = open ? "Hide country trends" : "Show country trends";
+    button.setAttribute("aria-label", button.title);
     onToggle();
   });
 
@@ -62,7 +63,7 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
     context = next;
     panel.attr("display", open ? null : "none");
     if (!open) return;
-    const { rows, countries, metrics, years, year, compact, width, chartHeight, margin, innerW, centers, rules, transition } = next;
+    const { rows, countries, metrics, years, year, compact, width, chartHeight, margin, innerW, centers, transition } = next;
     if (!years.includes(hoverYear)) hoverYear = null;
     const left = compact ? 16 : margin.left + innerW + gap;
     const top = compact ? chartHeight + 76 : margin.top;
@@ -70,15 +71,12 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
     const columnWidth = compact ? (width - 32) / Math.max(1, countries.length) : cellWidth;
     const sparkWidth = columnWidth - 20;
     const x = d3.scaleLinear().domain(d3.extent(years)).range([6, sparkWidth - 6]);
-    const y = d3.scaleLinear().domain([1, 8]).range([20, -20]);
+    const y = d3.scaleLinear().domain([2, 8]).range([20, -20]);
     context.columns = { x, y, width: sparkWidth };
     panel.selectAll("text.trend-empty").data(countries.length ? [] : [null]).join("text")
       .attr("class", "trend-empty").attr("x", 2).attr("y", compact ? -12 : 8)
       .selectAll("tspan").data(["Select a country", "to view its trends."]).join("tspan")
       .attr("x", 2).attr("dy", (_, i) => i ? 20 : 0).text(d => d);
-    panel.selectAll("line.trend-divider").data(compact ? [] : [null]).join("line")
-      .attr("class", "trend-divider").attr("x1", -8).attr("x2", -8)
-      .attr("y1", -60).attr("y2", rules[rules.length - 1]);
     panel.selectAll("text.trend-mobile-label").data(compact && countries.length ? metrics : []).join("text")
       .attr("class", "trend-mobile-label").attr("x", 0).attr("y", (_, i) => i * mobileRow - 46).text(d => d);
 
@@ -98,7 +96,7 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
       header.attr("x", 0).attr("y", compact ? -86 : -76).attr("width", sparkWidth + 6).attr("height", 32);
       const cells = column.selectAll("g.trend-cell").data(country.indicators, d => d.metric).join(enter => {
         const cell = enter.append("g").attr("class", "trend-cell").attr("tabindex", 0).attr("role", "slider");
-        cell.append("line").attr("class", "trend-rule");
+        cell.append("line").attr("class", "trend-y-axis");
         cell.append("path").attr("class", "trend-line");
         cell.append("line").attr("class", "trend-guide").attr("y1", -23).attr("y2", 23);
         cell.append("circle").attr("class", "trend-point").attr("r", 3.5);
@@ -130,10 +128,14 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
       cells.select(".trend-line").attr("stroke", color)
         .attr("d", d => d3.line().defined(point => point.score !== null).x(point => x(point.year)).y(point => y(point.score))(d.values));
       cells.select(".trend-point").attr("fill", color);
+      cells.selectAll("circle.trend-endpoint-dot")
+        .data(d => [d.values[0], d.values[d.values.length - 1]].filter(point => point?.score !== null && Number.isFinite(point?.score)), d => d.year)
+        .join("circle").attr("class", "trend-endpoint-dot").attr("r", 3)
+        .attr("cx", d => x(d.year)).attr("cy", d => y(d.score)).attr("fill", color)
+        .attr("pointer-events", "none");
       cells.select(".trend-hit").attr("x", 0).attr("y", -45).attr("width", sparkWidth).attr("height", 83);
-      cells.select(".trend-rule").attr("x1", 0).attr("x2", sparkWidth)
-        .attr("y1", (_, i) => compact ? 46 : rules[i] - centers[i])
-        .attr("y2", (_, i) => compact ? 46 : rules[i] - centers[i]);
+      cells.select(".trend-y-axis").attr("x1", 6).attr("x2", 6)
+        .attr("y1", y(2)).attr("y2", y(8));
       // Only the first indicator has endpoint years; all other axes stay unlabelled.
       cells.selectAll("text.trend-endpoint").data((_, i) => i ? [] : [years[0], years[years.length - 1]]).join("text")
         .attr("class", "trend-endpoint").attr("x", (_, i) => i ? sparkWidth - 6 : 6).attr("y", 36)

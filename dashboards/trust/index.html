@@ -70,12 +70,11 @@ svg{display:block;width:100%;height:auto}
 .trends-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .trends-toggle .caret{width:12px;transition:transform .15s}
 .trends-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
-.trend-divider,.trend-rule{stroke:var(--line);stroke-width:1}
-.trend-rule{stroke-opacity:.6}
+.trend-y-axis{stroke:#c4cdd4;stroke-width:1}
 .trend-country{font-size:12px;gap:5px;font-weight:700;text-shadow:none}
 .trend-country .fi{flex-basis:24px}
 .trend-line{fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.trend-point{stroke:#fff;stroke-width:1.5}
+.trend-point,.trend-endpoint-dot{stroke:#fff;stroke-width:1.5}
 .trend-guide{stroke:#aab7c1;stroke-width:1;stroke-dasharray:2 3}
 .trend-value{font-size:12px;font-weight:750;fill:var(--high);text-anchor:middle;pointer-events:none;font-variant-numeric:tabular-nums}
 .trend-year{font-size:10px;font-weight:400;fill:var(--muted)}
@@ -120,9 +119,8 @@ svg{display:block;width:100%;height:auto}
 <div class="legend-row"><div class="legend-eu" title="EU27 average"><div class="chip"></div><span>EU27 average</span></div></div>
 </header>
 <div class="chart-area">
-<button id="trendsToggle" class="trends-toggle" type="button" aria-expanded="false" aria-controls="trustTrends" title="Show country trends">
+<button id="trendsToggle" class="trends-toggle" type="button" aria-label="Show country trends" aria-expanded="false" aria-controls="trustTrends" title="Show country trends">
 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3v14h14M5 12l4-4 4 2 4-6"/></svg>
-<span>Trends</span>
 <svg class="caret" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
 </button>
 <svg id="chart" width="1100" height="734" viewBox="0 0 1100 734" aria-label="Trust indicators beeswarm chart"></svg>
@@ -136,7 +134,7 @@ svg{display:block;width:100%;height:auto}
 <div id="tooltip" class="tooltip" style="display:none"></div>
 <script src="./label-layout.js?v=20261027"></script>
 <script src="./year-playback.js?v=20261028-700ms"></script>
-<script src="./trends.js?v=20261102"></script>
+<script src="./trends.js?v=20261102-axes"></script>
 <script src="./chart.js?v=20261102-trends"></script>
 <script src="./exports.js?v=20261028"></script>
 </body>

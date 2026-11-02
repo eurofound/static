@@ -69,15 +69,17 @@ oldest of the two selections; deselecting removes its label and highlights immed
 
 ### Country trends
 
-The small line-chart icon, Trends label and caret above the right edge of the
+The small line-chart icon and caret above the right edge of the
 chart expand a discreet trends pane. It starts collapsed. Selecting a country
 shows seven line charts aligned with the indicator rows; selecting a second
 country adds a second column. Each column has the country's flag and name.
 Replacing, deselecting or clearing countries updates both the beeswarm and trends.
 With no selection, the expanded pane prompts the user to select a country.
 
-All sparklines use the complete 2021–2025 series and the same fixed 1–8 vertical
-scale. Only the first chart in each country column shows its start and end years;
+All sparklines use the complete 2021–2025 series and the same fixed 2–8 vertical
+scale, with a left y-axis line and permanent dots at the first and last values.
+There are no vertical panel dividers or horizontal separators between sparklines.
+Only the first chart in each country column shows its start and end years;
 there are no other axis labels. The current survey-year score is highlighted as
 a number. Hovering any sparkline synchronizes the year, dot, guide and year/value
 readout across every country's seven charts. Leaving restores the current-year
