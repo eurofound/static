@@ -17,7 +17,7 @@ function nearestTrustYear(years, fraction) {
 
 if (typeof module !== "undefined") module.exports = { trustTrendSeries, nearestTrustYear };
 
-function createTrustTrends({ svg, flags, button, onToggle }) {
+function createTrustTrends({ svg, button, onToggle }) {
   const panel = svg.append("g").attr("id", "trustTrends").attr("role", "group")
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
@@ -88,15 +88,10 @@ function createTrustTrends({ svg, flags, button, onToggle }) {
       .attr("class", "trend-column").attr("data-country", d => d.country)
       .attr("transform", (_, i) => `translate(${i * columnWidth + 8},0)`);
     columns.each(function(country, countryIndex) {
-      const column = d3.select(this), color = countryIndex ? "#254b36" : "#3f3f3f";
-      const header = column.selectAll("foreignObject.name-fo").data([country]).join(enter => {
-        const fo = enter.append("foreignObject").attr("class", "name-fo");
-        const row = fo.append("xhtml:div").attr("class", "flag-row trend-country");
-        row.append("span").attr("class", `fi fi-${flags[country.country]}`).attr("aria-hidden", "true");
-        row.append("span").text(country.country);
-        return fo;
-      });
-      header.attr("x", 0).attr("y", compact ? -86 : -76).attr("width", sparkWidth + 6).attr("height", 32);
+      const column = d3.select(this), color = countryIndex ? "#267a3e" : "#747474";
+      column.selectAll("text.trend-country").data([country]).join("text")
+        .attr("class", "trend-country").attr("x", 0).attr("y", compact ? -71 : -61)
+        .attr("dominant-baseline", "central").text(d => d.country);
       const cells = column.selectAll("g.trend-cell").data(country.indicators, d => d.metric).join(enter => {
         const cell = enter.append("g").attr("class", "trend-cell").attr("tabindex", 0).attr("role", "slider");
         cell.append("line").attr("class", "trend-y-axis");

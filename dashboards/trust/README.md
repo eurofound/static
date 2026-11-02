@@ -72,14 +72,14 @@ oldest of the two selections; deselecting removes its label and highlights immed
 The small line-chart icon and caret above the right edge of the
 chart expand a discreet trends pane. It starts collapsed. Selecting a country
 shows seven line charts aligned with the indicator rows; selecting a second
-country adds a second column. Each column has the country's flag and name.
+country adds a second column. Each column has the country's name without a flag.
 Replacing, deselecting or clearing countries updates both the beeswarm and trends.
 With no selection, the expanded pane prompts the user to select a country.
 
 All sparklines use the complete 2021–2025 series and the same fixed 2–8 vertical
 scale, with a left y-axis line and permanent dots at the first and last values.
 There are no vertical panel dividers or horizontal separators between sparklines.
-The first country's line and dots are dark grey; the second country's are dark green.
+The first country's line and dots are grey; the second country's are green.
 Vertical gaps between y-axis extents are reduced by 25%: 37.5 px on desktop,
 with taller sparklines that retain indicator alignment, and 54 px on mobile,
 where the independent trend rows use a 94 px pitch.
