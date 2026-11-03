@@ -196,4 +196,3 @@ function drawCountryLayer(slot,country,animateNew,prevPts,transition){const L=la
 
 function bandPath(A,B){const pairs=categories.map(m=>{const pa=A?.find(p=>p.Metric===m),pb=B?.find(p=>p.Metric===m);return pa&&pb?{pa,pb}:null}).filter(Boolean);if(!pairs.length)return null;const top=pairs.map(d=>({x:d.pa.x,y:d.pa.y})),bottom=pairs.slice().reverse().map(d=>({x:d.pb.x,y:d.pb.y}));return d3.line().x(d=>d.x).y(d=>d.y).curve(curve)([...top,...bottom])+"Z"}
 function drawBetweenBand(a,b,prevA,prevB,transition){const A=getCountryPoints(a),B=getCountryPoints(b),finalPath=bandPath(A,B);if(!finalPath)return;const path=bandG.append("path").attr("class","between-band").attr("d",bandPath(prevA,prevB)||finalPath);if(prevA&&prevB)path.transition(transition).attr("d",finalPath)}
-

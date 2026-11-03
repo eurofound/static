@@ -216,4 +216,3 @@ if (typeof window !== "undefined") (() => {
     if (housingedHousingParent(origin, location.origin)) window.parent.postMessage({ type: "chart-ready", title: "Housing — Household affordability", rowCount: getData().length }, origin);
   }).catch(() => {});
 })();
-

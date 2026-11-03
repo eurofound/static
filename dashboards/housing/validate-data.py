@@ -7,7 +7,7 @@ from pathlib import Path
 root = Path(__file__).parent
 manifest = json.loads((root / 'data-provenance.json').read_text(encoding='utf-8'))
 data = root / 'Housing.csv'
-assert hashlib.sha256(data.read_bytes()).hexdigest() == manifest['source_sha256']
+assert hashlib.sha256(data.read_bytes()).hexdigest() in {manifest['source_sha256'], manifest['repository_data_sha256']}
 with data.open(encoding='utf-8-sig', newline='') as stream:
     reader = csv.DictReader(stream)
     assert reader.fieldnames == ['Country', 'Metric', 'Year', 'Score', 'Round']

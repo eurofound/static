@@ -20,5 +20,6 @@
   "response": "No",
   "unit": "Percentage (0\u2013100)",
   "population": "All available respondents; household affordability questions",
-  "transformation": "Exact copy of supplied dataset, preserving precision and weighted EU27 aggregate. No aggregation or imputation."
+  "transformation": "All source rows and numeric precision preserved, including the weighted EU27 aggregate. Git normalises line endings. No aggregation or imputation.",
+  "repository_data_sha256": "d10b32b5ca959b5379a1f0a4d22b4efca46b29cb01725787b52113239a4a1e6d"
 }

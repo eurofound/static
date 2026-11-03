@@ -3,7 +3,7 @@
 Public page: https://static.eurofound.europa.eu/dashboards/housing/
 
 Adapts the Trust dashboard at commit fd1ecaf. Trust is unchanged.
-Uses the supplied Household_affordability_No_percentage.csv byte-for-byte as Housing.csv.
+Uses the supplied Household_affordability_No_percentage.csv as Housing.csv with all values unchanged; Git normalises line endings.
 504 observations: six household affordability indicators, 27 countries plus the supplied
 weighted EU27 aggregate, 2023–2025 (rounds 6–8). Only response No, overall population.
 Source precision is retained; tooltips and trend labels display one decimal and a % sign.
