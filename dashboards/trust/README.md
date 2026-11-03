@@ -84,6 +84,11 @@ All sparklines use the complete 2021–2025 series and the same fixed 2–8 vert
 scale, with a left y-axis line and permanent dots at the first and last values.
 There are no vertical panel dividers or horizontal separators between sparklines.
 Both countries' lines and dots are grey, with slightly darker grey year/value readouts.
+Each trend has a 7%-opacity area beneath its line down to the existing lower axis.
+Its horizontal colour gradient uses the scatter plot's exact score colour for each
+year, blending between them: lower scores tend orange and higher scores blue.
+The grey line, markers and scales are unchanged. Gradient definitions and their
+local references are retained in PNG exports.
 Vertical gaps between y-axis extents have a 37.5 px minimum on desktop,
 with taller sparklines that retain indicator alignment, and 54 px on mobile,
 where the independent trend rows use a 94 px pitch.

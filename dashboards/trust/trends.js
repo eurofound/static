@@ -17,12 +17,13 @@ function nearestTrustYear(years, fraction) {
 
 if (typeof module !== "undefined") module.exports = { trustTrendSeries, nearestTrustYear };
 
-function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metric }) {
+function createTrustTrends({ svg, button, onToggle, scoreColor, labelMetric = metric => metric }) {
   const panel = svg.append("g").attr("id", "trustTrends").attr("role", "group")
     .attr("aria-label", "Selected country trust trends, score scale 2 to 8").attr("display", "none")
     .on("click", event => event.stopPropagation());
   let open = false, context = null, hoverYear = null, activeCell = null;
   let closing = false, pendingReveal = false;
+  let nextFillId = 0;
   const cellWidth = 144, gap = 16, mobileRow = 94;
 
   button.addEventListener("click", () => {
@@ -116,6 +117,12 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
         .attr("dominant-baseline", "central").text(d => d.country);
       const cells = column.selectAll("g.trend-cell").data(country.indicators, d => d.metric).join(enter => {
         const cell = enter.append("g").attr("class", "trend-cell").attr("tabindex", 0).attr("role", "slider");
+        cell.append("defs").append("linearGradient").attr("class", "trend-fill")
+          .attr("id", () => `trust-trend-fill-${++nextFillId}`)
+          .attr("gradientUnits", "userSpaceOnUse").attr("y1", 0).attr("y2", 0);
+        cell.append("path").attr("class", "trend-area").attr("fill-opacity", .07)
+          .attr("stroke", "none").attr("pointer-events", "none")
+          .attr("fill", function() { return `url(#${this.parentNode.querySelector("linearGradient").id})`; });
         cell.append("line").attr("class", "trend-y-axis");
         cell.append("path").attr("class", "trend-line");
         cell.append("line").attr("class", "trend-guide").attr("y1", -23).attr("y2", 23);
@@ -147,6 +154,15 @@ function createTrustTrends({ svg, button, onToggle, labelMetric = metric => metr
             : years[Math.max(0, Math.min(years.length - 1, index + (event.key === "ArrowRight" ? 1 : -1)))];
           highlight(hoverYear, true);
         });
+      // Each year uses the scatter's score colour, softly blended between years.
+      // Keep the existing line and axes above the transparent area.
+      cells.select(".trend-fill").attr("x1", x(years[0])).attr("x2", x(years[years.length - 1]))
+        .selectAll("stop").data(d => d.values.filter(point => Number.isFinite(point.score)), d => d.year).join("stop")
+        .attr("offset", point => `${100 * (x(point.year) - x(years[0])) / Math.max(1, x(years[years.length - 1]) - x(years[0]))}%`)
+        .attr("stop-color", point => scoreColor(point.score));
+      cells.select(".trend-area")
+        .attr("d", d => d3.area().defined(point => Number.isFinite(point.score))
+          .x(point => x(point.year)).y0(y(2)).y1(point => y(point.score))(d.values));
       cells.select(".trend-line").attr("stroke", color)
         .attr("d", d => d3.line().defined(point => point.score !== null).x(point => x(point.year)).y(point => y(point.score))(d.values));
       cells.select(".trend-point").attr("fill", "#fff");

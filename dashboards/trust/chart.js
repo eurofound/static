@@ -26,7 +26,7 @@ function animateChartLayout(){
   const {prevMap,prevSelected}=captureChartPositions();
   configureChart();renderChart(prevMap,prevSelected,LAYOUT_MS);updateCountryDisplay();
 }
-const trustTrends=createTrustTrends({svg,labelMetric:displayTrustMetric,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();animateChartLayout()}});
+const trustTrends=createTrustTrends({svg,scoreColor:color,labelMetric:displayTrustMetric,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();animateChartLayout()}});
 function refreshSelection(animateNew=false){
   if(trustTrends.isVisible())animateChartLayout();
   else drawSelected(animateNew);

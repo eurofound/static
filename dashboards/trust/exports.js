@@ -118,7 +118,12 @@ if (typeof window !== "undefined") (() => {
     originalNodes.forEach((node, i) => {
       const styles = getComputedStyle(node);
       for (const name of styleNames) cloneNodes[i].style.setProperty(name, styles.getPropertyValue(name));
-      cloneNodes[i].removeAttribute("id");
+      // Preserve local paint-server IDs referenced by the trend area fills.
+      if (!originalNodes[i].closest("defs")) cloneNodes[i].removeAttribute("id");
+    });
+    clone.querySelectorAll(".trend-area").forEach(area => {
+      // Keep the reference local to the exported SVG, regardless of computed URL resolution.
+      area.style.setProperty("fill", area.getAttribute("fill"));
     });
     clone.querySelectorAll("path.highlight").forEach(path => {
       path.removeAttribute("stroke-dasharray");
