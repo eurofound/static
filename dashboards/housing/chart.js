@@ -1,0 +1,199 @@
+const CSV_URL="./Housing.csv?v=20261103";
+const INCLUDED_ROUNDS={2023:6,2024:7,2025:8};
+const SHARED_METRICS=new Set(["Cannot afford a one-week annual holiday away from home", "Cannot afford to avoid arrears", "Cannot afford a meal with meat, fish or vegetarian equivalent every second day", "Cannot afford to keep home adequately warm", "Cannot afford access to a car or van for personal use", "Cannot afford to replace worn-out furniture"]);
+const DISPLAY_LABELS={"Cannot afford a one-week annual holiday away from home": "Cannot afford a holiday", "Cannot afford to avoid arrears": "Cannot avoid arrears", "Cannot afford a meal with meat, fish or vegetarian equivalent every second day": "Cannot afford a nutritious meal", "Cannot afford to keep home adequately warm": "Cannot keep home warm", "Cannot afford access to a car or van for personal use": "Cannot afford car/van access", "Cannot afford to replace worn-out furniture": "Cannot replace furniture"};
+function displayHousingMetric(metric){return DISPLAY_LABELS[metric]||metric}
+const FLAG_CODE={"European Union":"eu","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Netherlands":"nl","Poland":"pl","Portugal":"pt","Romania":"ro","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se"};
+const svg=d3.select("#chart"),g=svg.append("g"),guidesG=g.append("g").attr("class","chart-guides"),titlesG=g.append("g").attr("class","chart-titles");
+let width=1100,compact=false,stacked=false,margin={top:84,right:28,bottom:110,left:270},rowGap=90,r=6,innerW=802,labelLeft=-246,rowCenters=[];
+const x=d3.scaleLinear().domain([0,100]).range([0,innerW]),rowY=i=>rowCenters[i]??i*rowGap;
+const color=d3.scaleDiverging().domain([0,50,100]).interpolator(d3.interpolateRgbBasis([css("--high"),css("--mid"),css("--low")]));
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+const curve=d3.curveCatmullRom.alpha(.8),lineGen=d3.line().x(d=>d.x).y(d=>d.y).curve(curve),dotsG=g.append("g"),bandG=g.append("g").attr("class","band-layer"),layers={A:{g:g.append("g").attr("class","layer-A")},B:{g:g.append("g").attr("class","layer-B")}},countryLabelsG=g.append("g").attr("class","country-labels"),MOVE_MS=650;
+// Preserve the original smooth movement for user-requested year/selection changes.
+const moveDuration=()=>MOVE_MS;
+const movement=duration=>d3.transition().duration(duration).ease(d3.easeCubicInOut);
+dotsG.raise();
+const tip=document.getElementById("tooltip");function showTip(e,p){tip.style.display="block";tip.innerHTML=`<strong>${p.Country}</strong><br>${p.Metric}: ${p.value.toFixed(1)}%`;tip.style.left=Math.max(8,Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8))+"px";tip.style.top=Math.max(8,Math.min(e.clientY+12,innerHeight-tip.offsetHeight-8))+"px"}function hideTip(){tip.style.display="none"}const FADE_OTHER=.2;function applyFade(set){dotsG.selectAll(".dot").classed("emph",d=>set.has(d.Country)).attr("opacity",d=>set.size?(set.has(d.Country)?1:FADE_OTHER):1)}
+const yearSel=document.getElementById("yearSel"),countrySel=document.getElementById("countrySel"),countryDisplay=document.getElementById("countryDisplay"),clearBtn=document.getElementById("clearSel"),playBtn=document.getElementById("playYears");let selectedCountries=[],categories=[],points=[],years=[],curYear=null,allRows=[],playback;
+const LAYOUT_MS=360;
+function captureChartPositions(){
+  const prevMap=new Map();
+  dotsG.selectAll(".dot").each(function(p){prevMap.set(`${p.Metric}|${p.Country}`,{x:+this.getAttribute("cx"),y:+this.getAttribute("cy")})});
+  const prevSelected=Object.fromEntries(selectedCountries.map(c=>[c,getCountryPoints(c).map(p=>({...p,...prevMap.get(`${p.Metric}|${p.Country}`)}))]));
+  return {prevMap,prevSelected};
+}
+function animateChartLayout(){
+  const {prevMap,prevSelected}=captureChartPositions();
+  configureChart();renderChart(prevMap,prevSelected,LAYOUT_MS);updateCountryDisplay();
+}
+const housingTrends=createHousingTrends({svg,scoreColor:color,labelMetric:displayHousingMetric,button:document.getElementById("trendsToggle"),onToggle:()=>{hideTip();animateChartLayout()}});
+function refreshSelection(animateNew=false){
+  if(housingTrends.isVisible())animateChartLayout();
+  else drawSelected(animateNew);
+}
+window.housingDataReady=d3.csv(CSV_URL,d3.autoType).then(init);
+window.housingDataReady.catch(err=>{
+  console.error(err);
+  document.getElementById("downloadStatus").textContent="The data could not be loaded. Please reload the dashboard.";
+});
+function init(rows){
+  allRows=rows.map(d=>({Year:+d.Year,Round:+d.Round,Metric:String(d.Metric),Country:String(d.Country),Score:d.Score==null||d.Score===""?NaN:+d.Score}))
+    .filter(d=>INCLUDED_ROUNDS[d.Year]===d.Round&&SHARED_METRICS.has(d.Metric)&&Number.isFinite(d.Score)&&d.Score>=0&&d.Score<=100);
+  if(allRows.length!==504||new Set(allRows.map(d=>`${d.Country}|${d.Metric}|${d.Year}`)).size!==504)throw new Error("Incomplete or duplicate household affordability data");
+  years=[...new Set(allRows.map(d=>d.Year))].sort(d3.ascending);
+  curYear=d3.max(years);
+  [...years].sort((a,b)=>b-a).forEach(y=>yearSel.add(new Option(y,y,false,y===curYear)));
+  yearSel.classList.add("soft");
+  const byYear=allRows.filter(d=>d.Year===curYear),metrics=[...new Set(byYear.map(d=>d.Metric))];
+  const euVal=Object.fromEntries(metrics.map(m=>[m,byYear.find(d=>d.Metric===m&&d.Country==="European Union")?.Score??NaN]));
+  categories=metrics.slice().sort((a,b)=>d3.descending(euVal[a],euVal[b]));
+  configureChart();renderChart();
+  const countries=[...new Set(allRows.map(d=>d.Country))];
+  ["European Union",...countries.filter(c=>c!=="European Union").sort((a,b)=>a.localeCompare(b))].forEach(c=>countrySel.add(new Option(c,c)));
+  playback=createYearPlayback({years,getYear:()=>curYear,setYear:changeYear,onPlayingChange:playing=>{
+    playBtn.setAttribute("aria-pressed",String(playing));
+    playBtn.setAttribute("aria-label",playing?"Pause years":"Play years");
+    playBtn.title=playing?"Pause years":"Play years";
+    playBtn.querySelector(".play-icon").toggleAttribute("hidden",playing);
+    playBtn.querySelector(".pause-icon").toggleAttribute("hidden",!playing);
+  }});
+  playBtn.disabled=years.length<2;
+  playBtn.addEventListener("click",()=>playback.toggle());
+  yearSel.addEventListener("change",()=>{playback.pause();changeYear(+yearSel.value)});
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)playback.pause()});
+  window.addEventListener("pagehide",()=>playback.pause());
+  countrySel.addEventListener("change",()=>{const choice=countrySel.value;if(!choice)return;hideTip();addCountry(choice,true);countrySel.value=""});
+  clearBtn.addEventListener("click",()=>{selectedCountries=[];updateCountryDisplay();applyFade(new Set);refreshSelection();hideTip()});
+  svg.on("click",event=>{if(!event.target.classList.contains("dot"))deselectLast()});
+  new ResizeObserver(()=>{
+    if(configureChart()){hideTip();renderChart();updateCountryDisplay()}
+  }).observe(document.querySelector(".wrap"));
+}
+window.pauseHousingPlayback=()=>playback?.pause();
+function changeYear(year){
+  if(!years.includes(year)||year===curYear)return;
+  // Start from what is on screen, including an interrupted year transition.
+  const {prevMap,prevSelected}=captureChartPositions();
+  curYear=year;yearSel.value=String(year);yearSel.classList.remove("soft");
+  hideTip();renderChart(prevMap,prevSelected);
+}
+function configureChart(){
+  const available=Math.max(240,Math.floor(svg.node().getBoundingClientRect().width));
+  const nextWidth=Math.min(1100,available),nextCompact=available<=860,nextStacked=available<=480;
+  const changed=nextWidth!==width||nextCompact!==compact||nextStacked!==stacked;
+  width=nextWidth;compact=nextCompact;stacked=nextStacked;
+  margin=compact?{top:148,right:16,bottom:76,left:16}:{top:84,right:28,bottom:110,left:270};
+  rowGap=compact?136:90;innerW=width-margin.left-margin.right-housingTrends.reservedWidth(stacked,selectedCountries.length,width);labelLeft=compact?0:-margin.left+24;
+  x.range([0,innerW]);
+  return changed;
+}
+function renderChart(prevMap,prevSelected,duration=prevMap?moveDuration():0){
+  const transition=movement(duration);
+  g.interrupt().transition(transition).attr("transform",`translate(${margin.left},${margin.top})`);
+  points=buildPoints(allRows.filter(d=>d.Year===curYear));
+  const {centers,titleY,ruleY,axisY}=layoutHousingSwarmRows(points,categories.length,{compact,radius:r});
+  rowCenters=centers;
+  const chartHeight=margin.top+axisY+32;
+  const totalH=housingTrends.height(chartHeight,stacked,categories.length,selectedCountries.length);
+  svg.interrupt().attr("width",width).transition(transition).attr("height",totalH).attr("viewBox",`0 0 ${width} ${totalH}`);
+  // Keep headings and guides in step with the changing swarm height on phones.
+  const titles=titlesG.selectAll("g.chart-title").data(categories,d=>d).join(enter=>{
+    const group=enter.append("g").attr("class","chart-title");
+    group.append("rect").attr("height",28).attr("fill","#fff");
+    group.append("text").attr("class","label").attr("text-anchor","start");return group;
+  });
+  titles.select("rect").interrupt().attr("display",compact?null:"none").transition(transition).attr("x",labelLeft).attr("y",(_,i)=>titleY[i]-14).attr("width",innerW);
+  titles.select("text").interrupt().style("font-size",compact&&innerW<280?"14px":null)
+    .attr("x",labelLeft).attr("y",(_,i)=>titleY[i]).each(function(metric){
+      const node=d3.select(this),maxWidth=compact?innerW:margin.left-40;
+      node.text(null);let words=displayHousingMetric(metric).split(/\s+/),line=[],lines=[];
+      const probe=node.append("tspan");
+      for(const word of words){line.push(word);probe.text(line.join(" "));
+        if(line.length>1&&probe.node().getComputedTextLength()>maxWidth){line.pop();lines.push(line.join(" "));line=[word];}}
+      lines.push(line.join(" "));probe.remove();
+      node.selectAll("tspan").data(lines).join("tspan").attr("x",labelLeft)
+        .attr("dy",(_,i)=>i?20:-(lines.length-1)*10).text(d=>d);
+    });
+  guidesG.selectAll("line.row-rule").data(categories,d=>d).join("line").attr("class","row-rule").interrupt().transition(transition)
+    .attr("x1",labelLeft).attr("x2",innerW).attr("y1",(_,i)=>ruleY[i]).attr("y2",(_,i)=>ruleY[i]);
+  guidesG.selectAll("line.mid-guide").data([null]).join("line").attr("class","mid-guide").attr("stroke","#d6d6d6").interrupt().transition(transition)
+    .attr("x1",x(50)).attr("x2",x(50)).attr("y1",0).attr("y2",ruleY[ruleY.length-1]);
+  const cues=guidesG.selectAll("g.axis-cues").data([null]).join("g").attr("class","axis-cues");
+  cues.selectAll("text").style("font-size",innerW<340?"14px":null);
+  cues.interrupt().transition(transition).attr("transform",`translate(0,${axisY})`);
+  cues.selectAll("text.low").data([null]).join("text").attr("class","low").attr("text-anchor","start").text("← Less difficulty").interrupt().transition(transition).attr("x",0);
+  cues.selectAll("text.high").data([null]).join("text").attr("class","high").attr("text-anchor","end").text("More difficulty →").interrupt().transition(transition).attr("x",innerW);
+  cues.selectAll("text.axis-tick").data([0,25,50,75,100]).join("text").attr("class","axis-tick").attr("x",d=>x(d)).attr("y",-24).attr("text-anchor",d=>d===0?"start":d===100?"end":"middle").text(d=>`${d}%`);
+  drawDots(prevMap,transition);drawSelected(false,prevSelected,transition);titlesG.raise();countryLabelsG.raise();
+  housingTrends.render({rows:allRows,countries:selectedCountries,metrics:categories,years,year:curYear,compact,stacked,width,chartHeight,margin,innerW,centers:categories.map((_,i)=>rowY(i)),rules:ruleY,transition});
+}
+window.getHousingExportState=()=>({
+  year:curYear,round:INCLUDED_ROUNDS[curYear],selectedCountries:[...selectedCountries],
+  rows:allRows.filter(d=>d.Year===curYear).map(d=>({...d})),
+  title:"Housing — Household affordability (% answering No)",source:"Eurofound, Living and Working in the EU e-survey",
+  sourceUrl:"https://www.eurofound.europa.eu/en/surveys-and-data/surveys/living-and-working-in-the-eu-e-survey"
+});
+
+function deselectLast(){if(!selectedCountries.length)return;selectedCountries.pop();updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection()}function updateCountryDisplay(){if(!selectedCountries.length){countryDisplay.textContent="Select a country";clearBtn.hidden=true}else{countryDisplay.textContent=compact&&selectedCountries.length>1?`${selectedCountries.length} countries selected`:selectedCountries.join("  ·  ");clearBtn.hidden=false}}function addCountry(c,animateNew){const idx=selectedCountries.indexOf(c);if(idx>=0)selectedCountries.splice(idx,1);else{if(selectedCountries.length===2)selectedCountries.shift();selectedCountries.push(c)}updateCountryDisplay();applyFade(new Set(selectedCountries));refreshSelection(animateNew)}function clearLayers(){Object.values(layers).forEach(L=>L.g.selectAll("*").interrupt().remove());bandG.selectAll("*").interrupt().remove()}
+function buildPoints(rows){return rows.map(d=>({...d,value:+d.Score,row:categories.indexOf(d.Metric),id:`${d.Metric}|${d.Country}`,x:x(+d.Score),y:rowY(categories.indexOf(d.Metric))})).filter(d=>d.row>=0&&Number.isFinite(d.value))}
+function drawDots(prevMap,transition){
+  const sel=dotsG.selectAll(".dot").data(points,d=>d.id);sel.exit().interrupt().remove();
+  const enter=sel.enter().append(d=>document.createElementNS("http://www.w3.org/2000/svg",d.Country==="European Union"?"rect":"circle"))
+    .attr("class",d=>`dot ${d.Country==="European Union"?"eu-dot":""}`).attr("r",r).attr("width",2*r).attr("height",2*r)
+    .attr("cx",d=>prevMap?.get(d.id)?.x??d.x).attr("cy",d=>prevMap?.get(d.id)?.y??d.y)
+    .attr("x",d=>(prevMap?.get(d.id)?.x??d.x)-r).attr("y",d=>(prevMap?.get(d.id)?.y??d.y)-r)
+    .attr("fill",d=>color(d.value)).on("mousemove",showTip).on("mouseleave",hideTip)
+    .on("click",(event,d)=>{event.stopPropagation();addCountry(d.Country,true)});
+  enter.merge(sel).interrupt().transition(transition).attr("fill",d=>color(d.value))
+    .attr("cx",d=>d.x).attr("cy",d=>d.y).attr("x",d=>d.x-r).attr("y",d=>d.y-r);
+  applyFade(new Set(selectedCountries));
+  dotsG.selectAll(".eu-dot").raise();
+}
+function getCountryPoints(country){return categories.map(m=>points.find(p=>p.Country===country&&p.Metric===m)).filter(Boolean)}
+function drawSelected(animateNew,prevByCountry={},transition=movement(moveDuration())){clearLayers();drawCountryLabels(transition);if(!selectedCountries.length)return;const A=selectedCountries[0],B=selectedCountries[1],prevA=prevByCountry[A],prevB=prevByCountry[B];if(A)drawCountryLayer("A",A,animateNew,prevA,transition);if(B)drawCountryLayer("B",B,animateNew,prevB,transition);if(A&&B)drawBetweenBand(A,B,prevA,prevB,transition)}
+// Join by country so replaced/deselected countries lose their labels immediately.
+// Positions are recomputed together, rather than independently beside each dot.
+function drawCountryLabels(transition=movement(moveDuration())){
+  const labels=selectedCountries.map(country=>({country,point:getCountryPoints(country)[0]})).filter(d=>d.point);
+  const join=countryLabelsG.selectAll("g.country-label").data(labels,d=>d.country);
+  join.exit().selectAll("*").interrupt();
+  join.exit().remove();
+  const enter=join.enter().append("g").attr("class","country-label");
+  enter.append("line").attr("class","label-connector");
+  const content=enter.append("foreignObject").attr("class","name-fo").attr("height",32).append("xhtml:div").attr("class","flag-row");
+  content.append("span").attr("class",d=>`fi fi-${FLAG_CODE[d.country]}`).attr("aria-hidden","true");
+  content.append("span").text(d=>d.country);
+  const merged=enter.merge(join).attr("data-country",d=>d.country);
+  merged.selectAll("*").interrupt();
+  merged.interrupt().transition(transition).attr("opacity",1);
+  // Let an existing name make room before a newly selected name fades in.
+  if(join.size())enter.attr("opacity",0).transition(transition).delay(transition.duration()*.8).duration(transition.duration()*.2).attr("opacity",1);
+  // Use the full rendered flag/name width; long country names must not be clipped.
+  merged.select("foreignObject").attr("width",innerW);
+  const measured=[];
+  merged.each(function(d){measured.push({...d,anchorX:d.point.x,width:Math.ceil(this.querySelector(".flag-row").scrollWidth)+2})});
+  const placed=new Map(layoutCountryLabels(measured,0,innerW).map(d=>[d.country,d]));
+  merged.each(function(d){
+    const label=placed.get(d.country),group=d3.select(this),labelY=compact?-140+label.row*36:-76;
+    const name=group.select("foreignObject"),connector=group.select("line").attr("display",compact?"none":null);
+    const labelAnchor=Math.max(label.x+10,Math.min(label.x+label.width-10,d.point.x));
+    // Existing labels retain their on-screen positions when a transition is interrupted.
+    if(!name.attr("x")){
+      name.attr("x",label.x).attr("y",labelY);
+      connector.attr("x1",d.point.x).attr("y1",d.point.y-r-4).attr("x2",labelAnchor).attr("y2",labelY+32);
+    }
+    name.attr("width",label.width).transition(transition).attr("x",label.x).attr("y",labelY);
+    connector.transition(transition).attr("x1",d.point.x).attr("y1",d.point.y-r-4).attr("x2",labelAnchor).attr("y2",labelY+32);
+  });
+  countryLabelsG.raise();
+}
+// Re-measure if fonts finish loading or the available display size changes.
+document.fonts.ready.then(()=>drawCountryLabels());
+
+function oldPoint(prevPts,metric,fallback){return prevPts?.find(p=>p.Metric===metric)||fallback}
+function drawCountryLayer(slot,country,animateNew,prevPts,transition){const L=layers[slot],pts=getCountryPoints(country);if(!pts.length)return;const path=L.g.append("path").attr("class",`highlight ${slot==="B"?"second":""}`).attr("d",lineGen(prevPts||pts));if(prevPts){path.transition(transition).attr("d",lineGen(pts))}else if(animateNew){const len=path.node().getTotalLength();path.attr("stroke-dasharray",`${len} ${len}`).attr("stroke-dashoffset",len).transition(transition).attr("stroke-dashoffset",0)}L.g.selectAll("circle").data(pts,d=>d.Metric).enter().append("circle").attr("class",`highlight-pin ${slot==="B"?"second":""}`).attr("r",r+4).attr("cx",d=>oldPoint(prevPts,d.Metric,d).x).attr("cy",d=>oldPoint(prevPts,d.Metric,d).y).transition(transition).attr("cx",d=>d.x).attr("cy",d=>d.y);}
+
+function bandPath(A,B){const pairs=categories.map(m=>{const pa=A?.find(p=>p.Metric===m),pb=B?.find(p=>p.Metric===m);return pa&&pb?{pa,pb}:null}).filter(Boolean);if(!pairs.length)return null;const top=pairs.map(d=>({x:d.pa.x,y:d.pa.y})),bottom=pairs.slice().reverse().map(d=>({x:d.pb.x,y:d.pb.y}));return d3.line().x(d=>d.x).y(d=>d.y).curve(curve)([...top,...bottom])+"Z"}
+function drawBetweenBand(a,b,prevA,prevB,transition){const A=getCountryPoints(a),B=getCountryPoints(b),finalPath=bandPath(A,B);if(!finalPath)return;const path=bandG.append("path").attr("class","between-band").attr("d",bandPath(prevA,prevB)||finalPath);if(prevA&&prevB)path.transition(transition).attr("d",finalPath)}
+

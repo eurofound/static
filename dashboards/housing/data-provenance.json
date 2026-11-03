@@ -1,0 +1,24 @@
+{
+  "source": "Household_affordability_No_percentage.csv",
+  "source_sha256": "0cf3da9fbaf07b3e1d802df7841d1aac535aa01db8f9a2ff19946a2a6799d056",
+  "template_commit": "fd1ecaf30bb6393370353b9df0855a259a81d507",
+  "rows": 504,
+  "countries_including_EU": 28,
+  "metrics": [
+    "Cannot afford a one-week annual holiday away from home",
+    "Cannot afford to avoid arrears",
+    "Cannot afford a meal with meat, fish or vegetarian equivalent every second day",
+    "Cannot afford to keep home adequately warm",
+    "Cannot afford access to a car or van for personal use",
+    "Cannot afford to replace worn-out furniture"
+  ],
+  "rounds": {
+    "2023": 6,
+    "2024": 7,
+    "2025": 8
+  },
+  "response": "No",
+  "unit": "Percentage (0\u2013100)",
+  "population": "All available respondents; household affordability questions",
+  "transformation": "Exact copy of supplied dataset, preserving precision and weighted EU27 aggregate. No aggregation or imputation."
+}
