@@ -1,7 +1,8 @@
 'use strict';
 const CSV_URL = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/CG_dash/CG_data.csv';
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
-const EU = new Set(['EU','EU27','EU-27','EU28','EU-28','European Union','EU 27','EU 28']);
+const EU27 = new Set(['EU27','EU-27','EU 27','European Union (27)']);
+const EU = new Set(['EU','EU28','EU-28','European Union','EU 28', ...EU27]);
 const FLAG_TEXT = {
   b: 'Break in time series',
   p: 'Provisional',
@@ -16,8 +17,8 @@ const FLAG_TEXT = {
   be: 'Break in time series; Estimated'
 };
 
-// The data source, title matching, last-observation rule and default selections
-// are retained from Child_poverty_dash.html. Presentation and the host bridge
+// The data source, title matching and last-observation rule are retained from
+// Child_poverty_dash.html. Presentation and the host bridge
 // share one selected view, including missing observations and quality flags.
 const $ = id => document.getElementById(id);
 const safe = value => String(value ?? '').trim();
@@ -60,7 +61,7 @@ function subset({country = null, year = null} = {}) {
 }
 function countries() {
   const all = sortAlpha(uniq(subset().filter(r => Number.isFinite(r[H.Value])).map(r => r[H.Country]).filter(Boolean)));
-  const eu = all.find(c => EU.has(c));
+  const eu = all.find(c => EU27.has(c)) || all.find(c => EU.has(c));
   return eu ? [eu, ...all.filter(c => c !== eu)] : all;
 }
 function assignColors() {
@@ -75,7 +76,7 @@ function assignColors() {
 function setDefaults() {
   const all = countries();
   state.countries = state.countries.filter(c => all.includes(c));
-  if (!state.countries.length) state.countries = all.slice(0, 4);
+  if (!state.countries.length) state.countries = all.slice(0, 1);
   const years = availableYears();
   if (years.length) {
     if (state.year == null) state.year = years[years.length - 1];
@@ -103,11 +104,16 @@ function refreshBreakdown() {
     return button;
   }));
 }
+function updateCountryDisplay() {
+  const names = state.countries.map(country => EU27.has(country) ? 'EU27' : country);
+  $('countryCount').textContent = names.length > 2 ? `${names.length} countries selected` :
+    names.length ? names.join(' · ') : 'Select countries';
+}
 function updateFilters() {
   $('countryFilter').hidden = state.tab !== 'line';
   $('yearFilter').hidden = state.tab === 'line';
   $('year').replaceChildren(...availableYears().reverse().map(year => new Option(year, year, false, year === state.year)));
-  $('countryCount').textContent = `${state.countries.length} selected`;
+  updateCountryDisplay();
   renderCountries();
   document.querySelectorAll('[data-view]').forEach(button => {
     const selected = button.dataset.view === state.tab;
@@ -118,7 +124,8 @@ function updateFilters() {
 }
 function renderCountries() {
   const query = $('countrySearch').value.trim().toLowerCase();
-  $('countryList').replaceChildren(...countries().filter(c => c.toLowerCase().includes(query)).map(country => {
+  $('countryList').replaceChildren(...countries().filter(c =>
+    `${c}${EU27.has(c) ? ' EU27' : ''}`.toLowerCase().includes(query)).map(country => {
     const label = document.createElement('label'); label.className = 'country-option';
     const input = document.createElement('input'); input.type = 'checkbox'; input.value = country;
     input.checked = state.countries.includes(country);
@@ -128,7 +135,7 @@ function renderCountries() {
       else state.countries = state.countries.filter(c => c !== country);
       hiddenCountries.delete(country);
       assignColors();
-      $('countryCount').textContent = `${state.countries.length} selected`;
+      updateCountryDisplay();
       // Do not replace the focused checkbox during a keyboard selection.
       $('countryList').querySelectorAll('input').forEach(box => box.disabled = !box.checked && state.countries.length >= 9);
       draw();
@@ -151,7 +158,7 @@ $('countryToggle').onclick = () => {
 };
 $('countrySearch').oninput = renderCountries;
 $('clearCountries').onclick = () => {
-  state.countries = []; hiddenCountries.clear(); $('countryCount').textContent = '0 selected';
+  state.countries = []; hiddenCountries.clear(); updateCountryDisplay();
   renderCountries(); draw();
 };
 document.addEventListener('click', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
@@ -215,6 +222,9 @@ function currentView() {
   }
   const contextRows = subset();
   return {tab: state.tab, id: state.id, breakdown: state.breakdown, year: state.year,
+    // Use the published EU27 aggregate for this exact year and breakdown.
+    // Never substitute an unweighted country mean or a different year's value.
+    euAverage: contextRows.filter(r => EU27.has(r[H.Country]) && r[H.Year] === state.year).at(-1),
     years, rows: selected, countries: [...state.countries], hidden: new Set(hiddenCountries),
     colors: new Map(countryColors),
     notes: uniq(contextRows.map(r => safe(r[H.Notes])).filter(Boolean)),
@@ -265,8 +275,13 @@ function chartOptions(tokens, view, exporting = false) {
       (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
   };
   const tooltipHTML = (year, points) => `<div class="ef-tooltip poverty-tooltip">` +
-    `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong><span class="tooltip-scale">Scale: 0–100%</span></div>` +
+    `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong></div>` +
     `<div class="tooltip-items" tabindex="0" role="group" aria-label="Country values">${points.map(tooltipRow).join('')}</div></div>`;
+  const comparisonTooltip = point => {
+    const average = {name: 'EU27 average', y: view.euAverage?.[H.Value] ?? null,
+      flag: view.euAverage?._flag || '', color: t.series[7]};
+    return tooltipHTML(view.year, EU27.has(point.name) ? [average] : [point, average]);
+  };
   const common = {
     chart: {backgroundColor: exporting ? t.background : 'transparent', height: chartHeight,
       animation: false, spacing: [12, 12, 16, 12], style: {fontFamily: t.fontText}},
@@ -282,7 +297,7 @@ function chartOptions(tokens, view, exporting = false) {
     tooltip: {useHTML: true, outside: true, stickOnContact: true,
       backgroundColor: 'transparent', borderWidth: 0, shadow: false, padding: 0,
       style: {color: t.text, fontSize: '.875rem', pointerEvents: 'auto'}, hideDelay: 200,
-      formatter() { return tooltipHTML(view.year, [this.point]); }},
+      formatter() { return comparisonTooltip(this.point); }},
     plotOptions: {series: {animation: false, states: {inactive: {opacity: .4}},
       accessibility: {point: {valueSuffix: '%'}}}}
   };
@@ -335,10 +350,10 @@ function chartOptions(tokens, view, exporting = false) {
       plotOptions: {series: {pointPadding: .12, groupPadding: .04, borderWidth: 1, borderColor: t.labelStrong,
         dataLabels: {enabled: true, inside: true, align: 'right', verticalAlign: 'middle', x: -5,
           crop: false, overflow: 'justify', allowOverlap: true, padding: 0,
-          style: {color: t.onData, textOutline: '1px contrast', fontSize: '.8125rem', letterSpacing: '-.02em', fontWeight: '400'},
+          style: {color: t.onData, textOutline: 'none', fontSize: '.8125rem', letterSpacing: '-.02em', fontWeight: '400'},
           formatter() { return fmt(this.y, 0) + (this.point.flag ? ` (${this.point.flag})` : ''); }}}},
       series: [{name: view.id, data: validRows.map(r => ({name: r[H.Country], y: r[H.Value], flag: r._flag,
-        color: EU.has(r[H.Country]) || r[H.Country] === 'European Union (27)' ? t.series[7] : t.series[0]}))}]
+        color: EU.has(r[H.Country]) ? t.series[7] : t.series[0]}))}]
     });
   }
   const values = validRows.map(r => r[H.Value]);
