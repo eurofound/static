@@ -1,0 +1,45 @@
+Child Guarantee dashboard rollout — 17 November 2026
+
+Baseline: gh-pages 989eea3e05ba4fa3317795d4d7c75579a1cfa98f.
+Scope: ECEC_dash.html, Education_dash.html, Healthcare_dash.html,
+Nutrition_dash.html and cg_housing_dash.html now use the same HTML layout,
+styles and renderer as the approved Child_poverty_dash.html.
+Existing page URLs, source CSV and local branding assets are retained.
+
+Includes indicator arrows; EU27-first/default country selection; one/two
+country names or a count; compact EU comparison tooltips; dense bars with
+plain white inside-right integer labels; solid trend lines; left map legend
+with range highlighting; larger headings; light PNG exports with the 75px
+logo at lower right beside source/notes/flags. PNGs omit country lists,
+missing-value boilerplate and timestamps. CSVs retain full precision and
+metadata. Both embed-v1 exports and legacy download messages work.
+
+Measure semantics: the education student-teacher ratio is labelled as
+students per teacher throughout. Net childcare costs are percentages of
+average wage. All other indicators use the existing percentage units.
+Map percentage ticks are bounded at 100, including high ECEC values.
+
+Browser validation: Chrome headless, desktop 1280px and narrow 320px.
+- 222 data, chart, export, interaction and layout checks passed.
+- Reconciled all 10,386 source rows across the six dashboard topics,
+  34 indicators and 61 indicator/breakdown combinations. Compared values,
+  years, flags, sources and notes to independently parsed CG_data.csv.
+- Validated 183 line/bar/map views and matching full-precision CSV exports.
+- Generated all three PNG chart types for each page; checked source notes,
+  excluded footer text, light theme and lower-right 75px logo placement.
+- 36 axe WCAG A/AA scans (six pages, three views, two themes) found no
+  violations. This is an automated check, not an accessibility certification.
+- 49 embed/interaction checks passed, including ready/resize/theme messages,
+  PNG/CSV responses, unsupported formats, legacy download-png/download-csv,
+  empty selection, missing EU comparator, keyboard legend and nine countries.
+- All 70 ECEC year/breakdown map selections had distinct scale labels and
+  percentage bounds within 0–100. Checked the 100% PNG visually.
+- Simulated a blocked CSV request: topic-specific failure message and retry.
+- JavaScript syntax check passed; no application JavaScript errors recorded.
+
+Source condition: housing's “unable to keep home adequately warm” Total
+breakdown has 270 duplicate country/year keys, some with different values.
+The map now follows the existing trend/bar last-observation rule so every
+view, tooltip, table and export agrees. The CSV itself was not modified.
+Missing values remain missing; EU comparators use the published EU27 row
+for the exact indicator, breakdown and year, never an unweighted mean.
