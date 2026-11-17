@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Child poverty embed test</title>
+  <link rel="stylesheet" href="https://www.eurofound.europa.eu/api/embed/v1/theme.css">
+  <style>
+    main { max-width: 1200px; margin: 1rem auto; }
+    .actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: 1rem; }
+    .card { padding: 1rem; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); }
+    iframe { display: block; width: 100%; height: 650px; border: 0; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body class="ef-embed"><main>
+  <h1>Child poverty</h1>
+  <p>This local harness supplies the card title and download controls owned by the Eurofound website.</p>
+  <div class="actions">
+    <button class="ef-button" id="theme">Toggle theme</button>
+    <button class="ef-button" id="png">Download PNG</button>
+    <button class="ef-button" id="csv">Download CSV</button>
+  </div>
+  <div class="card"><iframe id="embed" title="Child poverty dashboard"></iframe></div>
+  <p>Source: Eurostat</p>
+  <details><summary>Embed protocol log</summary><pre id="log"></pre></details>
+</main>
+<script>
+  const frame = document.getElementById('embed');
+  const root = document.documentElement;
+  const params = new URLSearchParams(location.search);
+  root.dataset.theme = params.get('theme') === 'dark' ? 'dark' : 'light';
+  const url = new URL('../Child_poverty_dash.html', location.href);
+  url.searchParams.set('theme', root.dataset.theme);
+  url.searchParams.set('lang', params.get('lang') || 'de');
+  const origin = url.origin;
+  let id = 0;
+  const post = data => frame.contentWindow.postMessage(data, origin);
+  frame.onload = () => { post({type: 'set-theme', theme: root.dataset.theme}); post({type: 'hello'}); };
+  frame.src = url;
+  document.getElementById('theme').onclick = () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    post({type: 'set-theme', theme: root.dataset.theme});
+  };
+  for (const format of ['png', 'csv']) document.getElementById(format).onclick = () => post({type: 'export', format, id: `test-${++id}`});
+  window.messages = [];
+  addEventListener('message', event => {
+    const data = event.data;
+    if (event.source !== frame.contentWindow || event.origin !== origin || data?.source !== 'ef-embed') return;
+    const record = {...data, blob: data.blob && `${data.blob.type}, ${data.blob.size} bytes`};
+    window.messages.push(record);
+    document.getElementById('log').textContent += JSON.stringify(record) + '\n';
+    if (data.type === 'resize') frame.style.height = `${data.height}px`;
+    if (data.type === 'export-result') {
+      const a = document.createElement('a'); const objectURL = URL.createObjectURL(data.blob);
+      a.href = objectURL; a.download = data.filename; a.click();
+      setTimeout(() => URL.revokeObjectURL(objectURL), 1000);
+    }
+  });
+</script></body></html>
