@@ -583,7 +583,7 @@ async function buildExport(format) {
     const noteWidth = logoLeft - padding - 24;
     const lines = [];
     // The title, unit and breakdown are already on the chart; preserve source,
-    // population, notes, quality flags and export date beneath it.
+    // population, notes and quality flags beneath it.
     for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data','Missing values','Exported at'].includes(key))) {
       let line = '';
       for (const word of `${key}: ${value}`.split(/\s+/)) {
