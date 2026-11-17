@@ -165,7 +165,7 @@ document.addEventListener('click', e => { if (!$('countryFilter').contains(e.tar
 document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !$('countryPanel').hidden) { e.preventDefault(); closeCountries(true); }
-  if (e.key === 'Escape') chart?.tooltip?.hide(0);
+  if (e.key === 'Escape') { chart?.tooltip?.hide(0); chart?.clearMapRange?.(); }
 });
 function updateIndicatorPosition(announce = false) {
   const selector = $('indicator');
@@ -251,6 +251,76 @@ function euMapGeometry() {
   euFrame = {type: 'MultiPoint', coordinates: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]]};
   return euFrame;
 }
+// Accessible hit areas follow the existing percentage ticks on the left legend.
+// Highlighting is purely visual: the underlying data, tooltips and exports stay complete.
+function updateMapRanges(map, tokens) {
+  const axis = map.colorAxis?.[0], symbol = axis?.legendItem?.symbol;
+  if (!symbol || axis.max <= axis.min) return;
+  const bounds = [...new Set([axis.min, ...axis.tickPositions.filter(v => v > axis.min && v < axis.max), axis.max])];
+  const ranges = bounds.slice(0, -1).map((from, i) => ({from, to: bounds[i + 1], last: i === bounds.length - 2})).reverse();
+  const inRange = (point, range) => Number.isFinite(point.value) && point.value >= range.from &&
+    (point.value < range.to || range.last && point.value <= range.to);
+  const rangeNumber = value => new Intl.NumberFormat(document.documentElement.lang, {maximumFractionDigits: 2}).format(value);
+  const signature = bounds.join(',');
+  if (map.rangeSignature !== signature) {
+    map.rangeUnbind?.();
+    map.rangeLegend?.remove(); map.rangeHint?.remove();
+    map.rangeSignature = signature;
+    const legend = map.rangeLegend = document.createElement('div');
+    legend.className = 'map-range-legend'; legend.setAttribute('role', 'group');
+    legend.setAttribute('aria-label', 'Highlight map percentage ranges');
+    const hint = map.rangeHint = document.createElement('div');
+    hint.className = 'map-range-hint'; hint.setAttribute('aria-live', 'polite');
+    map.renderTo.append(legend, hint);
+    let hovered = null, focused = null, pinned = null;
+    map.paintMapRange = () => {
+      const active = hovered ?? focused ?? pinned;
+      map.activeMapRange = active;
+      const range = active == null ? null : ranges[active];
+      map.series[0].points.forEach(point => {
+        if (point.graphic) point.graphic.element.style.fill = range && !inRange(point, range) ? tokens.noData : '';
+      });
+      [...legend.children].forEach((button, i) => {
+        button.classList.toggle('is-active', i === active);
+        button.setAttribute('aria-pressed', String(i === pinned));
+      });
+      const count = range ? map.series[0].points.filter(p => inRange(p, range)).length : 0;
+      hint.textContent = range ? `${rangeNumber(range.from)}–${rangeNumber(range.to)}% · ${count} ${count === 1 ? 'country' : 'countries'}` : '';
+      if (range) map.tooltip.hide(0);
+    };
+    map.clearMapRange = () => { hovered = focused = pinned = null; map.paintMapRange(); };
+    ranges.forEach((range, i) => {
+      const button = document.createElement('button');
+      button.type = 'button'; button.className = 'map-range-button';
+      button.setAttribute('aria-label', `Highlight ${rangeNumber(range.from)}% to ${range.last ? '' : 'under '}${rangeNumber(range.to)}%`);
+      button.setAttribute('aria-pressed', 'false');
+      button.onmouseenter = () => { hovered = i; map.paintMapRange(); };
+      button.onmouseleave = () => { hovered = null; map.paintMapRange(); };
+      button.onfocus = () => { focused = i; map.paintMapRange(); };
+      button.onblur = () => { focused = null; map.paintMapRange(); };
+      button.onclick = () => { pinned = pinned === i ? null : i; hovered = focused = null; map.paintMapRange(); };
+      button.onkeydown = event => {
+        const buttons = [...legend.children];
+        const next = event.key === 'ArrowDown' ? (i + 1) % buttons.length : event.key === 'ArrowUp' ?
+          (i + buttons.length - 1) % buttons.length : event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : null;
+        if (next != null) { event.preventDefault(); buttons[next].focus(); }
+      };
+      legend.append(button);
+    });
+    // A tap/click elsewhere clears a pinned band, including on touch screens.
+    map.rangeUnbind = Highcharts.addEvent(map.renderTo, 'pointerdown', event => { if (!legend.contains(event.target)) map.clearMapRange(); });
+  }
+  const rect = symbol.element.getBoundingClientRect(), host = map.renderTo.getBoundingClientRect();
+  [...map.rangeLegend.children].forEach((button, i) => {
+    const range = ranges[i];
+    button.style.left = `${rect.left - host.left - 5}px`;
+    button.style.width = `${Math.max(24, rect.width + 10)}px`;
+    button.style.top = `${rect.top - host.top + (axis.max - range.to) / (axis.max - axis.min) * rect.height}px`;
+    button.style.height = `${(range.to - range.from) / (axis.max - axis.min) * rect.height}px`;
+  });
+  Object.assign(map.rangeHint.style, {left: `${map.plotLeft}px`, top: `${map.plotTop + 6}px`, width: `${Math.max(0, map.plotWidth - 44)}px`});
+  map.paintMapRange();
+}
 function chartOptions(tokens, view, exporting = false) {
   const t = tokens;
   const axisLabel = {color: t.label, fontSize: '.875rem'};
@@ -262,21 +332,26 @@ function chartOptions(tokens, view, exporting = false) {
   const chartHeight = view.tab === 'bar' ? Math.max(375, validRows.length * textSize * 1.8) * .82 + 145 :
     view.tab === 'map' ? (exporting ? 650 : textSize * 40) :
     (exporting ? 650 : textSize * (chartWidth <= 480 ? 30 : 34));
-  const tooltipRow = point => {
+  const tooltipRow = (point, scaleMaximum) => {
     const value = point.value ?? point.y;
     const hasValue = Number.isFinite(value);
     const color = typeof point.color === 'string' ? point.color :
       typeof point.series?.color === 'string' ? point.series.color : t.series[0];
-    const width = hasValue ? Math.max(0, Math.min(100, value)) : 0;
+    const width = hasValue && scaleMaximum > 0 ? Math.max(0, Math.min(100, value / scaleMaximum * 100)) : 0;
     return `<div class="tooltip-item"><div class="tooltip-item-heading">` +
-      `<span class="tooltip-item-name">${escapeHTML(point.name || point.series.name)}</span>` +
-      `<strong class="tooltip-item-value">${hasValue ? fmt(value) + '%' : 'No data'}</strong></div>` +
-      (hasValue ? `<div class="tooltip-track" aria-hidden="true"><span style="width:${width}%;background:${escapeHTML(color)}"></span></div>` : '') +
+      `<span class="tooltip-item-name">${escapeHTML(point.name || point.series.name)}</span></div>` +
+      (hasValue ? `<div class="tooltip-bar"><div class="tooltip-track">` +
+        `<span class="tooltip-fill" aria-hidden="true" style="width:${width}%;background:${escapeHTML(color)}"></span>` +
+        `<strong class="tooltip-item-value" style="left:${width}%">${fmt(value)}%</strong></div></div>` :
+        '<strong class="tooltip-item-value tooltip-no-data">No data</strong>') +
       (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
   };
-  const tooltipHTML = (year, points) => `<div class="ef-tooltip poverty-tooltip">` +
-    `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong></div>` +
-    `<div class="tooltip-items" tabindex="0" role="group" aria-label="Country values">${points.map(tooltipRow).join('')}</div></div>`;
+  const tooltipHTML = (year, points) => {
+    const scaleMaximum = Math.max(0, ...points.map(p => p.value ?? p.y).filter(Number.isFinite));
+    return `<div class="ef-tooltip poverty-tooltip">` +
+      `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong></div>` +
+      `<div class="tooltip-items" tabindex="0" role="group" aria-label="Country values">${points.map(p => tooltipRow(p, scaleMaximum)).join('')}</div></div>`;
+  };
   const comparisonTooltip = point => {
     const average = {name: 'EU27 average', y: view.euAverage?.[H.Value] ?? null,
       flag: view.euAverage?._flag || '', color: t.series[7]};
@@ -371,9 +446,10 @@ function chartOptions(tokens, view, exporting = false) {
       const size = textSize * .875;
       this.renderer.rect(0, 0, size, size, 2).attr({fill: t.noData, stroke: t.context, 'stroke-width': 1}).add(this.noDataKey);
       this.renderer.text('No data', size + 6, size * .85).css({color: t.text, fontSize: '.875rem'}).add(this.noDataKey);
-    }}},
+      if (!exporting) updateMapRanges(this, t);
+    }, destroy() { this.rangeUnbind?.(); this.rangeLegend?.remove(); this.rangeHint?.remove(); }}},
     mapView: {animation: false, fitToGeometry: euMapGeometry(), padding: [8, 8, 8, 8]},
-    accessibility: {description: `${view.title}. ${view.breakdown}. Values are percentages. The vertical scale is on the left; grey indicates no data. An accessible data table follows the chart.`},
+    accessibility: {description: `${view.title}. ${view.breakdown}. Values are percentages. Hover or focus a range on the left scale to highlight matching countries. Click to keep a range highlighted; press Escape to reset. Grey indicates no data or countries outside the highlighted range. An accessible data table follows the chart.`},
     colorAxis: {min, max, tickAmount: 6, width: textSize * .875, height: textSize * 17,
       stops: t.ramp.map((color, i) => [i / 8, color]),
       labels: {style: axisLabel, formatter() { return fmt(Math.max(0, Math.min(100, this.value)), 0) + '%'; }}},
@@ -514,10 +590,18 @@ async function buildExport(format) {
       }
       if (line) lines.push(line);
     }
-    canvas.height = options.chart.height + 36 + lines.length * 23;
+    const logo = new Image();
+    await new Promise((resolve, reject) => {
+      logo.onload = resolve; logo.onerror = () => reject(new Error('Could not load the Eurofound logo for the image export'));
+      logo.src = new URL('./eurofound-logo.svg', location.href).href;
+    });
+    const logoWidth = 150, logoHeight = logoWidth * logo.naturalHeight / logo.naturalWidth;
+    const logoTop = options.chart.height + 36 + lines.length * 23;
+    canvas.height = logoTop + logoHeight + 24;
     context.fillStyle = light.background; context.fillRect(0, 0, canvas.width, canvas.height);
     context.drawImage(image, 0, 0); context.font = font; context.fillStyle = light.text;
     lines.forEach((line, index) => context.fillText(line, 24, options.chart.height + 24 + index * 23));
+    context.drawImage(logo, 24, logoTop, logoWidth, logoHeight);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(result => result ? resolve(result) : reject(new Error('Could not build the PNG')), 'image/png'));
     return {blob, filename: exportName(view, 'png'), mimeType: 'image/png'};
   } finally { if (objectURL) URL.revokeObjectURL(objectURL); exportChart?.destroy(); holder.remove(); }
