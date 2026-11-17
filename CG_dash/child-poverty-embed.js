@@ -496,8 +496,6 @@ function updateTableAndNotes(view) {
   const codes = sortAlpha(uniq(view.rows.map(r => r._flag).filter(Boolean)));
   const notes = [...view.notes];
   if (codes.length) notes.push('Data-quality flags: ' + codes.map(code => `${code} = ${flagMeaning(code)}`).join('; ') + '. Flagged trend points use diamond markers.');
-  if (view.rows.some(r => !Number.isFinite(r[H.Value]))) notes.push('Missing or unavailable observations are shown as “No data”; they are not zero.');
-  if (view.tab === 'map') notes.push('EU aggregates are not mapped. Use zoom controls for smaller countries, or the bar chart and table for exact values. Boundaries: Highcharts Europe map collection 2.3.0 (not a NUTS boundary dataset).');
   $('viewNotes').replaceChildren(...notes.map(note => { const p = document.createElement('p'); p.textContent = note; return p; }));
   $('dataDetails').hidden = !view.rows.length;
   $('dataTable').innerHTML = `<caption>${escapeHTML(view.title)} · ${escapeHTML(view.breakdown)}</caption>` +
