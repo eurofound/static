@@ -1,4 +1,5 @@
 'use strict';
+const DASHBOARD_TITLE = document.title.trim();
 const CSV_URL = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/CG_dash/CG_data.csv';
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
 const EU27 = new Set(['EU27','EU-27','EU 27','European Union (27)']);
@@ -17,9 +18,21 @@ const FLAG_TEXT = {
   be: 'Break in time series; Estimated'
 };
 
-// The data source, title matching and last-observation rule are retained from
-// Child_poverty_dash.html. Presentation and the host bridge
-// share one selected view, including missing observations and quality flags.
+// Shared Child Guarantee renderer. Each page's title selects its source rows.
+// Charts, tooltips, accessible tables and exports share the same selected view,
+// including missing observations, published EU27 aggregates and quality flags.
+function indicatorMeasure(id) {
+  if (id === 'Student-teacher ratio by socioeconomic status of school') {
+    return {label: 'Students per teacher', suffix: '', header: 'Value (students per teacher)',
+      description: 'students per teacher', legendTitle: 'Ratio', percentage: false};
+  }
+  if (id === 'Net childcare cost for parents') {
+    return {label: 'Percent of average wage (%)', suffix: '%', header: 'Value (% of average wage)',
+      description: 'percentages of average wage', legendTitle: 'Cost (%)', percentage: true};
+  }
+  return {label: 'Percent (%)', suffix: '%', header: 'Value (%)',
+    description: 'percentages', legendTitle: 'Share (%)', percentage: true};
+}
 const $ = id => document.getElementById(id);
 const safe = value => String(value ?? '').trim();
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c =>
@@ -218,10 +231,12 @@ function currentView() {
     selected.sort((a, b) => (Number.isFinite(b[H.Value]) ? b[H.Value] : -Infinity) -
       (Number.isFinite(a[H.Value]) ? a[H.Value] : -Infinity));
   } else {
-    selected = subset({year: state.year}).filter(r => HC_KEY[r[H.Country]]);
+    // Match the trend/bar last-observation rule when source keys repeat.
+    selected = [...new Map(subset({year: state.year}).filter(r => HC_KEY[r[H.Country]])
+      .map(r => [r[H.Country], r])).values()];
   }
   const contextRows = subset();
-  return {tab: state.tab, id: state.id, breakdown: state.breakdown, year: state.year,
+  return {tab: state.tab, id: state.id, measure: indicatorMeasure(state.id), breakdown: state.breakdown, year: state.year,
     // Use the published EU27 aggregate for this exact year and breakdown.
     // Never substitute an unweighted country mean or a different year's value.
     euAverage: contextRows.filter(r => EU27.has(r[H.Country]) && r[H.Year] === state.year).at(-1),
@@ -251,9 +266,9 @@ function euMapGeometry() {
   euFrame = {type: 'MultiPoint', coordinates: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]]};
   return euFrame;
 }
-// Accessible hit areas follow the existing percentage ticks on the left legend.
+// Accessible hit areas follow the existing value ticks on the left legend.
 // Highlighting is purely visual: the underlying data, tooltips and exports stay complete.
-function updateMapRanges(map, tokens) {
+function updateMapRanges(map, tokens, measure) {
   const axis = map.colorAxis?.[0], symbol = axis?.legendItem?.symbol;
   if (!symbol || axis.max <= axis.min) return;
   const bounds = [...new Set([axis.min, ...axis.tickPositions.filter(v => v > axis.min && v < axis.max), axis.max])];
@@ -268,7 +283,7 @@ function updateMapRanges(map, tokens) {
     map.rangeSignature = signature;
     const legend = map.rangeLegend = document.createElement('div');
     legend.className = 'map-range-legend'; legend.setAttribute('role', 'group');
-    legend.setAttribute('aria-label', 'Highlight map percentage ranges');
+    legend.setAttribute('aria-label', `Highlight map ${measure.description} ranges`);
     const hint = map.rangeHint = document.createElement('div');
     hint.className = 'map-range-hint'; hint.setAttribute('aria-live', 'polite');
     map.renderTo.append(legend, hint);
@@ -285,14 +300,14 @@ function updateMapRanges(map, tokens) {
         button.setAttribute('aria-pressed', String(i === pinned));
       });
       const count = range ? map.series[0].points.filter(p => inRange(p, range)).length : 0;
-      hint.textContent = range ? `${rangeNumber(range.from)}–${rangeNumber(range.to)}% · ${count} ${count === 1 ? 'country' : 'countries'}` : '';
+      hint.textContent = range ? `${rangeNumber(range.from)}–${rangeNumber(range.to)}${measure.suffix} · ${count} ${count === 1 ? 'country' : 'countries'}` : '';
       if (range) map.tooltip.hide(0);
     };
     map.clearMapRange = () => { hovered = focused = pinned = null; map.paintMapRange(); };
     ranges.forEach((range, i) => {
       const button = document.createElement('button');
       button.type = 'button'; button.className = 'map-range-button';
-      button.setAttribute('aria-label', `Highlight ${rangeNumber(range.from)}% to ${range.last ? '' : 'under '}${rangeNumber(range.to)}%`);
+      button.setAttribute('aria-label', `Highlight ${rangeNumber(range.from)}${measure.suffix} to ${range.last ? '' : 'under '}${rangeNumber(range.to)}${measure.suffix}`);
       button.setAttribute('aria-pressed', 'false');
       button.onmouseenter = () => { hovered = i; map.paintMapRange(); };
       button.onmouseleave = () => { hovered = null; map.paintMapRange(); };
@@ -322,7 +337,7 @@ function updateMapRanges(map, tokens) {
   map.paintMapRange();
 }
 function chartOptions(tokens, view, exporting = false) {
-  const t = tokens;
+  const t = tokens, measure = view.measure;
   const axisLabel = {color: t.label, fontSize: '.875rem'};
   const textSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
   const validRows = view.rows.filter(r => Number.isFinite(r[H.Value]));
@@ -342,7 +357,7 @@ function chartOptions(tokens, view, exporting = false) {
       `<span class="tooltip-item-name">${escapeHTML(point.name || point.series.name)}</span></div>` +
       (hasValue ? `<div class="tooltip-bar"><div class="tooltip-track">` +
         `<span class="tooltip-fill" aria-hidden="true" style="width:${width}%;background:${escapeHTML(color)}"></span>` +
-        `<strong class="tooltip-item-value" style="left:${width}%">${fmt(value)}%</strong></div></div>` :
+        `<strong class="tooltip-item-value" style="left:${width}%">${fmt(value)}${measure.suffix}</strong></div></div>` :
         '<strong class="tooltip-item-value tooltip-no-data">No data</strong>') +
       (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
   };
@@ -362,11 +377,11 @@ function chartOptions(tokens, view, exporting = false) {
       animation: false, spacing: [12, 12, 16, 12], style: {fontFamily: t.fontText}},
     colors: t.series,
     title: {text: escapeHTML(view.title), align: 'left', style: {color: t.heading, fontFamily: t.fontHeading, fontSize: '1.40625rem', fontWeight: '600'}},
-    subtitle: {text: `Breakdown: ${escapeHTML(view.breakdown)} · Percent (%)`, align: 'left', style: {color: t.text, fontSize: '1.078125rem'}},
+    subtitle: {text: `Breakdown: ${escapeHTML(view.breakdown)} · ${escapeHTML(measure.label)}`, align: 'left', style: {color: t.text, fontSize: '1.078125rem'}},
     credits: {enabled: false}, exporting: {enabled: false, local: true, fallbackToExportServer: false},
-    accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are percentages. An accessible data table follows the chart.`},
+    accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are ${measure.description}. An accessible data table follows the chart.`},
     xAxis: {lineColor: t.axis, tickColor: t.axis, labels: {style: axisLabel}},
-    yAxis: {gridLineColor: t.grid, title: {text: 'Percent (%)', style: {color: t.label}}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + '%'; }}},
+    yAxis: {gridLineColor: t.grid, title: {text: measure.label, style: {color: t.label}}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + measure.suffix; }}},
     legend: {itemStyle: {color: t.text, fontSize: '.875rem', fontWeight: '400'},
       itemHoverStyle: {color: t.heading}, itemHiddenStyle: {color: t.muted}},
     tooltip: {useHTML: true, outside: true, stickOnContact: true,
@@ -374,7 +389,7 @@ function chartOptions(tokens, view, exporting = false) {
       style: {color: t.text, fontSize: '.875rem', pointerEvents: 'auto'}, hideDelay: 200,
       formatter() { return comparisonTooltip(this.point); }},
     plotOptions: {series: {animation: false, states: {inactive: {opacity: .4}},
-      accessibility: {point: {valueSuffix: '%'}}}}
+      accessibility: {point: {valueSuffix: measure.suffix || ' students per teacher'}}}}
   };
   if (view.tab === 'line') {
     const series = view.countries.map(country => {
@@ -403,7 +418,7 @@ function chartOptions(tokens, view, exporting = false) {
     });
     return Highcharts.merge(common, {
       chart: {type: 'line'}, xAxis: {categories: view.years, tickmarkPlacement: 'on'},
-      yAxis: {ceiling: 100, softMin: 0},
+      yAxis: {ceiling: measure.percentage ? 100 : undefined, softMin: 0},
       tooltip: {shared: true, formatter() {
         const points = this.points || [this];
         return tooltipHTML(view.years[points[0].point.x], points.map(point => point.point));
@@ -433,8 +448,9 @@ function chartOptions(tokens, view, exporting = false) {
   }
   const values = validRows.map(r => r[H.Value]);
   const min = values.length ? Math.max(0, Math.min(...values) * .9) : 0;
-  let max = values.length ? Math.min(100, Math.max(...values)) : 1;
-  if (max <= min) max = Math.min(100, min + 1);
+  const ceiling = measure.percentage ? 100 : Infinity;
+  let max = values.length ? Math.min(ceiling, Math.max(...values)) : 1;
+  if (max <= min) max = Math.min(ceiling, min + 1);
   return Highcharts.merge(common, {
     chart: {map: Highcharts.maps['custom/europe'], spacing: [12, 4, 8, 4], events: {render() {
       this.renderTo.style.height = `${this.chartHeight}px`;
@@ -446,15 +462,23 @@ function chartOptions(tokens, view, exporting = false) {
       const size = textSize * .875;
       this.renderer.rect(0, 0, size, size, 2).attr({fill: t.noData, stroke: t.context, 'stroke-width': 1}).add(this.noDataKey);
       this.renderer.text('No data', size + 6, size * .85).css({color: t.text, fontSize: '.875rem'}).add(this.noDataKey);
-      if (!exporting) updateMapRanges(this, t);
+      if (!exporting) updateMapRanges(this, t, measure);
     }, destroy() { this.rangeUnbind?.(); this.rangeLegend?.remove(); this.rangeHint?.remove(); }}},
     mapView: {animation: false, fitToGeometry: euMapGeometry(), padding: [8, 8, 8, 8]},
-    accessibility: {description: `${view.title}. ${view.breakdown}. Values are percentages. Hover or focus a range on the left scale to highlight matching countries. Click to keep a range highlighted; press Escape to reset. Grey indicates no data or countries outside the highlighted range. An accessible data table follows the chart.`},
-    colorAxis: {min, max, tickAmount: 6, width: textSize * .875, height: textSize * 17,
+    accessibility: {description: `${view.title}. ${view.breakdown}. Values are ${measure.description}. Hover or focus a range on the left scale to highlight matching countries. Click to keep a range highlighted; press Escape to reset. Grey indicates no data or countries outside the highlighted range. An accessible data table follows the chart.`},
+    colorAxis: {min, max, tickAmount: 6,
+      // Automatic six-tick scales can otherwise extend past 100 and show
+      // duplicate capped labels. Keep the final range at the percentage limit.
+      tickPositioner() {
+        const paddedMaximum = this.tickPositions[0] + (this.tickAmount - 1) * this.tickInterval;
+        if (measure.percentage && Math.max(this.tickPositions.at(-1), paddedMaximum) > 100) {
+          return [...this.tickPositions.filter(value => value < 100), 100];
+        }
+      }, width: textSize * .875, height: textSize * 17,
       stops: t.ramp.map((color, i) => [i / 8, color]),
-      labels: {style: axisLabel, formatter() { return fmt(Math.max(0, Math.min(100, this.value)), 0) + '%'; }}},
+      labels: {style: axisLabel, formatter() { return fmt(Math.max(0, Math.min(ceiling, this.value)), 0) + measure.suffix; }}},
     legend: {layout: 'vertical', align: 'left', verticalAlign: 'middle', padding: 0, margin: 16,
-      title: {text: 'Share (%)', style: {color: t.text, fontSize: '.875rem', fontWeight: '600'}}},
+      title: {text: measure.legendTitle, style: {color: t.text, fontSize: '.875rem', fontWeight: '600'}}},
     responsive: {rules: exporting ? [] : [{condition: {maxWidth: 480}, chartOptions: {
       chart: {height: textSize * 26}, colorAxis: {height: textSize * 11}
     }}]},
@@ -477,7 +501,7 @@ function updateTableAndNotes(view) {
   $('viewNotes').replaceChildren(...notes.map(note => { const p = document.createElement('p'); p.textContent = note; return p; }));
   $('dataDetails').hidden = !view.rows.length;
   $('dataTable').innerHTML = `<caption>${escapeHTML(view.title)} · ${escapeHTML(view.breakdown)}</caption>` +
-    '<thead><tr><th scope="col">Country</th><th scope="col">Year</th><th scope="col" class="number">Value (%)</th><th scope="col">Quality flag</th></tr></thead><tbody>' +
+    `<thead><tr><th scope="col">Country</th><th scope="col">Year</th><th scope="col" class="number">${escapeHTML(view.measure.header)}</th><th scope="col">Quality flag</th></tr></thead><tbody>` +
     view.rows.map(r => `<tr><th scope="row">${escapeHTML(r[H.Country])}</th><td>${r[H.Year]}</td><td class="number">${Number.isFinite(r[H.Value]) ? fmt(r[H.Value]) : 'No data'}</td><td>${r._flag ? `${escapeHTML(r._flag)} — ${escapeHTML(flagMeaning(r._flag))}` : '—'}</td></tr>`).join('') + '</tbody>';
 }
 function showStatus(message, danger = false) {
@@ -539,9 +563,9 @@ function exportName(view, extension) {
 }
 function exportMetadata(view) {
   return [
-    ['Title', 'Child poverty — ' + view.id], ['Breakdown', view.breakdown], ['View', view.tab],
+    ['Title', DASHBOARD_TITLE + ' — ' + view.id], ['Breakdown', view.breakdown], ['View', view.tab],
     ['Period', view.tab === 'line' ? view.years.join(', ') : view.year],
-    ['Countries', uniq(view.rows.map(r => r[H.Country])).join('; ')], ['Unit', 'Percent (%)'],
+    ['Countries', uniq(view.rows.map(r => r[H.Country])).join('; ')], ['Unit', view.measure.label],
     ['Source', view.sources.join('; ')], ['Source data', CSV_URL], ['Notes', view.notes.join('; ')],
     ['Quality flags', sortAlpha(uniq(view.rows.map(r => r._flag).filter(Boolean))).map(f => `${f}: ${flagMeaning(f)}`).join('; ')],
     ['Missing values', 'Empty numeric cells mean missing or unavailable; they are not zero.'],
@@ -555,7 +579,7 @@ async function buildExport(format) {
   if (!view.rows.some(r => Number.isFinite(r[H.Value]))) throw new Error('Nothing to export in the current view');
   const metadata = exportMetadata(view);
   if (format === 'csv') {
-    const csv = Papa.unparse([...metadata, [], ['Country', 'Year', 'Value (%)', 'Flag', 'Flag meaning'],
+    const csv = Papa.unparse([...metadata, [], ['Country', 'Year', view.measure.header, 'Flag', 'Flag meaning'],
       ...view.rows.map(r => [r[H.Country], r[H.Year], Number.isFinite(r[H.Value]) ? r[H.Value] : '', r._flag, flagMeaning(r._flag || '')])],
       {newline: '\r\n', escapeFormulae: true});
     return {blob: new Blob(['\uFEFF', csv], {type: 'text/csv;charset=utf-8'}), filename: exportName(view, 'csv'), mimeType: 'text/csv'};
@@ -611,7 +635,20 @@ async function buildExport(format) {
   } finally { if (objectURL) URL.revokeObjectURL(objectURL); exportChart?.destroy(); holder.remove(); }
 }
 window.addEventListener('message', async event => {
-  if (event.source !== window.parent || !event.data || typeof event.data !== 'object') return;
+  if (event.source !== window.parent || !event.data) return;
+  // Keep existing website download buttons working alongside the v1 bridge.
+  if (event.data === 'download-png' || event.data === 'download-csv') {
+    let objectURL;
+    try {
+      const file = await buildExport(event.data.slice('download-'.length));
+      objectURL = URL.createObjectURL(file.blob);
+      const link = document.createElement('a');
+      link.href = objectURL; link.download = file.filename; link.click();
+    } catch (error) { showStatus(error.message, true); }
+    finally { if (objectURL) setTimeout(() => URL.revokeObjectURL(objectURL), 1000); }
+    return;
+  }
+  if (typeof event.data !== 'object') return;
   const data = event.data;
   if (data.type === 'set-theme' && ['light', 'dark'].includes(data.theme)) { themeFromHost = true; setTheme(data.theme); }
   else if (data.type === 'hello') { if (ready) announce(); postHeight(true); }
@@ -632,7 +669,7 @@ if (typeof Highcharts === 'undefined' || typeof Papa === 'undefined' || typeof p
   Highcharts.setOptions({lang: {decimalPoint: '.', thousandsSep: ','}});
   Papa.parse(CSV_URL, {
     download: true, header: true, dynamicTyping: false, skipEmptyLines: true,
-    error: () => fail('The poverty data could not be loaded. Check your connection and try again.'),
+    error: () => fail(`The ${DASHBOARD_TITLE.toLowerCase()} data could not be loaded. Check your connection and try again.`),
     complete: result => {
       try {
         rows = result.data.map(row => Object.fromEntries(Object.entries(row).map(([key, value]) => [safe(key), typeof value === 'string' ? safe(value) : value])));
@@ -641,16 +678,18 @@ if (typeof Highcharts === 'undefined' || typeof Papa === 'undefined' || typeof p
         H = Object.fromEntries(['Title','Country','Year','Breakdown','Value','Flag','ID','Source'].map(name => [name, find(name)]));
         H.Notes = find('Notes') || find('Note');
         if (['Title','Country','Year','Breakdown','Value','ID'].some(key => !H[key]) || result.errors.length) throw new Error('Invalid data');
-        rows = rows.filter(r => safe(r[H.Title]).toLowerCase() === document.title.trim().toLowerCase())
+        rows = rows.filter(r => safe(r[H.Title]).toLowerCase() === DASHBOARD_TITLE.toLowerCase())
           .map(r => ({...r, [H.Year]: +r[H.Year], [H.Value]: toNum(r[H.Value]), _flag: safe(r[H.Flag]).toLowerCase()}));
-        if (!rows.length) { fail('No child poverty data is available. Please try again later.'); return; }
+        if (!rows.length) { fail(`No ${DASHBOARD_TITLE.toLowerCase()} data is available. Please try again later.`); return; }
         const indicators = sortAlpha(uniq(rows.map(r => r[H.ID]).filter(Boolean)));
         state.id = indicators[0];
         $('indicator').replaceChildren(...indicators.map(id => new Option(id, id, false, id === state.id)));
         updateIndicatorPosition();
         $('controls').hidden = false;
         refreshBreakdown(); setDefaults(); draw();
-      } catch (error) { console.error(error); fail('The poverty data could not be displayed. Please try again later.'); }
+      } catch (error) { console.error(error); fail(`The ${DASHBOARD_TITLE.toLowerCase()} data could not be displayed. Please try again later.`); }
     }
   });
 }
+
+
