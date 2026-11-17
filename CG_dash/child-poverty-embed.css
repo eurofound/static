@@ -50,14 +50,14 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 .tooltip-heading > strong { color: var(--heading); font-size: 1rem; }
 .tooltip-items { max-height: min(26rem, 55vh); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 .tooltip-items:focus-visible { outline: 2px solid var(--foreground); outline-offset: -2px; }
-.tooltip-item { padding-block: .4rem; }
+.tooltip-item { padding-block: .32rem; }
 .tooltip-item:last-child { padding-bottom: .15rem; }
 .tooltip-item-heading { color: var(--heading); }
 .tooltip-item-name { overflow-wrap: anywhere; line-height: 1.3; }
 .tooltip-item-value { color: var(--link); font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
 /* All items share a proportional scale, with space for the largest value label. */
 .tooltip-bar { margin-top: .2rem; padding-right: 4.25rem; background: var(--map-no-data); }
-.tooltip-track { position: relative; height: 1.5rem; }
+.tooltip-track { position: relative; height: 1.2rem; }
 .tooltip-fill { display: block; height: 100%; }
 .tooltip-track > .tooltip-item-value { position: absolute; top: 0; height: 100%; margin-left: .5rem; display: flex; align-items: center; }
 .tooltip-no-data { display: block; margin-top: .2rem; color: var(--muted-foreground); }
