@@ -89,6 +89,7 @@ function setDefaults() {
 function refreshBreakdown() {
   const options = sortAlpha(uniq(rows.filter(r => r[H.ID] === state.id).map(r => r[H.Breakdown]).filter(Boolean)));
   state.breakdown = options.includes('Total') ? 'Total' : options[0] || '';
+  $('breakdownControl').hidden = options.length === 1 && options[0] === 'Total';
   $('breakdown').replaceChildren(...options.map(value => {
     const button = document.createElement('button');
     button.className = 'ef-chip';
@@ -108,7 +109,12 @@ function updateFilters() {
   $('year').replaceChildren(...availableYears().reverse().map(year => new Option(year, year, false, year === state.year)));
   $('countryCount').textContent = `${state.countries.length} selected`;
   renderCountries();
-  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === state.tab)));
+  document.querySelectorAll('[data-view]').forEach(button => {
+    const selected = button.dataset.view === state.tab;
+    button.setAttribute('aria-selected', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    if (selected) $('chartPanel').setAttribute('aria-labelledby', button.id);
+  });
 }
 function renderCountries() {
   const query = $('countrySearch').value.trim().toLowerCase();
@@ -153,10 +159,37 @@ document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.t
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !$('countryPanel').hidden) { e.preventDefault(); closeCountries(true); }
 });
-$('indicator').onchange = () => { state.id = $('indicator').value; refreshBreakdown(); setDefaults(); draw(); };
+function updateIndicatorPosition(announce = false) {
+  const selector = $('indicator');
+  $('indicatorCount').textContent = `${selector.selectedIndex + 1} / ${selector.options.length}`;
+  if (announce) $('indicatorAnnouncement').textContent = `Indicator ${selector.selectedIndex + 1} of ${selector.options.length}: ${selector.value}`;
+}
+function selectIndicator(value) {
+  state.id = value; $('indicator').value = value;
+  refreshBreakdown(); setDefaults(); draw(); updateIndicatorPosition(true);
+}
+function cycleIndicator(direction) {
+  const selector = $('indicator');
+  if (!selector.options.length) return;
+  const index = (selector.selectedIndex + direction + selector.options.length) % selector.options.length;
+  selectIndicator(selector.options[index].value);
+}
+$('indicator').onchange = () => selectIndicator($('indicator').value);
+$('previousIndicator').onclick = () => cycleIndicator(-1);
+$('nextIndicator').onclick = () => cycleIndicator(1);
 $('year').onchange = () => { state.year = +$('year').value; hiddenCountries.clear(); draw(); };
 document.querySelectorAll('[data-view]').forEach(button => button.onclick = () => {
   state.tab = button.dataset.view; closeCountries(); updateFilters(); draw();
+});
+document.querySelector('[role="tablist"]').addEventListener('keydown', event => {
+  if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+  const tabs = [...document.querySelectorAll('[data-view]')];
+  const current = tabs.indexOf(document.activeElement);
+  if (current < 0) return;
+  event.preventDefault();
+  const index = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+    (current + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+  tabs[index].click(); tabs[index].focus();
 });
 $('retry').onclick = () => location.reload();
 
@@ -188,13 +221,34 @@ function currentView() {
     title: state.tab === 'line' ? state.id : `${state.id} (${state.year})`};
 }
 
+// Frame the EU members using the same pre-projected coordinates as the existing
+// map. Countries without observations remain in the frame, including Malta and
+// Cyprus. This avoids fitting the view to distant, empty surrounding geometry.
+let euFrame;
+function euMapGeometry() {
+  if (euFrame) return euFrame;
+  const members = new Set(['at','be','bg','hr','cy','cz','dk','ee','fi','fr','de','gr','hu','ie','it','lv','lt','lu','mt','nl','pl','pt','ro','sk','si','es','se']);
+  const coordinates = [];
+  function collect(value) {
+    if (typeof value[0] === 'number') coordinates.push(value);
+    else value.forEach(collect);
+  }
+  Highcharts.maps['custom/europe'].features.filter(feature => members.has(feature.properties['hc-key']))
+    .forEach(feature => collect(feature.geometry.coordinates));
+  const xs = coordinates.map(point => point[0]);
+  const ys = coordinates.map(point => point[1]);
+  euFrame = {type: 'MultiPoint', coordinates: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]]};
+  return euFrame;
+}
 function chartOptions(tokens, view, exporting = false) {
   const t = tokens;
   const axisLabel = {color: t.label, fontSize: '.875rem'};
   const textSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
   const validRows = view.rows.filter(r => Number.isFinite(r[H.Value]));
+  const chartWidth = exporting ? 1200 : $('chart').clientWidth;
   const chartHeight = view.tab === 'bar' ? Math.max(520, validRows.length * textSize * 1.8 + 145) :
-    (exporting ? 650 : textSize * (innerWidth <= 480 ? 30 : 34));
+    view.tab === 'map' ? (exporting ? 650 : textSize * 40) :
+    (exporting ? 650 : textSize * (chartWidth <= 480 ? 30 : 34));
   const pointInfo = point => {
     const value = point.value ?? point.y;
     return `${escapeHTML(point.name || point.series.name)}: <b>${Number.isFinite(value) ? fmt(value) + '%' : 'No data'}</b>` +
@@ -271,10 +325,27 @@ function chartOptions(tokens, view, exporting = false) {
   let max = values.length ? Math.min(100, Math.max(...values)) : 1;
   if (max <= min) max = Math.min(100, min + 1);
   return Highcharts.merge(common, {
-    chart: {map: Highcharts.maps['custom/europe']}, mapView: {animation: false},
-    colorAxis: {min, max, tickAmount: 6, stops: t.ramp.map((color, i) => [i / 8, color]),
+    chart: {map: Highcharts.maps['custom/europe'], spacing: [12, 4, 8, 4], events: {render() {
+      this.renderTo.style.height = `${this.chartHeight}px`;
+      // Add a non-interactive key beneath the scale, also included in PNGs.
+      this.noDataKey?.destroy();
+      if (!this.legend.group) return;
+      this.noDataKey = this.renderer.g('no-data-key').attr({'aria-hidden': true})
+        .translate(0, this.legend.legendHeight + 8).add(this.legend.group);
+      const size = textSize * .875;
+      this.renderer.rect(0, 0, size, size, 2).attr({fill: t.noData, stroke: t.context, 'stroke-width': 1}).add(this.noDataKey);
+      this.renderer.text('No data', size + 6, size * .85).css({color: t.text, fontSize: '.875rem'}).add(this.noDataKey);
+    }}},
+    mapView: {animation: false, fitToGeometry: euMapGeometry(), padding: [8, 8, 8, 8]},
+    accessibility: {description: `${view.title}. ${view.breakdown}. Values are percentages. The vertical scale is on the left; grey indicates no data. An accessible data table follows the chart.`},
+    colorAxis: {min, max, tickAmount: 6, width: textSize * .875, height: textSize * 17,
+      stops: t.ramp.map((color, i) => [i / 8, color]),
       labels: {style: axisLabel, formatter() { return fmt(Math.max(0, Math.min(100, this.value)), 0) + '%'; }}},
-    legend: {layout: 'horizontal', align: 'center', verticalAlign: 'bottom', title: {text: 'Percent (%)', style: {color: t.text}}, symbolWidth: exporting ? 360 : undefined},
+    legend: {layout: 'vertical', align: 'left', verticalAlign: 'middle', padding: 0, margin: 16,
+      title: {text: 'Share (%)', style: {color: t.text, fontSize: '.875rem', fontWeight: '600'}}},
+    responsive: {rules: exporting ? [] : [{condition: {maxWidth: 480}, chartOptions: {
+      chart: {height: textSize * 26}, colorAxis: {height: textSize * 11}
+    }}]},
     mapNavigation: {enabled: !exporting, enableMouseWheelZoom: false,
       buttonOptions: {align: 'right', verticalAlign: 'top', theme: {fill: t.surface, stroke: t.context, style: {color: t.text},
         states: {hover: {fill: t.surface, stroke: t.labelStrong, style: {color: t.text}}, select: {fill: t.surface, style: {color: t.text}}}}}},
@@ -304,7 +375,8 @@ function showStatus(message, danger = false) {
 function draw(preserveView = false) {
   const previous = preserveView && chart ? {
     extremes: chart.xAxis?.[0]?.getExtremes(),
-    center: chart.mapView?.center && [...chart.mapView.center], zoom: chart.mapView?.zoom
+    center: chart.mapView?.center && [...chart.mapView.center],
+    zoomDelta: chart.mapView ? chart.mapView.zoom - chart.mapView.minZoom : 0
   } : null;
   if (chart) { chart.destroy(); chart = null; }
   const view = currentView();
@@ -320,7 +392,9 @@ function draw(preserveView = false) {
   const options = chartOptions(readTokens(), view);
   $('chart').style.height = `${options.chart.height}px`;
   chart = view.tab === 'map' ? Highcharts.mapChart('chart', options) : Highcharts.chart('chart', options);
-  if (previous?.center) chart.mapView?.setView(previous.center, previous.zoom, true, false);
+  if (previous?.center && previous.zoomDelta > .000001) {
+    chart.mapView?.setView(previous.center, chart.mapView.minZoom + previous.zoomDelta, true, false);
+  }
   if (previous?.extremes && view.tab !== 'map') {
     const {userMin, userMax} = previous.extremes;
     if (userMin != null || userMax != null) chart.xAxis[0].setExtremes(userMin, userMax, true, false);
@@ -449,10 +523,10 @@ if (typeof Highcharts === 'undefined' || typeof Papa === 'undefined' || typeof p
         const indicators = sortAlpha(uniq(rows.map(r => r[H.ID]).filter(Boolean)));
         state.id = indicators[0];
         $('indicator').replaceChildren(...indicators.map(id => new Option(id, id, false, id === state.id)));
+        updateIndicatorPosition();
         $('controls').hidden = false;
         refreshBreakdown(); setDefaults(); draw();
       } catch (error) { console.error(error); fail('The poverty data could not be displayed. Please try again later.'); }
     }
   });
 }
-
