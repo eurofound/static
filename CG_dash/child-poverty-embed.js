@@ -158,6 +158,7 @@ document.addEventListener('click', e => { if (!$('countryFilter').contains(e.tar
 document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !$('countryPanel').hidden) { e.preventDefault(); closeCountries(true); }
+  if (e.key === 'Escape') chart?.tooltip?.hide(0);
 });
 function updateIndicatorPosition(announce = false) {
   const selector = $('indicator');
@@ -246,14 +247,26 @@ function chartOptions(tokens, view, exporting = false) {
   const textSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
   const validRows = view.rows.filter(r => Number.isFinite(r[H.Value]));
   const chartWidth = exporting ? 1200 : $('chart').clientWidth;
-  const chartHeight = view.tab === 'bar' ? Math.max(520, validRows.length * textSize * 1.8 + 145) :
+  // Reduce the space allocated to bar rows by 18%, including their gaps.
+  // Keep the title/axis allowance so labels remain readable and more rows fit.
+  const chartHeight = view.tab === 'bar' ? Math.max(375, validRows.length * textSize * 1.8) * .82 + 145 :
     view.tab === 'map' ? (exporting ? 650 : textSize * 40) :
     (exporting ? 650 : textSize * (chartWidth <= 480 ? 30 : 34));
-  const pointInfo = point => {
+  const tooltipRow = point => {
     const value = point.value ?? point.y;
-    return `${escapeHTML(point.name || point.series.name)}: <b>${Number.isFinite(value) ? fmt(value) + '%' : 'No data'}</b>` +
-      (point.flag ? ` (${escapeHTML(point.flag)})<br>${escapeHTML(flagMeaning(point.flag))}` : '');
+    const hasValue = Number.isFinite(value);
+    const color = typeof point.color === 'string' ? point.color :
+      typeof point.series?.color === 'string' ? point.series.color : t.series[0];
+    const width = hasValue ? Math.max(0, Math.min(100, value)) : 0;
+    return `<div class="tooltip-item"><div class="tooltip-item-heading">` +
+      `<span class="tooltip-item-name">${escapeHTML(point.name || point.series.name)}</span>` +
+      `<strong class="tooltip-item-value">${hasValue ? fmt(value) + '%' : 'No data'}</strong></div>` +
+      (hasValue ? `<div class="tooltip-track" aria-hidden="true"><span style="width:${width}%;background:${escapeHTML(color)}"></span></div>` : '') +
+      (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
   };
+  const tooltipHTML = (year, points) => `<div class="ef-tooltip poverty-tooltip">` +
+    `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong><span class="tooltip-scale">Scale: 0–100%</span></div>` +
+    `<div class="tooltip-items" tabindex="0" role="group" aria-label="Country values">${points.map(tooltipRow).join('')}</div></div>`;
   const common = {
     chart: {backgroundColor: exporting ? t.background : 'transparent', height: chartHeight,
       animation: false, spacing: [12, 12, 16, 12], style: {fontFamily: t.fontText}},
@@ -266,9 +279,10 @@ function chartOptions(tokens, view, exporting = false) {
     yAxis: {gridLineColor: t.grid, title: {text: 'Percent (%)', style: {color: t.label}}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + '%'; }}},
     legend: {itemStyle: {color: t.text, fontSize: '.875rem', fontWeight: '400'},
       itemHoverStyle: {color: t.heading}, itemHiddenStyle: {color: t.muted}},
-    tooltip: {useHTML: true, backgroundColor: 'transparent', borderWidth: 0, shadow: false, padding: 0,
-      style: {color: t.text, fontSize: '.875rem'}, hideDelay: 100,
-      formatter() { return `<div class="ef-tooltip"><b>${view.year}</b><p>${pointInfo(this.point)}</p></div>`; }},
+    tooltip: {useHTML: true, outside: true, stickOnContact: true,
+      backgroundColor: 'transparent', borderWidth: 0, shadow: false, padding: 0,
+      style: {color: t.text, fontSize: '.875rem', pointerEvents: 'auto'}, hideDelay: 200,
+      formatter() { return tooltipHTML(view.year, [this.point]); }},
     plotOptions: {series: {animation: false, states: {inactive: {opacity: .4}},
       accessibility: {point: {valueSuffix: '%'}}}}
   };
@@ -302,8 +316,7 @@ function chartOptions(tokens, view, exporting = false) {
       yAxis: {ceiling: 100, softMin: 0},
       tooltip: {shared: true, formatter() {
         const points = this.points || [this];
-        return `<div class="ef-tooltip"><b>${escapeHTML(view.years[points[0].point.x])}</b>` +
-          points.map(p => `<p>${pointInfo(p.point)}</p>`).join('') + '</div>';
+        return tooltipHTML(view.years[points[0].point.x], points.map(point => point.point));
       }}, series
     });
   }
@@ -314,15 +327,15 @@ function chartOptions(tokens, view, exporting = false) {
     const ticks = Array.from({length: axisMax / tickStep + 1}, (_, index) => index * tickStep);
     return Highcharts.merge(common, {
       chart: {type: 'bar'}, legend: {enabled: false},
-      xAxis: {categories: validRows.map(r => r[H.Country]), labels: {style: axisLabel}},
+      xAxis: {categories: validRows.map(r => r[H.Country]), labels: {style: {...axisLabel, fontSize: '.8125rem', letterSpacing: '-.02em'}}},
       yAxis: {min: 0, max: axisMax, tickPositions: ticks, minorTicks: false, minorTickInterval: null,
         minorGridLineWidth: 0, gridLineWidth: 1,
         gridLineColor: Highcharts.color(t.grid).setOpacity(.35).get('rgba'),
         labels: {formatter() { return fmt(this.value, 0); }}},
       plotOptions: {series: {pointPadding: .12, groupPadding: .04, borderWidth: 1, borderColor: t.labelStrong,
-        dataLabels: {enabled: true, inside: true, align: 'left', verticalAlign: 'middle', x: 6,
-          crop: false, overflow: 'allow', allowOverlap: true, padding: 0,
-          style: {color: t.onData, textOutline: '1px contrast', fontSize: '.875rem', fontWeight: '600'},
+        dataLabels: {enabled: true, inside: true, align: 'right', verticalAlign: 'middle', x: -5,
+          crop: false, overflow: 'justify', allowOverlap: true, padding: 0,
+          style: {color: t.onData, textOutline: '1px contrast', fontSize: '.8125rem', letterSpacing: '-.02em', fontWeight: '400'},
           formatter() { return fmt(this.y, 0) + (this.point.flag ? ` (${this.point.flag})` : ''); }}}},
       series: [{name: view.id, data: validRows.map(r => ({name: r[H.Country], y: r[H.Value], flag: r._flag,
         color: EU.has(r[H.Country]) || r[H.Country] === 'European Union (27)' ? t.series[7] : t.series[0]}))}]
