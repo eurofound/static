@@ -361,8 +361,8 @@ function chartOptions(tokens, view, exporting = false) {
     chart: {backgroundColor: exporting ? t.background : 'transparent', height: chartHeight,
       animation: false, spacing: [12, 12, 16, 12], style: {fontFamily: t.fontText}},
     colors: t.series,
-    title: {text: escapeHTML(view.title), align: 'left', style: {color: t.heading, fontFamily: t.fontHeading, fontSize: '1.125rem', fontWeight: '600'}},
-    subtitle: {text: `Breakdown: ${escapeHTML(view.breakdown)} · Percent (%)`, align: 'left', style: {color: t.text, fontSize: '.9375rem'}},
+    title: {text: escapeHTML(view.title), align: 'left', style: {color: t.heading, fontFamily: t.fontHeading, fontSize: '1.40625rem', fontWeight: '600'}},
+    subtitle: {text: `Breakdown: ${escapeHTML(view.breakdown)} · Percent (%)`, align: 'left', style: {color: t.text, fontSize: '1.078125rem'}},
     credits: {enabled: false}, exporting: {enabled: false, local: true, fallbackToExportServer: false},
     accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are percentages. An accessible data table follows the chart.`},
     xAxis: {lineColor: t.axis, tickColor: t.axis, labels: {style: axisLabel}},
@@ -582,9 +582,9 @@ async function buildExport(format) {
     const padding = 24, logoWidth = 75, logoLeft = canvas.width - padding - logoWidth;
     const noteWidth = logoLeft - padding - 24;
     const lines = [];
-    // The title, unit and breakdown are already on the chart; preserve source,
-    // population, notes, quality flags and export date beneath it.
-    for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data'].includes(key))) {
+    // The title, unit and breakdown are already on the chart; preserve the
+    // source, notes and quality flags beneath it.
+    for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data','Countries','Missing values','Exported at'].includes(key))) {
       let line = '';
       for (const word of `${key}: ${value}`.split(/\s+/)) {
         if (line && context.measureText(`${line} ${word}`).width > noteWidth) { lines.push(line); line = word; }
