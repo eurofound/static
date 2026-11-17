@@ -582,9 +582,9 @@ async function buildExport(format) {
     const padding = 24, logoWidth = 75, logoLeft = canvas.width - padding - logoWidth;
     const noteWidth = logoLeft - padding - 24;
     const lines = [];
-    // The title, unit and breakdown are already on the chart; preserve source,
-    // population, notes and quality flags beneath it.
-    for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data','Missing values','Exported at'].includes(key))) {
+    // The title, unit and breakdown are already on the chart; preserve the
+    // source, notes and quality flags beneath it.
+    for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data','Countries','Missing values','Exported at'].includes(key))) {
       let line = '';
       for (const word of `${key}: ${value}`.split(/\s+/)) {
         if (line && context.measureText(`${line} ${word}`).width > noteWidth) { lines.push(line); line = word; }
