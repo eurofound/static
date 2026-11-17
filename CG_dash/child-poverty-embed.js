@@ -579,13 +579,15 @@ async function buildExport(format) {
     const canvas = document.createElement('canvas'); canvas.width = 1200;
     const context = canvas.getContext('2d');
     const font = `16px ${light.fontText}`; context.font = font;
+    const padding = 24, logoWidth = 75, logoLeft = canvas.width - padding - logoWidth;
+    const noteWidth = logoLeft - padding - 24;
     const lines = [];
     // The title, unit and breakdown are already on the chart; preserve source,
     // population, notes, quality flags and export date beneath it.
     for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data'].includes(key))) {
       let line = '';
       for (const word of `${key}: ${value}`.split(/\s+/)) {
-        if (line && context.measureText(`${line} ${word}`).width > 1152) { lines.push(line); line = word; }
+        if (line && context.measureText(`${line} ${word}`).width > noteWidth) { lines.push(line); line = word; }
         else line += (line ? ' ' : '') + word;
       }
       if (line) lines.push(line);
@@ -595,13 +597,15 @@ async function buildExport(format) {
       logo.onload = resolve; logo.onerror = () => reject(new Error('Could not load the Eurofound logo for the image export'));
       logo.src = new URL('./eurofound-logo.svg', location.href).href;
     });
-    const logoWidth = 150, logoHeight = logoWidth * logo.naturalHeight / logo.naturalWidth;
-    const logoTop = options.chart.height + 36 + lines.length * 23;
-    canvas.height = logoTop + logoHeight + 24;
+    const logoHeight = logoWidth * logo.naturalHeight / logo.naturalWidth;
+    const footerTop = options.chart.height + 12;
+    const footerHeight = Math.max(lines.length * 23, logoHeight);
+    const logoTop = footerTop + footerHeight - logoHeight;
+    canvas.height = Math.ceil(footerTop + footerHeight + padding);
     context.fillStyle = light.background; context.fillRect(0, 0, canvas.width, canvas.height);
     context.drawImage(image, 0, 0); context.font = font; context.fillStyle = light.text;
     lines.forEach((line, index) => context.fillText(line, 24, options.chart.height + 24 + index * 23));
-    context.drawImage(logo, 24, logoTop, logoWidth, logoHeight);
+    context.drawImage(logo, logoLeft, logoTop, logoWidth, logoHeight);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(result => result ? resolve(result) : reject(new Error('Could not build the PNG')), 'image/png'));
     return {blob, filename: exportName(view, 'png'), mimeType: 'image/png'};
   } finally { if (objectURL) URL.revokeObjectURL(objectURL); exportChart?.destroy(); holder.remove(); }
