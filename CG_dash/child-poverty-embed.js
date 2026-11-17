@@ -45,7 +45,7 @@ function readTokens(element = document.documentElement) {
     background: v('--background'), surface: v('--surface'), text: v('--foreground'),
     heading: v('--heading'), muted: v('--muted-foreground'), border: v('--border'),
     context: v('--border-strong'), axis: v('--chart-axis'), grid: v('--chart-grid'),
-    label: v('--chart-label'), labelStrong: v('--chart-label-strong'),
+    label: v('--chart-label'), labelStrong: v('--chart-label-strong'), onData: v('--chart-label-on-data'),
     ramp: dark ? ramp.reverse() : ramp, noData: v('--map-no-data'),
     fontText: v('--font-source-sans-3'), fontHeading: v('--font-roboto')
   };
@@ -308,14 +308,22 @@ function chartOptions(tokens, view, exporting = false) {
     });
   }
   if (view.tab === 'bar') {
+    const highestValue = Math.max(0, ...validRows.map(row => row[H.Value]));
+    const tickStep = highestValue <= 50 ? 10 : 20;
+    const axisMax = Math.max(tickStep, Math.ceil(highestValue / tickStep) * tickStep);
+    const ticks = Array.from({length: axisMax / tickStep + 1}, (_, index) => index * tickStep);
     return Highcharts.merge(common, {
       chart: {type: 'bar'}, legend: {enabled: false},
       xAxis: {categories: validRows.map(r => r[H.Country]), labels: {style: axisLabel}},
-      yAxis: {min: 0, maxPadding: .18},
+      yAxis: {min: 0, max: axisMax, tickPositions: ticks, minorTicks: false, minorTickInterval: null,
+        minorGridLineWidth: 0, gridLineWidth: 1,
+        gridLineColor: Highcharts.color(t.grid).setOpacity(.35).get('rgba'),
+        labels: {formatter() { return fmt(this.value, 0); }}},
       plotOptions: {series: {pointPadding: .12, groupPadding: .04, borderWidth: 1, borderColor: t.labelStrong,
-        dataLabels: {enabled: true, inside: false, crop: false, overflow: 'allow',
-          style: {color: t.text, textOutline: 'none', fontSize: '.875rem', fontWeight: '400'},
-          formatter() { return fmt(this.y) + '%' + (this.point.flag ? ` (${this.point.flag})` : ''); }}}},
+        dataLabels: {enabled: true, inside: true, align: 'left', verticalAlign: 'middle', x: 6,
+          crop: false, overflow: 'allow', allowOverlap: true, padding: 0,
+          style: {color: t.onData, textOutline: '1px contrast', fontSize: '.875rem', fontWeight: '600'},
+          formatter() { return fmt(this.y, 0) + (this.point.flag ? ` (${this.point.flag})` : ''); }}}},
       series: [{name: view.id, data: validRows.map(r => ({name: r[H.Country], y: r[H.Value], flag: r._flag,
         color: EU.has(r[H.Country]) || r[H.Country] === 'European Union (27)' ? t.series[7] : t.series[0]}))}]
     });
