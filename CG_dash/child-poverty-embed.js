@@ -229,7 +229,7 @@ function chartOptions(tokens, view, exporting = false) {
         dashStyle: ['Solid','ShortDash','ShortDot','Dash','DashDot','LongDash','LongDashDot','ShortDashDot','ShortDashDotDot'][colorIndex],
         lineWidth: 3, fillColor: {linearGradient: {x1: 0, y1: 0, x2: 0, y2: 1}, stops: [
           [0, Highcharts.color(color).setOpacity(.2).get('rgba')], [1, Highcharts.color(color).setOpacity(.01).get('rgba')]]},
-        marker: {enabled: true, radius: 3, lineWidth: 1.5, lineColor: t.labelStrong},
+        marker: {enabled: true, symbol: 'circle', radius: 3, lineWidth: 1.5, lineColor: t.labelStrong},
         data: view.years.map((year, x) => {
           const row = points.get(year);
           return {x, y: row && Number.isFinite(row[H.Value]) ? row[H.Value] : null, flag: row?._flag || '',
