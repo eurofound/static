@@ -1,0 +1,82 @@
+Child poverty dashboard — ERM embed conversion
+Prepared 17 November 2026
+
+Install
+Keep these four files together in the repository's CG_dash directory:
+  Child_poverty_dash.html
+  child-poverty-embed.css
+  child-poverty-embed.js
+  erm-palette.css
+
+The existing dashboard path is retained:
+https://static.eurofound.europa.eu/CG_dash/Child_poverty_dash.html
+This package has not been deployed. The GitHub draft pull request is the review path.
+
+Local preview
+From the repository root run: python -m http.server 8080
+When serving the repository root, open
+http://localhost:8080/CG_dash/tests/poverty-embed.html
+The harness supplies the surrounding card and exercises theme changes, resizing
+and PNG/CSV downloads. Open the dashboard over HTTP, not file://.
+Internet access is required for the existing CSV, public theme, fonts and pinned
+chart libraries. No build step or framework migration is required.
+
+What changed
+- Public embed v1 theme plus the exact ERM palette from the supplied document.
+- Light/dark query parameters, live parent messages, OS theme preference and
+  English fallback for unsupported languages.
+- Responsive indicator selector, breakdown chips, country checkboxes, year
+  selector and the original trend/bar/map views. Up to nine comparison countries
+  use distinct ERM colours; retained countries keep their colours when filtering.
+- All nine map stops, reversed in dark mode; token-based no-data colour.
+- Data-quality markers, readable values, keyboard controls and a real data table.
+- Host-controlled PNG and CSV exports, generated in the browser. PNG is always
+  light themed; exports include selection, source, units, notes and quality flags.
+- Parent-only ef-embed protocol: ready, resize, set-theme, hello and correlated
+  export-result/export-error. The iframe can shrink as well as grow.
+- Page logo, source caption, Google font service and icon service removed.
+- Exact library versions: Highcharts 12.4.0, map collection 2.3.0,
+  Proj4 2.12.1 and Papa Parse 5.4.1. Proj4 supports the existing pre-projected map.
+
+Preserved
+The CG_data.csv URL, title matching, numeric parsing, last-observation rule for
+the trend/bar views, default indicator and countries, nearest-year selection,
+missing values and quality flags are preserved. The data files are untouched.
+The EU aggregate's actual label, "European Union (27)", now receives its intended
+distinct bar colour. English is the only announced translation.
+
+Website/editor handoff
+The CMS card must supply the title "Child poverty", source "Eurostat", any
+dataset-wide notes and the download/share controls. Where a data item still uses
+highcharts_iframe, switch that block to embed using the same URL and height.
+The old download-png/download-csv string messages are replaced by embed v1.
+Check in the website preview before publishing. No CMS entries were changed.
+
+Verification
+83 browser checks passed. Actual PNG output was inspected in light colours
+while the live dashboard remained dark themed.
+- Chrome 157, Selenium 4.40.0 and axe-core 4.10.3 on Windows.
+- 965 observation comparisons across 11 indicators and three views, including
+  exported numeric values and flags, reconciled to the source CSV independently.
+- axe: zero reported WCAG A/AA violations in all three views in both themes.
+- Exact viewport widths 320, 768, 1100 and 1870px; 200% text at 320px.
+- Keyboard country selection/Escape, nine-country limit, stable colours, empty
+  selection and all-hidden legend, map zoom across theme changes, reduced motion.
+- Real parent-window ready/resize and PNG/CSV/error export messages; height grew
+  from 926 to 2739px with the table and returned to 926px when it closed.
+- OS and URL theme precedence, non-parent message rejection, zero vs missing,
+  unreachable-data and unavailable-library notices; no chart JavaScript errors.
+
+Limits
+This is not a full WCAG certification. A manual screen-reader pass, real website
+CMS preview, 400% browser zoom and testing in Safari/Firefox remain for release
+review. The approved map ramp intentionally includes pale fills: the matching
+ranked chart, table, borders, labels and tooltips provide non-colour alternatives.
+No translation beyond English, new hosting, CMS publication or live deployment
+was performed.
+
+Source versions
+Base repository commit: 688cb61438ec1a8596bad447354634871e7dd213
+Original HTML blob: 4980142ea80682238252924546bda0f0d14a63b8
+Unchanged CG_data.csv blob: cb0a666ee6512cedad6e690fa8661214cbe5fd73
+Guidelines: Eurofound-embed-AI-instructions-ERM-colours.md, 17 November 2026.
