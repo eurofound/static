@@ -10,9 +10,12 @@ fieldset legend { padding: 0 .4rem; font-weight: 700; }
 .radio-list label { display: flex; align-items: baseline; gap: .5rem; margin: .25rem 0; cursor: pointer; font-weight: 600; }
 .radio-list input { flex-shrink: 0; margin: 0; }
 .chart-wrap { position: relative; }
-#container { width: 100%; height: 560px; margin-top: .5rem; }
+.chart-column { display: flex; flex-direction: column; }
+#container { width: 100%; height: 640px; margin-top: .5rem; }
 .pill-row { margin: 0; }
 .pill.ef-chip { margin: .35rem .5rem .35rem 0; padding: .38rem .8rem; min-height: 2.25rem; height: auto; font-size: 1rem; white-space: normal; }
+#yearPills { display: grid; grid-auto-rows: 2.6rem; gap: .35rem; width: 8.5rem; padding-block: .6rem; min-height: 9.7rem; box-sizing: border-box; }
+#yearPills .pill { margin: 0; white-space: nowrap; }
 .metric-row, #metricPills { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .6rem; }
 .metric-row { margin: .25rem 0 0; }
 #metricPills { margin: 0; }
@@ -29,7 +32,7 @@ fieldset legend { padding: 0 .4rem; font-weight: 700; }
 .flag-select .item:hover, .flag-select .item[aria-pressed="true"] { background: var(--hover); }
 .flag-select .item:focus-visible { outline-offset: -3px; }
 .country-flag { width: 24px; height: 18px; flex-shrink: 0; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px var(--border); }
-.view-notes { font-size: .857142857rem; line-height: 1.5; }
+.view-notes { margin-top: auto; padding-top: .5rem; min-height: 4.5rem; font-size: .985714286rem; line-height: 1.5; }
 .view-notes p { margin-block: .75rem; }
 .footnote-segment + .footnote-segment { margin-inline-start: .75rem; }
 #status { margin-bottom: var(--spacing-flow-default); }
@@ -38,7 +41,7 @@ fieldset legend { padding: 0 .4rem; font-weight: 700; }
 @media (max-width: 640px) {
   #controls { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
   #controls > div:first-child { max-width: 28rem; }
-  #container { height: 480px; }
+  #container { height: 540px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
