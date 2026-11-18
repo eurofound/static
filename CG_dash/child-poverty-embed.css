@@ -20,7 +20,7 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 .country-filter { position: relative; }
 .country-filter > .ef-label, .year-filter > .ef-label { margin: 0; flex-shrink: 0; }
 .country-filter > .ef-select { width: 14rem; }
-#countryCount { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .4rem; min-width: 0; overflow-wrap: anywhere; text-align: left; }
+#countryCount { min-width: 0; overflow-wrap: anywhere; text-align: left; }
 .country-name { display: inline-flex; align-items: center; gap: .6rem; min-width: 0; }
 .country-name > span { min-width: 0; overflow-wrap: anywhere; }
 .country-flag { display: block; width: 24px; height: 18px; flex-shrink: 0; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgb(0 0 0 / 6%); }
@@ -71,17 +71,6 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 .tooltip-track > .tooltip-item-value { position: absolute; top: 0; height: 100%; margin-left: .5rem; display: flex; align-items: center; }
 .tooltip-no-data { display: block; margin-top: .2rem; color: var(--muted-foreground); }
 .tooltip-flag { margin-top: .35rem; color: var(--muted-foreground); font-size: .75rem; line-height: 1.3; }
-details { margin-top: var(--spacing-flow-default); border-top: 1px solid var(--border); padding-top: var(--spacing-flow-default); }
-summary { cursor: pointer; font-weight: 600; color: var(--heading); padding: .5rem .25rem; }
-.table-scroll { overflow-x: auto; margin-top: .5rem; padding: .25rem; }
-.table-scroll:focus-visible { outline-offset: -3px; }
-table { width: 100%; border-collapse: collapse; font-size: .9375rem; }
-caption { text-align: left; font-weight: 600; padding-block: .75rem; }
-th, td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-thead th { background: var(--surface-muted); }
-tbody th { font-weight: 400; }
-tbody tr:hover { background: var(--hover); }
-.number { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .highcharts-point:focus-visible { outline-offset: -3px; }
 .highcharts-map-navigation .highcharts-button-symbol { stroke: var(--foreground); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
