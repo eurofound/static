@@ -1,6 +1,6 @@
 'use strict';
 const DASHBOARD_TITLE = document.title.trim();
-const CSV_URL = new URL('./CG_data_updated.csv', document.baseURI).href;
+const CSV_URL = new URL('./CG_data_updated.csv?v=20261118-source-notes', document.baseURI).href;
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
 const EU27 = new Set(['EU27','EU-27','EU 27','European Union (27)']);
 const EU = new Set(['EU','EU28','EU-28','European Union','EU 28', ...EU27]);
@@ -558,12 +558,16 @@ function chartFootnotes(view) {
   return [['Source', view.sources.join('; ')], ['Notes', notes.join(' ')]].filter(([, value]) => value);
 }
 function updateTableAndNotes(view) {
-  $('viewNotes').replaceChildren(...chartFootnotes(view).map(([label, value]) => {
-    const p = document.createElement('p'), strong = document.createElement('strong');
+  const p = document.createElement('p');
+  chartFootnotes(view).forEach(([label, value], index) => {
+    const span = document.createElement('span'), strong = document.createElement('strong');
+    span.className = 'footnote-segment';
     strong.textContent = label + ': ';
-    p.append(strong, document.createTextNode(value));
-    return p;
-  }));
+    span.append(strong, document.createTextNode(value));
+    if (index) p.append(document.createTextNode(' '));
+    p.append(span);
+  });
+  $('viewNotes').replaceChildren(p);
   $('dataDetails').hidden = !view.rows.length;
   $('dataTable').innerHTML = `<caption>${escapeHTML(view.title)} · ${escapeHTML(view.breakdown)}</caption>` +
     `<thead><tr><th scope="col">Country</th><th scope="col">Year</th><th scope="col" class="number">${escapeHTML(view.measure.header)}</th><th scope="col">Quality flag</th></tr></thead><tbody>` +
@@ -669,22 +673,20 @@ async function buildExport(format) {
     const font = `16px ${light.fontText}`, boldFont = `600 16px ${light.fontText}`; context.font = font;
     const padding = 24, logoWidth = 75, logoLeft = canvas.width - padding - logoWidth;
     const noteWidth = logoLeft - padding - 24;
-    const lines = [];
-    // The title, unit and breakdown are already on the chart; preserve the
-    // source, notes and quality flags beneath it.
-    for (const [key, value] of chartFootnotes(view)) {
-      let line = '', label = `${key}: `;
-      context.font = boldFont;
-      let labelWidth = context.measureText(label).width;
-      context.font = font;
-      for (const word of value.split(/\s+/)) {
-        if (line && context.measureText(`${line} ${word}`).width + labelWidth > noteWidth) {
-          lines.push({label, labelWidth, text: line}); line = word; label = ''; labelWidth = 0;
-        }
-        else line += (line ? ' ' : '') + word;
+    const lines = [[]];
+    let lineWidth = 0;
+    // Source and source-defined notes form one paragraph, with bold labels.
+    chartFootnotes(view).forEach(([key, value], index) => {
+      const runs = [{text: `${key}: `, bold: true}, ...value.split(/\s+/).map(word => ({text: word + ' ', bold: false}))];
+      if (index && lineWidth) lineWidth += 16;
+      for (const run of runs) {
+        context.font = run.bold ? boldFont : font;
+        const width = context.measureText(run.text).width;
+        if (lineWidth && lineWidth + width > noteWidth) { lines.push([]); lineWidth = 0; }
+        lines.at(-1).push({...run, x: lineWidth});
+        lineWidth += width;
       }
-      if (line) lines.push({label, labelWidth, text: line});
-    }
+    });
     const logo = new Image();
     await new Promise((resolve, reject) => {
       logo.onload = resolve; logo.onerror = () => reject(new Error('Could not load the Eurofound logo for the image export'));
@@ -699,8 +701,7 @@ async function buildExport(format) {
     context.drawImage(image, 0, 0); context.font = font; context.fillStyle = light.text;
     lines.forEach((line, index) => {
       const y = options.chart.height + 24 + index * 23;
-      context.font = boldFont; context.fillText(line.label, 24, y);
-      context.font = font; context.fillText(line.text, 24 + line.labelWidth, y);
+      line.forEach(run => { context.font = run.bold ? boldFont : font; context.fillText(run.text, 24 + run.x, y); });
     });
     context.drawImage(logo, logoLeft, logoTop, logoWidth, logoHeight);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(result => result ? resolve(result) : reject(new Error('Could not build the PNG')), 'image/png'));
