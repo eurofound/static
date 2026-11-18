@@ -1,6 +1,6 @@
 'use strict';
 const DASHBOARD_TITLE = document.title.trim();
-const CSV_URL = 'https://raw.githubusercontent.com/eurofound/static/gh-pages/CG_dash/CG_data.csv';
+const CSV_URL = new URL('./CG_data_updated.csv', document.baseURI).href;
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
 const EU27 = new Set(['EU27','EU-27','EU 27','European Union (27)']);
 const EU = new Set(['EU','EU28','EU-28','European Union','EU 28', ...EU27]);
@@ -689,5 +689,6 @@ if (typeof Highcharts === 'undefined' || typeof Papa === 'undefined' || typeof p
     }
   });
 }
+
 
 
