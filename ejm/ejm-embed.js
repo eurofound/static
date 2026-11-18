@@ -245,9 +245,83 @@ const isEmbedded = window.parent !== window;
 let ready = false, themeFromHost = false, lastHeight = 0;
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const animationOptions = () => reducedMotion.matches ? false : {duration:650};
+// Selection transitions are explicitly requested for this dashboard. Pass the
+// duration on every redraw so they cannot inherit a disabled animation option.
+const animationOptions = () => ({duration:270});
 let chartMode = null;
+const pinnedPoints = new Set();
+const pointKey = point => JSON.stringify([point.series.options.id,point.index]);
+
+function togglePinnedPoint(point) {
+  const key = pointKey(point);
+  if(pinnedPoints.has(key))pinnedPoints.delete(key);else pinnedPoints.add(key);
+  const target = point.series.chart;
+  target.ejmView = currentView(true);
+  target.tooltip.hide(0);
+  renderPinnedTooltips(target,target.ejmView,readTokens());
+}
+
+function renderPinnedTooltips(target,view,t) {
+  const labels = target.ejmPinnedLabels || (target.ejmPinnedLabels = new Map());
+  const wanted = new Set(view.pins), placed = [];
+  for(const [key,label] of labels)if(!wanted.has(key)){label.group.destroy();labels.delete(key);}
+  const fontSize = 15.456, lineHeight = fontSize * 1.4, padding = 14;
+  for(const key of wanted) {
+    const [seriesId,index] = JSON.parse(key), series = target.series.find(s => s.options.id === seriesId);
+    const point = series?.points[index];
+    if(!series?.visible || !point || !Number.isFinite(point.y)) {
+      labels.get(key)?.group.destroy();labels.delete(key);continue;
+    }
+    const lines = [
+      `<b>${escapeHTML(view.country)}</b>`,
+      `${escapeHTML(view.metric)}: <b style="color:${point.y >= 0 ? t.positive : t.negative}">${formatTooltip3(point.y)}</b> jobs`,
+      ...(view.filter === 'All' ? [] : [`${escapeHTML(view.filter)}: <b>${escapeHTML(series.name)}</b>`]),
+      `${escapeHTML(QUINTILE_ORDER[index])} quintile`
+    ];
+    let label = labels.get(key);
+    if(!label) {
+      const group = target.renderer.g('ejm-pinned-tooltip').attr({zIndex:9}).add();
+      const box = target.renderer.path().attr({fill:t.surface,stroke:t.border,'stroke-width':1}).add(group);
+      box.shadow({color:'#000000',opacity:.15,offsetX:0,offsetY:2,width:5});
+      label = {group,box,texts:[]};labels.set(key,label);
+      if(!target.options.chart.forExport) {
+        const dismiss = () => {pinnedPoints.delete(key);target.ejmView=currentView(true);target.tooltip.hide(0);renderPinnedTooltips(target,target.ejmView,readTokens());};
+        group.attr({role:'button',tabindex:0,'aria-label':'Unpin tooltip'}).css({cursor:'pointer'}).on('click',dismiss)
+          .on('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();dismiss();}});
+      }
+    }
+    if(!target.options.chart.forExport) {
+      label.group.attr({'aria-label':`Unpin ${view.country}, ${QUINTILE_ORDER[index]}, ${series.name} tooltip`});
+      // Highcharts' accessibility refresh hides custom SVG groups after redraw.
+      // Keep these interactive tooltip dismiss buttons in the reading order.
+      const group = label.group;
+      queueMicrotask(()=>{if(group.element)group.attr({'aria-hidden':false});});
+    }
+    label.texts.forEach(text=>text.destroy());
+    // Standalone SVG images cannot inherit page-loaded web fonts. Measure and
+    // render export callouts with the same available font to avoid clipped text.
+    const fontFamily = target.options.chart.forExport ? 'Arial, sans-serif' : t.fontText;
+    label.texts = lines.map(line=>target.renderer.text(line,0,0).css({color:t.text,fontFamily,fontSize:fontSize+'px',width:Math.max(100,target.plotWidth-padding*2-8)+'px'}).add(label.group));
+    const width = Math.min(target.chartWidth-16,Math.ceil(Math.max(...label.texts.map(text=>text.getBBox().width))+padding*2));
+    let textY = padding+fontSize;
+    label.texts.forEach((text,i)=>{text.attr({x:i===0?width/2:padding,y:textY,align:i===0?'center':'left'});textY+=Math.max(lineHeight,text.getBBox().height);});
+    const height = Math.ceil(textY-fontSize+padding);
+    const tip = point.tooltipPos || [point.plotX,point.plotY];
+    const anchorX = target.plotLeft+tip[0], anchorY = target.plotTop+tip[1], gap = 12;
+    const clamp = (x,y) => ({x:Math.max(target.plotLeft+4,Math.min(x,target.chartWidth-width-8)),
+      y:Math.max(target.plotTop+4,Math.min(y,target.plotTop+target.plotHeight-height-4))});
+    const candidates = [clamp(anchorX-width/2,anchorY-height-gap),clamp(anchorX+gap,anchorY-height/2),
+      clamp(anchorX-width-gap,anchorY-height/2),clamp(anchorX-width/2,anchorY+gap),
+      ...placed.flatMap(p=>[clamp(p.x,p.y+p.height+gap),clamp(p.x,p.y-height-gap)])];
+    const overlap = p => placed.reduce((sum,q)=>sum+Math.max(0,Math.min(p.x+width+6,q.x+q.width+6)-Math.max(p.x,q.x))
+      *Math.max(0,Math.min(p.y+height+6,q.y+q.height+6)-Math.max(p.y,q.y)),
+      anchorX>p.x&&anchorX<p.x+width&&anchorY>p.y&&anchorY<p.y+height ? width*height : 0);
+    const position = candidates.reduce((best,p)=>overlap(p)<overlap(best)?p:best,candidates[0]);
+    label.group.attr({translateX:position.x,translateY:position.y});
+    label.box.attr({d:target.renderer.symbols.callout(0,0,width,height,{r:3,anchorX:anchorX-position.x,anchorY:anchorY-position.y})});
+    placed.push({...position,width,height});
+  }
+}
 
 function placeWatermark(target) {
   // Original fitted watermark × 1.2, with a softer opacity. Embed the SVG so
@@ -293,7 +367,7 @@ function currentView(preserveVisibility = false) {
   return {
     country:selCountryName, period:selPeriod, periodLabel:displayPeriod(selPeriod), metric:selMetric,
     criterion:selCriterion, filter:selFilterGroup,
-    mode:selMetric === 'Total employment' && selChart === 'radar' ? 'radar' : 'bar', series,
+    mode:selMetric === 'Total employment' && selChart === 'radar' ? 'radar' : 'bar', series, pins:[...pinnedPoints],
     title:`${selMetric} by ${selCriterion.toLowerCase()} quintile in ${selCountryName} (${displayPeriod(selPeriod)})`,
     notes:selFilterGroup === 'Core/non-core' ? CORE_NOTE : ''
   };
@@ -317,7 +391,8 @@ function chartOptions(view, t, exporting = false) {
   const radar = view.mode === 'radar';
   const options = {
     colors:t.series,
-    chart:{type:radar ? 'line' : 'column', polar:radar, height:exporting ? 730 : null, events:{render(){placeWatermark(this);}},
+    chart:{type:radar ? 'line' : 'column', polar:radar, height:exporting ? 730 : null, forExport:exporting,
+      events:{render(){placeWatermark(this);renderPinnedTooltips(this,this.ejmView || view,t);}},
       backgroundColor:exporting ? t.background : 'transparent', spacingBottom:20, animation:motion,
       style:{fontFamily:t.fontText, fontSize:'1rem'}},
     title:{text:escapeHTML(view.title), style:{color:t.heading, fontFamily:t.fontHeading, fontSize:'1.285714286rem', fontWeight:'700'}},
@@ -329,6 +404,7 @@ function chartOptions(view, t, exporting = false) {
       ...(radar ? {tickmarkPlacement:'on'} : {})},
     yAxis:{title:{text:view.metric, style:{color:t.label,fontSize:'.985714286rem'}},
       gridLineColor:t.grid, gridLineWidth:1,
+      plotLines:view.metric === 'Employment change' ? [{id:'employment-zero',value:0,width:2,color:t.axis,zIndex:3}] : [],
       labels:{style:{color:t.muted,fontSize:'.985714286rem',fontWeight:400},formatter(){return fmtVal(this.value);}},
       ...(radar ? {gridLineInterpolation:'polygon',lineWidth:0,min:0} : {})},
     legend:{align:'center',verticalAlign:'top',layout:'horizontal',symbolRadius:2,
@@ -336,6 +412,7 @@ function chartOptions(view, t, exporting = false) {
     tooltip:{useHTML:true, shared:radar, backgroundColor:t.surface, borderColor:t.border,
       style:{color:t.text,fontSize:'.96rem',pointerEvents:'auto'},
       formatter(){
+        if(!exporting && pinnedPoints.has(pointKey(this.point || this)))return false;
         // Preserve the original EJM tooltip content and layout.
         if (radar) {
           const pts = this.points || [this.point];
@@ -348,7 +425,8 @@ function chartOptions(view, t, exporting = false) {
         lines.push(`${escapeHTML(this.key)} quintile`);
         return `<div style="padding:6px 8px">${lines.join('<br>')}</div>`;
       }},
-    plotOptions:{series:{animation:motion, borderColor:t.dark ? t.label : t.background, borderWidth:1, states:{inactive:{opacity:.2}}}},
+    plotOptions:{series:{animation:motion, borderColor:t.dark ? t.label : t.background, borderWidth:1, states:{inactive:{opacity:.2}},
+      point:{events:{click(){if(!exporting)togglePinnedPoint(this);}}}}},
     series:view.series.map(s => ({id:JSON.stringify([view.filter,s.name]),name:s.name, color:t.series[s.colorIndex % t.series.length], data:s.data.slice(), visible:s.visible,
       ...(radar ? {pointPlacement:'on',marker:{enabled:true,radius:3},dataLabels:{enabled:false}} : {dataLabels:labels})}))
   };
@@ -374,6 +452,9 @@ function showStatus(message, danger = false) {
 function draw(preserveVisibility = false, rebuild = false) {
   updateToggleVisibility();
   const view = currentView(preserveVisibility);
+  const validPins = new Set(view.series.flatMap(s => s.data.map((value,index)=>Number.isFinite(value)?JSON.stringify([JSON.stringify([view.filter,s.name]),index]):null)));
+  for(const key of pinnedPoints)if(!validPins.has(key))pinnedPoints.delete(key);
+  view.pins = [...pinnedPoints];
   updateNotes(view);
   if(!selPeriod || !view.series.some(s => s.data.some(Number.isFinite))) {
     chart?.destroy(); chart = null; chartMode = null;
@@ -387,9 +468,12 @@ function draw(preserveVisibility = false, rebuild = false) {
       chart = Highcharts.chart('container',options); chartMode = view.mode;
     } else {
       const motion = animationOptions(), wanted = new Set(options.series.map(s => s.id));
+      chart.ejmView = view;
       chart.tooltip.hide(0);
       chart.update({title:options.title,tooltip:options.tooltip,accessibility:options.accessibility},false,false,false);
       chart.yAxis[0].setTitle(options.yAxis.title,false);
+      chart.yAxis[0].removePlotLine('employment-zero');
+      options.yAxis.plotLines.forEach(line=>chart.yAxis[0].addPlotLine(line));
       // Match subgroup identities and fixed quintile positions. Existing points
       // keep their SVG graphics, so setData animates from their current heights.
       chart.series.slice().forEach(s => { if(!wanted.has(s.options.id))s.remove(false); });
@@ -424,7 +508,6 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   const fromUrl = new URLSearchParams(location.search).get('theme');
   if(!['light','dark'].includes(fromUrl) && !themeFromHost)setTheme(event.matches ? 'dark' : 'light');
 });
-reducedMotion.addEventListener('change', () => { if(ready)draw(true,true); });
 
 function exportFilename(view, extension) {
   return safeFile(`EJM ${view.country} ${view.metric} ${view.criterion} ${view.filter} ${view.periodLabel}`) + '.' + extension;
