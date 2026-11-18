@@ -224,13 +224,14 @@ function installTooltipPinning(target) {
   const tooltip = target.tooltip;
   if (tooltip.pinControllerInstalled) return;
   tooltip.pinControllerInstalled = true;
-  const refresh = tooltip.refresh, hide = tooltip.hide;
-  tooltip.refresh = function (...args) {
-    if (!pinnedTooltip) return refresh.apply(this, args);
-  };
-  tooltip.hide = function (...args) {
-    if (!pinnedTooltip) return hide.apply(this, args);
-  };
+  // Maps follow the pointer through updatePosition without refreshing the
+  // contents. Freeze both positioning paths as well as content and visibility.
+  for (const method of ['refresh', 'hide', 'updatePosition', 'move']) {
+    const original = tooltip[method];
+    tooltip[method] = function (...args) {
+      if (!pinnedTooltip) return original.apply(this, args);
+    };
+  }
 }
 document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
 document.addEventListener('keydown', e => {
