@@ -548,8 +548,12 @@ function chartOptions(tokens, view, exporting = false) {
   }
   if (view.tab === 'bar') {
     const highestValue = Math.max(0, ...validRows.map(row => row[H.Value]));
-    const tickStep = highestValue <= 50 ? 10 : 20;
-    const axisMax = Math.max(tickStep, Math.ceil(highestValue / tickStep) * tickStep);
+    // Low percentage ranges use 2-point steps; retain four or more major
+    // gridlines above zero, using 5/10/20-point steps for larger ranges.
+    const tickStep = measure.percentage ?
+      (highestValue <= 10 ? 2 : highestValue <= 30 ? 5 : highestValue <= 60 ? 10 : 20) :
+      (highestValue <= 50 ? 10 : 20);
+    const axisMax = Math.max(tickStep * (measure.percentage ? 4 : 1), Math.ceil(highestValue / tickStep) * tickStep);
     const ticks = Array.from({length: axisMax / tickStep + 1}, (_, index) => index * tickStep);
     return Highcharts.merge(common, {
       chart: {type: 'bar'}, legend: {enabled: false},
