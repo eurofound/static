@@ -1,6 +1,9 @@
 'use strict';
 const DASHBOARD_TITLE = document.title.trim();
 const CSV_URL = new URL('./CG_data_updated.csv?v=20261118-source-notes', document.baseURI).href;
+// Publication cutoff only: retain newer observations in the source CSV so they
+// can be republished by changing this single value.
+const MAX_PUBLISHED_YEAR = 2024;
 const HC_KEY = {"Albania":"al","Austria":"at","Belgium":"be","Bulgaria":"bg","Croatia":"hr","Cyprus":"cy","Czechia":"cz","Czech Republic":"cz","Denmark":"dk","Estonia":"ee","Finland":"fi","France":"fr","Germany":"de","Greece":"gr","Hungary":"hu","Iceland":"is","Ireland":"ie","Italy":"it","Latvia":"lv","Lithuania":"lt","Luxembourg":"lu","Malta":"mt","Montenegro":"me","Netherlands":"nl","North Macedonia":"mk","Norway":"no","Poland":"pl","Portugal":"pt","Romania":"ro","Serbia":"rs","Slovakia":"sk","Slovenia":"si","Spain":"es","Sweden":"se","Switzerland":"ch","Türkiye":"tr","Turkey":"tr","United Kingdom":"gb","Ukraine":"ua","Bosnia and Herzegovina":"ba","Belarus":"by","Kosovo":"xk","Andorra":"ad","Monaco":"mc","San Marino":"sm","Liechtenstein":"li"};
 const EU27 = new Set(['EU27','EU-27','EU 27','European Union (27)']);
 const EU = new Set(['EU','EU28','EU-28','European Union','EU 28', ...EU27]);
@@ -47,6 +50,7 @@ const state = {tab: 'line', id: null, breakdown: null, year: null, countries: []
 let rows = [], H = {}, chart = null, ready = false, themeFromHost = false, lastHeight = 0;
 let countryColors = new Map(), hiddenCountries = new Set();
 let yearPlayback = null;
+let pinnedTooltip = null;
 const EXPORTS = ['png', 'csv'];
 const isEmbedded = window.parent !== window;
 
@@ -195,10 +199,43 @@ $('clearCountries').onclick = () => {
   renderCountries(); draw();
 };
 document.addEventListener('click', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
+// Capture the displayed tooltip before Highcharts handles the same click.
+// A release click never also pins a different point.
+document.addEventListener('click', event => {
+  if (pinnedTooltip) { releaseTooltip(); return; }
+  const tooltip = chart?.tooltip;
+  const inChart = $('chart').contains(event.target) || tooltip?.container?.contains(event.target);
+  if (!inChart || !tooltip || tooltip.isHidden || !chart.tooltipSnapshot) return;
+  const card = tooltip.container?.querySelector('.poverty-tooltip');
+  if (!card) return;
+  const bounds = card.getBoundingClientRect(), frame = chart.renderTo.getBoundingClientRect();
+  pinnedTooltip = {...chart.tooltipSnapshot,
+    left: (bounds.left - frame.left) / frame.width,
+    top: (bounds.top - frame.top) / frame.height};
+  clearTimeout(tooltip.hideTimer);
+  clearTimeout(tooltip.tooltipTimeout);
+  stopYearPlayback();
+}, true);
+function releaseTooltip() {
+  pinnedTooltip = null;
+  chart?.tooltip?.hide(0);
+}
+function installTooltipPinning(target) {
+  const tooltip = target.tooltip;
+  if (tooltip.pinControllerInstalled) return;
+  tooltip.pinControllerInstalled = true;
+  const refresh = tooltip.refresh, hide = tooltip.hide;
+  tooltip.refresh = function (...args) {
+    if (!pinnedTooltip) return refresh.apply(this, args);
+  };
+  tooltip.hide = function (...args) {
+    if (!pinnedTooltip) return hide.apply(this, args);
+  };
+}
 document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !$('countryPanel').hidden) { e.preventDefault(); closeCountries(true); }
-  if (e.key === 'Escape') { stopYearPlayback(); chart?.tooltip?.hide(0); chart?.clearMapRange?.(); }
+  if (e.key === 'Escape') { stopYearPlayback(); releaseTooltip(); chart?.clearMapRange?.(); }
 });
 function updateIndicatorPosition(announce = false) {
   const selector = $('indicator');
@@ -234,6 +271,7 @@ function stopYearPlayback() {
   updateYearPlaybackButton();
 }
 function selectYear(year) {
+  releaseTooltip();
   state.year = year; $('year').value = String(year); hiddenCountries.clear();
   if (state.tab !== 'map' || !chart?.mapView) { draw(); return; }
   const view = currentView(), options = chartOptions(readTokens(), view);
@@ -241,6 +279,7 @@ function selectYear(year) {
   chart.tooltip.hide(0);
   // Keep the same map geometry, zoom and all-years colour scale between frames.
   chart.update({title: options.title, tooltip: options.tooltip, accessibility: options.accessibility}, false);
+  installTooltipPinning(chart);
   chart.series[0].setData(options.series[0].data, false, animation, true);
   chart.redraw(animation);
   updateNotes(view);
@@ -421,7 +460,7 @@ function chartOptions(tokens, view, exporting = false) {
   // Keep the title/axis allowance so labels remain readable and more rows fit.
   const chartHeight = view.tab === 'bar' ? Math.max(375, validRows.length * textSize * 1.8) * .82 + 145 :
     view.tab === 'map' ? (exporting ? 650 : textSize * 40) :
-    (exporting ? 650 : textSize * (chartWidth <= 480 ? 30 : 34));
+    (exporting ? 650 : textSize * (chartWidth <= 480 ? 30 : 34)) * 1.15;
   const tooltipRow = (point, scaleMaximum) => {
     const value = point.value ?? point.y;
     const hasValue = Number.isFinite(value);
@@ -437,7 +476,12 @@ function chartOptions(tokens, view, exporting = false) {
         '<strong class="tooltip-item-value tooltip-no-data">No data</strong>') +
       (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
   };
-  const tooltipHTML = (year, points) => {
+  const tooltipHTML = (year, points, owner) => {
+    // A plain snapshot also drives PNG export; it contains no live chart nodes.
+    if (owner) owner.tooltipSnapshot = {year, suffix: measure.suffix, items: points.map(point => ({
+      name: point.name || point.series.name, value: point.value ?? point.y,
+      flag: point.flag || '', color: point.color || point.series?.color || t.series[0]
+    }))};
     const scaleMaximum = Math.max(0, ...points.map(p => p.value ?? p.y).filter(Number.isFinite));
     return `<div class="ef-tooltip poverty-tooltip">` +
       `<div class="tooltip-heading"><strong>${escapeHTML(year)}</strong></div>` +
@@ -446,7 +490,7 @@ function chartOptions(tokens, view, exporting = false) {
   const comparisonTooltip = point => {
     const average = {name: 'EU27 average', y: view.euAverage?.[H.Value] ?? null,
       flag: view.euAverage?._flag || '', color: t.series[7]};
-    return tooltipHTML(view.year, EU27.has(point.name) ? [average] : [point, average]);
+    return tooltipHTML(view.year, EU27.has(point.name) ? [average] : [point, average], point.series.chart);
   };
   const common = {
     chart: {backgroundColor: exporting ? t.background : 'transparent', height: chartHeight,
@@ -457,7 +501,7 @@ function chartOptions(tokens, view, exporting = false) {
     credits: {enabled: false}, exporting: {enabled: false, local: true, fallbackToExportServer: false},
     accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are ${measure.description}.`},
     xAxis: {lineColor: t.axis, tickColor: t.axis, labels: {style: axisLabel}},
-    yAxis: {gridLineColor: t.grid, title: {text: measure.label, style: {color: t.label}}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + measure.suffix; }}},
+    yAxis: {gridLineColor: t.grid, title: {text: null}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + measure.suffix; }}},
     legend: {itemStyle: {color: t.text, fontSize: '.875rem', fontWeight: '400'},
       itemHoverStyle: {color: t.heading}, itemHiddenStyle: {color: t.muted}},
     tooltip: {useHTML: true, outside: true, stickOnContact: true,
@@ -497,7 +541,7 @@ function chartOptions(tokens, view, exporting = false) {
       yAxis: {ceiling: measure.percentage ? 100 : undefined, softMin: 0},
       tooltip: {shared: true, formatter() {
         const points = this.points || [this];
-        return tooltipHTML(view.years[points[0].point.x], points.map(point => point.point));
+        return tooltipHTML(view.years[points[0].point.x], points.map(point => point.point), points[0].point.series.chart);
       }}, series
     });
   }
@@ -512,7 +556,7 @@ function chartOptions(tokens, view, exporting = false) {
       yAxis: {min: 0, max: axisMax, tickPositions: ticks, minorTicks: false, minorTickInterval: null,
         minorGridLineWidth: 0, gridLineWidth: 1,
         gridLineColor: Highcharts.color(t.grid).setOpacity(.35).get('rgba'),
-        labels: {formatter() { return fmt(this.value, 0); }}},
+        labels: {formatter() { return fmt(this.value, 0) + measure.suffix; }}},
       plotOptions: {series: {pointPadding: .12, groupPadding: .04, borderWidth: 1, borderColor: t.labelStrong,
         dataLabels: {enabled: true, inside: true, align: 'right', verticalAlign: 'middle', x: -5,
           crop: false, overflow: 'justify', allowOverlap: true, padding: 0,
@@ -534,7 +578,7 @@ function chartOptions(tokens, view, exporting = false) {
       this.noDataKey?.destroy();
       if (!this.legend.group) return;
       this.noDataKey = this.renderer.g('no-data-key').attr({'aria-hidden': true})
-        .translate(0, this.legend.legendHeight + 8).add(this.legend.group);
+        .translate(0, this.legend.legendHeight + 20).add(this.legend.group);
       const size = textSize * .875;
       this.renderer.rect(0, 0, size, size, 2).attr({fill: t.noData, stroke: t.context, 'stroke-width': 1}).add(this.noDataKey);
       this.renderer.text('No data', size + 6, size * .85).css({color: t.text, fontSize: '.875rem'}).add(this.noDataKey);
@@ -591,6 +635,7 @@ function showStatus(message, danger = false) {
   $('status').className = danger ? 'ef-notice ef-notice--danger' : 'ef-notice';
 }
 function draw(preserveView = false) {
+  releaseTooltip();
   const previous = preserveView && chart ? {
     extremes: chart.xAxis?.[0]?.getExtremes(),
     center: chart.mapView?.center && [...chart.mapView.center],
@@ -610,6 +655,7 @@ function draw(preserveView = false) {
   const options = chartOptions(readTokens(), view);
   $('chart').style.height = `${options.chart.height}px`;
   chart = view.tab === 'map' ? Highcharts.mapChart('chart', options) : Highcharts.chart('chart', options);
+  installTooltipPinning(chart);
   if (previous?.center && previous.zoomDelta > .000001) {
     chart.mapView?.setView(previous.center, chart.mapView.minZoom + previous.zoomDelta, true, false);
   }
@@ -653,10 +699,69 @@ function exportMetadata(view) {
     ['Exported at', new Date().toISOString()]
   ];
 }
+// Paint the pinned card into the final PNG, above the chart and below its
+// footer. Canvas text keeps every item/flag readable even when the live card
+// scrolls. Use the export chart's colours, including when exporting dark mode.
+function paintExportTooltip(context, snapshot, target, tokens) {
+  const width = 320, padding = 16, lineHeight = 18, barHeight = 19;
+  const innerWidth = width - padding * 2;
+  const wrap = (text, font) => {
+    context.font = font;
+    const lines = [''];
+    for (const word of String(text).split(/\s+/)) {
+      const last = lines.length - 1, candidate = lines[last] ? lines[last] + ' ' + word : word;
+      if (lines[last] && context.measureText(candidate).width > innerWidth) lines.push(word);
+      else lines[last] = candidate;
+    }
+    return lines;
+  };
+  const font = `14px ${tokens.fontText}`, flagFont = `12px ${tokens.fontText}`;
+  const items = snapshot.items.map(item => {
+    const point = target.series.flatMap(series => series.points).find(point =>
+      (point.name || point.series.name) === item.name);
+    return {...item, color: item.name === 'EU27 average' ? tokens.series[7] : point?.color || point?.series.color || tokens.series[0],
+      names: wrap(item.name, font), flags: item.flag ? wrap(`${item.flag}: ${flagMeaning(item.flag)}`, flagFont) : []};
+  });
+  const height = 48 + items.reduce((total, item) =>
+    total + item.names.length * lineHeight + barHeight + 14 + item.flags.length * 16, 0);
+  const scale = Math.min(1, (target.chartHeight - 100) / height);
+  const left = Math.max(12, Math.min(target.chartWidth - width * scale - 12, snapshot.left * target.chartWidth));
+  const top = Math.max(72, Math.min(target.chartHeight - height * scale - 12, snapshot.top * target.chartHeight));
+  context.save(); context.translate(left, top); context.scale(scale, scale);
+  context.shadowColor = 'rgba(0,0,0,.18)'; context.shadowBlur = 10; context.shadowOffsetY = 4;
+  context.fillStyle = tokens.background; context.beginPath(); context.roundRect(0, 0, width, height, 8); context.fill();
+  context.shadowColor = 'transparent'; context.strokeStyle = tokens.border; context.lineWidth = 1; context.stroke();
+  context.textBaseline = 'top'; context.fillStyle = tokens.heading; context.font = `600 16px ${tokens.fontText}`;
+  context.fillText(String(snapshot.year), padding, 13);
+  context.beginPath(); context.moveTo(padding, 38); context.lineTo(width - padding, 38); context.stroke();
+  const maximum = Math.max(0, ...items.map(item => item.value).filter(Number.isFinite));
+  let y = 46;
+  items.forEach(item => {
+    context.font = font; context.fillStyle = tokens.heading;
+    item.names.forEach(line => { context.fillText(line, padding, y); y += lineHeight; });
+    if (Number.isFinite(item.value)) {
+      const length = maximum > 0 ? Math.max(0, item.value / maximum) * (innerWidth - 68) : 0;
+      context.fillStyle = tokens.noData; context.fillRect(padding, y, innerWidth, barHeight);
+      if (length > 0) {
+        context.fillStyle = item.color; context.fillRect(padding, y, length, barHeight);
+        context.strokeStyle = Highcharts.color(item.color).brighten(-.2).get();
+        context.strokeRect(padding + .5, y + .5, Math.max(0, length - 1), barHeight - 1);
+      }
+      context.fillStyle = '#262626'; context.font = `600 14px ${tokens.fontText}`;
+      context.fillText(fmt(item.value) + snapshot.suffix, padding + length + 8, y + 1);
+    } else { context.fillStyle = tokens.muted; context.fillText('No data', padding, y); }
+    y += barHeight + 4;
+    context.font = flagFont; context.fillStyle = tokens.muted;
+    item.flags.forEach(line => { context.fillText(line, padding, y); y += 16; });
+    y += 10;
+  });
+  context.restore();
+}
 async function buildExport(format) {
   if (!ready) throw new Error('Data is still loading');
   if (!EXPORTS.includes(format)) throw new Error(`No ${format} export`);
   const view = currentView();
+  const tooltipToExport = pinnedTooltip;
   if (!view.rows.some(r => Number.isFinite(r[H.Value]))) throw new Error('Nothing to export in the current view');
   const metadata = exportMetadata(view);
   if (format === 'csv') {
@@ -676,6 +781,7 @@ async function buildExport(format) {
   let exportChart, objectURL;
   try {
     const options = chartOptions(light, view, true); options.chart.width = 1200;
+    await document.fonts.ready;
     exportChart = view.tab === 'map' ? Highcharts.mapChart(holder, options) : Highcharts.chart(holder, options);
     const svg = exportChart.getSVG();
     objectURL = URL.createObjectURL(new Blob([svg], {type: 'image/svg+xml;charset=utf-8'}));
@@ -711,7 +817,9 @@ async function buildExport(format) {
     const logoTop = footerTop + footerHeight - logoHeight;
     canvas.height = Math.ceil(footerTop + footerHeight + padding);
     context.fillStyle = light.background; context.fillRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(image, 0, 0); context.font = font; context.fillStyle = light.text;
+    context.drawImage(image, 0, 0);
+    if (tooltipToExport) paintExportTooltip(context, tooltipToExport, exportChart, light);
+    context.font = font; context.fillStyle = light.text;
     lines.forEach((line, index) => {
       const y = options.chart.height + 24 + index * 23;
       line.forEach(run => { context.font = run.bold ? boldFont : font; context.fillText(run.text, 24 + run.x, y); });
@@ -766,7 +874,8 @@ if (typeof Highcharts === 'undefined' || typeof Papa === 'undefined' || typeof p
         H.Notes = find('Notes') || find('Note');
         if (['Title','Country','Year','Breakdown','Value','ID'].some(key => !H[key]) || result.errors.length) throw new Error('Invalid data');
         rows = rows.filter(r => safe(r[H.Title]).toLowerCase() === DASHBOARD_TITLE.toLowerCase())
-          .map(r => ({...r, [H.Year]: +r[H.Year], [H.Value]: toNum(r[H.Value]), _flag: safe(r[H.Flag]).toLowerCase()}));
+          .map(r => ({...r, [H.Year]: +r[H.Year], [H.Value]: toNum(r[H.Value]), _flag: safe(r[H.Flag]).toLowerCase()}))
+          .filter(r => Number.isFinite(r[H.Year]) && r[H.Year] <= MAX_PUBLISHED_YEAR);
         if (!rows.length) { fail(`No ${DASHBOARD_TITLE.toLowerCase()} data is available. Please try again later.`); return; }
         const indicators = sortAlpha(uniq(rows.map(r => r[H.ID]).filter(Boolean)));
         state.id = indicators[0];

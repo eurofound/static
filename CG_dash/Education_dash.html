@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   <link rel="stylesheet" href="https://www.eurofound.europa.eu/api/embed/v1/theme.css">
   <link rel="stylesheet" href="./erm-palette.css">
-  <link rel="stylesheet" href="./child-poverty-embed.css?v=20261118-dropdown-flags">
+  <link rel="stylesheet" href="./child-poverty-embed.css?v=20261118-pinned-tooltips">
   <script defer src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/highcharts.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/map.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/proj4@2.12.1/dist/proj4.js"></script>
@@ -29,7 +29,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/highcharts@12.4.0/modules/accessibility.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script defer src="./child-guarantee-sources.js?v=20261118-map-playback"></script>
-  <script defer src="./child-poverty-embed.js?v=20261118-dropdown-flags"></script>
+  <script defer src="./child-poverty-embed.js?v=20261118-pinned-tooltips"></script>
 </head>
 <body class="ef-embed">
 <main>
@@ -80,7 +80,7 @@
     </div>
   </div>
   <div class="sr-only" id="indicatorAnnouncement" role="status" aria-live="polite" aria-atomic="true"></div>
-  <div id="status" role="status" aria-live="polite" class="ef-notice">Loading education and school-based activities data…</div>
+  <div id="status" role="status" aria-live="polite" class="ef-notice"></div>
   <button class="ef-button" id="retry" hidden>Try again</button>
   <section class="chart-panel" id="chartPanel" role="tabpanel" aria-labelledby="tLine">
     <div id="chart" aria-busy="true"></div>
