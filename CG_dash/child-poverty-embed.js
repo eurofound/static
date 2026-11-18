@@ -119,10 +119,35 @@ function refreshBreakdown() {
     return button;
   }));
 }
+function countryName(country, compact = false) {
+  const name = document.createElement('span');
+  name.className = 'country-name';
+  const code = EU.has(country) ? 'eu' : HC_KEY[country];
+  if (code) {
+    const flag = document.createElement('img');
+    flag.className = 'country-flag';
+    flag.src = new URL(`../assets/flags/4-3/${code}.svg`, document.baseURI).href;
+    flag.alt = ''; flag.setAttribute('aria-hidden', 'true');
+    flag.width = 24; flag.height = 18;
+    flag.onerror = () => { flag.hidden = true; };
+    name.append(flag);
+  }
+  const text = document.createElement('span');
+  text.textContent = compact && EU27.has(country) ? 'EU27' : country;
+  name.append(text);
+  return name;
+}
 function updateCountryDisplay() {
-  const names = state.countries.map(country => EU27.has(country) ? 'EU27' : country);
-  $('countryCount').textContent = names.length > 2 ? `${names.length} countries selected` :
-    names.length ? names.join(' · ') : 'Select countries';
+  const count = $('countryCount');
+  if (!state.countries.length || state.countries.length > 2) {
+    count.textContent = state.countries.length ? `${state.countries.length} countries selected` : 'Select countries';
+    return;
+  }
+  count.replaceChildren();
+  state.countries.forEach((country, index) => {
+    if (index) count.append(document.createTextNode(' · '));
+    count.append(countryName(country, true));
+  });
 }
 function updateFilters() {
   $('countryFilter').hidden = state.tab !== 'line';
@@ -156,8 +181,7 @@ function renderCountries() {
       $('countryList').querySelectorAll('input').forEach(box => box.disabled = !box.checked && state.countries.length >= 9);
       draw();
     };
-    const text = document.createElement('span'); text.textContent = country;
-    label.append(input, text); return label;
+    label.append(input, countryName(country)); return label;
   }));
   if (!$('countryList').children.length) $('countryList').textContent = 'No matching countries.';
 }

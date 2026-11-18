@@ -20,7 +20,10 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 .country-filter { position: relative; }
 .country-filter > .ef-label, .year-filter > .ef-label { margin: 0; flex-shrink: 0; }
 .country-filter > .ef-select { width: 14rem; }
-#countryCount { min-width: 0; overflow-wrap: anywhere; text-align: left; }
+#countryCount { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .4rem; min-width: 0; overflow-wrap: anywhere; text-align: left; }
+.country-name { display: inline-flex; align-items: center; gap: .6rem; min-width: 0; }
+.country-name > span { min-width: 0; overflow-wrap: anywhere; }
+.country-flag { display: block; width: 24px; height: 18px; flex-shrink: 0; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgb(0 0 0 / 6%); }
 .year-filter > .ef-select { width: 7rem; }
 .year-play.ef-button { width: 2.25rem; flex-shrink: 0; padding: .4rem; }
 .year-play svg { display: block; width: 1rem; height: 1rem; margin: auto; fill: currentColor; }
