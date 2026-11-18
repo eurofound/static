@@ -10,8 +10,8 @@
     "indicators": 34,
     "new_rows": 740,
     "new_rows_by_year": {
-      "2025": 718,
-      "2024": 22
+      "2024": 22,
+      "2025": 718
     },
     "indicators_with_new_periods": 16,
     "historical_value_or_flag_revisions": 136,
@@ -626,7 +626,7 @@
       "current_values_match": "0",
       "original_compared": "112",
       "original_values_match": "112",
-      "notes": "2022 Table II.B1.5.11 uses modal-ISCED schools and ratios of totals. 2025 Table I.B1.4.81 reports mean ratios without that restriction in its notes. All 52 numeric national 2022 observations reproduce the restricted table at one decimal. Do not append the 54 candidate values as a continuous series.",
+      "notes": "All 104 numeric national observations in 2018 and 2022 match OECD Tables II.B1.5.2 and II.B1.5.11 at the published precision. These tables restrict schools to the modal ISCED level. The 2025 table does not document that restriction; its 2022 comparison column matches the all-school series for all 26 comparable EU countries. The ratio-of-totals footnote describes the older overall column and does not establish the aggregation formula for the socioeconomic-quarter columns. The 2025 public codebook supplies STRATIO_Q in international quartile bands, not continuous ratios, so exact reconstruction requires a matching OECD tabulation or suitable underlying data.",
       "source_url": "https://www.oecd.org/en/data/datasets/pisa-2025-database.html",
       "source": "PISA – student/teacher ratio by school socioeconomic profile"
     },
@@ -1479,5 +1479,37 @@
       "sha256": "c3818f37a82740a32516f692380964c8ae977cdbe8ac63c4a625babce8f03cf9"
     }
   ],
-  "maximum_observation_year": 2025
+  "maximum_observation_year": 2025,
+  "student_teacher_ratio_compatibility": {
+    "checked_on": "2026-11-18",
+    "status": "Not established for extending the published 2018–2022 series to 2025",
+    "historical_national_matches": {
+      "2018": {
+        "compared": 52,
+        "matched": 52
+      },
+      "2022": {
+        "compared": 52,
+        "matched": 52
+      }
+    },
+    "overlap_2022": {
+      "compared": 26,
+      "matched_all_school_series": 26,
+      "matched_restricted_overall_at_one_decimal": 0
+    },
+    "public_2025_ratio": {
+      "variable": "STRATIO_Q",
+      "categories": "International quartiles 1–4; published medians 5, 9, 13 and 20. Category codes or medians cannot reproduce exact ratios."
+    },
+    "calculation_limit": "The older ratio-of-totals footnote explicitly describes the overall column; do not assume it proves the formula for school socioeconomic quarters.",
+    "sources": {
+      "table_2018": "https://doi.org/10.1787/888934038666",
+      "table_2022": "https://stat.link/pyhr6e",
+      "tables_2025": "https://stat.link/xmra2f",
+      "codebook_2025": "https://webfs.oecd.org/pisa2022/2025/PISA2025_Codebook.xlsx",
+      "recoding_2025": "https://webfs.oecd.org/pisa2022/2025/PISA_recoding_2025.zip"
+    },
+    "required_next_step": "Obtain an OECD 2025 tabulation with the same school restriction, socioeconomic grouping and weighting, or suitable continuous data and calculation code; reproduce the historical values before appending 2025."
+  }
 }
