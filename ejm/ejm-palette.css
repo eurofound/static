@@ -1,0 +1,17 @@
+/* ERM interface roles; EJM keeps its established five chart colours in both themes. */
+:root, [data-theme="light"] {
+  --primary:#41719C; --primary-hover:#31649B; --primary-foreground:#fff;
+  --heading:#26324D; --foreground:#3A4664; --muted-foreground:#6B7690;
+  --link:#31649B; --rule:#26324D; --border:#D9DEE4; --hover:#EAF0F6;
+  --ejm-positive:#14532d; --ejm-negative:#7f1d1d;
+}
+:root[data-theme="dark"], [data-theme="dark"] {
+  --primary:#41719C; --primary-hover:#527FA6; --primary-foreground:#fff;
+  --heading:#E8EAEE; --foreground:#E8EAEE; --muted-foreground:#B8BFCA;
+  --link:#9ABBD9; --rule:#7F9CA8; --border:#314466; --hover:#21374F;
+  --ejm-positive:#A6BF94; --ejm-negative:#DF939B;
+}
+:root, [data-theme="light"], [data-theme="dark"] {
+  --chart-1:#0A6AA6; --chart-2:#A55E00; --chart-3:#B01E34;
+  --chart-4:#3C6F3C; --chart-5:#59419A;
+}
