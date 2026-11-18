@@ -46,6 +46,7 @@ const flagMeaning = flag => FLAG_TEXT[flag] || [...flag].map(c => FLAG_TEXT[c] |
 const state = {tab: 'line', id: null, breakdown: null, year: null, countries: []};
 let rows = [], H = {}, chart = null, ready = false, themeFromHost = false, lastHeight = 0;
 let countryColors = new Map(), hiddenCountries = new Set();
+let yearPlayback = null;
 const EXPORTS = ['png', 'csv'];
 const isEmbedded = window.parent !== window;
 
@@ -110,6 +111,7 @@ function refreshBreakdown() {
     button.textContent = value;
     button.setAttribute('aria-pressed', String(value === state.breakdown));
     button.onclick = () => {
+      stopYearPlayback();
       state.breakdown = value;
       [...$('breakdown').children].forEach(b => b.setAttribute('aria-pressed', String(b === button)));
       setDefaults(); draw();
@@ -126,6 +128,7 @@ function updateFilters() {
   $('countryFilter').hidden = state.tab !== 'line';
   $('yearFilter').hidden = state.tab === 'line';
   $('year').replaceChildren(...availableYears().reverse().map(year => new Option(year, year, false, year === state.year)));
+  updateYearPlaybackButton();
   updateCountryDisplay();
   renderCountries();
   document.querySelectorAll('[data-view]').forEach(button => {
@@ -178,7 +181,7 @@ document.addEventListener('click', e => { if (!$('countryFilter').contains(e.tar
 document.addEventListener('focusin', e => { if (!$('countryFilter').contains(e.target)) closeCountries(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !$('countryPanel').hidden) { e.preventDefault(); closeCountries(true); }
-  if (e.key === 'Escape') { chart?.tooltip?.hide(0); chart?.clearMapRange?.(); }
+  if (e.key === 'Escape') { stopYearPlayback(); chart?.tooltip?.hide(0); chart?.clearMapRange?.(); }
 });
 function updateIndicatorPosition(announce = false) {
   const selector = $('indicator');
@@ -186,6 +189,7 @@ function updateIndicatorPosition(announce = false) {
   if (announce) $('indicatorAnnouncement').textContent = `Indicator ${selector.selectedIndex + 1} of ${selector.options.length}: ${selector.value}`;
 }
 function selectIndicator(value) {
+  stopYearPlayback();
   state.id = value; $('indicator').value = value;
   refreshBreakdown(); setDefaults(); draw(); updateIndicatorPosition(true);
 }
@@ -198,8 +202,51 @@ function cycleIndicator(direction) {
 $('indicator').onchange = () => selectIndicator($('indicator').value);
 $('previousIndicator').onclick = () => cycleIndicator(-1);
 $('nextIndicator').onclick = () => cycleIndicator(1);
-$('year').onchange = () => { state.year = +$('year').value; hiddenCountries.clear(); draw(); };
+$('year').onchange = () => { stopYearPlayback(); selectYear(+$('year').value); };
+function updateYearPlaybackButton() {
+  const button = $('playYears'), playing = yearPlayback != null;
+  button.hidden = state.tab !== 'map';
+  button.disabled = availableYears().length < 2;
+  button.setAttribute('aria-label', playing ? 'Pause years' : 'Play years');
+  button.title = playing ? 'Pause years' : 'Play years';
+  button.setAttribute('aria-pressed', String(playing));
+}
+function stopYearPlayback() {
+  if (yearPlayback != null) clearInterval(yearPlayback);
+  yearPlayback = null;
+  updateYearPlaybackButton();
+}
+function selectYear(year) {
+  state.year = year; $('year').value = String(year); hiddenCountries.clear();
+  if (state.tab !== 'map' || !chart?.mapView) { draw(); return; }
+  const view = currentView(), options = chartOptions(readTokens(), view);
+  const animation = matchMedia('(prefers-reduced-motion: reduce)').matches ? false : {duration: 450};
+  chart.tooltip.hide(0);
+  // Keep the same map geometry, zoom and all-years colour scale between frames.
+  chart.update({title: options.title, tooltip: options.tooltip, accessibility: options.accessibility}, false);
+  chart.series[0].setData(options.series[0].data, false, animation, true);
+  chart.redraw(animation);
+  updateTableAndNotes(view);
+  showStatus(view.rows.some(r => Number.isFinite(r[H.Value])) ? '' : 'No data for this selection. Choose another year or indicator.');
+  postHeight(true);
+}
+$('playYears').onclick = () => {
+  if (yearPlayback != null) { stopYearPlayback(); return; }
+  const years = availableYears();
+  if (state.tab !== 'map' || years.length < 2) return;
+  if (state.year === years.at(-1)) selectYear(years[0]);
+  yearPlayback = setInterval(() => {
+    const next = years[years.indexOf(state.year) + 1];
+    if (next == null) { stopYearPlayback(); return; }
+    selectYear(next);
+    if (next === years.at(-1)) stopYearPlayback();
+  }, 1400);
+  updateYearPlaybackButton();
+};
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopYearPlayback(); });
+window.addEventListener('pagehide', stopYearPlayback);
 document.querySelectorAll('[data-view]').forEach(button => button.onclick = () => {
+  stopYearPlayback();
   state.tab = button.dataset.view; closeCountries(); updateFilters(); draw();
 });
 document.querySelector('[role="tablist"]').addEventListener('keydown', event => {
@@ -242,9 +289,20 @@ function currentView() {
     euAverage: contextRows.filter(r => EU27.has(r[H.Country]) && r[H.Year] === state.year).at(-1),
     years, rows: selected, countries: [...state.countries], hidden: new Set(hiddenCountries),
     colors: new Map(countryColors),
+    // Last observation per country/year, matching the displayed map rows.
+    mapScaleValues: [...new Map(contextRows.filter(r => HC_KEY[r[H.Country]])
+      .map(r => [`${r[H.Country]}|${r[H.Year]}`, r])).values()]
+      .map(r => r[H.Value]).filter(Number.isFinite),
     notes: uniq(contextRows.map(r => safe(r[H.Notes])).filter(Boolean)),
-    sources: uniq(contextRows.map(r => safe(r[H.Source])).filter(Boolean)),
+    sources: sourcesForIndicator(state.id, state.breakdown, contextRows),
     title: state.tab === 'line' ? state.id : `${state.id} (${state.year})`};
+}
+
+function sourcesForIndicator(id, breakdown, contextRows) {
+  if (id === 'Share of children living in a household unable to keep home adequately warm' &&
+      ['AROPE', 'Non-AROPE'].includes(breakdown)) return ['Eurostat (ilc_chg06)'];
+  const label = CG_SOURCE_LABELS[id];
+  return label ? [label] : uniq(contextRows.map(r => safe(r[H.Source])).filter(Boolean));
 }
 
 // Frame the EU members using the same pre-projected coordinates as the existing
@@ -352,11 +410,12 @@ function chartOptions(tokens, view, exporting = false) {
     const hasValue = Number.isFinite(value);
     const color = typeof point.color === 'string' ? point.color :
       typeof point.series?.color === 'string' ? point.series.color : t.series[0];
+    const outline = Highcharts.color(color).brighten(-0.2).get();
     const width = hasValue && scaleMaximum > 0 ? Math.max(0, Math.min(100, value / scaleMaximum * 100)) : 0;
     return `<div class="tooltip-item"><div class="tooltip-item-heading">` +
       `<span class="tooltip-item-name">${escapeHTML(point.name || point.series.name)}</span></div>` +
       (hasValue ? `<div class="tooltip-bar"><div class="tooltip-track">` +
-        `<span class="tooltip-fill" aria-hidden="true" style="width:${width}%;background:${escapeHTML(color)}"></span>` +
+        `<span class="tooltip-fill" aria-hidden="true" style="width:${width}%;background:${escapeHTML(color)};color:${escapeHTML(outline)}"></span>` +
         `<strong class="tooltip-item-value" style="left:${width}%">${fmt(value)}${measure.suffix}</strong></div></div>` :
         '<strong class="tooltip-item-value tooltip-no-data">No data</strong>') +
       (point.flag ? `<div class="tooltip-flag">${escapeHTML(point.flag)}: ${escapeHTML(flagMeaning(point.flag))}</div>` : '') + '</div>';
@@ -446,7 +505,7 @@ function chartOptions(tokens, view, exporting = false) {
         color: EU.has(r[H.Country]) ? t.series[7] : t.series[0]}))}]
     });
   }
-  const values = validRows.map(r => r[H.Value]);
+  const values = view.mapScaleValues;
   const min = values.length ? Math.max(0, Math.min(...values) * .9) : 0;
   const ceiling = measure.percentage ? 100 : Infinity;
   let max = values.length ? Math.min(ceiling, Math.max(...values)) : 1;
@@ -478,7 +537,7 @@ function chartOptions(tokens, view, exporting = false) {
       stops: t.ramp.map((color, i) => [i / 8, color]),
       labels: {style: axisLabel, formatter() { return fmt(Math.max(0, Math.min(ceiling, this.value)), 0) + measure.suffix; }}},
     legend: {layout: 'vertical', align: 'left', verticalAlign: 'middle', padding: 0, margin: 16,
-      title: {text: measure.legendTitle, style: {color: t.text, fontSize: '.875rem', fontWeight: '600'}}},
+      title: {text: null}},
     responsive: {rules: exporting ? [] : [{condition: {maxWidth: 480}, chartOptions: {
       chart: {height: textSize * 26}, colorAxis: {height: textSize * 11}
     }}]},
@@ -487,16 +546,24 @@ function chartOptions(tokens, view, exporting = false) {
         states: {hover: {fill: t.surface, stroke: t.labelStrong, style: {color: t.text}}, select: {fill: t.surface, style: {color: t.text}}}}}},
     series: [{name: view.id, joinBy: 'hc-key', nullColor: t.noData, borderColor: t.background, borderWidth: .7,
       states: {hover: {borderColor: t.labelStrong, borderWidth: 2, brightness: 0}},
-      data: view.rows.map(r => ({'hc-key': HC_KEY[r[H.Country]], name: r[H.Country],
+      data: view.rows.map(r => ({id: HC_KEY[r[H.Country]], 'hc-key': HC_KEY[r[H.Country]], name: r[H.Country],
         value: Number.isFinite(r[H.Value]) ? r[H.Value] : null, flag: r._flag}))}]
   });
 }
 
-function updateTableAndNotes(view) {
+function chartFootnotes(view) {
   const codes = sortAlpha(uniq(view.rows.map(r => r._flag).filter(Boolean)));
-  const notes = [...view.notes];
-  if (codes.length) notes.push('Data-quality flags: ' + codes.map(code => `${code} = ${flagMeaning(code)}`).join('; ') + '. Flagged trend points use diamond markers.');
-  $('viewNotes').replaceChildren(...notes.map(note => { const p = document.createElement('p'); p.textContent = note; return p; }));
+  const notes = view.notes.map(note => /[.!?]$/.test(note) ? note : note + '.');
+  if (codes.length) notes.push('Data-quality flags: ' + codes.map(code => `${code} = ${flagMeaning(code)}`).join('; ') + '.');
+  return [['Source', view.sources.join('; ')], ['Notes', notes.join(' ')]].filter(([, value]) => value);
+}
+function updateTableAndNotes(view) {
+  $('viewNotes').replaceChildren(...chartFootnotes(view).map(([label, value]) => {
+    const p = document.createElement('p'), strong = document.createElement('strong');
+    strong.textContent = label + ': ';
+    p.append(strong, document.createTextNode(value));
+    return p;
+  }));
   $('dataDetails').hidden = !view.rows.length;
   $('dataTable').innerHTML = `<caption>${escapeHTML(view.title)} · ${escapeHTML(view.breakdown)}</caption>` +
     `<thead><tr><th scope="col">Country</th><th scope="col">Year</th><th scope="col" class="number">${escapeHTML(view.measure.header)}</th><th scope="col">Quality flag</th></tr></thead><tbody>` +
@@ -564,9 +631,8 @@ function exportMetadata(view) {
     ['Title', DASHBOARD_TITLE + ' — ' + view.id], ['Breakdown', view.breakdown], ['View', view.tab],
     ['Period', view.tab === 'line' ? view.years.join(', ') : view.year],
     ['Countries', uniq(view.rows.map(r => r[H.Country])).join('; ')], ['Unit', view.measure.label],
-    ['Source', view.sources.join('; ')], ['Source data', CSV_URL], ['Notes', view.notes.join('; ')],
+    ['Source', view.sources.join('; ')], ['Notes', view.notes.join('; ')],
     ['Quality flags', sortAlpha(uniq(view.rows.map(r => r._flag).filter(Boolean))).map(f => `${f}: ${flagMeaning(f)}`).join('; ')],
-    ['Missing values', 'Empty numeric cells mean missing or unavailable; they are not zero.'],
     ['Exported at', new Date().toISOString()]
   ];
 }
@@ -600,19 +666,24 @@ async function buildExport(format) {
     await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = () => reject(new Error('Could not render the image export')); image.src = objectURL; });
     const canvas = document.createElement('canvas'); canvas.width = 1200;
     const context = canvas.getContext('2d');
-    const font = `16px ${light.fontText}`; context.font = font;
+    const font = `16px ${light.fontText}`, boldFont = `600 16px ${light.fontText}`; context.font = font;
     const padding = 24, logoWidth = 75, logoLeft = canvas.width - padding - logoWidth;
     const noteWidth = logoLeft - padding - 24;
     const lines = [];
     // The title, unit and breakdown are already on the chart; preserve the
     // source, notes and quality flags beneath it.
-    for (const [key, value] of metadata.filter(([key, value]) => value && !['Title','Breakdown','View','Period','Unit','Source data','Countries','Missing values','Exported at'].includes(key))) {
-      let line = '';
-      for (const word of `${key}: ${value}`.split(/\s+/)) {
-        if (line && context.measureText(`${line} ${word}`).width > noteWidth) { lines.push(line); line = word; }
+    for (const [key, value] of chartFootnotes(view)) {
+      let line = '', label = `${key}: `;
+      context.font = boldFont;
+      let labelWidth = context.measureText(label).width;
+      context.font = font;
+      for (const word of value.split(/\s+/)) {
+        if (line && context.measureText(`${line} ${word}`).width + labelWidth > noteWidth) {
+          lines.push({label, labelWidth, text: line}); line = word; label = ''; labelWidth = 0;
+        }
         else line += (line ? ' ' : '') + word;
       }
-      if (line) lines.push(line);
+      if (line) lines.push({label, labelWidth, text: line});
     }
     const logo = new Image();
     await new Promise((resolve, reject) => {
@@ -626,7 +697,11 @@ async function buildExport(format) {
     canvas.height = Math.ceil(footerTop + footerHeight + padding);
     context.fillStyle = light.background; context.fillRect(0, 0, canvas.width, canvas.height);
     context.drawImage(image, 0, 0); context.font = font; context.fillStyle = light.text;
-    lines.forEach((line, index) => context.fillText(line, 24, options.chart.height + 24 + index * 23));
+    lines.forEach((line, index) => {
+      const y = options.chart.height + 24 + index * 23;
+      context.font = boldFont; context.fillText(line.label, 24, y);
+      context.font = font; context.fillText(line.text, 24 + line.labelWidth, y);
+    });
     context.drawImage(logo, logoLeft, logoTop, logoWidth, logoHeight);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(result => result ? resolve(result) : reject(new Error('Could not build the PNG')), 'image/png'));
     return {blob, filename: exportName(view, 'png'), mimeType: 'image/png'};
