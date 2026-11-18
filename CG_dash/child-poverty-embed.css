@@ -45,8 +45,9 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 #status { margin-bottom: var(--spacing-flow-default); max-width: 75ch; }
 #status:empty { display: none; }
 #retry { margin-bottom: var(--spacing-flow-default); }
-.view-notes { max-width: 75ch; font-size: .9375rem; }
+.view-notes { font-size: .9375rem; }
 .view-notes p { margin-block: .75rem; }
+.footnote-segment + .footnote-segment { margin-inline-start: .75rem; }
 .ef-tooltip { max-width: min(28rem, 85vw); white-space: normal; font-size: .875rem; }
 .ef-tooltip p { margin: .3rem 0; }
 .poverty-tooltip { width: 18rem; max-width: calc(100vw - 24px); padding: .75rem 1rem; box-shadow: var(--shadow-header); }
