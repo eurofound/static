@@ -38,7 +38,7 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
 .country-option input { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
 .country-option:has(input:disabled) { color: var(--muted-foreground); cursor: default; }
 .chart-panel { border-top: 1px solid var(--border); padding-top: .75rem; }
-#chart { position: relative; width: 100%; min-width: 0; height: 34rem; }
+#chart { position: relative; width: 100%; min-width: 0; height: 39.1rem; }
 .map-range-legend { position: absolute; inset: 0; pointer-events: none; }
 .map-range-button { position: absolute; display: block; padding: 0; border: 0; border-radius: 0; background: transparent; pointer-events: auto; cursor: pointer; }
 .map-range-button::after { content: ''; position: absolute; inset: 1px 5px; border-block: 1px solid var(--background); }
@@ -79,7 +79,7 @@ main, .controls, .view-controls, .chart-panel, .indicator-control { min-width: 0
   .view-options { width: 100%; justify-content: space-between; gap: .75rem; }
   .country-filter, .year-filter { width: 100%; }
   .country-filter > .ef-select, .year-filter > .ef-select { flex: 1; min-width: 0; width: auto; }
-  #chart { height: 30rem; }
+  #chart { height: 34.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
