@@ -19,7 +19,7 @@ const FLAG_TEXT = {
 };
 
 // Shared Child Guarantee renderer. Each page's title selects its source rows.
-// Charts, tooltips, accessible tables and exports share the same selected view,
+// Charts, tooltips and exports share the same selected view,
 // including missing observations, published EU27 aggregates and quality flags.
 function indicatorMeasure(id) {
   if (id === 'Student-teacher ratio by socioeconomic status of school') {
@@ -119,7 +119,7 @@ function refreshBreakdown() {
     return button;
   }));
 }
-function countryName(country, compact = false) {
+function countryName(country) {
   const name = document.createElement('span');
   name.className = 'country-name';
   const code = EU.has(country) ? 'eu' : HC_KEY[country];
@@ -133,21 +133,14 @@ function countryName(country, compact = false) {
     name.append(flag);
   }
   const text = document.createElement('span');
-  text.textContent = compact && EU27.has(country) ? 'EU27' : country;
+  text.textContent = country;
   name.append(text);
   return name;
 }
 function updateCountryDisplay() {
-  const count = $('countryCount');
-  if (!state.countries.length || state.countries.length > 2) {
-    count.textContent = state.countries.length ? `${state.countries.length} countries selected` : 'Select countries';
-    return;
-  }
-  count.replaceChildren();
-  state.countries.forEach((country, index) => {
-    if (index) count.append(document.createTextNode(' · '));
-    count.append(countryName(country, true));
-  });
+  const names = state.countries.map(country => EU27.has(country) ? 'EU27' : country);
+  $('countryCount').textContent = names.length > 2 ? `${names.length} countries selected` :
+    names.length ? names.join(' · ') : 'Select countries';
 }
 function updateFilters() {
   $('countryFilter').hidden = state.tab !== 'line';
@@ -250,7 +243,7 @@ function selectYear(year) {
   chart.update({title: options.title, tooltip: options.tooltip, accessibility: options.accessibility}, false);
   chart.series[0].setData(options.series[0].data, false, animation, true);
   chart.redraw(animation);
-  updateTableAndNotes(view);
+  updateNotes(view);
   showStatus(view.rows.some(r => Number.isFinite(r[H.Value])) ? '' : 'No data for this selection. Choose another year or indicator.');
   postHeight(true);
 }
@@ -462,7 +455,7 @@ function chartOptions(tokens, view, exporting = false) {
     title: {text: escapeHTML(view.title), align: 'left', style: {color: t.heading, fontFamily: t.fontHeading, fontSize: '1.40625rem', fontWeight: '600'}},
     subtitle: {text: `Breakdown: ${escapeHTML(view.breakdown)} · ${escapeHTML(measure.label)}`, align: 'left', style: {color: t.text, fontSize: '1.078125rem'}},
     credits: {enabled: false}, exporting: {enabled: false, local: true, fallbackToExportServer: false},
-    accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are ${measure.description}. An accessible data table follows the chart.`},
+    accessibility: {enabled: !exporting, description: `${view.title}. ${view.breakdown}. Values are ${measure.description}.`},
     xAxis: {lineColor: t.axis, tickColor: t.axis, labels: {style: axisLabel}},
     yAxis: {gridLineColor: t.grid, title: {text: measure.label, style: {color: t.label}}, labels: {style: axisLabel, formatter() { return fmt(this.value, 0) + measure.suffix; }}},
     legend: {itemStyle: {color: t.text, fontSize: '.875rem', fontWeight: '400'},
@@ -548,7 +541,7 @@ function chartOptions(tokens, view, exporting = false) {
       if (!exporting) updateMapRanges(this, t, measure);
     }, destroy() { this.rangeUnbind?.(); this.rangeLegend?.remove(); this.rangeHint?.remove(); }}},
     mapView: {animation: false, fitToGeometry: euMapGeometry(), padding: [8, 8, 8, 8]},
-    accessibility: {description: `${view.title}. ${view.breakdown}. Values are ${measure.description}. Hover or focus a range on the left scale to highlight matching countries. Click to keep a range highlighted; press Escape to reset. Grey indicates no data or countries outside the highlighted range. An accessible data table follows the chart.`},
+    accessibility: {description: `${view.title}. ${view.breakdown}. Values are ${measure.description}. Hover or focus a range on the left scale to highlight matching countries. Click to keep a range highlighted; press Escape to reset. Grey indicates no data or countries outside the highlighted range.`},
     colorAxis: {min, max, tickAmount: 6,
       // Automatic six-tick scales can otherwise extend past 100 and show
       // duplicate capped labels. Keep the final range at the percentage limit.
@@ -581,7 +574,7 @@ function chartFootnotes(view) {
   if (codes.length) notes.push('Data-quality flags: ' + codes.map(code => `${code} = ${flagMeaning(code)}`).join('; ') + '.');
   return [['Source', view.sources.join('; ')], ['Notes', notes.join(' ')]].filter(([, value]) => value);
 }
-function updateTableAndNotes(view) {
+function updateNotes(view) {
   const p = document.createElement('p');
   chartFootnotes(view).forEach(([label, value], index) => {
     const span = document.createElement('span'), strong = document.createElement('strong');
@@ -592,10 +585,6 @@ function updateTableAndNotes(view) {
     p.append(span);
   });
   $('viewNotes').replaceChildren(p);
-  $('dataDetails').hidden = !view.rows.length;
-  $('dataTable').innerHTML = `<caption>${escapeHTML(view.title)} · ${escapeHTML(view.breakdown)}</caption>` +
-    `<thead><tr><th scope="col">Country</th><th scope="col">Year</th><th scope="col" class="number">${escapeHTML(view.measure.header)}</th><th scope="col">Quality flag</th></tr></thead><tbody>` +
-    view.rows.map(r => `<tr><th scope="row">${escapeHTML(r[H.Country])}</th><td>${r[H.Year]}</td><td class="number">${Number.isFinite(r[H.Value]) ? fmt(r[H.Value]) : 'No data'}</td><td>${r._flag ? `${escapeHTML(r._flag)} — ${escapeHTML(flagMeaning(r._flag))}` : '—'}</td></tr>`).join('') + '</tbody>';
 }
 function showStatus(message, danger = false) {
   $('status').textContent = message;
@@ -609,7 +598,7 @@ function draw(preserveView = false) {
   } : null;
   if (chart) { chart.destroy(); chart = null; }
   const view = currentView();
-  updateTableAndNotes(view);
+  updateNotes(view);
   const noVisibleData = !view.rows.some(r => Number.isFinite(r[H.Value]));
   const allHidden = view.tab === 'line' && view.countries.length && view.countries.every(c => view.hidden.has(c));
   if (noVisibleData && !allHidden) {
