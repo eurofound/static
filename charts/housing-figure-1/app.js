@@ -26,6 +26,7 @@
     .time-chart .crosshair{stroke:var(--chart-label);stroke-width:.8;opacity:.45;pointer-events:none}
   `;
   const visible = () => data.measures.filter(m=>!state.hidden.has(m.key));
+  const legendLabel = m => m.key==='unable_to_keep_home_warm'?'Inability to keep house adequately warm':m.label;
   function validate(input) {
     if(input.measures?.length!==2||input.records?.length!==24||input.unit!=='Percentage')throw Error('The chart data are incomplete.');
     if(new Set(input.records.map(r=>r.indicator+':'+r.year)).size!==24)throw Error('The chart data contain duplicate observations.');
@@ -114,7 +115,7 @@
     const w=stage.clientWidth,h=stage.clientHeight;
     stage.dataset.mode=state.mode;stage.dataset.animation='idle';
     document.querySelector('.legend').dataset.mode=state.mode;
-    document.querySelectorAll('.legend-text').forEach((el,i)=>el.textContent=state.mode==='combined'&&i===1?'and '+data.measures[i].label[0].toLowerCase()+data.measures[i].label.slice(1):data.measures[i].label);
+    document.querySelectorAll('.legend-text').forEach((el,i)=>{const label=legendLabel(data.measures[i]);el.textContent=state.mode==='combined'&&i===1?'and '+label[0].toLowerCase()+label.slice(1):label;});
     stage.innerHTML=chartSvg(w,h);
     stage.setAttribute('aria-busy','false');
     if(!visible().length)stage.insertAdjacentHTML('beforeend','<p class="chart-empty">Select an indicator above to display the chart.</p>');
@@ -224,7 +225,7 @@
     const light=readTokens(probe);probe.remove();
     const width=1200,height=700,style=Object.entries(light).map(([k,v])=>`--${k}:${v}`).join(';');
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="${esc(style)};font-family:${esc(light['font-source-sans-3'])}"><rect width="100%" height="100%" fill="${esc(light.background)}"/><text x="32" y="40" fill="${esc(light.heading)}" font-family="${esc(light['font-roboto'])}" font-size="25" font-weight="600">${esc(data.title)}</text>`;
-    selected.forEach((m,i)=>{const color=light[`chart-${data.measures.indexOf(m)+1}`];svg+=`<line x1="32" x2="60" y1="${73+i*26}" y2="${73+i*26}" stroke="${esc(color)}" stroke-width="3"/><text x="70" y="${79+i*26}" fill="${esc(light.foreground)}" font-size="18">${esc(m.label)}</text>`;});
+    selected.forEach((m,i)=>{const color=light[`chart-${data.measures.indexOf(m)+1}`];svg+=`<line x1="32" x2="60" y1="${73+i*26}" y2="${73+i*26}" stroke="${esc(color)}" stroke-width="3"/><text x="70" y="${79+i*26}" fill="${esc(light.foreground)}" font-size="18">${esc(legendLabel(m))}</text>`;});
     if(!selected.length)svg+=`<text x="32" y="79" fill="${esc(light.foreground)}" font-size="18">No indicators selected</text>`;
     svg+=`<g transform="translate(32 126)">${chartSvg(1136,466,{interactive:false,exportId:'export'})}</g>`;
     svg+=`<text x="32" y="638" fill="${esc(light.foreground)}" font-size="16">Source: Eurostat, EU-SILC. Datasets tespm140 and ilc_mdes01. Extracted 11 November 2026.</text><text x="32" y="664" fill="${esc(light.foreground)}" font-size="16">Values for 2014–2018 are estimated. Unit: percentage. Geography: EU27 (from 2020).</text></svg>`;
