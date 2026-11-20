@@ -52,7 +52,7 @@
     }));
   }
 
-  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false}={}) {
+  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false,showYAxis=true}={}) {
     const left=46,right=13,top=title?49:24,bottom=32,markHeight=18,rugGap=6;
     const axisY=h-bottom,base=axisY-markHeight-rugGap;
     const pw=Math.max(1,w-left-right),ph=Math.max(1,base-top);
@@ -62,10 +62,11 @@
     content+=`<defs><clipPath id="plot-${esc(m.key)}"><rect x="${left}" y="${top-2}" width="${pw+1}" height="${ph+3}"/></clipPath></defs>`;
     [0,25,50,75,100].forEach(v=>content+=`<line class="grid-line grid-vertical" x1="${sx(v)}" x2="${sx(v)}" y1="${top}" y2="${base}"/>`);
     for(let v=0;v<=m.yMax+.000001;v+=m.yStep){
-      const yy=sy(v);content+=`<line class="grid-line" x1="${left}" x2="${w-right}" y1="${yy}" y2="${yy}"/><text class="axis-text" x="${left-7}" y="${yy+4}" text-anchor="end">${densityNumber.format(v)}</text>`;
+      const yy=sy(v);content+=`<line class="grid-line" x1="${left}" x2="${w-right}" y1="${yy}" y2="${yy}"/>`;
+      if(showYAxis)content+=`<text class="axis-text axis-y-text" x="${left-7}" y="${yy+4}" text-anchor="end">${densityNumber.format(v)}</text>`;
     }
     [0,25,50,75,100].forEach(v=>content+=`<text class="axis-text axis-x-text" x="${sx(v)}" y="${axisY+21}" text-anchor="middle">${v}</text>`);
-    content+=`<text class="axis-text" x="${left}" y="${top-9}">Density</text><text class="axis-text" x="${w-right}" y="${top-9}" text-anchor="end">Score 0–100</text>`;
+    if(showYAxis)content+=`<text class="axis-text axis-y-title" x="${left}" y="${top-9}">Density of Member States</text>`;
     data.groups.forEach((g,gi)=>{
       if(!interactive&&state.hiddenGroups.has(g))return;
       const rows=samples.get(key(m.key,g));
@@ -139,7 +140,8 @@
     stage.innerHTML=visibleMeasures().map(m=>`<figure class="chart-panel" data-indicator="${m.key}"><h2>${esc(m.label)}</h2><div class="chart-surface"></div></figure>`).join('');
     [...stage.children].forEach((panel,i)=>{
       const surface=panel.querySelector('.chart-surface'), rect=surface.getBoundingClientRect();
-      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height));
+      const showYAxis=state.mode==='single'||matchMedia('(max-width: 580px)').matches||i%2===0;
+      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis});
     });
     updateEmptyState();
     if(previous)morphFrom(previous);
@@ -219,7 +221,14 @@
   }
   $('single-view').addEventListener('click',()=>changeMode('single'));
   $('multiple-view').addEventListener('click',()=>changeMode('multiple'));
-  $('indicator').addEventListener('change',event=>{state.indicator=event.target.value;render({animate:true});$('status').textContent=`Showing ${data.measures.find(m=>m.key===state.indicator).label}.`;});
+  function updateIndicatorLabel() {
+    [...$('indicator').options].forEach(option=>{
+      const label=data.measures.find(m=>m.key===option.value).label;
+      option.textContent=(option.selected?'Selected - ':'')+label;
+    });
+    $('indicator').title=`Selected - ${data.measures.find(m=>m.key===state.indicator).label}`;
+  }
+  $('indicator').addEventListener('change',event=>{state.indicator=event.target.value;updateIndicatorLabel();render({animate:true});$('status').textContent=`Showing ${data.measures.find(m=>m.key===state.indicator).label}.`;});
 
   function readTokens(el=document.documentElement) {
     const css=getComputedStyle(el),v=name=>css.getPropertyValue(name).trim();
@@ -241,7 +250,7 @@
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="${esc(tokenStyle)};font-family:${esc(light['font-source-sans-3'])}"><rect width="100%" height="100%" fill="${esc(light.background)}"/><text x="32" y="38" fill="${esc(light.heading)}" font-family="${esc(light['font-roboto'])}" font-size="25" font-weight="600">${esc(data.title)}</text>`;
     groups.forEach((g,i)=>svg+=`<line x1="${32+i*160}" x2="${62+i*160}" y1="68" y2="68" stroke="${esc(light[`chart-${data.groups.indexOf(g)+1}`])}" stroke-width="3"/><text x="${70+i*160}" y="74" fill="${esc(light.foreground)}" font-size="18">${g} income</text>`);
     if(!groups.length)svg+=`<text x="32" y="74" fill="${esc(light.foreground)}" font-size="18">No income groups selected</text>`;
-    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true}));
+    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0}));
     const notes=['Ticks: 27 country scores per selected group. Long vertical lines: unweighted group means.','Source: synthetic reconstruction of the supplied Figure 3, Distribution of scores by income.','All country values and assignments are synthetic. They are not estimates of national outcomes.'];
     notes.forEach((note,i)=>svg+=`<text x="32" y="${height-68+i*22}" fill="${esc(light.foreground)}" font-size="16">${esc(note)}</text>`);
     svg+='</svg>';
@@ -284,6 +293,7 @@
   fetch('./data.json').then(response=>{if(!response.ok)throw Error('The chart data could not be loaded.');return response.json();}).then(async input=>{
     prepare(input);data=input;
     $('indicator').innerHTML=data.measures.map(m=>`<option value="${m.key}">${esc(m.label)}</option>`).join('');
+    updateIndicatorLabel();
     await document.fonts.ready;
     render();ready=true;
     ['single-view','multiple-view','indicator'].forEach(id=>$(id).disabled=false);

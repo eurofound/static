@@ -12,12 +12,14 @@ All 81 country/income-group rows are synthetic reconstructions of a supplied cha
 
 - Opens with four charts in a 2×2 grid. The top-right icons switch to one chart and back.
 - Single-chart mode displays the indicator selector. Its selection is retained when returning from the four-chart view.
+- The selector begins at the left edge of the display, with no visible field label. The closed dropdown reads “Selected - [indicator name]”; an accessible label remains available to screen readers.
 - Click a legend button, or activate it with Enter/Space, to show or hide that income group across all charts. The selection is retained across views and indicators. All groups can be hidden, with an explanatory empty state. Hidden country ticks leave the keyboard tab order.
 - Groups fade in/out over 260ms; indicator changes morph curves, means and country positions over 480ms. A new indicator selection smoothly interrupts the previous transition. Reduced-motion preferences disable these animations. Filtering does not rescale axes or renormalise the underlying distributions.
 - Both modes occupy the same 560px-high chart area at desktop width. The total embed width is capped at 800px, including the theme's 6px edge padding.
 - Below 580px, small multiples stack vertically within a 1040px-high area. Both modes keep that area height.
 - Country ticks are 18px tall and rest on the x-axis in a separate strip, with a 6px gap between their tops and the density baseline. Hover, focus or tap for names and scores. Overlapping values are listed together.
 - X-axis numbers are 10.92px (22% smaller than the original 14px). Vertical gridlines align with 0, 25, 50, 75 and 100 within the distribution plot, leaving the country-tick strip clear.
+- The y-axis is labelled “Density of Member States”. Y-axis titles and numbers appear on left-hand panels only in the 2×2 view, and on each chart in single/stacked layouts. The former “Score 0–100” heading is removed.
 - Tab reaches one country tick per income group. Left/right arrows move between countries; Home/End reach the extremes. Enter pins the tooltip; Escape dismisses it.
 
 ## Embedding

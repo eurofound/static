@@ -5,7 +5,7 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .indicator-control[hidden] { display: none; }
 .indicator-control .ef-label { margin: 0; font-size: .875rem; }
 .select-wrap { position: relative; min-width: 0; }
-.select-wrap select { width: 245px; max-width: 100%; padding-right: 30px; appearance: none; font-size: .875rem; }
+.select-wrap select { width: 320px; max-width: 100%; padding-right: 30px; appearance: none; font-size: .875rem; }
 .select-wrap > svg { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; fill: none; stroke: var(--foreground); stroke-width: 1.6; pointer-events: none; }
 .view-switch { margin-left: auto; display: flex; gap: 3px; flex: 0 0 auto; }
 .view-button { display: grid; place-items: center; width: 36px; height: 36px; padding: 5px; border: 1px solid transparent; border-radius: calc(var(--radius) - 2px); background: transparent; color: var(--muted-foreground); cursor: pointer; }
