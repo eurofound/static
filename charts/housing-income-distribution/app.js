@@ -55,8 +55,12 @@
 
   function axisScale(m) {
     const groups=data.groups.filter(g=>!state.hiddenGroups.has(g));
-    if(!groups.length)return {max:m.yMax,step:m.yStep};
-    const peak=Math.max(...groups.flatMap(g=>curves.get(key(m.key,g)).map(p=>p[1])));
+    const measures=state.mode==='multiple'?data.measures:[m];
+    if(!groups.length){
+      const largest=measures.reduce((a,b)=>a.yMax>=b.yMax?a:b);
+      return {max:largest.yMax,step:largest.yStep};
+    }
+    const peak=Math.max(...measures.flatMap(measure=>groups.flatMap(g=>curves.get(key(measure.key,g)).map(p=>p[1]))));
     const target=peak*1.06,rawStep=target/4,power=10**Math.floor(Math.log10(rawStep));
     const step=[1,2,5,10].find(n=>n>=rawStep/power)*power;
     return {max:Math.ceil(target/step)*step,step};
