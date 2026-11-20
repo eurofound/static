@@ -14,7 +14,7 @@
   const SVG_CSS=`
     .density-chart{font-family:var(--font-source-sans-3);font-size:14px}
     .density-chart .group-0{--series:var(--chart-1)}.density-chart .group-1{--series:var(--chart-2)}.density-chart .group-2{--series:var(--chart-3)}
-    .density-chart .grid-line{stroke:var(--chart-grid);stroke-width:.65}
+    .density-chart .grid-line{stroke:var(--chart-grid);stroke-width:.5;opacity:.75}
     .density-chart .axis-line{stroke:var(--chart-axis);stroke-width:1}
     .density-chart .axis-text{fill:var(--chart-label);font-size:14px}
     .density-chart .axis-x-text{font-size:10.92px}
@@ -32,8 +32,7 @@
     .density-chart .rug-line{stroke:var(--series);stroke-width:1.8}
     .density-chart .rug-point{cursor:pointer}
     .density-chart .rug-focus{stroke:var(--chart-label-strong);fill:none;stroke-width:1.4;opacity:0}
-    .density-chart .rug-point.is-active .rug-focus,.density-chart .rug-point:focus-visible .rug-focus{opacity:1}
-    .density-chart .rug-point:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
+    .density-chart .rug-point:focus,.density-chart .rug-point:focus-visible{outline:none}
     .density-chart .series-layer{opacity:1;visibility:visible;transition:opacity 260ms ease,visibility 0s}
     .density-chart .series-layer.is-hidden{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 260ms ease,visibility 0s 260ms}
     @media(prefers-reduced-motion:reduce){.density-chart .series-layer{transition:none}}
@@ -70,7 +69,7 @@
     const scale=axisScale(m),precision=Math.max(2,-Math.floor(Math.log10(scale.step)));
     const axisNumber=new Intl.NumberFormat(document.documentElement.lang,{minimumFractionDigits:precision,maximumFractionDigits:precision});
     const sx=v=>left+v/100*pw, sy=v=>base-v/scale.max*ph;
-    let content=`<style>${SVG_CSS}</style><title>${esc(m.label)} by income group</title><desc>Fitted density curves with 27 synthetic country scores per income group. Dashed vertical lines show group means; hover or focus for their values. Country ticks sit below the distributions. Use arrow keys on country ticks to inspect scores.</desc>`;
+    let content=`<style>${SVG_CSS}</style><desc>Fitted density curves with 27 synthetic country scores per income group. Dashed vertical lines show group means; hover or focus for their values. Country ticks sit below the distributions. Use arrow keys on country ticks to inspect scores.</desc>`;
     if(title)content+=`<text class="export-title" x="${left}" y="21">${esc(m.label)}</text>`;
     content+=`<defs><clipPath id="plot-${esc(m.key)}"><rect x="${left}" y="${top-2}" width="${pw+1}" height="${ph+3}"/></clipPath></defs>`;
     [0,25,50,75,100].forEach(v=>content+=`<line class="grid-line grid-vertical" x1="${sx(v)}" x2="${sx(v)}" y1="${top}" y2="${base}"/>`);
@@ -199,13 +198,15 @@
     const metric=data.measures.find(m=>m.key===mark.dataset.metric),group=mark.dataset.group;
     const isMean=mark.classList.contains('mean-point');
     if(isMean){
-      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)} · ${esc(group)} income</div><table class="tooltip-table"><tbody><tr class="is-target"><th scope="row">Mean score</th><td>${number.format(Number(mark.dataset.value))}</td></tr></tbody></table><div class="tooltip-caption">Unweighted average of 27 country scores<br>Synthetic data · 0–100</div>`;
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><tbody><tr class="tooltip-income-row group-${data.groups.indexOf(group)}"><th scope="row">${esc(group)} income mean</th><td>${number.format(Number(mark.dataset.value))}</td></tr></tbody></table><div class="tooltip-caption">Unweighted average of 27 country scores<br>Synthetic data · 0–100</div>`;
     }else{
       const rows=samples.get(key(metric.key,group)),selected=rows[Number(mark.dataset.index)];
       const svg=mark.closest('svg'),span=Math.max(1,svg.getBoundingClientRect().width-59);
-      // Closely overlapping marks are listed together, without moving scores on the x-axis.
-      const nearby=rows.filter(r=>Math.abs(r[metric.key]-selected[metric.key])*span/100<=3);
-      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)} · ${esc(group)} income</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="${r===selected?'is-target':''}"><th scope="row">${esc(r.country)}</th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table><div class="tooltip-caption">Synthetic score · 0–100${nearby.length>1?'<br>Nearby or overlapping country ticks':''}</div>`;
+      // Include nearby scores from every visible income group, without moving their x positions.
+      const nearby=visibleGroups().flatMap(g=>samples.get(key(metric.key,g)))
+        .filter(r=>Math.abs(r[metric.key]-selected[metric.key])*span/100<=3)
+        .sort((a,b)=>a[metric.key]-b[metric.key]||data.groups.indexOf(a.income_group)-data.groups.indexOf(b.income_group)||a.country.localeCompare(b.country));
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="tooltip-income-row group-${data.groups.indexOf(r.income_group)}"><th scope="row"><span class="country-cell"><img class="country-flag" src="./flags/${r.country_code.toLowerCase()}.svg" alt="" width="20" height="15"><span>${esc(r.country)}<span class="sr-only">, ${esc(r.income_group)} income</span></span></span></th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table><div class="tooltip-caption">Synthetic score · 0–100${nearby.length>1?'<br>Nearby or overlapping country ticks':''}</div>`;
     }
     tooltip.hidden=false;
     const anchor=mark.getBoundingClientRect(),outer=root.getBoundingClientRect(),box=tooltip.getBoundingClientRect();

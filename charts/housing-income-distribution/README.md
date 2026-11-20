@@ -17,8 +17,9 @@ All 81 country/income-group rows are synthetic reconstructions of a supplied cha
 - Groups fade in/out over 260ms; indicator changes and legend filtering morph curve geometry over 480ms. A new selection smoothly interrupts the previous transition. Reduced-motion preferences disable these animations. Each y-axis rescales to the selected groups, using rounded tick intervals and headroom above the highest visible density. The underlying density values are never renormalised. An empty selection uses the original axis range.
 - Both modes occupy the same 560px-high chart area at desktop width. The total embed width is capped at 800px, including the theme's 6px edge padding.
 - Below 580px, small multiples stack vertically within a 1040px-high area. Both modes keep that area height.
-- Country ticks are 18px tall and rest on the x-axis in a separate strip, with a 6px gap between their tops and the density baseline. Hover, focus or tap for names and scores. Overlapping values are listed together.
+- Country ticks are 18px tall and rest on the x-axis in a separate strip, with a 6px gap between their tops and the density baseline. Hover, focus or tap for names and scores. Overlapping values from all visible income groups are listed together. Tooltip headers contain only the indicator name; each country has a flag, with country/value text coloured by income group and no row highlighting. Income groups are also included in accessible row text.
 - X-axis numbers are 10.92px in small multiples (22% smaller than the original 14px) and 14.196px in single-chart mode (30% larger than the small multiples). Vertical gridlines align with 0, 25, 50, 75 and 100 within the distribution plot, leaving the country-tick strip clear.
+- Gridlines use a 0.5px stroke at 75% opacity.
 - “Density of Member States” appears once, above the top-left chart (or the single chart). Y-axis numbers appear on left-hand panels only in the 2×2 view, and on each chart in single/stacked layouts. The former “Score 0–100” heading is removed.
 - Tab reaches one country tick per income group. Left/right arrows move between countries; Home/End reach the extremes. Enter pins the tooltip; Escape dismisses it.
 - Mean lines are dashed and 1.44px thick, 20% thicker than the previous 1.2px lines. Each has a separate mean-score tooltip available on hover, focus or tap, with a 12px pointer target. Tooltips do not restyle or outline the mean line. Mean lines are also keyboard focusable, with the focus indicator on their tooltip, and leave the tab order when their group is hidden.
@@ -31,7 +32,7 @@ The public Eurofound theme stylesheet is linked before `erm-palette.css`. All co
 
 The host can send `hello`, `set-theme` and `export` messages. PNG exports always use the light palette and contain their title, source and synthetic-data notes. PNG and CSV exports respect the selected indicators and income groups. CSV exports contain metadata and 27 rows per selected group (81 when all three are selected); an empty selection exports metadata and headers only. All export generation occurs in the browser. No analytics, cookies, chart CDN or export server is used.
 
-Serve the folder over HTTP(S); the page fetches `data.json` relative to `index.html`. No build step is required. Keep all six runtime/data files together. The only external assets are the public Eurofound stylesheet and the fonts it supplies.
+Serve the folder over HTTP(S); the page fetches `data.json` relative to `index.html`. No build step is required. Keep the runtime/data files and `flags/` folder together. The only external assets are the public Eurofound stylesheet and the fonts it supplies. Country flag SVGs are bundled locally from [flag-icons](https://github.com/lipis/flag-icons), under the MIT licence included at `flags/LICENSE`.
 
 ## Verification
 
