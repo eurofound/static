@@ -33,9 +33,8 @@
     .density-chart .rug-point{cursor:pointer}
     .density-chart .rug-focus{stroke:var(--chart-label-strong);fill:none;stroke-width:1.4;opacity:0}
     .density-chart .rug-point:focus,.density-chart .rug-point:focus-visible{outline:none}
-    .density-chart .series-layer{opacity:1;visibility:visible;transition:opacity 260ms ease,visibility 0s}
-    .density-chart .series-layer.is-hidden{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 260ms ease,visibility 0s 260ms}
-    @media(prefers-reduced-motion:reduce){.density-chart .series-layer{transition:none}}
+    .density-chart .series-layer{opacity:1;visibility:visible;transition:opacity 300ms ease,visibility 0s}
+    .density-chart .series-layer.is-hidden{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 300ms ease,visibility 0s 300ms}
   `;
 
   function prepare(input) {
@@ -168,16 +167,18 @@
   function toggleGroup(group) {
     if(!ready)return;
     closeTooltip(true);
+    const previousOpacity=getComputedStyle(stage.querySelector(`[data-series="${group}"]`)).opacity;
     if(state.hiddenGroups.has(group))state.hiddenGroups.delete(group);else state.hiddenGroups.add(group);
     const hidden=state.hiddenGroups.has(group);
     document.querySelector(`.legend-item[data-income="${group}"]`).setAttribute('aria-pressed',String(!hidden));
-    render({animate:true});
-    if(!reducedMotion.matches){
+    render({animate:true,forceMotion:true});
+    {
       const layers=[...stage.querySelectorAll(`[data-series="${group}"]`)];
-      layers.forEach(layer=>layer.classList.toggle('is-hidden',!hidden));
-      // Establish the previous visibility so filtering fades while the y-scale morphs.
+      layers.forEach(layer=>{layer.style.transition='none';layer.style.opacity=previousOpacity;layer.style.visibility='visible';});
+      // Establish the current opacity before fading to the newly selected state.
       layers.forEach(layer=>void getComputedStyle(layer).opacity);
-      requestAnimationFrame(()=>layers.forEach(layer=>layer.classList.toggle('is-hidden',hidden)));
+      layers.forEach(layer=>layer.style.removeProperty('transition'));
+      requestAnimationFrame(()=>layers.forEach(layer=>{layer.style.removeProperty('opacity');layer.style.removeProperty('visibility');}));
     }
     $('status').textContent=visibleGroups().length?`Showing ${visibleGroups().join(', ')} income groups.`:'No income groups selected. Select a group in the legend to display it.';
   }

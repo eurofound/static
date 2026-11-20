@@ -70,4 +70,4 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
   .legend { column-gap: 14px; }
   .legend-label { flex-basis: 100%; text-align: center; }
 }
-@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { .legend-item,.view-button,.indicator-stepper button { transition: none !important; } }
