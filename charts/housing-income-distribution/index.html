@@ -17,9 +17,9 @@
   </script>
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   <link rel="stylesheet" href="https://www.eurofound.europa.eu/api/embed/v1/theme.css">
-  <link rel="stylesheet" href="./erm-palette.css?v=6">
-  <link rel="stylesheet" href="./styles.css?v=6">
-  <script src="./app.js?v=6" defer></script>
+  <link rel="stylesheet" href="./erm-palette.css?v=7">
+  <link rel="stylesheet" href="./styles.css?v=7">
+  <script src="./app.js?v=7" defer></script>
 </head>
 <body class="ef-embed">
   <main class="chart-embed" aria-label="Housing score distributions">
@@ -30,6 +30,10 @@
           <select class="ef-select" id="indicator" disabled></select>
           <div class="select-value" aria-hidden="true"><span class="selector-prefix">Selected - </span><span id="indicator-value"></span></div>
           <svg aria-hidden="true" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4"/></svg>
+        </div>
+        <div class="indicator-stepper" role="group" aria-label="Browse indicators">
+          <button type="button" id="indicator-previous" aria-label="Previous indicator" title="Previous indicator" disabled><svg aria-hidden="true" viewBox="0 0 16 16"><path d="m10 3-5 5 5 5"/></svg></button>
+          <button type="button" id="indicator-next" aria-label="Next indicator" title="Next indicator" disabled><svg aria-hidden="true" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg></button>
         </div>
       </div>
       <div class="view-switch" role="group" aria-label="Chart layout">

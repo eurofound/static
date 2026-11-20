@@ -114,7 +114,7 @@
     }));
     return captured;
   }
-  function morphFrom(previous) {
+  function morphFrom(previous,forceMotion=false) {
     const numbers=/[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi, tweens=[];
     stage.querySelectorAll('.chart-panel').forEach((panel,i)=>panel.querySelectorAll('[data-morph]').forEach(el=>{
       const old=previous.get(`${i}:${el.dataset.morph}`);if(!old)return;
@@ -130,14 +130,14 @@
     if(!tweens.length)return;
     const started=performance.now();stage.dataset.animating='true';
     const frame=now=>{
-      const progress=reducedMotion.matches?1:Math.min(1,(now-started)/480),ease=1-Math.pow(1-progress,3);
+      const progress=reducedMotion.matches&&!forceMotion?1:Math.min(1,(now-started)/300),ease=1-Math.pow(1-progress,3);
       tweens.forEach(({el,attr,finish,from,to})=>{
         let i=0;el.setAttribute(attr,progress===1?finish:finish.replace(numbers,()=>{const n=from[i]+(to[i]-from[i])*ease;i++;return n.toFixed(3);}));
       });
       if(progress<1)morphFrame=requestAnimationFrame(frame);
       else {morphFrame=0;delete stage.dataset.animating;}
     };
-    stage.querySelectorAll('.axis-text,.grid-line').forEach(el=>el.animate?.([{opacity:.25},{opacity:1}],{duration:320,easing:'ease-out'}));
+    stage.querySelectorAll('.axis-text,.grid-line').forEach(el=>el.animate?.([{opacity:.25},{opacity:1}],{duration:300,easing:'ease-out'}));
     morphFrame=requestAnimationFrame(frame);
   }
   function updateEmptyState() {
@@ -147,10 +147,10 @@
       empty.textContent='Select an income group above to display the distributions.';stage.append(empty);
     }
   }
-  function render({animate=false}={}) {
+  function render({animate=false,forceMotion=false}={}) {
     if(!data)return;
     cancelAnimationFrame(morphFrame);morphFrame=0;delete stage.dataset.animating;
-    const previous=animate&&!reducedMotion.matches?captureGeometry():null;
+    const previous=animate&&(!reducedMotion.matches||forceMotion)?captureGeometry():null;
     closeTooltip(true);
     stage.dataset.mode=state.mode;
     stage.setAttribute('aria-label',state.mode==='multiple'?'Four housing indicators':'Selected housing indicator');
@@ -161,7 +161,7 @@
       surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis,showYTitle:i===0,largeXLabels:state.mode==='single'});
     });
     updateEmptyState();
-    if(previous)morphFrom(previous);
+    if(previous)morphFrom(previous,forceMotion);
     stage.setAttribute('aria-busy','false');
     postHeight();
   }
@@ -256,7 +256,19 @@
     $('indicator-value').textContent=label;
     $('indicator').title=`Selected - ${label}`;
   }
-  $('indicator').addEventListener('change',event=>{state.indicator=event.target.value;updateIndicatorLabel();render({animate:true});$('status').textContent=`Showing ${data.measures.find(m=>m.key===state.indicator).label}.`;});
+  function selectIndicator(value) {
+    if(!ready||state.indicator===value)return;
+    state.indicator=value;$('indicator').value=value;updateIndicatorLabel();render({animate:true,forceMotion:true});
+    $('status').textContent=`Showing ${data.measures.find(m=>m.key===state.indicator).label}.`;
+  }
+  function stepIndicator(direction) {
+    if(!ready)return;
+    const index=data.measures.findIndex(m=>m.key===state.indicator);
+    selectIndicator(data.measures[(index+direction+data.measures.length)%data.measures.length].key);
+  }
+  $('indicator').addEventListener('change',event=>selectIndicator(event.target.value));
+  $('indicator-previous').addEventListener('click',()=>stepIndicator(-1));
+  $('indicator-next').addEventListener('click',()=>stepIndicator(1));
 
   function readTokens(el=document.documentElement) {
     const css=getComputedStyle(el),v=name=>css.getPropertyValue(name).trim();
@@ -324,7 +336,7 @@
     updateIndicatorLabel();
     await document.fonts.ready;
     render();ready=true;
-    ['single-view','multiple-view','indicator'].forEach(id=>$(id).disabled=false);
+    ['single-view','multiple-view','indicator','indicator-previous','indicator-next'].forEach(id=>$(id).disabled=false);
     document.querySelectorAll('.legend-item').forEach(button=>button.disabled=false);
     $('status').className='sr-only';$('status').textContent='Four charts loaded. Each income group contains 27 synthetic country scores.';
     announce();postHeight(true);
