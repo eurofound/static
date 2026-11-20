@@ -5,7 +5,6 @@
   const stage = $('charts'), tooltip = $('tooltip'), root = document.querySelector('.chart-embed');
   const state = { mode: 'multiple', indicator: 'housing_barometer', hiddenGroups: new Set() };
   const number = new Intl.NumberFormat(document.documentElement.lang,{minimumFractionDigits:1,maximumFractionDigits:1});
-  const densityNumber = new Intl.NumberFormat(document.documentElement.lang,{minimumFractionDigits:2,maximumFractionDigits:2});
   let data, ready=false, themeFromHost=false, lastHeight=0, lastWidth=0, resizeFrame=0;
   let activeMark=null, pinned=false, closeTimer=0, morphFrame=0;
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,6 +18,7 @@
     .density-chart .axis-line{stroke:var(--chart-axis);stroke-width:1}
     .density-chart .axis-text{fill:var(--chart-label);font-size:14px}
     .density-chart .axis-x-text{font-size:10.92px}
+    .density-chart.is-single .axis-x-text{font-size:14.196px}
     .density-chart .export-title{fill:var(--heading);font-family:var(--font-roboto);font-size:17px;font-weight:600}
     .density-chart .curve-area{fill:var(--series);fill-opacity:.13;stroke:none}
     .density-chart .curve-halo{fill:none;stroke:var(--series-outline);stroke-width:4.3}
@@ -27,8 +27,7 @@
     .density-chart .mean-line{stroke:var(--series);stroke-width:1.44;stroke-dasharray:6 5;opacity:.7}
     .density-chart .mean-hit{fill:transparent;stroke:none;pointer-events:all}
     .density-chart .mean-point{cursor:pointer}
-    .density-chart .mean-point.is-active .mean-halo,.density-chart .mean-point:focus-visible .mean-halo{stroke:var(--focus-ring);stroke-width:4.4;opacity:1}
-    .density-chart .mean-point:focus-visible{outline:none}
+    .density-chart .mean-point:focus,.density-chart .mean-point:focus-visible{outline:none}
     .density-chart .rug-halo{stroke:var(--series-outline);stroke-width:3.4}
     .density-chart .rug-line{stroke:var(--series);stroke-width:1.8}
     .density-chart .rug-point{cursor:pointer}
@@ -56,18 +55,29 @@
     }));
   }
 
-  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false,showYAxis=true,showYTitle=true}={}) {
+  function axisScale(m) {
+    const groups=data.groups.filter(g=>!state.hiddenGroups.has(g));
+    if(!groups.length)return {max:m.yMax,step:m.yStep};
+    const peak=Math.max(...groups.flatMap(g=>curves.get(key(m.key,g)).map(p=>p[1])));
+    const target=peak*1.06,rawStep=target/4,power=10**Math.floor(Math.log10(rawStep));
+    const step=[1,2,5,10].find(n=>n>=rawStep/power)*power;
+    return {max:Math.ceil(target/step)*step,step};
+  }
+  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false,showYAxis=true,showYTitle=true,largeXLabels=false}={}) {
     const left=46,right=13,top=title?49:24,bottom=32,markHeight=18,rugGap=6;
     const axisY=h-bottom,base=axisY-markHeight-rugGap;
     const pw=Math.max(1,w-left-right),ph=Math.max(1,base-top);
-    const sx=v=>left+v/100*pw, sy=v=>base-v/m.yMax*ph;
+    const scale=axisScale(m),precision=Math.max(2,-Math.floor(Math.log10(scale.step)));
+    const axisNumber=new Intl.NumberFormat(document.documentElement.lang,{minimumFractionDigits:precision,maximumFractionDigits:precision});
+    const sx=v=>left+v/100*pw, sy=v=>base-v/scale.max*ph;
     let content=`<style>${SVG_CSS}</style><title>${esc(m.label)} by income group</title><desc>Fitted density curves with 27 synthetic country scores per income group. Dashed vertical lines show group means; hover or focus for their values. Country ticks sit below the distributions. Use arrow keys on country ticks to inspect scores.</desc>`;
     if(title)content+=`<text class="export-title" x="${left}" y="21">${esc(m.label)}</text>`;
     content+=`<defs><clipPath id="plot-${esc(m.key)}"><rect x="${left}" y="${top-2}" width="${pw+1}" height="${ph+3}"/></clipPath></defs>`;
     [0,25,50,75,100].forEach(v=>content+=`<line class="grid-line grid-vertical" x1="${sx(v)}" x2="${sx(v)}" y1="${top}" y2="${base}"/>`);
-    for(let v=0;v<=m.yMax+.000001;v+=m.yStep){
+    for(let i=0;i<=Math.round(scale.max/scale.step);i++){
+      const v=i*scale.step;
       const yy=sy(v);content+=`<line class="grid-line" x1="${left}" x2="${w-right}" y1="${yy}" y2="${yy}"/>`;
-      if(showYAxis)content+=`<text class="axis-text axis-y-text" x="${left-7}" y="${yy+4}" text-anchor="end">${densityNumber.format(v)}</text>`;
+      if(showYAxis)content+=`<text class="axis-text axis-y-text" x="${left-7}" y="${yy+4}" text-anchor="end">${axisNumber.format(v)}</text>`;
     }
     [0,25,50,75,100].forEach(v=>content+=`<text class="axis-text axis-x-text" x="${sx(v)}" y="${axisY+21}" text-anchor="middle">${v}</text>`);
     if(showYAxis&&showYTitle)content+=`<text class="axis-text axis-y-title" x="${left}" y="${top-9}">Density of Member States</text>`;
@@ -92,20 +102,23 @@
       });content+='</g>';
     });
     content+=`<line class="axis-line" x1="${left}" x2="${w-right}" y1="${axisY}" y2="${axisY}"/>`;
-    return `<svg class="density-chart" xmlns="http://www.w3.org/2000/svg" x="${x}" y="${y}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="group" aria-label="${esc(m.label)} distribution and country scores">${content}</svg>`;
+    return `<svg class="density-chart${largeXLabels?' is-single':''}" xmlns="http://www.w3.org/2000/svg" x="${x}" y="${y}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" data-y-max="${scale.max}" data-y-step="${scale.step}" role="group" aria-label="${esc(m.label)} distribution and country scores">${content}</svg>`;
   }
 
   const visibleMeasures=()=>state.mode==='multiple'?data.measures:data.measures.filter(m=>m.key===state.indicator);
   const visibleGroups=()=>data.groups.filter(g=>!state.hiddenGroups.has(g));
   const geometryAttributes=['d','x','y','x1','x2','y1','y2','transform'];
   function captureGeometry() {
-    return new Map([...stage.querySelectorAll('[data-morph]')].map(el=>[el.dataset.morph,
-      Object.fromEntries(geometryAttributes.filter(a=>el.hasAttribute(a)).map(a=>[a,el.getAttribute(a)]))]));
+    const captured=new Map();
+    stage.querySelectorAll('.chart-panel').forEach((panel,i)=>panel.querySelectorAll('[data-morph]').forEach(el=>{
+      captured.set(`${i}:${el.dataset.morph}`,Object.fromEntries(geometryAttributes.filter(a=>el.hasAttribute(a)).map(a=>[a,el.getAttribute(a)])));
+    }));
+    return captured;
   }
   function morphFrom(previous) {
     const numbers=/[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi, tweens=[];
-    stage.querySelectorAll('[data-morph]').forEach(el=>{
-      const old=previous.get(el.dataset.morph);if(!old)return;
+    stage.querySelectorAll('.chart-panel').forEach((panel,i)=>panel.querySelectorAll('[data-morph]').forEach(el=>{
+      const old=previous.get(`${i}:${el.dataset.morph}`);if(!old)return;
       geometryAttributes.forEach(attr=>{
         const finish=el.getAttribute(attr),start=old[attr];
         if(start==null||finish==null||start===finish)return;
@@ -114,7 +127,7 @@
         el.setAttribute(attr,start);
         tweens.push({el,attr,finish,from,to});
       });
-    });
+    }));
     if(!tweens.length)return;
     const started=performance.now();stage.dataset.animating='true';
     const frame=now=>{
@@ -146,7 +159,7 @@
     [...stage.children].forEach((panel,i)=>{
       const surface=panel.querySelector('.chart-surface'), rect=surface.getBoundingClientRect();
       const showYAxis=state.mode==='single'||matchMedia('(max-width: 580px)').matches||i%2===0;
-      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis,showYTitle:i===0});
+      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis,showYTitle:i===0,largeXLabels:state.mode==='single'});
     });
     updateEmptyState();
     if(previous)morphFrom(previous);
@@ -159,12 +172,14 @@
     if(state.hiddenGroups.has(group))state.hiddenGroups.delete(group);else state.hiddenGroups.add(group);
     const hidden=state.hiddenGroups.has(group);
     document.querySelector(`.legend-item[data-income="${group}"]`).setAttribute('aria-pressed',String(!hidden));
-    stage.querySelectorAll(`[data-series="${group}"]`).forEach(layer=>{
-      layer.classList.toggle('is-hidden',hidden);layer.setAttribute('aria-hidden',String(hidden));
-      layer.querySelectorAll('.rug-point').forEach((point,i)=>point.setAttribute('tabindex',!hidden&&i===0?'0':'-1'));
-      layer.querySelectorAll('.mean-point').forEach(point=>point.setAttribute('tabindex',hidden?'-1':'0'));
-    });
-    updateEmptyState();
+    render({animate:true});
+    if(!reducedMotion.matches){
+      const layers=[...stage.querySelectorAll(`[data-series="${group}"]`)];
+      layers.forEach(layer=>layer.classList.toggle('is-hidden',!hidden));
+      // Establish the previous visibility so filtering fades while the y-scale morphs.
+      layers.forEach(layer=>void getComputedStyle(layer).opacity);
+      requestAnimationFrame(()=>layers.forEach(layer=>layer.classList.toggle('is-hidden',hidden)));
+    }
     $('status').textContent=visibleGroups().length?`Showing ${visibleGroups().join(', ')} income groups.`:'No income groups selected. Select a group in the legend to display it.';
   }
   document.querySelectorAll('.legend-item').forEach(button=>button.addEventListener('click',()=>toggleGroup(button.dataset.income)));
@@ -236,11 +251,9 @@
   $('single-view').addEventListener('click',()=>changeMode('single'));
   $('multiple-view').addEventListener('click',()=>changeMode('multiple'));
   function updateIndicatorLabel() {
-    [...$('indicator').options].forEach(option=>{
-      const label=data.measures.find(m=>m.key===option.value).label;
-      option.textContent=(option.selected?'Selected - ':'')+label;
-    });
-    $('indicator').title=`Selected - ${data.measures.find(m=>m.key===state.indicator).label}`;
+    const label=data.measures.find(m=>m.key===state.indicator).label;
+    $('indicator-value').textContent=label;
+    $('indicator').title=`Selected - ${label}`;
   }
   $('indicator').addEventListener('change',event=>{state.indicator=event.target.value;updateIndicatorLabel();render({animate:true});$('status').textContent=`Showing ${data.measures.find(m=>m.key===state.indicator).label}.`;});
 
@@ -264,7 +277,7 @@
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="${esc(tokenStyle)};font-family:${esc(light['font-source-sans-3'])}"><rect width="100%" height="100%" fill="${esc(light.background)}"/><text x="32" y="38" fill="${esc(light.heading)}" font-family="${esc(light['font-roboto'])}" font-size="25" font-weight="600">${esc(data.title)}</text>`;
     groups.forEach((g,i)=>svg+=`<line x1="${32+i*160}" x2="${62+i*160}" y1="68" y2="68" stroke="${esc(light[`chart-${data.groups.indexOf(g)+1}`])}" stroke-width="3"/><text x="${70+i*160}" y="74" fill="${esc(light.foreground)}" font-size="18">${g} income</text>`);
     if(!groups.length)svg+=`<text x="32" y="74" fill="${esc(light.foreground)}" font-size="18">No income groups selected</text>`;
-    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0,showYTitle:i===0}));
+    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0,showYTitle:i===0,largeXLabels:cols===1}));
     const notes=['Ticks: 27 country scores per selected group. Dashed vertical lines: unweighted group means.','Source: synthetic reconstruction of the supplied Figure 3, Distribution of scores by income.','All country values and assignments are synthetic. They are not estimates of national outcomes.'];
     notes.forEach((note,i)=>svg+=`<text x="32" y="${height-68+i*22}" fill="${esc(light.foreground)}" font-size="16">${esc(note)}</text>`);
     svg+='</svg>';
