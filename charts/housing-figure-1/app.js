@@ -88,7 +88,7 @@
         if(!measures.length)return;
         rows.get(data.measures[i].key).forEach((r,n)=>{
           const half=(p.right-p.left)/22,left=n===0?p.left:p.sx(r.year)-half,right=n===11?p.right:p.sx(r.year)+half;
-          const label=[r.year,...measures.map(m=>{const row=rows.get(m.key)[n];return `${m.label}, ${number.format(row.value)} percent${row.flag==='e'?', estimated':''}`;})].join('. ');
+          const label=[r.year,...visible().map(m=>{const row=rows.get(m.key)[n];return `${legendLabel(m)}, ${number.format(row.value)} percent${row.flag==='e'?', estimated':''}`;})].join('. ');
           svg+=`<rect class="year-target" role="button" tabindex="${n===0?0:-1}" aria-label="${esc(label)}" aria-describedby="keyboard-help" data-panel="${i}" data-index="${n}" x="${left}" y="${p.top}" width="${right-left}" height="${p.bottom-p.top}"/>`;
         });
       });
@@ -167,11 +167,12 @@
     if(!mark||!ready)return;
     clearTimeout(closeTimer);activeMark=mark;
     const index=Number(mark.dataset.index),panel=Number(mark.dataset.panel),year=2014+index;
-    const selected=state.mode==='combined'?visible():[data.measures[panel]];
-    tooltip.innerHTML=`<div class="tooltip-heading">${year}</div><div class="tooltip-geography">European Union (EU27)</div><table class="tooltip-table"><tbody>${selected.map(m=>{
+    const selected=visible(),barMaximum=Math.max(0,...selected.map(m=>rows.get(m.key)[index].value));
+    tooltip.innerHTML=`<div class="tooltip-heading">${year}</div><div class="tooltip-geography">European Union (EU27)</div><div class="tooltip-items">${selected.map(m=>{
       const r=rows.get(m.key)[index],i=data.measures.indexOf(m);
-      return `<tr class="series-${i}"><th scope="row">${esc(m.label)}</th><td>${number.format(r.value)}%${r.flag==='e'?'<span class="estimate">Estimated</span>':''}</td></tr>`;
-    }).join('')}</tbody></table>`;
+      const width=barMaximum>0?r.value/barMaximum*100:0;
+      return `<div class="tooltip-item series-${i}" data-indicator="${m.key}" data-value="${r.value}" style="--bar-size:${width.toFixed(4)}%"><div class="tooltip-item-name">${esc(legendLabel(m))}</div><div class="tooltip-bar"><div class="tooltip-track"><span class="tooltip-fill" aria-hidden="true"></span><span class="tooltip-item-value">${number.format(r.value)}%</span></div></div>${r.flag==='e'?'<span class="estimate">Estimated</span>':''}</div>`;
+    }).join('')}</div>`;
     tooltip.hidden=false;
     const p=layout(stage.clientWidth,stage.clientHeight)[panel],base=root.getBoundingClientRect(),rect=stage.getBoundingClientRect();
     const x=rect.left-base.left+p.sx(year),y=rect.top-base.top+Math.min(...selected.map(m=>p.sy(rows.get(m.key)[index].value)));

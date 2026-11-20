@@ -1,13 +1,13 @@
-/* ERM embed v1. Light series retain the approved navy/orange comparison palette. */
+/* ERM embed v1. User-selected green/red comparison palette. */
 :root,[data-theme=light]{
   --primary:#41719C;--primary-hover:#31649B;--primary-foreground:#fff;
   --heading:#26324D;--foreground:#3A4664;--muted-foreground:#6B7690;
   --link:#31649B;--rule:#26324D;--border:#D9DEE4;--hover:#EAF0F6;
-  --chart-1:#063042;--chart-2:#AD5D20;
+  --chart-1:#4E6B3C;--chart-2:#A03B45;
 }
 :root[data-theme=dark],[data-theme=dark]{
   --primary:#41719C;--primary-hover:#527FA6;--primary-foreground:#fff;
   --heading:#E8EAEE;--foreground:#E8EAEE;--muted-foreground:#B8BFCA;
   --link:#9ABBD9;--rule:#7F9CA8;--border:#314466;--hover:#21374F;
-  --chart-1:#8EAFD2;--chart-2:#D1AF86;
+  --chart-1:#A6BF94;--chart-2:#DF939B;
 }
