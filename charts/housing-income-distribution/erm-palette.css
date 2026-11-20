@@ -18,7 +18,7 @@
   --heading:#E8EAEE;--foreground:#E8EAEE;--muted-foreground:#B8BFCA;
   --link:#9ABBD9;--rule:#7F9CA8;--border:#314466;--hover:#21374F;
   --chart-1:#063042;--chart-2:#869098;--chart-3:#AD5D20;
-  --series-outline:var(--chart-label-strong);
+  --series-outline:transparent;
   --chart-4:#A6BF94;--chart-5:#B3A6DB;--chart-6:#94BDC7;
   --chart-7:#DBC58F;--chart-8:#A9BED4;--chart-9:#B5BDCE;
   --map-no-data:#182B4D;--danger-muted-foreground:#DF939B;--success-muted-foreground:#A6BF94;

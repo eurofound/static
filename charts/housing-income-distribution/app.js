@@ -23,8 +23,12 @@
     .density-chart .curve-area{fill:var(--series);fill-opacity:.13;stroke:none}
     .density-chart .curve-halo{fill:none;stroke:var(--series-outline);stroke-width:4.3}
     .density-chart .curve-line{fill:none;stroke:var(--series);stroke-width:2.3}
-    .density-chart .mean-halo{stroke:var(--series-outline);stroke-width:2.8;opacity:.7}
-    .density-chart .mean-line{stroke:var(--series);stroke-width:1.2;opacity:.7}
+    .density-chart .mean-halo{stroke:var(--series-outline);stroke-width:3.04;stroke-dasharray:6 5;opacity:.7}
+    .density-chart .mean-line{stroke:var(--series);stroke-width:1.44;stroke-dasharray:6 5;opacity:.7}
+    .density-chart .mean-hit{fill:transparent;stroke:none;pointer-events:all}
+    .density-chart .mean-point{cursor:pointer}
+    .density-chart .mean-point.is-active .mean-halo,.density-chart .mean-point:focus-visible .mean-halo{stroke:var(--focus-ring);stroke-width:4.4;opacity:1}
+    .density-chart .mean-point:focus-visible{outline:none}
     .density-chart .rug-halo{stroke:var(--series-outline);stroke-width:3.4}
     .density-chart .rug-line{stroke:var(--series);stroke-width:1.8}
     .density-chart .rug-point{cursor:pointer}
@@ -52,12 +56,12 @@
     }));
   }
 
-  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false,showYAxis=true}={}) {
+  function chartSvg(m,w,h,{interactive=true,x=0,y=0,title=false,showYAxis=true,showYTitle=true}={}) {
     const left=46,right=13,top=title?49:24,bottom=32,markHeight=18,rugGap=6;
     const axisY=h-bottom,base=axisY-markHeight-rugGap;
     const pw=Math.max(1,w-left-right),ph=Math.max(1,base-top);
     const sx=v=>left+v/100*pw, sy=v=>base-v/m.yMax*ph;
-    let content=`<style>${SVG_CSS}</style><title>${esc(m.label)} by income group</title><desc>Fitted density curves with 27 synthetic country scores per income group. Long vertical lines show group means. Country ticks sit below the distributions. Use arrow keys on country ticks to inspect scores.</desc>`;
+    let content=`<style>${SVG_CSS}</style><title>${esc(m.label)} by income group</title><desc>Fitted density curves with 27 synthetic country scores per income group. Dashed vertical lines show group means; hover or focus for their values. Country ticks sit below the distributions. Use arrow keys on country ticks to inspect scores.</desc>`;
     if(title)content+=`<text class="export-title" x="${left}" y="21">${esc(m.label)}</text>`;
     content+=`<defs><clipPath id="plot-${esc(m.key)}"><rect x="${left}" y="${top-2}" width="${pw+1}" height="${ph+3}"/></clipPath></defs>`;
     [0,25,50,75,100].forEach(v=>content+=`<line class="grid-line grid-vertical" x1="${sx(v)}" x2="${sx(v)}" y1="${top}" y2="${base}"/>`);
@@ -66,13 +70,14 @@
       if(showYAxis)content+=`<text class="axis-text axis-y-text" x="${left-7}" y="${yy+4}" text-anchor="end">${densityNumber.format(v)}</text>`;
     }
     [0,25,50,75,100].forEach(v=>content+=`<text class="axis-text axis-x-text" x="${sx(v)}" y="${axisY+21}" text-anchor="middle">${v}</text>`);
-    if(showYAxis)content+=`<text class="axis-text axis-y-title" x="${left}" y="${top-9}">Density of Member States</text>`;
+    if(showYAxis&&showYTitle)content+=`<text class="axis-text axis-y-title" x="${left}" y="${top-9}">Density of Member States</text>`;
     data.groups.forEach((g,gi)=>{
       if(!interactive&&state.hiddenGroups.has(g))return;
       const rows=samples.get(key(m.key,g));
       const line=curves.get(key(m.key,g)).map(([xx,yy],i)=>`${i?'L':'M'}${sx(xx).toFixed(3)},${sy(yy).toFixed(3)}`).join(' ');
       const mean=rows.reduce((s,r)=>s+r[m.key],0)/27;
-      content+=`<g class="group-${gi} series-layer${state.hiddenGroups.has(g)?' is-hidden':''}" data-series="${g}" aria-hidden="${state.hiddenGroups.has(g)}" clip-path="url(#plot-${esc(m.key)})"><path class="curve-area" data-morph="area-${gi}" d="${line} L${sx(100)},${base} L${sx(0)},${base} Z"/><line class="mean-halo" data-morph="mean-halo-${gi}" x1="${sx(mean)}" x2="${sx(mean)}" y1="${top}" y2="${base}"/><line class="mean-line" data-morph="mean-${gi}" x1="${sx(mean)}" x2="${sx(mean)}" y1="${top}" y2="${base}"/><path class="curve-halo" data-morph="halo-${gi}" d="${line}"/><path class="curve-line" data-morph="line-${gi}" d="${line}"/></g>`;
+      const meanAttributes=interactive?`class="mean-point" tabindex="${state.hiddenGroups.has(g)?-1:0}" role="button" aria-label="${esc(m.label)}, ${g} income mean, ${number.format(mean)} out of 100. Synthetic scores." data-metric="${m.key}" data-group="${g}" data-value="${mean}"`:'';
+      content+=`<g class="group-${gi} series-layer${state.hiddenGroups.has(g)?' is-hidden':''}" data-series="${g}" aria-hidden="${state.hiddenGroups.has(g)}" clip-path="url(#plot-${esc(m.key)})"><path class="curve-area" data-morph="area-${gi}" d="${line} L${sx(100)},${base} L${sx(0)},${base} Z"/><path class="curve-halo" data-morph="halo-${gi}" d="${line}"/><path class="curve-line" data-morph="line-${gi}" d="${line}"/><g ${meanAttributes}><line class="mean-halo" data-morph="mean-halo-${gi}" x1="${sx(mean)}" x2="${sx(mean)}" y1="${top}" y2="${base}"/><line class="mean-line" data-morph="mean-${gi}" x1="${sx(mean)}" x2="${sx(mean)}" y1="${top}" y2="${base}"/>${interactive?`<rect class="mean-hit" data-morph="mean-hit-${gi}" x="${sx(mean)-6}" y="${top}" width="12" height="${ph}"/>`:''}</g></g>`;
     });
     data.groups.forEach((g,gi)=>{
       if(!interactive&&state.hiddenGroups.has(g))return;
@@ -92,7 +97,7 @@
 
   const visibleMeasures=()=>state.mode==='multiple'?data.measures:data.measures.filter(m=>m.key===state.indicator);
   const visibleGroups=()=>data.groups.filter(g=>!state.hiddenGroups.has(g));
-  const geometryAttributes=['d','x1','x2','y1','y2','transform'];
+  const geometryAttributes=['d','x','y','x1','x2','y1','y2','transform'];
   function captureGeometry() {
     return new Map([...stage.querySelectorAll('[data-morph]')].map(el=>[el.dataset.morph,
       Object.fromEntries(geometryAttributes.filter(a=>el.hasAttribute(a)).map(a=>[a,el.getAttribute(a)]))]));
@@ -141,7 +146,7 @@
     [...stage.children].forEach((panel,i)=>{
       const surface=panel.querySelector('.chart-surface'), rect=surface.getBoundingClientRect();
       const showYAxis=state.mode==='single'||matchMedia('(max-width: 580px)').matches||i%2===0;
-      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis});
+      surface.innerHTML=chartSvg(visibleMeasures()[i],Math.max(200,rect.width),Math.max(180,rect.height),{showYAxis,showYTitle:i===0});
     });
     updateEmptyState();
     if(previous)morphFrom(previous);
@@ -157,6 +162,7 @@
     stage.querySelectorAll(`[data-series="${group}"]`).forEach(layer=>{
       layer.classList.toggle('is-hidden',hidden);layer.setAttribute('aria-hidden',String(hidden));
       layer.querySelectorAll('.rug-point').forEach((point,i)=>point.setAttribute('tabindex',!hidden&&i===0?'0':'-1'));
+      layer.querySelectorAll('.mean-point').forEach(point=>point.setAttribute('tabindex',hidden?'-1':'0'));
     });
     updateEmptyState();
     $('status').textContent=visibleGroups().length?`Showing ${visibleGroups().join(', ')} income groups.`:'No income groups selected. Select a group in the legend to display it.';
@@ -170,34 +176,42 @@
     if(activeMark)activeMark.classList.remove('is-active');
     activeMark=null;pinned=false;
   }
-  function showTooltip(mark,pin=false) {
+  function showTooltip(mark,pin=false,pointer=null) {
     if(!mark||state.hiddenGroups.has(mark.dataset.group)||(!pin&&pinned&&activeMark!==mark))return;
     clearTimeout(closeTimer);
     if(activeMark)activeMark.classList.remove('is-active');
     activeMark=mark;mark.classList.add('is-active');pinned=pin;
     const metric=data.measures.find(m=>m.key===mark.dataset.metric),group=mark.dataset.group;
-    const rows=samples.get(key(metric.key,group)),selected=rows[Number(mark.dataset.index)];
-    const svg=mark.closest('svg'),span=Math.max(1,svg.getBoundingClientRect().width-59);
-    // Closely overlapping marks are listed together, without moving scores on the x-axis.
-    const nearby=rows.filter(r=>Math.abs(r[metric.key]-selected[metric.key])*span/100<=3);
-    tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)} · ${esc(group)} income</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="${r===selected?'is-target':''}"><th scope="row">${esc(r.country)}</th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table><div class="tooltip-caption">Synthetic score · 0–100${nearby.length>1?'<br>Nearby or overlapping country ticks':''}</div>`;
+    const isMean=mark.classList.contains('mean-point');
+    if(isMean){
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)} · ${esc(group)} income</div><table class="tooltip-table"><tbody><tr class="is-target"><th scope="row">Mean score</th><td>${number.format(Number(mark.dataset.value))}</td></tr></tbody></table><div class="tooltip-caption">Unweighted average of 27 country scores<br>Synthetic data · 0–100</div>`;
+    }else{
+      const rows=samples.get(key(metric.key,group)),selected=rows[Number(mark.dataset.index)];
+      const svg=mark.closest('svg'),span=Math.max(1,svg.getBoundingClientRect().width-59);
+      // Closely overlapping marks are listed together, without moving scores on the x-axis.
+      const nearby=rows.filter(r=>Math.abs(r[metric.key]-selected[metric.key])*span/100<=3);
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)} · ${esc(group)} income</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="${r===selected?'is-target':''}"><th scope="row">${esc(r.country)}</th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table><div class="tooltip-caption">Synthetic score · 0–100${nearby.length>1?'<br>Nearby or overlapping country ticks':''}</div>`;
+    }
     tooltip.hidden=false;
     const anchor=mark.getBoundingClientRect(),outer=root.getBoundingClientRect(),box=tooltip.getBoundingClientRect();
     tooltip.style.left=`${Math.max(4,Math.min(anchor.left-outer.left-12,outer.width-box.width-4))}px`;
-    tooltip.style.top=`${Math.max(2,anchor.top-outer.top-box.height-12)}px`;
+    const anchorY=isMean?(pointer?.clientY??anchor.top+Math.min(anchor.height/2,120)):anchor.top;
+    tooltip.style.top=`${Math.max(2,anchorY-outer.top-box.height-12)}px`;
   }
-  stage.addEventListener('pointerover',event=>{const mark=event.target.closest('.rug-point');if(mark)showTooltip(mark);});
-  stage.addEventListener('pointerout',event=>{if(event.target.closest('.rug-point'))closeTimer=setTimeout(()=>closeTooltip(),180);});
+  const tooltipTarget='.rug-point,.mean-point';
+  stage.addEventListener('pointerover',event=>{const mark=event.target.closest(tooltipTarget);if(mark)showTooltip(mark,false,event);});
+  stage.addEventListener('pointerout',event=>{if(event.target.closest(tooltipTarget))closeTimer=setTimeout(()=>closeTooltip(),180);});
   tooltip.addEventListener('pointerenter',()=>clearTimeout(closeTimer));
   tooltip.addEventListener('pointerleave',()=>closeTooltip());
-  stage.addEventListener('focusin',event=>{if(event.target.closest('.rug-point'))showTooltip(event.target.closest('.rug-point'));});
-  stage.addEventListener('focusout',()=>{closeTimer=setTimeout(()=>{if(!document.activeElement?.closest('.rug-point'))closeTooltip();},50);});
-  stage.addEventListener('click',event=>{const mark=event.target.closest('.rug-point');if(mark)showTooltip(mark,true);});
-  document.addEventListener('pointerdown',event=>{if(!event.target.closest('.rug-point')&&!tooltip.contains(event.target))closeTooltip(true);});
+  stage.addEventListener('focusin',event=>{if(event.target.closest(tooltipTarget))showTooltip(event.target.closest(tooltipTarget));});
+  stage.addEventListener('focusout',()=>{closeTimer=setTimeout(()=>{if(!document.activeElement?.closest(tooltipTarget))closeTooltip();},50);});
+  stage.addEventListener('click',event=>{const mark=event.target.closest(tooltipTarget);if(mark)showTooltip(mark,true,event);});
+  document.addEventListener('pointerdown',event=>{if(!event.target.closest(tooltipTarget)&&!tooltip.contains(event.target))closeTooltip(true);});
   document.addEventListener('keydown',event=>{if(event.key==='Escape')closeTooltip(true);});
   stage.addEventListener('keydown',event=>{
-    const mark=event.target.closest('.rug-point');if(!mark)return;
+    const mark=event.target.closest(tooltipTarget);if(!mark)return;
     if(event.key==='Enter'||event.key===' '){event.preventDefault();showTooltip(mark,true);return;}
+    if(mark.classList.contains('mean-point'))return;
     const rows=samples.get(key(mark.dataset.metric,mark.dataset.group));let next=Number(mark.dataset.index);
     if(event.key==='ArrowRight')next=Math.min(rows.length-1,next+1);
     else if(event.key==='ArrowLeft')next=Math.max(0,next-1);
@@ -205,7 +219,7 @@
     else if(event.key==='End')next=rows.length-1;
     else return;
     event.preventDefault();pinned=false;
-    stage.querySelectorAll(`[data-metric="${mark.dataset.metric}"][data-group="${mark.dataset.group}"]`).forEach(point=>point.setAttribute('tabindex','-1'));
+    stage.querySelectorAll(`.rug-point[data-metric="${mark.dataset.metric}"][data-group="${mark.dataset.group}"]`).forEach(point=>point.setAttribute('tabindex','-1'));
     const target=stage.querySelector(`[data-metric="${mark.dataset.metric}"][data-group="${mark.dataset.group}"][data-index="${next}"]`);
     target.setAttribute('tabindex','0');target.focus({preventScroll:true});
   });
@@ -250,8 +264,8 @@
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="${esc(tokenStyle)};font-family:${esc(light['font-source-sans-3'])}"><rect width="100%" height="100%" fill="${esc(light.background)}"/><text x="32" y="38" fill="${esc(light.heading)}" font-family="${esc(light['font-roboto'])}" font-size="25" font-weight="600">${esc(data.title)}</text>`;
     groups.forEach((g,i)=>svg+=`<line x1="${32+i*160}" x2="${62+i*160}" y1="68" y2="68" stroke="${esc(light[`chart-${data.groups.indexOf(g)+1}`])}" stroke-width="3"/><text x="${70+i*160}" y="74" fill="${esc(light.foreground)}" font-size="18">${g} income</text>`);
     if(!groups.length)svg+=`<text x="32" y="74" fill="${esc(light.foreground)}" font-size="18">No income groups selected</text>`;
-    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0}));
-    const notes=['Ticks: 27 country scores per selected group. Long vertical lines: unweighted group means.','Source: synthetic reconstruction of the supplied Figure 3, Distribution of scores by income.','All country values and assignments are synthetic. They are not estimates of national outcomes.'];
+    measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0,showYTitle:i===0}));
+    const notes=['Ticks: 27 country scores per selected group. Dashed vertical lines: unweighted group means.','Source: synthetic reconstruction of the supplied Figure 3, Distribution of scores by income.','All country values and assignments are synthetic. They are not estimates of national outcomes.'];
     notes.forEach((note,i)=>svg+=`<text x="32" y="${height-68+i*22}" fill="${esc(light.foreground)}" font-size="16">${esc(note)}</text>`);
     svg+='</svg>';
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));

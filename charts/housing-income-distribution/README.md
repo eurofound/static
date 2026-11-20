@@ -6,7 +6,7 @@ An 800px-wide Eurofound embed using the embed v1 contract and the ERM colour ove
 
 All 81 country/income-group rows are synthetic reconstructions of a supplied chart. Each of the four measures has 27 scores per income group. Country names label synthetic assignments; these are not actual national estimates or rankings. Keep the visible synthetic-data notice and include this qualification in the CMS notes.
 
-`data.json` is the chart's source. It contains the country records, measure definitions and 12 Gaussian KDE bandwidths. `data.csv` contains the same 81 records. The browser computes curves from the delivered rounded scores, with 201 points between 0 and 100. Gaussian kernels are not boundary-corrected; displayed density area can be less than one. Long vertical lines show unweighted means of the synthetic scores. Every plotted line is solid.
+`data.json` is the chart's source. It contains the country records, measure definitions and 12 Gaussian KDE bandwidths. `data.csv` contains the same 81 records. The browser computes curves from the delivered rounded scores, with 201 points between 0 and 100. Gaussian kernels are not boundary-corrected; displayed density area can be less than one. Dashed vertical lines show unweighted means of the synthetic scores; curves, gridlines and country ticks are solid.
 
 ## Interaction
 
@@ -19,14 +19,15 @@ All 81 country/income-group rows are synthetic reconstructions of a supplied cha
 - Below 580px, small multiples stack vertically within a 1040px-high area. Both modes keep that area height.
 - Country ticks are 18px tall and rest on the x-axis in a separate strip, with a 6px gap between their tops and the density baseline. Hover, focus or tap for names and scores. Overlapping values are listed together.
 - X-axis numbers are 10.92px (22% smaller than the original 14px). Vertical gridlines align with 0, 25, 50, 75 and 100 within the distribution plot, leaving the country-tick strip clear.
-- The y-axis is labelled “Density of Member States”. Y-axis titles and numbers appear on left-hand panels only in the 2×2 view, and on each chart in single/stacked layouts. The former “Score 0–100” heading is removed.
+- “Density of Member States” appears once, above the top-left chart (or the single chart). Y-axis numbers appear on left-hand panels only in the 2×2 view, and on each chart in single/stacked layouts. The former “Score 0–100” heading is removed.
 - Tab reaches one country tick per income group. Left/right arrows move between countries; Home/End reach the extremes. Enter pins the tooltip; Escape dismisses it.
+- Mean lines are dashed and 1.44px thick, 20% thicker than the previous 1.2px lines. Each has a separate mean-score tooltip available on hover, focus or tap, with a 12px pointer target. Mean lines are also keyboard focusable and leave the tab order when their group is hidden.
 
 ## Embedding
 
 Use `https://static.eurofound.europa.eu/charts/housing-income-distribution/` as the embed URL. Suggested initial height: 745px; `max_width`: 800px. The host adjusts height using the embed's `resize` messages. The page does not redirect or render the host-owned card title, source, logo or download buttons.
 
-The public Eurofound theme stylesheet is linked before `erm-palette.css`. All component and chart colours use semantic tokens. The user's reference colours are Low = chart-1 = #063042 (dark blue), Middle = chart-2 = #869098 (grey), High = chart-3 = #AD5D20 (orange). These values remain stable in both themes; thin light outlines maintain mark visibility on dark backgrounds. Host theme changes retain selections. Unsupported language codes fall back to English, and `ready` announces `languages: ['en']`.
+The public Eurofound theme stylesheet is linked before `erm-palette.css`. All component and chart colours use semantic tokens. The user's reference colours are Low = chart-1 = #063042 (dark blue), Middle = chart-2 = #869098 (grey), High = chart-3 = #AD5D20 (orange). These values remain stable in both themes; dark mode has no white outlines. Host theme changes retain selections. Unsupported language codes fall back to English, and `ready` announces `languages: ['en']`.
 
 The host can send `hello`, `set-theme` and `export` messages. PNG exports always use the light palette and contain their title, source and synthetic-data notes. PNG and CSV exports respect the selected indicators and income groups. CSV exports contain metadata and 27 rows per selected group (81 when all three are selected); an empty selection exports metadata and headers only. All export generation occurs in the browser. No analytics, cookies, chart CDN or export server is used.
 
