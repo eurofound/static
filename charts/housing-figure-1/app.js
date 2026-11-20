@@ -115,7 +115,7 @@
     const w=stage.clientWidth,h=stage.clientHeight;
     stage.dataset.mode=state.mode;stage.dataset.animation='idle';
     document.querySelector('.legend').dataset.mode=state.mode;
-    document.querySelectorAll('.legend-text').forEach((el,i)=>{const label=legendLabel(data.measures[i]);el.textContent=state.mode==='combined'&&i===1?'and '+label[0].toLowerCase()+label.slice(1):label;});
+    document.querySelectorAll('.legend-text').forEach((el,i)=>{el.textContent=legendLabel(data.measures[i]);});
     stage.innerHTML=chartSvg(w,h);
     stage.setAttribute('aria-busy','false');
     if(!visible().length)stage.insertAdjacentHTML('beforeend','<p class="chart-empty">Select an indicator above to display the chart.</p>');
