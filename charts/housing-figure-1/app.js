@@ -167,10 +167,10 @@
     if(!mark||!ready)return;
     clearTimeout(closeTimer);activeMark=mark;
     const index=Number(mark.dataset.index),panel=Number(mark.dataset.panel),year=2014+index;
-    const selected=visible(),barMaximum=Math.max(0,...selected.map(m=>rows.get(m.key)[index].value));
-    tooltip.innerHTML=`<div class="tooltip-heading">${year}</div><div class="tooltip-geography">European Union (EU27)</div><div class="tooltip-items">${selected.map(m=>{
+    const selected=visible(),barMaximum=30;
+    tooltip.innerHTML=`<div class="tooltip-heading">${year}</div><div class="tooltip-geography">European Union (EU27)</div><div class="tooltip-items" data-scale-max="${barMaximum}">${selected.map(m=>{
       const r=rows.get(m.key)[index],i=data.measures.indexOf(m);
-      const width=barMaximum>0?r.value/barMaximum*100:0;
+      const width=Math.min(100,Math.max(0,r.value/barMaximum*100));
       return `<div class="tooltip-item series-${i}" data-indicator="${m.key}" data-value="${r.value}" style="--bar-size:${width.toFixed(4)}%"><div class="tooltip-item-name">${esc(legendLabel(m))}</div><div class="tooltip-bar"><div class="tooltip-track"><span class="tooltip-fill" aria-hidden="true"></span><span class="tooltip-item-value">${number.format(r.value)}%</span></div></div>${r.flag==='e'?'<span class="estimate">Estimated</span>':''}</div>`;
     }).join('')}</div>`;
     tooltip.hidden=false;
