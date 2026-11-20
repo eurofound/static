@@ -20,6 +20,7 @@
     .time-chart .area{stroke:none}
     .time-chart .data-line{fill:none;stroke:var(--series);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
     .time-chart .data-point{fill:var(--series);stroke:none}
+    .time-chart .point-label{fill:var(--series);font-size:13px;font-weight:500}
     .time-chart .year-target{fill:transparent;stroke:none;cursor:pointer}
     .time-chart .year-target:focus,.time-chart .year-target:focus-visible{outline:none}
     .time-chart .crosshair{stroke:var(--chart-label);stroke-width:.8;opacity:.45;pointer-events:none}
@@ -43,7 +44,7 @@
     return data.measures.map((m,i)=>{
       const width=combined||stacked?w:(w-gap)/2, height=combined||!stacked?h:(h-gap)/2;
       const x=combined||stacked?0:i*(width+gap),y=combined||!stacked?0:i*(height+gap);
-      const left=43,right=17,top=30,bottom=33;
+      const left=43,right=45,top=30,bottom=33;
       return {x,y,w:width,h:height,left:x+left,right:x+width-right,top:y+top,bottom:y+height-bottom,
         sx:year=>x+left+(year-2014)/11*(width-left-right),
         sy:value=>y+height-bottom-value/scaleMax()*(height-top-bottom),
@@ -63,16 +64,20 @@
         svg+=`<g data-morph="y-tick-${i}-${v}" opacity="${on?1:0}"><line class="grid-line" data-morph="y-grid-${i}-${v}" x1="${p.left}" x2="${p.right}" y1="${yy}" y2="${yy}"/><text class="axis-text" data-morph="y-label-${i}-${v}" x="${p.left-9}" y="${yy+4}" text-anchor="end" opacity="${p.showY?1:0}">${v}</text></g>`;
       }
       for(let year=2014;year<=2025;year++){
-        const all=combined&&w>=560,shown=all||[2014,2016,2018,2020,2022,2025].includes(year),xx=p.sx(year);
+        const shown=year%2===0,xx=p.sx(year);
         svg+=`<g data-morph="x-tick-${i}-${year}" opacity="${shown?1:0}"><line class="grid-line" data-morph="x-grid-${i}-${year}" x1="${xx}" x2="${xx}" y1="${p.top}" y2="${p.bottom}"/><text class="axis-text axis-x-text" data-morph="x-label-${i}-${year}" x="${xx}" y="${p.bottom+24}" text-anchor="middle">${year}</text></g>`;
       }
-      svg+=`<line class="axis-line" data-morph="base-${i}" x1="${p.left}" x2="${p.right}" y1="${p.bottom}" y2="${p.bottom}"/><text class="axis-text" data-morph="unit-${i}" x="${p.left}" y="${p.top-14}" opacity="${p.showY?1:0}">${!combined&&p.stacked?data.measures[i].panel+'. ':''}Percentage</text></g>`;
+      svg+=`<line class="axis-line" data-morph="base-${i}" x1="${p.left}" x2="${p.right}" y1="${p.bottom}" y2="${p.bottom}"/><text class="axis-text" data-morph="unit-${i}" x="${p.left}" y="${p.top-14}" opacity="${p.showY?1:0}">Percentage of population</text></g>`;
     });
     data.measures.forEach((m,i)=>{
       const p=places[i],values=rows.get(m.key),shown=!state.hidden.has(m.key);
       const line=values.map((r,n)=>`${n?'L':'M'}${p.sx(r.year)},${p.sy(r.value)}`).join(' ');
-      svg+=`<g class="series-${i}" data-morph="series-${i}" data-series="${m.key}" opacity="${shown?1:0}" aria-hidden="${!shown}"><path class="area" data-morph="area-${i}" fill="url(#${exportId}-gradient-${i})" opacity="${combined&&visible().length>1?0:1}" d="${line} L${p.right},${p.bottom} L${p.left},${p.bottom} Z"/><path class="data-line" data-morph="line-${i}" d="${line}"/>`;
+      svg+=`<g class="series-${i}" data-morph="series-${i}" data-series="${m.key}" opacity="${shown?1:0}" aria-hidden="${!shown}"><path class="area" data-morph="area-${i}" fill="url(#${exportId}-gradient-${i})" opacity="1" d="${line} L${p.right},${p.bottom} L${p.left},${p.bottom} Z"/><path class="data-line" data-morph="line-${i}" d="${line}"/>`;
       values.forEach(r=>svg+=`<circle class="data-point" data-morph="point-${i}-${r.year}" cx="${p.sx(r.year)}" cy="${p.sy(r.value)}" r="3"/>`);
+      values.filter(r=>r.year===2025||r.year===(i===0?2020:2023)).forEach(r=>{
+        const last=r.year===2025,x=p.sx(r.year)+(last?8:0),y=p.sy(r.value)+(last?4:i===0&&!combined?21:-12);
+        svg+=`<text class="point-label" data-morph="value-${i}-${r.year}" x="${x}" y="${y}" text-anchor="${last?'start':'middle'}">${number.format(r.value)}%</text>`;
+      });
       svg+='</g>';
     });
     if(interactive){
@@ -108,6 +113,8 @@
     hideTooltip();
     const w=stage.clientWidth,h=stage.clientHeight;
     stage.dataset.mode=state.mode;stage.dataset.animation='idle';
+    document.querySelector('.legend').dataset.mode=state.mode;
+    document.querySelectorAll('.legend-text').forEach((el,i)=>el.textContent=state.mode==='combined'&&i===1?'and '+data.measures[i].label[0].toLowerCase()+data.measures[i].label.slice(1):data.measures[i].label);
     stage.innerHTML=chartSvg(w,h);
     stage.setAttribute('aria-busy','false');
     if(!visible().length)stage.insertAdjacentHTML('beforeend','<p class="chart-empty">Select an indicator above to display the chart.</p>');
@@ -217,7 +224,7 @@
     const light=readTokens(probe);probe.remove();
     const width=1200,height=700,style=Object.entries(light).map(([k,v])=>`--${k}:${v}`).join(';');
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="${esc(style)};font-family:${esc(light['font-source-sans-3'])}"><rect width="100%" height="100%" fill="${esc(light.background)}"/><text x="32" y="40" fill="${esc(light.heading)}" font-family="${esc(light['font-roboto'])}" font-size="25" font-weight="600">${esc(data.title)}</text>`;
-    selected.forEach((m,i)=>{const color=light[`chart-${data.measures.indexOf(m)+1}`];svg+=`<line x1="32" x2="60" y1="${73+i*26}" y2="${73+i*26}" stroke="${esc(color)}" stroke-width="3"/><text x="70" y="${79+i*26}" fill="${esc(light.foreground)}" font-size="18">${m.panel}. ${esc(m.label)}</text>`;});
+    selected.forEach((m,i)=>{const color=light[`chart-${data.measures.indexOf(m)+1}`];svg+=`<line x1="32" x2="60" y1="${73+i*26}" y2="${73+i*26}" stroke="${esc(color)}" stroke-width="3"/><text x="70" y="${79+i*26}" fill="${esc(light.foreground)}" font-size="18">${esc(m.label)}</text>`;});
     if(!selected.length)svg+=`<text x="32" y="79" fill="${esc(light.foreground)}" font-size="18">No indicators selected</text>`;
     svg+=`<g transform="translate(32 126)">${chartSvg(1136,466,{interactive:false,exportId:'export'})}</g>`;
     svg+=`<text x="32" y="638" fill="${esc(light.foreground)}" font-size="16">Source: Eurostat, EU-SILC. Datasets tespm140 and ilc_mdes01. Extracted 11 November 2026.</text><text x="32" y="664" fill="${esc(light.foreground)}" font-size="16">Values for 2014–2018 are estimated. Unit: percentage. Geography: EU27 (from 2020).</text></svg>`;

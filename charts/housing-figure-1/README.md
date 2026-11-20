@@ -17,11 +17,11 @@ These are supplied observations, not dummy data. The workbook is unchanged.
 
 ## Display and embed
 
-The default view places the indicators side by side. The top-right icons switch to a combined chart and back. Both views use a shared zero-based percentage scale. Click a legend label to show or hide its series. Tooltips show annual values and estimate flags; combined tooltips show both visible series.
+The default view places the indicators side by side. The top-right icons switch to a combined chart and back. Both views use a shared zero-based percentage scale. Year labels and vertical gridlines occur at even two-year intervals from 2014 through 2024; the 2025 observations remain plotted and labelled with their values. Click a legend label to show or hide its series. Tooltips show annual values and estimate flags; combined tooltips show both visible series.
 
 The page is capped at 800px, stacks the two charts below 580px, and supports light/dark themes. The public Eurofound embed theme supplies typography, surfaces and chart furniture. Navy/orange series in light mode use the existing chart palette; dark mode uses the ERM theme's lighter comparison colours. There are no white outlines.
 
-View transitions morph lines, fills, points and axes over 300ms. Each separate line uses a gradient area fill. Multiple overlaid lines are unfilled. Use Tab to reach a chart and left/right arrows to explore years; Home/End reach the first/last year, Enter pins a tooltip and Escape dismisses it.
+View transitions morph lines, fills, points, labels and axes over 300ms. Both views retain the gradient area fills. Value labels identify the last point of each series, housing cost overburden in 2020, and inability to keep the home warm in 2023. The axis reads “Percentage of population”. The side-by-side headings omit panel letters and swatches; the combined heading joins both indicator names with “and” and places each colour key after its name. Tooltip text uses the neutral foreground colour. Use Tab to reach a chart and left/right arrows to explore years; Home/End reach the first/last year, Enter pins a tooltip and Escape dismisses it.
 
 Parent iframe messages support `hello`, `set-theme` and `export`. The page announces `ready` with `png` and `csv` exports and reports content height through `resize`. Only parent-window messages are accepted. Unsupported language requests fall back to English. CSV exports include the selected indicators and source metadata. PNG exports use the current layout in light mode with a title, source and estimate note.
 

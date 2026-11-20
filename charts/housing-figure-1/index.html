@@ -16,8 +16,8 @@
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   <link rel="stylesheet" href="https://www.eurofound.europa.eu/api/embed/v1/theme.css">
   <link rel="stylesheet" href="./erm-palette.css?v=1">
-  <link rel="stylesheet" href="./styles.css?v=1">
-  <script src="./app.js?v=1" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=2">
+  <script src="./app.js?v=2" defer></script>
 </head>
 <body class="ef-embed">
   <main class="chart-embed" aria-label="Housing pressures in the EU27">
@@ -32,9 +32,9 @@
         </button>
       </div>
     </div>
-    <div class="legend" role="group" aria-label="Indicators to display">
-      <button type="button" class="legend-item series-0" data-indicator="housing_cost_overburden" aria-pressed="true" title="Show or hide housing cost overburden rate" disabled><svg aria-hidden="true" viewBox="0 0 28 16"><path d="M1 8h26"/><circle cx="14" cy="8" r="2.7"/></svg><span>B. Housing cost overburden rate</span></button>
-      <button type="button" class="legend-item series-1" data-indicator="unable_to_keep_home_warm" aria-pressed="true" title="Show or hide inability to keep home adequately warm" disabled><svg aria-hidden="true" viewBox="0 0 28 16"><path d="M1 8h26"/><circle cx="14" cy="8" r="2.7"/></svg><span>C. Inability to keep home adequately warm</span></button>
+    <div class="legend" data-mode="split" role="group" aria-label="Indicators to display">
+      <button type="button" class="legend-item series-0" data-indicator="housing_cost_overburden" aria-pressed="true" title="Show or hide housing cost overburden rate" disabled><span class="legend-text">Housing cost overburden rate</span><svg aria-hidden="true" viewBox="0 0 28 16"><path d="M1 8h26"/><circle cx="14" cy="8" r="2.7"/></svg></button>
+      <button type="button" class="legend-item series-1" data-indicator="unable_to_keep_home_warm" aria-pressed="true" title="Show or hide inability to keep home adequately warm" disabled><span class="legend-text">Inability to keep home adequately warm</span><svg aria-hidden="true" viewBox="0 0 28 16"><path d="M1 8h26"/><circle cx="14" cy="8" r="2.7"/></svg></button>
     </div>
     <div id="status" class="loading-message" role="status" aria-live="polite">Loading chart…</div>
     <div id="charts" class="chart-stage" data-mode="split" aria-busy="true"></div>
