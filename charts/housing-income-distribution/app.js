@@ -203,7 +203,7 @@
     const metric=data.measures.find(m=>m.key===mark.dataset.metric),group=mark.dataset.group;
     const isMean=mark.classList.contains('mean-point');
     if(isMean){
-      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><tbody><tr class="tooltip-income-row group-${data.groups.indexOf(group)}"><th scope="row">${esc(group)} income mean</th><td>${number.format(Number(mark.dataset.value))}</td></tr></tbody></table><div class="tooltip-caption">Unweighted average of 27 country scores<br>Synthetic data · 0–100</div>`;
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><tbody><tr class="tooltip-income-row group-${data.groups.indexOf(group)}"><th scope="row">${esc(group)} income mean</th><td>${number.format(Number(mark.dataset.value))}</td></tr></tbody></table>`;
     }else{
       const rows=samples.get(key(metric.key,group)),selected=rows[Number(mark.dataset.index)];
       const svg=mark.closest('svg'),span=Math.max(1,svg.getBoundingClientRect().width-59);
@@ -211,7 +211,7 @@
       const nearby=visibleGroups().flatMap(g=>samples.get(key(metric.key,g)))
         .filter(r=>Math.abs(r[metric.key]-selected[metric.key])*span/100<=3)
         .sort((a,b)=>a[metric.key]-b[metric.key]||data.groups.indexOf(a.income_group)-data.groups.indexOf(b.income_group)||a.country.localeCompare(b.country));
-      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="tooltip-income-row group-${data.groups.indexOf(r.income_group)}"><th scope="row"><span class="country-cell"><img class="country-flag" src="./flags/${r.country_code.toLowerCase()}.svg" alt="" width="20" height="15"><span>${esc(r.country)}<span class="sr-only">, ${esc(r.income_group)} income</span></span></span></th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table><div class="tooltip-caption">Synthetic score · 0–100${nearby.length>1?'<br>Nearby or overlapping country ticks':''}</div>`;
+      tooltip.innerHTML=`<div class="tooltip-heading">${esc(metric.label)}</div><table class="tooltip-table"><caption class="sr-only">Synthetic country scores out of 100</caption><tbody>${nearby.map(r=>`<tr class="tooltip-income-row group-${data.groups.indexOf(r.income_group)}"><th scope="row"><span class="country-cell"><img class="country-flag" src="./flags/${r.country_code.toLowerCase()}.svg" alt="" width="20" height="15"><span>${esc(r.country)}<span class="sr-only">, ${esc(r.income_group)} income</span></span></span></th><td>${number.format(r[metric.key])}</td></tr>`).join('')}</tbody></table>`;
     }
     tooltip.hidden=false;
     const anchor=mark.getBoundingClientRect(),outer=root.getBoundingClientRect(),box=tooltip.getBoundingClientRect();

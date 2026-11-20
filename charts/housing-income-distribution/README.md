@@ -4,7 +4,7 @@ An 800px-wide Eurofound embed using the embed v1 contract and the ERM colour ove
 
 ## Data status
 
-All 81 country/income-group rows are synthetic reconstructions of a supplied chart. Each of the four measures has 27 scores per income group. Country names label synthetic assignments; these are not actual national estimates or rankings. Keep the visible synthetic-data notice and include this qualification in the CMS notes.
+All 81 country/income-group rows are synthetic reconstructions of a supplied chart. Each of the four measures has 27 scores per income group. Country names label synthetic assignments; these are not actual national estimates or rankings. The requested “DUMMY DATA” heading identifies this on screen. Explanatory notes below the charts and tooltip footnotes are omitted from the display; provenance remains in the data and exports.
 
 `data.json` is the chart's source. It contains the country records, measure definitions and 12 Gaussian KDE bandwidths. `data.csv` contains the same 81 records. The browser computes curves from the delivered rounded scores, with 201 points between 0 and 100. Gaussian kernels are not boundary-corrected; displayed density area can be less than one. Dashed vertical lines show unweighted means of the synthetic scores; curves, gridlines and country ticks are solid.
 
@@ -27,7 +27,7 @@ All 81 country/income-group rows are synthetic reconstructions of a supplied cha
 
 ## Embedding
 
-Use `https://static.eurofound.europa.eu/charts/housing-income-distribution/` as the embed URL. Suggested initial height: 751px; `max_width`: 800px. The host adjusts height using the embed's `resize` messages. The page does not redirect or render the host-owned card title, source, logo or download buttons.
+Use `https://static.eurofound.europa.eu/charts/housing-income-distribution/` as the embed URL, with `max_width`: 800px. The host adjusts height using the embed's `resize` messages. The page includes the user-requested “DUMMY DATA” heading; it does not redirect or render the host-owned source, logo or download buttons.
 
 The public Eurofound theme stylesheet is linked before `erm-palette.css`. All component and chart colours use semantic tokens. The user's reference colours are Low = chart-1 = #063042 (dark blue), High = chart-3 = #AD5D20 (orange), with Middle = chart-2 = #8F9091 adjusted to a more neutral grey. These values remain stable in both themes; dark mode has no white outlines. Host theme changes retain selections. Unsupported language codes fall back to English, and `ready` announces `languages: ['en']`.
 

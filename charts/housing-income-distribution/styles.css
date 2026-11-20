@@ -1,5 +1,6 @@
 body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .chart-embed { min-width: 0; position: relative; }
+.dummy-title { margin: 0 0 4px; font-family: var(--font-roboto); font-size: 1.25rem; line-height: 1.3; font-weight: 600; color: var(--heading); }
 .toolbar { display: flex; align-items: center; justify-content: space-between; min-height: 50px; gap: 12px; margin-bottom: 4px; }
 .indicator-control { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .indicator-control[hidden] { display: none; }
@@ -45,14 +46,10 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .chart-panel h2 { margin: 0 0 5px; font-size: 1rem; font-weight: 600; line-height: 1.3; }
 .chart-surface { min-height: 0; flex: 1; }
 .density-chart { display: block; width: 100%; height: 100%; overflow: visible; }
-.chart-note,.quality-note { margin: 12px 0 0; font-size: .875rem; line-height: 1.45; max-width: 75ch; }
-.chart-note { color: var(--foreground); }
-.quality-note { margin-top: 4px; color: var(--foreground); font-weight: 600; }
 .country-tooltip { position: absolute; z-index: 20; width: max-content; min-width: 225px; max-width: min(320px, calc(100% - 16px)); max-height: 250px; overflow: auto; background: var(--surface); color: var(--foreground); border: 1px solid var(--border); pointer-events: auto; }
 .country-tooltip[hidden] { display: none; }
 .chart-embed:has(.mean-point:focus-visible,.rug-point:focus-visible) .country-tooltip:not([hidden]) { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 .tooltip-heading { font-weight: 600; font-size: .9375rem; margin-bottom: 6px; }
-.tooltip-caption { font-size: .8125rem; margin-top: 7px; color: var(--foreground); }
 .tooltip-table { border-collapse: collapse; width: 100%; font-size: .875rem; }
 .tooltip-table th,.tooltip-table td { padding: 3px 6px 3px 0; text-align: left; font-weight: 400; }
 .tooltip-table td { padding-right: 0; text-align: right; font-variant-numeric: tabular-nums; }
