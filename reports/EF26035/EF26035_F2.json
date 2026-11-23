@@ -1,0 +1,226 @@
+{
+  "id": "EF26035_F2",
+  "title": "Pairwise dimension scatter plots",
+  "unit": "Score (0–100)",
+  "source": "Eurofound Housing Barometer",
+  "method": "Ordinary least squares and Pearson correlation across 27 Member States, excluding EU27. Shading: pointwise 95% confidence interval for the fitted mean (Student t, 25 degrees of freedom).",
+  "indicators": {
+    "affordability": "Affordability",
+    "costs": "Ability to meet costs",
+    "adequacy": "Adequacy",
+    "barometer": "Housing Barometer"
+  },
+  "rows": [
+    {
+      "id": "point-1",
+      "affordability": 1,
+      "costs": 4.5,
+      "adequacy": 35.7,
+      "barometer": 13.7
+    },
+    {
+      "id": "point-2",
+      "affordability": 20.5,
+      "costs": 79,
+      "adequacy": 87.8,
+      "barometer": 62.4
+    },
+    {
+      "id": "point-3",
+      "affordability": 45.6,
+      "costs": 93.9,
+      "adequacy": 88,
+      "barometer": 75.8
+    },
+    {
+      "id": "point-4",
+      "affordability": 47.6,
+      "costs": 83.8,
+      "adequacy": 76.2,
+      "barometer": 69.2
+    },
+    {
+      "id": "point-5",
+      "affordability": 52.2,
+      "costs": 85.1,
+      "adequacy": 79,
+      "barometer": 72.1
+    },
+    {
+      "id": "point-6",
+      "affordability": 53.3,
+      "costs": 62.7,
+      "adequacy": 67.7,
+      "barometer": 61.2
+    },
+    {
+      "id": "point-7",
+      "affordability": 62.7,
+      "costs": 42.4,
+      "adequacy": 27.2,
+      "barometer": 44.1
+    },
+    {
+      "id": "point-8",
+      "affordability": 65.1,
+      "costs": 61.6,
+      "adequacy": 52.1,
+      "barometer": 59.6
+    },
+    {
+      "id": "point-9",
+      "affordability": 68.4,
+      "costs": 72,
+      "adequacy": 69,
+      "barometer": 69.8
+    },
+    {
+      "id": "point-10",
+      "affordability": 70.7,
+      "costs": 80.3,
+      "adequacy": 91.3,
+      "barometer": 80.8
+    },
+    {
+      "id": "point-11",
+      "affordability": 70.9,
+      "costs": 60.7,
+      "adequacy": 5.8,
+      "barometer": 45.8
+    },
+    {
+      "id": "point-12",
+      "affordability": 75.2,
+      "costs": 64.6,
+      "adequacy": 64,
+      "barometer": 67.9
+    },
+    {
+      "id": "point-13",
+      "affordability": 75.3,
+      "costs": 55.7,
+      "adequacy": 85.9,
+      "barometer": 72.3
+    },
+    {
+      "id": "point-14",
+      "affordability": 76.3,
+      "costs": 64.8,
+      "adequacy": 82.4,
+      "barometer": 74.5
+    },
+    {
+      "id": "point-15",
+      "affordability": 76.3,
+      "costs": 75.7,
+      "adequacy": 61.6,
+      "barometer": 71.2
+    },
+    {
+      "id": "point-16",
+      "affordability": 79.7,
+      "costs": 58.7,
+      "adequacy": 91.9,
+      "barometer": 76.8
+    },
+    {
+      "id": "point-17",
+      "affordability": 80.7,
+      "costs": 72.1,
+      "adequacy": 71.8,
+      "barometer": 74.8
+    },
+    {
+      "id": "point-18",
+      "affordability": 80.9,
+      "costs": 62.1,
+      "adequacy": 49.6,
+      "barometer": 64.2
+    },
+    {
+      "id": "point-19",
+      "affordability": 81.9,
+      "costs": 54.7,
+      "adequacy": 41.5,
+      "barometer": 59.4
+    },
+    {
+      "id": "point-20",
+      "affordability": 85.1,
+      "costs": 85.8,
+      "adequacy": 52.3,
+      "barometer": 74.4
+    },
+    {
+      "id": "point-21",
+      "affordability": 86.8,
+      "costs": 60.7,
+      "adequacy": 63.6,
+      "barometer": 70.4
+    },
+    {
+      "id": "point-22",
+      "affordability": 88.1,
+      "costs": 37.7,
+      "adequacy": 52.9,
+      "barometer": 59.6
+    },
+    {
+      "id": "point-23",
+      "affordability": 88.9,
+      "costs": 84.9,
+      "adequacy": 99.3,
+      "barometer": 91.1
+    },
+    {
+      "id": "point-24",
+      "affordability": 89.9,
+      "costs": 63.8,
+      "adequacy": 87.1,
+      "barometer": 80.3
+    },
+    {
+      "id": "point-25",
+      "affordability": 92.2,
+      "costs": 73.2,
+      "adequacy": 80.3,
+      "barometer": 81.9
+    },
+    {
+      "id": "point-26",
+      "affordability": 92.7,
+      "costs": 53,
+      "adequacy": 41.2,
+      "barometer": 62.3
+    },
+    {
+      "id": "point-27",
+      "affordability": 100,
+      "costs": 33,
+      "adequacy": 86,
+      "barometer": 73
+    },
+    {
+      "id": "EU27",
+      "affordability": 70.66666666666667,
+      "costs": 63.944444444444464,
+      "adequacy": 66.34074074074073,
+      "barometer": 66.98518518518519
+    }
+  ],
+  "pairs": [
+    [
+      "affordability",
+      "costs"
+    ],
+    [
+      "costs",
+      "adequacy"
+    ],
+    [
+      "affordability",
+      "adequacy"
+    ]
+  ],
+  "release_note": "Country identifiers omitted. The EU27 aggregate is retained."
+}
