@@ -179,7 +179,7 @@
       layers.forEach(layer=>layer.style.removeProperty('transition'));
       requestAnimationFrame(()=>layers.forEach(layer=>{layer.style.removeProperty('opacity');layer.style.removeProperty('visibility');}));
     }
-    $('status').textContent=visibleGroups().length?`Showing ${visibleGroups().join(', ')} income groups.`:'No groups selected. Select a group in the legend to display it.';
+    $('status').textContent=visibleGroups().length?`Showing ${data.groupLabel.toLowerCase()}: ${visibleGroups().join(', ')}.`:'No groups selected. Select a group in the legend to display it.';
   }
   document.querySelectorAll('.legend-item').forEach(button=>button.addEventListener('click',()=>toggleGroup(button.dataset.income)));
 

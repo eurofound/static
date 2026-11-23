@@ -10,7 +10,7 @@ body.ef-embed { max-width:800px; box-sizing:border-box; margin-inline:auto; }
 .view-button .icon-axis { stroke-width:1.1; }
 button:disabled { cursor:wait; }
 .legend { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-bottom:14px; }
-.legend-item { display:flex; align-items:flex-start; gap:8px; min-width:0; min-height:42px; padding:4px 0; text-align:left; color:var(--heading); font-family:var(--font-roboto); font-size:1rem; font-weight:500; line-height:1.4; border:0; border-radius:3px; background:transparent; cursor:pointer; transition:opacity 300ms; }
+.legend-item { display:flex; align-items:flex-start; gap:8px; min-width:0; min-height:42px; padding:4px 0; text-align:left; color:var(--heading); font-family:var(--font-roboto); font-size:1rem; font-weight:600; line-height:1.4; border:0; border-radius:3px; background:transparent; cursor:pointer; transition:opacity 300ms; }
 .legend-item svg { flex:0 0 28px; width:28px; height:16px; margin-top:3px; fill:var(--series); stroke:var(--series); stroke-width:2.5; }
 .legend[data-mode="split"] .legend-item svg { display:none; }
 .legend[data-mode="combined"] { display:flex; flex-wrap:wrap; gap:0 10px; align-items:flex-start; }
@@ -44,7 +44,17 @@ button:disabled { cursor:wait; }
 @media(prefers-reduced-motion:reduce) { .legend-item { transition:none; } }
 
 body[data-single] .legend { display:block; margin-top:10px; }
-.chart-title { margin:0; color:var(--heading); font-family:var(--font-roboto); font-size:1rem; font-weight:500; line-height:1.4; }
+.chart-title { margin:0; color:var(--heading); font-family:var(--font-roboto); font-size:1rem; font-weight:600; line-height:1.4; }
 body[data-single] .chart-stage { height:360px; }
 .tooltip-index-value { display:block; margin-top:5px; font-size:.9375rem; font-variant-numeric:tabular-nums; }
 .tooltip-index-unit { font-size:.75rem; color:var(--muted-foreground); margin-top:4px; }
+
+/* Keep each interactive heading with its plot when the two panels stack. */
+.plot-area { position:relative; }
+@media(max-width:580px) {
+  .plot-area .chart-stage[data-mode="split"] { height:680px; }
+  .plot-area .legend[data-mode="split"] { position:absolute; inset:0; z-index:2; display:block; margin:0; pointer-events:none; }
+  .plot-area .legend[data-mode="split"] .legend-item { position:absolute; left:0; right:0; width:100%; min-height:42px; font-size:1rem; pointer-events:auto; }
+  .plot-area .legend[data-mode="split"] .legend-item:first-child { top:0; }
+  .plot-area .legend[data-mode="split"] .legend-item:nth-child(2) { top:calc(50% + 12px); }
+}

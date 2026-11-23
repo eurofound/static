@@ -44,12 +44,12 @@
     const selected=visible();
     return selected.length?Math.max(2,Math.ceil(Math.max(...selected.flatMap(m=>rows.get(m.key).map(r=>r.value)))/2)*2):12;
   }
-  function layout(w,h) {
-    const stacked=w<560, combined=state.mode==='combined', gap=24;
+  function layout(w,h,stacked=matchMedia('(max-width:580px)').matches) {
+    const localHeadings=stacked&&state.mode==='split'&&data.measures.length>1, combined=state.mode==='combined', gap=24;
     return data.measures.map((m,i)=>{
       const width=combined||stacked?w:(w-gap)/2, height=combined||!stacked?h:(h-gap)/2;
       const x=combined||stacked?0:i*(width+gap),y=combined||!stacked?0:i*(height+gap);
-      const left=43,right=45,top=30,bottom=33;
+      const left=43,right=45,top=localHeadings?88:30,bottom=33;
       return {x,y,w:width,h:height,left:x+left,right:x+width-right,top:y+top,bottom:y+height-bottom,
         sx:year=>x+left+(year-2014)/11*(width-left-right),
         sy:value=>y+height-bottom-(value-scaleMin())/(scaleMax()-scaleMin())*(height-top-bottom),
@@ -58,7 +58,7 @@
     });
   }
   function chartSvg(w,h,{interactive=true,exportId='screen'}={}) {
-    const places=layout(w,h),max=scaleMax(),combined=state.mode==='combined';
+    const places=layout(w,h,interactive&&matchMedia('(max-width:580px)').matches),max=scaleMax(),combined=state.mode==='combined';
     let svg=`<svg xmlns="http://www.w3.org/2000/svg" class="time-chart ${combined?'combined':''}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="group" aria-label="${esc(data.title)}"><style>${SVG_CSS}</style><desc>${esc(data.description)}</desc><defs>`;
     data.measures.forEach((m,i)=>svg+=`<linearGradient id="${exportId}-gradient-${i}" x1="0" x2="0" y1="0" y2="1" class="series-${i}"><stop offset="0%" stop-color="var(--series)" stop-opacity=".2"/><stop offset="100%" stop-color="var(--series)" stop-opacity=".01"/></linearGradient>`);
     svg+='</defs>';
@@ -117,9 +117,9 @@
     cancelAnimationFrame(animationFrame);
     const previous=animate?capture():null;
     hideTooltip();
-    const w=stage.clientWidth,h=stage.clientHeight;
     stage.dataset.mode=state.mode;stage.dataset.animation='idle';
     document.querySelector('.legend').dataset.mode=state.mode;
+    const w=stage.clientWidth,h=stage.clientHeight;
     document.querySelectorAll('.legend-text').forEach((el,i)=>{el.textContent=legendLabel(data.measures[i]);});
     stage.innerHTML=chartSvg(w,h);
     stage.setAttribute('aria-busy','false');

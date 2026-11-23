@@ -40,3 +40,9 @@ Both pages use the shared `EF26035_F1.js`, CSS and palette. Browser titles and P
 All report pages use `EF26035_tooltip.js` and `EF26035_tooltip.css`: Source Sans 3, 15px semibold headings, 14px body/values, one 1px theme border and 8px radius. Hover previews, click/Enter/Space pins, repeating on the same target closes, another target transfers the pin, outside click or Escape closes. Pointer movement cannot replace a pinned tooltip. Layout/filter changes close stale tooltips. No focus outline surrounds an entire chart or tooltip box.
 
 Figure 2 only exposes tooltip targets on the EU27 diamonds. Anonymous Member State dots remain visual observations, without hover, click or keyboard tooltips. Keyboard focus is indicated locally at the EU27 diamond.
+
+
+## Review corrections
+Figure 1 panel headings use Roboto 16px/600. In the stacked mobile view each interactive heading sits above its own plot; CSS and SVG share the 580px viewport breakpoint. Figure 4 uses the theme light blue for Owner in dark mode and its live status describes tenure. Figure 2 CSV downloads follow the visible Member State/EU27 selections and include source, units and current filter/view metadata.
+
+Figure 2 Pearson correlations calculated from the supplied workbook are 0.10391765, 0.46472820 and 0.09201693 (displayed 0.10, 0.46, 0.09). The report graphic's middle label of 0.47 is inconsistent with these supplied values; no national observations have been altered to force that label.
