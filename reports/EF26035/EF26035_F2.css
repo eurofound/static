@@ -48,7 +48,6 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .density-chart { display: block; width: 100%; height: 100%; overflow: visible; }
 .country-tooltip { position: absolute; z-index: 20; width: max-content; min-width: 225px; max-width: min(320px, calc(100% - 16px)); max-height: 250px; overflow: auto; background: var(--surface); color: var(--foreground); border: 1px solid var(--border); pointer-events: auto; }
 .country-tooltip[hidden] { display: none; }
-.chart-embed:has(.mean-point:focus-visible,.rug-point:focus-visible) .country-tooltip:not([hidden]) { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 .tooltip-heading { font-weight: 600; font-size: .9375rem; margin-bottom: 6px; }
 .tooltip-table { border-collapse: collapse; width: 100%; font-size: .875rem; }
 .tooltip-table th,.tooltip-table td { padding: 3px 6px 3px 0; text-align: left; font-weight: 400; }
@@ -73,7 +72,7 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 #charts{height:360px;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:minmax(0,1fr);gap:14px}
 #charts[data-mode=single]{grid-template-columns:minmax(0,1fr)}
 .scatter{display:block;width:100%;height:100%;overflow:visible;touch-action:pan-y;font-family:var(--font-source-sans-3)}
-.scatter text{pointer-events:none}.scatter:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+.scatter text{pointer-events:none}.scatter:focus,.scatter:focus-visible{outline:none}
 .legend-item.member{--series:var(--point)}.legend-item.eu{--series:var(--eu)}.legend-item.fitted{--series:var(--fit)}
 .legend-item.member svg circle,.legend-item.eu svg path{fill:var(--series);stroke:none}
 .legend-item.fitted svg rect{fill:var(--band);fill-opacity:.16;stroke:none}
@@ -92,3 +91,5 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .indicator-control{flex:0 1 auto}.select-wrap{flex:0 1 auto;width:380px}.select-wrap select{width:100%}@media(max-width:580px){.indicator-control{flex:1 1 100%}.select-wrap{flex:1;width:auto}}
 
 .chart-panel h2{font-family:var(--font-roboto);font-size:1rem;font-weight:600;line-height:1.3;color:var(--heading);margin:0 0 5px}.indicator-control{max-width:calc(100% - 90px)}@media(max-width:580px){.indicator-control{max-width:100%}}
+
+.country-mark{pointer-events:none}.eu-point{pointer-events:all;cursor:pointer}.eu-point:focus,.eu-point:focus-visible{outline:none}.eu-focus{stroke:var(--focus-ring);stroke-width:1.5;opacity:0;pointer-events:none}.eu-point:focus-visible .eu-focus{opacity:1}

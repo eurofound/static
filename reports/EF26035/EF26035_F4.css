@@ -48,7 +48,6 @@ body.ef-embed { max-width: 800px; box-sizing: border-box; margin-inline: auto; }
 .density-chart { display: block; width: 100%; height: 100%; overflow: visible; }
 .country-tooltip { position: absolute; z-index: 20; width: max-content; min-width: 225px; max-width: min(320px, calc(100% - 16px)); max-height: 250px; overflow: auto; background: var(--surface); color: var(--foreground); border: 1px solid var(--border); pointer-events: auto; }
 .country-tooltip[hidden] { display: none; }
-.chart-embed:has(.mean-point:focus-visible,.rug-point:focus-visible) .country-tooltip:not([hidden]) { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 .tooltip-heading { font-weight: 600; font-size: .9375rem; margin-bottom: 6px; }
 .tooltip-table { border-collapse: collapse; width: 100%; font-size: .875rem; }
 .tooltip-table th,.tooltip-table td { padding: 3px 6px 3px 0; text-align: left; font-weight: 400; }

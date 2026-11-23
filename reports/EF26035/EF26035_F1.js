@@ -7,7 +7,7 @@
   const number = new Intl.NumberFormat('en',{minimumFractionDigits:1,maximumFractionDigits:1});
   const esc = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
   let data, ready=false, themeFromHost=false, lastHeight=0, lastWidth=0, resizeFrame=0, animationFrame=0;
-  let activeMark=null, pinned=false, closeTimer=0;
+
   const rows = new Map();
   const SVG_CSS = `
     .time-chart{font-family:var(--font-source-sans-3);font-size:14px}
@@ -164,13 +164,8 @@
     button.setAttribute('aria-pressed',String(!state.hidden.has(key)));render(true);updateStatus();
   }));
 
-  function hideTooltip() {
-    clearTimeout(closeTimer);tooltip.hidden=true;activeMark=null;pinned=false;
-    stage.querySelector('.crosshair')?.setAttribute('visibility','hidden');
-  }
+  function hideTooltip(){tooltipUI.close();}
   function showTooltip(mark) {
-    if(!mark||!ready)return;
-    clearTimeout(closeTimer);activeMark=mark;
     const index=Number(mark.dataset.index),panel=Number(mark.dataset.panel),year=2014+index;
     const selected=visible(),barMaximum=30;
     tooltip.innerHTML=`<div class="tooltip-heading">${year}</div><div class="tooltip-geography">European Union (EU27)</div><div class="tooltip-items" data-scale-max="${barMaximum}">${selected.map(m=>{
@@ -188,31 +183,20 @@
     const cross=stage.querySelector('.crosshair');
     for(const [a,v] of Object.entries({x1:p.sx(year),x2:p.sx(year),y1:p.top,y2:p.bottom,visibility:'visible'}))cross.setAttribute(a,v);
   }
-  function scheduleHide(){if(!pinned)closeTimer=setTimeout(hideTooltip,160);}
-  stage.addEventListener('pointermove',event=>{
-    if(pinned||stage.dataset.animation==='running')return;
-    const mark=event.target.closest('.year-target');if(mark&&mark!==activeMark)showTooltip(mark);
-  });
-  stage.addEventListener('pointerleave',scheduleHide);
-  tooltip.addEventListener('pointerenter',()=>clearTimeout(closeTimer));
-  tooltip.addEventListener('pointerleave',scheduleHide);
-  stage.addEventListener('focusin',event=>{const mark=event.target.closest('.year-target');if(mark){pinned=false;showTooltip(mark);}});
-  stage.addEventListener('focusout',scheduleHide);
-  stage.addEventListener('click',event=>{const mark=event.target.closest('.year-target');if(mark){showTooltip(mark);pinned=true;}});
-  document.addEventListener('pointerdown',event=>{if(!event.target.closest('.year-target')&&!tooltip.contains(event.target))hideTooltip();});
-  document.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
+  const tooltipUI=EFReportTooltip({stage,tooltip,target:'.year-target',draw:showTooltip,
+    canShow:()=>ready&&stage.dataset.animation!=='running',
+    clear:()=>stage.querySelector('.crosshair')?.setAttribute('visibility','hidden')});
   stage.addEventListener('keydown',event=>{
     const mark=event.target.closest('.year-target');if(!mark)return;
-    if(event.key==='Enter'||event.key===' '){event.preventDefault();showTooltip(mark);pinned=!pinned;return;}
     let next=Number(mark.dataset.index);
     if(event.key==='ArrowRight')next=Math.min(11,next+1);
     else if(event.key==='ArrowLeft')next=Math.max(0,next-1);
     else if(event.key==='Home')next=0;
     else if(event.key==='End')next=11;else return;
-    event.preventDefault();
+    event.preventDefault();tooltipUI.release();
     stage.querySelectorAll(`.year-target[data-panel="${mark.dataset.panel}"]`).forEach(el=>el.setAttribute('tabindex','-1'));
     const target=stage.querySelector(`.year-target[data-panel="${mark.dataset.panel}"][data-index="${next}"]`);
-    target.setAttribute('tabindex','0');target.focus({preventScroll:true});
+    target.setAttribute('tabindex','0');target.focus({preventScroll:true});tooltipUI.preview(target);
   });
 
   const quote=v=>/[",\r\n]/.test(String(v))?`"${String(v).replace(/"/g,'""')}"`:String(v);

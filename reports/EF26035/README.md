@@ -35,3 +35,8 @@ Parent messages support hello, set-theme, export and resize, accepting only wind
 `EF26035_F1_A.html` uses the EU27 annual series from `Figure 1 data.xlsx`, sheet `House price to income`, row 8 for years and row 10 for values, AD10:AZ10 in alternate columns (2014–2025). Source: Eurostat `tipsho60`, updated 3 November 2026, extracted 11 November 2026. Values are already indexed to 2025 = 100; they are not rebased. The report's 85–110 scale, reference line at 100 and labels for 2014, 2022 and 2025 are retained. Tooltips display up to two decimals with the index unit, without percentage bars. No national observations are included in either Figure 1 dataset.
 
 Both pages use the shared `EF26035_F1.js`, CSS and palette. Browser titles and PNG/CSV downloads carry their report codes. Visible chart headings remain descriptive, following the embed convention. The original B/C URL redirects to the coded report page, preserving query parameters and fragments so existing embeds continue to work.
+
+## Shared tooltips
+All report pages use `EF26035_tooltip.js` and `EF26035_tooltip.css`: Source Sans 3, 15px semibold headings, 14px body/values, one 1px theme border and 8px radius. Hover previews, click/Enter/Space pins, repeating on the same target closes, another target transfers the pin, outside click or Escape closes. Pointer movement cannot replace a pinned tooltip. Layout/filter changes close stale tooltips. No focus outline surrounds an entire chart or tooltip box.
+
+Figure 2 only exposes tooltip targets on the EU27 diamonds. Anonymous Member State dots remain visual observations, without hover, click or keyboard tooltips. Keyboard focus is indicated locally at the EU27 diamond.

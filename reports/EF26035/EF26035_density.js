@@ -6,7 +6,7 @@
   const state = { mode: 'multiple', indicator: 'housing_barometer', hiddenGroups: new Set() };
   const number = new Intl.NumberFormat(document.documentElement.lang,{minimumFractionDigits:1,maximumFractionDigits:2});
   let data, ready=false, themeFromHost=false, lastHeight=0, lastWidth=0, resizeFrame=0;
-  let activeMark=null, pinned=false, closeTimer=0, morphFrame=0;
+  let morphFrame=0;
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   const samples=new Map(), curves=new Map();
   const esc=(v)=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
@@ -183,18 +183,8 @@
   }
   document.querySelectorAll('.legend-item').forEach(button=>button.addEventListener('click',()=>toggleGroup(button.dataset.income)));
 
-  function closeTooltip(force=false) {
-    if(pinned&&!force)return;
-    clearTimeout(closeTimer);
-    tooltip.hidden=true;
-    if(activeMark)activeMark.classList.remove('is-active');
-    activeMark=null;pinned=false;
-  }
-  function showTooltip(mark,pin=false,pointer=null) {
-    if(!mark||state.hiddenGroups.has(mark.dataset.group)||(!pin&&pinned&&activeMark!==mark))return;
-    clearTimeout(closeTimer);
-    if(activeMark)activeMark.classList.remove('is-active');
-    activeMark=mark;mark.classList.add('is-active');pinned=pin;
+  function closeTooltip(){tooltipUI.close();}
+  function showTooltip(mark,pointer=null) {
     const metric=data.measures.find(m=>m.key===mark.dataset.metric),group=mark.dataset.group;
     const isMean=mark.classList.contains('mean-point');
     if(isMean){
@@ -211,18 +201,10 @@
     tooltip.style.top=`${Math.max(2,anchorY-outer.top-box.height-12)}px`;
   }
   const tooltipTarget='.rug-point,.mean-point';
-  stage.addEventListener('pointerover',event=>{const mark=event.target.closest(tooltipTarget);if(mark)showTooltip(mark,false,event);});
-  stage.addEventListener('pointerout',event=>{if(event.target.closest(tooltipTarget))closeTimer=setTimeout(()=>closeTooltip(),180);});
-  tooltip.addEventListener('pointerenter',()=>clearTimeout(closeTimer));
-  tooltip.addEventListener('pointerleave',()=>closeTooltip());
-  stage.addEventListener('focusin',event=>{if(event.target.closest(tooltipTarget))showTooltip(event.target.closest(tooltipTarget));});
-  stage.addEventListener('focusout',()=>{closeTimer=setTimeout(()=>{if(!document.activeElement?.closest(tooltipTarget))closeTooltip();},50);});
-  stage.addEventListener('click',event=>{const mark=event.target.closest(tooltipTarget);if(mark)showTooltip(mark,true,event);});
-  document.addEventListener('pointerdown',event=>{if(!event.target.closest(tooltipTarget)&&!tooltip.contains(event.target))closeTooltip(true);});
-  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeTooltip(true);});
+  const tooltipUI=EFReportTooltip({stage,tooltip,target:tooltipTarget,draw:showTooltip,
+    canShow:mark=>ready&&!state.hiddenGroups.has(mark.dataset.group)});
   stage.addEventListener('keydown',event=>{
     const mark=event.target.closest(tooltipTarget);if(!mark)return;
-    if(event.key==='Enter'||event.key===' '){event.preventDefault();showTooltip(mark,true);return;}
     if(mark.classList.contains('mean-point'))return;
     const rows=samples.get(key(mark.dataset.metric,mark.dataset.group));let next=Number(mark.dataset.index);
     if(event.key==='ArrowRight')next=Math.min(rows.length-1,next+1);
@@ -230,10 +212,10 @@
     else if(event.key==='Home')next=0;
     else if(event.key==='End')next=rows.length-1;
     else return;
-    event.preventDefault();pinned=false;
+    event.preventDefault();tooltipUI.release();
     stage.querySelectorAll(`.rug-point[data-metric="${mark.dataset.metric}"][data-group="${mark.dataset.group}"]`).forEach(point=>point.setAttribute('tabindex','-1'));
     const target=stage.querySelector(`[data-metric="${mark.dataset.metric}"][data-group="${mark.dataset.group}"][data-index="${next}"]`);
-    target.setAttribute('tabindex','0');target.focus({preventScroll:true});
+    target.setAttribute('tabindex','0');target.focus({preventScroll:true});tooltipUI.preview(target);
   });
 
   function changeMode(mode) {
