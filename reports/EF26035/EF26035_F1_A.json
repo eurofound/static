@@ -1,0 +1,122 @@
+{
+  "id": "EF26035_F1_A",
+  "title": "EF26035_F1_A — House price-to-income ratio, EU27, 2014–2025",
+  "geography": "European Union – 27 countries (from 2020)",
+  "geography_code": "EU27_2020",
+  "unit": "Index (2025 = 100)",
+  "unitLabel": "Index (2025 = 100)",
+  "valueSuffix": "",
+  "precision": 2,
+  "source": "Eurostat. Supplied Figure 1 data.xlsx. Dataset tipsho60.",
+  "extracted": "2026-11-11",
+  "notes": "House price-to-income ratio indexed to 2025 = 100. Supplied index values are used without rebasing.",
+  "description": "Annual EU27 house price-to-income ratio, indexed to 2025 = 100. The y-axis runs from 85 to 110, matching the report. The dashed line marks 100.",
+  "exportSource": "Source: Eurostat. Dataset tipsho60. Extracted 11 November 2026.",
+  "exportNote": "Unit: index (2025 = 100). Geography: EU27 (from 2020). Dashed line: 100 reference level.",
+  "axis": {
+    "min": 85,
+    "max": 110,
+    "step": 5,
+    "reference": 100
+  },
+  "measures": [
+    {
+      "key": "house_price_to_income",
+      "panel": "A",
+      "label": "House price-to-income ratio",
+      "sheet": "House price to income",
+      "dataset": "tipsho60",
+      "updated": "2026-11-03",
+      "highlightYears": [
+        2014,
+        2022
+      ]
+    }
+  ],
+  "records": [
+    {
+      "indicator": "house_price_to_income",
+      "year": 2014,
+      "value": 93.58,
+      "flag": "",
+      "source_cell": "'House price to income'!AD10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2015,
+      "value": 93.65,
+      "flag": "",
+      "source_cell": "'House price to income'!AF10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2016,
+      "value": 95.18,
+      "flag": "",
+      "source_cell": "'House price to income'!AH10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2017,
+      "value": 96.54,
+      "flag": "",
+      "source_cell": "'House price to income'!AJ10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2018,
+      "value": 98.26,
+      "flag": "",
+      "source_cell": "'House price to income'!AL10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2019,
+      "value": 99.63,
+      "flag": "",
+      "source_cell": "'House price to income'!AN10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2020,
+      "value": 103.73,
+      "flag": "",
+      "source_cell": "'House price to income'!AP10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2021,
+      "value": 106.27,
+      "flag": "",
+      "source_cell": "'House price to income'!AR10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2022,
+      "value": 107.34,
+      "flag": "",
+      "source_cell": "'House price to income'!AT10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2023,
+      "value": 100.22,
+      "flag": "",
+      "source_cell": "'House price to income'!AV10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2024,
+      "value": 98.12,
+      "flag": "",
+      "source_cell": "'House price to income'!AX10"
+    },
+    {
+      "indicator": "house_price_to_income",
+      "year": 2025,
+      "value": 100,
+      "flag": "",
+      "source_cell": "'House price to income'!AZ10"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+geography_code,geography,indicator,indicator_label,year,value,unit,flag,flag_label,source_dataset,source_cell
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2014,11.5,Percentage,e,Estimated,tespm140,'HCO'!B13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2015,11.2,Percentage,e,Estimated,tespm140,'HCO'!D13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2016,10.9,Percentage,e,Estimated,tespm140,'HCO'!F13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2017,10.1,Percentage,e,Estimated,tespm140,'HCO'!H13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2018,9.6,Percentage,e,Estimated,tespm140,'HCO'!J13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2019,9.4,Percentage,,,tespm140,'HCO'!L13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2020,7.8,Percentage,,,tespm140,'HCO'!N13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2021,8.7,Percentage,,,tespm140,'HCO'!P13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2022,8.7,Percentage,,,tespm140,'HCO'!R13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2023,8.8,Percentage,,,tespm140,'HCO'!T13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2024,8.2,Percentage,,,tespm140,'HCO'!V13
+EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2025,7.6,Percentage,,,tespm140,'HCO'!X13
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2014,10.4,Percentage,e,Estimated,ilc_mdes01,'Inability to keep home adequate'!X12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2015,9.6,Percentage,e,Estimated,ilc_mdes01,'Inability to keep home adequate'!Z12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2016,9,Percentage,e,Estimated,ilc_mdes01,'Inability to keep home adequate'!AB12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2017,8.1,Percentage,e,Estimated,ilc_mdes01,'Inability to keep home adequate'!AD12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2018,7.6,Percentage,e,Estimated,ilc_mdes01,'Inability to keep home adequate'!AF12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2019,6.9,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AH12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2020,7.5,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AJ12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2021,6.9,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AL12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2022,9.3,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AN12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2023,10.6,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AP12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2024,9.2,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AR12
+EU27_2020,European Union – 27 countries (from 2020),unable_to_keep_home_warm,Inability to keep home adequately warm,2025,8.8,Percentage,,,ilc_mdes01,'Inability to keep home adequate'!AT12

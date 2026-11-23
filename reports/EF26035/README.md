@@ -1,6 +1,6 @@
 # EF26035 interactive report figures
 
-Published pages: EF26035_F2.html, EF26035_F3.html and EF26035_F4.html. Styling follows the established housing-income-distribution, housing-tenure-distribution and housing-figure-1 embeds. No on-chart download icon; exports are supplied through the Eurofound parent embed protocol.
+Published pages: EF26035_F1_A.html, EF26035_F1_BC.html, EF26035_F2.html, EF26035_F3.html and EF26035_F4.html. Styling follows the established housing-income-distribution, housing-tenure-distribution and housing-figure-1 embeds. No on-chart download icon; exports are supplied through the Eurofound parent embed protocol.
 
 ## Sources and mappings
 Source: Eurofound Housing Barometer. Real data supplied in `FIgure 2, 3, 4 data.xlsx`, checked against `EF26035_Early-insights article_FOR AR.docx` on 23 November 2026. Document editorial instructions were not treated as new user requests.
@@ -28,3 +28,10 @@ Four panels default, with shared y scales recalculated on legend selection. Sing
 
 ## Downloads and verification
 Parent messages support hello, set-theme, export and resize, accepting only window.parent. Figures 3/4 export PNG/CSV; Figure 2 exports PNG/SVG/CSV. Exports carry coded filenames, title/source/method notes and no country identifiers. Data validation checks each measure/group against the workbook, aggregate equality, score ranges, and sample counts. Browser checks cover real distributions, EU27 tooltips, anonymous score tooltips, legend rescaling, single view, title typography and export responses.
+
+## Figure 1
+`EF26035_F1_BC.html` is the report-folder version of `charts/housing-figure-1/`, retaining the two-panel/combined views, green/red colours, comparison tooltips with fixed 30% bars, 300ms transitions and supplied estimate flags. The old URL remains available for existing embeds. All 24 observations and flags were checked against the workbook source cells.
+
+`EF26035_F1_A.html` uses the EU27 annual series from `Figure 1 data.xlsx`, sheet `House price to income`, row 8 for years and row 10 for values, AD10:AZ10 in alternate columns (2014–2025). Source: Eurostat `tipsho60`, updated 3 November 2026, extracted 11 November 2026. Values are already indexed to 2025 = 100; they are not rebased. The report's 85–110 scale, reference line at 100 and labels for 2014, 2022 and 2025 are retained. Tooltips display up to two decimals with the index unit, without percentage bars. No national observations are included in either Figure 1 dataset.
+
+Both pages use the shared `EF26035_F1.js`, CSS and palette. Browser titles and PNG/CSV downloads carry their report codes. Visible chart headings remain descriptive, following the embed convention. The original B/C URL redirects to the coded report page, preserving query parameters and fragments so existing embeds continue to work.

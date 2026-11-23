@@ -1,0 +1,203 @@
+{
+  "title": "EF26035_F1_BC — Housing pressures in the EU27, 2014–2025",
+  "geography": "European Union – 27 countries (from 2020)",
+  "geography_code": "EU27_2020",
+  "unit": "Percentage",
+  "source": "Eurostat, EU-SILC. Supplied Figure 1 data.xlsx.",
+  "extracted": "2026-11-11",
+  "notes": "Values for 2014–2018 are flagged as estimated in the source.",
+  "measures": [
+    {
+      "key": "housing_cost_overburden",
+      "panel": "B",
+      "label": "Housing cost overburden rate",
+      "sheet": "HCO",
+      "dataset": "tespm140",
+      "updated": "2026-10-29"
+    },
+    {
+      "key": "unable_to_keep_home_warm",
+      "panel": "C",
+      "label": "Inability to keep home adequately warm",
+      "sheet": "Inability to keep home adequate",
+      "dataset": "ilc_mdes01",
+      "updated": "2026-10-20"
+    }
+  ],
+  "records": [
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2014,
+      "value": 11.5,
+      "flag": "e",
+      "source_cell": "'HCO'!B13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2015,
+      "value": 11.2,
+      "flag": "e",
+      "source_cell": "'HCO'!D13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2016,
+      "value": 10.9,
+      "flag": "e",
+      "source_cell": "'HCO'!F13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2017,
+      "value": 10.1,
+      "flag": "e",
+      "source_cell": "'HCO'!H13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2018,
+      "value": 9.6,
+      "flag": "e",
+      "source_cell": "'HCO'!J13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2019,
+      "value": 9.4,
+      "flag": "",
+      "source_cell": "'HCO'!L13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2020,
+      "value": 7.8,
+      "flag": "",
+      "source_cell": "'HCO'!N13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2021,
+      "value": 8.7,
+      "flag": "",
+      "source_cell": "'HCO'!P13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2022,
+      "value": 8.7,
+      "flag": "",
+      "source_cell": "'HCO'!R13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2023,
+      "value": 8.8,
+      "flag": "",
+      "source_cell": "'HCO'!T13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2024,
+      "value": 8.2,
+      "flag": "",
+      "source_cell": "'HCO'!V13"
+    },
+    {
+      "indicator": "housing_cost_overburden",
+      "year": 2025,
+      "value": 7.6,
+      "flag": "",
+      "source_cell": "'HCO'!X13"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2014,
+      "value": 10.4,
+      "flag": "e",
+      "source_cell": "'Inability to keep home adequate'!X12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2015,
+      "value": 9.6,
+      "flag": "e",
+      "source_cell": "'Inability to keep home adequate'!Z12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2016,
+      "value": 9,
+      "flag": "e",
+      "source_cell": "'Inability to keep home adequate'!AB12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2017,
+      "value": 8.1,
+      "flag": "e",
+      "source_cell": "'Inability to keep home adequate'!AD12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2018,
+      "value": 7.6,
+      "flag": "e",
+      "source_cell": "'Inability to keep home adequate'!AF12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2019,
+      "value": 6.9,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AH12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2020,
+      "value": 7.5,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AJ12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2021,
+      "value": 6.9,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AL12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2022,
+      "value": 9.3,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AN12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2023,
+      "value": 10.6,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AP12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2024,
+      "value": 9.2,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AR12"
+    },
+    {
+      "indicator": "unable_to_keep_home_warm",
+      "year": 2025,
+      "value": 8.8,
+      "flag": "",
+      "source_cell": "'Inability to keep home adequate'!AT12"
+    }
+  ],
+  "id": "EF26035_F1_BC",
+  "unitLabel": "Percentage of population",
+  "valueSuffix": "%",
+  "description": "Annual percentages. Both indicators use the same scale. Values for 2014 to 2018 are estimated.",
+  "exportSource": "Source: Eurostat, EU-SILC. Datasets tespm140 and ilc_mdes01. Extracted 11 November 2026.",
+  "exportNote": "Values for 2014–2018 are estimated. Unit: percentage. Geography: EU27 (from 2020)."
+}
