@@ -122,6 +122,11 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
       o.xAxis.labels = {style:{fontSize:width < 600 ? '12px' : '14px', textOverflow:'none'}, distance:12};
       o.pane = polarPane(width < 600 ? '55%' : '70%');
       o.chart.spacing = [12, width < 600 ? 28 : 36, 28, width < 600 ? 28 : 36];
+      o.series.forEach(series=>{
+        series.id=state.tab==='radar2'?`radar-country:${series.name}`:'radar-series';
+        series.data=series.data.map((item,x)=>({...(item||{y:null}),x,
+          id:`${series.id}:axis:${o.xAxis.categories[x]}`,color:series.color}));
+      });
     }
   });
   return view;
@@ -263,7 +268,7 @@ function chartFootnotes(view) {
   if(view.lowData) notes.push(LOW_DATA_TEXT);
   return [['Source',SOURCE_TEXT],...(notes.length ? [['Notes',notes.join(' ')]] : [])];
 }
-function updateBarPoints(series, data, motion) {
+function updateSeriesPoints(series, data, motion) {
   // Highcharts can match an unseen ID by its old x position, overwriting a
   // different country when a newly selected country sorts ahead of it.
   const existing=new Map(series.points.map(point=>[point.id,point]));
@@ -280,6 +285,32 @@ function updateBarPoints(series, data, motion) {
   [...series.points].filter(point=>!wanted.has(point.id)).reverse().forEach(point=>point.remove(false,motion));
   data.filter(options=>!existing.has(options.id)).forEach(options=>series.addPoint(options,false,false,motion));
 }
+function updateRadarChart(chart, options, height, motion, resize) {
+  chart.tooltip.hide(0);
+  chart.update({title:options.title,subtitle:options.subtitle,tooltip:options.tooltip,
+    accessibility:options.accessibility,legend:options.legend},false,false,false);
+  chart.xAxis[0].setCategories(options.xAxis.categories,false);
+  chart.yAxis[0].update(options.yAxis,false);
+  if(resize)chart.update({pane:options.pane,chart:{spacing:options.chart.spacing},xAxis:{labels:options.xAxis.labels}},false,false,false);
+  const wanted=new Set(options.series.map(series=>series.id));
+  [...chart.series].filter(series=>!wanted.has(series.options.id)).forEach(series=>series.remove(false));
+  options.series.forEach(next=>{
+    const series=chart.series.find(series=>series.options.id===next.id);
+    if(!series){chart.addSeries({...next,animation:motion},false,motion);return;}
+    series.name=next.name;series.color=next.color;
+    Object.assign(series.options,{name:next.name,color:next.color});
+    Object.assign(series.userOptions,{name:next.name,color:next.color});
+    updateSeriesPoints(series,next.data,motion);
+  });
+  chart.isDirtyLegend=true;
+  chart.renderTo.style.height=`${height}px`;
+  if(chart.chartHeight!==height||chart.chartWidth!==chart.renderTo.clientWidth)chart.setSize(chart.renderTo.clientWidth,height,motion);
+  else chart.redraw(motion);
+  chart.series.forEach(series=>{
+    series.graph?.attr({stroke:series.color});
+    series.area?.attr({fill:Highcharts.color(series.color).setOpacity(series.options.fillOpacity).get()});
+  });
+}
 function renderView(opts={}) {
   if(!dataLoaded)return;
   releaseTooltip(); syncControls();
@@ -292,8 +323,8 @@ function renderView(opts={}) {
   }));
   els.notes.hidden=false; setStatus(view);
   const next=[];
-  const reusable=spec=>spec.options.chart.type==='bar';
-  const reuseChart=(old,spec)=>old && (!opts.noAnimation || opts.resize) && old.housingTab===state.tab && reusable(spec) && old.options.chart.type==='bar';
+  const reuseChart=(old,spec)=>old && (!opts.noAnimation || opts.resize) && old.housingTab===state.tab &&
+    ((spec.options.chart.type==='bar'&&old.options.chart.type==='bar') || (spec.options.chart.polar&&old.options.chart.polar));
   // Set up the entire grid before drawing maps. Otherwise the first map briefly
   // fits alongside stale/empty slots, then changes size when those slots disappear.
   const mounts=view.charts.map((spec,i)=>{
@@ -315,6 +346,10 @@ function renderView(opts={}) {
     const o=Highcharts.merge(baseOptions(T,false),spec.options);
     if(reuse){
       const motion=!opts.noAnimation && old.housingUnit===view.unit?motionOptions():false;
+      if(o.chart.polar){
+        updateRadarChart(old,o,spec.height,motion,opts.resize);
+        old.housingUnit=view.unit;next.push(old);return;
+      }
       old.tooltip.hide(0);
       old.update({title:o.title,subtitle:o.subtitle,tooltip:o.tooltip,accessibility:o.accessibility,legend:o.legend},false,false,false);
       old.xAxis[0].setCategories(o.xAxis.categories,false);
@@ -328,7 +363,7 @@ function renderView(opts={}) {
           Object.assign(existing.userOptions,{pointPadding,groupPadding,crisp});
           existing.name=series.name;existing.options.name=series.name;
           existing.color=series.color;existing.options.color=series.color;old.isDirtyLegend=true;
-          updateBarPoints(existing,series.data,motion);
+          updateSeriesPoints(existing,series.data,motion);
         }else old.addSeries(series,false,motion);
       });
       old.renderTo.style.height=`${spec.height}px`;
