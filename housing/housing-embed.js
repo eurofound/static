@@ -2,6 +2,7 @@
 /* ---------- Constants ---------- */
 const SOURCE_TEXT = 'Calculations based on EU SILC microdata for 2023';
 const REFERENCE_YEAR = '2023';
+const DEFAULT_INDICATOR = 'Inability to keep home warm or cool';
 const MIN_COUNT = 50;
 const motionOptions = () => reduceMotion.matches ? false : { duration: 270 };
 const LOW_DATA_TEXT = `Values based on fewer than ${MIN_COUNT} observations are not shown.`;
@@ -110,7 +111,7 @@ let activeCharts = [];
 let currentView = null;
 
 const state = {
-  tab: 'bar', topic: null, indicator: null, topCat: null, allCats: [],
+  tab: 'map', topic: null, indicator: null, topCat: null, allCats: [],
   barCategories: [], mapCategories: [], barCountries: [], radarCountries: [],
   barSort: 'alpha', cpCountry: null, globalIndicators: [], cpCategory: 'All', r2Countries: [], mapViewMode: 'national'
 };
@@ -327,7 +328,7 @@ function init() {
   dataLoaded = true;
 
   const topics = [...new Set(rawData.map((d) => d['Topic']))].sort();
-  state.topic = topics[0];
+  state.topic = rawData.find(d => d['Indicator name'] === DEFAULT_INDICATOR)?.Topic || topics[0];
   els.topics.replaceChildren(...topics.map((t) => {
     const b = document.createElement('button');
     b.type = 'button';
@@ -340,7 +341,7 @@ function init() {
 
   els.ind.addEventListener('change', (e) => { state.indicator = e.target.value; updateBreakdowns(); renderView(); });
   els.cat.addEventListener('change', (e) => { state.topCat = e.target.value; updateCategoryList(); renderView(); });
-  updateIndicators();
+  updateIndicators(DEFAULT_INDICATOR);
   byId('indicator-prev').onclick = () => cycleIndicator(-1);
   byId('indicator-next').onclick = () => cycleIndicator(1);
   els.sort.onclick = () => { state.barSort = state.barSort === 'desc' ? 'alpha' : 'desc'; renderView(); };
@@ -423,9 +424,9 @@ function setTopic(t) {
   renderView();
 }
 
-function updateIndicators() {
+function updateIndicators(preferred) {
   const inds = [...new Set(rawData.filter((d) => d['Topic'] === state.topic).map((d) => d['Indicator name']))].sort();
-  state.indicator = inds[0];
+  state.indicator = inds.includes(preferred) ? preferred : inds[0];
   fillSelect(els.ind, inds, state.indicator);
   updateBreakdowns();
 }
@@ -669,9 +670,9 @@ function barView(t, view) {
 }
 
 function colorAxisFor(t, ind, max) {
-  const bounds = axisBounds(max ?? mapMaximum(ind), !isYears(ind));
+  const bounds = mapBounds(max);
   return {
-    min: 0, max: bounds.max, tickPositions: bounds.ticks, reversed:false,
+    min: 0, max: bounds.max, tickPositions: bounds.ticks, startOnTick:false, endOnTick:false, reversed:false,
     stops: t.ramp.map((c, i, a) => [i / (a.length - 1), c]),
     gridLineColor: t.background,
     marker: { color: t.labelStrong },
@@ -717,7 +718,7 @@ function mapView(t, view) {
         subtitle: { text: 'NUTS regions' },
         mapView: { projection: { name: 'WebMercator' }, fitToGeometry: EUROPE_BOX, padding: 8 },
         mapNavigation: { enabled: true, enableMouseWheelZoom: false, buttonOptions: { verticalAlign: 'bottom' } },
-        colorAxis: colorAxisFor(t, ind, mapMaximum(ind)),
+        colorAxis: colorAxisFor(t, ind, Math.max(0,...data.map(d => d.value).filter(Number.isFinite))),
         legend: mapLegend(),
         tooltip: { formatter() { return mapTooltip(this.point || this, ind); } },
         accessibility: { description: `Map of ${ind} by NUTS region.` },
@@ -742,7 +743,8 @@ function mapView(t, view) {
   view.lowData = shown.some(isSuppressed);
   const visible = shown.filter((d) => !isSuppressed(d));
   // Side-by-side maps share one scale so their colours compare.
-  const max = mapMaximum(ind);
+  const mappedCodes = new Set(nationalGeo.features.map(f => f.properties?.id || f.id));
+  const max = Math.max(0,...visible.filter(d => mappedCodes.has(d['Country Code'])).map(d => d.Value).filter(Number.isFinite));
   cats.forEach((cat) => {
     const sub = breakdownLabel(state.topCat, cat);
     view.charts.push({

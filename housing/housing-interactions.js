@@ -79,8 +79,38 @@ function axisBounds(highest, percentage = true) {
 function mapMaximum(indicator) {
   return Math.max(0, ...(rowsByIndicator.get(indicator) || []).filter(r => !isSuppressed(r)).map(r => r.Value).filter(Number.isFinite));
 }
+function mapBounds(highest) {
+  if (!(highest > 0) || !Number.isFinite(highest)) return {max:1,ticks:[0,.2,.4,.6,.8,1]};
+  // Round the ceiling to two significant figures instead of adding empty bands.
+  const rounding = 10 ** (Math.floor(Math.log10(highest)) - 1);
+  const max = Number((Math.ceil(highest / rounding - 1e-12) * rounding).toPrecision(12));
+  const target = max / 5, magnitude = 10 ** Math.floor(Math.log10(target));
+  const step = [1,2,2.5,5,10].map(n => n * magnitude)
+    .reduce((best,n) => Math.abs(n-target) < Math.abs(best-target) ? n : best);
+  const ticks = [0];
+  for (let value=step; value < max-step*.7; value+=step) ticks.push(Number(value.toPrecision(12)));
+  ticks.push(max);
+  return {max,ticks};
+}
 function mapLegend() {
   return {layout:'vertical', align:'left', verticalAlign:'middle', symbolHeight:260, symbolWidth:16, symbolRadius:0, padding:8, margin:24, title:{text:null}};
+}
+function mapMargins(width) {
+  // Reserve the same map frame regardless of title wrapping or legend digits.
+  return [width < 600 ? 142 : 96,8,12,110];
+}
+function narrowBarLabels(chart) {
+  chart.series.forEach(series => series.points.forEach(point => {
+    const text = point.dataLabel?.text?.element;
+    if (!text) return;
+    // Keep the existing font height and end alignment, including in SVG/PNG exports.
+    text.removeAttribute('textLength');
+    const width = text.getComputedTextLength();
+    if (width > 0) {
+      text.setAttribute('textLength', String(width * .92));
+      text.setAttribute('lengthAdjust', 'spacingAndGlyphs');
+    }
+  }));
 }
 function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
   view.charts.forEach((spec, chartIndex) => {
@@ -89,6 +119,7 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
     o.subtitle = {text: [o.subtitle?.text, view.unit.replace('Unit: ', '')].filter(Boolean).join(' · ')};
     o.custom = {view:state.tab, indicator:state.indicator};
     if (bar) {
+      o.chart.events = {...o.chart.events, render(){narrowBarLabels(this);}};
       o.xAxis={...o.xAxis,gridLineWidth:0,tickLength:0};
       const highest = Math.max(0,...o.series.flatMap(series => series.data.map(p => typeof p === 'number' ? p : p?.y)).filter(Number.isFinite));
       const sameUnit = !view.unit.includes('years') || !view.unit.includes('%');
@@ -105,6 +136,7 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
           const fits = Number.isFinite(point.y) && point.y / bounds.max * available >= label.length * 8 + 17;
           return {...point, x:index, id: `${series.id}:${point.id || `point:${o.xAxis.categories[index]}`}`, color:series.color,
             custom:{indicator}, dataLabels:{inside:fits, align:fits ? 'right' : 'left', x:fits ? -6 : 5,
+              verticalAlign:'middle', y:2,
               style:{color:fits ? tokens.onData : tokens.text, textOutline:'none', fontSize:'15px', fontWeight:'600'},
               formatter(){return Number.isFinite(this.y) ? fmtShort(this.y, indicator) : '';}}};
         });
@@ -114,6 +146,7 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
     if (spec.ctor === 'mapChart') {
       o.chart.animation = false;
       o.chart.reflow = false;
+      o.chart.margin = mapMargins(width);
       o.chart.events = {render(){renderMapLegend(this,tokens);}};
       o.mapNavigation.buttonOptions.align = 'right';
       o.legend = mapLegend();
@@ -169,7 +202,9 @@ function mapTooltip(point, indicator, subLabel) {
     const national = rows.find(r => !isNutsRow(r) && !isSuppressed(r) && (r['Country Code'] === cc || r['Country Code'] === alt) && r['Top category'] === 'All' && r.Category === 'All');
     if (national) items.push(tooltipItem(`${national['Country Name']} — national`,national.Value,indicator,T.series[7],'context'));
   }
-  return tooltipHTML(chart,{title:name,subtitle:[indicator,subLabel,REFERENCE_YEAR].filter(Boolean).join(' · '),items});
+  const axis = chart.colorAxis[0];
+  return tooltipHTML(chart,{title:name,subtitle:[indicator,subLabel,REFERENCE_YEAR].filter(Boolean).join(' · '),items,
+    colorScale:{min:axis.min,max:axis.max}});
 }
 
 function releaseTooltip() {
@@ -210,12 +245,13 @@ document.addEventListener('keydown',event => {
 function renderMapLegend(chart,tokens) {
   const axis = chart.colorAxis?.[0], symbol = axis?.legendItem?.symbol;
   if (!symbol || !(axis.max > axis.min)) return;
-  const box = symbol.getBBox();
+  const symbolWidth = Number(symbol.attr('width'));
   // SVG furniture also survives getSVG() and PNG exports.
-  if (!chart.housingNoData) {
-    const group = chart.renderer.g('housing-no-data').add(chart.legend.group);
-    chart.renderer.rect(0,0,14,14,1).attr({fill:tokens.noData,stroke:tokens.border,'stroke-width':1}).add(group);
-    chart.renderer.text('No data',22,12).css({fontSize:'14px',color:tokens.text}).add(group);
+  if (!chart.housingNoData?.element?.isConnected || chart.housingNoData.element.parentNode !== axis.legendItem.group.element) {
+    chart.housingNoData?.destroy();
+    const group = chart.renderer.g('housing-no-data').add(axis.legendItem.group);
+    chart.renderer.rect(0,0,symbolWidth,16,1).attr({fill:tokens.noData,stroke:tokens.border,'stroke-width':1}).add(group);
+    chart.renderer.text('No data',symbolWidth + 8,12).css({fontSize:'14px',color:tokens.text}).add(group);
     chart.housingNoData = group;
   }
   const x = Number(symbol.attr('x')), y = Number(symbol.attr('y'));
@@ -311,6 +347,21 @@ function updateRadarChart(chart, options, height, motion, resize) {
     series.area?.attr({fill:Highcharts.color(series.color).setOpacity(series.options.fillOpacity).get()});
   });
 }
+function updateMapChart(chart, options, height) {
+  const width=chart.renderTo.clientWidth,center=[...chart.mapView.center],zoom=chart.mapView.zoom;
+  const sameSize=width===chart.chartWidth&&height===chart.chartHeight;
+  chart.tooltip.hide(0);chart.clearMapRange?.();
+  chart.housingNoData?.destroy();chart.housingNoData=null;
+  chart.update({title:options.title,subtitle:options.subtitle,tooltip:options.tooltip,
+    accessibility:options.accessibility,legend:options.legend,chart:{margin:mapMargins(width)}},false,false,false);
+  chart.colorAxis[0].update(options.colorAxis,false);
+  const series=chart.series[0],next=options.series[0];
+  series.name=next.name;series.options.name=next.name;
+  series.setData(next.data,false,false,true);
+  if(sameSize){chart.mapView.setView(center,zoom,false,false);chart.redraw(false);}
+  else chart.setSize(width,height,false);
+  renderMapLegend(chart,T);
+}
 function renderView(opts={}) {
   if(!dataLoaded)return;
   releaseTooltip(); syncControls();
@@ -324,14 +375,16 @@ function renderView(opts={}) {
   els.notes.hidden=false; setStatus(view);
   const next=[];
   const reuseChart=(old,spec)=>old && (!opts.noAnimation || opts.resize) && old.housingTab===state.tab &&
-    ((spec.options.chart.type==='bar'&&old.options.chart.type==='bar') || (spec.options.chart.polar&&old.options.chart.polar));
+    ((spec.options.chart.type==='bar'&&old.options.chart.type==='bar') || (spec.options.chart.polar&&old.options.chart.polar) ||
+      (spec.ctor==='mapChart'&&old.mapView&&old.housingMapMode===state.mapViewMode));
   // Set up the entire grid before drawing maps. Otherwise the first map briefly
   // fits alongside stale/empty slots, then changes size when those slots disappear.
   const mounts=view.charts.map((spec,i)=>{
     const old=previous[i];
     if(reuseChart(old,spec))return null;
-    const preserveZoom=opts.preserveMapView && old?.mapView &&
-      (!opts.resize || old.mapView.zoom > old.mapView.minZoom + .001);
+    const preserveZoom=(opts.preserveMapView||state.tab==='map') && old?.mapView &&
+      (!opts.resize || old.mapView.zoom > old.mapView.minZoom + .001) &&
+      (previous.length===view.charts.length || old.mapView.zoom > old.mapView.minZoom + .001);
     const memo=preserveZoom ? {center:[...old.mapView.center],zoom:old.mapView.zoom}:null;
     const node=old?.renderTo;
     if(old){old.rangeUnbind?.();old.destroy();}
@@ -344,8 +397,12 @@ function renderView(opts={}) {
   view.charts.forEach((spec,i)=>{
     const old=previous[i], reuse=!mounts[i];
     const o=Highcharts.merge(baseOptions(T,false),spec.options);
+    if(spec.ctor==='mapChart')o.chart.margin=mapMargins((mounts[i]?.slot||old.renderTo).clientWidth);
     if(reuse){
       const motion=!opts.noAnimation && old.housingUnit===view.unit?motionOptions():false;
+      if(spec.ctor==='mapChart'){
+        updateMapChart(old,o,spec.height);old.housingUnit=view.unit;next.push(old);return;
+      }
       if(o.chart.polar){
         updateRadarChart(old,o,spec.height,motion,opts.resize);
         old.housingUnit=view.unit;next.push(old);return;
@@ -372,9 +429,9 @@ function renderView(opts={}) {
       old.housingUnit=view.unit;next.push(old);
     }else{
       const {slot,memo}=mounts[i];
+      if(memo && memo.center.every(Number.isFinite) && Number.isFinite(memo.zoom))o.mapView={...o.mapView,...memo};
       const chart=Highcharts[spec.ctor](slot,o);
-      if(memo && memo.center.every(Number.isFinite) && Number.isFinite(memo.zoom))chart.mapView.setView(memo.center,memo.zoom,true,false);
-      chart.housingTab=state.tab;chart.housingUnit=view.unit;installTooltipPinning(chart);next.push(chart);
+      chart.housingTab=state.tab;chart.housingUnit=view.unit;chart.housingMapMode=state.mapViewMode;installTooltipPinning(chart);next.push(chart);
     }
   });
   activeCharts=next;
@@ -401,7 +458,7 @@ function paintPinnedCard(ctx,pin,width,height,tokens) {
     ctx.font=`14px ${tokens.fontText}`;ctx.fillStyle=tokens.text;item.lines.forEach(line=>{ctx.fillText(line,pad,y);y+=17;});
     if(Number.isFinite(item.value)){
       const length=Math.max(0,Math.min(1,item.value/model.maximum))*(inner-64);
-      const color=item.kind==='context'?tokens.series[7]:item.kind==='map'?mapExportColor(item.value,item.indicator,tokens):tokens.series[item.colorSlot];
+      const color=item.kind==='context'?tokens.series[7]:item.kind==='map'?mapExportColor(item.value,model.colorScale,tokens):tokens.series[item.colorSlot];
       ctx.fillStyle=tokens.noData;ctx.fillRect(pad,y,inner,16);
       if(length>0){ctx.fillStyle=color;ctx.fillRect(pad,y,length,16);ctx.strokeStyle=Highcharts.color(color).brighten(-.2).get();ctx.strokeRect(pad+.5,y+.5,Math.max(0,length-1),15);}
       ctx.fillStyle=tokens.number;ctx.font=`600 14px ${tokens.fontText}`;ctx.fillText(fmtValue(item.value,item.indicator),pad+length+7,y);
@@ -410,9 +467,9 @@ function paintPinnedCard(ctx,pin,width,height,tokens) {
   }
   ctx.restore();
 }
-function mapExportColor(value,indicator,tokens){
-  const maximum=axisBounds(mapMaximum(indicator),!isYears(indicator)).max;
-  const slot=Math.max(0,Math.min(tokens.ramp.length-1,value/maximum*(tokens.ramp.length-1))),i=Math.floor(slot);
+function mapExportColor(value,scale,tokens){
+  const {min=0,max=1}=scale || {};
+  const slot=Math.max(0,Math.min(tokens.ramp.length-1,(value-min)/(max-min)*(tokens.ramp.length-1))),i=Math.floor(slot);
   return Highcharts.color(tokens.ramp[i]).tweenTo(Highcharts.color(tokens.ramp[Math.min(i+1,tokens.ramp.length-1)]),slot-i);
 }
 async function exportPNG(){

@@ -34,17 +34,17 @@
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-  <link rel="stylesheet" href="erm-palette.css?v=20261124k" />
-  <link rel="stylesheet" href="housing-embed.css?v=20261124k" />
+  <link rel="stylesheet" href="erm-palette.css?v=20261124o" />
+  <link rel="stylesheet" href="housing-embed.css?v=20261124o" />
 </head>
 <body class="ef-embed">
 
 <div class="dashboard">
   <div class="ef-tabs" role="tablist" aria-label="Views">
-    <button type="button" class="ef-tab" role="tab" id="tab-bar" data-tab="bar" aria-selected="true" aria-controls="panel" tabindex="0">
+    <button type="button" class="ef-tab" role="tab" id="tab-bar" data-tab="bar" aria-selected="false" aria-controls="panel" tabindex="-1">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16v2H4zm2-14h3v12H6zm5-4h3v16h-3zm5 7h3v9h-3z"/></svg><span>Bar chart</span>
     </button>
-    <button type="button" class="ef-tab" role="tab" id="tab-map" data-tab="map" aria-selected="false" aria-controls="panel" tabindex="-1">
+    <button type="button" class="ef-tab" role="tab" id="tab-map" data-tab="map" aria-selected="true" aria-controls="panel" tabindex="0">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>Map</span>
     </button>
     <button type="button" class="ef-tab" role="tab" id="tab-radar" data-tab="radar" aria-selected="false" aria-controls="panel" tabindex="-1">
@@ -58,14 +58,14 @@
     </button>
   </div>
 
-  <div id="panel" class="panel" role="tabpanel" aria-labelledby="tab-bar">
+  <div id="panel" class="panel" role="tabpanel" aria-labelledby="tab-map">
     <div class="controls">
       <div id="topic-field" role="group" aria-labelledby="topic-label">
         <span class="ef-label" id="topic-label">Topic</span>
         <div id="topic-container" class="chip-row"></div>
       </div>
 
-      <div class="filters">
+      <div class="filters" data-view="map">
         <div id="indicator-field">
           <div class="indicator-heading"><label class="ef-label" for="indicator-sel">Indicator</label><span id="indicator-position" aria-live="polite"></span></div>
           <div class="indicator-navigation">
@@ -75,7 +75,7 @@
           </div>
         </div>
 
-        <div id="geo-field" role="group" aria-labelledby="geo-label" hidden>
+        <div id="geo-field" role="group" aria-labelledby="geo-label">
           <span class="ef-label" id="geo-label">Geography</span>
           <div class="chip-row">
             <button type="button" class="ef-chip" id="geo-national" aria-pressed="true">Countries</button>
@@ -100,8 +100,8 @@
           </div>
         </div>
 
-        <div id="sort-field"><button type="button" id="sort-toggle" class="sort-toggle" aria-label="Sort: highest first. Switch to country A–Z" title="Sort: highest first. Switch to country A–Z"></button></div>
-        <div id="bar-country-field">
+        <div id="sort-field" hidden><button type="button" id="sort-toggle" class="sort-toggle" aria-label="Sort: highest first. Switch to country A–Z" title="Sort: highest first. Switch to country A–Z"></button></div>
+        <div id="bar-country-field" hidden>
           <label class="ef-label" id="bar-country-label" for="bar-country-toggle">Countries</label>
           <div class="dropdown-wrapper">
             <button type="button" id="bar-country-toggle" class="ef-select" aria-expanded="false" aria-controls="bar-country-list" aria-labelledby="bar-country-label bar-country-value"><span id="bar-country-value">All countries</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg></button>
@@ -163,7 +163,7 @@
 
 
 
-<script src="housing-interactions.js?v=20261124k"></script>
-<script src="housing-embed.js?v=20261124k"></script>
+<script src="housing-interactions.js?v=20261124o"></script>
+<script src="housing-embed.js?v=20261124o"></script>
 </body>
 </html>
