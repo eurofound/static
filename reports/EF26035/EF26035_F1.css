@@ -45,7 +45,13 @@ button:disabled { cursor:wait; }
 
 body[data-single] .legend { display:block; margin-top:10px; }
 .chart-title { margin:0; color:var(--heading); font-family:var(--font-roboto); font-size:1rem; font-weight:600; line-height:1.4; }
-body[data-single] .chart-stage { height:360px; }
+/* Match the paired page's toolbar, heading and plot allocation. */
+body[data-single] .chart-embed { display:flex; flex-direction:column; height:472px; }
+body[data-single] .legend { flex:none; }
+body[data-single] .chart-stage { flex:1; height:auto; min-height:0; }
+@media(max-width:580px) {
+  body[data-single] .chart-embed { height:736px; }
+}
 .tooltip-index-value { display:block; margin-top:5px; font-size:.9375rem; font-variant-numeric:tabular-nums; }
 .tooltip-index-unit { font-size:.75rem; color:var(--muted-foreground); margin-top:4px; }
 
