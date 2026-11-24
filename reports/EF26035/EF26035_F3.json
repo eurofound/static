@@ -14,7 +14,7 @@
   "measures": [
     {
       "key": "housing_barometer",
-      "label": "Housing Barometer",
+      "label": "Housing composite indicator",
       "yMax": 0.1,
       "yStep": 0.02,
       "values": {

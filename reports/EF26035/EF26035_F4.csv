@@ -3,62 +3,62 @@ Source,Eurofound housing composite indicator.
 Notes,Curves show the distribution of the scores of the 27 Member States for renters and owners. Dashed lines show EU27 averages for renters and owners.
 
 Indicator,Group,Observation type,Score
-Housing Barometer,Owner,Member State,46.53
-Housing Barometer,Owner,Member State,66.05
-Housing Barometer,Owner,Member State,66.5
-Housing Barometer,Owner,Member State,71.22
-Housing Barometer,Owner,Member State,72.88
-Housing Barometer,Owner,Member State,74.83
-Housing Barometer,Owner,Member State,76.66
-Housing Barometer,Owner,Member State,78.11
-Housing Barometer,Owner,Member State,79.61
-Housing Barometer,Owner,Member State,79.78
-Housing Barometer,Owner,Member State,81.14
-Housing Barometer,Owner,Member State,81.33
-Housing Barometer,Owner,Member State,82.81
-Housing Barometer,Owner,Member State,82.82
-Housing Barometer,Owner,Member State,84.05
-Housing Barometer,Owner,Member State,84.32
-Housing Barometer,Owner,Member State,84.83
-Housing Barometer,Owner,Member State,85
-Housing Barometer,Owner,Member State,87.37
-Housing Barometer,Owner,Member State,87.71
-Housing Barometer,Owner,Member State,88.78
-Housing Barometer,Owner,Member State,90.23
-Housing Barometer,Owner,Member State,90.27
-Housing Barometer,Owner,Member State,90.52
-Housing Barometer,Owner,Member State,93.32
-Housing Barometer,Owner,Member State,93.64
-Housing Barometer,Owner,Member State,94.72
-Housing Barometer,Owner,EU27 average,81.3
-Housing Barometer,Renter,Member State,23.96
-Housing Barometer,Renter,Member State,31.32
-Housing Barometer,Renter,Member State,34.1
-Housing Barometer,Renter,Member State,35.33
-Housing Barometer,Renter,Member State,40.01
-Housing Barometer,Renter,Member State,41.88
-Housing Barometer,Renter,Member State,45.54
-Housing Barometer,Renter,Member State,48.76
-Housing Barometer,Renter,Member State,49.73
-Housing Barometer,Renter,Member State,50.75
-Housing Barometer,Renter,Member State,50.9
-Housing Barometer,Renter,Member State,51.17
-Housing Barometer,Renter,Member State,51.59
-Housing Barometer,Renter,Member State,51.68
-Housing Barometer,Renter,Member State,52.25
-Housing Barometer,Renter,Member State,53.81
-Housing Barometer,Renter,Member State,57.98
-Housing Barometer,Renter,Member State,59.7
-Housing Barometer,Renter,Member State,59.95
-Housing Barometer,Renter,Member State,60.05
-Housing Barometer,Renter,Member State,61.39
-Housing Barometer,Renter,Member State,61.56
-Housing Barometer,Renter,Member State,63.96
-Housing Barometer,Renter,Member State,64.15
-Housing Barometer,Renter,Member State,66.32
-Housing Barometer,Renter,Member State,68.9
-Housing Barometer,Renter,Member State,71.17
-Housing Barometer,Renter,EU27 average,52.14
+Housing composite indicator,Owner,Member State,46.53
+Housing composite indicator,Owner,Member State,66.05
+Housing composite indicator,Owner,Member State,66.5
+Housing composite indicator,Owner,Member State,71.22
+Housing composite indicator,Owner,Member State,72.88
+Housing composite indicator,Owner,Member State,74.83
+Housing composite indicator,Owner,Member State,76.66
+Housing composite indicator,Owner,Member State,78.11
+Housing composite indicator,Owner,Member State,79.61
+Housing composite indicator,Owner,Member State,79.78
+Housing composite indicator,Owner,Member State,81.14
+Housing composite indicator,Owner,Member State,81.33
+Housing composite indicator,Owner,Member State,82.81
+Housing composite indicator,Owner,Member State,82.82
+Housing composite indicator,Owner,Member State,84.05
+Housing composite indicator,Owner,Member State,84.32
+Housing composite indicator,Owner,Member State,84.83
+Housing composite indicator,Owner,Member State,85
+Housing composite indicator,Owner,Member State,87.37
+Housing composite indicator,Owner,Member State,87.71
+Housing composite indicator,Owner,Member State,88.78
+Housing composite indicator,Owner,Member State,90.23
+Housing composite indicator,Owner,Member State,90.27
+Housing composite indicator,Owner,Member State,90.52
+Housing composite indicator,Owner,Member State,93.32
+Housing composite indicator,Owner,Member State,93.64
+Housing composite indicator,Owner,Member State,94.72
+Housing composite indicator,Owner,EU27 average,81.3
+Housing composite indicator,Renter,Member State,23.96
+Housing composite indicator,Renter,Member State,31.32
+Housing composite indicator,Renter,Member State,34.1
+Housing composite indicator,Renter,Member State,35.33
+Housing composite indicator,Renter,Member State,40.01
+Housing composite indicator,Renter,Member State,41.88
+Housing composite indicator,Renter,Member State,45.54
+Housing composite indicator,Renter,Member State,48.76
+Housing composite indicator,Renter,Member State,49.73
+Housing composite indicator,Renter,Member State,50.75
+Housing composite indicator,Renter,Member State,50.9
+Housing composite indicator,Renter,Member State,51.17
+Housing composite indicator,Renter,Member State,51.59
+Housing composite indicator,Renter,Member State,51.68
+Housing composite indicator,Renter,Member State,52.25
+Housing composite indicator,Renter,Member State,53.81
+Housing composite indicator,Renter,Member State,57.98
+Housing composite indicator,Renter,Member State,59.7
+Housing composite indicator,Renter,Member State,59.95
+Housing composite indicator,Renter,Member State,60.05
+Housing composite indicator,Renter,Member State,61.39
+Housing composite indicator,Renter,Member State,61.56
+Housing composite indicator,Renter,Member State,63.96
+Housing composite indicator,Renter,Member State,64.15
+Housing composite indicator,Renter,Member State,66.32
+Housing composite indicator,Renter,Member State,68.9
+Housing composite indicator,Renter,Member State,71.17
+Housing composite indicator,Renter,EU27 average,52.14
 Adequacy,Owner,Member State,45.7
 Adequacy,Owner,Member State,60.23
 Adequacy,Owner,Member State,62.26

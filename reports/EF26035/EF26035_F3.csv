@@ -3,90 +3,90 @@ Source,Eurofound housing composite indicator.
 Notes,Curves show the distribution of the scores of the 27 Member States for each income group. Dashed lines show EU27 averages for each income group.
 
 Indicator,Group,Observation type,Score
-Housing Barometer,Low,Member State,11.13
-Housing Barometer,Low,Member State,28.23
-Housing Barometer,Low,Member State,30.93
-Housing Barometer,Low,Member State,31.95
-Housing Barometer,Low,Member State,35.59
-Housing Barometer,Low,Member State,37.42
-Housing Barometer,Low,Member State,38.9
-Housing Barometer,Low,Member State,39.65
-Housing Barometer,Low,Member State,44.43
-Housing Barometer,Low,Member State,44.47
-Housing Barometer,Low,Member State,46
-Housing Barometer,Low,Member State,47.16
-Housing Barometer,Low,Member State,47.28
-Housing Barometer,Low,Member State,47.68
-Housing Barometer,Low,Member State,50
-Housing Barometer,Low,Member State,51.38
-Housing Barometer,Low,Member State,53.76
-Housing Barometer,Low,Member State,53.83
-Housing Barometer,Low,Member State,54.97
-Housing Barometer,Low,Member State,55.11
-Housing Barometer,Low,Member State,59.42
-Housing Barometer,Low,Member State,59.77
-Housing Barometer,Low,Member State,59.77
-Housing Barometer,Low,Member State,62.4
-Housing Barometer,Low,Member State,62.51
-Housing Barometer,Low,Member State,62.92
-Housing Barometer,Low,Member State,75.68
-Housing Barometer,Low,EU27 average,47.86
-Housing Barometer,Middle,Member State,53.57
-Housing Barometer,Middle,Member State,54.07
-Housing Barometer,Middle,Member State,57.73
-Housing Barometer,Middle,Member State,65.98
-Housing Barometer,Middle,Member State,67.84
-Housing Barometer,Middle,Member State,72.15
-Housing Barometer,Middle,Member State,72.49
-Housing Barometer,Middle,Member State,73.14
-Housing Barometer,Middle,Member State,73.7
-Housing Barometer,Middle,Member State,74.9
-Housing Barometer,Middle,Member State,75.3
-Housing Barometer,Middle,Member State,75.91
-Housing Barometer,Middle,Member State,75.97
-Housing Barometer,Middle,Member State,75.99
-Housing Barometer,Middle,Member State,76.44
-Housing Barometer,Middle,Member State,79.34
-Housing Barometer,Middle,Member State,80.97
-Housing Barometer,Middle,Member State,81.45
-Housing Barometer,Middle,Member State,81.62
-Housing Barometer,Middle,Member State,82.16
-Housing Barometer,Middle,Member State,83.71
-Housing Barometer,Middle,Member State,83.91
-Housing Barometer,Middle,Member State,84.48
-Housing Barometer,Middle,Member State,84.69
-Housing Barometer,Middle,Member State,85.46
-Housing Barometer,Middle,Member State,86.82
-Housing Barometer,Middle,Member State,86.93
-Housing Barometer,Middle,EU27 average,75.8
-Housing Barometer,High,Member State,74.77
-Housing Barometer,High,Member State,78.36
-Housing Barometer,High,Member State,78.48
-Housing Barometer,High,Member State,79.47
-Housing Barometer,High,Member State,81.31
-Housing Barometer,High,Member State,81.96
-Housing Barometer,High,Member State,86.27
-Housing Barometer,High,Member State,86.29
-Housing Barometer,High,Member State,86.38
-Housing Barometer,High,Member State,86.66
-Housing Barometer,High,Member State,87.27
-Housing Barometer,High,Member State,88.49
-Housing Barometer,High,Member State,88.86
-Housing Barometer,High,Member State,89.06
-Housing Barometer,High,Member State,89.71
-Housing Barometer,High,Member State,90.43
-Housing Barometer,High,Member State,90.96
-Housing Barometer,High,Member State,92.12
-Housing Barometer,High,Member State,92.59
-Housing Barometer,High,Member State,93.21
-Housing Barometer,High,Member State,93.26
-Housing Barometer,High,Member State,93.51
-Housing Barometer,High,Member State,94.3
-Housing Barometer,High,Member State,94.96
-Housing Barometer,High,Member State,96.5
-Housing Barometer,High,Member State,96.52
-Housing Barometer,High,Member State,96.92
-Housing Barometer,High,EU27 average,88.47
+Housing composite indicator,Low,Member State,11.13
+Housing composite indicator,Low,Member State,28.23
+Housing composite indicator,Low,Member State,30.93
+Housing composite indicator,Low,Member State,31.95
+Housing composite indicator,Low,Member State,35.59
+Housing composite indicator,Low,Member State,37.42
+Housing composite indicator,Low,Member State,38.9
+Housing composite indicator,Low,Member State,39.65
+Housing composite indicator,Low,Member State,44.43
+Housing composite indicator,Low,Member State,44.47
+Housing composite indicator,Low,Member State,46
+Housing composite indicator,Low,Member State,47.16
+Housing composite indicator,Low,Member State,47.28
+Housing composite indicator,Low,Member State,47.68
+Housing composite indicator,Low,Member State,50
+Housing composite indicator,Low,Member State,51.38
+Housing composite indicator,Low,Member State,53.76
+Housing composite indicator,Low,Member State,53.83
+Housing composite indicator,Low,Member State,54.97
+Housing composite indicator,Low,Member State,55.11
+Housing composite indicator,Low,Member State,59.42
+Housing composite indicator,Low,Member State,59.77
+Housing composite indicator,Low,Member State,59.77
+Housing composite indicator,Low,Member State,62.4
+Housing composite indicator,Low,Member State,62.51
+Housing composite indicator,Low,Member State,62.92
+Housing composite indicator,Low,Member State,75.68
+Housing composite indicator,Low,EU27 average,47.86
+Housing composite indicator,Middle,Member State,53.57
+Housing composite indicator,Middle,Member State,54.07
+Housing composite indicator,Middle,Member State,57.73
+Housing composite indicator,Middle,Member State,65.98
+Housing composite indicator,Middle,Member State,67.84
+Housing composite indicator,Middle,Member State,72.15
+Housing composite indicator,Middle,Member State,72.49
+Housing composite indicator,Middle,Member State,73.14
+Housing composite indicator,Middle,Member State,73.7
+Housing composite indicator,Middle,Member State,74.9
+Housing composite indicator,Middle,Member State,75.3
+Housing composite indicator,Middle,Member State,75.91
+Housing composite indicator,Middle,Member State,75.97
+Housing composite indicator,Middle,Member State,75.99
+Housing composite indicator,Middle,Member State,76.44
+Housing composite indicator,Middle,Member State,79.34
+Housing composite indicator,Middle,Member State,80.97
+Housing composite indicator,Middle,Member State,81.45
+Housing composite indicator,Middle,Member State,81.62
+Housing composite indicator,Middle,Member State,82.16
+Housing composite indicator,Middle,Member State,83.71
+Housing composite indicator,Middle,Member State,83.91
+Housing composite indicator,Middle,Member State,84.48
+Housing composite indicator,Middle,Member State,84.69
+Housing composite indicator,Middle,Member State,85.46
+Housing composite indicator,Middle,Member State,86.82
+Housing composite indicator,Middle,Member State,86.93
+Housing composite indicator,Middle,EU27 average,75.8
+Housing composite indicator,High,Member State,74.77
+Housing composite indicator,High,Member State,78.36
+Housing composite indicator,High,Member State,78.48
+Housing composite indicator,High,Member State,79.47
+Housing composite indicator,High,Member State,81.31
+Housing composite indicator,High,Member State,81.96
+Housing composite indicator,High,Member State,86.27
+Housing composite indicator,High,Member State,86.29
+Housing composite indicator,High,Member State,86.38
+Housing composite indicator,High,Member State,86.66
+Housing composite indicator,High,Member State,87.27
+Housing composite indicator,High,Member State,88.49
+Housing composite indicator,High,Member State,88.86
+Housing composite indicator,High,Member State,89.06
+Housing composite indicator,High,Member State,89.71
+Housing composite indicator,High,Member State,90.43
+Housing composite indicator,High,Member State,90.96
+Housing composite indicator,High,Member State,92.12
+Housing composite indicator,High,Member State,92.59
+Housing composite indicator,High,Member State,93.21
+Housing composite indicator,High,Member State,93.26
+Housing composite indicator,High,Member State,93.51
+Housing composite indicator,High,Member State,94.3
+Housing composite indicator,High,Member State,94.96
+Housing composite indicator,High,Member State,96.5
+Housing composite indicator,High,Member State,96.52
+Housing composite indicator,High,Member State,96.92
+Housing composite indicator,High,EU27 average,88.47
 Adequacy,Low,Member State,4.08
 Adequacy,Low,Member State,17.33
 Adequacy,Low,Member State,23.4
