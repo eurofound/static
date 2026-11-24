@@ -436,7 +436,6 @@ function updateBreakdowns() {
   if (state.mapViewMode === 'nuts' && !hasRegions) state.mapViewMode = 'national';
   els.geoNational.setAttribute('aria-pressed', String(state.mapViewMode === 'national'));
   els.geoNuts.setAttribute('aria-pressed', String(state.mapViewMode === 'nuts'));
-  els.geoNuts.disabled = !hasRegions;
   const topCats = [...new Set((rowsByIndicator.get(state.indicator) || []).map((d) => d['Top category']))]
     .filter((c) => !String(c || '').toLowerCase().includes('nuts region'))
     .sort((a, b) => (a === 'All' ? -1 : b === 'All' ? 1 : String(a).localeCompare(String(b))));

@@ -350,7 +350,7 @@ function renderView(opts={}) {
 }
 
 function paintPinnedCard(ctx,pin,width,height,tokens) {
-  const model=pin.model,pad=13,cardW=Math.min(310,width-24),inner=cardW-pad*2;
+  const model=pin.model,pad=15,cardW=Math.min(350,width-24),inner=cardW-pad*2;
   ctx.font=`14px ${tokens.fontText}`;
   const title=wrapText(ctx,model.title,inner), subtitle=wrapText(ctx,model.subtitle,inner);
   const items=model.items.map(item=>({...item,lines:wrapText(ctx,item.label,inner)}));
