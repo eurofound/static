@@ -112,7 +112,7 @@ let currentView = null;
 const state = {
   tab: 'bar', topic: null, indicator: null, topCat: null, allCats: [],
   barCategories: [], mapCategories: [], barCountries: [], radarCountries: [],
-  barSort: 'desc', cpCountry: null, globalIndicators: [], cpCategory: 'All', r2Countries: [], mapViewMode: 'national'
+  barSort: 'alpha', cpCountry: null, globalIndicators: [], cpCategory: 'All', r2Countries: [], mapViewMode: 'national'
 };
 
 const els = {
@@ -431,6 +431,12 @@ function updateIndicators() {
 }
 
 function updateBreakdowns() {
+  const previousTopCat = state.topCat;
+  const hasRegions = (rowsByIndicator.get(state.indicator) || []).some(d => String(d['Top category']).toLowerCase() === 'nuts region');
+  if (state.mapViewMode === 'nuts' && !hasRegions) state.mapViewMode = 'national';
+  els.geoNational.setAttribute('aria-pressed', String(state.mapViewMode === 'national'));
+  els.geoNuts.setAttribute('aria-pressed', String(state.mapViewMode === 'nuts'));
+  els.geoNuts.disabled = !hasRegions;
   const topCats = [...new Set((rowsByIndicator.get(state.indicator) || []).map((d) => d['Top category']))]
     .filter((c) => !String(c || '').toLowerCase().includes('nuts region'))
     .sort((a, b) => (a === 'All' ? -1 : b === 'All' ? 1 : String(a).localeCompare(String(b))));
@@ -442,22 +448,25 @@ function updateBreakdowns() {
     return;
   }
   els.cat.disabled = false;
-  state.topCat = topCats.includes('All') ? 'All' : topCats[0];
-  if (state.tab === 'radar') state.topCat = preferAgeBreakdown(topCats) || state.topCat;
+  const keepBreakdown = topCats.includes(previousTopCat);
+  state.topCat = keepBreakdown ? previousTopCat : topCats.includes('All') ? 'All' : topCats[0];
+  if (!keepBreakdown && state.tab === 'radar') state.topCat = preferAgeBreakdown(topCats) || state.topCat;
   fillSelect(els.cat, topCats, state.topCat);
-  updateCategoryList();
+  updateCategoryList(keepBreakdown);
 }
 
 function preferAgeBreakdown(topCats) {
   return topCats.find((c) => String(c).toLowerCase().includes('age category'));
 }
 
-function updateCategoryList() {
+function updateCategoryList(preserve = false) {
   const rows = (rowsByIndicator.get(state.indicator) || []).filter((d) => d['Top category'] === state.topCat);
   const cats = [...new Set(rows.map((d) => d['Category']))].filter((c) => !String(c).toLowerCase().includes('nuts'));
   state.allCats = cats;
-  state.barCategories = cats.slice(0, MAX.barCat);
-  state.mapCategories = cats.slice(0, 1);
+  const barCategories = preserve ? state.barCategories.filter(c => cats.includes(c)) : [];
+  const mapCategories = preserve ? state.mapCategories.filter(c => cats.includes(c)) : [];
+  state.barCategories = barCategories.length ? barCategories.slice(0, MAX.barCat) : cats.slice(0, MAX.barCat);
+  state.mapCategories = mapCategories.length ? mapCategories.slice(0, MAX.mapCat) : cats.slice(0, 1);
   buildPicker('cat', cats);
 }
 
@@ -584,6 +593,20 @@ function buildView(t) {
   return fn(t, view);
 }
 
+function barLayout(count, seriesCount, minimum, overhead, stride) {
+  const oldStride = (Math.max(minimum, overhead + count * stride) - overhead) / count;
+  const oldSlot = oldStride * 0.92 / seriesCount;
+  const barWidth = oldSlot * 0.96 * 0.9;
+  const gap = oldSlot * 0.04 + 1;
+  const groupGap = oldStride * 0.08;
+  const newStride = (barWidth + gap) * seriesCount + groupGap;
+  return {
+    height: Math.round(overhead + count * newStride),
+    pointPadding: gap / (2 * (barWidth + gap)),
+    groupPadding: groupGap / (2 * newStride)
+  };
+}
+
 function barView(t, view) {
   const ind = state.indicator;
   view.notes = indicatorNotes([ind]);
@@ -610,7 +633,7 @@ function barView(t, view) {
       return { id: `country:${c}`, y: r && !isSuppressed(r) ? r['Value'] : null };
     })
   }));
-  const height = Math.max(400, 156 + countries.length * (6 + 18 * cats.length));
+  const {height, pointPadding, groupPadding} = barLayout(countries.length, cats.length, 400, 156, 6 + 18 * cats.length);
   view.charts.push({
     ctor: 'chart', height,
     options: {
@@ -629,7 +652,7 @@ function barView(t, view) {
       },
       plotOptions: {
         bar: {
-          pointPadding: 0.02, groupPadding: 0.04,
+          pointPadding, groupPadding, crisp: false,
           dataLabels: { enabled: true, inside: false, crop: false, overflow: 'allow', formatter() { return fmtShort((this.point || this).y, ind); } }
         }
       },
@@ -661,6 +684,7 @@ const polarPane = (size) => ({ size, background: [{ backgroundColor: 'transparen
 
 function mapSeriesOptions(t) {
   return {
+    animation: false,
     joinBy: 'id', allAreas: true, nullColor: t.noData, borderColor: t.background, borderWidth: 0.6,
     states: { hover: { borderColor: t.labelStrong, borderWidth: 2, brightness: 0 } },
     dataLabels: { enabled: false }
@@ -814,7 +838,7 @@ function countryView(t, view) {
   if (!inds.length) return { ...view, empty: 'Select at least one indicator.' };
   const rows = rawData.filter((d) => inds.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
   view.lowData = rows.some(isSuppressed);
-  const height = Math.max(360, 130 + inds.length * 40);
+  const {height, pointPadding, groupPadding} = barLayout(inds.length, 1, 360, 130, 40);
   view.charts.push({
     ctor: 'chart', height,
     options: {
@@ -832,7 +856,7 @@ function countryView(t, view) {
       },
       plotOptions: {
         bar: {
-          pointPadding: 0.02, groupPadding: 0.04,
+          pointPadding, groupPadding, crisp: false,
           dataLabels: { enabled: true, inside: false, crop: false, overflow: 'allow', formatter() { const p = this.point || this; return fmtShort(p.y, p.category); } }
         }
       },

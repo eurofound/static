@@ -112,6 +112,8 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
       o.plotOptions.bar.dataLabels.style = {textOutline:'none', fontSize:'15px', fontWeight:'600'};
     }
     if (spec.ctor === 'mapChart') {
+      o.chart.animation = false;
+      o.chart.reflow = false;
       o.chart.events = {render(){renderMapLegend(this,tokens);}};
       o.mapNavigation.buttonOptions.align = 'right';
       o.legend = mapLegend();
@@ -290,8 +292,26 @@ function renderView(opts={}) {
   }));
   els.notes.hidden=false; setStatus(view);
   const next=[];
+  const reusable=spec=>spec.options.chart.type==='bar';
+  const reuseChart=(old,spec)=>old && (!opts.noAnimation || opts.resize) && old.housingTab===state.tab && reusable(spec) && old.options.chart.type==='bar';
+  // Set up the entire grid before drawing maps. Otherwise the first map briefly
+  // fits alongside stale/empty slots, then changes size when those slots disappear.
+  const mounts=view.charts.map((spec,i)=>{
+    const old=previous[i];
+    if(reuseChart(old,spec))return null;
+    const preserveZoom=opts.preserveMapView && old?.mapView &&
+      (!opts.resize || old.mapView.zoom > old.mapView.minZoom + .001);
+    const memo=preserveZoom ? {center:[...old.mapView.center],zoom:old.mapView.zoom}:null;
+    const node=old?.renderTo;
+    if(old){old.rangeUnbind?.();old.destroy();}
+    const slot=document.createElement('div');slot.className='chart-slot';slot.style.height=`${spec.height}px`;
+    if(node?.isConnected)node.replaceWith(slot);else els.viz.append(slot);
+    return {slot,memo};
+  });
+  previous.slice(view.charts.length).forEach(chart=>{const node=chart.renderTo;chart.rangeUnbind?.();chart.destroy();node.remove();});
+  if(view.charts.some(spec=>spec.ctor==='mapChart'))postHeight(true);
   view.charts.forEach((spec,i)=>{
-    const old=previous[i], reuse=old && (!opts.noAnimation || opts.resize) && old.housingTab===state.tab && spec.options.chart.type==='bar' && old.options.chart.type==='bar';
+    const old=previous[i], reuse=!mounts[i];
     const o=Highcharts.merge(baseOptions(T,false),spec.options);
     if(reuse){
       const motion=!opts.noAnimation && old.housingUnit===view.unit?motionOptions():false;
@@ -303,6 +323,9 @@ function renderView(opts={}) {
       o.series.forEach((series,index)=>{
         const existing=old.series[index];
         if(existing){
+          const {pointPadding,groupPadding,crisp}=o.plotOptions.bar;
+          Object.assign(existing.options,{pointPadding,groupPadding,crisp});
+          Object.assign(existing.userOptions,{pointPadding,groupPadding,crisp});
           existing.name=series.name;existing.options.name=series.name;
           existing.color=series.color;existing.options.color=series.color;old.isDirtyLegend=true;
           updateBarPoints(existing,series.data,motion);
@@ -313,17 +336,12 @@ function renderView(opts={}) {
       else old.redraw(motion);
       old.housingUnit=view.unit;next.push(old);
     }else{
-      const preserveZoom=opts.preserveMapView && old?.mapView &&
-        (!opts.resize || old.mapView.zoom > old.mapView.minZoom + .001);
-      const memo=preserveZoom ? {center:[...old.mapView.center],zoom:old.mapView.zoom}:null;
-      if(old){old.rangeUnbind?.();old.destroy();old.renderTo?.remove();}
-      const slot=document.createElement('div');slot.className='chart-slot';slot.style.height=`${spec.height}px`;els.viz.append(slot);
+      const {slot,memo}=mounts[i];
       const chart=Highcharts[spec.ctor](slot,o);
       if(memo && memo.center.every(Number.isFinite) && Number.isFinite(memo.zoom))chart.mapView.setView(memo.center,memo.zoom,true,false);
       chart.housingTab=state.tab;chart.housingUnit=view.unit;installTooltipPinning(chart);next.push(chart);
     }
   });
-  previous.slice(view.charts.length).forEach(chart=>{const node=chart.renderTo;chart.rangeUnbind?.();chart.destroy();node.remove();});
   activeCharts=next;
   [...els.viz.children].forEach(node=>{if(!activeCharts.some(c=>c.renderTo===node))node.remove();});
   if(view.pending)ensureMaps().then(()=>{if(state.tab==='map')renderView();});
