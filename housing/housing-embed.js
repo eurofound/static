@@ -9,6 +9,7 @@ const SUPPRESSED_NOTE = `Not shown: fewer than ${MIN_COUNT} observations`;
 const MAX = { barCat: 6, mapCat: 2, radarCountry: 2, r2Country: 5, globalInd: 10 };
 // Mainland Europe including Cyprus and Malta; the maps fit this box at any width.
 const EUROPE_BOX = { type: 'MultiPoint', coordinates: [[-11, 34], [34, 70.5]] };
+const MAP_HEIGHT = 650;
 
 const INDICATOR_NOTES = {
   '30/40 definition of housing affordability stress': 'This is the percentage of households spending 30% or more of their disposable income on housing who are also in the bottom 40% of the national income distribution.',
@@ -125,7 +126,7 @@ const els = {
   cpCountryField: byId('cp-country-field'), cpCountrySel: byId('cp-country-sel'),
   r2CountryField: byId('r2-country-field'), globalIndField: byId('global-ind-field'),
   cpCatField: byId('cp-cat-field'), cpCatSel: byId('cp-cat-sel'),
-  sortField: byId('sort-field'), sort: byId('sort-sel'), lowData: byId('low-data'), status: byId('status'), viz: byId('viz'), notes: byId('notes')
+  sortField: byId('sort-field'), sort: byId('sort-toggle'), lowData: byId('low-data'), status: byId('status'), viz: byId('viz'), notes: byId('notes')
 };
 
 /* ---------- Data loading ---------- */
@@ -165,6 +166,12 @@ Papa.parse('Master_Indicator_Data.csv', {
         if (!isYears(d['Indicator name'])) d['Value'] = d['Value'] * 100;
         if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
         if (d['Top category']) d['Top category'] = String(d['Top category']).replace(/\s+/g, ' ').trim();
+        // One indicator uses title case for Gender; match the same categories
+        // across all indicators before building selectors, charts and exports.
+        if (d['Top category'] === 'Gender') {
+          const category = String(d.Category).trim().toLowerCase();
+          if (category === 'male' || category === 'female') d.Category = category[0].toUpperCase() + category.slice(1);
+        }
         return d;
       });
     if (!rawData.length) return showError();
@@ -216,6 +223,7 @@ function buildPicker(type, items) {
   const groups = items.length && Array.isArray(items[0]?.items) ? items : [{ group: null, items }];
   p.all = groups.flatMap(g => g.items);
   const countryPicker = p.noun === 'countries';
+  list.classList.toggle('country-picker',countryPicker);
   let html = `<div class="picker-search"><label for="${p.list}-search">Search ${esc(p.noun)}</label><input id="${p.list}-search" type="search" autocomplete="off"></div>`;
   if (p.selectAll) html += `<label class="select-all-row"><input type="checkbox" data-all ${selected.length === p.all.length ? 'checked' : ''}> Select all</label>`;
   groups.forEach((g, gi) => {
@@ -335,7 +343,10 @@ function init() {
   updateIndicators();
   byId('indicator-prev').onclick = () => cycleIndicator(-1);
   byId('indicator-next').onclick = () => cycleIndicator(1);
-  els.sort.onchange = () => { state.barSort = els.sort.value; renderView(); };
+  els.sort.onclick = () => { state.barSort = state.barSort === 'desc' ? 'alpha' : 'desc'; renderView(); };
+  const breakdownButton=byId('breakdown-toggle'), breakdownList=byId('breakdown-list');
+  breakdownButton.onclick=()=>breakdownList.hidden?openPopover(breakdownButton,breakdownList):closePopovers();
+  breakdownButton.parentElement.addEventListener('focusout',e=>{if(e.relatedTarget&&!breakdownButton.parentElement.contains(e.relatedTarget))closePopovers();});
 
   allCountries = [...new Set(rawData.map((d) => d['Country Name']))].sort();
   state.barCountries = [...allCountries];
@@ -487,6 +498,7 @@ function cycleIndicator(direction) {
 function syncControls() {
   const tab = state.tab;
   const single = tab === 'bar' || tab === 'map' || tab === 'radar';
+  document.querySelector('.filters').dataset.view=tab;
   byId('indicator-position').textContent = `${els.ind.selectedIndex + 1} / ${els.ind.options.length}`;
   els.sortField.hidden = tab !== 'bar';
   const nuts = tab === 'map' && state.mapViewMode === 'nuts';
@@ -494,13 +506,14 @@ function syncControls() {
   els.indicatorField.hidden = !single;
   els.geoField.hidden = tab !== 'map';
   els.breakdownField.hidden = !single || nuts;
-  els.catField.hidden = !((tab === 'bar' || (tab === 'map' && !nuts)) && state.allCats.length > 1);
+  els.catField.hidden = true;
   els.barCountryField.hidden = tab !== 'bar';
   els.radarCountryField.hidden = tab !== 'radar';
   els.cpCountryField.hidden = tab !== 'country';
   els.r2CountryField.hidden = tab !== 'radar2';
   els.globalIndField.hidden = !(tab === 'country' || tab === 'radar2');
   els.cpCatField.hidden = !(tab === 'country' || tab === 'radar2');
+  syncBreakdownPicker();
 }
 
 /* ---------- Chart theme ---------- */
@@ -523,6 +536,7 @@ function baseOptions(t, animate) {
     xAxis: axis,
     yAxis: axis,
     legend: {
+      align:'center',verticalAlign:'top',layout:'horizontal',margin:16,padding:4,
       itemStyle: { color: t.text, fontWeight: '400', fontSize: '15px' },
       itemHoverStyle: { color: t.labelStrong },
       itemHiddenStyle: { color: t.muted },
@@ -581,7 +595,7 @@ function barView(t, view) {
     const rank = name => { const row = rows.find(d => d['Country Name'] === name && d.Category === cats[0]); return row && !isSuppressed(row) ? row.Value : -Infinity; };
     countries.sort((a,b) => rank(b) - rank(a) || a.localeCompare(b));
   }
-  els.sort.options[0].textContent = cats.length > 1 ? `Highest first: ${cats[0]}` : 'Highest first';
+  updateSortButton(cats);
   if (!rows.length) return { ...view, empty: 'No data for this selection.' };
   if (!cats.length) return { ...view, empty: 'Select at least one category.' };
   if (!countries.length) return { ...view, empty: 'Select at least one country.' };
@@ -596,7 +610,7 @@ function barView(t, view) {
       return { id: `country:${c}`, y: r && !isSuppressed(r) ? r['Value'] : null };
     })
   }));
-  const height = Math.max(420, 160 + countries.length * (7 + 19 * cats.length));
+  const height = Math.max(400, 156 + countries.length * (6 + 18 * cats.length));
   view.charts.push({
     ctor: 'chart', height,
     options: {
@@ -615,7 +629,7 @@ function barView(t, view) {
       },
       plotOptions: {
         bar: {
-          pointPadding: 0.05, groupPadding: 0.08,
+          pointPadding: 0.02, groupPadding: 0.04,
           dataLabels: { enabled: true, inside: false, crop: false, overflow: 'allow', formatter() { return fmtShort((this.point || this).y, ind); } }
         }
       },
@@ -673,9 +687,9 @@ function mapView(t, view) {
       return { id, value, properties: f.properties };
     }).filter(Boolean);
     view.charts.push({
-      ctor: 'mapChart', height: 600,
+      ctor: 'mapChart', height: MAP_HEIGHT,
       options: {
-        chart: { map: structuredClone(nutsGeo), height: 600 },
+        chart: { map: structuredClone(nutsGeo), height: MAP_HEIGHT },
         title: { text: ind },
         subtitle: { text: 'NUTS regions' },
         mapView: { projection: { name: 'WebMercator' }, fitToGeometry: EUROPE_BOX, padding: 8 },
@@ -709,9 +723,9 @@ function mapView(t, view) {
   cats.forEach((cat) => {
     const sub = breakdownLabel(state.topCat, cat);
     view.charts.push({
-      ctor: 'mapChart', height: 650,
+      ctor: 'mapChart', height: MAP_HEIGHT,
       options: {
-        chart: { map: structuredClone(nationalGeo), height: 650 },
+        chart: { map: structuredClone(nationalGeo), height: MAP_HEIGHT },
         title: { text: ind },
         subtitle: { text: sub },
         mapView: { projection: { name: 'WebMercator' }, fitToGeometry: EUROPE_BOX, padding: 8 },
@@ -800,7 +814,7 @@ function countryView(t, view) {
   if (!inds.length) return { ...view, empty: 'Select at least one indicator.' };
   const rows = rawData.filter((d) => inds.includes(d['Indicator name']) && d['Country Name'] === state.cpCountry && d['Category'] === category);
   view.lowData = rows.some(isSuppressed);
-  const height = Math.max(380, 130 + inds.length * 44);
+  const height = Math.max(360, 130 + inds.length * 40);
   view.charts.push({
     ctor: 'chart', height,
     options: {
@@ -818,7 +832,7 @@ function countryView(t, view) {
       },
       plotOptions: {
         bar: {
-          pointPadding: 0.05, groupPadding: 0.08,
+          pointPadding: 0.02, groupPadding: 0.04,
           dataLabels: { enabled: true, inside: false, crop: false, overflow: 'allow', formatter() { const p = this.point || this; return fmtShort(p.y, p.category); } }
         }
       },

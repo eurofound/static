@@ -34,8 +34,8 @@
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-  <link rel="stylesheet" href="erm-palette.css?v=20261124" />
-  <link rel="stylesheet" href="housing-embed.css?v=20261124" />
+  <link rel="stylesheet" href="erm-palette.css?v=20261124d" />
+  <link rel="stylesheet" href="housing-embed.css?v=20261124d" />
 </head>
 <body class="ef-embed">
 
@@ -84,8 +84,12 @@
         </div>
 
         <div id="breakdown-field">
-          <label class="ef-label" for="category-sel">Breakdown</label>
-          <select id="category-sel" class="ef-select"></select>
+          <label class="ef-label" id="breakdown-label" for="breakdown-toggle">Breakdown</label>
+          <select id="category-sel" hidden tabindex="-1" aria-hidden="true"></select>
+          <div class="dropdown-wrapper">
+            <button type="button" id="breakdown-toggle" class="ef-select" aria-expanded="false" aria-controls="breakdown-list" aria-labelledby="breakdown-label breakdown-value"><span id="breakdown-value">All</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg></button>
+            <div id="breakdown-list" class="checkbox-list ef-popover breakdown-picker" hidden></div>
+          </div>
         </div>
 
         <div id="cat-field" hidden>
@@ -96,7 +100,7 @@
           </div>
         </div>
 
-        <div id="sort-field"><label class="ef-label" for="sort-sel">Sort</label><select id="sort-sel" class="ef-select"><option value="desc">Highest first</option><option value="alpha">Country A–Z</option></select></div>
+        <div id="sort-field"><button type="button" id="sort-toggle" class="sort-toggle" aria-label="Sort: highest first. Switch to country A–Z" title="Sort: highest first. Switch to country A–Z"></button></div>
         <div id="bar-country-field">
           <label class="ef-label" id="bar-country-label" for="bar-country-toggle">Countries</label>
           <div class="dropdown-wrapper">
@@ -159,7 +163,7 @@
 
 
 
-<script src="housing-interactions.js?v=20261124"></script>
-<script src="housing-embed.js?v=20261124"></script>
+<script src="housing-interactions.js?v=20261124d"></script>
+<script src="housing-embed.js?v=20261124d"></script>
 </body>
 </html>

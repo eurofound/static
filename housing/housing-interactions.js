@@ -1,6 +1,75 @@
 /* Presentation helpers. The source observations and suppression rule are unchanged. */
 let pinnedTooltip = null;
 
+function updateSortButton(categories=[]) {
+  const alphabetical=state.barSort==='alpha';
+  const valueLabel=categories.length>1?`highest first (${categories[0]})`:'highest first';
+  const label=`Sort: ${alphabetical?'country A–Z':valueLabel}. Switch to ${alphabetical?valueLabel:'country A–Z'}`;
+  els.sort.setAttribute('aria-label',label);els.sort.title=label;
+  els.sort.dataset.sort=state.barSort;
+  els.sort.innerHTML=alphabetical?
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4v16m-3-3 3 3 3-3"/><text x="2" y="10">A</text><text x="2" y="21">Z</text></svg>':
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4v16m-3-3 3 3 3-3M3 5h9M3 11h6M3 17h3"/></svg>';
+}
+
+let breakdownSignature='';
+function syncBreakdownPicker() {
+  const list=byId('breakdown-list'),button=byId('breakdown-toggle');
+  const groups=[...els.cat.options].map(o=>o.value).filter(Boolean);
+  const selected=state.tab==='map'?state.mapCategories:state.barCategories;
+  const radar=state.tab==='radar';
+  const text=state.topCat==='All'?'All':radar?state.topCat:
+    `${state.topCat}: ${selected.length<=2?selected.join(' · ')||'None selected':`${selected.length} selected`}`;
+  byId('breakdown-value').textContent=text||'No breakdowns';button.title=text||'';button.disabled=els.cat.disabled;
+  const signature=JSON.stringify([state.indicator,state.tab,groups]);
+  const active=document.activeElement;
+  const focusKey=list.contains(active)?[active.dataset.topcat,active.value]:null;
+  if(signature!==breakdownSignature){
+    breakdownSignature=signature;
+    list.replaceChildren();
+    if(!radar){
+      const limit=document.createElement('div');limit.className='breakdown-limit';limit.textContent=`Up to ${state.tab==='map'?MAX.mapCat:MAX.barCat} categories`;list.append(limit);
+    }
+    groups.forEach(group=>{
+      const rows=(rowsByIndicator.get(state.indicator)||[]).filter(r=>r['Top category']===group);
+      const categories=[...new Set(rows.map(r=>r.Category))];
+      if(radar){
+        const option=document.createElement('button');option.type='button';option.className='breakdown-option';option.dataset.topcat=group;option.textContent=group;
+        option.onclick=()=>{state.topCat=group;els.cat.value=group;updateCategoryList();closePopovers();renderView();};list.append(option);return;
+      }
+      const section=group==='All'?document.createElement('div'):document.createElement('details');
+      section.className='breakdown-group';section.dataset.topcat=group;
+      if(group!=='All'){
+        section.open=group===state.topCat;
+        const summary=document.createElement('summary');summary.textContent=group;section.append(summary);
+        section.addEventListener('toggle',()=>{if(section.open)list.querySelectorAll('details').forEach(other=>{if(other!==section)other.open=false;});});
+      }
+      const choices=document.createElement('div');choices.className='breakdown-choices';
+      categories.forEach(category=>{
+        const label=document.createElement('label'),input=document.createElement('input'),name=document.createElement('span');
+        input.type='checkbox';input.dataset.topcat=group;input.value=category;name.textContent=category;label.append(input,name);choices.append(label);
+        input.onchange=()=>{
+          if(group!==state.topCat){
+            state.topCat=group;els.cat.value=group;updateCategoryList();
+            if(state.tab==='map')state.mapCategories=[];else state.barCategories=[];
+          }
+          let values=[...(state.tab==='map'?state.mapCategories:state.barCategories)];
+          if(input.checked){if(!values.includes(category))values.push(category);const limit=state.tab==='map'?MAX.mapCat:MAX.barCat;if(values.length>limit)values.shift();}
+          else values=values.filter(v=>v!==category);
+          if(group==='All')values=categories;
+          if(state.tab==='map')state.mapCategories=values;else state.barCategories=values;
+          list.querySelectorAll('details').forEach(other=>{other.open=other.dataset.topcat===group;});
+          renderView();
+        };
+      });
+      section.append(choices);list.append(section);
+    });
+  }
+  list.querySelectorAll('input[data-topcat]').forEach(input=>{input.checked=input.dataset.topcat===state.topCat&&selected.includes(input.value);});
+  list.querySelectorAll('.breakdown-option').forEach(option=>option.setAttribute('aria-pressed',String(option.dataset.topcat===state.topCat)));
+  if(focusKey&&document.activeElement!==active)list.querySelector(`input[data-topcat="${CSS.escape(focusKey[0])}"][value="${CSS.escape(focusKey[1])}"]`)?.focus();
+}
+
 function axisBounds(highest, percentage = true) {
   highest = Number.isFinite(highest) ? Math.max(0, highest) : 0;
   const step = percentage ? highest <= 10 ? 2 : highest <= 30 ? 5 : highest <= 60 ? 10 : 20 : highest <= 20 ? 2 : highest <= 50 ? 5 : 10;
@@ -20,6 +89,7 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
     o.subtitle = {text: [o.subtitle?.text, view.unit.replace('Unit: ', '')].filter(Boolean).join(' · ')};
     o.custom = {view:state.tab, indicator:state.indicator};
     if (bar) {
+      o.xAxis={...o.xAxis,gridLineWidth:0,tickLength:0};
       const highest = Math.max(0,...o.series.flatMap(series => series.data.map(p => typeof p === 'number' ? p : p?.y)).filter(Number.isFinite));
       const sameUnit = !view.unit.includes('years') || !view.unit.includes('%');
       const bounds = axisBounds(highest, !view.unit.includes('years'));
@@ -33,7 +103,7 @@ function decorateView(view, tokens, width = els.viz.clientWidth || 1100) {
           const indicator = state.tab === 'country' ? o.xAxis.categories[index] : state.indicator;
           const label = fmtShort(point.y, indicator);
           const fits = Number.isFinite(point.y) && point.y / bounds.max * available >= label.length * 8 + 17;
-          return {...point, x:index, id: point.id || `point:${o.xAxis.categories[index]}`, color:series.color,
+          return {...point, x:index, id: `${series.id}:${point.id || `point:${o.xAxis.categories[index]}`}`, color:series.color,
             custom:{indicator}, dataLabels:{inside:fits, align:fits ? 'right' : 'left', x:fits ? -6 : 5,
               style:{color:fits ? tokens.onData : tokens.text, textOutline:'none', fontSize:'15px', fontWeight:'600'},
               formatter(){return Number.isFinite(this.y) ? fmtShort(this.y, indicator) : '';}}};
@@ -191,6 +261,23 @@ function chartFootnotes(view) {
   if(view.lowData) notes.push(LOW_DATA_TEXT);
   return [['Source',SOURCE_TEXT],...(notes.length ? [['Notes',notes.join(' ')]] : [])];
 }
+function updateBarPoints(series, data, motion) {
+  // Highcharts can match an unseen ID by its old x position, overwriting a
+  // different country when a newly selected country sorts ahead of it.
+  const existing=new Map(series.points.map(point=>[point.id,point]));
+  const wanted=new Set(data.map(point=>point.id));
+  if(existing.size===wanted.size&&[...existing.keys()].every(id=>wanted.has(id))){
+    series.setData(data,false,motion,true);
+    return;
+  }
+  // Update retained points before insertion/removal changes their array indices.
+  data.forEach(options=>{
+    const point=existing.get(options.id);
+    if(point)point.update(options,false,motion);
+  });
+  [...series.points].filter(point=>!wanted.has(point.id)).reverse().forEach(point=>point.remove(false,motion));
+  data.filter(options=>!existing.has(options.id)).forEach(options=>series.addPoint(options,false,false,motion));
+}
 function renderView(opts={}) {
   if(!dataLoaded)return;
   releaseTooltip(); syncControls();
@@ -218,7 +305,7 @@ function renderView(opts={}) {
         if(existing){
           existing.name=series.name;existing.options.name=series.name;
           existing.color=series.color;existing.options.color=series.color;old.isDirtyLegend=true;
-          existing.setData(series.data,false,motion,true);
+          updateBarPoints(existing,series.data,motion);
         }else old.addSeries(series,false,motion);
       });
       old.renderTo.style.height=`${spec.height}px`;
@@ -226,7 +313,9 @@ function renderView(opts={}) {
       else old.redraw(motion);
       old.housingUnit=view.unit;next.push(old);
     }else{
-      let memo=opts.preserveMapView && old?.mapView ? {center:[...old.mapView.center],zoom:old.mapView.zoom}:null;
+      const preserveZoom=opts.preserveMapView && old?.mapView &&
+        (!opts.resize || old.mapView.zoom > old.mapView.minZoom + .001);
+      const memo=preserveZoom ? {center:[...old.mapView.center],zoom:old.mapView.zoom}:null;
       if(old){old.rangeUnbind?.();old.destroy();old.renderTo?.remove();}
       const slot=document.createElement('div');slot.className='chart-slot';slot.style.height=`${spec.height}px`;els.viz.append(slot);
       const chart=Highcharts[spec.ctor](slot,o);
@@ -314,8 +403,14 @@ async function exportPNG(){
 }
 
 let housingResizeTimer, housingLastWidth=0;
-window.addEventListener('resize',()=>{
+function scheduleHousingResize() {
   clearTimeout(housingResizeTimer);housingResizeTimer=setTimeout(()=>{
-    const width=els.viz.clientWidth;if(dataLoaded&&width!==housingLastWidth){housingLastWidth=width;renderView({noAnimation:true,resize:true,preserveMapView:true});}
+    const width=els.viz.clientWidth;
+    const needsFit=activeCharts.some(chart=>Math.abs(chart.chartWidth-chart.renderTo.clientWidth)>1);
+    if(dataLoaded&&(width!==housingLastWidth||needsFit)){housingLastWidth=width;renderView({noAnimation:true,resize:true,preserveMapView:true});}
   },350);
-});
+}
+window.addEventListener('resize',scheduleHousingResize);
+// The host's auto-height can remove an iframe scrollbar without a window resize.
+// Refit unzoomed maps to the final available width in that case too.
+new ResizeObserver(scheduleHousingResize).observe(document.getElementById('viz'));
