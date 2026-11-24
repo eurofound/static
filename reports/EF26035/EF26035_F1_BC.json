@@ -3,9 +3,9 @@
   "geography": "European Union – 27 countries (from 2020)",
   "geography_code": "EU27_2020",
   "unit": "Percentage",
-  "source": "Eurostat, EU-SILC. Supplied Figure 1 data.xlsx.",
+  "source": "Eurostat [tipsho60], [tespm140] and [ilc_mdes01].",
   "extracted": "2026-11-11",
-  "notes": "Values for 2014–2018 are flagged as estimated in the source.",
+  "notes": "",
   "measures": [
     {
       "key": "housing_cost_overburden",
@@ -197,7 +197,5 @@
   "id": "EF26035_F1_BC",
   "unitLabel": "Percentage of population",
   "valueSuffix": "%",
-  "description": "Annual percentages. Both indicators use the same scale. Values for 2014 to 2018 are estimated.",
-  "exportSource": "Source: Eurostat, EU-SILC. Datasets tespm140 and ilc_mdes01. Extracted 11 November 2026.",
-  "exportNote": "Values for 2014–2018 are estimated. Unit: percentage. Geography: EU27 (from 2020)."
+  "description": "Annual percentages. Both indicators use the same scale. Values for 2014 to 2018 are estimated."
 }

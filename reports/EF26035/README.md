@@ -46,3 +46,7 @@ Figure 2 only exposes tooltip targets on the EU27 diamonds. Anonymous Member Sta
 Figure 1 panel headings use Roboto 16px/600. In the stacked mobile view each interactive heading sits above its own plot; CSS and SVG share the 580px viewport breakpoint. Figure 4 uses the theme light blue for Owner in dark mode and its live status describes tenure. Figure 2 CSV downloads follow the visible Member State/EU27 selections and include source, units and current filter/view metadata.
 
 Figure 2 Pearson correlations calculated from the supplied workbook are 0.10391765, 0.46472820 and 0.09201693 (displayed 0.10, 0.46, 0.09). The report graphic's middle label of 0.47 is inconsistent with these supplied values; no national observations have been altered to force that label.
+
+
+## Approved download source and notes
+PNG, SVG and CSV downloads use the source and notes supplied in the EF26035 article, checked on 24 November 2026. Figure 1 has a source citation and no notes. Figures 2–4 use the article's notes verbatim. Implementation details belong in this README, not in download footnotes. Existing report HTML filenames and v=3/v=5 embed URLs are preserved.

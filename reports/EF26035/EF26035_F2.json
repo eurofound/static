@@ -2,7 +2,7 @@
   "id": "EF26035_F2",
   "title": "Pairwise dimension scatter plots",
   "unit": "Score (0–100)",
-  "source": "Eurofound Housing Barometer",
+  "source": "Eurofound housing composite indicator.",
   "method": "Ordinary least squares and Pearson correlation across 27 Member States, excluding EU27. Shading: pointwise 95% confidence interval for the fitted mean (Student t, 25 degrees of freedom).",
   "indicators": {
     "affordability": "Affordability",
@@ -222,5 +222,6 @@
       "adequacy"
     ]
   ],
-  "release_note": "Country identifiers omitted. The EU27 aggregate is retained."
+  "release_note": "Country identifiers omitted. The EU27 aggregate is retained.",
+  "notes": "Each dot is a Member State. Red diamond = EU27 average; r = correlation coefficient."
 }

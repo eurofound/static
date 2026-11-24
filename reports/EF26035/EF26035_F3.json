@@ -3,8 +3,8 @@
   "id": "EF26035_F3",
   "status": "supplied_data",
   "title": "Distribution of scores by income",
-  "source": "Eurofound Housing Barometer",
-  "notes": "27 Member States per group. Country identifiers omitted. Dashed lines show the supplied EU27 averages. Gaussian kernel density with normal-reference bandwidth; no boundary correction.",
+  "source": "Eurofound housing composite indicator.",
+  "notes": "Curves show the distribution of the scores of the 27 Member States for each income group. Dashed lines show EU27 averages for each income group.",
   "groups": [
     "Low",
     "Middle",

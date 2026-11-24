@@ -1,3 +1,6 @@
+Title,"EF26035_F1_BC — Housing pressures in the EU27, 2014–2025"
+Source,"Eurostat [tipsho60], [tespm140] and [ilc_mdes01]."
+
 geography_code,geography,indicator,indicator_label,year,value,unit,flag,flag_label,source_dataset,source_cell
 EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2014,11.5,Percentage,e,Estimated,tespm140,'HCO'!B13
 EU27_2020,European Union – 27 countries (from 2020),housing_cost_overburden,Housing cost overburden rate,2015,11.2,Percentage,e,Estimated,tespm140,'HCO'!D13

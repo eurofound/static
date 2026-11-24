@@ -207,7 +207,7 @@
   async function buildExport(format) {
     const selected=visible();
     if(format==='csv'){
-      const lines=[['Title',data.title],['Geography',data.geography],['Unit',data.unit],['Indicators',selected.map(m=>m.label).join('; ')||'None selected'],['Source',data.source],['Notes',data.notes],['Exported at',new Date().toISOString()],[],['indicator','indicator_label','year','value','unit','flag','flag_label','source_dataset','source_cell']];
+      const lines=[['Title',data.title],['Geography',data.geography],['Unit',data.unit],['Indicators',selected.map(m=>m.label).join('; ')||'None selected'],['Source',data.source],...(data.notes?[['Notes',data.notes]]:[]),['Exported at',new Date().toISOString()],[],['indicator','indicator_label','year','value','unit','flag','flag_label','source_dataset','source_cell']];
       selected.forEach(m=>rows.get(m.key).forEach(r=>lines.push([m.key,m.label,r.year,r.value,data.unit,r.flag,r.flag==='e'?'Estimated':'',m.dataset,r.source_cell])));
       return {blob:new Blob(['\ufeff'+lines.map(r=>r.map(quote).join(',')).join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'}),filename:data.id+'.csv',mimeType:'text/csv'};
     }
@@ -219,7 +219,7 @@
     selected.forEach((m,i)=>{const color=light[`chart-${data.measures.indexOf(m)+1}`];svg+=`<line x1="32" x2="60" y1="${73+i*26}" y2="${73+i*26}" stroke="${esc(color)}" stroke-width="3"/><text x="70" y="${79+i*26}" fill="${esc(light.foreground)}" font-size="18">${esc(legendLabel(m))}</text>`;});
     if(!selected.length)svg+=`<text x="32" y="79" fill="${esc(light.foreground)}" font-size="18">No indicators selected</text>`;
     svg+=`<g transform="translate(32 126)">${chartSvg(1136,466,{interactive:false,exportId:'export'})}</g>`;
-    svg+=`<text x="32" y="638" fill="${esc(light.foreground)}" font-size="16">${esc(data.exportSource)}</text><text x="32" y="664" fill="${esc(light.foreground)}" font-size="16">${esc(data.exportNote)}</text></svg>`;
+    svg+=`<text x="32" y="638" fill="${esc(light.foreground)}" font-size="16">${esc('Source: '+data.source)}</text></svg>`;
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
     try{
       const image=new Image();image.src=url;await image.decode();

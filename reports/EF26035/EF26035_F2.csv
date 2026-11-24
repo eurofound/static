@@ -1,3 +1,7 @@
+Title,Pairwise dimension scatter plots
+Source,Eurofound housing composite indicator.
+Notes,Each dot is a Member State. Red diamond = EU27 average; r = correlation coefficient.
+
 Observation type,Affordability,Ability to meet costs,Adequacy,Housing Barometer
 Member State,1,4.5,35.7,13.7
 Member State,20.5,79,87.8,62.4

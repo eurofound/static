@@ -270,7 +270,7 @@
     groups.forEach((g,i)=>svg+=`<line x1="${32+i*160}" x2="${62+i*160}" y1="68" y2="68" stroke="${esc(light[`chart-${data.groups.indexOf(g)+1}`])}" stroke-width="3"/><text x="${70+i*160}" y="74" fill="${esc(light.foreground)}" font-size="18">${g}</text>`);
     if(!groups.length)svg+=`<text x="32" y="74" fill="${esc(light.foreground)}" font-size="18">No groups selected</text>`;
     measures.forEach((m,i)=>svg+=chartSvg(m,cellWidth-12,cellHeight,{interactive:false,x:32+(i%cols)*cellWidth,y:92+Math.floor(i/cols)*cellHeight,title:true,showYAxis:cols===1||i%cols===0,showYTitle:i===0,largeXLabels:cols===1}));
-    const notes=['Ticks: 27 Member State scores per group. Dashed lines: supplied EU27 averages.','Source: Eurofound Housing Barometer.','Country identities withheld. Gaussian KDE; no boundary correction.'];
+    const notes=[...data.notes.split(/(?<=\.)\s+/),'Source: '+data.source];
     notes.forEach((note,i)=>svg+=`<text x="32" y="${height-68+i*22}" fill="${esc(light.foreground)}" font-size="16">${esc(note)}</text>`);
     svg+='</svg>';
     const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));
