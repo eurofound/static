@@ -161,8 +161,18 @@ async function loadMaps() {
 Papa.parse('Master_Indicator_Data.csv', {
   download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
   complete(results) {
+    const seenRegionalRows = new Set();
     rawData = results.data
       .filter((d) => d['Value'] !== null && d['Value'] !== undefined && d['Country Code'])
+      .filter((d) => {
+        if (!isNutsRow(d)) return true;
+        // Repeated source records must not duplicate regions in tooltips or exports.
+        // Compare every field so distinct observations are never discarded.
+        const key = JSON.stringify(Object.keys(d).sort().map(field => [field, d[field]]));
+        if (seenRegionalRows.has(key)) return false;
+        seenRegionalRows.add(key);
+        return true;
+      })
       .map((d) => {
         if (!isYears(d['Indicator name'])) d['Value'] = d['Value'] * 100;
         if (d['Country Code'] === 'GR') d['Country Code'] = 'EL';
